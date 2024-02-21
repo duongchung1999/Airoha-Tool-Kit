@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="AT_DRC" class="Airoha.Project.ConfigTool.View.DspPage" parameter="AT_DRC">
+  <ConfigGroup class="ucLayoutVertical">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="bottom_margin" value="10"/>
+        <ConfigItem class="ucAtAtkTimeUpDown" id="id_at_cpd_atk_time_updown" max="5" min="0">
+          <Parameter name="top_label" value="Attack Time:"/>
+          <Parameter name="bottom_label" value="ms (0 ~ 5)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_AT_MDSP_STRU.AT_CPD_ALPHA_ATTACK"/>
+        </ConfigItem>
+        <ConfigItem class="ucAtReleaseTimeUpDown" id="id_at_cpd_release_time_updown" max="500" min="100">
+          <Parameter name="top_label" value="Release Time:"/>
+          <Parameter name="bottom_label" value="ms (100 ~ 500)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_AT_MDSP_STRU.AT_CPD_ALPHA_RELEASE"/>
+        </ConfigItem>
+        <ConfigItem class="ucAtDrcThresholdUpDown" id="id_at_cpd_threshold_updown" max="-1" min="-100">
+          <Parameter name="top_label" value="Threshold:"/>
+          <Parameter name="bottom_label" value="dBFS (-100 ~ -1)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_AT_MDSP_STRU.AT_CPD_THRD"/>
+        </ConfigItem>
+        <ConfigItem class="ucAtDrcMaxOutputUpDown" id="id_at_cpd_max_output_updown" max="0" min="-100">
+          <Parameter name="top_label" value="Max.Output:"/>
+          <Parameter name="bottom_label" value="dBFS (-100 ~ 0)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_AT_MDSP_STRU.AT_CPD_OUT_MAX"/>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <ConfigGroup class="ucLiveChart" id="id_drc_chart_at">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_at_cpd_threshold_updown"/>
+      </Associator>
+      <Parameter name="x_axis_type" value="decimal"/>
+      <Parameter name="layout_column_weight" value="1"/>
+      <Parameter name="x_axis_title" value="Input (dBFS)"/>
+      <Parameter name="y_axis_title" value="Output (dBFS)"/>
+      <Parameter name="y_axis_max_value" value="0"/>
+      <Parameter name="y_axis_min_value" value="-100"/>
+      <Parameter name="x_axis_max_value" value="0"/>
+      <Parameter name="x_axis_min_value" value="-100"/>
+      <Parameter name="x_axis_step" value="10"/>
+      <Parameter name="y_axis_step" value="10"/>
+      <Parameter name="height" value="450"/>
+      <ConfigItem class="line" id="id_drc_chart_line_at">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcDrcAssociator">
+          <Parameter name="threshold" refId="id_at_cpd_threshold_updown"/>
+          <Parameter name="max_output" refId="id_at_cpd_max_output_updown"/>
+          <Parameter name="a2dp_digital_gain_table" refId="id_a2dp_digital_output_gain_table"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AT_MDSP_STRU.AT_CPD_ALPHA_ATTACK">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdAtkTimeAssociator">
+        <Parameter name="data" refId="id_at_cpd_atk_time_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AT_MDSP_STRU.AT_CPD_ALPHA_RELEASE">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdReleaseTimeAssociator">
+        <Parameter name="data" refId="id_at_cpd_release_time_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AT_MDSP_STRU.AT_CPD_THRD">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcAtDrcThresholdAssociator">
+        <Parameter name="data" refId="id_at_cpd_threshold_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AT_MDSP_STRU.AT_CPD_OUT_MAX">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcAtDrcMaxOutputAssociator">
+        <Parameter name="data" refId="id_at_cpd_max_output_updown"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

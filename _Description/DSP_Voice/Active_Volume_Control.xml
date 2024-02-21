@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Active_Volume_Control" class="Airoha.Project.ConfigTool.View.DspPage" parameter="Active_Volume_Control">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucAvcThrdUpDown" id="id_avc_thrd_updown" max="0">
+      <Parameter name="left_label" value="AVC Threshold:"/>
+      <Parameter name="right_label" value="dB (Range: &lt;0 dB)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.01"/>
+      <Parameter name="unique" value="DSP_PARA_NR_STRU.AVC_THRD"/>
+    </ConfigItem>
+    <ConfigItem class="ucAvcBoostLimitUpDown" id="id_avc_limit_updown" max="12" min="0">
+      <Parameter name="left_label" value="AVC Boost Limit:"/>
+      <Parameter name="right_label" value="dB (0~12)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="bottom_margin" value="5"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="unique" value="DSP_PARA_NR_STRU.AVC_VOL_MAX"/>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.AVC_ALPHA" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.AVC_THRD" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcAvcThrdAssociator">
+        <Parameter name="data" refId="id_avc_thrd_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.AVC_VOL_MAX" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcAvcLimitAssociator">
+        <Parameter name="data" refId="id_avc_limit_updown"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

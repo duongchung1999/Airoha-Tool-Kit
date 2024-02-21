@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+  <Group Name="128" Value="128"/>
+  <Group Name="256" Value="256"/>
+  <Group Name="512" Value="512"/>
+</DataGroup>

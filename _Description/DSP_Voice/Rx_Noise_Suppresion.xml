@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Rx_Noise_Suppresion" class="Airoha.Project.ConfigTool.View.TabPage" parameter="Rx_Noise_Suppresion">
+  <ConfigGroup title="Wideband" class="DspPage" parameter="Wideband">
+    <Parameter name="button_margin" value="10"/>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucNrCTimeUpDown" id="id_wb_rxnr_ctime_updown" max="3.84" min="0.96" disable="1">
+        <Parameter name="left_label" value="Convergence Time:"/>
+        <Parameter name="right_label" value="s (0.96 ~ 3.84)"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_width" value="160"/>
+        <Parameter name="width" value="80"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="DSP_PARA_NR_STRU.WB_NR_RX_POW_MIN_BUF_PERIOD"/>
+      </ConfigItem>
+      <ConfigItem class="ucNrAggrUpDown" id="id_wb_rxnr_aggr_updown" max="30" min="0">
+        <Parameter name="left_label" value="Aggressiveness:"/>
+        <Parameter name="right_label" value="dB (0 ~ 30)"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="left_width" value="160"/>
+        <Parameter name="width" value="80"/>
+        <Parameter name="step" value="0.1"/>
+        <Parameter name="unique" value="DSP_PARA_NR_STRU.WB_NR_RX_NOISE_GAIN_LIMITER"/>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical" visible="hidden">
+      <Parameter name="left_margin" value="10"/>
+      <ConfigGroup class="General">
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_RX_POW_MIN_BUF_PERIOD">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcNrCTimeAssociator">
+            <Parameter name="data" refId="id_wb_rxnr_ctime_updown"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_RX_NOISE_GAIN_LIMITER">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcNrAggrAssociator">
+            <Parameter name="data" refId="id_wb_rxnr_aggr_updown"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_RX_VAD_THRD1"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_RX_VAD_THRD_BANDS_0"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_RX_VAD_THRD_BANDS_1"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_RX_VAD_THRD_BANDS_2"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_RX_VAD_THRD_BANDS_3"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_RX_VAD_THRD_BANDS_4"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_RX_OVER_SUPPRESS_FAC"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_RX_SPEECH_RETAIN_FAC"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_RX_NOISE_LAMDA"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_RX_NOISE_FLOOR_MIN"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_RX_EMPH_COEF_0"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_RX_EMPH_COEF_1"/>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup title="Narrowband" class="DspPage" parameter="Narrowband">
+    <Parameter name="button_margin" value="10"/>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucNrCTimeUpDown" id="id_nb_rxnr_ctime_updown" max="3.84" min="0.96" disable="1">
+        <Parameter name="left_label" value="Convergence Time:"/>
+        <Parameter name="right_label" value="s (0.96 ~ 3.84)"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_width" value="160"/>
+        <Parameter name="width" value="80"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="DSP_PARA_NR_STRU.NB_NR_RX_POW_MIN_BUF_PERIOD"/>
+      </ConfigItem>
+      <ConfigItem class="ucNrAggrUpDown" id="id_nb_rxnr_aggr_updown" max="30" min="0">
+        <Parameter name="left_label" value="Aggressiveness:"/>
+        <Parameter name="right_label" value="dB (0 ~ 30)"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="left_width" value="160"/>
+        <Parameter name="width" value="80"/>
+        <Parameter name="step" value="0.1"/>
+        <Parameter name="unique" value="DSP_PARA_NR_STRU.NB_NR_RX_NOISE_GAIN_LIMITER"/>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical" visible="hidden">
+      <Parameter name="left_margin" value="10"/>
+      <ConfigGroup class="General">
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.NB_NR_RX_POW_MIN_BUF_PERIOD">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcNrCTimeAssociator">
+            <Parameter name="data" refId="id_nb_rxnr_ctime_updown"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.NB_NR_RX_NOISE_GAIN_LIMITER">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcNrAggrAssociator">
+            <Parameter name="data" refId="id_nb_rxnr_aggr_updown"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.NB_NR_RX_VAD_THRD1"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.NB_NR_RX_VAD_THRD_BANDS_0"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.NB_NR_RX_VAD_THRD_BANDS_1"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.NB_NR_RX_VAD_THRD_BANDS_2"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.NB_NR_RX_VAD_THRD_BANDS_3"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.NB_NR_RX_OVER_SUPPRESS_FAC"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.NB_NR_RX_SPEECH_RETAIN_FAC"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.NB_NR_RX_NOISE_LAMDA"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.NB_NR_RX_NOISE_FLOOR_MIN"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.NB_NR_RX_EMPH_COEF_0"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.NB_NR_RX_EMPH_COEF_1"/>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup title="Rx HPF" class="DspPage" parameter="Rx HPF" visible="hidden">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucComboBox" id="id_rx_voice_hpf_filter_type_cb">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="left_label" value="Rx Voice HPF Filter Type"/>
+        <Parameter name="xml_file_path" value="/_DSP_settings/VoiceHpfType.xml"/>
+        <Parameter name="unique" value="DSP_PARA_NR_STRU.HPF_COEF_SW.rx"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_rx_voice_hpf_filter_type_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_NR_STRU.HPF_COEF_SW.rx" id="id_rx_voice_hpf_filter_type_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_rx_voice_hpf_filter_type_cb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

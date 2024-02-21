@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="DCC" Value="0"/>
+	<Group Name="ACC 10k" Value="1"/>
+	<Group Name="ACC 20k" Value="2"/>
+</DataGroup>

@@ -1,0 +1,1151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Captouch_Settings" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Captouch_Settings" scroll="both">
+  <ConfigGroup class="ucLayoutHorizontal">
+    <Parameter name="top_label" value="Captouch Feature"/>
+    <Parameter name="left_width" value="20"/>
+    <Parameter name="border" value="1"/>
+    <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+      <Parameter name="data" refId="id_captouch_channel0_enable_tb"/>
+    </Associator>
+    <ConfigItem class="ucComboBox" id="id_captouch_feature_enable_cb">
+      <Parameter name="left_label" value="Enable"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="75"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="bottom_margin" value="5"/>
+      <Parameter name="width" value="100"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+      <Parameter name="unique" value="CAPTOUCH_FEATURE_ENABLE.enable"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_feature_enable_tb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucComboBox" id="id_captouch_sw_tune_enable_cb">
+      <Parameter name="left_label" value="Coarse Cap Auto Tune"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="75"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="bottom_margin" value="5"/>
+      <Parameter name="width" value="100"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+      <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.swtune_enable"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_sw_tune_enable_tb"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical" visible="hidden">
+    <Parameter name="top_margin" value="15"/>
+    <Parameter name="top_label" value="Ear Detect"/>
+    <Parameter name="left_width" value="20"/>
+    <Parameter name="border" value="1"/>
+    <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+      <Parameter name="data" refId="id_captouch_channel0_enable_tb"/>
+    </Associator>
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigItem class="ucCaptouchChannelComboBox" id="id_captouch_channel_eardetect_enable_cb">
+        <Parameter name="left_label" value="Enable Channel"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/CaptouchEarDetectEnableChannel.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_channel_eardetect_enable_tb"/>
+          <Parameter name="forcetouch_ch" refId="id_forcetouch_ch_tb"/>
+          <Parameter name="lpsd_ch" refId="id_captouch_lpsd_ch_tb"/>
+          <Parameter name="vbus_enable" refId="id_captouch_vbus_ctp_lpsd_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="CAPTOUCH_EARDETECT_SETTING.baseKFrozenTimeout" id="id_captouch_baseK_frozen_timeout_updown" min="0" max="255">
+        <Parameter name="left_label" value="Base K Frozen Timeout (s)"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_EARDETECT_SETTING.baseKFrozenTimeout"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_baseK_frozen_timeout_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="CAPTOUCH_EARDETECT_SETTING.cfineBaseAvg" id="id_captouch_cfineBase_avg_updown" min="3" max="15" visible="hidden">
+        <Parameter name="left_label" value="CFineBase Avg"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_EARDETECT_SETTING.cfineBaseAvg"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_cfineBase_avg_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigItem class="ucCaptouchExtraChannelSetting" id="id_captouch_inear_channel_setting">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_channel_eardetect_enable_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical" visible="hidden">
+    <Parameter name="top_margin" value="15"/>
+    <Parameter name="top_label" value="Force Touch Setting"/>
+    <Parameter name="left_width" value="20"/>
+    <Parameter name="border" value="1"/>
+    <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+      <Parameter name="data" refId="id_captouch_channel0_enable_tb"/>
+    </Associator>
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigItem class="ucCaptouchChannelComboBox" id="id_forcetouch_ch_cb">
+        <Parameter name="left_label" value="Enable Channel"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/CaptouchEarDetectEnableChannel.xml"/>
+        <Parameter name="unique" value="FORCETOUCH_SETTING_STRU.forcetouch"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_forcetouch_ch_tb"/>
+          <Parameter name="eardetect_ch" refId="id_captouch_channel_eardetect_enable_tb"/>
+          <Parameter name="lpsd_ch" refId="id_captouch_lpsd_ch_tb"/>
+          <Parameter name="lpwu_ch" refId="id_captouch_lpwu_ch_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="FORCETOUCH_SETTING_STRU.pre_thr" id="id_forcetouch_pre_thr_updown" min="0.1" max="2" visible="hidden">
+        <Parameter name="multiple" value="0.1"/>
+        <Parameter name="left_label" value="PRE Thr"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="60"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="0.1"/>
+        <Parameter name="unique" value="FORCETOUCH_SETTING_STRU.pre_thr"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_forcetouch_pre_thr_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="FORCETOUCH_SETTING_STRU.rel_thr" id="id_forcetouch_rel_thr_updown" min="-2" max="-0.1" visible="hidden">
+        <Parameter name="multiple" value="0.1"/>
+        <Parameter name="left_label" value="REL Thr"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="60"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="0.1"/>
+        <Parameter name="unique" value="FORCETOUCH_SETTING_STRU.rel_thr"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_forcetouch_rel_thr_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="FORCETOUCH_SETTING_STRU.lev_thr" id="id_forcetouch_lev_thr_updown" min="1" max="100" visible="hidden">
+        <Parameter name="left_label" value="LEV Thr"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="60"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="FORCETOUCH_SETTING_STRU.lev_thr"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_forcetouch_lev_thr_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="FORCETOUCH_SETTING_STRU.cba_thr" id="id_forcetouch_cba_thr_updown" min="0.1" max="2" visible="hidden">
+        <Parameter name="multiple" value="0.1"/>
+        <Parameter name="left_label" value="CBA Thr"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="60"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="0.1"/>
+        <Parameter name="unique" value="FORCETOUCH_SETTING_STRU.cba_thr"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_forcetouch_cba_thr_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="FORCETOUCH_SETTING_STRU.ini_delay" id="id_forcetouch_ini_delay_updown" min="1" max="20" visible="hidden">
+        <Parameter name="left_label" value="INI Delay"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="60"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="FORCETOUCH_SETTING_STRU.ini_delay"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_forcetouch_ini_delay_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigItem class="ucCaptouchExtraChannelSetting" id="id_captouch_forcetouch_channel_setting">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_forcetouch_ch_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_margin" value="15"/>
+    <Parameter name="top_label" value="Long Press Shut Down/Wake Up Time Setting"/>
+    <Parameter name="left_width" value="20"/>
+    <Parameter name="border" value="1"/>
+    <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+      <Parameter name="data" refId="id_captouch_channel0_enable_tb"/>
+    </Associator>
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigItem class="ucComboBox" id="id_captouch_sd_enable_cb">
+        <Parameter name="left_label" value="Long Press Shut Down Enable"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Parameter name="unique" value="CAPTOUCH_SD_WU_TIME_SETTING_STRU.sdEnable"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_sd_enable_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchChannelComboBox" id="id_captouch_lpsd_ch_cb">
+        <Parameter name="left_label" value="Shut Down Channel"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/CaptouchEarDetectEnableChannel.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_lpsd_ch_tb"/>
+          <Parameter name="forcetouch_ch" refId="id_forcetouch_ch_tb"/>
+          <Parameter name="eardetect_ch" refId="id_captouch_channel_eardetect_enable_tb"/>
+          <Parameter name="vbus_enable" refId="id_captouch_vbus_ctp_lpsd_tb"/>
+          <Parameter name="auto_suspend_ch0" refId="id_captouch_auto_suspend_enable_ch0_tb"/>
+          <Parameter name="auto_suspend_ch1" refId="id_captouch_auto_suspend_enable_ch1_tb"/>
+          <Parameter name="auto_suspend_ch2" refId="id_captouch_auto_suspend_enable_ch2_tb"/>
+          <Parameter name="auto_suspend_ch3" refId="id_captouch_auto_suspend_enable_ch3_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="CAPTOUCH_SD_WU_TIME_SETTING_STRU.sdtime" id="id_captouch_sd_time_updown" min="0" max="20">
+        <Parameter name="left_label" value="Shut Down Time (s)"/>
+        <Parameter name="des_label" value="Long Press Shut Down Time &gt; Wake Up Time"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="60"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_SD_WU_TIME_SETTING_STRU.sdtime"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_sd_time_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigItem class="ucComboBox" id="id_captouch_wu_enable_cb">
+        <Parameter name="left_label" value="Long Press Wake Up Enable"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Parameter name="unique" value="CAPTOUCH_SD_WU_TIME_SETTING_STRU.wuEnable"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_wu_enable_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchChannelComboBox" id="id_captouch_lpwu_ch_cb">
+        <Parameter name="left_label" value="Wake Up Channel"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/CaptouchLPWUEnableChannel.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_lpwu_ch_tb"/>
+          <Parameter name="forcetouch_ch" refId="id_forcetouch_ch_tb"/>
+          <Parameter name="auto_suspend_ch0" refId="id_captouch_auto_suspend_enable_ch0_tb"/>
+          <Parameter name="auto_suspend_ch1" refId="id_captouch_auto_suspend_enable_ch1_tb"/>
+          <Parameter name="auto_suspend_ch2" refId="id_captouch_auto_suspend_enable_ch2_tb"/>
+          <Parameter name="auto_suspend_ch3" refId="id_captouch_auto_suspend_enable_ch3_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="CAPTOUCH_SD_WU_TIME_SETTING_STRU.wutime" id="id_captouch_wu_time_updown" min="0" max="20">
+        <Parameter name="left_label" value="Wake Up Time (s)"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="60"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_SD_WU_TIME_SETTING_STRU.wutime"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_wu_time_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigItem class="ucComboBox" id="id_captouch_vbus_ctp_lpsd_cb">
+        <Parameter name="left_label" value="VBUS with CTP LPSD"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Parameter name="unique" value="CAPTOUCH_SD_WU_TIME_SETTING_STRU.vbusWithCtpLpsd"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_vbus_ctp_lpsd_tb"/>
+          <Parameter name="enable" refId="id_captouch_sd_enable_cb"/>
+          <Parameter name="enable_value" value="1"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutHorizontal">
+    <Parameter name="top_margin" value="15"/>
+    <Parameter name="top_label" value="SW Debounce Setting"/>
+    <Parameter name="left_width" value="20"/>
+    <Parameter name="border" value="1"/>
+    <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+      <Parameter name="data" refId="id_captouch_channel0_enable_tb"/>
+    </Associator>
+    <ConfigItem class="ucUpDown" Unique="CAPTOUCH_NVDM_DATA.swDebounceTime" id="id_captouch_channel_sw_debounce_time_updown" min="40" max="255">
+      <Parameter name="left_label" value="SW Debounce Time (ms)"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="60"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="bottom_margin" value="5"/>
+      <Parameter name="step" value="1"/>
+      <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.swDebounceTime"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_channel_sw_debounce_time_tb"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_margin" value="15"/>
+    <Parameter name="top_label" value="Captouch Channel Setting"/>
+    <Parameter name="left_width" value="20"/>
+    <Parameter name="border" value="1"/>
+    <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+      <Parameter name="data" refId="id_captouch_channel0_enable_tb"/>
+    </Associator>
+    <ConfigGroup class="ucLayoutHorizontalForCaptouch" id="id_layout_captouch_setting_ch0">
+      <Parameter name="border" value="0"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="inear_channel_val" refId="id_captouch_channel_eardetect_enable_tb"/>
+        <Parameter name="forcetouch_channel_val" refId="id_forcetouch_ch_tb"/>
+      </Associator>
+      <ConfigItem class="ucComboBox" enable="0" id="id_captouch_channel0_enable_cb">
+        <Parameter name="left_label" value="CH0 (RTC_GPIO0)"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.en_ch_map.00"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_channel0_enable_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_captouch_highThre_channel0_updown" min="10" max="230">
+        <Parameter name="left_label" value="High Threshold"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.thr_h.00"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_highThre_channel0_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_captouch_lowThre_channel0_updown" min="10" max="230">
+        <Parameter name="left_label" value="Low Threshold"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.thr_l.00"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_lowThre_channel0_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchCoarseCapUpdown" Unique="CAPTOUCH_NVDM_DATA.coarse_cap.00" id="id_captouch_coarseCapValue_channel0_updown" min="0" max="7">
+        <Parameter name="left_label" value="Coarse Cap Value"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.coarse_cap.00"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_coarseCapValue_channel0_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchCoarseCapUpdown" Unique="CAPTOUCH_TUNE_SETTING.coarseCapValue.channel0" id="id_captouch_tune_coarseCapValue_channel0_updown" min="0" max="7">
+        <Parameter name="left_label" value="Coarse Cap Value"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_TUNE_SETTING.coarseCapValue.channel0"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_tune_coarseCapValue_channel0_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="CAPTOUCH_NVDM_DATA.mavg_r.00" id="id_captouch_touchMavg_channel0_updown" min="3" max="15">
+        <Parameter name="left_label" value="Touch Mavg"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.mavg_r.00"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_touchMavg_channel0_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="CAPTOUCH_NVDM_DATA.avg_s.00" id="id_captouch_touchAvg_channel0_updown" min="0" max="7">
+        <Parameter name="left_label" value="Touch Avg"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.avg_s.00"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_touchAvg_channel0_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchChannelComboBox" id="id_captouch_auto_suspend_enable_ch0_cb">
+        <Parameter name="left_label" value="Auto Suspend Timer Enable"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Parameter name="unique" value="CAPTOUCH_AUTOSUSPEND_SETTING.auto_suspend_enable.channel0"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_auto_suspend_enable_ch0_tb"/>
+          <Parameter name="lpsd_ch" refId="id_captouch_lpsd_ch_tb"/>
+          <Parameter name="lpwu_ch" refId="id_captouch_lpwu_ch_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_captouch_channel0_auto_suspend_time_cb">
+        <Parameter name="left_label" value="Auto Suspend Timeout (s)"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/CaptouchAutoSuspendTimeout.xml"/>
+        <Parameter name="unique" value="CAPTOUCH_AUTOSUSPEND_SETTING.time.channel0"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_channel0_auto_suspend_time_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+
+    <ConfigGroup class="ucLayoutHorizontalForCaptouch" id="id_layout_captouch_setting_ch1">
+      <Parameter name="border" value="0"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="inear_channel_val" refId="id_captouch_channel_eardetect_enable_tb"/>
+        <Parameter name="forcetouch_channel_val" refId="id_forcetouch_ch_tb"/>
+      </Associator>
+      <ConfigItem class="ucComboBox" enable="0" id="id_captouch_channel1_enable_cb">
+        <Parameter name="left_label" value="CH1 (GPIO3)"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.en_ch_map.01"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_channel1_enable_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_captouch_highThre_channel1_updown" min="10" max="230">
+        <Parameter name="left_label" value="High Threshold"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.thr_h.01"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_highThre_channel1_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_captouch_lowThre_channel1_updown" min="10" max="230">
+        <Parameter name="left_label" value="Low Threshold"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.thr_l.01"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_lowThre_channel1_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchCoarseCapUpdown" Unique="CAPTOUCH_NVDM_DATA.coarse_cap.01" id="id_captouch_coarseCapValue_channel1_updown" min="0" max="7">
+        <Parameter name="left_label" value="Coarse Cap Value"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.coarse_cap.01"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_coarseCapValue_channel1_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchCoarseCapUpdown" Unique="CAPTOUCH_TUNE_SETTING.coarseCapValue.channel1" id="id_captouch_tune_coarseCapValue_channel1_updown" min="0" max="7">
+        <Parameter name="left_label" value="Coarse Cap Value"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_TUNE_SETTING.coarseCapValue.channel1"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_tune_coarseCapValue_channel1_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="CAPTOUCH_NVDM_DATA.mavg_r.01" id="id_captouch_touchMavg_channel1_updown" min="3" max="15">
+        <Parameter name="left_label" value="Touch Mavg"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.mavg_r.01"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_touchMavg_channel1_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="CAPTOUCH_NVDM_DATA.avg_s.01" id="id_captouch_touchAvg_channel1_updown" min="0" max="7">
+        <Parameter name="left_label" value="Touch Avg"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.avg_s.01"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_touchAvg_channel1_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchChannelComboBox" id="id_captouch_auto_suspend_enable_ch1_cb">
+        <Parameter name="left_label" value="Auto Suspend Timer Enable"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Parameter name="unique" value="CAPTOUCH_AUTOSUSPEND_SETTING.auto_suspend_enable.channel1"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_auto_suspend_enable_ch1_tb"/>
+          <Parameter name="lpsd_ch" refId="id_captouch_lpsd_ch_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_captouch_channel1_auto_suspend_time_cb">
+        <Parameter name="left_label" value="Auto Suspend Timeout (s)"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/CaptouchAutoSuspendTimeout.xml"/>
+        <Parameter name="unique" value="CAPTOUCH_AUTOSUSPEND_SETTING.time.channel1"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_channel1_auto_suspend_time_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+
+    <ConfigGroup class="ucLayoutHorizontalForCaptouch" id="id_layout_captouch_setting_ch2">
+      <Parameter name="border" value="0"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="inear_channel_val" refId="id_captouch_channel_eardetect_enable_tb"/>
+        <Parameter name="forcetouch_channel_val" refId="id_forcetouch_ch_tb"/>
+      </Associator>
+      <ConfigItem class="ucComboBox" enable="0" id="id_captouch_channel2_enable_cb">
+        <Parameter name="left_label" value="CH2 (GPIO4)"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.en_ch_map.02"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_channel2_enable_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_captouch_highThre_channel2_updown" min="10" max="230">
+        <Parameter name="left_label" value="High Threshold"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.thr_h.02"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_highThre_channel2_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_captouch_lowThre_channel2_updown" min="10" max="230">
+        <Parameter name="left_label" value="Low Threshold"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.thr_l.02"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_lowThre_channel2_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchCoarseCapUpdown" Unique="CAPTOUCH_NVDM_DATA.coarse_cap.02" id="id_captouch_coarseCapValue_channel2_updown" min="0" max="7">
+        <Parameter name="left_label" value="Coarse Cap Value"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.coarse_cap.02"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_coarseCapValue_channel2_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchCoarseCapUpdown" Unique="CAPTOUCH_TUNE_SETTING.coarseCapValue.channel2" id="id_captouch_tune_coarseCapValue_channel2_updown" min="0" max="7">
+        <Parameter name="left_label" value="Coarse Cap Value"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_TUNE_SETTING.coarseCapValue.channel2"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_tune_coarseCapValue_channel2_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="CAPTOUCH_NVDM_DATA.mavg_r.02" id="id_captouch_touchMavg_channel2_updown" min="3" max="15">
+        <Parameter name="left_label" value="Touch Mavg"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.mavg_r.02"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_touchMavg_channel2_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="CAPTOUCH_NVDM_DATA.avg_s.02" id="id_captouch_touchAvg_channel2_updown" min="0" max="7">
+        <Parameter name="left_label" value="Touch Avg"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.avg_s.02"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_touchAvg_channel2_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchChannelComboBox" id="id_captouch_auto_suspend_enable_ch2_cb">
+        <Parameter name="left_label" value="Auto Suspend Timer Enable"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Parameter name="unique" value="CAPTOUCH_AUTOSUSPEND_SETTING.auto_suspend_enable.channel2"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_auto_suspend_enable_ch2_tb"/>
+          <Parameter name="lpsd_ch" refId="id_captouch_lpsd_ch_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_captouch_channel2_auto_suspend_time_cb">
+        <Parameter name="left_label" value="Auto Suspend Timeout (s)"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/CaptouchAutoSuspendTimeout.xml"/>
+        <Parameter name="unique" value="CAPTOUCH_AUTOSUSPEND_SETTING.time.channel2"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_channel2_auto_suspend_time_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+
+    <ConfigGroup class="ucLayoutHorizontalForCaptouch" id="id_layout_captouch_setting_ch3">
+      <Parameter name="border" value="0"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="inear_channel_val" refId="id_captouch_channel_eardetect_enable_tb"/>
+        <Parameter name="forcetouch_channel_val" refId="id_forcetouch_ch_tb"/>
+      </Associator>
+      <ConfigItem class="ucComboBox" id="id_captouch_channel3_enable_cb">
+        <Parameter name="left_label" value="CH3 (GPIO5)"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.en_ch_map.03"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_channel3_enable_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_captouch_highThre_channel3_updown" min="10" max="230">
+        <Parameter name="left_label" value="High Threshold"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.thr_h.03"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_highThre_channel3_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_captouch_lowThre_channel3_updown" min="10" max="230">
+        <Parameter name="left_label" value="Low Threshold"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.thr_l.03"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_lowThre_channel3_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchCoarseCapUpdown" Unique="CAPTOUCH_NVDM_DATA.coarse_cap.03" id="id_captouch_coarseCapValue_channel3_updown" min="0" max="7">
+        <Parameter name="left_label" value="Coarse Cap Value"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.coarse_cap.03"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_coarseCapValue_channel3_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchCoarseCapUpdown" Unique="CAPTOUCH_TUNE_SETTING.coarseCapValue.channel3" id="id_captouch_tune_coarseCapValue_channel3_updown" min="0" max="7">
+        <Parameter name="left_label" value="Coarse Cap Value"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_TUNE_SETTING.coarseCapValue.channel3"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_tune_coarseCapValue_channel3_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="CAPTOUCH_NVDM_DATA.mavg_r.03" id="id_captouch_touchMavg_channel3_updown" min="3" max="15">
+        <Parameter name="left_label" value="Touch Mavg"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.mavg_r.03"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_touchMavg_channel3_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="CAPTOUCH_NVDM_DATA.avg_s.03" id="id_captouch_touchAvg_channel3_updown" min="0" max="7">
+        <Parameter name="left_label" value="Touch Avg"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CAPTOUCH_NVDM_DATA.avg_s.03"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_touchAvg_channel3_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchChannelComboBox" id="id_captouch_auto_suspend_enable_ch3_cb">
+        <Parameter name="left_label" value="Auto Suspend Timer Enable"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Parameter name="unique" value="CAPTOUCH_AUTOSUSPEND_SETTING.auto_suspend_enable.channel3"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_auto_suspend_enable_ch3_tb"/>
+          <Parameter name="lpsd_ch" refId="id_captouch_lpsd_ch_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_captouch_channel3_auto_suspend_time_cb">
+        <Parameter name="left_label" value="Auto Suspend Timeout (s)"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/CaptouchAutoSuspendTimeout.xml"/>
+        <Parameter name="unique" value="CAPTOUCH_AUTOSUSPEND_SETTING.time.channel3"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_captouch_channel3_auto_suspend_time_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_FEATURE_ENABLE.enable" id="id_captouch_feature_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_feature_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.swtune_enable" id="id_captouch_sw_tune_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_sw_tune_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_EARDETECT_SETTING.channelBitMap" id="id_captouch_channel_eardetect_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_channel_eardetect_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_EARDETECT_SETTING.baseKFrozenTimeout" id="id_captouch_baseK_frozen_timeout_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_baseK_frozen_timeout_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_EARDETECT_SETTING.cfineBaseAvg" id="id_captouch_cfineBase_avg_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_cfineBase_avg_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="FORCETOUCH_SETTING_STRU.forcetouch" id="id_forcetouch_ch_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_forcetouch_ch_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="FORCETOUCH_SETTING_STRU.pre_thr" id="id_forcetouch_pre_thr_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_forcetouch_pre_thr_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="FORCETOUCH_SETTING_STRU.rel_thr" id="id_forcetouch_rel_thr_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_forcetouch_rel_thr_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="FORCETOUCH_SETTING_STRU.lev_thr" id="id_forcetouch_lev_thr_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_forcetouch_lev_thr_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="FORCETOUCH_SETTING_STRU.cba_thr" id="id_forcetouch_cba_thr_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_forcetouch_cba_thr_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="FORCETOUCH_SETTING_STRU.ini_delay" id="id_forcetouch_ini_delay_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_forcetouch_ini_delay_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_SD_WU_TIME_SETTING_STRU.sdEnable" id="id_captouch_sd_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_sd_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_SD_WU_TIME_SETTING_STRU.wuEnable" id="id_captouch_wu_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_wu_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_SD_WU_TIME_SETTING_STRU.sdtime" id="id_captouch_sd_time_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_sd_time_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_SD_WU_TIME_SETTING_STRU.wutime" id="id_captouch_wu_time_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_wu_time_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_SD_WU_TIME_SETTING_STRU.vbusWithCtpLpsd" id="id_captouch_vbus_ctp_lpsd_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_vbus_ctp_lpsd_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.swDebounceTime" id="id_captouch_channel_sw_debounce_time_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_channel_sw_debounce_time_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.en_ch_map.00" id="id_captouch_channel0_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_channel0_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.en_ch_map.01" id="id_captouch_channel1_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_channel1_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.en_ch_map.02" id="id_captouch_channel2_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_channel2_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.en_ch_map.03" id="id_captouch_channel3_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_channel3_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.mavg_r.00" id="id_captouch_touchMavg_channel0_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_touchMavg_channel0_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.mavg_r.01" id="id_captouch_touchMavg_channel1_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_touchMavg_channel1_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.mavg_r.02" id="id_captouch_touchMavg_channel2_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_touchMavg_channel2_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.mavg_r.03" id="id_captouch_touchMavg_channel3_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_touchMavg_channel3_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.avg_s.00" id="id_captouch_touchAvg_channel0_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_touchAvg_channel0_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.avg_s.01" id="id_captouch_touchAvg_channel1_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_touchAvg_channel1_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.avg_s.02" id="id_captouch_touchAvg_channel2_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_touchAvg_channel2_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.avg_s.03" id="id_captouch_touchAvg_channel3_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_touchAvg_channel3_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.thr_h.00" id="id_captouch_highThre_channel0_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_highThre_channel0_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.thr_h.01" id="id_captouch_highThre_channel1_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_highThre_channel1_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.thr_h.02" id="id_captouch_highThre_channel2_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_highThre_channel2_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.thr_h.03" id="id_captouch_highThre_channel3_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_highThre_channel3_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.thr_l.00" id="id_captouch_lowThre_channel0_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_lowThre_channel0_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.thr_l.01" id="id_captouch_lowThre_channel1_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_lowThre_channel1_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.thr_l.02" id="id_captouch_lowThre_channel2_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_lowThre_channel2_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.thr_l.03" id="id_captouch_lowThre_channel3_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_lowThre_channel3_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.coarse_cap.00" id="id_captouch_coarseCapValue_channel0_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_coarseCapValue_channel0_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.coarse_cap.01" id="id_captouch_coarseCapValue_channel1_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_coarseCapValue_channel1_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.coarse_cap.02" id="id_captouch_coarseCapValue_channel2_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_coarseCapValue_channel2_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_NVDM_DATA.coarse_cap.03" id="id_captouch_coarseCapValue_channel3_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_coarseCapValue_channel3_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_TUNE_SETTING.coarseCapValue.channel0" id="id_captouch_tune_coarseCapValue_channel0_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_tune_coarseCapValue_channel0_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_TUNE_SETTING.coarseCapValue.channel1" id="id_captouch_tune_coarseCapValue_channel1_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_tune_coarseCapValue_channel1_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_TUNE_SETTING.coarseCapValue.channel2" id="id_captouch_tune_coarseCapValue_channel2_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_tune_coarseCapValue_channel2_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_TUNE_SETTING.coarseCapValue.channel3" id="id_captouch_tune_coarseCapValue_channel3_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_tune_coarseCapValue_channel3_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_AUTOSUSPEND_SETTING.time.channel0" id="id_captouch_channel0_auto_suspend_time_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_channel0_auto_suspend_time_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_AUTOSUSPEND_SETTING.time.channel1" id="id_captouch_channel1_auto_suspend_time_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_channel1_auto_suspend_time_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_AUTOSUSPEND_SETTING.time.channel2" id="id_captouch_channel2_auto_suspend_time_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_channel2_auto_suspend_time_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_AUTOSUSPEND_SETTING.time.channel3" id="id_captouch_channel3_auto_suspend_time_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_channel3_auto_suspend_time_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_AUTOSUSPEND_SETTING.lpsd_channel" id="id_captouch_lpsd_ch_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_lpsd_ch_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_AUTOSUSPEND_SETTING.lpwu_channel" id="id_captouch_lpwu_ch_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_lpwu_ch_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_AUTOSUSPEND_SETTING.auto_suspend_enable.channel0" id="id_captouch_auto_suspend_enable_ch0_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_auto_suspend_enable_ch0_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_AUTOSUSPEND_SETTING.auto_suspend_enable.channel1" id="id_captouch_auto_suspend_enable_ch1_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_auto_suspend_enable_ch1_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_AUTOSUSPEND_SETTING.auto_suspend_enable.channel2" id="id_captouch_auto_suspend_enable_ch2_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_auto_suspend_enable_ch2_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CAPTOUCH_AUTOSUSPEND_SETTING.auto_suspend_enable.channel3" id="id_captouch_auto_suspend_enable_ch3_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_auto_suspend_enable_ch3_cb"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

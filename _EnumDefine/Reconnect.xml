@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="RECONNECT_UNNECESSARY" Value="0"/>
+	<Group Name="RECONNECT_LAST_ONE" Value="1"/>
+	<Group Name="RECONNECT_LAST_TWO" Value="2"/>
+	<Group Name="RECONNECT_LIST" Value="3"/>
+	<Group Name="RECONNECT_LAST_DISC" Value="4"/>
+	<Group Name="RECONNECT_AG_IND_0" Value="5"/>
+	<Group Name="RECONNECT_AG_IND_1" Value="6"/>
+	<Group Name="RECONNECT_AG_IND_0_1" Value="7"/>
+	<Group Name="RECONNECT_MCSYNC_CONNECT" Value="8"/>
+	<Group Name="RECONNECT_FAST_DONGLE" Value="9"/>
+	<Group Name="RECONNECT_ALL_DROPPED_LINKS" Value="10"/>
+	<!--<Group Name="RECONNECT_CURRENT_LINK" Value="11"/>-->
+	<Group Name="RECONNECT_MCSYNC_CONNECT_0011" Value="12"/>
+	<Group Name="RECONNECT_MCSYNC_CONNECT_0101" Value="13"/>
+</DataGroup>

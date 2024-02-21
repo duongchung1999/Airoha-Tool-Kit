@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup> 
+	<Group Name="L_1" 	Value="UI:0xEE58,FW:0xE1D0"/> 
+	<Group Name="L_2" 	Value="UI:0xEE5A,FW:0xE1D2"/> 
+	<Group Name="L_3" 	Value="UI:0xEE5C,FW:0xE1D4"/>
+ 	<Group Name="R_1" 	Value="UI:0xEE59,FW:0xE1D1"/> 
+	<Group Name="R_2" 	Value="UI:0xEE5B,FW:0xE1D3"/> 
+	<Group Name="R_3" 	Value="UI:0xEE5D,FW:0xE1D5"/> 
+</DataGroup>
+
+

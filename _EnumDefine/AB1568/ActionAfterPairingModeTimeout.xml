@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="RETURN_TO_CONNECTABLE" Value="0"/>
+	<Group Name="POWER_OFF" Value="1"/>
+	<Group Name="POWER_OFF_IF_PDL_IS_EMPTY" Value="2"/>
+</DataGroup>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+  <Group Name="1.3 MHz" Value="0"/>
+  <Group Name="1.18 MHz" Value="1"/>
+  <Group Name="1 MHz" Value="2"/>
+</DataGroup>

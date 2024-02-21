@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="ANC_FBC" class="Airoha.Project.ConfigTool.View.TabPage" parameter="ANC_FBC" scroll="vertical">
+  <ConfigGroup title="FBC" class="TouchFigurePage" parameter="FBC">
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <ConfigGroup class="ucAncBandTable" id="id_anc_fbc_setting_table">
+          <Parameter name="anc_type" value="FBC"/>
+          <Parameter name="group_xml" value="/_DSP_settings/AB1568/AncFBCGroup.xml"/>
+          <Parameter name="group_btn_row_max_cnt" value="4"/>
+          <Parameter name="cell_cnt" value="9"/>
+          <Parameter name="phase_target_line_str" value="id_anc_fbc_phase_target_line_data"/>
+          <Parameter name="magnitude_target_line_str" value="id_anc_fbc_magnitude_target_line_data"/>
+          <Parameter name="phase_line_id" value="id_anc_fbc_phase_line_data"/>
+          <Parameter name="magnitude_line_id" value="id_anc_fbc_magnitude_line_data"/>
+          <Parameter name="performance_line_id" value="id_anc_fbc_perfomance_data"/>
+          <Parameter name="performance_wi_comp_line_id" value="id_anc_fbc_perfomance_wi_comp_data"/>
+          <Parameter name="rescale_id" value="id_anc_fbc_rescale_value"/>
+          <Parameter name="point_set_id" value="id_anc_fbc_gain_point_set"/>
+          <Parameter name="anc_eng_mode_id" value="id_anc_eng_mode"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="point_set" refId="id_anc_fbc_gain_point_set"/>
+            <Parameter name="anc_eng_mode" refId="id_anc_eng_mode"/>
+          </Associator>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <ConfigItem class="ucUpDown" Unique="anc_param.deq_param.delay" id="id_anc_deq_delay_updown" min="0" max="7" visible="hidden">
+        <Parameter name="left_label" value="Delay"/>
+        <Parameter name="des_label" value="(0 ~ 7) 2.65*x us"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="50"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="multiple" value="1"/>
+        <Parameter name="unique" value="anc_param.deq_param.delay"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_anc_deq_delay_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_anc_ul4_debug_path_cb" visible="hidden">
+        <Parameter name="left_label" value="UL4 Debug Path"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="50"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Parameter name="unique" value="ANC_NVDM_MISC_PARAM.anc_ul4_debug_path"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_anc_ul4_debug_path_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigGroup class="General">
+        <ConfigItem class="ucTextBox" Unique="anc_param.deq_param.delay" id="id_anc_deq_delay_tb" visible="hidden">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_deq_delay_updown"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" Unique="ANC_NVDM_MISC_PARAM.anc_ul4_debug_path" id="id_anc_ul4_debug_path_tb" visible="hidden">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_ul4_debug_path_cb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" Unique="ANC_FACTORY_NVDM_MISC_PARAM_.anc_ul4_debug_path" id="id_anc_factory_ul4_debug_path_tb" visible="hidden">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_ul4_debug_path_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

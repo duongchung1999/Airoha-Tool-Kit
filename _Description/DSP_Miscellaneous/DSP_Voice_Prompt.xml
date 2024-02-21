@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="DSP_Voice_Prompt" class="Airoha.Project.ConfigTool.View.General" parameter="DSP_Voice_Prompt">
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VP_CPD_STRU.ENABLE"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VP_CPD_STRU.REVISION"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VP_CPD_STRU.CPD_VO_DELAY_SIZE"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VP_CPD_STRU.alpha_release"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VP_CPD_STRU.alpha_attack"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VP_CPD_STRU.CPD_THRD1"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VP_CPD_STRU.CPD_THRD2"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VP_CPD_STRU.CPD_IN2"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VP_CPD_STRU.out_max"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VP_CPD_STRU.CPD_PACKET_MAX"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VP_CPD_STRU.period"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VP_CPD_STRU.INS_thrd"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VP_CPD_STRU.INS_atten"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VP_CPD_STRU.INS_alpha_rx"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VP_CPD_STRU.INS_alpha_tx_vad"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VP_CPD_STRU.INS_alpha_tx_novad"/>
+</Page>

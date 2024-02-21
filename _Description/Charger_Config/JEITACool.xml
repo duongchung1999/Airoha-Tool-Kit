@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="JEITACool" class="Airoha.Project.ConfigTool.View.General" parameter="JEITACool">
+  <ConfigItem class="ucTextBox" Unique="JEITACool.JEITAcoolcc2thresholdvoltage"/>
+  <ConfigItem class="ucTextBox" Unique="JEITACool.JEITAcoolcc2thresholdADC"/>
+  <ConfigItem class="ucTextBox" Unique="JEITACool.JEITAcoolcvthresholdvoltage"/>
+  <ConfigItem class="ucTextBox" Unique="JEITACool.JEITAcoolcvthresholdADC"/>
+  <ConfigItem class="ucTextBox" Unique="JEITACool.JEITAcoolfullbatvoltage"/>
+  <ConfigItem class="ucTextBox" Unique="JEITACool.JEITAcoolfullbatADC"/>
+  <ConfigItem class="ucTextBox" Unique="JEITACool.JEITAcoolrechargevoltage"/>
+  <ConfigItem class="ucTextBox" Unique="JEITACool.JEITAcoolrechargeADC"/>
+  <ConfigItem class="ucTextBox" Unique="JEITACool.JEITAcoolfullbatvoltage2"/>
+  <ConfigItem class="ucTextBox" Unique="JEITACool.JEITAcoolfullbatADC2"/>
+  <ConfigItem class="ucTextBox" Unique="JEITACool.JEITAcoolcc1currentDAC"/>
+  <ConfigItem class="ucTextBox" Unique="JEITACool.JEITAcoolcc2currentDAC"/>
+  <ConfigItem class="ucTextBox" Unique="JEITACool.JEITAcoolcvDAC"/>
+  <ConfigItem class="ucTextBox" Unique="JEITACool.JEITAcoolcc1current1"/>
+  <ConfigItem class="ucTextBox" Unique="JEITACool.JEITAcoolrchgselcc11"/>
+  <ConfigItem class="ucTextBox" Unique="JEITACool.JEITAcoolcc2current1"/>
+  <ConfigItem class="ucTextBox" Unique="JEITACool.JEITAcoolrchgselcc21"/>
+  <ConfigItem class="ucTextBox" Unique="JEITACool.JEITAcoolCVstopcurrentADC"/>
+</Page>

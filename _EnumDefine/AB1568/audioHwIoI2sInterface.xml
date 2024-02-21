@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="I2S_0" Value="0"/>
+	<Group Name="I2S_1" Value="1"/>
+	<Group Name="I2S_2" Value="2"/>
+	<!--<Group Name="I2S_3" Value="3"/>-->
+</DataGroup>

@@ -1,0 +1,2295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Audio_HW/IO_Config" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Audio_HW/IO_Config">
+	<ConfigGroup class="ucLayoutVertical">
+		<Parameter name="top_label" value="Audio"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="border" value="1"/>
+		<ConfigGroup class="ucLayoutHorizontal">
+			<ConfigGroup class="ucLayoutVertical">
+				<ConfigGroup class="ucLayoutVertical">
+					<Parameter name="top_label" value="Audio Linein Path"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="bottom_margin" value="10"/>
+					<Parameter name="right_margin" value="10"/>
+					<Parameter name="border" value="1"/>
+					<ConfigGroup class="ucLayoutVertical">
+						<ConfigItem class="ucDspCheckBox" id="id_pure_linein_enable_ckb">
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="left_margin" value="10"/>
+							<Parameter name="right_label" value="Line-in Bypass Mode"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_pure_linein_enable_tb"/>
+							</Associator>
+						</ConfigItem>
+						<ConfigItem class="ucComboBox" id="id_audio_hw_io_stream_in_device_combo">
+							<Parameter name="left_label" value="Linein Input Path"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioLineinInputPath.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_audio_hw_io_stream_in_device"/>
+							</Associator>
+						</ConfigItem>
+						<ConfigItem class="ucComboBox" id="id_audio_linein_output_path_combo">
+							<Parameter name="left_label" value="Linein Output Path"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioLineinOutputPath.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_audio_linein_output_path_tb"/>
+							</Associator>
+						</ConfigItem>
+						<ConfigItem class="AB1568.ucComboBoxWithMultiEnable" id="id_audio_hw_io_stream_in_i2s_interface_combo">
+							<Parameter name="left_label" value="Linein Input I2S Interface"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2sInterface.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_audio_hw_io_stream_in_i2s_interface"/>
+								<Parameter name="enable" refId="id_audio_hw_io_stream_in_device_combo"/>
+								<Parameter name="enable_value" value="1"/>
+							</Associator>
+						</ConfigItem>
+						<ConfigItem class="AB1568.ucComboBoxWithMultiEnable" id="id_audio_linein_output_i2s_interface_combo">
+							<Parameter name="left_label" value="Linein Output I2S Interface"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2sInterface.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_audio_linein_output_i2s_interface_tb"/>
+								<Parameter name="enable" refId="id_audio_linein_output_path_combo"/>
+								<Parameter name="enable_value" value="3"/>
+							</Associator>
+						</ConfigItem>
+					</ConfigGroup>
+				</ConfigGroup>
+				<ConfigGroup class="ucLayoutVertical">
+					<Parameter name="top_label" value="Audio A2DP Path"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="bottom_margin" value="10"/>
+					<Parameter name="right_margin" value="10"/>
+					<Parameter name="border" value="1"/>
+					<ConfigGroup class="ucLayoutVertical">
+						<ConfigItem class="AB1568.ucAudioIoHwComboBox" id="id_audio_hw_io_stream_out_device_combo">
+							<Parameter name="left_label" value="A2DP Output Path"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoOutputDevice.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_audio_hw_io_stream_out_device"/>
+							</Associator>
+						</ConfigItem>
+						<ConfigItem class="AB1568.ucComboBoxWithMultiEnable" id="id_audio_hw_io_stream_out_i2s_interface_combo">
+							<Parameter name="left_label" value="A2DP Output I2S Interface"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2sInterface.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_audio_hw_io_stream_out_i2s_interface"/>
+								<Parameter name="enable" refId="id_audio_hw_io_stream_out_device_combo"/>
+								<Parameter name="enable_value" value="3,4"/>
+							</Associator>
+						</ConfigItem>
+					</ConfigGroup>
+				</ConfigGroup>
+			</ConfigGroup>
+			<ConfigGroup class="ucLayoutVertical">
+				<Parameter name="top_label" value="Default I2S Configure"/>
+				<Parameter name="top_margin" value="10"/>
+				<Parameter name="left_margin" value="10"/>
+				<Parameter name="bottom_margin" value="10"/>
+				<Parameter name="right_margin" value="10"/>
+				<Parameter name="border" value="1"/>
+				<ConfigGroup class="ucLayoutVertical">
+					<Parameter name="top_label" value="I2S_Master"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="bottom_margin" value="10"/>
+					<Parameter name="right_margin" value="10"/>
+					<Parameter name="border" value="1"/>
+					<ConfigGroup class="ucLayoutVertical">
+						<ConfigItem class="ucComboBox" id="id_audio_i2s_master0_sampling_rate_combo">
+							<Parameter name="left_label" value="I2S0 Master Sampling Rate"/>
+							<Parameter name="left_width" value="200"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2SMasterSamplingRate.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_audio_i2s_master0_sampling_rate_tb"/>
+							</Associator>
+						</ConfigItem>
+						<ConfigItem class="ucComboBox" id="id_audio_i2s_master1_sampling_rate_combo">
+							<Parameter name="left_label" value="I2S1 Master Sampling Rate"/>
+							<Parameter name="left_width" value="200"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2SMasterSamplingRate.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_audio_i2s_master1_sampling_rate_tb"/>
+							</Associator>
+						</ConfigItem>
+						<ConfigItem class="ucComboBox" id="id_audio_i2s_master2_sampling_rate_combo">
+							<Parameter name="left_label" value="I2S2 Master Sampling Rate"/>
+							<Parameter name="left_width" value="200"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2SMasterSamplingRate.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_audio_i2s_master2_sampling_rate_tb"/>
+							</Associator>
+						</ConfigItem>
+						<ConfigItem class="ucComboBox" id="id_audio_i2s_master3_sampling_rate_combo">
+							<Parameter name="left_label" value="I2S3 Master Sampling Rate"/>
+							<Parameter name="left_width" value="200"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2SMasterSamplingRate.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_audio_i2s_master3_sampling_rate_tb"/>
+							</Associator>
+						</ConfigItem>
+					</ConfigGroup>
+				</ConfigGroup>
+			</ConfigGroup>
+			<ConfigGroup class="ucLayoutVertical">
+				<Parameter name="top_label" value="Linein Configure"/>
+				<Parameter name="top_margin" value="10"/>
+				<Parameter name="left_margin" value="10"/>
+				<Parameter name="bottom_margin" value="10"/>
+				<Parameter name="right_margin" value="10"/>
+				<Parameter name="border" value="1"/>
+				<ConfigGroup class="ucLayoutVertical">
+					<ConfigItem class="ucComboBox" id="id_audio_iir_filter_combo">
+						<Parameter name="left_label" value="Linein Filter"/>
+						<Parameter name="left_width" value="200"/>
+						<Parameter name="width" value="120"/>
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="bottom_margin" value="10"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="left_margin" value="10"/>
+						<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoAudioIirFilter.xml"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_audio_iir_filter_tb"/>
+						</Associator>
+					</ConfigItem>
+				</ConfigGroup>
+			</ConfigGroup>
+			
+			<ConfigGroup class="ucLayoutVertical">
+			<Parameter name="top_label" value="MicBias0,1,2"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="border" value="1"/>
+			<ConfigGroup class="ucLayoutVertical">
+				<ConfigItem class="ucDspCheckBox" id="id_voice_hw_io_MicBias_para_Audio_Enable0_ckb">
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="right_label" value="MicBias0 Enable"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_audio_hw_io_MicBias_para_Audio_Enable0_tb"/>
+					</Associator>
+				</ConfigItem>
+				<ConfigItem class="ucDspCheckBox" id="id_voice_hw_io_MicBias_para_Audio_Enable1_ckb">
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="right_label" value="MicBias1 Enable"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_audio_hw_io_MicBias_para_Audio_Enable1_tb"/>
+					</Associator>
+				</ConfigItem>
+				<ConfigItem class="ucDspCheckBox" id="id_voice_hw_io_MicBias_para_Audio_Enable2_ckb">
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="right_label" value="MicBias2 Enable"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_audio_hw_io_MicBias_para_Audio_Enable2_tb"/>
+					</Associator>
+				</ConfigItem>
+			</ConfigGroup>
+			</ConfigGroup>
+		</ConfigGroup>
+	</ConfigGroup>
+	<ConfigGroup class="ucLayoutVertical">
+		<Parameter name="top_label" value="eSCO"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="border" value="1"/>
+		<ConfigGroup class="ucLayoutHorizontal">
+			<Parameter name="top_margin" value="10"/>
+			<ConfigGroup class="ucLayoutVertical">
+				<ConfigGroup class="ucLayoutVertical">
+					<Parameter name="top_label" value="eSCO Voice Path"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="right_margin" value="20"/>
+					<Parameter name="border" value="1"/>
+					<ConfigGroup class="ucLayoutVertical">
+						<ConfigItem class="ucComboBox" id="id_voice_hw_io_stream_in_device_combo">
+							<Parameter name="left_label" value="Voice Input Path"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoVoiceInputDevice.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_voice_hw_io_stream_in_device"/>
+							</Associator>
+						</ConfigItem>
+						<ConfigItem class="ucComboBox" id="id_voice_hw_io_analog_mic_sel_combo">
+							<Parameter name="left_label" value="Voice Analog Mic Select"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoVoiceAMicSelect1565.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_voice_hw_io_analog_mic_sel"/>
+								<Parameter name="enable" refId="id_voice_hw_io_stream_in_device_combo"/>
+								<Parameter name="enable_value" value="0"/>
+							</Associator>
+						</ConfigItem>
+						<ConfigItem class="ucComboBox" id="id_voice_hw_io_stream_digital_mic_select_combo">
+							<Parameter name="left_label" value="Voice Digital Mic Select"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoVoiceDMicSelect.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_voice_hw_io_stream_digital_mic_select"/>
+								<Parameter name="enable" refId="id_voice_hw_io_stream_in_device_combo"/>
+								<Parameter name="enable_value" value="1"/>
+							</Associator>
+						</ConfigItem>
+						<ConfigItem class="AB1568.ucAudioIoHwComboBox" id="id_voice_hw_io_stream_out_device_combo">
+							<Parameter name="left_label" value="Voice Output Path"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoOutputDevice.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_voice_hw_io_stream_out_device"/>
+							</Associator>
+						</ConfigItem>
+						<ConfigItem class="AB1568.ucComboBoxWithMultiEnable" id="id_voice_hw_io_stream_in_i2s_interface_combo">
+							<Parameter name="left_label" value="Voice Input I2S Interface"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2sInterface.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_voice_hw_io_stream_in_i2s_interface"/>
+								<Parameter name="enable" refId="id_voice_hw_io_stream_in_device_combo"/>
+								<Parameter name="enable_value" value="2,3"/>
+							</Associator>
+						</ConfigItem>
+						<ConfigItem class="AB1568.ucComboBoxWithMultiEnable" id="id_voice_hw_io_stream_out_i2s_interface_combo">
+							<Parameter name="left_label" value="Voice Output I2S Interface"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2sInterface.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_voice_hw_io_stream_out_i2s_interface"/>
+								<Parameter name="enable" refId="id_voice_hw_io_stream_out_device_combo"/>
+								<Parameter name="enable_value" value="3,4"/>
+							</Associator>
+						</ConfigItem>
+					</ConfigGroup>
+				</ConfigGroup>
+				<ConfigGroup class="ucLayoutVertical">
+					<Parameter name="top_label" value="Extended MIC Configuration"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="right_margin" value="20"/>
+					<Parameter name="border" value="1"/>
+					<ConfigGroup class="ucLayoutVertical">
+						<ConfigItem class="AB1568.ucAudioEscoHwIoComboBox" id="id_voice_hw_io_MIC_Sel_Main_combo">
+							<Parameter name="left_label" value="Main Mic Select"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicSelect1565.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_voice_hw_io_MIC_Sel_Main_tb"/>
+								<Parameter name="enable" refId="id_voice_hw_io_stream_in_device_combo"/>
+								<Parameter name="enable_value" value="4"/>
+							</Associator>
+						</ConfigItem>
+
+						<ConfigItem class="AB1568.ucAudioEscoHwIoComboBox" id="id_voice_hw_io_MIC_Sel_Ref_combo">
+							<Parameter name="left_label" value="Ref Mic Select"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicSelect1565.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_voice_hw_io_MIC_Sel_Ref_tb"/>
+								<Parameter name="enable" refId="id_voice_hw_io_stream_in_device_combo"/>
+								<Parameter name="enable_value" value="4"/>
+							</Associator>
+						</ConfigItem>
+
+						<ConfigItem class="AB1568.ucAudioEscoHwIoComboBox" id="id_voice_hw_io_MIC_Sel_Ref2_combo">
+							<Parameter name="left_label" value="Ref2 Mic Select"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicSelect1565.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_voice_hw_io_MIC_Sel_Ref2_tb"/>
+								<Parameter name="enable" refId="id_voice_hw_io_stream_in_device_combo"/>
+								<Parameter name="enable_value" value="4"/>
+							</Associator>
+						</ConfigItem>
+
+						<ConfigItem class="AB1568.ucAudioEscoHwIoComboBox" id="id_voice_hw_io_MIC_Sel_Ref3_combo">
+							<Parameter name="left_label" value="Ref3 Mic Select"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicSelect1565.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_voice_hw_io_MIC_Sel_Ref3_tb"/>
+								<Parameter name="enable" refId="id_voice_hw_io_stream_in_device_combo"/>
+								<Parameter name="enable_value" value="4"/>
+							</Associator>
+						</ConfigItem>
+						
+						<ConfigItem class="AB1568.ucAudioEscoHwIoComboBox" id="id_voice_hw_io_MIC_Sel_Ref4_combo">
+							<Parameter name="left_label" value="Ref4 Mic Select"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicSelect1565.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_voice_hw_io_MIC_Sel_Ref4_tb"/>
+								<Parameter name="enable" refId="id_voice_hw_io_stream_in_device_combo"/>
+								<Parameter name="enable_value" value="4"/>
+							</Associator>
+						</ConfigItem>
+						
+						<ConfigItem class="AB1568.ucAudioEscoHwIoComboBox" id="id_voice_hw_io_MIC_Sel_Ref5_combo">
+							<Parameter name="left_label" value="Ref5 Mic Select"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicSelect1565.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_voice_hw_io_MIC_Sel_Ref5_tb"/>
+								<Parameter name="enable" refId="id_voice_hw_io_stream_in_device_combo"/>
+								<Parameter name="enable_value" value="4"/>
+							</Associator>
+						</ConfigItem>
+
+						<!--<ConfigItem class="AB1568.ucAudioIoHwComboBox" id="id_voice_hw_io_MIC_Sel_Main_Interface_combo">
+							<Parameter name="left_label" value="Main Mic Interface"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicInterface.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_voice_hw_io_MIC_Sel_Main_Interface_tb"/>
+								<Parameter name="enable" refId="id_voice_hw_io_stream_in_device_combo"/>
+								<Parameter name="enable_value" value="3"/>
+							</Associator>
+						</ConfigItem>				  
+						<ConfigItem class="AB1568.ucAudioIoHwComboBox" id="id_voice_hw_io_MIC_Sel_Ref_Interface_combo">
+							<Parameter name="left_label" value="Ref Mic Interface"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicInterface.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_voice_hw_io_MIC_Sel_Ref_Interface_tb"/>
+								<Parameter name="enable" refId="id_voice_hw_io_stream_in_device_combo"/>
+								<Parameter name="enable_value" value="3"/>
+							</Associator>
+						</ConfigItem>
+						<ConfigItem class="AB1568.ucAudioIoHwComboBox" id="id_voice_hw_io_MIC_Sel_Ref2_Interface_combo">
+							<Parameter name="left_label" value="Ref2 Mic Interface"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicInterface.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_voice_hw_io_MIC_Sel_Ref2_Interface_tb"/>
+								<Parameter name="enable" refId="id_voice_hw_io_stream_in_device_combo"/>
+								<Parameter name="enable_value" value="3"/>
+							</Associator>
+						</ConfigItem>
+						<ConfigItem class="AB1568.ucAudioIoHwComboBox" id="id_voice_hw_io_MIC_Sel_Ref3_Interface_combo">
+							<Parameter name="left_label" value="Ref3 Mic Interface"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicInterface.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_voice_hw_io_MIC_Sel_Ref3_Interface_tb"/>
+								<Parameter name="enable" refId="id_voice_hw_io_stream_in_device_combo"/>
+								<Parameter name="enable_value" value="3"/>
+							</Associator>
+						</ConfigItem>-->
+
+					</ConfigGroup>
+				</ConfigGroup>
+			</ConfigGroup>
+			<ConfigGroup class="ucLayoutVertical">
+				<ConfigGroup class="ucLayoutVertical" visible="hidden">
+					<Parameter name="top_label" value="Analog Mic Configuration"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="right_margin" value="10"/>
+					<Parameter name="border" value="1"/>
+					<!--<ConfigItem class="ucComboBox" id="id_voice_hw_io_stream_analog_mic_select_combo">
+						<Parameter name="left_label" value="Analog Mic Select"/>
+						<Parameter name="left_width" value="200"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="width" value="120"/>
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="bottom_margin" value="10"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoAnalogMicSelect.xml"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_voice_hw_io_stream_analog_mic_select"/>
+							<Parameter name="enable" refId="id_voice_hw_io_stream_in_device_combo"/>
+							<Parameter name="disable_value" value="3"/>
+							<Parameter name="fix_option" value="3"/>
+						</Associator>
+					</ConfigItem>-->
+					<ConfigItem class="ucComboBox" id="id_voice_hw_io_AMIC_para_VIN0_combo">
+						<Parameter name="left_label" value="VIN0 PU/D"/>
+						<Parameter name="left_width" value="200"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="width" value="120"/>
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="bottom_margin" value="10"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoAMIC_para_VIN0_1.xml"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_voice_hw_io_AMIC_para_VIN0_tb"/>
+							<!--<Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+							<Parameter name="enable_value" value="0"/>-->
+						</Associator>
+					</ConfigItem>
+					<ConfigItem class="ucComboBox" id="id_voice_hw_io_AMIC_para_VIN1_combo">
+						<Parameter name="left_label" value="VIN1 PU/D"/>
+						<Parameter name="left_width" value="200"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="width" value="120"/>
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="bottom_margin" value="10"/>
+						<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoAMIC_para_VIN0_1.xml"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_voice_hw_io_AMIC_para_VIN1_tb"/>
+							<!--<Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+							<Parameter name="enable_value" value="0"/>-->
+						</Associator>
+					</ConfigItem>
+					<ConfigItem class="ucComboBox" id="id_voice_hw_io_AMIC_para_VIN2_combo">
+						<Parameter name="left_label" value="VIN2 PU/D"/>
+						<Parameter name="left_width" value="200"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="width" value="120"/>
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="bottom_margin" value="10"/>
+						<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoAMIC_para_VIN0_1.xml"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_voice_hw_io_AMIC_para_VIN2_tb"/>
+						</Associator>
+					</ConfigItem>
+					<ConfigItem class="ucComboBox" id="id_voice_hw_io_AMIC_para_VIN3_combo">
+						<Parameter name="left_label" value="VIN3 PU/D"/>
+						<Parameter name="left_width" value="200"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="width" value="120"/>
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="bottom_margin" value="10"/>
+						<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoAMIC_para_VIN0_1.xml"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_voice_hw_io_AMIC_para_VIN3_tb"/>
+						</Associator>
+					</ConfigItem>
+					<ConfigItem class="ucComboBox" id="id_voice_hw_io_AMIC_para_VIN4_combo">
+						<Parameter name="left_label" value="VIN4 PU/D"/>
+						<Parameter name="left_width" value="200"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="width" value="120"/>
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="bottom_margin" value="10"/>
+						<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoAMIC_para_VIN0_1.xml"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_voice_hw_io_AMIC_para_VIN4_tb"/>
+						</Associator>
+					</ConfigItem>
+					<ConfigItem class="ucComboBox" id="id_voice_hw_io_AMIC_para_VIN5_combo">
+						<Parameter name="left_label" value="VIN5 PU/D"/>
+						<Parameter name="left_width" value="200"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="width" value="120"/>
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="bottom_margin" value="10"/>
+						<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoAMIC_para_VIN0_1.xml"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_voice_hw_io_AMIC_para_VIN5_tb"/>
+						</Associator>
+					</ConfigItem>
+				</ConfigGroup>
+				<ConfigGroup class="ucLayoutVertical">
+					<Parameter name="top_label" value="DMIC Input Path Selection"/>
+					<Parameter name="top_margin" value="20"/>
+					<Parameter name="right_margin" value="10"/>
+					<Parameter name="border" value="1"/>
+					<!--<ConfigItem class="ucComboBox" id="id_voice_hw_io_stream_digital_mic_select_combo">
+						<Parameter name="left_label" value="Digital Mic Select"/>
+						<Parameter name="left_width" value="200"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="width" value="120"/>
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="bottom_margin" value="10"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMicSelect.xml"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_voice_hw_io_stream_digital_mic_select"/>
+							<Parameter name="enable" refId="id_voice_hw_io_stream_in_device_combo"/>
+							<Parameter name="disable_value" value="4"/>
+							<Parameter name="fix_option" value="4"/>
+						</Associator>
+					</ConfigItem>-->
+					<ConfigItem class="ucComboBox" id="id_voice_hw_io_DMIC_para_SetDigitalGpio1_combo">
+						<Parameter name="left_label" value="DMIC0/1 Input Path"/>
+						<Parameter name="left_width" value="200"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="width" value="120"/>
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="bottom_margin" value="10"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoSetDigitalMicSelect1565.xml"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_voice_hw_io_DMIC_para_SetDigitalGpio1_tb"/>
+							<!--<Parameter name="enable" refId="id_voice_hw_io_stream_in_device_combo"/>
+							<Parameter name="disable_value" value="4"/>
+							<Parameter name="fix_option" value="4"/>-->
+						</Associator>
+					</ConfigItem>
+					<ConfigItem class="ucComboBox" id="id_voice_hw_io_DMIC_para_SetDigitalGpio2_combo">
+						<Parameter name="left_label" value="DMIC2/3 Input Path"/>
+						<Parameter name="left_width" value="200"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="width" value="120"/>
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="bottom_margin" value="10"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoSetDigitalMicSelect1565.xml"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_voice_hw_io_DMIC_para_SetDigitalGpio2_tb"/>
+							<!--<Parameter name="enable" refId="id_voice_hw_io_stream_in_device_combo"/>
+							<Parameter name="disable_value" value="4"/>
+							<Parameter name="fix_option" value="4"/>-->
+						</Associator>
+					</ConfigItem>
+					<ConfigItem class="ucComboBox" id="id_voice_hw_io_DMIC_para_SetDigitalGpio3_combo">
+						<Parameter name="left_label" value="DMIC4/5 Input Path"/>
+						<Parameter name="left_width" value="200"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="width" value="120"/>
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="bottom_margin" value="10"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoSetDigitalMicSelect1565.xml"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_voice_hw_io_DMIC_para_SetDigitalGpio3_tb"/>
+							<!--<Parameter name="enable" refId="id_voice_hw_io_stream_in_device_combo"/>
+							<Parameter name="disable_value" value="4"/>
+							<Parameter name="fix_option" value="4"/>-->
+						</Associator>
+					</ConfigItem>
+				</ConfigGroup>
+				<ConfigGroup class="ucLayoutVertical">
+					<Parameter name="top_label" value="IIR HPF"/>
+					<Parameter name="top_margin" value="20"/>
+					<Parameter name="right_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="border" value="1"/>
+					<ConfigItem class="ucComboBox" id="id_voice_iir_filter_combo">
+						<Parameter name="left_label" value="Filter Select"/>
+						<Parameter name="left_width" value="200"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="width" value="120"/>
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="bottom_margin" value="10"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoVoiceIirFilter.xml"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_voice_iir_filter_tb"/>
+						</Associator>
+					</ConfigItem>
+				</ConfigGroup>
+			</ConfigGroup>
+			<ConfigGroup class="ucLayoutVertical">
+				<ConfigGroup class="ucLayoutVertical">
+					<Parameter name="top_label" value="Default I2S Configure"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="bottom_margin" value="10"/>
+					<Parameter name="right_margin" value="10"/>
+					<Parameter name="border" value="1"/>
+					<ConfigGroup class="ucLayoutVertical">
+						<Parameter name="top_label" value="I2S_Master"/>
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="left_margin" value="10"/>
+						<Parameter name="bottom_margin" value="10"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="border" value="1"/>
+						<ConfigGroup class="ucLayoutVertical">
+							<ConfigItem class="ucComboBox" id="id_voice_i2s_master0_sampling_rate_combo">
+								<Parameter name="left_label" value="I2S0 Master Sampling Rate"/>
+								<Parameter name="left_width" value="200"/>
+								<Parameter name="width" value="120"/>
+								<Parameter name="top_margin" value="10"/>
+								<Parameter name="bottom_margin" value="10"/>
+								<Parameter name="right_margin" value="10"/>
+								<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2SMasterSamplingRate.xml"/>
+								<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+									<Parameter name="data" refId="id_voice_i2s_master0_sampling_rate_tb"/>
+								</Associator>
+							</ConfigItem>
+							<ConfigItem class="ucComboBox" id="id_voice_i2s_master1_sampling_rate_combo">
+								<Parameter name="left_label" value="I2S1 Master Sampling Rate"/>
+								<Parameter name="left_width" value="200"/>
+								<Parameter name="width" value="120"/>
+								<Parameter name="top_margin" value="10"/>
+								<Parameter name="bottom_margin" value="10"/>
+								<Parameter name="right_margin" value="10"/>
+								<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2SMasterSamplingRate.xml"/>
+								<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+									<Parameter name="data" refId="id_voice_i2s_master1_sampling_rate_tb"/>
+								</Associator>
+							</ConfigItem>
+							<ConfigItem class="ucComboBox" id="id_voice_i2s_master2_sampling_rate_combo">
+								<Parameter name="left_label" value="I2S2 Master Sampling Rate"/>
+								<Parameter name="left_width" value="200"/>
+								<Parameter name="width" value="120"/>
+								<Parameter name="top_margin" value="10"/>
+								<Parameter name="bottom_margin" value="10"/>
+								<Parameter name="right_margin" value="10"/>
+								<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2SMasterSamplingRate.xml"/>
+								<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+									<Parameter name="data" refId="id_voice_i2s_master2_sampling_rate_tb"/>
+								</Associator>
+							</ConfigItem>
+							<ConfigItem class="ucComboBox" id="id_voice_i2s_master3_sampling_rate_combo">
+								<Parameter name="left_label" value="I2S3 Master Sampling Rate"/>
+								<Parameter name="left_width" value="200"/>
+								<Parameter name="width" value="120"/>
+								<Parameter name="top_margin" value="10"/>
+								<Parameter name="bottom_margin" value="10"/>
+								<Parameter name="right_margin" value="10"/>
+								<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2SMasterSamplingRate.xml"/>
+								<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+									<Parameter name="data" refId="id_voice_i2s_master3_sampling_rate_tb"/>
+								</Associator>
+							</ConfigItem>
+						</ConfigGroup>
+					</ConfigGroup>
+				</ConfigGroup>
+				
+				<ConfigGroup class="ucLayoutVertical">
+				<Parameter name="top_label" value="MicBias0,1,2"/>
+				<Parameter name="top_margin" value="10"/>
+				<Parameter name="left_margin" value="10"/>
+				<Parameter name="bottom_margin" value="10"/>
+				<Parameter name="right_margin" value="10"/>
+				<Parameter name="border" value="1"/>
+				<ConfigGroup class="ucLayoutVertical">
+					<ConfigItem class="ucDspCheckBox" id="id_voice_hw_io_MicBias_para_Voice_Enable0_ckb">
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="left_margin" value="10"/>
+						<Parameter name="right_label" value="MicBias0 Enable"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_audio_hw_io_MicBias_para_Voice_Enable0_tb"/>
+						</Associator>
+					</ConfigItem>
+					<ConfigItem class="ucDspCheckBox" id="id_voice_hw_io_MicBias_para_Voice_Enable1_ckb">
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="left_margin" value="10"/>
+						<Parameter name="right_label" value="MicBias1 Enable"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_audio_hw_io_MicBias_para_Voice_Enable1_tb"/>
+						</Associator>
+					</ConfigItem>
+					<ConfigItem class="ucDspCheckBox" id="id_voice_hw_io_MicBias_para_Voice_Enable2_ckb">
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="left_margin" value="10"/>
+						<Parameter name="right_label" value="MicBias2 Enable"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_audio_hw_io_MicBias_para_Voice_Enable2_tb"/>
+						</Associator>
+					</ConfigItem>
+				</ConfigGroup>
+				</ConfigGroup>
+			</ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+			<Parameter name="top_label" value="SideTone"/>
+			<Parameter name="top_margin" value="20"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="bottom_margin" value="20"/>
+			<Parameter name="border" value="1"/>
+			<ConfigItem class="ucDspCheckBox" id="id_voice_hw_io_stream_sidetone_enable_ckb">
+				<Parameter name="top_margin" value="10"/>
+				<Parameter name="left_margin" value="10"/>
+				<Parameter name="right_label" value="Enable"/>
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcBitAssociator">
+					<Parameter name="data" refId="id_voice_hw_io_stream_sidetone_enable"/>
+					<Parameter name="position" value="0"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="ucUpDown" id="id_voice_hw_io_stream_sidetone_gain_updown" min="-24" max="12">
+				<Parameter name="left_label" value="SideTone Gain"/>
+				<Parameter name="left_margin" value="10"/>
+				<Parameter name="left_width" value="140"/>
+				<Parameter name="top_margin" value="10"/>
+				<Parameter name="right_label" value="dB (-24~12)"/>
+				<Parameter name="step" value="1"/>
+				<Parameter name="unique" value="HAL_DSP_PARA_AU_AFE_SIDETONE_CONFIG.SideTone_Gain"/>
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_voice_hw_io_stream_sidetone_gain"/>
+					<Parameter name="enable" refId="id_voice_hw_io_stream_sidetone_enable_ckb"/>
+					<Parameter name="enable_value" value="1"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+	</ConfigGroup>
+	<ConfigGroup class="ucLayoutVertical" >
+		<Parameter name="top_label" value="I2S Common"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="border" value="1"/>
+    <ConfigItem class="ucComboBox" id="id_i2s_master0_low_jitter_combo">
+      <Parameter name="left_label" value="I2S0 Master Low Jitter Mode"/>
+      <Parameter name="left_width" value="200"/>
+      <Parameter name="width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/OnOff.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_i2s_master0_low_jitter_tb"/>
+      </Associator>
+    </ConfigItem>
+		<ConfigItem class="ucComboBox" id="id_i2s_master0_format_combo">
+			<Parameter name="left_label" value="I2S0 Master Format"/>
+			<Parameter name="left_width" value="200"/>
+			<Parameter name="width" value="120"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2SMasterFormat.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_i2s_master0_format_tb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucComboBox" id="id_i2s_master0_word_length_combo">
+			<Parameter name="left_label" value="I2S0 Master Word Length"/>
+			<Parameter name="left_width" value="200"/>
+			<Parameter name="width" value="120"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2SMasterWordLength.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_i2s_master0_word_length_tb"/>
+			</Associator>
+		</ConfigItem>
+    <ConfigItem class="ucComboBox" id="id_i2s_master1_low_jitter_combo">
+      <Parameter name="left_label" value="I2S1 Master Low Jitter Mode"/>
+      <Parameter name="left_width" value="200"/>
+      <Parameter name="width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/OnOff.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_i2s_master1_low_jitter_tb"/>
+      </Associator>
+    </ConfigItem>
+		<ConfigItem class="ucComboBox" id="id_i2s_master1_format_combo">
+			<Parameter name="left_label" value="I2S1 Master Format"/>
+			<Parameter name="left_width" value="200"/>
+			<Parameter name="width" value="120"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2SMasterFormat.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_i2s_master1_format_tb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucComboBox" id="id_i2s_master1_word_length_combo">
+			<Parameter name="left_label" value="I2S1 Master Word Length"/>
+			<Parameter name="left_width" value="200"/>
+			<Parameter name="width" value="120"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2SMasterWordLength.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_i2s_master1_word_length_tb"/>
+			</Associator>
+		</ConfigItem>
+    <ConfigItem class="ucComboBox" id="id_i2s_master2_low_jitter_combo">
+      <Parameter name="left_label" value="I2S2 Master Low Jitter Mode"/>
+      <Parameter name="left_width" value="200"/>
+      <Parameter name="width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/OnOff.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_i2s_master2_low_jitter_tb"/>
+      </Associator>
+    </ConfigItem>
+		<ConfigItem class="ucComboBox" id="id_i2s_master2_format_combo">
+			<Parameter name="left_label" value="I2S2 Master Format"/>
+			<Parameter name="left_width" value="200"/>
+			<Parameter name="width" value="120"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2SMasterFormat.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_i2s_master2_format_tb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucComboBox" id="id_i2s_master2_word_length_combo">
+			<Parameter name="left_label" value="I2S2 Master Word Length"/>
+			<Parameter name="left_width" value="200"/>
+			<Parameter name="width" value="120"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2SMasterWordLength.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_i2s_master2_word_length_tb"/>
+			</Associator>
+		</ConfigItem>
+    <ConfigItem class="ucComboBox" id="id_i2s_master3_low_jitter_combo">
+      <Parameter name="left_label" value="I2S3 Master Low Jitter Mode"/>
+      <Parameter name="left_width" value="200"/>
+      <Parameter name="width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/OnOff.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_i2s_master3_low_jitter_tb"/>
+      </Associator>
+    </ConfigItem>
+		<ConfigItem class="ucComboBox" id="id_i2s_master3_format_combo">
+			<Parameter name="left_label" value="I2S3 Master Format"/>
+			<Parameter name="left_width" value="200"/>
+			<Parameter name="width" value="120"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2SMasterFormat.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_i2s_master3_format_tb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucComboBox" id="id_i2s_master3_word_length_combo">
+			<Parameter name="left_label" value="I2S3 Master Word Length"/>
+			<Parameter name="left_width" value="200"/>
+			<Parameter name="width" value="120"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoI2SMasterWordLength.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_i2s_master3_word_length_tb"/>
+			</Associator>
+		</ConfigItem>
+	</ConfigGroup>
+	<ConfigGroup class="ucLayoutVertical" >
+		<Parameter name="top_label" value="Record"/>
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="border" value="1"/>
+		<ConfigGroup class="ucLayoutHorizontal">
+			<Parameter name="top_margin" value="10"/>
+			<ConfigGroup class="ucLayoutVertical">
+				<ConfigGroup class="ucLayoutVertical">
+					<Parameter name="top_label" value="Record Path"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="right_margin" value="10"/>
+					<Parameter name="bottom_margin" value="10"/>
+					<Parameter name="border" value="1"/>
+					<ConfigGroup class="ucLayoutVertical">
+						<ConfigItem class="AB1568.ucAudioIoHwComboBox" id="id_Main_MIC_Sel_Record_FF_combo">
+							<Parameter name="left_label" value="Main Mic Select"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicSelect1565.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_Main_MIC_Sel_Record_FF_tb"/>
+							</Associator>
+						</ConfigItem>
+
+						<ConfigItem class="AB1568.ucAudioIoHwComboBox" id="id_Ref_MIC_Sel_Record_FB_combo">
+							<Parameter name="left_label" value="Ref Mic Select"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicSelect1565.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_Ref_MIC_Sel_Record_FB_tb"/>
+							</Associator>
+						</ConfigItem>
+
+						<!--<ConfigItem class="AB1568.ucAudioIoHwComboBox" id="id_Main_MIC_Sel_Interface_Record_FF_combo">
+							<Parameter name="left_label" value="Main Mic Interface"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicInterface.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_Main_MIC_Sel_Interface_Record_FF_tb"/>
+							</Associator>
+						</ConfigItem>
+
+						<ConfigItem class="AB1568.ucAudioIoHwComboBox" id="id_Ref_MIC_Sel_Interface_Record_FB_combo">
+							<Parameter name="left_label" value="Ref Mic Interface"/>
+							<Parameter name="left_width" value="240"/>
+							<Parameter name="right_margin" value="10"/>
+							<Parameter name="width" value="120"/>
+							<Parameter name="top_margin" value="10"/>
+							<Parameter name="bottom_margin" value="10"/>
+							<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicInterface.xml"/>
+							<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+								<Parameter name="data" refId="id_Ref_MIC_Sel_Interface_Record_FB_tb"/>
+							</Associator>
+						</ConfigItem>-->
+					</ConfigGroup>
+				</ConfigGroup>
+			</ConfigGroup>
+			
+			<ConfigGroup class="ucLayoutVertical">
+			<Parameter name="top_label" value="MicBias0,1,2"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="border" value="1"/>
+			<ConfigGroup class="ucLayoutVertical">
+				<ConfigItem class="ucDspCheckBox" id="id_voice_hw_io_MicBias_para_Record_Enable0_ckb">
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="right_label" value="MicBias0 Enable"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_audio_hw_io_MicBias_para_Record_Enable0_tb"/>
+					</Associator>
+				</ConfigItem>
+				<ConfigItem class="ucDspCheckBox" id="id_voice_hw_io_MicBias_para_Record_Enable1_ckb">
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="right_label" value="MicBias1 Enable"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_audio_hw_io_MicBias_para_Record_Enable1_tb"/>
+					</Associator>
+				</ConfigItem>
+				<ConfigItem class="ucDspCheckBox" id="id_voice_hw_io_MicBias_para_Record_Enable2_ckb">
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="right_label" value="MicBias2 Enable"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_audio_hw_io_MicBias_para_Record_Enable2_tb"/>
+					</Associator>
+				</ConfigItem>
+			</ConfigGroup>
+			</ConfigGroup>
+		</ConfigGroup>
+	</ConfigGroup>
+	
+	<ConfigGroup class="ucLayoutVertical" >
+		<Parameter name="top_label" value="VAD"/>
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="border" value="1"/>
+		<ConfigGroup class="ucLayoutHorizontal">
+			<ConfigGroup class="ucLayoutVertical">
+				<Parameter name="top_label" value="Phase0 (HWVAD) Path"/>
+				<Parameter name="top_margin" value="10"/>
+				<Parameter name="left_margin" value="10"/>
+				<Parameter name="right_margin" value="10"/>
+				<Parameter name="bottom_margin" value="10"/>
+				<Parameter name="border" value="1"/>
+				<ConfigGroup class="ucLayoutVertical">
+					<ConfigItem class="ucComboBox" id="id_vad_phase0_main_input_sel_combo">
+						<Parameter name="left_label" value="Main Mic Select"/>
+						<Parameter name="left_width" value="240"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="width" value="120"/>
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="bottom_margin" value="10"/>
+						<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicSelect1565.xml"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_vad_phase0_main_input_sel_tb"/>
+						</Associator>
+					</ConfigItem>
+					<ConfigItem class="ucComboBox" id="id_vad_phase0_ref_input_sel_combo">
+						<Parameter name="left_label" value="Ref Mic Select"/>
+						<Parameter name="left_width" value="240"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="width" value="120"/>
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="bottom_margin" value="10"/>
+						<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicSelect1565.xml"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_vad_phase0_ref_input_sel_tb"/>
+						</Associator>
+					</ConfigItem>
+				</ConfigGroup>
+			</ConfigGroup>
+			
+			<ConfigGroup class="ucLayoutVertical">
+				<Parameter name="top_label" value="Phase1 (WWE) Path"/>
+				<Parameter name="top_margin" value="10"/>
+				<Parameter name="left_margin" value="10"/>
+				<Parameter name="right_margin" value="10"/>
+				<Parameter name="bottom_margin" value="10"/>
+				<Parameter name="border" value="1"/>
+				<ConfigGroup class="ucLayoutVertical">
+					<ConfigItem class="ucComboBox" id="id_vad_phase1_main_input_sel_combo">
+						<Parameter name="left_label" value="Main Mic Select"/>
+						<Parameter name="left_width" value="240"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="width" value="120"/>
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="bottom_margin" value="10"/>
+						<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicSelect1565.xml"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_vad_phase1_main_input_sel_tb"/>
+						</Associator>
+					</ConfigItem>
+					<ConfigItem class="ucComboBox" id="id_vad_phase1_ref_input_sel_combo">
+						<Parameter name="left_label" value="Ref Mic Select"/>
+						<Parameter name="left_width" value="240"/>
+						<Parameter name="right_margin" value="10"/>
+						<Parameter name="width" value="120"/>
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="bottom_margin" value="10"/>
+						<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicSelect1565.xml"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_vad_phase1_ref_input_sel_tb"/>
+						</Associator>
+					</ConfigItem>
+				</ConfigGroup>
+			</ConfigGroup>
+			
+			<ConfigGroup class="ucLayoutVertical">
+			<Parameter name="top_label" value="MicBias0,1,2"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="border" value="1"/>
+			<ConfigGroup class="ucLayoutVertical">
+				<ConfigItem class="ucDspCheckBox" id="id_voice_hw_io_MicBias_para_VAD_Enable0_ckb">
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="right_label" value="MicBias0 Enable"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_audio_hw_io_MicBias_para_VAD_Enable0_tb"/>
+					</Associator>
+				</ConfigItem>
+				<ConfigItem class="ucDspCheckBox" id="id_voice_hw_io_MicBias_para_VAD_Enable1_ckb">
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="right_label" value="MicBias1 Enable"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_audio_hw_io_MicBias_para_VAD_Enable1_tb"/>
+					</Associator>
+				</ConfigItem>
+				<ConfigItem class="ucDspCheckBox" id="id_voice_hw_io_MicBias_para_VAD_Enable2_ckb">
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="right_label" value="MicBias2 Enable"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_audio_hw_io_MicBias_para_VAD_Enable2_tb"/>
+					</Associator>
+				</ConfigItem>
+			</ConfigGroup>
+			</ConfigGroup>
+		</ConfigGroup>
+	</ConfigGroup>
+	
+	<ConfigGroup class="ucLayoutVertical">
+		<Parameter name="top_label" value="Detach Mic"/>
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="border" value="1"/>
+		<ConfigGroup class="ucLayoutHorizontal">
+			<Parameter name="top_margin" value="10"/>
+			<ConfigGroup class="ucLayoutVertical">
+				<Parameter name="border" value="1"/>
+				<Parameter name="top_margin" value="10"/>
+				<Parameter name="left_margin" value="10"/>
+				<Parameter name="right_margin" value="10"/>
+				<Parameter name="bottom_margin" value="10"/>
+				<ConfigItem class="ucComboBox" id="id_detach_hw_io_mic_sel_combo">
+					<Parameter name="left_label" value="Mic Select"/>
+					<Parameter name="left_width" value="240"/>
+					<Parameter name="right_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="width" value="120"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="bottom_margin" value="10"/>
+					<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicSelect1565.xml"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_detach_mic_sel_tb"/>
+					</Associator>
+				</ConfigItem>
+				<ConfigItem class="ucComboBox" id="id_detach_hw_io_mic_sel_2_combo">
+					<Parameter name="left_label" value="Mic Select 2"/>
+					<Parameter name="left_width" value="240"/>
+					<Parameter name="right_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="width" value="120"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="bottom_margin" value="10"/>
+					<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoMainRefMicSelect1565.xml"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_detach_mic_sel_2_tb"/>
+					</Associator>
+				</ConfigItem>
+			</ConfigGroup>
+			<ConfigGroup class="ucLayoutVertical">
+				<Parameter name="top_label" value="MicBias0,1,2,3,4"/>
+				<Parameter name="top_margin" value="10"/>
+				<Parameter name="left_margin" value="10"/>
+				<Parameter name="bottom_margin" value="10"/>
+				<Parameter name="right_margin" value="10"/>
+				<Parameter name="border" value="1"/>
+				<ConfigGroup class="ucLayoutVertical">
+					<ConfigItem class="ucDspCheckBox" id="id_detach_hw_io_MicBias_para_Enable0_ckb">
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="left_margin" value="10"/>
+						<Parameter name="right_label" value="MicBias0 Enable"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_detach_hw_io_MicBias_para_Enable0_tb"/>
+						</Associator>
+					</ConfigItem>
+					<ConfigItem class="ucDspCheckBox" id="id_detach_hw_io_MicBias_para_Enable1_ckb">
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="left_margin" value="10"/>
+						<Parameter name="right_label" value="MicBias1 Enable"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_detach_hw_io_MicBias_para_Enable1_tb"/>
+						</Associator>
+					</ConfigItem>
+					<ConfigItem class="ucDspCheckBox" id="id_detach_hw_io_MicBias_para_Enable2_ckb">
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="left_margin" value="10"/>
+						<Parameter name="right_label" value="MicBias2 Enable"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_detach_hw_io_MicBias_para_Enable2_tb"/>
+						</Associator>
+					</ConfigItem>
+					<ConfigItem class="ucDspCheckBox" id="id_detach_hw_io_MicBias_para_Enable3_ckb">
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="left_margin" value="10"/>
+						<Parameter name="right_label" value="MicBias3 Enable"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_detach_hw_io_MicBias_para_Enable3_tb"/>
+						</Associator>
+					</ConfigItem>
+					<ConfigItem class="ucDspCheckBox" id="id_detach_hw_io_MicBias_para_Enable4_ckb">
+						<Parameter name="top_margin" value="10"/>
+						<Parameter name="left_margin" value="10"/>
+						<Parameter name="right_label" value="MicBias4 Enable"/>
+						<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+							<Parameter name="data" refId="id_detach_hw_io_MicBias_para_Enable4_tb"/>
+						</Associator>
+					</ConfigItem>
+				</ConfigGroup>
+				</ConfigGroup>
+		</ConfigGroup>
+	</ConfigGroup>
+	
+	<ConfigGroup class="ucLayoutHorizontal">
+		<Parameter name="top_label" value="ANC Path"/>
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="border" value="1"/>
+		<ConfigGroup class="ucLayoutVertical">
+			<Parameter name="top_label" value="For L Side"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="border" value="1"/>
+			<ConfigItem class="ucComboBox" id="id_anc_ff_L_mic_cb">
+				<Parameter name="left_label" value="ANC FF Mic Select"/>
+				<Parameter name="left_margin" value="5"/>
+				<Parameter name="left_width" value="75"/>
+				<Parameter name="top_margin" value="5"/>
+				<Parameter name="right_margin" value="5"/>
+				<Parameter name="width" value="100"/>
+				<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/AncMicSelect1565.xml"/>
+				<Parameter name="unique" value="anc_param.sub_param0_L.mic"/>
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_anc_ff_L_mic_tb"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="ucComboBox" id="id_anc_fb_L_mic_cb">
+				<Parameter name="left_label" value="ANC FB Mic Select"/>
+				<Parameter name="left_margin" value="5"/>
+				<Parameter name="left_width" value="75"/>
+				<Parameter name="top_margin" value="5"/>
+				<Parameter name="right_margin" value="5"/>
+				<Parameter name="width" value="100"/>
+				<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/AncMicSelect1565.xml"/>
+				<Parameter name="unique" value="anc_param.sub_param1_L.mic"/>
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_anc_fb_L_mic_tb"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+			<Parameter name="top_label" value="For R Side"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="border" value="1"/>
+			<ConfigItem class="ucComboBox" id="id_anc_ff_R_mic_cb">
+				<Parameter name="left_label" value="ANC FF Mic Select"/>
+				<Parameter name="left_margin" value="5"/>
+				<Parameter name="left_width" value="75"/>
+				<Parameter name="top_margin" value="5"/>
+				<Parameter name="right_margin" value="5"/>
+				<Parameter name="width" value="100"/>
+				<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/AncMicSelect1565.xml"/>
+				<Parameter name="unique" value="anc_param.sub_param0_R.mic"/>
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_anc_ff_R_mic_tb"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="ucComboBox" id="id_anc_fb_R_mic_cb">
+				<Parameter name="left_label" value="ANC FB Mic Select"/>
+				<Parameter name="left_margin" value="5"/>
+				<Parameter name="left_width" value="75"/>
+				<Parameter name="top_margin" value="5"/>
+				<Parameter name="right_margin" value="5"/>
+				<Parameter name="width" value="100"/>
+				<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/AncMicSelect1565.xml"/>
+				<Parameter name="unique" value="anc_param.sub_param1_R.mic"/>
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_anc_fb_R_mic_tb"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+		
+		<ConfigGroup class="ucLayoutVertical">
+		<Parameter name="top_label" value="MicBias0,1,2"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="border" value="1"/>
+		<ConfigGroup class="ucLayoutVertical">
+			<ConfigItem class="ucDspCheckBox" id="id_voice_hw_io_MicBias_para_ANC_Enable0_ckb">
+				<Parameter name="top_margin" value="10"/>
+				<Parameter name="left_margin" value="10"/>
+				<Parameter name="right_label" value="MicBias0 Enable"/>
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_audio_hw_io_MicBias_para_ANC_Enable0_tb"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="ucDspCheckBox" id="id_voice_hw_io_MicBias_para_ANC_Enable1_ckb">
+				<Parameter name="top_margin" value="10"/>
+				<Parameter name="left_margin" value="10"/>
+				<Parameter name="right_label" value="MicBias1 Enable"/>
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_audio_hw_io_MicBias_para_ANC_Enable1_tb"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="ucDspCheckBox" id="id_voice_hw_io_MicBias_para_ANC_Enable2_ckb">
+				<Parameter name="top_margin" value="10"/>
+				<Parameter name="left_margin" value="10"/>
+				<Parameter name="right_label" value="MicBias2 Enable"/>
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_audio_hw_io_MicBias_para_ANC_Enable2_tb"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+		</ConfigGroup>
+	</ConfigGroup>
+	<ConfigGroup class="ucLayoutHorizontal">
+		<Parameter name="top_label" value="AiroThru Path"/>
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="border" value="1"/>
+		<ConfigGroup class="ucLayoutVertical">
+			<Parameter name="top_label" value="For L Side"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="border" value="1"/>
+			<ConfigItem class="ucComboBox" id="id_anc_airothru_L_mic_cb">
+				<Parameter name="left_label" value="AiroThru MIC Select"/>
+				<Parameter name="left_margin" value="5"/>
+				<Parameter name="left_width" value="75"/>
+				<Parameter name="top_margin" value="5"/>
+				<Parameter name="right_margin" value="5"/>
+				<Parameter name="width" value="100"/>
+				<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/AncMicSelect1565.xml"/>
+				<Parameter name="unique" value="airothru_param.sub_param_L.mic"/>
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_anc_airothru_L_mic_tb"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+			<Parameter name="top_label" value="For R Side"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="border" value="1"/>
+			<ConfigItem class="ucComboBox" id="id_anc_airothru_R_mic_cb">
+				<Parameter name="left_label" value="AiroThru MIC Select"/>
+				<Parameter name="left_margin" value="5"/>
+				<Parameter name="left_width" value="75"/>
+				<Parameter name="top_margin" value="5"/>
+				<Parameter name="right_margin" value="5"/>
+				<Parameter name="width" value="100"/>
+				<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/AncMicSelect1565.xml"/>
+				<Parameter name="unique" value="airothru_param.sub_param_R.mic"/>
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_anc_airothru_R_mic_tb"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+	</ConfigGroup>
+	<ConfigGroup class="ucLayoutVertical">
+		<Parameter name="top_label" value="Mic Bias Configure"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="border" value="1"/>
+		<ConfigGroup class="ucLayoutVertical">
+			<Parameter name="top_label" value=""/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="border" value="1"/>
+			<ConfigGroup class="ucLayoutVertical">
+				<ConfigItem class="AB1568.ucCheckBoxWithSync" id="id_voice_hw_io_voice_MicBias012_share_LDO_ckb">
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="left_margin" value="10"/>
+					<Parameter name="right_label" value="MicBias012 Share LDO"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_voice_hw_io_voice_MicBias012_share_LDO_tb"/>
+					</Associator>
+				</ConfigItem>
+				
+				<ConfigItem class="ucComboBox" id="id_voice_hw_io_MicBias0_para_Voice_Level_Sel_combo">
+					<Parameter name="left_label" value="MicBias0 Level Select"/>
+					<Parameter name="left_width" value="180"/>
+					<Parameter name="width" value="120"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="bottom_margin" value="10"/>
+					<Parameter name="right_margin" value="10"/>
+					<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoBiasLevelSel.xml"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_voice_hw_io_MicBias0_para_Voice_Level_Sel_tb"/>
+					</Associator>
+				</ConfigItem>
+				<ConfigItem class="AB1568.ucComboBoxWithSyncValue" id="id_voice_hw_io_MicBias1_para_Voice_Level_Sel_combo">
+					<Parameter name="left_label" value="MicBias1 Level Select"/>
+					<Parameter name="left_width" value="180"/>
+					<Parameter name="width" value="120"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="bottom_margin" value="10"/>
+					<Parameter name="right_margin" value="10"/>
+					<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoBiasLevelSel.xml"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_voice_hw_io_MicBias1_para_Voice_Level_Sel_tb"/>
+						<Parameter name="enable" refId="id_voice_hw_io_voice_MicBias012_share_LDO_ckb"/>
+						<Parameter name="enable_value" value="0"/>
+						<Parameter name="syncId" refId="id_voice_hw_io_MicBias0_para_Voice_Level_Sel_combo"/>
+					</Associator>
+				</ConfigItem>
+				<ConfigItem class="AB1568.ucComboBoxWithSyncValue" id="id_voice_hw_io_MicBias2_para_Voice_Level_Sel_combo">
+					<Parameter name="left_label" value="MicBias2 Level Select"/>
+					<Parameter name="left_width" value="180"/>
+					<Parameter name="width" value="120"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="bottom_margin" value="10"/>
+					<Parameter name="right_margin" value="10"/>
+					<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoBiasLevelSel.xml"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_voice_hw_io_MicBias2_para_Voice_Level_Sel_tb"/>
+						<Parameter name="enable" refId="id_voice_hw_io_voice_MicBias012_share_LDO_ckb"/>
+						<Parameter name="enable_value" value="0"/>
+						<Parameter name="syncId" refId="id_voice_hw_io_MicBias0_para_Voice_Level_Sel_combo"/>
+					</Associator>
+				</ConfigItem>
+			</ConfigGroup>
+		</ConfigGroup>
+	</ConfigGroup>
+	<ConfigGroup class="ucLayoutVertical">
+		<Parameter name="top_label" value="ADC, DAC Configure"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="border" value="1"/>
+		<ConfigGroup class="ucLayoutVertical">
+			<Parameter name="top_label" value="Mode"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="border" value="1"/>
+			<ConfigGroup class="ucLayoutVertical">
+				<ConfigItem class="ucComboBox" id="id_audio_hw_io_UL_AFE_PARA_UplinkADCmode_combo">
+					<Parameter name="left_label" value="Audio uplink ADC mode"/>
+					<Parameter name="left_width" value="150"/>
+					<Parameter name="width" value="120"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoDL(UL)_AFE_PARA.xml"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_audio_hw_io_UL_AFE_PARA_UplinkADCmode"/>
+					</Associator>
+				</ConfigItem>
+				<ConfigItem class="ucComboBox" id="id_voice_hw_io_UL_AFE_PARA_UplinkADCmode_combo">
+					<Parameter name="left_label" value="Voice uplink ADC mode"/>
+					<Parameter name="left_width" value="150"/>
+					<Parameter name="width" value="120"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoDL(UL)_AFE_PARA.xml"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_voice_hw_io_UL_AFE_PARA_UplinkADCmode"/>
+					</Associator>
+				</ConfigItem>
+				<ConfigItem class="ucComboBox" id="id_record_hw_io_UL_AFE_PARA_UplinkADCmode_combo">
+					<Parameter name="left_label" value="Record uplink ADC mode"/>
+					<Parameter name="left_width" value="150"/>
+					<Parameter name="width" value="120"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoDL(UL)_AFE_PARA.xml"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_record_hw_io_UL_AFE_PARA_UplinkADCmode"/>
+					</Associator>
+				</ConfigItem>
+				<ConfigItem class="ucComboBox" id="id_vad_hw_io_UL_AFE_PARA_UplinkADCmode_combo">
+					<Parameter name="left_label" value="VAD uplink ADC mode"/>
+					<Parameter name="left_width" value="150"/>
+					<Parameter name="width" value="120"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoDL(UL)_AFE_PARA.xml"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_vad_analog_adc_performance_sel_tb"/>
+					</Associator>
+				</ConfigItem>
+				<ConfigItem class="ucComboBox" id="id_anc_hw_io_UL_AFE_PARA_UplinkADCmode_combo">
+					<Parameter name="left_label" value="ANC/Passthrough uplink ADC mode"/>
+					<Parameter name="left_width" value="150"/>
+					<Parameter name="width" value="120"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoDL(UL)_AFE_PARA.xml"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_anc_analog_adc_performance_sel_tb"/>
+					</Associator>
+				</ConfigItem>
+				<ConfigItem class="AB1568.ucDownLinkComboBox" id="id_voice_hw_io_DL_AFE_PARA_combo">
+					<Parameter name="left_label" value="Downlink DAC mode"/>
+					<Parameter name="left_width" value="150"/>
+					<Parameter name="width" value="120"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoDL(DL)_AFE_PARA.xml"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_voice_hw_io_DL_AFE_PARA"/>
+						<Parameter name="syncSpkModeId" refId="id_voice_hw_io_speak_out_mode_cb"/>
+						<Parameter name="syncSpkModeD" value="2"/>
+						<Parameter name="syncSpkModeAB" value="1"/>
+					</Associator>
+				</ConfigItem>
+				<ConfigItem class="ucSpeakOutModeComboBox" id="id_voice_hw_io_speak_out_mode_cb">
+					<Parameter name="left_label" value="Speak out Mode"/>
+					<Parameter name="left_width" value="150"/>
+					<Parameter name="right_margin" value="10"/>
+					<Parameter name="width" value="120"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="right_margin" value="10"/>
+					<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoSpeakOutMode1565.xml"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_voice_hw_io_speak_out_mode_tb"/>
+					</Associator>
+				</ConfigItem>
+				<ConfigItem class="AB1568.ucULAfeMicLineInComboBox" id="id_voice_hw_io_mic_in_mode_cb">
+					<Parameter name="left_label" value="Mic / Line in Mode"/>
+					<Parameter name="left_width" value="150"/>
+					<Parameter name="right_margin" value="10"/>
+					<Parameter name="width" value="120"/>
+					<Parameter name="top_margin" value="10"/>
+					<Parameter name="right_margin" value="10"/>
+					<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/audioHwIoUL_AFE_PARA_MicInMode.xml"/>
+					<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+						<Parameter name="data" refId="id_voice_hw_io_mic_in_mode_tb"/>
+					</Associator>
+				</ConfigItem>
+			</ConfigGroup>
+		</ConfigGroup>
+	</ConfigGroup>
+	<ConfigGroup class="General">
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_AUDIO_SCENARIO.Audio_Input_Path" present="hex" id="id_audio_hw_io_stream_in_device" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_audio_hw_io_stream_in_device_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_AUDIO_SCENARIO.Audio_Output_Path" present="hex" id="id_audio_hw_io_stream_out_device" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_audio_hw_io_stream_out_device_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_AUDIO_SCENARIO.Audio_Input_I2S_Interface" present="hex" id="id_audio_hw_io_stream_in_i2s_interface" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_audio_hw_io_stream_in_i2s_interface_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_AUDIO_SCENARIO.Audio_Output_I2S_Interface" present="hex" id="id_audio_hw_io_stream_out_i2s_interface" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_audio_hw_io_stream_out_i2s_interface_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_AUDIO_SCENARIO.Audio_LineIn_Output_Path" present="hex" id="id_audio_linein_output_path_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_audio_linein_output_path_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_AUDIO_SCENARIO.Audio_LineIn_Output_I2S_Interface" present="hex" id="id_audio_linein_output_i2s_interface_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_audio_linein_output_i2s_interface_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_AUDIO_SCENARIO.Audio_Pure_LineIn_Enable" present="hex" id="id_pure_linein_enable_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_pure_linein_enable_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_Input_Path" present="hex" id="id_voice_hw_io_stream_in_device" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_stream_in_device_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_Analog_MIC_Sel" present="hex" id="id_voice_hw_io_analog_mic_sel" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_analog_mic_sel_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_Digital_MIC_Sel" present="hex" id="id_voice_hw_io_stream_digital_mic_select" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_stream_digital_mic_select_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_Input_AMIC_channel" present="hex" id="id_voice_hw_io_analog_mic_channel" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcMicChannelAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_analog_mic_sel_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_Input_DMIC_channel" present="hex" id="id_voice_hw_io_digital_mic_channel" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcMicChannelAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_stream_digital_mic_select_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_Output_Path" present="hex" id="id_voice_hw_io_stream_out_device" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_stream_out_device_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_Input_I2S_Interface" present="hex" id="id_voice_hw_io_stream_in_i2s_interface" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_stream_in_i2s_interface_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_Output_I2S_Interface" present="hex" id="id_voice_hw_io_stream_out_i2s_interface" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_stream_out_i2s_interface_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_Side_Tone_Enable" present="hex" id="id_voice_hw_io_stream_sidetone_enable" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcFlagAssociator">
+				<Parameter name="flag" refId="id_voice_hw_io_stream_sidetone_enable_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_SIDETONE_CONFIG.SideTone_Gain" present="hex" id="id_voice_hw_io_stream_sidetone_gain" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_stream_sidetone_gain_updown"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_AUDIO_SCENARIO.Audio_Analog_LineIn_Performance_Sel" present="hex" id="id_audio_hw_io_UL_AFE_PARA_UplinkADCmode" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_audio_hw_io_UL_AFE_PARA_UplinkADCmode_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_Analog_ADC_Performance_Sel" present="hex" id="id_voice_hw_io_UL_AFE_PARA_UplinkADCmode" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_UL_AFE_PARA_UplinkADCmode_combo"/>
+			</Associator>
+		</ConfigItem>
+		
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_RECORD_SCENARIO.Record_Analog_ADC_Performance_Sel" present="hex" id="id_record_hw_io_UL_AFE_PARA_UplinkADCmode" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_record_hw_io_UL_AFE_PARA_UplinkADCmode_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_DAC_Mode_Sel" present="hex" id="id_voice_hw_io_speak_out_mode_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_speak_out_mode_cb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Analog_MIC0_Mode" present="hex" id="id_voice_hw_io_mic_in_mode_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_mic_in_mode_cb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Analog_MIC1_Mode" present="hex" id="id_voice_hw_io_ana_mic1_mode_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_mic_in_mode_cb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Analog_MIC2_Mode" present="hex" id="id_voice_hw_io_ana_mic2_mode_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_mic_in_mode_cb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Analog_MIC3_Mode" present="hex" id="id_voice_hw_io_ana_mic3_mode_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_mic_in_mode_cb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Analog_MIC4_Mode" present="hex" id="id_voice_hw_io_ana_mic4_mode_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_mic_in_mode_cb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Analog_MIC5_Mode" present="hex" id="id_voice_hw_io_ana_mic5_mode_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_mic_in_mode_cb"/>
+			</Associator>
+		</ConfigItem>
+		<!--<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Analog_Linein_0_Mode" present="hex" id="id_voice_hw_io_line_in_mode_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_line_in_mode_cb"/>
+			</Associator>
+		</ConfigItem>-->
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_DAC_Class_AB_G_Performance_Sel" present="hex" id="id_voice_hw_io_DL_AFE_PARA" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_DL_AFE_PARA_combo"/>
+			</Associator>
+		</ConfigItem>
+		<!--<ConfigItem class="ucTextBox" Unique="AUDIO_HW_IO_CONFIGURE_STRU.MicBias_para_Audio_Level_Sel" present="hex" id="id_audio_hw_io_MicBias_para_Audio_Level_Sel_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_audio_hw_io_MicBias_para_Audio_Level_Sel_combo"/>
+			</Associator>
+		</ConfigItem>-->
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Voice_Bias012_share_LDO" present="hex" id="id_voice_hw_io_voice_MicBias012_share_LDO_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_voice_MicBias012_share_LDO_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Voice_Bias0_Level" present="hex" id="id_voice_hw_io_MicBias0_para_Voice_Level_Sel_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias0_para_Voice_Level_Sel_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Voice_Bias1_Level" present="hex" id="id_voice_hw_io_MicBias1_para_Voice_Level_Sel_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias1_para_Voice_Level_Sel_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Voice_Bias2_Level" present="hex" id="id_voice_hw_io_MicBias2_para_Voice_Level_Sel_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias2_para_Voice_Level_Sel_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Voice_Bias3_Level" present="hex" id="id_voice_hw_io_MicBias3_para_Voice_Level_Sel_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias3_para_Voice_Level_Sel_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Voice_Bias4_Level" present="hex" id="id_voice_hw_io_MicBias4_para_Voice_Level_Sel_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias4_para_Voice_Level_Sel_combo"/>
+			</Associator>
+		</ConfigItem>
+		
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_MIC_Bias_Enable.b0" present="hex" id="id_audio_hw_io_MicBias_para_Voice_Enable0_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_Voice_Enable0_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_MIC_Bias_Enable.b1" present="hex" id="id_audio_hw_io_MicBias_para_Voice_Enable1_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_Voice_Enable1_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_MIC_Bias_Enable.b2" present="hex" id="id_audio_hw_io_MicBias_para_Voice_Enable2_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_Voice_Enable2_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_MIC_Bias_Enable.b3" present="hex" id="id_audio_hw_io_MicBias_para_Voice_Enable3_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_Voice_Enable3_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_MIC_Bias_Enable.b4" present="hex" id="id_audio_hw_io_MicBias_para_Voice_Enable4_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_Voice_Enable4_ckb"/>
+			</Associator>
+		</ConfigItem>
+		
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_AUDIO_SCENARIO.Audio_LineIn_Bias_Enable.b0" present="hex" id="id_audio_hw_io_MicBias_para_Audio_Enable0_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_Audio_Enable0_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_AUDIO_SCENARIO.Audio_LineIn_Bias_Enable.b1" present="hex" id="id_audio_hw_io_MicBias_para_Audio_Enable1_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_Audio_Enable1_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_AUDIO_SCENARIO.Audio_LineIn_Bias_Enable.b2" present="hex" id="id_audio_hw_io_MicBias_para_Audio_Enable2_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_Audio_Enable2_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_AUDIO_SCENARIO.Audio_LineIn_Bias_Enable.b3" present="hex" id="id_audio_hw_io_MicBias_para_Audio_Enable3_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_Audio_Enable3_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_AUDIO_SCENARIO.Audio_LineIn_Bias_Enable.b4" present="hex" id="id_audio_hw_io_MicBias_para_Audio_Enable4_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_Audio_Enable4_ckb"/>
+			</Associator>
+		</ConfigItem>
+		
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_RECORD_SCENARIO.Record_MIC_Bias_Enable.b0" present="hex" id="id_audio_hw_io_MicBias_para_Record_Enable0_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_Record_Enable0_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_RECORD_SCENARIO.Record_MIC_Bias_Enable.b1" present="hex" id="id_audio_hw_io_MicBias_para_Record_Enable1_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_Record_Enable1_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_RECORD_SCENARIO.Record_MIC_Bias_Enable.b2" present="hex" id="id_audio_hw_io_MicBias_para_Record_Enable2_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_Record_Enable2_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_RECORD_SCENARIO.Record_MIC_Bias_Enable.b3" present="hex" id="id_audio_hw_io_MicBias_para_Record_Enable3_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_Record_Enable3_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_RECORD_SCENARIO.Record_MIC_Bias_Enable.b4" present="hex" id="id_audio_hw_io_MicBias_para_Record_Enable4_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_Record_Enable4_ckb"/>
+			</Associator>
+		</ConfigItem>
+
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_AUDIO_SCENARIO.Audio_I2S_Master_CLK_Src_In_Normal" present="hex" id="id_audio_hw_io_I2S_para_Audio_ClkSource_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_audio_hw_io_I2S_para_Audio_ClkSource_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_I2S_CLK_Src_In_Normal" present="hex" id="id_voice_hw_io_I2S_para_Voice_ClkSource_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_I2S_para_Voice_ClkSource_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Analog_MIC_VIN0_PUD" present="hex" id="id_voice_hw_io_AMIC_para_VIN0_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_AMIC_para_VIN0_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Analog_MIC_VIN1_PUD" present="hex" id="id_voice_hw_io_AMIC_para_VIN1_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_AMIC_para_VIN1_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Analog_MIC_VIN2_PUD" present="hex" id="id_voice_hw_io_AMIC_para_VIN2_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_AMIC_para_VIN2_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Analog_MIC_VIN3_PUD" present="hex" id="id_voice_hw_io_AMIC_para_VIN3_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_AMIC_para_VIN3_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Analog_MIC_VIN4_PUD" present="hex" id="id_voice_hw_io_AMIC_para_VIN4_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_AMIC_para_VIN4_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Analog_MIC_VIN5_PUD" present="hex" id="id_voice_hw_io_AMIC_para_VIN5_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_AMIC_para_VIN5_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_DMIC_CONFIG.DMIC_First_Digital_MIC_Pin_Sel" present="hex" id="id_voice_hw_io_DMIC_para_SetDigitalGpio1_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_DMIC_para_SetDigitalGpio1_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_DMIC_CONFIG.DMIC_Second_Digital_MIC_Pin_Sel" present="hex" id="id_voice_hw_io_DMIC_para_SetDigitalGpio2_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_DMIC_para_SetDigitalGpio2_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_DMIC_CONFIG.DMIC_Third_Digital_MIC_Pin_Sel" present="hex" id="id_voice_hw_io_DMIC_para_SetDigitalGpio3_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_DMIC_para_SetDigitalGpio3_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_Multiple_Mic_Main_Input_Select" present="hex" id="id_voice_hw_io_MIC_Sel_Main_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MIC_Sel_Main_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_Multiple_Mic_Ref1_Input_Select" present="hex" id="id_voice_hw_io_MIC_Sel_Ref_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MIC_Sel_Ref_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_Multiple_Mic_Ref2_Input_Select" present="hex" id="id_voice_hw_io_MIC_Sel_Ref2_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MIC_Sel_Ref2_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_Multiple_Mic_Ref3_Input_Select" present="hex" id="id_voice_hw_io_MIC_Sel_Ref3_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MIC_Sel_Ref3_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_Multiple_Mic_Ref4_Input_Select" present="hex" id="id_voice_hw_io_MIC_Sel_Ref4_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MIC_Sel_Ref4_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_Multiple_Mic_Ref5_Input_Select" present="hex" id="id_voice_hw_io_MIC_Sel_Ref5_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MIC_Sel_Ref5_combo"/>
+			</Associator>
+		</ConfigItem>
+		<!--<ConfigItem class="ucTextBox" Unique="AUDIO_HW_IO_CONFIGURE_STRU.LoopBack_rate" present="hex" visible="hidden"/>
+		<ConfigItem class="ucTextBox" Unique="AUDIO_HW_IO_CONFIGURE_STRU.LoopBack_para" present="hex" visible="hidden"/>
+		<ConfigItem class="ucTextBox" Unique="AUDIO_HW_IO_CONFIGURE_STRU.MIC_Sel_Reserve" present="hex" visible="hidden"/>-->
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_RECORD_SCENARIO.Record_Main_Input_Select" present="hex" id="id_Main_MIC_Sel_Record_FF_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_Main_MIC_Sel_Record_FF_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_RECORD_SCENARIO.Record_Ref_Input_Select" present="hex" id="id_Ref_MIC_Sel_Record_FB_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_Ref_MIC_Sel_Record_FB_combo"/>
+			</Associator>
+		</ConfigItem>
+		<!--<ConfigItem class="ucTextBox" Unique="AUDIO_HW_IO_CONFIGURE_STRU.MicBias_para_Record_Level_Sel" present="hex" id="id_record_hw_io_MicBias_para_Record_Level_Sel_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_record_hw_io_MicBias_para_Record_Level_Sel_combo"/>
+			</Associator>
+		</ConfigItem>-->
+		<ConfigItem class="ucTextBox" Unique="anc_param.sub_param0_L.mic" id="id_anc_ff_L_mic_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_anc_ff_L_mic_cb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="anc_param.sub_param1_L.mic" id="id_anc_fb_L_mic_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_anc_fb_L_mic_cb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="airothru_param.sub_param_L.mic" id="id_anc_airothru_L_mic_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_anc_airothru_L_mic_cb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="anc_param.sub_param0_R.mic" id="id_anc_ff_R_mic_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_anc_ff_R_mic_cb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="anc_param.sub_param1_R.mic" id="id_anc_fb_R_mic_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_anc_fb_R_mic_cb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="airothru_param.sub_param_R.mic" id="id_anc_airothru_R_mic_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_anc_airothru_R_mic_cb"/>
+			</Associator>
+		</ConfigItem>
+		
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VAD_SCENARIO.VAD_phase0_Main_Input_Select" id="id_vad_phase0_main_input_sel_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_vad_phase0_main_input_sel_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VAD_SCENARIO.VAD_phase0_Ref_Input_Select" id="id_vad_phase0_ref_input_sel_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_vad_phase0_ref_input_sel_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VAD_SCENARIO.VAD_phase1_Main_Input_Select" id="id_vad_phase1_main_input_sel_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_vad_phase1_main_input_sel_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VAD_SCENARIO.VAD_phase1_Ref_Input_Select" id="id_vad_phase1_ref_input_sel_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_vad_phase1_ref_input_sel_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VAD_SCENARIO.VAD_MIC_Bias_Enable.b0" id="id_audio_hw_io_MicBias_para_VAD_Enable0_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_VAD_Enable0_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VAD_SCENARIO.VAD_MIC_Bias_Enable.b1" id="id_audio_hw_io_MicBias_para_VAD_Enable1_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_VAD_Enable1_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VAD_SCENARIO.VAD_MIC_Bias_Enable.b2" id="id_audio_hw_io_MicBias_para_VAD_Enable2_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_VAD_Enable2_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VAD_SCENARIO.VAD_MIC_Bias_Enable.b3" id="id_audio_hw_io_MicBias_para_VAD_Enable3_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_VAD_Enable3_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VAD_SCENARIO.VAD_MIC_Bias_Enable.b4" id="id_audio_hw_io_MicBias_para_VAD_Enable4_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_VAD_Enable4_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VAD_SCENARIO.VAD_Side_Tone_Enable" id="id_vad_sidetone_enable_tb" visible="hidden">
+			
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VAD_SCENARIO.VAD_Analog_ADC_Performance_Sel" id="id_vad_analog_adc_performance_sel_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_vad_hw_io_UL_AFE_PARA_UplinkADCmode_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_DETACH_MIC_SCENARIO.MIC_Select" id="id_detach_mic_sel_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_detach_hw_io_mic_sel_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_DETACH_MIC_SCENARIO.MIC_Select_2" id="id_detach_mic_sel_2_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_detach_hw_io_mic_sel_2_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Voice_IIR_Filter" id="id_voice_iir_filter_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_iir_filter_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ADC_DAC_CONFIG.ADDA_Audio_IIR_Filter" id="id_audio_iir_filter_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_audio_iir_filter_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_DETACH_MIC_SCENARIO.MIC_Bias_Enable.b0" id="id_detach_hw_io_MicBias_para_Enable0_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_detach_hw_io_MicBias_para_Enable0_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_DETACH_MIC_SCENARIO.MIC_Bias_Enable.b1" id="id_detach_hw_io_MicBias_para_Enable1_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_detach_hw_io_MicBias_para_Enable1_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_DETACH_MIC_SCENARIO.MIC_Bias_Enable.b2" id="id_detach_hw_io_MicBias_para_Enable2_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_detach_hw_io_MicBias_para_Enable2_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_DETACH_MIC_SCENARIO.MIC_Bias_Enable.b3" id="id_detach_hw_io_MicBias_para_Enable3_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_detach_hw_io_MicBias_para_Enable3_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_DETACH_MIC_SCENARIO.MIC_Bias_Enable.b4" id="id_detach_hw_io_MicBias_para_Enable4_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_detach_hw_io_MicBias_para_Enable4_ckb"/>
+			</Associator>
+		</ConfigItem>
+		
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ANC_SCENARIO.ANC_MIC_Bias_Enable.b0" id="id_audio_hw_io_MicBias_para_ANC_Enable0_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_ANC_Enable0_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ANC_SCENARIO.ANC_MIC_Bias_Enable.b1" id="id_audio_hw_io_MicBias_para_ANC_Enable1_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_ANC_Enable1_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ANC_SCENARIO.ANC_MIC_Bias_Enable.b2" id="id_audio_hw_io_MicBias_para_ANC_Enable2_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_ANC_Enable2_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ANC_SCENARIO.ANC_MIC_Bias_Enable.b3" id="id_audio_hw_io_MicBias_para_ANC_Enable3_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_ANC_Enable3_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ANC_SCENARIO.ANC_MIC_Bias_Enable.b4" id="id_audio_hw_io_MicBias_para_ANC_Enable4_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_ANC_Enable4_ckb"/>
+			</Associator>
+		</ConfigItem>
+		
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_PASSTHROUGH_SCENARIO.Passthru_MIC_Bias_Enable.b0" id="id_audio_hw_io_MicBias_para_passthru_Enable0_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_ANC_Enable0_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_PASSTHROUGH_SCENARIO.Passthru_MIC_Bias_Enable.b1" id="id_audio_hw_io_MicBias_para_passthru_Enable1_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_ANC_Enable1_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_PASSTHROUGH_SCENARIO.Passthru_MIC_Bias_Enable.b2" id="id_audio_hw_io_MicBias_para_passthru_Enable2_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_ANC_Enable2_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_PASSTHROUGH_SCENARIO.Passthru_MIC_Bias_Enable.b3" id="id_audio_hw_io_MicBias_para_passthru_Enable3_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_ANC_Enable3_ckb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_PASSTHROUGH_SCENARIO.Passthru_MIC_Bias_Enable.b4" id="id_audio_hw_io_MicBias_para_passthru_Enable4_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_hw_io_MicBias_para_ANC_Enable4_ckb"/>
+			</Associator>
+		</ConfigItem>
+		
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_ANC_SCENARIO.ANC_MIC_Analog_ADC_Performance_Sel" id="id_anc_analog_adc_performance_sel_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_anc_hw_io_UL_AFE_PARA_UplinkADCmode_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_PASSTHROUGH_SCENARIO.Passthru_MIC_Analog_ADC_Performance_Sel" id="id_passthru_analog_adc_performance_sel_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_anc_analog_adc_performance_sel_tb"/>
+			</Associator>
+		</ConfigItem>
+		
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_AUDIO_SCENARIO.Audio_I2S_Master0_Sampling_rate" id="id_audio_i2s_master0_sampling_rate_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_audio_i2s_master0_sampling_rate_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_AUDIO_SCENARIO.Audio_I2S_Master1_Sampling_rate" id="id_audio_i2s_master1_sampling_rate_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_audio_i2s_master1_sampling_rate_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_AUDIO_SCENARIO.Audio_I2S_Master2_Sampling_rate" id="id_audio_i2s_master2_sampling_rate_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_audio_i2s_master2_sampling_rate_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_AUDIO_SCENARIO.Audio_I2S_Master3_Sampling_rate" id="id_audio_i2s_master3_sampling_rate_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_audio_i2s_master3_sampling_rate_combo"/>
+			</Associator>
+		</ConfigItem>
+		
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_I2S_Master0_Sampling_rate" id="id_voice_i2s_master0_sampling_rate_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_i2s_master0_sampling_rate_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_I2S_Master1_Sampling_rate" id="id_voice_i2s_master1_sampling_rate_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_i2s_master1_sampling_rate_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_I2S_Master2_Sampling_rate" id="id_voice_i2s_master2_sampling_rate_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_i2s_master2_sampling_rate_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_VOICE_SCENARIO.Voice_I2S_Master3_Sampling_rate" id="id_voice_i2s_master3_sampling_rate_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_voice_i2s_master3_sampling_rate_combo"/>
+			</Associator>
+		</ConfigItem>
+		
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_I2SM_CONFIG.I2S0_Master_Format" id="id_i2s_master0_format_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_i2s_master0_format_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_I2SM_CONFIG.I2S1_Master_Format" id="id_i2s_master1_format_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_i2s_master1_format_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_I2SM_CONFIG.I2S2_Master_Format" id="id_i2s_master2_format_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_i2s_master2_format_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_I2SM_CONFIG.I2S3_Master_Format" id="id_i2s_master3_format_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_i2s_master3_format_combo"/>
+			</Associator>
+		</ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_I2SM_CONFIG.I2S0_Master_Low_jitter" id="id_i2s_master0_low_jitter_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_i2s_master0_low_jitter_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_I2SM_CONFIG.I2S1_Master_Low_jitter" id="id_i2s_master1_low_jitter_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_i2s_master1_low_jitter_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_I2SM_CONFIG.I2S2_Master_Low_jitter" id="id_i2s_master2_low_jitter_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_i2s_master2_low_jitter_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_I2SM_CONFIG.I2S3_Master_Low_jitter" id="id_i2s_master3_low_jitter_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_i2s_master3_low_jitter_combo"/>
+      </Associator>
+    </ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_I2SM_CONFIG.I2S0_Master_Word_length" id="id_i2s_master0_word_length_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_i2s_master0_word_length_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_I2SM_CONFIG.I2S1_Master_Word_length" id="id_i2s_master1_word_length_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_i2s_master1_word_length_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_I2SM_CONFIG.I2S2_Master_Word_length" id="id_i2s_master2_word_length_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_i2s_master2_word_length_combo"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" Unique="HAL_DSP_PARA_AU_AFE_I2SM_CONFIG.I2S3_Master_Word_length" id="id_i2s_master3_word_length_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_i2s_master3_word_length_combo"/>
+			</Associator>
+		</ConfigItem>
+	</ConfigGroup>
+</Page>

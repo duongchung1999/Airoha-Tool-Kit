@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="MEMS" Value="0"/>
+	<Group Name="ECM Differential" Value="1"/>
+	<Group Name="ECM Single" Value="2"/>
+</DataGroup>                         

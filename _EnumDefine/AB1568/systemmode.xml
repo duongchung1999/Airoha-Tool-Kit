@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="Normal Mode" Value="0"/>
+	<Group Name="Low Power Mode" Value="1"/>
+</DataGroup>

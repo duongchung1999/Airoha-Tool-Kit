@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="by scenario" Value="0"/>
+	<Group Name="fix 32000Hz" Value="3"/>
+	<Group Name="fix 48000Hz" Value="1"/>
+	<Group Name="fix 96000Hz" Value="2"/>
+</DataGroup> 

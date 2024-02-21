@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup> 
+	<Group Name="01" 	Value="UI:0xEE05,FW:0xE410"/>
+	<Group Name="02" 	Value="UI:0xEE06,FW:0xE411"/>
+	<Group Name="03" 	Value="UI:0xEE07,FW:0xE412"/>
+	<Group Name="04" 	Value="UI:0xEE08,FW:0xE413"/>
+ 	<Group Name="05" 	Value="UI:0xEE09,FW:0xE414"/>
+	<Group Name="06" 	Value="UI:0xEE0A,FW:0xE415"/>
+	<Group Name="07" 	Value="UI:0xEE0B,FW:0xE416"/>
+	<Group Name="08" 	Value="UI:0xEE0C,FW:0xE417"/>
+	<Group Name="09" 	Value="UI:0xEE0D,FW:0xE418"/>
+	<Group Name="10" 	Value="UI:0xEE0E,FW:0xE419"/>
+	<Group Name="11" 	Value="UI:0xEE0F,FW:0xE41A"/>
+	<Group Name="12" 	Value="UI:0xEE13,FW:0xE41B"/>
+	<Group Name="13" 	Value="UI:0xEE14,FW:0xE41C"/>
+	<Group Name="14" 	Value="UI:0xEE15,FW:0xE41D"/>
+ 	<Group Name="15" 	Value="UI:0xEE16,FW:0xE41E"/>
+	<Group Name="16" 	Value="UI:0xEE17,FW:0xE41F"/>
+	<Group Name="17" 	Value="UI:0xEE18,FW:0xE420"/>
+	<Group Name="18" 	Value="UI:0xEE19,FW:0xE421"/>
+	<Group Name="19" 	Value="UI:0xEE1A,FW:0xE422"/>
+	<Group Name="20" 	Value="UI:0xEE1B,FW:0xE423"/>
+	<Group Name="21" 	Value="UI:0xEE1C,FW:0xE424"/>
+	<Group Name="22" 	Value="UI:0xEE1D,FW:0xE425"/>
+	<Group Name="23" 	Value="UI:0xEE1E,FW:0xE426"/>
+	<Group Name="24" 	Value="UI:0xEE1F,FW:0xE427"/>
+ 	<Group Name="25" 	Value="UI:0xEE21,FW:0xE428"/>
+	<Group Name="26" 	Value="UI:0xEE22,FW:0xE429"/>
+	<Group Name="27" 	Value="UI:0xEE23,FW:0xE42A"/>
+	<Group Name="28" 	Value="UI:0xEE24,FW:0xE42B"/>
+ 	<Group Name="101" 	Value="UI:0xEF00,FW:0xE42C,UI_Ext:0xEF10"/>
+	<Group Name="102" 	Value="UI:0xEF01,FW:0xE42D,UI_Ext:0xEF11"/>
+	<Group Name="103" 	Value="UI:0xEF02,FW:0xE42E,UI_Ext:0xEF12"/>
+	<Group Name="104" 	Value="UI:0xEF03,FW:0xE42F,UI_Ext:0xEF13"/>
+</DataGroup>
+
+

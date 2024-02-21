@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page title ="Charger Case Config" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Charger Case Config" scroll="both">
+  <ConfigGroup class="ucLayoutVertical">
+ 
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="Charger Case Setting"/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucComboBox" id="id_ccc_charger_type_cb">
+          <Parameter name="left_label" value="Charger Type"/>
+          <Parameter name="des_label" value="Make sure hw and sw configuration is aligned"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/CCC_ChargerType.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_ccc_charger_type_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" id="id_ccc_reset_pattern_enable_cb" visible="hidden">
+          <Parameter name="left_label" value="RESET Pattern"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_ccc_reset_pattern_enable_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" id="id_ccc_uart_select_cb">
+          <Parameter name="left_label" value="UART Select"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/CCC_UartSelect.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_ccc_uart_select_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" id="id_ccc_com_baudrate_cb">
+          <Parameter name="left_label" value="COM Mode Baudrate"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" bps"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/CCC_ComBaudrate.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_ccc_com_baudrate_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" id="id_ccc_log_baudrate_cb">
+          <Parameter name="left_label" value="Log Mode Baudrate"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" bps"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/CCC_LogBaudrate.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_ccc_log_baudrate_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" id="id_ccc_1wire_log_enable_cb">
+          <Parameter name="left_label" value="1Wire Log"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_ccc_1wire_log_enable_tb"/>
+          </Associator>
+        </ConfigItem>
+<!--         <ConfigItem class="ucUpDown" id="id_ccc_interval_out_of_case_updown" min="0" max="65535">
+            <Parameter name="left_label" value=" Out_Of_Case Check Timer"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value=" ms  (0 : Keep Out_Of_Case)"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="unique" value="Charge_Case_Config.interval_out_of_case"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_ccc_interval_out_of_case_tb"/>
+            </Associator>
+          </ConfigItem> -->
+        <ConfigItem class="ucUpDown" id="id_ccc_interval_com_mode_updown" min="0" max="65535">
+            <Parameter name="left_label" value="COM Mode Check Timer"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value=" ms  (0 : Keep COM Mode)"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="unique" value="Charge_Case_Config.interval_com_mode"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_ccc_interval_com_mode_tb"/>
+            </Associator>
+          </ConfigItem>
+        <ConfigItem class="ucUpDown" id="id_ccc_interval_race_mode_updown" min="0" max="65535">
+            <Parameter name="left_label" value="RACE Mode Check Timer"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value=" ms  (0 : Keep RACE Mode)"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="unique" value="Charge_Case_Config.interval_race_mode"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_ccc_interval_race_mode_tb"/>
+            </Associator>
+          </ConfigItem>
+        <ConfigItem class="ucUpDown" id="id_ccc_polling_adc_threshold_updown" min="1000" max="2000">
+            <Parameter name="left_label" value="Out_Of_Case VBUS_UART Threshold"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="unique" value="Charge_Case_Config.polling_adc_threshold"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_ccc_polling_adc_threshold_tb"/>
+            </Associator>
+          </ConfigItem>
+        <ConfigItem class="ucUpDown" id="id_ccc_vbat_threshold_updown" min="2500" max="3700">
+            <Parameter name="left_label" value="COM Mode VBAT Threshold"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="unique" value="Charge_Case_Config.vbat_threshold"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_ccc_vbat_threshold_tb"/>
+            </Associator>
+          </ConfigItem>
+ 
+      </ConfigGroup>
+    </ConfigGroup>
+
+  </ConfigGroup>
+
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="Charge_Case_Config.charger_type" id="id_ccc_charger_type_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ccc_charger_type_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="Charge_Case_Config.reset_pattern_enable" id="id_ccc_reset_pattern_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ccc_reset_pattern_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="Charge_Case_Config.uart_select" id="id_ccc_uart_select_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ccc_uart_select_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="Charge_Case_Config.com_baudrate" id="id_ccc_com_baudrate_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ccc_com_baudrate_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="Charge_Case_Config.log_baudrate" id="id_ccc_log_baudrate_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ccc_log_baudrate_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="Charge_Case_Config.interval_out_of_case" id="id_ccc_interval_out_of_case_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ccc_interval_out_of_case_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="Charge_Case_Config.interval_com_mode" id="id_ccc_interval_com_mode_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ccc_interval_com_mode_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="Charge_Case_Config.interval_race_mode" id="id_ccc_interval_race_mode_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ccc_interval_race_mode_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="Charge_Case_Config.polling_adc_threshold" id="id_ccc_polling_adc_threshold_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ccc_polling_adc_threshold_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="Charge_Case_Config.vbat_threshold" id="id_ccc_vbat_threshold_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ccc_vbat_threshold_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="Charge_Case_Config.1wire_log_enable" id="id_ccc_1wire_log_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ccc_1wire_log_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+     
+  </ConfigGroup>
+</Page>

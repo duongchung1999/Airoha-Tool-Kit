@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <environments WpfView="EnvionmentSelect">
+    <DUT1 IsEnable="True" />
+    <DUT2 IsEnable="False" />
+    <DUT3 IsEnable="False" />
+    <DUT4 IsEnable="False" />
+    <DUT5 IsEnable="False" />
+    <DUT6 IsEnable="False" />
+    <DUT7 IsEnable="False" />
+    <DUT8 IsEnable="False" />
+  </environments>
+  <UnifiedInput></UnifiedInput>
+  <SelfInput>
+    <TcbUart SettingPage.View="UartSelectTcb">
+      <DUT1>60</DUT1>
+      <DUT2>13</DUT2>
+      <DUT3>13</DUT3>
+      <DUT4>13</DUT4>
+      <DUT5>13</DUT5>
+      <DUT6>13</DUT6>
+      <DUT7>13</DUT7>
+      <DUT8>13</DUT8>
+    </TcbUart>
+    <DeviceUart SettingPage.View="UartSelect">
+      <DUT1>38</DUT1>
+      <DUT2>31</DUT2>
+      <DUT3>13</DUT3>
+      <DUT4>19</DUT4>
+      <DUT5>1</DUT5>
+      <DUT6>1</DUT6>
+      <DUT7>1</DUT7>
+      <DUT8>1</DUT8>
+    </DeviceUart>
+  </SelfInput>
+  <Managers>
+    <ErrorCodeManager class="Airoha.Project.MpTool.ErrorCodeManager" />
+  </Managers>
+  <flows Runner.StartFlow="default">
+    <default SettingPage.Name="Default Process">
+      <option>
+      </option>
+      <main>
+        <ConnectDevice task="ConnectTCB">
+          <port Runner.Input="TcbUart" />
+        </ConnectDevice>
+        <EnterSLTModeTask task="EnterSLTMode"/>
+        
+        <ConnectSLTBoard task="ConnectSLT" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <port Runner.Input="DeviceUart" />
+        </ConnectSLTBoard>
+        <SltTest task="TaskSltTest" Runner.Option="True">
+          <Output.EXIT_STATUS Runner.OutputToManager="ErrorCodeManager.exit_status_writer" />
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer" />
+        </SltTest>
+      </main>
+      <final>
+        <DisconnectSLT task="DisconnectSLT" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True" />
+        <ShutdownDUT task="ShutdownDUT" />
+        <DisconnectDevice task="DisconnectTCB"/>        
+      </final>
+    </default>
+  </flows>
+</root>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+  <Group Name="GPIO0" Value="0"/>
+  <Group Name="GPIO1" Value="1"/>
+  <Group Name="GPIO2" Value="2"/>
+  <Group Name="GPIO3" Value="3"/>
+  <Group Name="GPIO4" Value="4"/>
+  <Group Name="GPIO5" Value="5"/>
+  <Group Name="GPIO6" Value="6"/>
+  <Group Name="GPIO7" Value="7"/>
+  <Group Name="GPIO8" Value="8"/>
+  <Group Name="GPIO9" Value="9"/>
+  <Group Name="GPIO10" Value="10"/>
+  <Group Name="GPIO11" Value="11"/>
+  <Group Name="GPIO12" Value="12"/>
+  <Group Name="GPIO15" Value="15"/>
+  <Group Name="GPIO16" Value="16"/>
+  <Group Name="GPIO17" Value="17"/>
+  <Group Name="GPIO18" Value="18"/>
+  <Group Name="GPIO19" Value="19"/>
+  <Group Name="GPIO20" Value="20"/>
+  <Group Name="GPIO21" Value="21"/>
+  <Group Name="GPIO22" Value="22"/>
+  <Group Name="GPIO23" Value="23"/>
+  <Group Name="GPIO24" Value="24"/>
+  <Group Name="GPIO25" Value="25"/>
+  <Group Name="GPIO26" Value="26"/>
+  <Group Name="GPIO27" Value="27"/>
+  <Group Name="GPIO28" Value="28"/>
+  <Group Name="GPIO29" Value="29"/>
+  <Group Name="GPIO30" Value="30"/>
+  <Group Name="GPIO31" Value="31"/>
+  <Group Name="None" Value="255"/>
+</DataGroup>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="Not Support" Value="0"/>
+	<Group Name="Support 2nd Speaker" Value="1"/>
+</DataGroup>

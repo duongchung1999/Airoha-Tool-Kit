@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="RF Settings(MP NV Key)" class="Airoha.Project.ConfigTool.View.PurePage" parameter="RF Settings(MP NV Key)">
+  <ConfigGroup class="ucLayoutHorizontal">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="2"/>
+      <!--<ConfigItem class="ucComboBox" id="id_DTM_enable_combo">
+        <Parameter name="left_label" value="Direct Test Mode (RF test mode)"/>
+        <Parameter name="left_width" value="100"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="down_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_DTM_enable"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_DUT_mode_enable_combo" visible="hidden">
+        <Parameter name="left_label" value="DUT Mode (RF test mode)"/>
+        <Parameter name="left_width" value="100"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="down_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_DUT_mode_enable"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_DUT_mode_app_enable_combo">
+        <Parameter name="left_label" value="DUT Mode (APP test mode)"/>
+        <Parameter name="left_width" value="100"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="down_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_DUT_mode_app_enable"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_Reject_normal_conn_in_DUT_mode_combo">
+        <Parameter name="left_label" value="Reject normal connection in DUT mode"/>
+        <Parameter name="left_width" value="100"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="down_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_Reject_normal_conn_in_DUT_mode"/>
+        </Associator>
+      </ConfigItem>-->
+      <ConfigItem class="ucComboBox" id="id_mp_mode_enable_combo">
+        <Parameter name="left_label" value="MP Test Mode"/>
+        <Parameter name="left_width" value="100"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="down_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_mp_mode_enable"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_vpa_combo" enable="enable">
+        <Parameter name="left_label" value="PA Voltage"/>
+        <Parameter name="left_width" value="100"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="down_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/Vpa.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcRfPowerAssociator">
+          <Parameter name="data" refId="id_vpa"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_relay_enable_combo">
+        <Parameter name="left_label" value="Relay Enable"/>
+        <Parameter name="left_width" value="100"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="down_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_relay_enable"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_port_number_combo" visible="hidden">
+        <Parameter name="left_label" value="Port Number"/>
+        <Parameter name="left_width" value="100"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="down_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/PortNumber.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_port_number"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_dut_enable_combo">
+        <Parameter name="left_label" value="DUT Enable"/>
+        <Parameter name="left_width" value="100"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="down_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_dut_enable"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucPicDisplay" id="id_pic_powertogc">
+        <Parameter name="figure_file_path" value="/_Figure_display/PowerToGcTable.jpg"/>
+        <Parameter name="figure_name" value="Power to GC Table"/>
+        <Parameter name="left_label" value="Power v.s GC Table"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="180"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutHorizontal">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="RF Power"/>
+      <Parameter name="top_font_size" value="16"/>
+      <Parameter name="top_margin" value="20"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="2"/>
+      <ConfigItem class="ucFactoryGcRestore" id="id_factory_gc">
+        <Parameter name="left_label" value="Factory GC"/>
+        <Parameter name="left_width" value="180"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+      </ConfigItem>
+      <ConfigItem class="ucPowerUpDown" id="id_BR_power_updown" min="0" max="63">
+        <Parameter name="left_label" value="BR GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.TX_GC_BR"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcRfPowerAssociator">
+          <Parameter name="data" refId="id_BR_power"/>
+          <Parameter name="vpa" refId="id_vpa"/>
+          <Parameter name="isUpdated" refId="id_factory_gc"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucPowerUpDown" id="id_EDR_power_updown" min="0" max="63">
+        <Parameter name="left_label" value="EDR GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.TX_GC_EDR"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcRfPowerAssociator">
+          <Parameter name="data" refId="id_EDR_power"/>
+          <Parameter name="vpa" refId="id_vpa"/>
+          <Parameter name="isUpdated" refId="id_factory_gc"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucPowerUpDown" id="id_LE1M_power_updown" min="0" max="63">
+        <Parameter name="left_label" value="LE 1M GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.TX_GC_LE_1M"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcRfPowerAssociator">
+          <Parameter name="data" refId="id_LE1M_power"/>
+          <Parameter name="vpa" refId="id_vpa"/>
+          <Parameter name="isUpdated" refId="id_factory_gc"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucPowerUpDown" id="id_LE2M_power_updown" min="0" max="63">
+        <Parameter name="left_label" value="LE 2M GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.TX_GC_LE_2M"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcRfPowerAssociator">
+          <Parameter name="data" refId="id_LE2M_power"/>
+          <Parameter name="vpa" refId="id_vpa"/>
+          <Parameter name="isUpdated" refId="id_factory_gc"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutHorizontal" visible="hidden">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="RF Power Control Condition"/>
+      <Parameter name="top_font_size" value="16"/>
+      <Parameter name="top_margin" value="20"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="2"/>
+      <ConfigItem class="ucUpDown" id="id_txgc_step_updown" min="1" max="16">
+        <Parameter name="left_label" value="TX_GC Step"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="130"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 1~16)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC_STEP.TX_GC_STEP"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_txgc_step"/>
+        </Associator>
+      </ConfigItem>
+      <!--<ConfigItem class="ucUpDown" id="id_rssi_goledn_ub_updown" min="-100" max="100">
+            <Parameter name="disable" value="0"/>
+            <Parameter name="left_label" value="RSSI Golden Upper Bound"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="200"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="unique" value="TX_GC_STEP.RSSI_GOLDEN_RANGE_UB"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_rssi_goledn_ub"/>
+            </Associator>
+          </ConfigItem>
+
+          <ConfigItem class="ucUpDown" id="id_rssi_goledn_lb_updown" min="-100" max="100">
+            <Parameter name="disable" value="0"/>
+            <Parameter name="left_label" value="RSSI Golden Lower Bound"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="200"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="unique" value="TX_GC_STEP.RSSI_GOLDEN_RANGE_LB"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_rssi_goledn_lb"/>
+            </Associator>
+          </ConfigItem>-->
+    </ConfigGroup>
+  </ConfigGroup>
+  <!--<ConfigGroup class="ucLayoutHorizontal" visible="hidden">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Tx GC Threshold"/>
+      <Parameter name="top_font_size" value="16"/>
+      <Parameter name="top_margin" value="20"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="2"/>
+      <ConfigItem class="ucUpDown" id="id_THES_CH_L_updown" min="2402" max="2480">
+        <Parameter name="offset" value="2402"/>
+        <Parameter name="left_label" value="Threshold L"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 2402~2480)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.THES_CH_L"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_THES_CH_L"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_THES_CH_H_updown" min="2402" max="2480">
+        <Parameter name="offset" value="2402"/>
+        <Parameter name="left_label" value="Threshold H"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 2402~2480)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.THES_CH_H"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_THES_CH_H"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutHorizontal" visible="hidden">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Tx GC 2402 ~ Threshold L"/>
+      <Parameter name="top_font_size" value="16"/>
+      <Parameter name="top_margin" value="20"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="2"/>
+      <ConfigItem class="ucUpDown" id="id_BR_power_L_updown" min="0" max="63">
+        <Parameter name="left_label" value="BR GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.BR_TX_GC_L"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_BR_power_L"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_EDR_power_L_updown" min="0" max="63">
+        <Parameter name="left_label" value="EDR GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.ERD_TX_GC_L"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_EDR_power_L"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_LE1M_power_L_updown" min="0" max="63">
+        <Parameter name="left_label" value="LE 1M GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.LE_1M_TX_GC_L"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_LE1M_power_L"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_LE2M_power_L_updown" min="0" max="63">
+        <Parameter name="left_label" value="LE 2M GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.LE_2M_TX_GC_L"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_LE2M_power_L"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Tx GC Threshold L+1 ~ Threshold H-1"/>
+      <Parameter name="top_font_size" value="16"/>
+      <Parameter name="top_margin" value="20"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="2"/>
+      <ConfigItem class="ucUpDown" id="id_BR_power_M_updown" min="0" max="63">
+        <Parameter name="left_label" value="BR GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.BR_TX_GC_M"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_BR_power_M"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_EDR_power_M_updown" min="0" max="63">
+        <Parameter name="left_label" value="EDR GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.ERD_TX_GC_M"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_EDR_power_M"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_LE1M_power_M_updown" min="0" max="63">
+        <Parameter name="left_label" value="LE 1M GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.LE_1M_TX_GC_M"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_LE1M_power_M"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_LE2M_power_M_updown" min="0" max="63">
+        <Parameter name="left_label" value="LE 2M GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.LE_2M_TX_GC_M"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_LE2M_power_M"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Tx GC Threshold H ~ 2480"/>
+      <Parameter name="top_font_size" value="16"/>
+      <Parameter name="top_margin" value="20"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="2"/>
+      <ConfigItem class="ucUpDown" id="id_BR_power_H_updown" min="0" max="63">
+        <Parameter name="left_label" value="BR GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.BR_TX_GC_H"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_BR_power_H"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_EDR_power_H_updown" min="0" max="63">
+        <Parameter name="left_label" value="EDR GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.ERD_TX_GC_H"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_EDR_power_H"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_LE1M_power_H_updown" min="0" max="63">
+        <Parameter name="left_label" value="LE 1M GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.LE_1M_TX_GC_H"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_LE1M_power_H"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_LE2M_power_H_updown" min="0" max="63">
+        <Parameter name="left_label" value="LE 2M GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.LE_2M_TX_GC_H"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_LE2M_power_H"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutHorizontal" visible="hidden">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Tx DPC 2402 ~ Threshold L"/>
+      <Parameter name="top_font_size" value="16"/>
+      <Parameter name="top_margin" value="20"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="2"/>
+      <ConfigItem class="ucUpDown" id="id_BR_DPC_power_L_updown" min="0" max="63">
+        <Parameter name="left_label" value="BR GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.BR_TX_DPC_L"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_BR_DPC_power_L"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_EDR_DPC_power_L_updown" min="0" max="63">
+        <Parameter name="left_label" value="EDR GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.ERD_TX_DPC_L"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_EDR_DPC_power_L"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_LE1M_DPC_power_L_updown" min="0" max="63">
+        <Parameter name="left_label" value="LE 1M GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.LE_1M_TX_DPC_L"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_LE1M_DPC_power_L"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_LE2M_DPC_power_L_updown" min="0" max="63">
+        <Parameter name="left_label" value="LE 2M GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.LE_2M_TX_DPC_L"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_LE2M_DPC_power_L"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Tx DPC Threshold L+1 ~ Threshold H-1"/>
+      <Parameter name="top_font_size" value="16"/>
+      <Parameter name="top_margin" value="20"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="2"/>
+      <ConfigItem class="ucUpDown" id="id_BR_DPC_power_M_updown" min="0" max="63">
+        <Parameter name="left_label" value="BR GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.BR_TX_DPC_M"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_BR_DPC_power_M"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_EDR_DPC_power_M_updown" min="0" max="63">
+        <Parameter name="left_label" value="EDR GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.ERD_TX_DPC_M"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_EDR_DPC_power_M"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_LE1M_DPC_power_M_updown" min="0" max="63">
+        <Parameter name="left_label" value="LE 1M GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.LE_1M_TX_DPC_M"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_LE1M_DPC_power_M"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_LE2M_DPC_power_M_updown" min="0" max="63">
+        <Parameter name="left_label" value="LE 2M GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.LE_2M_TX_DPC_M"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_LE2M_DPC_power_M"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Tx DPC Threshold H ~ 2480"/>
+      <Parameter name="top_font_size" value="16"/>
+      <Parameter name="top_margin" value="20"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="2"/>
+      <ConfigItem class="ucUpDown" id="id_BR_DPC_power_H_updown" min="0" max="63">
+        <Parameter name="left_label" value="BR GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.BR_TX_DPC_H"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_BR_DPC_power_H"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_EDR_DPC_power_H_updown" min="0" max="63">
+        <Parameter name="left_label" value="EDR GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.ERD_TX_DPC_H"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_EDR_DPC_power_H"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_LE1M_DPC_power_H_updown" min="0" max="63">
+        <Parameter name="left_label" value="LE 1M GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.LE_1M_TX_DPC_H"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_LE1M_DPC_power_H"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_LE2M_DPC_power_H_updown" min="0" max="63">
+        <Parameter name="left_label" value="LE 2M GC"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~63)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="TX_GC.LE_2M_TX_DPC_H"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_LE2M_DPC_power_H"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>-->
+  <ConfigGroup class="ucLayoutHorizontal">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="26M Crystal"/>
+      <Parameter name="top_font_size" value="16"/>
+      <Parameter name="top_margin" value="20"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="2"/>
+      <ConfigItem class="ucUpDown" id="id_24M_capvalue_updown" min="0" max="511">
+        <Parameter name="left_label" value="Cap Value"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="130"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(range 0~511)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="Crystal.XO_24MCapValue"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_24M_capvalue"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_xo_24M_spec_updown" min="2" max="20" visible="hidden">
+        <Parameter name="left_label" value="Calibration Spec"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="130"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="ppm"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="Crystal.XO_24MCrystalTrimSpec"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_xo_24M_spec"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <!--<ConfigGroup class="ucLayoutVertical">
+          <Parameter name="top_label" value="32K Crystal"/>
+          <Parameter name="left_width" value="20"/>
+          <Parameter name="border" value="1"/>
+
+          <ConfigItem class="ucUpDown" id="id_32K_capvalue_updown" min="-50" max="127">
+            <Parameter name="left_label" value="Cap Value"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="130"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value="(range 0~127)"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="unique" value="Crystal.XO_32kCapValue"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_32K_capvalue"/>
+            </Associator>
+          </ConfigItem>
+
+          <ConfigItem class="ucUpDown" id="id_xo_32K_spec_updown" min="-100" max="100">
+            <Parameter name="left_label" value="Calibration Spec"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="130"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value="ppm"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="unique" value="Crystal.XO_32kCrystalTrimSpec"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_xo_32K_spec"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>-->
+  <ConfigGroup class="General">
+    <!--<ConfigItem class="ucTextBox" Unique="RfTestMode.EnableDUTMode" id="id_DUT_mode_enable" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_DUT_mode_enable_combo"/>
+      </Associator>
+    </ConfigItem>-->
+    <!--<ConfigItem class="ucTextBox" Unique="DutMode.EnableDutModeAPP" id="id_DUT_mode_app_enable" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_DUT_mode_app_enable_combo"/>
+      </Associator>
+    </ConfigItem>-->
+    <!--<ConfigItem class="ucTextBox" Unique="RfTestMode.EnableDTM" id="id_DTM_enable" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_DTM_enable_combo"/>
+      </Associator>
+    </ConfigItem>-->
+    <!--<ConfigItem class="ucTextBox" Unique="NORMAL_CONNECTED_IN_DUT_MODE.enable" id="id_Reject_normal_conn_in_DUT_mode" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_Reject_normal_conn_in_DUT_mode_combo"/>
+      </Associator>
+    </ConfigItem>-->
+    <ConfigItem class="ucTextBox" Unique="MpTestMode.enable" id="id_mp_mode_enable" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_mp_mode_enable_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="VPA.voltage" id="id_vpa" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcRfPowerAssociator">
+        <Parameter name="data" refId="id_vpa_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.TX_GC_BR" id="id_BR_power" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcRfPowerAssociator">
+        <Parameter name="data" refId="id_BR_power_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.TX_GC_EDR" id="id_EDR_power" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcRfPowerAssociator">
+        <Parameter name="data" refId="id_EDR_power_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.TX_GC_LE_1M" id="id_LE1M_power" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcRfPowerAssociator">
+        <Parameter name="data" refId="id_LE1M_power_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.TX_GC_LE_2M" id="id_LE2M_power" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcRfPowerAssociator">
+        <Parameter name="data" refId="id_LE2M_power_updown"/>
+      </Associator>
+    </ConfigItem>
+    <!--<ConfigItem class="ucTextBox" Unique="TX_GC.THES_CH_L" id="id_THES_CH_L" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_THES_CH_L_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.THES_CH_H" id="id_THES_CH_H" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_THES_CH_H_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.BR_TX_GC_L" id="id_BR_power_L" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_BR_power_L_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.ERD_TX_GC_L" id="id_EDR_power_L" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_EDR_power_L_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.LE_1M_TX_GC_L" id="id_LE1M_power_L" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_LE1M_power_L_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.LE_2M_TX_GC_L" id="id_LE2M_power_L" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_LE2M_power_L_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.BR_TX_GC_M" id="id_BR_power_M" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_BR_power_M_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.ERD_TX_GC_M" id="id_EDR_power_M" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_EDR_power_M_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.LE_1M_TX_GC_M" id="id_LE1M_power_M" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_LE1M_power_M_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.LE_2M_TX_GC_M" id="id_LE2M_power_M" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_LE2M_power_M_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.BR_TX_GC_H" id="id_BR_power_H" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_BR_power_H_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.ERD_TX_GC_H" id="id_EDR_power_H" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_EDR_power_H_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.LE_1M_TX_GC_H" id="id_LE1M_power_H" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_LE1M_power_H_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.LE_2M_TX_GC_H" id="id_LE2M_power_H" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_LE2M_power_H_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.BR_TX_DPC_L" id="id_BR_DPC_power_L" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_BR_DPC_power_L_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.ERD_TX_DPC_L" id="id_EDR_DPC_power_L" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_EDR_DPC_power_L_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.LE_1M_TX_DPC_L" id="id_LE1M_DPC_power_L" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_LE1M_DPC_power_L_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.LE_2M_TX_DPC_L" id="id_LE2M_DPC_power_L" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_LE2M_DPC_power_L_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.BR_TX_DPC_M" id="id_BR_DPC_power_M" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_BR_DPC_power_M_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.ERD_TX_DPC_M" id="id_EDR_DPC_power_M" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_EDR_DPC_power_M_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.LE_1M_TX_DPC_M" id="id_LE1M_DPC_power_M" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_LE1M_DPC_power_M_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.LE_2M_TX_DPC_M" id="id_LE2M_DPC_power_M" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_LE2M_DPC_power_M_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.BR_TX_DPC_H" id="id_BR_DPC_power_H" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_BR_DPC_power_H_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.ERD_TX_DPC_H" id="id_EDR_DPC_power_H" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_EDR_DPC_power_H_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.LE_1M_TX_DPC_H" id="id_LE1M_DPC_power_H" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_LE1M_DPC_power_H_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="TX_GC.LE_2M_TX_DPC_H" id="id_LE2M_DPC_power_H" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_LE2M_DPC_power_H_updown"/>
+      </Associator>
+    </ConfigItem>-->
+    <ConfigItem class="ucTextBox" Unique="TX_GC_STEP.TX_GC_STEP" id="id_txgc_step" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_txgc_step_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="RELAY_ENABLE.relay_enable" id="id_relay_enable" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_relay_enable_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="RELAY_ENABLE.port_number" id="id_port_number" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_port_number_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="DUT_ENABLE.dut_enable" id="id_dut_enable" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_dut_enable_combo"/>
+      </Associator>
+    </ConfigItem>
+    <!--<ConfigItem class="ucTextBox" Unique="TX_GC_STEP.RSSI_GOLDEN_RANGE_UB" id="id_rssi_goledn_ub" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_rssi_goledn_ub_updown"/>
+            </Associator>
+          </ConfigItem>
+
+          <ConfigItem class="ucTextBox" Unique="TX_GC_STEP.RSSI_GOLDEN_RANGE_LB" id="id_rssi_goledn_lb" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_rssi_goledn_lb_updown"/>
+            </Associator>
+          </ConfigItem>-->
+    <ConfigItem class="ucTextBox" Unique="Crystal.XO_24MCapValue" id="id_24M_capvalue" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_24M_capvalue_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="Crystal.XO_24MCrystalTrimSpec" id="id_xo_24M_spec" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_xo_24M_spec_updown"/>
+      </Associator>
+    </ConfigItem>
+    <!--<ConfigItem class="ucTextBox" Unique="Crystal.XO_32kCapValue" id="id_32K_capvalue" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_32K_capvalue_updown"/>
+            </Associator>
+          </ConfigItem>
+
+          <ConfigItem class="ucTextBox" Unique="Crystal.XO_32kCrystalTrimSpec" id="id_xo_32K_spec" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_xo_32K_spec_updown"/>
+            </Associator>
+          </ConfigItem>-->
+  </ConfigGroup>
+</Page>

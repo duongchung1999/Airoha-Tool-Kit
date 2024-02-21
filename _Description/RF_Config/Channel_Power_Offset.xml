@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Channel Power Offset" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Channel Power Offset">
+  <ConfigGroup class="ucLayoutHorizontal">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucComboBox" id="id_channel_power_offset_enable_combo">
+        <Parameter name="left_label" value="Channel Power Offset"/>
+        <Parameter name="left_width" value="100"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_channel_power_offset_enable"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutHorizontal">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Band0 GC Offset Setting"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucComboBox" id="id_band0_gfsk_combo">
+        <Parameter name="left_label" value="GFSK"/>
+        <Parameter name="left_width" value="70"/>
+        <Parameter name="width" value="70"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/ChannelPowerOffset.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_band0_gfsk"/>
+          <Parameter name="enable" refId="id_channel_power_offset_enable_combo"/>
+          <Parameter name="enable_value" value="1"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_band0_edr_combo">
+        <Parameter name="left_label" value="EDR"/>
+        <Parameter name="left_width" value="70"/>
+        <Parameter name="width" value="70"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/ChannelPowerOffset.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_band0_edr"/>
+          <Parameter name="enable" refId="id_channel_power_offset_enable_combo"/>
+          <Parameter name="enable_value" value="1"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_band0_le1M_combo">
+        <Parameter name="left_label" value="LE 1M"/>
+        <Parameter name="left_width" value="70"/>
+        <Parameter name="width" value="70"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/ChannelPowerOffset.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_band0_le1M"/>
+          <Parameter name="enable" refId="id_channel_power_offset_enable_combo"/>
+          <Parameter name="enable_value" value="1"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_band0_le2M_combo">
+        <Parameter name="left_label" value="LE 2M"/>
+        <Parameter name="left_width" value="70"/>
+        <Parameter name="width" value="70"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/ChannelPowerOffset.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_band0_le2M"/>
+          <Parameter name="enable" refId="id_channel_power_offset_enable_combo"/>
+          <Parameter name="enable_value" value="1"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Band2 GC Offset Setting"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucComboBox" id="id_band1_gfsk_combo">
+        <Parameter name="left_label" value="GFSK"/>
+        <Parameter name="left_width" value="70"/>
+        <Parameter name="width" value="70"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/ChannelPowerOffset.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_band1_gfsk"/>
+          <Parameter name="enable" refId="id_channel_power_offset_enable_combo"/>
+          <Parameter name="enable_value" value="1"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_band1_edr_combo">
+        <Parameter name="left_label" value="EDR"/>
+        <Parameter name="left_width" value="70"/>
+        <Parameter name="width" value="70"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/ChannelPowerOffset.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_band1_edr"/>
+          <Parameter name="enable" refId="id_channel_power_offset_enable_combo"/>
+          <Parameter name="enable_value" value="1"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_band1_le1M_combo">
+        <Parameter name="left_label" value="LE 1M"/>
+        <Parameter name="left_width" value="70"/>
+        <Parameter name="width" value="70"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/ChannelPowerOffset.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_band1_le1M"/>
+          <Parameter name="enable" refId="id_channel_power_offset_enable_combo"/>
+          <Parameter name="enable_value" value="1"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_band1_le2M_combo">
+        <Parameter name="left_label" value="LE 2M"/>
+        <Parameter name="left_width" value="70"/>
+        <Parameter name="width" value="70"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/ChannelPowerOffset.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_band1_le2M"/>
+          <Parameter name="enable" refId="id_channel_power_offset_enable_combo"/>
+          <Parameter name="enable_value" value="1"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutHorizontal">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Channel Threshold Setting"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucChannelPowerOffsetThresholdUpDown" id="id_channel_power_offset_threshold01_updown" min="0" max="78">
+        <Parameter name="left_label" value="Threshold01"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="AFE_RF_GC_COMPENSTAION.Threshold01"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_channel_power_offset_threshold01_tb"/>
+          <Parameter name="threshold12" refId="id_channel_power_offset_threshold12_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucChannelPowerOffsetThresholdUpDown" id="id_channel_power_offset_threshold12_updown" min="0" max="78">
+        <Parameter name="left_label" value="Threshold12"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="AFE_RF_GC_COMPENSTAION.Threshold12"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_channel_power_offset_threshold12_tb"/>
+          <Parameter name="threshold01" refId="id_channel_power_offset_threshold01_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucPicDisplay" id="id_pic_channelTreshold">
+        <Parameter name="figure_file_path" value="/_Figure_display/channel_threshold.jpg"/>
+        <Parameter name="figure_name" value="Channel Threshold Setting"/>
+        <Parameter name="left_label" value="Illustration"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="90"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="AFE_RF_GC_COMPENSTAION.Enable" id="id_channel_power_offset_enable" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_channel_power_offset_enable_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AFE_RF_GC_COMPENSTAION.Band0_GFSK" id="id_band0_gfsk" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_band0_gfsk_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AFE_RF_GC_COMPENSTAION.Band0_EDR" id="id_band0_edr" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_band0_edr_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AFE_RF_GC_COMPENSTAION.Band0_LE1M" id="id_band0_le1M" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_band0_le1M_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AFE_RF_GC_COMPENSTAION.Band0_LE2M" id="id_band0_le2M" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_band0_le2M_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AFE_RF_GC_COMPENSTAION.Band1_GFSK" id="id_band1_gfsk" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_band1_gfsk_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AFE_RF_GC_COMPENSTAION.Band1_EDR" id="id_band1_edr" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_band1_edr_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AFE_RF_GC_COMPENSTAION.Band1_LE1M" id="id_band1_le1M" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_band1_le1M_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AFE_RF_GC_COMPENSTAION.Band1_LE2M" id="id_band1_le2M" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_band1_le2M_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AFE_RF_GC_COMPENSTAION.Threshold01" id="id_channel_power_offset_threshold01_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_channel_power_offset_threshold01_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AFE_RF_GC_COMPENSTAION.Threshold12" id="id_channel_power_offset_threshold12_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_channel_power_offset_threshold12_updown"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

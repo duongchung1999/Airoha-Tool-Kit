@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandBook>
+  <!-- NotifyExceptionText for exception dump -->
+  <RACE_EXCEPTION_TXT>
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5D" />
+      <packet_len type="uint16" />
+      <packet_id type="uint16" value="0x0F12" />
+      <index type="uint32" />
+      <data type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </RACE_EXCEPTION_TXT>
+
+<!--
+  <RACE_EXCEPTION_BIN>
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5D" />
+      <packet_len type="uint16" />
+      <packet_id type="uint16" value="0x0F13" />
+      <index type="uint32" />
+      <data type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </RACE_EXCEPTION_BIN>
+-->
+
+  <RACE_EXCEPTION_MSG>
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5D" />
+      <packet_len type="uint16" />
+      <packet_id type="uint16" value="0x0F1A" />
+      <cpu_id type="uint8" />
+      <reserved type="uint8" />
+      <timestamp type="uint32" />
+      <data type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </RACE_EXCEPTION_MSG>
+
+  <!-- NotifyRaceLog for query version -->
+  <RACE_TEXTURE_LOG>
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5D" />
+      <packet_len type="uint16" />
+      <packet_id type="uint16" value="0x0F10" />
+      <cpu_id type="uint8" />
+      <reserved type="uint8" />
+      <timestamp type="uint32" />
+      <data type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </RACE_TEXTURE_LOG>
+
+  <RACE_TEXTURE_LOG_EX>
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5D" />
+      <packet_len type="uint16" />
+      <packet_id type="uint16" value="0x0F40" />
+      <cpu_id type="uint8" />
+      <reserved type="uint8" />
+      <timestamp type="uint32" />
+      <data type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </RACE_TEXTURE_LOG_EX>
+
+  <!--
+  <RACE_MSGID_LOG>
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5D" />
+      <packet_len type="uint16" />
+      <packet_id type="uint16" value="0x0F11" />
+      <cpu_id type="uint8" />
+      <reserved type="uint8" />
+      <timestamp type="uint32" />
+      <data type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </RACE_MSGID_LOG>
+
+  <RACE_HCI_DATA>
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5D" />
+      <packet_len type="uint16" />
+      <packet_id type="uint16" value="0x0F30" />
+      <cpu_id type="uint8" />
+      <reserved type="uint8" />
+      <timestamp type="uint32" />
+      <data type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </RACE_HCI_DATA>
+  <RACE_AUDIO_DATA>
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5D" />
+      <packet_len type="uint16" />
+      <packet_id type="uint16" value="0x0F31" />
+      <cpu_id type="uint8" />
+      <reserved type="uint8" />
+      <timestamp type="uint32" />
+      <data type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </RACE_AUDIO_DATA>
+  -->
+
+  <!-- NotifyAtResponse for AT Command -->
+  <RACE_AT_RESPONSE>
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5D" />
+      <packet_len type="uint16" />
+      <packet_id type="uint16" value="0x0F92" />
+      <data type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </RACE_AT_RESPONSE>
+</CommandBook>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="FW_Information" class="Airoha.Project.ConfigTool.View.PurePage" parameter="FW_Information">
+    <ConfigGroup class="General">
+	  <ConfigItem class="AB1568.ucDefaultValueStrTextBox" Unique="FW_Information.companyName" id="FW_INFO_COMPANY_NAME" present="asciistr" min="0" max="20" name="Company Name"/>
+	  <ConfigItem class="AB1568.ucDefaultValueStrTextBox" Unique="FW_Information.modelName" id="FW_INFO_MODEL_NAME" present="asciistr" min="0" max="20" name="Model Name"/>
+	</ConfigGroup>
+</Page>

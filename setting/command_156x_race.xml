@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandBook>
+
+  <RACE_REALTIME_TRIGGER_KEY_EVENT timeout="5000">
+    <RequestFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5A" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <race_id type="uint16" value="0x1101" />
+      <keyid_b0 type="uint8" />
+      <keyid_b1 type="uint8" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5B" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x1101" />
+      <status type="uint8" />
+    </ResponseFormat>
+  </RACE_REALTIME_TRIGGER_KEY_EVENT>
+
+  <RACE_NVKEY_READFULLKEY timeout="5000">
+    <RequestFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5A" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <race_id type="uint16" value="0x0A00" />
+      <nvkey_id_b0 type="uint8" />
+      <nvkey_id_b1 type="uint8" />
+      <length_of_read_bytes type="uint16" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5B" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x0A00" />
+      <length_payload type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </RACE_NVKEY_READFULLKEY>
+
+  <RACE_NVKEY_WRITEFULLKEY timeout="10000">
+    <RequestFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5A" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <race_id type="uint16" value="0x0A01" />
+      <nvkey_id_b0 type="uint8" />
+      <nvkey_id_b1 type="uint8" />
+      <value type="uint8_array" array_length="*" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5B" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x0A01" />
+      <return_code type="uint8" />
+    </ResponseFormat>
+  </RACE_NVKEY_WRITEFULLKEY>
+
+  <RACE_NVKEY_NEXT enable_log="false">
+    <RequestFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5A" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <race_id type="uint16" value="0x0A02" />
+      <nvkey_id_b0 type="uint8" />
+      <nvkey_id_b1 type="uint8" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5B" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x0A02" />
+      <nvkey_id_b0 type="uint8" />
+      <nvkey_id_b1 type="uint8" />
+    </ResponseFormat>
+  </RACE_NVKEY_NEXT>
+
+  <RACE_FOTA_GET_VERSION enable_log="false" timeout="5000">
+    <RequestFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5A" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <race_id type="uint16" value="0x1C07" />
+      <recipient_count type="uint8" />
+      <recipients type="uint8_array" array_length="*" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5D" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x1C07" />
+      <status type="uint8" />
+      <recipient_count type="uint8" />
+      <payload type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </RACE_FOTA_GET_VERSION>
+
+  <RACE_I2C_READ_REG timeout="5000">
+    <RequestFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5A" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <race_id type="uint16" value="0x2003" />
+      <i2c_port type="uint8" />
+      <slave_address type="uint8" />
+      <register type="uint8" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5B" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x2003" />
+      <status type="uint8" />
+      <value type="uint8" />
+    </ResponseFormat>
+  </RACE_I2C_READ_REG>
+
+  <RACE_DSP_RECORD timeout="5000">
+    <RequestFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5A" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <race_id type="uint16" value="0x0E13" />
+      <mode type="uint8" value="0x00"/>
+      <onoff type="uint8" value="0x01"/>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5B" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x0E13" />
+      <status type="uint8" />
+      <mode type="uint8" />
+      <payload type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </RACE_DSP_RECORD>
+
+  <RACE_GET_RECORD_DATA enable_log="false" timeout="300">
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5D" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x0E13" />
+      <start_or_stop type="uint8" />
+      <mode type="uint8" />
+      <bit_per_sample type="uint8" />
+      <channel_num type="uint8" />
+      <frame_size type="uint16" />
+      <sequence_num type="uint8" />
+      <total_data_len type="uint32" />
+      <data_len type="uint16" />
+      <payload type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </RACE_GET_RECORD_DATA>
+
+  <RACE_SLEEP_CONTROL timeout="3000">
+    <RequestFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5A" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <race_id type="uint16" value="0x0220" />
+      <mode type="uint8" value="0x00"/>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5B" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x0220" />
+      <status type="uint8" />
+    </ResponseFormat>
+  </RACE_SLEEP_CONTROL>
+
+  <RACE_BLUETOOTH_GET_CLIENT_EXISTENCE timeout="500">
+    <RequestFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5A" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <race_id type="uint16" value="0x0CD3" />
+    </RequestFormat>
+    <ResponseFormat>
+	  <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5B" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x0CD3" />
+      <status type="uint8" />
+      <isExistence type="uint8" />
+    </ResponseFormat>
+  </RACE_BLUETOOTH_GET_CLIENT_EXISTENCE>
+
+
+</CommandBook>

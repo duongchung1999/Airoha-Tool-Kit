@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntranceDescription>
+  <Entrance title="MP Tool (1-to-8 TCB)" console_flag="extend_mp_tool">
+    <dll_path>Airoha.Tool.Kit.exe</dll_path>
+    <class_name>Airoha.Project.MpTool1_8Window</class_name>
+    <is_console_only>false</is_console_only>
+    <group>Product</group>
+    <Width>0</Width>
+    <Height>0</Height>
+  </Entrance>
+  <Entrance title="Pairing Tool" console_flag="mcsync_pairing_tool">
+    <dll_path>Airoha.Tool.Kit.exe</dll_path>
+    <class_name>Airoha.Project.MCSyncPairingWindow</class_name>
+    <is_console_only>false</is_console_only>
+    <group>Product</group>
+    <Width>0</Width>
+    <Height>0</Height>
+  </Entrance>
+</EntranceDescription>

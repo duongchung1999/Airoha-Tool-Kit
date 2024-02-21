@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Google_Fast_Pairing" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Google_Fast_Pairing">
+	<ConfigGroup class="ucLayoutVertical">
+		<ConfigGroup class="General">
+			<ConfigItem class="AB1568.ucGFPButton_AB1568" Unique="GFPS_INFO_STRU.all.btn" id="gfp_value_id">
+				<Parameter name="GFPType" value="0"/>
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="encrypt_key_id"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="ucEncryptValue" Unique="GFPS_INFO_STRU.all.key" present="hexstr">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="encrypt_key_id"/>
+					<Parameter name="value" refId="gfp_value_id"/>
+				</Associator>
+			</ConfigItem>
+
+			<ConfigItem class="AB1568.ucGFPButton_AB1568" Unique="New_GFPS_INFO_STRU.all.btn" id="gfp_value_id2">
+				<Parameter name="GFPType" value="1"/>
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="encrypt_key_id"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="ucEncryptValue" Unique="New_GFPS_INFO_STRU.all.key" present="hexstr">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="encrypt_key_id"/>
+					<Parameter name="value" refId="gfp_value_id2"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+	</ConfigGroup>
+
+	<ConfigGroup class="ucLayoutVertical">
+		<Parameter name="top_margin" value="10"/>
+		<ConfigItem class="ucDspCheckBox" id="id_gfp_fps_enable_ckb">
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="right_label" value="GFP Enable"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_gfp_fps_enable"/>
+			</Associator>
+		</ConfigItem>
+
+		<ConfigItem class="ucDspCheckBox" id="id_gfp_tx_power_enable_ckb">
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="right_label" value="GFP TX Power Enable"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_gfp_tx_power_enable"/>
+			</Associator>
+		</ConfigItem>
+
+		<ConfigGroup class="General">
+			<ConfigItem class="ucTextBox" Unique="New_GFPS_INFO_STRU.fps_enable" id="id_gfp_fps_enable" visible="hidden">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_gfp_fps_enable_ckb"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="New_GFPS_INFO_STRU.max_account"/>
+			<ConfigItem class="ucTextBox" Unique="New_GFPS_INFO_STRU.selected_set"/>
+			<ConfigItem class="ucTextBox" Unique="New_GFPS_INFO_STRU.tx_power_available" id="id_gfp_tx_power_enable" visible="hidden">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_gfp_tx_power_enable_ckb"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="AB1568.ucTextBoxEnable_AB1568" Unique="New_GFPS_INFO_STRU.tx_power_level" id="id_gfp_tx_power_level">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="enable" refId="id_gfp_tx_power_enable_ckb"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="New_GFPS_INFO_STRU.component_num"/>
+			<ConfigItem class="ucStrTextBox" Unique="New_GFPS_INFO_STRU.personalized_name" present="asciistr"/>
+		</ConfigGroup>
+	</ConfigGroup>
+
+</Page>

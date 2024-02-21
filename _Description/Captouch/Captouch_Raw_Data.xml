@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Captouch_Raw_Data" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Captouch_Raw_Data">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Raw Data Dump"/>
+      <Parameter name="top_margin" value="20"/>
+      <Parameter name="bottom_margin" value="50"/>
+      <Parameter name="border" value="1"/>
+      <ConfigGroup class="ucCaptouchRawDataReport"/>
+  </ConfigGroup>
+</Page>
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="UART 1" Value="1"/>
+	<Group Name="UART 2" Value="2"/>
+	<Group Name="USB CDC" Value="3"/>
+</DataGroup>

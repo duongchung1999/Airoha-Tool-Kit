@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="UART" Value="1"/>
+	<Group Name="USB" Value="2"/>
+	<!--<Group Name="reserved" Value="4"/>
+	<Group Name="reserved" Value="8"/>-->
+	<Group Name="Online Log" Value="16"/>
+	<!--<Group Name="Log Buffer Dump" Value="32"/>-->
+</DataGroup>

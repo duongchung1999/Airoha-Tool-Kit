@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="384kpbs" Value="393216"/>
+	<Group Name="320kpbs" Value="327680"/>
+	<Group Name="256kpbs" Value="262144"/>
+	<Group Name="228kpbs" Value="233472"/>
+	<Group Name="192kpbs" Value="196608"/>
+</DataGroup>

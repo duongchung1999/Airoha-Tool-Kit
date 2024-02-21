@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RfGcSetting>
+  <Group type="BR">
+    <GcSetting gc="63">
+      <PowerSetting powerLevel="7" powerLevelOffset="0" finePowerLevelOffset="0" DPC="100" RFCR="E2E7" />
+    </GcSetting>
+    <GcSetting gc="62">
+      <PowerSetting powerLevel="7" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="61">
+      <PowerSetting powerLevel="7" powerLevelOffset="1" finePowerLevelOffset="0" DPC="E4" RFCR="DADF" />
+    </GcSetting>
+    <GcSetting gc="60">
+      <PowerSetting powerLevel="7" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="59">
+      <PowerSetting powerLevel="7" powerLevelOffset="2" finePowerLevelOffset="0" DPC="E4" RFCR="C2C7" />
+    </GcSetting>
+    <GcSetting gc="58">
+      <PowerSetting powerLevel="7" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="57">
+      <PowerSetting powerLevel="7" powerLevelOffset="3" finePowerLevelOffset="0" DPC="CB" RFCR="C2C7" />
+    </GcSetting>
+    <GcSetting gc="56">
+      <PowerSetting powerLevel="7" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="55">
+      <PowerSetting powerLevel="6" powerLevelOffset="0" finePowerLevelOffset="0" DPC="E4" RFCR="9A9F" />
+    </GcSetting>
+    <GcSetting gc="54">
+      <PowerSetting powerLevel="6" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="53">
+      <PowerSetting powerLevel="6" powerLevelOffset="1" finePowerLevelOffset="0" DPC="CB" RFCR="9A9F" />
+    </GcSetting>
+    <GcSetting gc="52">
+      <PowerSetting powerLevel="6" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="51">
+      <PowerSetting powerLevel="6" powerLevelOffset="2" finePowerLevelOffset="0" DPC="DE" RFCR="7A7F" />
+    </GcSetting>
+    <GcSetting gc="50">
+      <PowerSetting powerLevel="6" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="49">
+      <PowerSetting powerLevel="6" powerLevelOffset="3" finePowerLevelOffset="0" DPC="C6" RFCR="7A7F" />
+    </GcSetting>
+    <GcSetting gc="48">
+      <PowerSetting powerLevel="6" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="47">
+      <PowerSetting powerLevel="5" powerLevelOffset="0" finePowerLevelOffset="0" DPC="DE" RFCR="6267" />
+    </GcSetting>
+    <GcSetting gc="46">
+      <PowerSetting powerLevel="5" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="45">
+      <PowerSetting powerLevel="5" powerLevelOffset="1" finePowerLevelOffset="0" DPC="C6" RFCR="6267" />
+    </GcSetting>
+    <GcSetting gc="44">
+      <PowerSetting powerLevel="5" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="43">
+      <PowerSetting powerLevel="5" powerLevelOffset="2" finePowerLevelOffset="0" DPC="E4" RFCR="4A4F" />
+    </GcSetting>
+    <GcSetting gc="42">
+      <PowerSetting powerLevel="5" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="41">
+      <PowerSetting powerLevel="5" powerLevelOffset="3" finePowerLevelOffset="0" DPC="D1" RFCR="4A4F"/>
+    </GcSetting>
+    <GcSetting gc="40">
+      <PowerSetting powerLevel="5" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="39">
+      <PowerSetting powerLevel="4" powerLevelOffset="0" finePowerLevelOffset="0" DPC="E4" RFCR="4A4E" />
+    </GcSetting>
+    <GcSetting gc="38">
+      <PowerSetting powerLevel="4" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="37">
+      <PowerSetting powerLevel="4" powerLevelOffset="1" finePowerLevelOffset="0" DPC="D1" RFCR="4A4E" />
+    </GcSetting>
+    <GcSetting gc="36">
+      <PowerSetting powerLevel="4" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="35">
+      <PowerSetting powerLevel="4" powerLevelOffset="2" finePowerLevelOffset="0" DPC="EB" RFCR="4A4D" />
+    </GcSetting>
+    <GcSetting gc="34">
+      <PowerSetting powerLevel="4" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="33">
+      <PowerSetting powerLevel="4" powerLevelOffset="3" finePowerLevelOffset="0" DPC="D1" RFCR="4A4D" />
+    </GcSetting>
+    <GcSetting gc="32">
+      <PowerSetting powerLevel="4" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="31">
+      <PowerSetting powerLevel="3" powerLevelOffset="0" finePowerLevelOffset="0" DPC="D1" RFCR="2A2F" />
+    </GcSetting>
+    <GcSetting gc="30">
+      <PowerSetting powerLevel="3" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="29">
+      <PowerSetting powerLevel="3" powerLevelOffset="1" finePowerLevelOffset="0" DPC="E4" RFCR="2227"/>
+    </GcSetting>
+    <GcSetting gc="28">
+      <PowerSetting powerLevel="3" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="27">
+      <PowerSetting powerLevel="3" powerLevelOffset="2" finePowerLevelOffset="0" DPC="100" RFCR="2226" />
+    </GcSetting>
+    <GcSetting gc="26">
+      <PowerSetting powerLevel="3" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="25">
+      <PowerSetting powerLevel="3" powerLevelOffset="3" finePowerLevelOffset="0" DPC="E4" RFCR="2226"/>
+    </GcSetting>
+    <GcSetting gc="24">
+      <PowerSetting powerLevel="3" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="23">
+      <PowerSetting powerLevel="2" powerLevelOffset="0" finePowerLevelOffset="0" DPC="100" RFCR="2225" />
+    </GcSetting>
+    <GcSetting gc="22">
+      <PowerSetting powerLevel="2" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="21">
+      <PowerSetting powerLevel="2" powerLevelOffset="1" finePowerLevelOffset="0" DPC="E4" RFCR="2225" />
+    </GcSetting>
+    <GcSetting gc="20">
+      <PowerSetting powerLevel="2" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="19">
+      <PowerSetting powerLevel="2" powerLevelOffset="2" finePowerLevelOffset="0" DPC="100" RFCR="1217" />
+    </GcSetting>
+    <GcSetting gc="18">
+      <PowerSetting powerLevel="2" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="17">
+      <PowerSetting powerLevel="2" powerLevelOffset="3" finePowerLevelOffset="0" DPC="E4" RFCR="1217" />
+    </GcSetting>
+    <GcSetting gc="16">
+      <PowerSetting powerLevel="2" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="15">
+      <PowerSetting powerLevel="1" powerLevelOffset="0" finePowerLevelOffset="0" DPC="100" RFCR="1216" />
+    </GcSetting>
+    <GcSetting gc="14">
+      <PowerSetting powerLevel="1" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="13">
+      <PowerSetting powerLevel="1" powerLevelOffset="1" finePowerLevelOffset="0" DPC="DE" RFCR="1216"/>
+    </GcSetting>
+    <GcSetting gc="12">
+      <PowerSetting powerLevel="1" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="11">
+      <PowerSetting powerLevel="1" powerLevelOffset="2" finePowerLevelOffset="0" DPC="100" RFCR="1215"/>
+    </GcSetting>
+    <GcSetting gc="10">
+      <PowerSetting powerLevel="1" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="9">
+      <PowerSetting powerLevel="1" powerLevelOffset="3" finePowerLevelOffset="0" DPC="E4" RFCR="1215"/>
+    </GcSetting>
+    <GcSetting gc="8">
+      <PowerSetting powerLevel="1" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="7">
+      <PowerSetting powerLevel="0" powerLevelOffset="0" finePowerLevelOffset="0" DPC="100" RFCR="1214"/>
+    </GcSetting>
+    <GcSetting gc="6">
+      <PowerSetting powerLevel="0" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="5">
+      <PowerSetting powerLevel="0" powerLevelOffset="1" finePowerLevelOffset="0" DPC="EB" RFCR="1214"/>
+    </GcSetting>
+    <GcSetting gc="4">
+      <PowerSetting powerLevel="0" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="3">
+      <PowerSetting powerLevel="0" powerLevelOffset="2" finePowerLevelOffset="0" DPC="D1" RFCR="1214"/>
+    </GcSetting>
+    <GcSetting gc="2">
+      <PowerSetting powerLevel="0" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="1">
+      <PowerSetting powerLevel="0" powerLevelOffset="3" finePowerLevelOffset="0" DPC="BB" RFCR="1214" />
+    </GcSetting>
+    <GcSetting gc="0">
+      <PowerSetting powerLevel="0" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+  </Group>
+  <Group type="EDR">
+    <GcSetting gc="63">
+      <PowerSetting powerLevel="7" powerLevelOffset="0" finePowerLevelOffset="0" DPC="D8" RFCR="FAFF" />
+    </GcSetting>
+    <GcSetting gc="62">
+      <PowerSetting powerLevel="7" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="61">
+      <PowerSetting powerLevel="7" powerLevelOffset="1" finePowerLevelOffset="0" DPC="C0" RFCR="FAFF" />
+    </GcSetting>
+    <GcSetting gc="60">
+      <PowerSetting powerLevel="7" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="59">
+      <PowerSetting powerLevel="7" powerLevelOffset="2" finePowerLevelOffset="0" DPC="D8" RFCR="CACF" />
+    </GcSetting>
+    <GcSetting gc="58">
+      <PowerSetting powerLevel="7" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="57">
+      <PowerSetting powerLevel="7" powerLevelOffset="3" finePowerLevelOffset="0" DPC="C0" RFCR="CACF" />
+    </GcSetting>
+    <GcSetting gc="56">
+      <PowerSetting powerLevel="7" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="55">
+      <PowerSetting powerLevel="6" powerLevelOffset="0" finePowerLevelOffset="0" DPC="D1" RFCR="A2A7" />
+    </GcSetting>
+    <GcSetting gc="54">
+      <PowerSetting powerLevel="6" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="53">
+      <PowerSetting powerLevel="6" powerLevelOffset="1" finePowerLevelOffset="0" DPC="BB" RFCR="A2A7" />
+    </GcSetting>
+    <GcSetting gc="52">
+      <PowerSetting powerLevel="6" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="51">
+      <PowerSetting powerLevel="6" powerLevelOffset="2" finePowerLevelOffset="0" DPC="D8" RFCR="7A7F" />
+    </GcSetting>
+    <GcSetting gc="50">
+      <PowerSetting powerLevel="6" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="49">
+      <PowerSetting powerLevel="6" powerLevelOffset="3" finePowerLevelOffset="0" DPC="C0" RFCR="7A7F" />
+    </GcSetting>
+    <GcSetting gc="48">
+      <PowerSetting powerLevel="6" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="47">
+      <PowerSetting powerLevel="5" powerLevelOffset="0" finePowerLevelOffset="0" DPC="D8" RFCR="6267" />
+    </GcSetting>
+    <GcSetting gc="46">
+      <PowerSetting powerLevel="5" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="45">
+      <PowerSetting powerLevel="5" powerLevelOffset="1" finePowerLevelOffset="0" DPC="C0" RFCR="6267" />
+    </GcSetting>
+    <GcSetting gc="44">
+      <PowerSetting powerLevel="5" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="43">
+      <PowerSetting powerLevel="5" powerLevelOffset="2" finePowerLevelOffset="0" DPC="CB" RFCR="5257" />
+    </GcSetting>
+    <GcSetting gc="42">
+      <PowerSetting powerLevel="5" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="41">
+      <PowerSetting powerLevel="5" powerLevelOffset="3" finePowerLevelOffset="0" DPC="B5" RFCR="5257" />
+    </GcSetting>
+    <GcSetting gc="40">
+      <PowerSetting powerLevel="5" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="39">
+      <PowerSetting powerLevel="4" powerLevelOffset="0" finePowerLevelOffset="0" DPC="CB" RFCR="5256" />
+    </GcSetting>
+    <GcSetting gc="38">
+      <PowerSetting powerLevel="4" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="37">
+      <PowerSetting powerLevel="4" powerLevelOffset="1" finePowerLevelOffset="0" DPC="B5" RFCR="5256" />
+    </GcSetting>
+    <GcSetting gc="36">
+      <PowerSetting powerLevel="4" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="35">
+      <PowerSetting powerLevel="4" powerLevelOffset="2" finePowerLevelOffset="0" DPC="CB" RFCR="5255" />
+    </GcSetting>
+    <GcSetting gc="34">
+      <PowerSetting powerLevel="4" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="33">
+      <PowerSetting powerLevel="4" powerLevelOffset="3" finePowerLevelOffset="0" DPC="B5" RFCR="5255" />
+    </GcSetting>
+    <GcSetting gc="32">
+      <PowerSetting powerLevel="4" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="31">
+      <PowerSetting powerLevel="3" powerLevelOffset="0" finePowerLevelOffset="0" DPC="CB" RFCR="2A2F" />
+    </GcSetting>
+    <GcSetting gc="30">
+      <PowerSetting powerLevel="3" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="29">
+      <PowerSetting powerLevel="3" powerLevelOffset="1" finePowerLevelOffset="0" DPC="BB" RFCR="2A2F" />
+    </GcSetting>
+    <GcSetting gc="28">
+      <PowerSetting powerLevel="3" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="27">
+      <PowerSetting powerLevel="3" powerLevelOffset="2" finePowerLevelOffset="0" DPC="CB" RFCR="2A2E" />
+    </GcSetting>
+    <GcSetting gc="26">
+      <PowerSetting powerLevel="3" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="25">
+      <PowerSetting powerLevel="3" powerLevelOffset="3" finePowerLevelOffset="0" DPC="B5" RFCR="2A2E" />
+    </GcSetting>
+    <GcSetting gc="24">
+      <PowerSetting powerLevel="3" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="23">
+      <PowerSetting powerLevel="2" powerLevelOffset="0" finePowerLevelOffset="0" DPC="CB" RFCR="2A2D" />
+    </GcSetting>
+    <GcSetting gc="22">
+      <PowerSetting powerLevel="2" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="21">
+      <PowerSetting powerLevel="2" powerLevelOffset="1" finePowerLevelOffset="0" DPC="BB" RFCR="2A2D" />
+    </GcSetting>
+    <GcSetting gc="20">
+      <PowerSetting powerLevel="2" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="19">
+      <PowerSetting powerLevel="2" powerLevelOffset="2" finePowerLevelOffset="0" DPC="AB" RFCR="1A1F" />
+    </GcSetting>
+    <GcSetting gc="18">
+      <PowerSetting powerLevel="2" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="17">
+      <PowerSetting powerLevel="2" powerLevelOffset="3" finePowerLevelOffset="0" DPC="99" RFCR="1A1F" />
+    </GcSetting>
+    <GcSetting gc="16">
+      <PowerSetting powerLevel="2" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="15">
+      <PowerSetting powerLevel="1" powerLevelOffset="0" finePowerLevelOffset="0" DPC="F9" RFCR="1216" />
+    </GcSetting>
+    <GcSetting gc="14">
+      <PowerSetting powerLevel="1" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="13">
+      <PowerSetting powerLevel="1" powerLevelOffset="1" finePowerLevelOffset="0" DPC="99" RFCR="1A1E" />
+    </GcSetting>
+    <GcSetting gc="12">
+      <PowerSetting powerLevel="1" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="11">
+      <PowerSetting powerLevel="1" powerLevelOffset="2" finePowerLevelOffset="0" DPC="AB" RFCR="1A1D" />
+    </GcSetting>
+    <GcSetting gc="10">
+      <PowerSetting powerLevel="1" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="9">
+      <PowerSetting powerLevel="1" powerLevelOffset="3" finePowerLevelOffset="0" DPC="99" RFCR="1A1D" />
+    </GcSetting>
+    <GcSetting gc="8">
+      <PowerSetting powerLevel="1" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="7">
+      <PowerSetting powerLevel="0" powerLevelOffset="0" finePowerLevelOffset="0" DPC="100" RFCR="1214" />
+    </GcSetting>
+    <GcSetting gc="6">
+      <PowerSetting powerLevel="0" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="5">
+      <PowerSetting powerLevel="0" powerLevelOffset="1" finePowerLevelOffset="0" DPC="E4" RFCR="1214" />
+    </GcSetting>
+    <GcSetting gc="4">
+      <PowerSetting powerLevel="0" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="3">
+      <PowerSetting powerLevel="0" powerLevelOffset="2" finePowerLevelOffset="0" DPC="CB" RFCR="1214" />
+    </GcSetting>
+    <GcSetting gc="2">
+      <PowerSetting powerLevel="0" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="1">
+      <PowerSetting powerLevel="0" powerLevelOffset="3" finePowerLevelOffset="0" DPC="B5" RFCR="1214" />
+    </GcSetting>
+    <GcSetting gc="0">
+      <PowerSetting powerLevel="0" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+  </Group>
+  <Group type="LE">
+    <GcSetting gc="63">
+      <PowerSetting powerLevel="7" powerLevelOffset="0" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="62">
+      <PowerSetting powerLevel="7" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="61">
+      <PowerSetting powerLevel="7" powerLevelOffset="1" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="60">
+      <PowerSetting powerLevel="7" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="59">
+      <PowerSetting powerLevel="7" powerLevelOffset="2" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="58">
+      <PowerSetting powerLevel="7" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="57">
+      <PowerSetting powerLevel="7" powerLevelOffset="3" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="56">
+      <PowerSetting powerLevel="7" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="55">
+      <PowerSetting powerLevel="6" powerLevelOffset="0" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="54">
+      <PowerSetting powerLevel="6" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="53">
+      <PowerSetting powerLevel="6" powerLevelOffset="1" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="52">
+      <PowerSetting powerLevel="6" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="51">
+      <PowerSetting powerLevel="6" powerLevelOffset="2" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="50">
+      <PowerSetting powerLevel="6" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="49">
+      <PowerSetting powerLevel="6" powerLevelOffset="3" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="48">
+      <PowerSetting powerLevel="6" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="47">
+      <PowerSetting powerLevel="5" powerLevelOffset="0" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="46">
+      <PowerSetting powerLevel="5" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="45">
+      <PowerSetting powerLevel="5" powerLevelOffset="1" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="44">
+      <PowerSetting powerLevel="5" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="43">
+      <PowerSetting powerLevel="5" powerLevelOffset="2" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="42">
+      <PowerSetting powerLevel="5" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="41">
+      <PowerSetting powerLevel="5" powerLevelOffset="3" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="40">
+      <PowerSetting powerLevel="5" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="39">
+      <PowerSetting powerLevel="4" powerLevelOffset="0" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="38">
+      <PowerSetting powerLevel="4" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="37">
+      <PowerSetting powerLevel="4" powerLevelOffset="1" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="36">
+      <PowerSetting powerLevel="4" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="35">
+      <PowerSetting powerLevel="4" powerLevelOffset="2" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="34">
+      <PowerSetting powerLevel="4" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="33">
+      <PowerSetting powerLevel="4" powerLevelOffset="3" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="32">
+      <PowerSetting powerLevel="4" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="31">
+      <PowerSetting powerLevel="3" powerLevelOffset="0" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="30">
+      <PowerSetting powerLevel="3" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="29">
+      <PowerSetting powerLevel="3" powerLevelOffset="1" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="28">
+      <PowerSetting powerLevel="3" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="27">
+      <PowerSetting powerLevel="3" powerLevelOffset="2" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="26">
+      <PowerSetting powerLevel="3" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="25">
+      <PowerSetting powerLevel="3" powerLevelOffset="3" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="24">
+      <PowerSetting powerLevel="3" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="23">
+      <PowerSetting powerLevel="2" powerLevelOffset="0" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="22">
+      <PowerSetting powerLevel="2" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="21">
+      <PowerSetting powerLevel="2" powerLevelOffset="1" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="20">
+      <PowerSetting powerLevel="2" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="19">
+      <PowerSetting powerLevel="2" powerLevelOffset="2" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="18">
+      <PowerSetting powerLevel="2" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="17">
+      <PowerSetting powerLevel="2" powerLevelOffset="3" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="16">
+      <PowerSetting powerLevel="2" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="15">
+      <PowerSetting powerLevel="1" powerLevelOffset="0" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="14">
+      <PowerSetting powerLevel="1" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="13">
+      <PowerSetting powerLevel="1" powerLevelOffset="1" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="12">
+      <PowerSetting powerLevel="1" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="11">
+      <PowerSetting powerLevel="1" powerLevelOffset="2" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="10">
+      <PowerSetting powerLevel="1" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="9">
+      <PowerSetting powerLevel="1" powerLevelOffset="3" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="8">
+      <PowerSetting powerLevel="1" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="7">
+      <PowerSetting powerLevel="0" powerLevelOffset="0" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="6">
+      <PowerSetting powerLevel="0" powerLevelOffset="0" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="5">
+      <PowerSetting powerLevel="0" powerLevelOffset="1" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="4">
+      <PowerSetting powerLevel="0" powerLevelOffset="1" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="3">
+      <PowerSetting powerLevel="0" powerLevelOffset="2" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="2">
+      <PowerSetting powerLevel="0" powerLevelOffset="2" finePowerLevelOffset="2" />
+    </GcSetting>
+    <GcSetting gc="1">
+      <PowerSetting powerLevel="0" powerLevelOffset="3" finePowerLevelOffset="0" />
+    </GcSetting>
+    <GcSetting gc="0">
+      <PowerSetting powerLevel="0" powerLevelOffset="3" finePowerLevelOffset="2" />
+    </GcSetting>
+  </Group>
+</RfGcSetting>

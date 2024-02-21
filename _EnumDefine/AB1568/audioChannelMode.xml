@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="AUDIO_CHANNEL_SW_MODE" Value="0"/>
+	<Group Name="AUDIO_CHANNEL_HW_MODE" Value="1"/>
+</DataGroup>

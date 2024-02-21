@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Captouch_HIF_RG" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Captouch_HIF_RG">
+  <ConfigGroup class="ucLayoutHorizontal">
+    <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+      <Parameter name="data" refId="id_captouch_channel0_enable_tb"/>
+    </Associator>
+    <ConfigGroup class="ucCaptouchRegisterTable" id="id_captouch_hif_register_table">
+      <Parameter name="left_margin" value="12"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+      <Parameter name="base_addr" value="0x0xA20F0000"/>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_hif_register_cb_0x00">
+        <Parameter name="label_reg_name" value="TOUCH__HIF__APB2SER__CON0"/>
+        <Parameter name="label_reg_addr" value="0x0000"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_hif_register_cb_0x04">
+        <Parameter name="label_reg_name" value="TOUCH__HIF__CON0"/>
+        <Parameter name="label_reg_addr" value="0x0004"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_hif_register_cb_0x08">
+        <Parameter name="label_reg_name" value="TOUCH__HIF__CON1"/>
+        <Parameter name="label_reg_addr" value="0x0008"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_hif_register_cb_0x0C">
+        <Parameter name="label_reg_name" value="TOUCH__HIF__CON2"/>
+        <Parameter name="label_reg_addr" value="0x000C"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_hif_register_cb_0x10">
+        <Parameter name="label_reg_name" value="TOUCH__HIF__RSVD"/>
+        <Parameter name="label_reg_addr" value="0x0010"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_hif_register_cb_0x14">
+        <Parameter name="label_reg_name" value="TOUCH__HIF__DBG"/>
+        <Parameter name="label_reg_addr" value="0x0014"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="disable" value="1"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<IOPlan>
+	<IORange range="0~31"/>
+	<GroupList>
+		<Group id="0" pin="4,5,6,7"/>
+		<Group id="1" pin="8,9,10,11"/>
+		<Group id="2" pin="12,13,14,15"/>
+		<Group id="3" pin="16,17,18,19"/>
+		<Group id="4" pin="20,21,22,23"/>
+		<Group id="5" pin="24,25,26,27"/>
+		<Group id="6" pin="28,29,30,31"/>
+		<Group id="7" pin="18,19,20,21,22,23"/>
+	</GroupList>
+	
+	<FeatureList>
+		<Feature nvid="0xF100" name="SPI" group="5,6" multi="false"/>
+		<Feature nvid="0xF101" name="I2sMaster" group="4,5,6" multi="false"/>
+		<Feature nvid="0xF102" name="I2sSlave" group="4,5,6" multi="false"/>
+		<Feature nvid="0xF103" name="SDIO" group="7" multi="false"/>
+		<Feature nvid="0xF104" name="ANC" group="" multi="true"/>
+		<Feature nvid="0xF105" name="TouchPad" pin="0,1,17" multi="true"/>
+		<Feature nvid="0xF106" name="MicBias" pin="2,3" multi="false"/>
+		<Feature nvid="0xF108" name="RTC" pin="" multi="false"/>
+		<Feature nvid="0xF109" name="SpiFlash" group="7" multi="false"/>
+		<Feature nvid="" name="KeyGPIO1" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>	
+		<Feature nvid="" name="KeyGPIO2" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>	
+		<Feature nvid="" name="KeyGPIO3" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>	
+		<Feature nvid="" name="KeyGPIO4" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>	
+		<Feature nvid="" name="KeyGPIO5" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>	
+		<Feature nvid="" name="KeyGPIO6" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>	
+		<Feature nvid="" name="KeyGPIO7" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>	
+		<Feature nvid="" name="KeyGPIO8" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>	
+		<Feature nvid="" name="KeyGPIO9" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>	
+		<Feature nvid="" name="KeyGPIO10" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>	
+		<Feature nvid="" name="NTC" pin="28,29" multi="false"/>
+		<Feature nvid="" name="VCC" pin="28,29" multi="false"/>
+		<Feature nvid="" name="NTCExternal" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="UART2_PIN_MUX_TX" pin="2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="UART2_PIN_MUX_RX" pin="2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="SYSTEM_POWER_LEVEL_PIN" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="Charger_Case_GPIO_Input" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="Charger_Case_GPIO_Output" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="AUDIO_CHANNEL_DETECT_GPIO" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="0xF010" name="PERIPHERAL_GPIO_LONG_PRESS_RESET_GPIO" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="I2S_MCLK_GPIO" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="SPDIF_TX_GPIO" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="SPDIF_RX_GPIO" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="I2S_MASTER_SDO1_GPIO" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="I2S_MASTER_SDO2_GPIO" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="I2S_MASTER_GROUP" group="4,5" multi="false"/>
+		<Feature nvid="" name="I2S_SLAVE_GROUP" group="4,5" multi="false"/>
+		<Feature nvid="" name="DMIC_CLK_01_GPIO" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="DMIC0_GPIO" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="DMIC1_GPIO" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="DMIC_CLK_23_GPIO" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="DMIC2_GPIO" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="DMIC_CLK_AT_GPIO" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="DMIC0_AT_GPIO" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+		<Feature nvid="" name="DMIC1_AT_GPIO" pin="0,1,2,3,17,18,19,20,21,22,23,24,25,26,27,28,29" multi="false"/>
+	</FeatureList>
+</IOPlan>

@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <environments WpfView="EnvionmentSelect">
+    <DUT1 IsEnable="True" />
+    <DUT2 IsEnable="False" />
+    <DUT3 IsEnable="False" />
+    <DUT4 IsEnable="False" />
+  </environments>
+  <UnifiedInput>
+    <DUT_L SettingPage.IsIgnore="True">DUT_L</DUT_L>
+    <DUT_R SettingPage.IsIgnore="True">DUT_R</DUT_R>
+    <DUT_Dongle SettingPage.IsIgnore="True">DUT_Dongle</DUT_Dongle>
+    <Carge_Case_Baudrate>115200</Carge_Case_Baudrate>
+    <DUT_Baudrate SettingPage.IsIgnore="True">115200</DUT_Baudrate>
+    <Minimum_Battery_Level>30</Minimum_Battery_Level>
+    <Set_5V_Time>1000</Set_5V_Time>
+    <Vendor_ID_Dongle>0x0E8D</Vendor_ID_Dongle>
+    <Product_ID_Dongle>0x0808</Product_ID_Dongle>
+    <Retry_times SettingPage.IsIgnore="True">10</Retry_times>
+    <true_flag SettingPage.IsIgnore="True">true</true_flag>
+    <false_flag SettingPage.IsIgnore="True">false</false_flag>
+  </UnifiedInput>
+  <SelfInput>
+    <DeviceUsbHID SettingPage.View="UartPairSelectDongle" SettingPage.IsAddAttribute="True" >
+      <DUT1 D_L_comport_name="Dongle" D_R_comport_name="Invalid" D_L_comport="" D_R_comport="">0</DUT1>
+    </DeviceUsbHID>
+
+    <Device1WireUart SettingPage.View="UartPairSelect" SettingPage.IsAddAttribute="True">
+      <DUT1 L_comport_name="L" R_comport_name="R" L_comport="" R_comport="">0</DUT1>
+    </Device1WireUart>
+  </SelfInput>
+  <Managers>
+    <BdAddressManager class="Airoha.Project.MpTool.BdAddressPool">
+      <expect_dut_count SettingPage.IsIgnore="True">%_ENVI_COUNT%</expect_dut_count>
+      <start_address_bt3 SettingPage.IsIgnore="True">0000ABCD1234</start_address_bt3>
+      <end_address_bt3 SettingPage.IsIgnore="True">FFFFFFFFFFFF</end_address_bt3>
+      <BT3AddressFromBarCode SettingPage.View="TextSelect" SettingPage.Content="Boolean" SettingPage.Mode="MP" SettingPage.IsIgnore="True">NO</BT3AddressFromBarCode>
+      <BarCode>
+        <DUT1></DUT1>
+        <DUT2></DUT2>
+        <DUT3></DUT3>
+        <DUT4></DUT4>
+      </BarCode>
+    </BdAddressManager>
+
+  </Managers>
+  <flows Runner.StartFlow="default">
+    <default SettingPage.Name="Default Process">
+      <option>
+        <UnPairingTask SettingPage.Name="UnPairing" Runner.IsEnable="True" />
+      </option>
+      <main>
+        <ToolLogLevel task="DebugLogLevel" />
+        <ConnectDongleL task="ConnectDUT" UI.IsVisiable="True" SettingPage.IsIgnore="True" Runner.Option="UnPairingTask">
+          <port Runner.Input="Device1WireUart.L_comport" />
+          <device_name Runner.Input="DUT_L"/>
+        </ConnectDongleL>
+        <ConnectDongleR task="ConnectDUT" UI.IsVisiable="True" SettingPage.IsIgnore="True" Runner.Option="UnPairingTask">
+          <port Runner.Input="Device1WireUart.R_comport" />
+          <device_name Runner.Input="DUT_R"/>
+        </ConnectDongleR>
+
+        <oneWireModeChangeL task="oneWireModeChange" Runner.Option="UnPairingTask">
+          <device_name Runner.Input="DUT_L"/>
+          <charge_case_baudrate SettingPage.IsIgnore="True" Runner.Input="Carge_Case_Baudrate" />
+          <bud_baudrate SettingPage.IsIgnore="True" Runner.Input="DUT_Baudrate" />
+          <delay_time SettingPage.IsIgnore="True" Runner.Input="Set_5V_Time" />
+          <send_bt_off_cmd SettingPage.IsIgnore="True" Runner.Input="true_flag" />
+        </oneWireModeChangeL>
+        <oneWireModeChangeR task="oneWireModeChange" Runner.Option="UnPairingTask">
+          <device_name Runner.Input="DUT_R"/>
+          <charge_case_baudrate SettingPage.IsIgnore="True" Runner.Input="Carge_Case_Baudrate" />
+          <bud_baudrate SettingPage.IsIgnore="True" Runner.Input="DUT_Baudrate" />
+          <delay_time SettingPage.IsIgnore="True" Runner.Input="Set_5V_Time" />
+          <send_bt_off_cmd SettingPage.IsIgnore="True" Runner.Input="true_flag" />
+        </oneWireModeChangeR>
+        
+
+
+        <!--  Dongle MCSync Start -->
+        <ConnectUSBHidDongle task="ConnectDutByUsbHid" Runner.Option="UnPairingTask">
+          <vendor_id SettingPage.IsIgnore="True" Runner.Input="Vendor_ID_Dongle" />
+          <product_id SettingPage.IsIgnore="True" Runner.Input="Product_ID_Dongle" />
+          <device_name Runner.Input="DUT_Dongle"/>
+        </ConnectUSBHidDongle>
+
+
+        <UsbHidDongleMCSyncUnPairingTask task="TaskUsbHidDongleMCSyncUnPairing" Runner.Option="UnPairingTask" >
+          <device_name_l Runner.Input="DUT_L"/>
+          <device_name_r Runner.Input="DUT_R"/>
+          <device_name_d Runner.Input="DUT_Dongle"/>
+          <charge_case_baudrate SettingPage.IsIgnore="True" Runner.Input="Carge_Case_Baudrate" />
+          <minimum_battery_level SettingPage.IsIgnore="True" Runner.Input="Minimum_Battery_Level" />
+        </UsbHidDongleMCSyncUnPairingTask>
+        
+        
+      </main>
+      <Asynchronous></Asynchronous>
+      <final>
+        <DisconnectDongleL task="DisconnectDUT" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <device_name Runner.Input="DUT_L"/>
+        </DisconnectDongleL>
+        <DisconnectDongleR task="DisconnectDUT" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <device_name Runner.Input="DUT_R"/>
+        </DisconnectDongleR>
+        <DisconnectDongle task="DisconnectDUTByUsbHid" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <device_name Runner.Input="DUT_Dongle"/>
+        </DisconnectDongle>
+      </final>
+    </default>
+  </flows>
+</root>

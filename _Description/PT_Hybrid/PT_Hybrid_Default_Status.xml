@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Hybrid_Passthru_Default_Setting" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Hybrid_Passthru_Default_Setting">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_margin" value="20"/>
+    <Parameter name="bottom_margin" value="20"/>
+    <ConfigGroup class="ucLayoutHorizontal" visible="hidden">
+      <Parameter name="top_margin" value="20"/>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="For L side"/>
+        <Parameter name="border" value="1"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <ConfigItem class="ucUpDown" Unique="pt_hybrid_param.sub_param0_L.ramp_delay" id="id_pt_hybrid_ff_L_ramp_delay_updwon" min="0" max="3" visible="hidden">
+          <Parameter name="left_label" value="pt_hybrid FF ramp switch delay"/>
+          <Parameter name="des_label" value="16*2^x us/step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="pt_hybrid_param.sub_param0_L.ramp_delay"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_pt_hybrid_ff_L_ramp_delay_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="pt_hybrid_param.sub_param0_L.ramp_up_step" id="id_pt_hybrid_ff_L_ramp_up_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="pt_hybrid FF ramp up gain step"/>
+          <Parameter name="des_label" value="0.00125*2^x dB/step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="pt_hybrid_param.sub_param0_L.ramp_up_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_pt_hybrid_ff_L_ramp_up_step_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="pt_hybrid_param.sub_param0_L.ramp_down_step" id="id_pt_hybrid_ff_L_ramp_down_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="pt_hybrid FF ramp down gain step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="pt_hybrid_param.sub_param0_L.ramp_down_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_pt_hybrid_ff_L_ramp_down_step_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="pt_hybrid_param.sub_param1_L.ramp_delay" id="id_pt_hybrid_fb_L_ramp_delay_updwon" min="0" max="3" visible="hidden">
+          <Parameter name="left_label" value="pt_hybrid FB ramp switch delay"/>
+          <Parameter name="des_label" value="16*2^x us/step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="pt_hybrid_param.sub_param1_L.ramp_delay"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_pt_hybrid_fb_L_ramp_delay_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="pt_hybrid_param.sub_param1_L.ramp_up_step" id="id_pt_hybrid_fb_L_ramp_up_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="pt_hybrid FB ramp up gain step"/>
+          <Parameter name="des_label" value="0.00125*2^x dB/step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="pt_hybrid_param.sub_param1_L.ramp_up_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_pt_hybrid_fb_L_ramp_up_step_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="pt_hybrid_param.sub_param1_L.ramp_down_step" id="id_pt_hybrid_fb_L_ramp_down_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="pt_hybrid FB ramp down gain step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="pt_hybrid_param.sub_param1_L.ramp_down_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_pt_hybrid_fb_L_ramp_down_step_tb"/>
+          </Associator>
+        </ConfigItem>      
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="For R side"/>
+        <Parameter name="border" value="1"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <ConfigItem class="ucUpDown" Unique="pt_hybrid_param.sub_param0_R.ramp_delay" id="id_pt_hybrid_ff_R_ramp_delay_updwon" min="0" max="3" visible="hidden">
+          <Parameter name="left_label" value="pt_hybrid FF ramp switch delay"/>
+          <Parameter name="des_label" value="16*2^x us/step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="pt_hybrid_param.sub_param0_R.ramp_delay"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_pt_hybrid_ff_R_ramp_delay_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="pt_hybrid_param.sub_param0_R.ramp_up_step" id="id_pt_hybrid_ff_R_ramp_up_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="pt_hybrid FF ramp up gain step"/>
+          <Parameter name="des_label" value="0.00125*2^x dB/step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="pt_hybrid_param.sub_param0_R.ramp_up_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_pt_hybrid_ff_R_ramp_up_step_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="pt_hybrid_param.sub_param0_R.ramp_down_step" id="id_pt_hybrid_ff_R_ramp_down_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="pt_hybrid FF ramp down gain step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="pt_hybrid_param.sub_param0_R.ramp_down_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_pt_hybrid_ff_R_ramp_down_step_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="pt_hybrid_param.sub_param1_R.ramp_delay" id="id_pt_hybrid_fb_R_ramp_delay_updwon" min="0" max="3" visible="hidden">
+          <Parameter name="left_label" value="pt_hybrid FB ramp switch delay"/>
+          <Parameter name="des_label" value="16*2^x us/step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="pt_hybrid_param.sub_param1_R.ramp_delay"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_pt_hybrid_fb_R_ramp_delay_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="pt_hybrid_param.sub_param1_R.ramp_up_step" id="id_pt_hybrid_fb_R_ramp_up_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="pt_hybrid FB ramp up gain step"/>
+          <Parameter name="des_label" value="0.00125*2^x dB/step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="pt_hybrid_param.sub_param1_R.ramp_up_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_pt_hybrid_fb_R_ramp_up_step_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="pt_hybrid_param.sub_param1_R.ramp_down_step" id="id_pt_hybrid_fb_R_ramp_down_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="pt_hybrid FB ramp down gain step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="pt_hybrid_param.sub_param1_R.ramp_down_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_pt_hybrid_fb_R_ramp_down_step_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="pt_hybrid_param.sub_param0_L.ramp_delay" id="id_pt_hybrid_ff_L_ramp_delay_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_pt_hybrid_ff_L_ramp_delay_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="pt_hybrid_param.sub_param0_L.ramp_up_step" id="id_pt_hybrid_ff_L_ramp_up_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_pt_hybrid_ff_L_ramp_up_step_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="pt_hybrid_param.sub_param0_L.ramp_down_step" id="id_pt_hybrid_ff_L_ramp_down_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_pt_hybrid_ff_L_ramp_down_step_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="pt_hybrid_param.sub_param1_L.ramp_delay" id="id_pt_hybrid_fb_L_ramp_delay_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_pt_hybrid_fb_L_ramp_delay_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="pt_hybrid_param.sub_param1_L.ramp_up_step" id="id_pt_hybrid_fb_L_ramp_up_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_pt_hybrid_fb_L_ramp_up_step_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="pt_hybrid_param.sub_param1_L.ramp_down_step" id="id_pt_hybrid_fb_L_ramp_down_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_pt_hybrid_fb_L_ramp_down_step_updwon"/>
+      </Associator>
+    </ConfigItem>    
+    <ConfigItem class="ucTextBox" Unique="pt_hybrid_param.sub_param0_R.ramp_delay" id="id_pt_hybrid_ff_R_ramp_delay_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_pt_hybrid_ff_R_ramp_delay_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="pt_hybrid_param.sub_param0_R.ramp_up_step" id="id_pt_hybrid_ff_R_ramp_up_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_pt_hybrid_ff_R_ramp_up_step_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="pt_hybrid_param.sub_param0_R.ramp_down_step" id="id_pt_hybrid_ff_R_ramp_down_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_pt_hybrid_ff_R_ramp_down_step_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="pt_hybrid_param.sub_param1_R.ramp_delay" id="id_pt_hybrid_fb_R_ramp_delay_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_pt_hybrid_fb_R_ramp_delay_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="pt_hybrid_param.sub_param1_R.ramp_up_step" id="id_pt_hybrid_fb_R_ramp_up_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_pt_hybrid_fb_R_ramp_up_step_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="pt_hybrid_param.sub_param1_R.ramp_down_step" id="id_pt_hybrid_fb_R_ramp_down_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_pt_hybrid_fb_R_ramp_down_step_updwon"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

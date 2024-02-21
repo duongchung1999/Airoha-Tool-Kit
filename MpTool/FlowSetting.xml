@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <environments WpfView="EnvionmentSelect">
+    <DUT1 IsEnable="True" />
+    <DUT2 IsEnable="False" />
+    <DUT3 IsEnable="False" />
+    <DUT4 IsEnable="False" />
+    <DUT5 IsEnable="False" />
+    <DUT6 IsEnable="False" />
+    <DUT7 IsEnable="False" />
+    <DUT8 IsEnable="False" />
+  </environments>
+  <UnifiedInput SettingPage.Mode="MP">
+    <FlashBin SettingPage.View="FileSelection">F:\_Project\AB1530\AB1532_mcsync_ref_design_V2.1.1_20190426_030024.bin</FlashBin>
+    <FlashBin_device_name SettingPage.IsIgnore="True">AB153x</FlashBin_device_name>
+    <FlashBin_BD_address SettingPage.IsIgnore="True">112233445566</FlashBin_BD_address>
+    <BDKey>AB1530FFAB1530FFAB1530FFAB1530FFAB1530FFAB1530FFAB1530FFAB1530FF</BDKey>
+    <High_Voltage_Battery_support_4.35V SettingPage.View="TextSelect" SettingPage.Content="BooleanOption">false</High_Voltage_Battery_support_4.35V>
+  </UnifiedInput>
+  <SelfInput>
+    <UartDetect>
+      <Initialize SettingPage.View="DetectDevice">Detect</Initialize>
+    </UartDetect>
+    <TcbUart SettingPage.View="UartSelectTcb">
+      <DUT1>12</DUT1>
+      <DUT2>13</DUT2>
+      <DUT3>13</DUT3>
+      <DUT4>13</DUT4>
+      <DUT5>13</DUT5>
+      <DUT6>13</DUT6>
+      <DUT7>13</DUT7>
+      <DUT8>13</DUT8>
+    </TcbUart>
+    <DeviceUart SettingPage.View="UartSelect">
+      <DUT1>13</DUT1>
+      <DUT2>13</DUT2>
+      <DUT3>13</DUT3>
+      <DUT4>13</DUT4>
+      <DUT5>13</DUT5>
+      <DUT6>13</DUT6>
+      <DUT7>13</DUT7>
+      <DUT8>13</DUT8>
+    </DeviceUart>
+    <ChannelList>
+      <DUT1 SettingPage.View="RFChannelSelect">00, 48, 24</DUT1>
+      <DUT2 SettingPage.View="RFChannelSelect">27, 03, 51</DUT2>
+      <DUT3 SettingPage.View="RFChannelSelect">39, 30, 06</DUT3>
+      <DUT4 SettingPage.View="RFChannelSelect">09, 57, 33</DUT4>
+      <DUT5 SettingPage.View="RFChannelSelect">36, 12, 60</DUT5>
+      <DUT6 SettingPage.View="RFChannelSelect">63, 30, 15</DUT6>
+      <DUT7 SettingPage.View="RFChannelSelect">18, 66, 42</DUT7>
+      <DUT8 SettingPage.View="RFChannelSelect">45, 21, 69</DUT8>
+    </ChannelList>
+  </SelfInput>
+  <Managers>
+    <BdAddressManager class="Airoha.Project.MpTool.BdAddressPool" SettingPage.Mode="MP">
+      <expect_dut_count SettingPage.IsIgnore="True" />
+      <expect_dut_count>%_ENVI_COUNT%</expect_dut_count>
+      <start_address_bt3>0000ABCD1234</start_address_bt3>
+      <start_address_bt4>112233445566</start_address_bt4>
+    </BdAddressManager>
+    <TCB__Cal__BR__golden__power class="Airoha.Project.MpTool.TcbCalManager" SettingPage.Mode="MP">
+      <RefPower SettingPage.View="TextBoxGreyOut">7</RefPower>
+      <TcbRSSIgolden>
+        <DUT1>70</DUT1>
+        <DUT2>70</DUT2>
+        <DUT3>70</DUT3>
+        <DUT4>70</DUT4>
+        <DUT5>70</DUT5>
+        <DUT6>70</DUT6>
+        <DUT7>70</DUT7>
+        <DUT8>70</DUT8>
+      </TcbRSSIgolden>
+    </TCB__Cal__BR__golden__power>
+    <TCB__Cal__EDR__golden__power class="Airoha.Project.MpTool.TcbCalManager" SettingPage.Mode="MP">
+      <RefPower SettingPage.View="TextBoxGreyOut">6</RefPower>
+      <TcbRSSIgolden>
+        <DUT1>68</DUT1>
+        <DUT2>68</DUT2>
+        <DUT3>68</DUT3>
+        <DUT4>68</DUT4>
+        <DUT5>68</DUT5>
+        <DUT6>68</DUT6>
+        <DUT7>68</DUT7>
+        <DUT8>68</DUT8>
+      </TcbRSSIgolden>
+    </TCB__Cal__EDR__golden__power>
+    <RfTestManager class="Airoha.Project.MpTool.RfTestManager">
+      <RFMode SettingPage.View="TextSelect" SettingPage.Content="RFMode">Air_Mode</RFMode>
+      <RFTestRule SettingPage.View="TextSelect" SettingPage.Content="RFTestRule">Pass_One_Channel</RFTestRule>
+    </RfTestManager>
+    <CalibrationFlowManager class="Airoha.Project.MpTool.CalibrationFlowManager">
+      <CalibrationFlow SettingPage.View="TextSelect" SettingPage.Content="CalibrationFlow">OTP_Data_Conversion</CalibrationFlow>
+    </CalibrationFlowManager>
+  </Managers>
+  <flows Runner.StartFlow="default">
+    <default SettingPage.Name="Default Process">
+      <option>
+      </option>
+      <main>
+        <ToolLogLevel task="DetailLogLevel" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <ReadNvkeyFromBin task="TaskReadNvKeyFromBin" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <bin_file_path SettingPage.IsIgnore="True" Runner.Input="FlashBin" />
+        </ReadNvkeyFromBin>
+
+        <ConnectTcb task="ConnectTCB" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <port Runner.Input="TcbUart" />
+        </ConnectTcb>
+        <ConnectDevice task="ConnectDUT" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <port Runner.Input="DeviceUart" />
+        </ConnectDevice>
+
+        <EraseFlash task="TaskWriteEmptyFlashBinWithTCB" Runner.Option="False" UI.IsVisiable="True">
+          <use_TCB_DLB SettingPage.IsIgnore="True" />
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+          <iram_file_path SettingPage.IsIgnore="True" />
+        </EraseFlash>
+
+        <DisconnectDevice1 task="DisconnectDUT" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <ConnectDevice1 task="ConnectDUT" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <port Runner.Input="DeviceUart" />
+        </ConnectDevice1>
+        <InitTcbDut task="TaskInitTcbDut" Runner.Option="False" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+          <reset_by_TCB SettingPage.IsIgnore="True" />
+          <set_SDA_high SettingPage.IsIgnore="True" />
+          <delay_after_reset SettingPage.IsIgnore="True" />
+        </InitTcbDut>
+        <InitTcbDutWithChargerOn task="TaskResetDutBeforeDacCalibration" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+        </InitTcbDutWithChargerOn>
+        <!--<SwitchToH5 task="SwitchH5" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />-->
+        <WriteIRam task="WriteIRamBinFile" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <!--<SwitchTrans task="SwitchTrans" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />-->
+        <DisableFwDbgMsg task="DisableFwDbgMsg" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <ReadFtDataFromDut task="TaskReadFtDataFromDut" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <calibration_flow SettingPage.IsIgnore="True" Runner.InputFromManager="CalibrationFlowManager.calibration_flow_reader" />
+          <high_Voltage_Battery_support_4.35V SettingPage.IsIgnore="True" Runner.Input="High_Voltage_Battery_support_4.35V" />
+        </ReadFtDataFromDut>
+
+        <ChargerCalibration task="TaskChargerDacCalibrationMP" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+          <write_nv_key SettingPage.IsIgnore="True" />
+          <initial_dac_value SettingPage.IsIgnore="True" />
+          <dac_lower_limit SettingPage.IsIgnore="True" />
+          <threshold_count SettingPage.IsIgnore="True" />
+          <threshold_vichg SettingPage.IsIgnore="True" />
+          <interval_ms SettingPage.IsIgnore="True" />
+          <timeout_ms SettingPage.IsIgnore="True" />
+          <trickle_current_dac_offset SettingPage.IsIgnore="True" />
+          <cc1_current_dac_offset SettingPage.IsIgnore="True" />
+          <cc2_current_dac_offset SettingPage.IsIgnore="True" />
+          <cv_init_dac_offset SettingPage.IsIgnore="True" />
+          <cv_dac_offset SettingPage.IsIgnore="True" />
+          <cv_stop_current SettingPage.IsIgnore="True" />
+          <cv_stop_current_offset SettingPage.IsIgnore="True" />
+          <charger_current_spec SettingPage.IsIgnore="True" />
+          <low_current_define_value SettingPage.IsIgnore="True" />
+          <low_charger_current_spec SettingPage.IsIgnore="True" />
+          <delay_after_set_charge_current SettingPage.IsIgnore="True" />
+          <trickle_current_value_offset SettingPage.IsIgnore="True" />
+          <trickle_current_modify_dac_dinfined_value SettingPage.IsIgnore="True" />
+          <cc1_current_modify_dac_dinfined_value SettingPage.IsIgnore="True" />
+          <cc2_current_modify_dac_dinfined_value SettingPage.IsIgnore="True" />
+          <charger_current_calibration_trycount SettingPage.IsIgnore="True" />
+        </ChargerCalibration>
+        <BatteryCalibration task="TaskVBatChargerAdcCalibration" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+          <!--<vbat SettingPage.IsIgnore="True" />
+          <vbin SettingPage.IsIgnore="True" />-->
+          <write_nv_key SettingPage.IsIgnore="True" />
+        </BatteryCalibration>
+        <RegulatorCalibration task="MPTaskRegualtorCalibration" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+          <vin_calculate_base SettingPage.IsIgnore="True" />
+          <write_nv_key SettingPage.IsIgnore="True" />
+          <!--<vin_high_voltage SettingPage.IsIgnore="True" />
+          <vbat_high_voltage SettingPage.IsIgnore="True" />-->
+          <min_offset_adc_buck_mv SettingPage.IsIgnore="True" />
+          <max_offset_adc_buck_mv SettingPage.IsIgnore="True" />
+          <min_offset_adc_ldo_lv2 SettingPage.IsIgnore="True" />
+          <max_offset_adc_ldo_lv2 SettingPage.IsIgnore="True" />
+          <min_offset_adc_buck_lv SettingPage.IsIgnore="True" />
+          <max_offset_adc_buck_lv SettingPage.IsIgnore="True" />
+          <min_offset_adc_ldo_lv1 SettingPage.IsIgnore="True" />
+          <max_offset_adc_ldo_lv1 SettingPage.IsIgnore="True" />
+          <min_offset_adc_ldo_hv SettingPage.IsIgnore="True" />
+          <max_offset_adc_ldo_hv SettingPage.IsIgnore="True" />
+          <min_offset_adc_hv_mic SettingPage.IsIgnore="True" />
+          <max_offset_adc_hv_mic SettingPage.IsIgnore="True" />
+          <delay_before_run SettingPage.IsIgnore="True" />
+        </RegulatorCalibration>
+        <AioCalibration task="TaskAioCalibration" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <device_name SettingPage.IsIgnore="True" />
+          <write_nv_key SettingPage.IsIgnore="True" />
+        </AioCalibration>
+        <RfAdcTempCalibration task="TaskTemperatureAdcOffsetCalibration" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+          <write_nv_key SettingPage.IsIgnore="True" />
+          <temperature SettingPage.View="TempSelect" />
+          <temp_neg_40C SettingPage.IsIgnore="True" />
+          <temp_neg_30C SettingPage.IsIgnore="True" />
+          <temp_neg_20C SettingPage.IsIgnore="True" />
+          <temp_neg_10C SettingPage.IsIgnore="True" />
+          <temp_0C SettingPage.IsIgnore="True" />
+          <temp_10C SettingPage.IsIgnore="True" />
+          <temp_20C SettingPage.IsIgnore="True" />
+          <temp_25C SettingPage.IsIgnore="True" />
+          <temp_30C SettingPage.IsIgnore="True" />
+          <temp_40C SettingPage.IsIgnore="True" />
+          <temp_50C SettingPage.IsIgnore="True" />
+          <temp_60C SettingPage.IsIgnore="True" />
+          <temp_70C SettingPage.IsIgnore="True" />
+          <temp_80C SettingPage.IsIgnore="True" />
+          <temp_85C SettingPage.IsIgnore="True" />
+        </RfAdcTempCalibration>
+        <TxGcOffsetCalibration task="TaskTxGcOffsetCalibration" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <device_name SettingPage.IsIgnore="True" />
+        </TxGcOffsetCalibration>
+
+        <!--<CrystalTrim task="CrystalTrimWithTCB" Runner.Option="False">
+          <use_TCB_DLB SettingPage.IsIgnore="True" />
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+          <initial_cap SettingPage.IsIgnore="True" />
+        </CrystalTrim>-->
+        <CrystalTrim task="CrystalTrimWithTCB_ByTableMethod" Runner.Option="True">
+          <use_TCB_DLB SettingPage.IsIgnore="True" />
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+          <output_pin SettingPage.IsIgnore="True" SettingPage.View="TextSelect" SettingPage.Content="xtal_output_pin">XTAL_PIO1</output_pin>
+          <initial_cap SettingPage.IsIgnore="True" />
+          <target_ppm SettingPage.IsIgnore="True" />
+          <cap_limit_max SettingPage.IsIgnore="True" />
+          <cap_limit_min SettingPage.IsIgnore="True" />
+        </CrystalTrim>
+
+        <TxGcCalibration task="TaskTxGcCalibration" Runner.Option="False">
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+          <rf_mode SettingPage.IsIgnore="True" Runner.InputFromManager="RfTestManager.rf_mode_reader" />
+          <min_bits SettingPage.IsIgnore="True" />
+          <min_count SettingPage.IsIgnore="True" />
+          <tcb_rssi_golden_BR SettingPage.IsIgnore="True" Runner.InputFromManager="TCB__Cal__BR__golden__power.rssi_reader" />
+          <golden_power_BR SettingPage.IsIgnore="True" Runner.InputFromManager="TCB__Cal__BR__golden__power.ref_power_reader" />
+          <target_power_BR SettingPage.IsIgnore="True" Runner.InputFromManager="TCB__Cal__BR__golden__power.ref_power_reader" />
+          <tcb_rssi_golden_EDR SettingPage.IsIgnore="True" Runner.InputFromManager="TCB__Cal__EDR__golden__power.rssi_reader" />
+          <golden_power_EDR SettingPage.IsIgnore="True" Runner.InputFromManager="TCB__Cal__EDR__golden__power.ref_power_reader" />
+          <target_power_EDR SettingPage.IsIgnore="True" Runner.InputFromManager="TCB__Cal__EDR__golden__power.ref_power_reader" />
+        </TxGcCalibration>
+        <BtTxTest task="BtTxTest" Runner.Option="True">
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+          <channel SettingPage.IsIgnore="True" Runner.Input="ChannelList" />
+          <rf_mode SettingPage.IsIgnore="True" Runner.InputFromManager="RfTestManager.rf_mode_reader" />
+          <rf_test_rule SettingPage.IsIgnore="True" Runner.InputFromManager="RfTestManager.rf_test_rule_reader" />
+          <bit_count SettingPage.IsIgnore="True" />
+          <packet_count SettingPage.IsIgnore="True" />
+          <le_payload_len SettingPage.IsIgnore="True" />
+          <tcb_rssi_golden_BR SettingPage.IsIgnore="True" Runner.InputFromManager="TCB__Cal__BR__golden__power.rssi_reader" />
+          <golden_power_BR SettingPage.IsIgnore="True" Runner.InputFromManager="TCB__Cal__BR__golden__power.ref_power_reader" />
+          <target_power_BR SettingPage.IsIgnore="True" Runner.InputFromManager="TCB__Cal__BR__golden__power.ref_power_reader" />
+          <tcb_rssi_golden_EDR SettingPage.IsIgnore="True" Runner.InputFromManager="TCB__Cal__EDR__golden__power.rssi_reader" />
+          <golden_power_EDR SettingPage.IsIgnore="True" Runner.InputFromManager="TCB__Cal__EDR__golden__power.ref_power_reader" />
+          <target_power_EDR SettingPage.IsIgnore="True" Runner.InputFromManager="TCB__Cal__EDR__golden__power.ref_power_reader" />
+          <ber_br SettingPage.View="TextBoxGreyOut" />
+          <ber_edr SettingPage.View="TextBoxGreyOut" />
+          <per_le SettingPage.IsIgnore="True" />
+          <test_BR SettingPage.IsIgnore="True" />
+          <test_EDR SettingPage.View="TextSelect" SettingPage.Content="BooleanOption">true</test_EDR>
+          <test_LE SettingPage.IsIgnore="True" />
+        </BtTxTest>
+        <BtRxTest task="BtRxTest" Runner.Option="True">
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+          <channel SettingPage.IsIgnore="True" Runner.Input="ChannelList" />
+          <rf_mode SettingPage.IsIgnore="True" Runner.InputFromManager="RfTestManager.rf_mode_reader" />
+          <rf_test_rule SettingPage.IsIgnore="True" Runner.InputFromManager="RfTestManager.rf_test_rule_reader" />
+          <bit_count SettingPage.IsIgnore="True" />
+          <packet_count SettingPage.IsIgnore="True" />
+          <le_payload_len SettingPage.IsIgnore="True" />
+          <ber_br SettingPage.View="TextBoxGreyOut" />
+          <ber_edr SettingPage.View="TextBoxGreyOut" />
+          <per_le SettingPage.IsIgnore="True" />
+          <test_BR SettingPage.IsIgnore="True" />
+          <test_EDR SettingPage.View="TextSelect" SettingPage.Content="BooleanOption">true</test_EDR>
+          <test_LE SettingPage.IsIgnore="True" />
+        </BtRxTest>
+
+        <SetBdKey task="TaskSetBdKey" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <bd_key SettingPage.IsIgnore="True" Runner.Input="BDKey" />
+        </SetBdKey>
+        <WriteFlash task="TaskWriteFlashBinWithTCB" Runner.Option="True">
+          <use_TCB_DLB SettingPage.IsIgnore="True" />
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+          <iram_file_path SettingPage.IsIgnore="True" />
+          <flash_bin_file_path SettingPage.IsIgnore="True" Runner.Input="FlashBin" />
+          <start_address SettingPage.IsIgnore="True" />
+        </WriteFlash>
+      </main>
+      <Asynchronous>
+        <SetBt3BdAddress task="TaskSetBt3BdAddress" Runner.Option="True" UI.Result="bd_addr">
+          <bt_version SettingPage.IsIgnore="True" />
+          <bd_address Runner.InputFromManager="BdAddressManager.bt3distributer" SettingPage.IsIgnore="True" />
+          <is_bt3_addr_from_barcode SettingPage.IsIgnore="True"/>
+          <bt3_addr_from_barcode SettingPage.IsIgnore="True"/>
+        </SetBt3BdAddress>
+        <SetBt4BdAddress task="TaskSetBt4BdAddress" Runner.Option="True" UI.Result="bd_addr">
+          <bt_version SettingPage.IsIgnore="True" />
+          <bd_address Runner.InputFromManager="BdAddressManager.bt4distributer" SettingPage.IsIgnore="True" />
+          <is_bt4_addr_from_barcode SettingPage.IsIgnore="True"/>
+          <bt4_addr_from_barcode SettingPage.IsIgnore="True"/>
+        </SetBt4BdAddress>
+        <WriteFlashNv4k task="TaskWriteFlashNv4kWithTCB" Runner.Option="True">
+          <use_TCB_DLB SettingPage.IsIgnore="True" />
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+          <write_iram SettingPage.IsIgnore="True" SettingPage.View="TextSelect" SettingPage.Content="BooleanOption">false</write_iram>
+          <iram_file_path SettingPage.IsIgnore="True" />
+          <flash_bin_file_path SettingPage.IsIgnore="True" Runner.Input="FlashBin" />
+          <start_address SettingPage.IsIgnore="True" />
+        </WriteFlashNv4k>
+        <UpdateBdAddress FlowObject="BdAddressManager.set_update" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+      </Asynchronous>
+      <final>
+        <ChargerOff task="TaskChargerOff" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <DisconnectDevice task="DisconnectDUT" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True" />
+        <DisconnectTcb task="DisconnectTCB" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True" />
+      </final>
+    </default>
+    <TcbCalibration>
+      <option>
+      </option>
+      <main>
+        <ConnectTcb task="ConnectTCB" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <port Runner.Input="TcbUart" />
+        </ConnectTcb>
+        <ConnectDevice task="ConnectDUT" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <port Runner.Input="DeviceUart" />
+        </ConnectDevice>
+        <InitTcbDut task="TaskInitTcbDut" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <!--<SwitchToH5 task="SwitchH5" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />-->
+        <WriteIRam task="WriteIRamBinFile" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <!--<SwitchTrans task="SwitchTrans" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />-->
+        <DisableFwDbgMsg task="DisableFwDbgMsg" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <TcbTxBrCalibration task="TcbTxBrCalibration" Runner.Option="True" UI.Result="rssi">
+          <description SettingPage.View="LabelDisplay" />
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+          <test_rate SettingPage.IsIgnore="True" />
+          <tcb_rssi_max SettingPage.IsIgnore="True" />
+          <tcb_rssi_min SettingPage.IsIgnore="True" />
+          <min_count SettingPage.IsIgnore="True" />
+          <Output.TcbRSSIgolden Runner.OutputToManager="TCB__Cal__BR__golden__power.rssi_writer" />
+          <Output.RefPower Runner.OutputToManager="TCB__Cal__BR__golden__power.ref_power_writer" />
+        </TcbTxBrCalibration>
+        <TcbTxEdrCalibration task="TcbTxEdrCalibration" Runner.Option="True" UI.Result="rssi">
+          <description SettingPage.View="LabelDisplay" />
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+          <test_rate SettingPage.IsIgnore="True" />
+          <tcb_rssi_max SettingPage.IsIgnore="True" />
+          <tcb_rssi_min SettingPage.IsIgnore="True" />
+          <min_count SettingPage.IsIgnore="True" />
+          <Output.TcbRSSIgolden Runner.OutputToManager="TCB__Cal__EDR__golden__power.rssi_writer" />
+          <Output.RefPower Runner.OutputToManager="TCB__Cal__EDR__golden__power.ref_power_writer" />
+        </TcbTxEdrCalibration>
+        <BtTxTest task="BtTxTest" Runner.Option="True">
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+          <channel SettingPage.IsIgnore="True" Runner.Input="ChannelList" />
+          <rf_mode SettingPage.IsIgnore="True" Runner.InputFromManager="RfTestManager.rf_mode_reader" />
+          <rf_test_rule SettingPage.IsIgnore="True" Runner.InputFromManager="RfTestManager.rf_test_rule_reader" />
+          <bit_count SettingPage.IsIgnore="True" />
+          <packet_count SettingPage.IsIgnore="True" />
+          <le_payload_len SettingPage.IsIgnore="True" />
+          <tcb_rssi_golden_BR SettingPage.IsIgnore="True" Runner.InputFromManager="TCB__Cal__BR__golden__power.rssi_reader" />
+          <golden_power_BR SettingPage.IsIgnore="True" Runner.InputFromManager="TCB__Cal__BR__golden__power.ref_power_reader" />
+          <target_power_BR SettingPage.IsIgnore="True" Runner.InputFromManager="TCB__Cal__BR__golden__power.ref_power_reader" />
+          <tcb_rssi_golden_EDR SettingPage.IsIgnore="True" Runner.InputFromManager="TCB__Cal__EDR__golden__power.rssi_reader" />
+          <golden_power_EDR SettingPage.IsIgnore="True" Runner.InputFromManager="TCB__Cal__EDR__golden__power.ref_power_reader" />
+          <target_power_EDR SettingPage.IsIgnore="True" Runner.InputFromManager="TCB__Cal__EDR__golden__power.ref_power_reader" />
+          <ber_br SettingPage.View="TextBoxGreyOut" />
+          <ber_edr SettingPage.View="TextBoxGreyOut" />
+          <per_le SettingPage.IsIgnore="True" />
+          <test_BR SettingPage.IsIgnore="True" />
+          <test_EDR SettingPage.View="TextSelect" SettingPage.Content="BooleanOption">true</test_EDR>
+          <test_LE SettingPage.IsIgnore="True" />
+        </BtTxTest>
+        <BtRxTest task="BtRxTest" Runner.Option="True">
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+          <channel SettingPage.IsIgnore="True" Runner.Input="ChannelList" />
+          <rf_mode SettingPage.IsIgnore="True" Runner.InputFromManager="RfTestManager.rf_mode_reader" />
+          <rf_test_rule SettingPage.IsIgnore="True" Runner.InputFromManager="RfTestManager.rf_test_rule_reader" />
+          <bit_count SettingPage.IsIgnore="True" />
+          <packet_count SettingPage.IsIgnore="True" />
+          <le_payload_len SettingPage.IsIgnore="True" />
+          <ber_br SettingPage.View="TextBoxGreyOut" />
+          <ber_edr SettingPage.View="TextBoxGreyOut" />
+          <per_le SettingPage.IsIgnore="True" />
+          <test_BR SettingPage.IsIgnore="True" />
+          <test_EDR SettingPage.View="TextSelect" SettingPage.Content="BooleanOption">true</test_EDR>
+          <test_LE SettingPage.IsIgnore="True" />
+        </BtRxTest>
+      </main>
+      <final>
+        <DisconnectDevice task="DisconnectDUT" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True" />
+        <DisconnectTcb task="DisconnectTCB" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True" />
+      </final>
+    </TcbCalibration>
+    <detect_device>
+      <option>
+      </option>
+      <main>
+        <ToolLogLevel task="DetailLogLevel" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <ConnectTcb task="ConnectTCB" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <port Runner.Input="TcbUart" />
+        </ConnectTcb>
+        <ConnectDevice task="ConnectDUT" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <port Runner.Input="DeviceUart" />
+        </ConnectDevice>
+        <InitTcbDut task="TaskInitTcbDut" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <device_name SettingPage.IsIgnore="True" />
+          <tcb_name SettingPage.IsIgnore="True" />
+          <reset_by_TCB SettingPage.IsIgnore="True" />
+          <set_SDA_high SettingPage.IsIgnore="True" />
+          <delay_after_reset SettingPage.IsIgnore="True" />
+        </InitTcbDut>
+      </main>
+      <final>
+        <DisconnectDevice task="DisconnectDUT" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True" />
+        <DisconnectTcb task="DisconnectTCB" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True" />
+      </final>
+    </detect_device>
+  </flows>
+</root>

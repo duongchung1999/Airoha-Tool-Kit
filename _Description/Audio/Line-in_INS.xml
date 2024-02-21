@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Line-in/USB-in_INS" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Line-in/USB-in_INS" scroll="vertical">
+  <ConfigGroup class="ucLayoutVertical">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="bottom_margin" value="10"/>
+        <ConfigItem class="ucDspDecimalUpDown" id="id_INS_ins_alpha_up" min="0" max="32767">
+          <Parameter name="top_label" value="Alpha Up:"/>
+          <Parameter name="bottom_label" value="(0~32767)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="step" value="1"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_INS_ins_alpha_up_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucDspDecimalUpDown" id="id_INS_ins_alpha_down" min="0" max="32767">
+          <Parameter name="top_label" value="Alpha Down:"/>
+          <Parameter name="bottom_label" value="(0~32767)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="step" value="1"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_INS_ins_alpha_down_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucCpdInsAttUpDown" id="id_INS_ins_atten" min="0" max="90">
+          <Parameter name="top_label" value="Attenuation:"/>
+          <Parameter name="bottom_label" value="dB (0~90)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_INS.AUX_INS_atten"/>
+        </ConfigItem>
+        <ConfigItem class="ucA2dpInsThrdUpDown" id="id_INS_ins_thrd" max="-1" min="-138">
+          <Parameter name="top_label" value="Threshold:"/>
+          <Parameter name="bottom_label" value="dBFS (-138~-1)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="unique" value="DSP_PARA_INS.AUX_INS_thrd"/>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <ConfigGroup class="ucLiveChart" id="id_drc_chart_ins">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_INS_ins_thrd"/>
+      </Associator>
+      <Parameter name="x_axis_type" value="decimal"/>
+      <Parameter name="layout_column_weight" value="1"/>
+      <Parameter name="x_axis_title" value="Input (dBFS)"/>
+      <Parameter name="y_axis_title" value="Output (dBFS)"/>
+      <Parameter name="y_axis_max_value" value="0"/>
+      <Parameter name="y_axis_min_value" value="-100"/>
+      <Parameter name="x_axis_max_value" value="0"/>
+      <Parameter name="x_axis_min_value" value="-100"/>
+      <Parameter name="x_axis_step" value="10"/>
+      <Parameter name="y_axis_step" value="10"/>
+      <Parameter name="height" value="450"/>
+      <ConfigItem class="line" id="id_drc_chart_line_ins">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcInsAssociator">
+          <Parameter name="threshold" refId="id_INS_ins_thrd"/>
+          <Parameter name="atten" refId="id_INS_ins_atten"/>
+          <Parameter name="a2dp_digital_gain_table" refId="id_line_digital_output_gain_table"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INS.ENABLE" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INS.REVISION" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INS.AUX_INS_alpha_up" id="id_INS_ins_alpha_up_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_INS_ins_alpha_up"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INS.AUX_INS_alpha_down" id="id_INS_ins_alpha_down_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_INS_ins_alpha_down"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INS.AUX_INS_atten" id="id_INS_ins_atten_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdInsAttAssociator">
+        <Parameter name="data" refId="id_INS_ins_atten"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INS.AUX_INS_thrd" id="id_INS_ins_thrd_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpInsThrdAssociator">
+        <Parameter name="data" refId="id_INS_ins_thrd"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Leakage_Detection" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Leakage_Detection">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <Parameter name="required_nvkey_id" value="0xE700"/>
+    
+    <ConfigItem class="ucComboBox" id="id_ld_en_cb">
+      <Parameter name="left_label" value="Enable"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="75"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="width" value="100"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+      <Parameter name="unique" value="DSP_PARA_LD_STRU.ENABLE"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ld_en_tb"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucUpDown" Unique="DSP_PARA_LD_STRU.ld_thrd" id="id_ld_thrd_updown" min="0" max="32767">
+      <Parameter name="left_label" value="ld_thrd (0 ~ 32767)"/>
+      <Parameter name="des_label" value="Final detection threshold. (lower for more easier to detect fit wearing." />
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="left_width" value="110"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="bottom_margin" value="5"/>
+      <Parameter name="step" value="1"/>
+      <Parameter name="unique" value="DSP_PARA_LD_STRU.ld_thrd"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ld_thrd_tb"/>
+      </Associator>
+    </ConfigItem>
+
+    <!--
+    <ConfigItem class="ucComboBox" id="id_ld_lpf_en_cb">
+      <Parameter name="left_label" value="LPF_en"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="75"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="width" value="100"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/LeakageDetection_LPF_en.xml"/>
+      <Parameter name="unique" value="DSP_PARA_LD_STRU.LPF_en"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ld_lpf_en_tb"/>
+      </Associator>
+    </ConfigItem>
+    -->
+    
+    <ConfigItem class="ucUpDown" Unique="DSP_PARA_LD_STRU.MIC_EC_DELAY" id="id_ld_mic_ec_delay_updown" min="1" max="127">
+      <Parameter name="left_label" value="Mic. EC delay (1 ~ 127)"/>
+      <Parameter name="des_label" value="A additional delay (sample) to Tx_Ref signal." />
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="left_width" value="110"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="bottom_margin" value="5"/>
+      <Parameter name="step" value="1"/>
+      <Parameter name="unique" value="DSP_PARA_LD_STRU.MIC_EC_DELAY"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ld_mic_ec_delay_tb"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucLeakDetectionDigitalGainUpDown" Unique="DSP_PARA_LD_STRU.DIGITAL_GAIN" id="id_ld_ditital_gain_updown" min="0" max="100">
+      <Parameter name="left_label" value="Digital gain (db)"/>
+      <Parameter name="des_label" value="Digital gain applied to Tx_Ref signal. (Lower when the Tx_Ref signal has higher amplitude.)" />
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="left_width" value="110"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="bottom_margin" value="5"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="unique" value="DSP_PARA_LD_STRU.DIGITAL_GAIN"/>
+    </ConfigItem>
+  </ConfigGroup>
+
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_LD_STRU.DIGITAL_GAIN" id="id_ld_ditital_gain_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcLLDigitalGainAssociator">
+        <Parameter name="data" refId="id_ld_ditital_gain_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_LD_STRU.AEC_MU_FAC" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_LD_STRU.AEC_MU_MIN" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_LD_STRU.AEC_ENG_VAD_THR" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_LD_STRU.AEC_ENG_VAD_HANG" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_LD_STRU.AEC_ENG_POW_INIT" visible="hidden" />
+
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_LD_STRU.ENABLE" id="id_ld_en_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ld_en_cb"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_LD_STRU.REVISION"  visible="hidden"/>
+
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_LD_STRU.ld_thrd" id="id_ld_thrd_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ld_thrd_updown"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_LD_STRU.MIC_EC_DELAY" id="id_ld_mic_ec_delay" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ld_mic_ec_delay_updown"/>
+      </Associator>
+    </ConfigItem>
+
+    <!--
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_LD_STRU.LPF_en" id="id_ld_lpf_en_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ld_lpf_en_cb"/>
+      </Associator>
+    </ConfigItem>
+    -->
+  </ConfigGroup>
+</Page>
+

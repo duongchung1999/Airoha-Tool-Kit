@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="Normal_Mode" Value="0"/>
+	<Group Name="High_Performance" Value="1"/>
+	<Group Name="Low_Power_mode" Value="2"/>
+	<Group Name="Ultra_Low_Power_mode" Value="3"/>
+	<Group Name="Super_Ultra_Low_Power_mode" Value="4"/>
+</DataGroup>

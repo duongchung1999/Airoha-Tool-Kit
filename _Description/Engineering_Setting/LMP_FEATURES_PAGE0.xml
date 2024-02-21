@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="LMP_FEATURES_PAGE0" class="Airoha.Project.ConfigTool.View.General" parameter="LMP_FEATURES_PAGE0">
+  <ConfigGroup title="LMP__FEATURES_PAGE0_Byte0" class="ucBitField">
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.3_slot_packets"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.5_slot_packets"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Encryption"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Slot_offset"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Timing_accuracy"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Role_switch"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Hold_mode"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Sniff_mode"/>
+  </ConfigGroup>
+  <ConfigGroup title="LMP__FEATURES_PAGE0_Byte1" class="ucBitField">
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Reserved0_1_0"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Power_control_requests"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.CQDDR"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.SCO_link"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.HV2_packets"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.HV3_packets"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.u_law_log_synchronous_data"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.A_law_log_synchronous_data"/>
+  </ConfigGroup>
+  <ConfigGroup title="LMP__FEATURES_PAGE0_Byte2" class="ucBitField">
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.CVSD_synchronous_data"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Paging_parameter_negotiation"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Power_control"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Transparent_synchronous_data"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Flow_control_lag_LSB"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Flow_control_lag_MB"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Flow_control_lag_MSB"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Broadcast_Encryption"/>
+  </ConfigGroup>
+  <ConfigGroup title="LMP__FEATURES_PAGE0_Byte3" class="ucBitField">
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Reserved_for_future_use_0_3_0"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.EDR_ACL_2M_mode"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.EDR_ACL_3M_mode"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Enhanced_inquiry_scan"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Interlaced_inquiry_scan"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Interlaced_page_scan"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.RSSI_with_inquiry_results"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Extended_SCO_link_EV3"/>
+  </ConfigGroup>
+  <ConfigGroup title="LMP__FEATURES_PAGE0_Byte4" class="ucBitField">
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.EV4_packets"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.EV5_packets"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Reserved_for_future_use_0_4_2"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.AFH_capable_slave"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.AFH_classification_slave"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.BR_EDR_Not_Supported"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.LE_Supported_Controller"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.3_slot_EDR_ACL_packets"/>
+  </ConfigGroup>
+  <ConfigGroup title="LMP__FEATURES_PAGE0_Byte5" class="ucBitField">
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.5_slot_EDR_ACL_packets"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Sniff_subrating"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Pause_encryption"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.AFH_capable_master"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.AFH_classification_master"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.EDR_eSCO_2M_mode"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.EDR_eSCO_3M_mode"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.3_slot_EDR_eSCO_packets"/>
+  </ConfigGroup>
+  <ConfigGroup title="LMP__FEATURES_PAGE0_Byte6" class="ucBitField">
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Extended_Inquiry_Response"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Sim_LE_BR_EDR_to_Same_Device_Ctrl"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Reserved_for_future_use_0_6_2"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Secure_Simple_Pairing"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Encapsulated_PDU"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Erroneous_Data_Reporting"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Non_flushable_Packet_Boundary_Flag"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Reserved_for_future_use_0_6_7"/>
+  </ConfigGroup>
+  <ConfigGroup title="LMP__FEATURES_PAGE0_Byte7" class="ucBitField">
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Link_Supervision_Timeout_Changed_Event"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Inquiry_TX_Power_Level"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Enhanced_Power_Control"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Reserved_for_future_use_0_7_3"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Reserved_for_future_use_0_7_4"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Reserved_for_future_use_0_7_5"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Reserved_for_future_use_0_7_6"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE0.Extended_features"/>
+  </ConfigGroup>
+  <!--<ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE0.Data0"/>-->
+  <!--<ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE0.Data1"/>-->
+  <!--<ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE0.Data2"/>-->
+  <!--<ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE0.Data3"/>-->
+  <!--<ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE0.Data4"/>-->
+  <!--<ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE0.Data5"/>-->
+  <!--<ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE0.Data6"/>-->
+  <!--<ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE0.Data7"/>-->
+</Page>

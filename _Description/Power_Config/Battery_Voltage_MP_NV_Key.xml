@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Battery Voltage(MP NV Key)" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Battery Voltage(MP NV Key)" scroll="both">
+  <ConfigGroup class="ucLayoutHorizontal">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Battery Setting"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucVoltageUpDown" id="id_65_vbat_initialbat_updown" min="3" max="4.5" visible="hidden">
+        <Parameter name="left_label" value="Initial Bat (Customized design)"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="200"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="VBATvoltageconfig_65.initialbat"/>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_65_vbat_lowbat_updown" min="3.1" max="4.5" visible="hidden">
+        <Parameter name="left_label" value="Low Bat (Customized design)"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="200"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="VBATvoltageconfig_65.lowbat"/>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_65_vbat_shutdownbat_updown" min="2.8" max="4.5">
+        <Parameter name="left_label" value="Initial bat/Shutdown Bat"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="200"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="VBATvoltageconfig_65.Shutdownbat"/>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Battery Life Percentage"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucVoltageUpDown" id="id_65_checkpoint1_updown" min="2.5" max="4.5">
+        <Parameter name="left_label" value="Battery Level 10%"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="140"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="VBATvoltageconfig_65.checkpoint1"/>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_65_checkpoint2_updown" min="2.5" max="4.5">
+        <Parameter name="left_label" value="Battery Level 20%"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="140"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="VBATvoltageconfig_65.checkpoint2"/>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_65_checkpoint3_updown" min="2.5" max="4.5">
+        <Parameter name="left_label" value="Battery Level 30%"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="140"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="VBATvoltageconfig_65.checkpoint3"/>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_65_checkpoint4_updown" min="2.5" max="4.5">
+        <Parameter name="left_label" value="Battery Level 40%"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="140"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="VBATvoltageconfig_65.checkpoint4"/>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_65_checkpoint5_updown" min="2.5" max="4.5">
+        <Parameter name="left_label" value="Battery Level 50%"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="140"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="VBATvoltageconfig_65.checkpoint5"/>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_65_checkpoint6_updown" min="2.5" max="4.5">
+        <Parameter name="left_label" value="Battery Level 60%"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="140"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="VBATvoltageconfig_65.checkpoint6"/>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_65_checkpoint7_updown" min="2.5" max="4.5">
+        <Parameter name="left_label" value="Battery Level 70%"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="140"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="VBATvoltageconfig_65.checkpoint7"/>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_65_checkpoint8_updown" min="2.5" max="4.5">
+        <Parameter name="left_label" value="Battery Level 80%"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="140"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="VBATvoltageconfig_65.checkpoint8"/>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_65_checkpoint9_updown" min="2.5" max="4.5">
+        <Parameter name="left_label" value="Battery Level 90%"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="140"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="VBATvoltageconfig_65.checkpoint9"/>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_65_checkpoint10_updown" min="2.5" max="4.5">
+        <Parameter name="left_label" value="Battery Level 100%"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="140"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="VBATvoltageconfig_65.rsv1"/>
+      </ConfigItem>
+    </ConfigGroup>
+    <!--<ConfigGroup class="ucLayoutHorizontal">
+      <Parameter name="top_label" value="Customized Battery Check Point"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="border" value="0"/>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint1_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 1"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint1"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint2_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 2"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint2"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint3_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 3"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint3"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint4_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 4"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint4"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint5_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 5"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint5"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint6_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 6"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint6"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint7_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 7"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint7"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint8_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 8"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint8"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint9_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 9"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint9"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint10_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 10"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint10"/>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="border" value="0"/>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint11_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 11"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint11"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint12_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 12"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint12"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint13_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 13"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint13"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint14_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 14"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint14"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint15_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 15"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint15"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint16_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 16"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint16"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint17_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 17"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint17"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint18_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 18"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint18"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint19_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 19"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint19"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_customizedCheckPoint20_updown" min="2.5" max="4.35">
+          <Parameter name="left_label" value="Check Point 20"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="110"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="BATTERY_CHECK_POINT.checkPoint20"/>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>-->
+  </ConfigGroup>
+</Page>

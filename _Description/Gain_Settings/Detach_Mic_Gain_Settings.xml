@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Detach Mic Gain Settings" class="Airoha.Project.ConfigTool.View.TabPage" parameter="Detach Mic Gain Settings">
+  <ConfigGroup title="Input" class="PurePage">
+    <Parameter name="required_nvkey_id" value="0xE037"/>
+    <ConfigGroup class="ucLayoutHorizontal">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="20"/>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="Detach Mic Input Gain"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucGainComboBox" id="id_detach_mic_digital_gain_cb">
+          <Parameter name="left_label" value="MIC0 Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_DETACH_MIC_GAIN_STRU.Ditach_MIC_Digital_Vol"/>
+        </ConfigItem>
+        
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_DETACH_MIC_GAIN_STRU.Ditach_MIC_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_detach_mic_digital_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+      
+    </ConfigGroup>
+  </ConfigGroup>
+
+</Page>

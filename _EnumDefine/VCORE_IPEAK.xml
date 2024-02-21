@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+  <Group Name="477 mA" Value="0"/>
+  <Group Name="518 mA" Value="1"/>
+  <Group Name="579 mA" Value="2"/>
+  <Group Name="663 mA" Value="3"/>
+  <Group Name="760 mA" Value="4"/>
+  <Group Name="855 mA" Value="5"/>
+  <Group Name="957 mA" Value="6"/>
+  <Group Name="1062 mA" Value="7"/>
+</DataGroup>

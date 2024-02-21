@@ -1,0 +1,721 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="AIO(MP NV Key)" class="Airoha.Project.ConfigTool.View.PurePage" parameter="AIO(MP NV Key)" scroll="both">
+  <ConfigGroup class="ucLayoutHorizontal">
+    <ConfigGroup class="ucLayoutHorizontal">
+      <Parameter name="top_label" value="AIO Selection Setting"/>
+      <Parameter name="left_width" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucAIOComboBox" id="AIO_1">
+        <Parameter name="aio_combo_number" value="1"/>
+        <Parameter name="left_label" value="AIO Select 1"/>
+        <Parameter name="left_width" value="90"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/AIO.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="AIO_select1"/>
+          <!--<Parameter name="AIO_select1" refId="id_AIO_select1_combo"/>
+                <Parameter name="AIO_select2" refId="id_AIO_select2_combo"/>
+                <Parameter name="AIO_select3" refId="id_AIO_select3_combo"/>
+                <Parameter name="AIO_select4" refId="id_AIO_select4_combo"/>-->
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucAIOComboBox" id="AIO_2">
+        <Parameter name="aio_combo_number" value="2"/>
+        <Parameter name="left_label" value="AIO Select 2"/>
+        <Parameter name="left_width" value="90"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/AIO.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="AIO_select2"/>
+          <!--<Parameter name="AIO_select1" refId="id_AIO_select1_combo"/>
+                <Parameter name="AIO_select2" refId="id_AIO_select2_combo"/>
+                <Parameter name="AIO_select3" refId="id_AIO_select3_combo"/>
+                <Parameter name="AIO_select4" refId="id_AIO_select4_combo"/>-->
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucAIOComboBox" id="AIO_3">
+        <Parameter name="aio_combo_number" value="3"/>
+        <Parameter name="left_label" value="AIO Select 3"/>
+        <Parameter name="left_width" value="90"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/AIO.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="AIO_select3"/>
+          <!--<Parameter name="AIO_select1" refId="id_AIO_select1_combo"/>
+                <Parameter name="AIO_select2" refId="id_AIO_select2_combo"/>
+                <Parameter name="AIO_select3" refId="id_AIO_select3_combo"/>
+                <Parameter name="AIO_select4" refId="id_AIO_select4_combo"/>-->
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucAIOComboBox" id="AIO_4">
+        <Parameter name="aio_combo_number" value="4"/>
+        <Parameter name="left_label" value="AIO Select 4"/>
+        <Parameter name="left_width" value="90"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/AIO.xml"/>
+        <Parameter name="Unique" value="/_EnumDefine/AIO.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="AIO_select4"/>
+          <!--<Parameter name="AIO_select1" refId="id_AIO_select1_combo"/>
+                <Parameter name="AIO_select2" refId="id_AIO_select2_combo"/>
+                <Parameter name="AIO_select3" refId="id_AIO_select3_combo"/>
+                <Parameter name="AIO_select4" refId="id_AIO_select4_combo"/>-->
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical"/>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutHorizontal">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="AIO1 Setting"/>
+      <Parameter name="left_width" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucUpDown" id="id_aio1_count_updown" min="0" max="10">
+        <Parameter name="left_label" value="AIO1 Count"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="AIO1calibrationtable.Cal_Count"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_aio1_count"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio1_voltage1_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="1"/>
+        <Parameter name="left_label" value="AIO1-Voltage1"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO1calibrationtable.Voltage1"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio1_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio1_voltage2_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="2"/>
+        <Parameter name="left_label" value="AIO1-Voltage2"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO1calibrationtable.Voltage2"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio1_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio1_voltage3_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="3"/>
+        <Parameter name="left_label" value="AIO1-Voltage3"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO1calibrationtable.Voltage3"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio1_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio1_voltage4_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="4"/>
+        <Parameter name="left_label" value="AIO1-Voltage4"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO1calibrationtable.Voltage4"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio1_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio1_voltage5_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="5"/>
+        <Parameter name="left_label" value="AIO1-Voltage5"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO1calibrationtable.Voltage5"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio1_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio1_voltage6_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="6"/>
+        <Parameter name="left_label" value="AIO1-Voltage6"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO1calibrationtable.Voltage6"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio1_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio1_voltage7_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="7"/>
+        <Parameter name="left_label" value="AIO1-Voltage7"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO1calibrationtable.Voltage7"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio1_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio1_voltage8_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="8"/>
+        <Parameter name="left_label" value="AIO1-Voltage8"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO1calibrationtable.Voltage8"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio1_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio1_voltage9_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="9"/>
+        <Parameter name="left_label" value="AIO1-Voltage9"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO1calibrationtable.Voltage9"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio1_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio1_voltage10_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="10"/>
+        <Parameter name="left_label" value="AIO1-Voltage10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO1calibrationtable.Voltage10"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio1_count_updown"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="AIO2 Setting"/>
+      <Parameter name="left_width" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucUpDown" id="id_aio2_count_updown" min="0" max="10">
+        <Parameter name="left_label" value="AIO2 Count"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="AIO2calibrationtable.Cal_Count"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_aio2_count"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio2_voltage1_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="1"/>
+        <Parameter name="left_label" value="AIO2-Voltage1"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO2calibrationtable.Voltage1"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio2_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio2_voltage2_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="2"/>
+        <Parameter name="left_label" value="AIO2-Voltage2"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO2calibrationtable.Voltage2"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio2_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio2_voltage3_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="3"/>
+        <Parameter name="left_label" value="AIO2-Voltage3"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO2calibrationtable.Voltage3"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio2_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio2_voltage4_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="4"/>
+        <Parameter name="left_label" value="AIO2-Voltage4"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO2calibrationtable.Voltage4"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio2_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio2_voltage5_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="5"/>
+        <Parameter name="left_label" value="AIO2-Voltage5"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO2calibrationtable.Voltage5"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio2_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio2_voltage6_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="6"/>
+        <Parameter name="left_label" value="AIO2-Voltage6"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO2calibrationtable.Voltage6"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio2_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio2_voltage7_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="7"/>
+        <Parameter name="left_label" value="AIO2-Voltage7"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO2calibrationtable.Voltage7"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio2_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio2_voltage8_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="8"/>
+        <Parameter name="left_label" value="AIO2-Voltage8"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO2calibrationtable.Voltage8"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio2_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio2_voltage9_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="9"/>
+        <Parameter name="left_label" value="AIO2-Voltage9"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO2calibrationtable.Voltage9"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio2_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio2_voltage10_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="10"/>
+        <Parameter name="left_label" value="AIO2-Voltage10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO2calibrationtable.Voltage10"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio2_count_updown"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="AIO3 Setting"/>
+      <Parameter name="left_width" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucUpDown" id="id_aio3_count_updown" min="0" max="10">
+        <Parameter name="left_label" value="AIO3 Count"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="AIO3calibrationtable.Cal_Count"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_aio3_count"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio3_voltage1_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="1"/>
+        <Parameter name="left_label" value="AIO3-Voltage1"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO3calibrationtable.Voltage1"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio3_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio3_voltage2_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="2"/>
+        <Parameter name="left_label" value="AIO3-Voltage2"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO3calibrationtable.Voltage2"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio3_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio3_voltage3_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="3"/>
+        <Parameter name="left_label" value="AIO3-Voltage3"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO3calibrationtable.Voltage3"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio3_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio3_voltage4_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="4"/>
+        <Parameter name="left_label" value="AIO3-Voltage4"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO3calibrationtable.Voltage4"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio3_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio3_voltage5_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="5"/>
+        <Parameter name="left_label" value="AIO3-Voltage5"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO3calibrationtable.Voltage5"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio3_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio3_voltage6_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="6"/>
+        <Parameter name="left_label" value="AIO3-Voltage6"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO3calibrationtable.Voltage6"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio3_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio3_voltage7_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="7"/>
+        <Parameter name="left_label" value="AIO3-Voltage7"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO3calibrationtable.Voltage7"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio3_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio3_voltage8_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="8"/>
+        <Parameter name="left_label" value="AIO3-Voltage8"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO3calibrationtable.Voltage8"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio3_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio3_voltage9_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="9"/>
+        <Parameter name="left_label" value="AIO3-Voltage9"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO3calibrationtable.Voltage9"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio3_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio3_voltage10_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="10"/>
+        <Parameter name="left_label" value="AIO3-Voltage10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO3calibrationtable.Voltage10"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio3_count_updown"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="AIO4 Setting"/>
+      <Parameter name="left_width" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucUpDown" id="id_aio4_count_updown" min="0" max="10">
+        <Parameter name="left_label" value="AIO4 Count"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="AIO4calibrationtable.Cal_Count"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_aio4_count"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio4_voltage1_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="1"/>
+        <Parameter name="left_label" value="AIO4-Voltage1"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO4calibrationtable.Voltage1"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio4_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio4_voltage2_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="2"/>
+        <Parameter name="left_label" value="AIO4-Voltage2"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO4calibrationtable.Voltage2"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio4_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio4_voltage3_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="3"/>
+        <Parameter name="left_label" value="AIO4-Voltage3"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO4calibrationtable.Voltage3"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio4_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio4_voltage4_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="4"/>
+        <Parameter name="left_label" value="AIO4-Voltage4"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO4calibrationtable.Voltage4"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio4_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio4_voltage5_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="5"/>
+        <Parameter name="left_label" value="AIO4-Voltage5"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO4calibrationtable.Voltage5"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio4_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio4_voltage6_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="6"/>
+        <Parameter name="left_label" value="AIO4-Voltage6"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO4calibrationtable.Voltage6"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio4_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio4_voltage7_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="7"/>
+        <Parameter name="left_label" value="AIO4-Voltage7"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO4calibrationtable.Voltage7"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio4_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio4_voltage8_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="8"/>
+        <Parameter name="left_label" value="AIO4-Voltage8"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO4calibrationtable.Voltage8"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio4_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio4_voltage9_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="9"/>
+        <Parameter name="left_label" value="AIO4-Voltage9"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO4calibrationtable.Voltage9"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio4_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_aio4_voltage10_updown" min="0" max="3.3">
+        <Parameter name="aio_number" value="10"/>
+        <Parameter name="left_label" value="AIO4-Voltage10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.001"/>
+        <Parameter name="unique" value="AIO4calibrationtable.Voltage10"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="aio" refId="id_aio4_count_updown"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="AIO1calibrationtable.AIOselect" id="AIO_select1" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="AIO_1"/>
+        <!--<Parameter name="AIO_select4" refId="id_AIO_select4_combo"/>
+              <Parameter name="AIO_select2" refId="id_AIO_select2_combo"/>
+              <Parameter name="AIO_select3" refId="id_AIO_select3_combo"/>
+              <Parameter name="AIO_select1" refId="id_AIO_select1_combo"/>-->
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.AIOselect" id="AIO_select2" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="AIO_2"/>
+        <!--<Parameter name="AIO_select4" refId="id_AIO_select4_combo"/>
+              <Parameter name="AIO_select2" refId="id_AIO_select2_combo"/>
+              <Parameter name="AIO_select3" refId="id_AIO_select3_combo"/>
+              <Parameter name="AIO_select1" refId="id_AIO_select1_combo"/>-->
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AIO3calibrationtable.AIOselect" id="AIO_select3" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="AIO_3"/>
+        <!--<Parameter name="AIO_select4" refId="id_AIO_select4_combo"/>
+              <Parameter name="AIO_select2" refId="id_AIO_select2_combo"/>
+              <Parameter name="AIO_select3" refId="id_AIO_select3_combo"/>
+              <Parameter name="AIO_select1" refId="id_AIO_select1_combo"/>-->
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AIO4calibrationtable.AIOselect" id="AIO_select4" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="AIO_4"/>
+        <!--<Parameter name="AIO_select4" refId="id_AIO_select4_combo"/>
+              <Parameter name="AIO_select2" refId="id_AIO_select2_combo"/>
+              <Parameter name="AIO_select3" refId="id_AIO_select3_combo"/>
+              <Parameter name="AIO_select1" refId="id_AIO_select1_combo"/>-->
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AIO1calibrationtable.Cal_Count" id="id_aio1_count" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_aio1_count_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.Cal_Count" id="id_aio2_count" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_aio2_count_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AIO3calibrationtable.Cal_Count" id="id_aio3_count" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_aio3_count_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AIO4calibrationtable.Cal_Count" id="id_aio4_count" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_aio4_count_updown"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

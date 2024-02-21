@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup> 
+	<Group Name="0DB" Value="0"/> 
+	<Group Name="3DB" Value="1"/> 
+	<Group Name="6DB" Value="2"/> 
+	<Group Name="9DB" Value="3"/> 
+	<Group Name="12DB" Value="4"/> 
+	<Group Name="15DB" Value="5"/> 
+	<Group Name="18DB" Value="6"/> 
+	<Group Name="21DB" Value="7"/> 
+	
+	<Group Name="24DB" Value="16"/> 
+	<Group Name="27DB" Value="17"/> 
+	<Group Name="30DB" Value="18"/> 
+	<Group Name="33DB" Value="19"/> 
+	<Group Name="36DB" Value="20"/> 
+	<Group Name="39DB" Value="21"/> 
+	<Group Name="42DB" Value="22"/> 
+	<Group Name="45DB" Value="23"/> 
+	<Group Name="48DB" Value="24"/> 
+</DataGroup>
+
+

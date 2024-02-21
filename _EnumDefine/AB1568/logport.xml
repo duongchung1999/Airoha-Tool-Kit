@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="UART0" Value="0"/>
+	<Group Name="UART1" Value="1"/>
+	<Group Name="UART2" Value="2"/>
+	<Group Name="USB-CDC1" Value="3"/>
+	<Group Name="USB-HID" Value="4"/>
+	<Group Name="AirAPP" Value="5"/>
+	<Group Name="Flash" Value="6"/>
+</DataGroup>

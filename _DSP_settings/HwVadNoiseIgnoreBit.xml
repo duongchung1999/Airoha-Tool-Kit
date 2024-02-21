@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup> 
+	<Group Name="0xFFFF0000" Value="1"/> 
+	<Group Name="0xFFF00000" Value="2"/> 
+	<Group Name="0xFF000000" Value="3"/> 
+	<Group Name="0xF0000000" Value="4"/> 
+</DataGroup>
+
+

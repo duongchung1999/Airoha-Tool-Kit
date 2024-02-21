@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<!-- <Group Name="non-smart cahrger(VBUS)" Value="0"/> -->
+	<!-- <Group Name="non-smart charger(VBUS_UART)" Value="1"/> -->
+	<Group Name="2pin 1-wire charger(VBUS_UART)" Value="2"/>
+<!-- 	<Group Name="3pin 1-wire charger(VBUS_UART)" Value="3"/>
+	<Group Name="vbus_pattern(VBUS)" Value="4"/> -->
+</DataGroup>

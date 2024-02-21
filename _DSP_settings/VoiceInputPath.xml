@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	
+	<Group Name="MIC_in" 	Value="1"/>
+	<Group Name="SPDIF_in" 	Value="8"/>
+	<Group Name="I2S_M_in" 	Value="2"/>
+	<Group Name="I2S_S_in" 	Value="4"/>
+	<Group Name="Disable" 	Value="0"/>
+
+	<!--<Group Name="AUDIO_HARDWARE_DISABLE" 		Value="0"/>
+	<Group Name="AUDIO_HARDWARE_PCM" 			Value="1"/>
+	<Group Name="AUDIO_HARDWARE_I2S_M" 			Value="2"/>
+	<Group Name="AUDIO_HARDWARE_I2S_S" 			Value="4"/>
+	<Group Name="AUDIO_HARDWARE_SPDIF" 			Value="8"/>
+	<Group Name="AUDIO_HARDWARE_CODEC" 			Value="16"/>
+	<Group Name="AUDIO_HARDWARE_DIGITAL_MIC" 	Value="32"/>
+	<Group Name="AUDIO_HARDWARE_MINI_DSP" 		Value="64"/>-->
+</DataGroup>

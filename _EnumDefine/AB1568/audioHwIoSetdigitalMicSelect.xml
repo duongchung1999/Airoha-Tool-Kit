@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="GPIO_DMIC0" Value="0"/>
+	<Group Name="GPIO_DMIC1" Value="1"/>
+	<Group Name="ANA_DMIC0" Value="2"/>
+	<Group Name="ANA_DMIC1" Value="3"/>
+	<Group Name="ANA_DMIC2" Value="4"/>
+	<Group Name="ANA_DMIC3" Value="5"/>
+</DataGroup>

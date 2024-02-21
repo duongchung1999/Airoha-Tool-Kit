@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Crystal_Trim_XO_32k_Config" class="Airoha.Project.ConfigTool.View.General" parameter="Crystal_Trim_XO_32k_Config">
+  <ConfigItem class="ucTextBox" Unique="Crystal.XO_32kCrystalTrimSpec"/>
+  <ConfigItem class="ucTextBox" Unique="Crystal.XO_32kCapValue"/>
+</Page>

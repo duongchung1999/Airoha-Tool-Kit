@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Dual_MIC_NR" class="Airoha.Project.ConfigTool.View.DspPage" parameter="Dual_MIC_NR">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucCpdInsAttUpDown" id="id_2mic_high_atten_goal_updown" max="16" min="0" disable="1">
+      <Parameter name="left_label" value="M2_HIGH_ATTEN_GOAL:"/>
+      <Parameter name="right_label" value="dB (0 ~ 16)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="unique" value="DSP_PARA_NR_STRU.M2_PD_HIGH_ATTEN_GOAL"/>
+    </ConfigItem>
+    <ConfigItem class="ucHighAttenDivideUpDown" id="id_2mic_high_atten_divide_updown" max="5000" min="3500" disable="1">
+      <Parameter name="left_label" value="NR_HIGH_ATTEN_DIVIDE:"/>
+      <Parameter name="right_label" value="Hz (3500 ~ 5000)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="1"/>
+      <Parameter name="unique" value="DSP_PARA_NR_STRU.NR_HIGH_ATTEN_DIVIDE"/>
+    </ConfigItem>
+    <ConfigItem class="ucDualMicNR" id="dual_mic_nr_uc">
+      <Parameter name="M2_MICDIST" refId="dual_mic_nr_M2_MICDIST"/>
+      <Parameter name="M2_OVER_SUPPRESS_FAC2" refId="dual_mic_nr_M2_OVER_SUPPRESS_FAC2"/>
+      <Parameter name="M2_WIND_THRD" refId="dual_mic_nr_M2_WIND_THRD"/>
+      <Parameter name="M2_WIND_TRANS" refId="dual_mic_nr_M2_WIND_TRANS"/>
+      <Parameter name="M2_WIND_BLOCK" refId="dual_mic_nr_M2_WIND_BLOCK"/>
+      <Parameter name="M2_FILTER_GRD" refId="dual_mic_nr_M2_FILTER_GRD"/>
+      <Parameter name="M2_DISTANCE_FAC" refId="dual_mic_nr_M2_DISTANCE_FAC"/>
+      <Parameter name="M2_VAD_THRD_1" refId="dual_mic_nr_M2_VAD_THRD_1"/>
+      <Parameter name="M2_VAD_THRD_2" refId="dual_mic_nr_M2_VAD_THRD_2"/>
+      <Parameter name="M2_VAD_THRD_3" refId="dual_mic_nr_M2_VAD_THRD_3"/>
+      <Parameter name="M2_VAD_THRD_4" refId="dual_mic_nr_M2_VAD_THRD_4"/>
+      <Parameter name="M2_VAD_THRD_12" refId="dual_mic_nr_M2_VAD_THRD_12"/>
+      <Parameter name="M2_VAD_THRD_22" refId="dual_mic_nr_M2_VAD_THRD_22"/>
+      <Parameter name="M2_VAD_THRD_32" refId="dual_mic_nr_M2_VAD_THRD_32"/>
+      <Parameter name="M2_VAD_THRD_42" refId="dual_mic_nr_M2_VAD_THRD_42"/>
+      <Parameter name="M2_VAD_THRD_13" refId="dual_mic_nr_M2_VAD_THRD_13"/>
+      <Parameter name="M2_VAD_THRD_23" refId="dual_mic_nr_M2_VAD_THRD_23"/>
+      <Parameter name="M2_VAD_THRD_33" refId="dual_mic_nr_M2_VAD_THRD_33"/>
+      <Parameter name="M2_VAD_THRD_43" refId="dual_mic_nr_M2_VAD_THRD_43"/>
+      <Parameter name="M2_NORM_FAC1" refId="dual_mic_nr_M2_NORM_FAC1"/>
+      <Parameter name="M2_PHASE_COMB" refId="dual_mic_nr_M2_PHASE_COMB"/>
+      <Parameter name="M2_PHASE_GAIN" refId="dual_mic_nr_M2_PHASE_GAIN"/>
+      <Parameter name="M2_NE_DURATION" refId="dual_mic_nr_M2_NE_DURATION"/>
+      <Parameter name="M2_BEAM1_NORM_LIMIT" refId="dual_mic_nr_M2_BEAM1_NORM_LIMIT"/>
+      <Parameter name="Band1Ratio" refId="dual_mic_nr_Band1Ratio"/>
+      <Parameter name="Band2Ratio" refId="dual_mic_nr_Band2Ratio"/>
+      <Parameter name="Band3Ratio" refId="dual_mic_nr_Band3Ratio"/>
+      <Parameter name="Band1_THRD_2H" refId="dual_mic_nr_Band1_THRD_2H"/>
+      <Parameter name="Band1_THRD_2L3H" refId="dual_mic_nr_Band1_THRD_2L3H"/>
+      <Parameter name="Band1_THRD_3L4H" refId="dual_mic_nr_Band1_THRD_3L4H"/>
+      <Parameter name="Band1_THRD_4L" refId="dual_mic_nr_Band1_THRD_4L"/>
+      <Parameter name="Band2_THRD_2H" refId="dual_mic_nr_Band2_THRD_2H"/>
+      <Parameter name="Band2_THRD_2L3H" refId="dual_mic_nr_Band2_THRD_2L3H"/>
+      <Parameter name="Band2_THRD_3L4H" refId="dual_mic_nr_Band2_THRD_3L4H"/>
+      <Parameter name="Band2_THRD_4L" refId="dual_mic_nr_Band2_THRD_4L"/>
+      <Parameter name="Band3_THRD_2H" refId="dual_mic_nr_Band3_THRD_2H"/>
+      <Parameter name="Band3_THRD_2L3H" refId="dual_mic_nr_Band3_THRD_2L3H"/>
+      <Parameter name="Band3_THRD_3L4H" refId="dual_mic_nr_Band3_THRD_3L4H"/>
+      <Parameter name="Band3_THRD_4L" refId="dual_mic_nr_Band3_THRD_4L"/>
+	  <Parameter name="M2_POW1_THRD1" refId="dual_mic_nr_M2_POW1_THRD1"/>
+	  <Parameter name="M2_POW1_THRD2" refId="dual_mic_nr_M2_POW1_THRD2"/>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutHorizontal" visible="hidden">
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucGetDualMicEcBtn" id="id_real_time_get_dual_mic_ec"/>
+    <ConfigItem class="ucResetDualMicEcBtn" id="id_real_time_reset_dual_mic_ec"/>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_MICDIST" Unique="DSP_PARA_NR_STRU.M2_MICDIST">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_MICDIST"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_WIND_THRD" Unique="DSP_PARA_NR_STRU.M2_WIND_THRD">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_WIND_THRD"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_WIND_TRANS" Unique="DSP_PARA_NR_STRU.M2_WIND_TRANS">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_WIND_TRANS"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_WIND_BLOCK" Unique="DSP_PARA_NR_STRU.M2_WIND_BLOCK">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_WIND_BLOCK"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_FILTER_GRD" Unique="DSP_PARA_NR_STRU.M2_FILTER_GRD">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_FILTER_GRD"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_DISTANCE_FAC" Unique="DSP_PARA_NR_STRU.M2_DISTANCE_FAC">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_DISTANCE_FAC"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_VAD_THRD_1" Unique="DSP_PARA_NR_STRU.M2_VAD_THRD_1">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_VAD_THRD_1"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_VAD_THRD_2" Unique="DSP_PARA_NR_STRU.M2_VAD_THRD_2">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_VAD_THRD_2"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_VAD_THRD_3" Unique="DSP_PARA_NR_STRU.M2_VAD_THRD_3">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_VAD_THRD_3"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_VAD_THRD_4" Unique="DSP_PARA_NR_STRU.M2_VAD_THRD_4">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_VAD_THRD_4"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_VAD_THRD_12" Unique="DSP_PARA_NR_STRU.M2_VAD_THRD_12">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_VAD_THRD_12"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_VAD_THRD_22" Unique="DSP_PARA_NR_STRU.M2_VAD_THRD_22">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_VAD_THRD_22"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_VAD_THRD_32" Unique="DSP_PARA_NR_STRU.M2_VAD_THRD_32">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_VAD_THRD_32"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_VAD_THRD_42" Unique="DSP_PARA_NR_STRU.M2_VAD_THRD_42">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_VAD_THRD_42"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_VAD_THRD_13" Unique="DSP_PARA_NR_STRU.M2_VAD_THRD_13">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_VAD_THRD_13"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_VAD_THRD_23" Unique="DSP_PARA_NR_STRU.M2_VAD_THRD_23">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_VAD_THRD_23"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_VAD_THRD_33" Unique="DSP_PARA_NR_STRU.M2_VAD_THRD_33">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_VAD_THRD_33"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_VAD_THRD_43" Unique="DSP_PARA_NR_STRU.M2_VAD_THRD_43">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_VAD_THRD_43"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_NORM_FAC1" Unique="DSP_PARA_NR_STRU.M2_NORM_FAC1">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_NORM_FAC1"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_PHASE_COMB" Unique="DSP_PARA_NR_STRU.M2_PHASE_COMB">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_PHASE_COMB"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_PHASE_GAIN" Unique="DSP_PARA_NR_STRU.M2_PHASE_GAIN">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_PHASE_GAIN"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_NE_DURATION" Unique="DSP_PARA_NR_STRU.M2_NE_DURATION">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_NE_DURATION"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_BEAM1_NORM_LIMIT" Unique="DSP_PARA_NR_STRU.M2_BEAM1_NORM_LIMIT">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_BEAM1_NORM_LIMIT"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_OVER_SUPPRESS_FAC2" Unique="DSP_PARA_NR_STRU.M2_OVER_SUPPRESS_FAC2">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dual_mic_nr_uc"/>
+        <Parameter name="key" value="M2_OVER_SUPPRESS_FAC2"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_BAND1_ALPHA" Unique="DSP_PARA_NR_STRU.M2_BAND1_ALPHA"/>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_BAND2_ALPHA" Unique="DSP_PARA_NR_STRU.M2_BAND2_ALPHA"/>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_BAND3_ALPHA" Unique="DSP_PARA_NR_STRU.M2_BAND3_ALPHA"/>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_BANDH_ALPHA" Unique="DSP_PARA_NR_STRU.M2_BANDH_ALPHA"/>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_PD_SEVERE_NOISE_THRD" Unique="DSP_PARA_NR_STRU.M2_PD_SEVERE_NOISE_THRD" disable="1"/>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_PD_HIGH_ATTEN_GOAL" Unique="DSP_PARA_NR_STRU.M2_PD_HIGH_ATTEN_GOAL" disable="1">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdInsAttAssociator">
+        <Parameter name="data" refId="id_2mic_high_atten_goal_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_NR_HIGH_ATTEN_DIVIDE" Unique="DSP_PARA_NR_STRU.NR_HIGH_ATTEN_DIVIDE" disable="1">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcHighAttenDivideAssociator">
+        <Parameter name="data" refId="id_2mic_high_atten_divide_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.M2_HF_NSG2_OVER"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.M2_DF_RATIO"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.M2_POW1_ALPHA"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.M2_POW1_UP_GAIN"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.M2_POW1_DOWN_GAIN"/>
+    <ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_POW1_THRD1" Unique="DSP_PARA_NR_STRU.M2_POW1_THRD1">
+	<Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+	  <Parameter name="data" refId="dual_mic_nr_uc"/>
+	  <Parameter name="key" value="M2_POW1_THRD1"/>
+	</Associator>
+	</ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" id="dual_mic_nr_M2_POW1_THRD2" Unique="DSP_PARA_NR_STRU.M2_POW1_THRD2">
+	<Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+	  <Parameter name="data" refId="dual_mic_nr_uc"/>
+	  <Parameter name="key" value="M2_POW1_THRD2"/>
+	</Associator>
+	</ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.M2_VAD3IN4"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.M2_POW1_VAD_RATIO"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.M2_DEEMPH_COEF_1"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.M2_DEEMPH_COEF_2"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.M2_DEEMPH_COEF_3"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.M2_BAND2_GAIN"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.M2_BAND3_GAIN"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.M2_BANDH_GAIN"/>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical" visible="hidden">
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" id="dual_mic_nr_Band1Ratio" Unique="UI_DSP_2MIC_TUNING_STRU.Band1Ratio">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+          <Parameter name="data" refId="dual_mic_nr_uc"/>
+          <Parameter name="key" value="Band1Ratio"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" id="dual_mic_nr_Band2Ratio" Unique="UI_DSP_2MIC_TUNING_STRU.Band2Ratio">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+          <Parameter name="data" refId="dual_mic_nr_uc"/>
+          <Parameter name="key" value="Band2Ratio"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" id="dual_mic_nr_Band3Ratio" Unique="UI_DSP_2MIC_TUNING_STRU.Band3Ratio">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+          <Parameter name="data" refId="dual_mic_nr_uc"/>
+          <Parameter name="key" value="Band3Ratio"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" id="dual_mic_nr_Band1_THRD_2H" Unique="UI_DSP_2MIC_TUNING_STRU.Band1_THRD_2H">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+          <Parameter name="data" refId="dual_mic_nr_uc"/>
+          <Parameter name="key" value="Band1_THRD_2H"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" id="dual_mic_nr_Band1_THRD_2L3H" Unique="UI_DSP_2MIC_TUNING_STRU.Band1_THRD_2L3H">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+          <Parameter name="data" refId="dual_mic_nr_uc"/>
+          <Parameter name="key" value="Band1_THRD_2L3H"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" id="dual_mic_nr_Band1_THRD_3L4H" Unique="UI_DSP_2MIC_TUNING_STRU.Band1_THRD_3L4H">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+          <Parameter name="data" refId="dual_mic_nr_uc"/>
+          <Parameter name="key" value="Band1_THRD_3L4H"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" id="dual_mic_nr_Band1_THRD_4L" Unique="UI_DSP_2MIC_TUNING_STRU.Band1_THRD_4L">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+          <Parameter name="data" refId="dual_mic_nr_uc"/>
+          <Parameter name="key" value="Band1_THRD_4L"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" id="dual_mic_nr_Band2_THRD_2H" Unique="UI_DSP_2MIC_TUNING_STRU.Band2_THRD_2H">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+          <Parameter name="data" refId="dual_mic_nr_uc"/>
+          <Parameter name="key" value="Band2_THRD_2H"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" id="dual_mic_nr_Band2_THRD_2L3H" Unique="UI_DSP_2MIC_TUNING_STRU.Band2_THRD_2L3H">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+          <Parameter name="data" refId="dual_mic_nr_uc"/>
+          <Parameter name="key" value="Band2_THRD_2L3H"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" id="dual_mic_nr_Band2_THRD_3L4H" Unique="UI_DSP_2MIC_TUNING_STRU.Band2_THRD_3L4H">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+          <Parameter name="data" refId="dual_mic_nr_uc"/>
+          <Parameter name="key" value="Band2_THRD_3L4H"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" id="dual_mic_nr_Band2_THRD_4L" Unique="UI_DSP_2MIC_TUNING_STRU.Band2_THRD_4L">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+          <Parameter name="data" refId="dual_mic_nr_uc"/>
+          <Parameter name="key" value="Band2_THRD_4L"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" id="dual_mic_nr_Band3_THRD_2H" Unique="UI_DSP_2MIC_TUNING_STRU.Band3_THRD_2H">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+          <Parameter name="data" refId="dual_mic_nr_uc"/>
+          <Parameter name="key" value="Band3_THRD_2H"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" id="dual_mic_nr_Band3_THRD_2L3H" Unique="UI_DSP_2MIC_TUNING_STRU.Band3_THRD_2L3H">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+          <Parameter name="data" refId="dual_mic_nr_uc"/>
+          <Parameter name="key" value="Band3_THRD_2L3H"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" id="dual_mic_nr_Band3_THRD_3L4H" Unique="UI_DSP_2MIC_TUNING_STRU.Band3_THRD_3L4H">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+          <Parameter name="data" refId="dual_mic_nr_uc"/>
+          <Parameter name="key" value="Band3_THRD_3L4H"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" id="dual_mic_nr_Band3_THRD_4L" Unique="UI_DSP_2MIC_TUNING_STRU.Band3_THRD_4L">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+          <Parameter name="data" refId="dual_mic_nr_uc"/>
+          <Parameter name="key" value="Band3_THRD_4L"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

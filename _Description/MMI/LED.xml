@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="LED" class="Airoha.Project.ConfigTool.View.General" parameter="LED">
+    <ConfigItem class="AB1568.ucLedStyle_AB1568" Unique="LED_PATTERN_STRU.LED_SETTING_STRU.BG" id="LedBgNum">
+		<Parameter name="LedType" value="LED_PATTERN_STRU.LED_SETTING_STRU.BG"/>
+	</ConfigItem>
+	<ConfigItem class="ucPictureBox" Unique="picLedStyle">
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="top_margin" value="25"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="img" value="155x_LED_pattern.png"/>
+		<Parameter name="img_title" value="LED Pattern"/>
+	</ConfigItem>
+</Page>

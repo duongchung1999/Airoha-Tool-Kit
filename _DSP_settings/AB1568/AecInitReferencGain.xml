@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup> 
+	<Group Name="default">
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.CH1_REF_GAIN" value="00A0" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.CH2_REF_GAIN" value="00A0" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.CH3_REF_GAIN" value="00A0" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.CH4_REF_GAIN" value="00A0" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.CH1_REF2_GAIN" value="00A0" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.CH2_REF2_GAIN" value="00A0" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.CH3_REF2_GAIN" value="00A0" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.CH4_REF2_GAIN" value="00A0" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.IE_CH1_REF_GAIN" value="00A0" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.IE_CH2_REF_GAIN" value="00A0" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.IE_CH3_REF_GAIN" value="00A0" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.IE_CH4_REF_GAIN" value="00A0" /> 
+	</Group>
+	<Group Name="speaker">
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.CH1_REF_GAIN" value="0100" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.CH2_REF_GAIN" value="0100" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.CH3_REF_GAIN" value="0100" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.CH4_REF_GAIN" value="0100" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.CH1_REF2_GAIN" value="0100" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.CH2_REF2_GAIN" value="0100" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.CH3_REF2_GAIN" value="0100" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.CH4_REF2_GAIN" value="0100" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.IE_CH1_REF_GAIN" value="0100" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.IE_CH2_REF_GAIN" value="0100" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.IE_CH3_REF_GAIN" value="0100" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.IE_CH4_REF_GAIN" value="0100" /> 
+	</Group>
+</DataGroup>
+
+

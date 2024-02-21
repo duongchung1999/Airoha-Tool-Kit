@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="1+1_Pre_set_0">
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_main_type" value="0002" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_main_alpha" value="599A" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_main_alpha_1" value="2665" />
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_type" value="0002" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_alpha" value="599A" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_alpha_1" value="2665" /> 
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_ENG_POW_INIT" value="DC00" />
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_main_nest_decay" value="79999A00" />
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_main_nest_decay1" value="7FFFFF00" /> 
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_main_nest_over_est" value="33333300" /> 
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_main_nest_over_est1" value="66666600" />
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_decay" value="7FFFFF00" /> 
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_decay1" value="7FFFFF00" /> 
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_over_est" value="33333300" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_over_est1" value="33333300" />
+	</Group>
+	
+	<Group Name="1+1_Pre_set_1">
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_main_type" value="0002" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_main_alpha" value="7333" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_main_alpha_1" value="0CCC" />
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_type" value="0002" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_alpha" value="7333" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_alpha_1" value="0CCC" /> 
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_ENG_POW_INIT" value="E600" />
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_main_nest_decay" value="79999A00" />
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_main_nest_decay1" value="7FFFFF00" /> 
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_main_nest_over_est" value="33333300" /> 
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_main_nest_over_est1" value="66666600" />
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_decay" value="7FFFFF00" /> 
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_decay1" value="7FFFFF00" /> 
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_over_est" value="33333300" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_over_est1" value="33333300" />
+	</Group>  
+	
+	<Group Name="1+1_Pre_set_2">
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_main_type" value="0002" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_main_alpha" value="7D71" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_main_alpha_1" value="028E" />
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_type" value="0000" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_alpha" value="7D71" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_alpha_1" value="028E" /> 
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_ENG_POW_INIT" value="EC00" />
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_main_nest_decay" value="79999A00" />
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_main_nest_decay1" value="7FFFFF00" /> 
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_main_nest_over_est" value="33333300" /> 
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_main_nest_over_est1" value="66666600" />
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_decay" value="7FFFFF00" /> 
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_decay1" value="7FFFFF00" /> 
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_over_est" value="33333300" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_over_est1" value="33333300" />
+	</Group> 
+	
+	<Group Name="2+1_Pre_set_0">
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_alpha" value="33333300" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_over_est" value="199A0000" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_ENG_POW_INIT" value="DC00" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_ENG_VAD_THR" value="0C00" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_ENG_VAD_HANG" value="0009" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_en_pre_emp" value="00E2" />
+	</Group>
+	
+	<Group Name="2+1_Pre_set_1">
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_alpha" value="06666666" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_over_est" value="00000000" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_ENG_POW_INIT" value="E200" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_ENG_VAD_THR" value="0C00" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_ENG_VAD_HANG" value="0009" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_en_pre_emp" value="04E2" />
+	</Group>  
+	
+	<Group Name="2+1_Pre_set_2">
+      <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_alpha" value="66666600" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_over_est" value="199A0000" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_ENG_POW_INIT" value="E800" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_ENG_VAD_THR" value="0C00" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_ENG_VAD_HANG" value="0009" />
+	  <Data Unique="DSP_PARA_INEAR_STRU.IE_en_pre_emp" value="04E2" />
+	</Group> 
+</DataGroup>

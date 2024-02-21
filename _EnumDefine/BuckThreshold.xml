@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+  <Group Name="Heavy" Value="0"/>
+  <Group Name="Light" Value="3"/>
+</DataGroup>

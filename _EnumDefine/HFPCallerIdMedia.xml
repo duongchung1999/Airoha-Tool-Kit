@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="APP_HFP_IMG_MEDIA_NONE" Value="0"/>
+	<Group Name="APP_HFP_IMG_MEDIA_VP" Value="1"/>
+	<Group Name="APP_HFP_IMG_MEDIA_CALLER_NAME" Value="2"/>
+	<Group Name="APP_HFP_IMG_MEDIA_CALLER_ID" Value="3"/>
+	<Group Name="APP_HFP_IMG_MEDIA_RINGTONE" Value="4"/>
+</DataGroup>

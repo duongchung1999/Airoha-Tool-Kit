@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="VBATADCcalibrationtable" class="Airoha.Project.ConfigTool.View.General" parameter="VBATADCcalibrationtable">
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.Kflag"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.Cal_Count"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.Voltage1"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.ADC1"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.Voltage2"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.ADC2"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.Voltage3"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.ADC3"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.Voltage4"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.ADC4"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.Voltage5"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.ADC5"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.Voltage6"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.ADC6"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.Voltage7"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.ADC7"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.Voltage8"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.ADC8"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.Voltage9"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.ADC9"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.Voltage10"/>
+  <ConfigItem class="ucTextBox" Unique="VBATADCcalibrationtable.ADC10"/>
+</Page>

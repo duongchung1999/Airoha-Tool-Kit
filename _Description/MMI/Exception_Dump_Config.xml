@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Exception_Config" class="Airoha.Project.ConfigTool.View.General" parameter="Exception_Config">
+  <ConfigGroup title="Exception Config" class="ucBitField">
+    <ConfigItem class="AB1568.ucCheckBoxExceptionDumpMode" Unique="exception_dump_bits_config_t.dump_config0.exception_dummy_dump_mode" id="id_dump_dump_mode0" name="Dump mode"/>
+	<ConfigItem class="AB1568.ucCheckBoxExceptionDump" Unique="exception_dump_bits_config_t.dump_config0.exception_fulldump_binary" id="id_mem_binary_dump0" name="Full dump binary">
+	  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+	    <Parameter name="data" refId="id_mem_no_dump0"/>
+	  </Associator>
+	</ConfigItem>
+	<ConfigItem class="AB1568.ucCheckBoxExceptionDump" Unique="exception_dump_bits_config_t.dump_config0.exception_fulldump_text" id="id_mem_text_dump0" name="Full dump text">
+	  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+	    <Parameter name="data" refId="id_mem_no_dump0"/>
+	  </Associator>
+	</ConfigItem>
+	<ConfigItem class="AB1568.ucCheckBoxExceptionDump" Unique="exception_dump_bits_config_t.dump_config0.exception_minidump" id="id_minidump0" name="Mini dump">
+	  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+	    <Parameter name="data" refId="id_mem_no_dump0"/>
+	  </Associator>
+	</ConfigItem>
+    <ConfigItem class="AB1568.ucCheckBoxExceptionNoDump" Unique="exception_dump_bits_config_t.dump_config0.exception_no_dump" id="id_mem_no_dump0" name="No dump">
+	  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+	    <Parameter name="data" refId="id_dump_dump_mode0"/>
+	  </Associator>
+	</ConfigItem>
+	
+	<ConfigItem class="ucCheckBox" Unique="exception_dump_bits_config_t.dump_config0.reset_after_dump" id="id_reboot_after_dump0" name="Reset after dump"/>
+    <ConfigItem class="ucCheckBox" Unique="exception_dump_bits_config_t.dump_config0.wdt_reset_mode" id="id_dump_wdt_config_reset_mode0" name="WDT configure as reset mode"/>
+    <ConfigItem class="ucCheckBox" Unique="exception_dump_bits_config_t.dump_config0.mask_irq_check_assert" id="id_dump_mask_irq_assert_bypass0" name="Mask irq too long assert"/>
+  </ConfigGroup>
+  
+  <ConfigGroup title="Dump Config1" class="ucBitField" visible="hidden">
+    <ConfigItem class="ucCheckBox" Unique="exception_dump_bits_config_t.dump_config1.exception_dummy_dump_mode">
+	  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+	    <Parameter name="data" refId="id_dump_dump_mode0"/>
+	  </Associator>
+	</ConfigItem>
+	<ConfigItem class="ucCheckBox" Unique="exception_dump_bits_config_t.dump_config1.exception_fulldump_binary">
+	  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+	    <Parameter name="data" refId="id_mem_binary_dump0"/>
+	  </Associator>
+	</ConfigItem>
+	<ConfigItem class="ucCheckBox" Unique="exception_dump_bits_config_t.dump_config1.exception_fulldump_text">
+	  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+	    <Parameter name="data" refId="id_mem_text_dump0"/>
+	  </Associator>
+	</ConfigItem>
+	<ConfigItem class="ucCheckBox" Unique="exception_dump_bits_config_t.dump_config1.exception_minidump">
+	  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+	    <Parameter name="data" refId="id_minidump0"/>
+	  </Associator>
+	</ConfigItem>
+    <ConfigItem class="ucCheckBox" Unique="exception_dump_bits_config_t.dump_config1.exception_no_dump">
+	  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+	    <Parameter name="data" refId="id_mem_no_dump0"/>
+	  </Associator>
+	</ConfigItem>
+	<ConfigItem class="ucCheckBox" Unique="exception_dump_bits_config_t.dump_config1.reset_after_dump">
+	  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+	    <Parameter name="data" refId="id_reboot_after_dump0"/>
+	  </Associator>
+	</ConfigItem>
+    <ConfigItem class="ucCheckBox" Unique="exception_dump_bits_config_t.dump_config1.wdt_reset_mode">
+	  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+	    <Parameter name="data" refId="id_dump_wdt_config_reset_mode0"/>
+	  </Associator>
+	</ConfigItem>
+    <ConfigItem class="ucCheckBox" Unique="exception_dump_bits_config_t.dump_config1.mask_irq_check_assert">
+	  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+	    <Parameter name="data" refId="id_dump_mask_irq_assert_bypass0"/>
+	  </Associator>
+	</ConfigItem>
+  </ConfigGroup>
+</Page>

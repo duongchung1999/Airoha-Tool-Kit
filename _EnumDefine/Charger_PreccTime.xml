@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+  <Group Name="30 mins" Value="0"/>
+  <Group Name="60 mins" Value="1"/>
+  <Group Name="120 mins" Value="2"/>
+  <Group Name="240 mins" Value="3"/>
+</DataGroup>

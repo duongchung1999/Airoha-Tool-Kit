@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="None" Value="0"/>
+	<Group Name="CH0 (RTC_GPIO0)" Value="1"/>
+	<Group Name="CH1 (GPIO1)" Value="2"/>
+	<Group Name="CH2 (GPIO2)" Value="4"/>
+	<Group Name="CH3 (GPIO3)" Value="8"/>
+</DataGroup>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="DRIVE_eMMC" Value="0"/>
+	<!--<Group Name="DRIVE_USB" Value="1"/>
+	<Group Name="DRIVE_INTERNAL_FLASH" Value="2"/>-->
+	<Group Name="DRIVE_SD_CARD" Value="3"/>
+</DataGroup>

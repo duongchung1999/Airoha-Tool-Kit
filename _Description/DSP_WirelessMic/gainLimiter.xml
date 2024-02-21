@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Gain_Limiter" class="Airoha.Project.ConfigTool.View.DspPage" parameter="Gain_Limiter" scroll="vertical">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucComboBox" id="id_mix_band_combo">
+      <Parameter name="left_label" value="DRC Band"/>
+      <Parameter name="width" value="60"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/DrcBand.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcBitAssociator">
+        <Parameter name="data" refId="id_mix_band"/>
+        <Parameter name="position" value="0"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucA2dpFreqComboBox" id="id_mix_dbb_freq_cb_for_init">
+      <Parameter name="left_label" value="Crossover Freq."/>
+      <Parameter name="width" value="60"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_DSP_settings/A2dpDBB.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcBitAssociator">
+        <Parameter name="data" refId="id_mix_band"/>
+        <Parameter name="position" value="0"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="A2dpCpdTabPage" id="id_mix_drc_dbb_tab">
+    <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+      <Parameter name="drc" refId="id_mix_band"/>
+    </Associator>
+    <ConfigGroup title="High(Single) Band DRC" class="PurePage" parameter="High Band DRC">
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="border" value="1"/>
+        <ConfigGroup class="ucLayoutHorizontal">
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <ConfigGroup class="ucLayoutVertical">
+            <ConfigItem class="ucA2dpAtkTimeUpDown" id="id_mix_sband_atk_time_44K_updown" max="500" min="0">
+              <Parameter name="top_label" value="Attack Time:"/>
+              <Parameter name="bottom_label" value="(0 ~ 500 ms)"/>
+              <Parameter name="left_margin" value="10"/>
+              <Parameter name="right_margin" value="10"/>
+              <Parameter name="top_margin" value="10"/>
+              <Parameter name="width" value="80"/>
+              <Parameter name="step" value="0.1"/>
+              <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUH_alpha_attack_44K"/>
+              <Parameter name="ref_unique_sr" value="UI_DSP_PERIOD_SAMPLINGRATE_STRU.LineIN_HighBand_SR"/>
+            </ConfigItem>
+          </ConfigGroup>
+          <ConfigGroup class="ucLayoutVertical">
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcLayoutHideAssociator">
+              <Parameter name="target_data" value="44100"/>
+              <Parameter name="data" refId="id_mix_dband_H_samplingRate_tb"/>
+            </Associator>
+            <ConfigItem class="ucA2dpReleaseTimeUpDown" id="id_mix_sband_release_time_1_44K_updown" max="2000" min="9.4">
+              <Parameter name="top_label" value="Release Time 1:"/>
+              <Parameter name="bottom_label" value="(9.4 ~ 2000 ms)"/>
+              <Parameter name="width" value="80"/>
+              <Parameter name="step" value="0.1"/>
+              <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUH_alpha_release1_44K"/>
+              <Parameter name="ref_unique_sr" value="UI_DSP_PERIOD_SAMPLINGRATE_STRU.LineIN_HighBand_SR"/>
+            </ConfigItem>
+            <ConfigItem class="ucA2dpReleaseTimeUpDown" id="id_mix_sband_release_time_2_44K_updown" max="2000" min="9.4">
+              <Parameter name="top_margin" value="10"/>
+              <Parameter name="top_label" value="Release Time 2:"/>
+              <Parameter name="bottom_label" value="(9.4 ~ 2000 ms)"/>
+              <Parameter name="width" value="80"/>
+              <Parameter name="step" value="0.1"/>
+              <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUH_alpha_release2_44K"/>
+              <Parameter name="ref_unique_sr" value="UI_DSP_PERIOD_SAMPLINGRATE_STRU.LineIN_HighBand_SR"/>
+            </ConfigItem>
+            <ConfigItem class="ucA2dpReleaseTimeUpDown" id="id_mix_sband_release_time_3_44K_updown" max="2000" min="9.4">
+              <Parameter name="top_margin" value="10"/>
+              <Parameter name="top_label" value="Release Time 3:"/>
+              <Parameter name="bottom_label" value="(9.4 ~ 2000 ms)"/>
+              <Parameter name="width" value="80"/>
+              <Parameter name="step" value="0.1"/>
+              <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUH_alpha_release3_44K"/>
+              <Parameter name="ref_unique_sr" value="UI_DSP_PERIOD_SAMPLINGRATE_STRU.LineIN_HighBand_SR"/>
+            </ConfigItem>
+          </ConfigGroup>
+          <ConfigGroup class="ucLayoutVertical">
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <ConfigGroup class="ucLayoutHorizontal">
+              <ConfigItem class="ucA2dpThresholdUpDown" id="id_mix_sband_threshold_1_updown" max="-1" min="-138">
+                <Parameter name="top_label" value="Threshold 1:"/>
+                <Parameter name="bottom_label" value="(-138 ~ -1 dBFS)"/>
+                <Parameter name="left_margin" value="5"/>
+                <Parameter name="width" value="80"/>
+                <Parameter name="step" value="0.1"/>
+                <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUH_CPD_THRD"/>
+              </ConfigItem>
+            </ConfigGroup>
+            <ConfigGroup class="ucLayoutHorizontal">
+              <Parameter name="top_margin" value="10"/>
+              <ConfigItem class="ucA2dpThresholdUpDown" id="id_mix_sband_threshold_2_updown" max="-1" min="-138">
+                <Parameter name="top_label" value="Threshold 2:"/>
+                <Parameter name="bottom_label" value="(-138 ~ -1 dBFS)"/>
+                <Parameter name="left_margin" value="5"/>
+                <Parameter name="width" value="80"/>
+                <Parameter name="step" value="0.1"/>
+                <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUH_level_two"/>
+              </ConfigItem>
+            </ConfigGroup>
+            <ConfigGroup class="ucLayoutHorizontal">
+              <Parameter name="top_margin" value="10"/>
+              <ConfigItem class="ucA2dpThresholdUpDown" id="id_mix_sband_threshold_3_updown" max="-1" min="-138">
+                <Parameter name="top_label" value="Threshold 3:"/>
+                <Parameter name="bottom_label" value="(-138 ~ -1 dBFS)"/>
+                <Parameter name="left_margin" value="5"/>
+                <Parameter name="width" value="80"/>
+                <Parameter name="step" value="0.1"/>
+                <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUH_level_three"/>
+              </ConfigItem>
+            </ConfigGroup>
+          </ConfigGroup>
+          <ConfigGroup class="ucLayoutVertical">
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <ConfigGroup class="ucLayoutHorizontal">
+              <ConfigItem class="ucA2dpMaxOutputUpDown" id="id_mix_sband_max_output_updown" max="0" min="-138">
+                <Parameter name="top_label" value="Max.Output:"/>
+                <Parameter name="bottom_label" value="(-138 ~ 0 dBFS)"/>
+                <Parameter name="left_margin" value="5"/>
+                <Parameter name="width" value="80"/>
+                <Parameter name="step" value="0.1"/>
+                <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUH_out_max"/>
+              </ConfigItem>
+            </ConfigGroup>
+          </ConfigGroup>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="border" value="1"/>
+        <ConfigGroup class="ucLayoutHorizontal">
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <ConfigItem class="ucA2dpInsThrdUpDown" id="id_mix_sband_ins_thrd_updown" max="-1" min="-138">
+            <Parameter name="top_label" value="INS Threshold:"/>
+            <Parameter name="bottom_label" value="dB (-138~-1)"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="width" value="80"/>
+            <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUX_INS_thrd"/>
+          </ConfigItem>
+          <ConfigItem class="ucCpdInsAttUpDown" id="id_mix_sband_ins_atten_updown" min="0" max="90">
+            <Parameter name="top_label" value="INS Attenuation:"/>
+            <Parameter name="bottom_label" value="dB (0~90)"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="width" value="80"/>
+            <Parameter name="step" value="0.1"/>
+            <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUX_INS_atten"/>
+          </ConfigItem>
+          <ConfigItem class="ucDspDecimalUpDown" id="id_mix_sband_ins_alpha_updown" min="0" max="32767">
+            <Parameter name="top_label" value="INS Alpha"/>
+            <Parameter name="bottom_label" value="(0~32767)"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="step" value="1"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_mix_sband_ins_alpha_tb"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <ConfigGroup class="ucLiveChart" id="id_mix_drc_chart">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_mix_sband_threshold_1_updown"/>
+          </Associator>
+          <Parameter name="x_axis_type" value="decimal"/>
+          <Parameter name="layout_column_weight" value="1"/>
+          <Parameter name="x_axis_title" value="Input (dBFS)"/>
+          <Parameter name="y_axis_title" value="Output (dBFS)"/>
+          <Parameter name="y_axis_max_value" value="0"/>
+          <Parameter name="y_axis_min_value" value="-100"/>
+          <Parameter name="x_axis_max_value" value="0"/>
+          <Parameter name="x_axis_min_value" value="-100"/>
+          <Parameter name="x_axis_step" value="10"/>
+          <Parameter name="y_axis_step" value="10"/>
+          <ConfigItem class="line" id="id_mix_drc_chart_line">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcDrcAssociator">
+              <Parameter name="threshold" refId="id_mix_sband_threshold_1_updown"/>
+              <Parameter name="max_output" refId="id_mix_sband_max_output_updown"/>
+              <Parameter name="a2dp_digital_gain_table" refId="id_line_digital_output_gain_table"/>
+              <Parameter name="it" refId="id_mix_sband_ins_thrd_updown"/>
+              <Parameter name="ia" refId="id_mix_sband_ins_atten_updown"/>
+              <Parameter name="typeStr" refId="id_mix_band_combo"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical" visible="hidden">
+        <Parameter name="left_margin" value="10"/>
+        <ConfigGroup class="General">
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.ENABLE" visible="hidden"/>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.REVISION" visible="hidden"/>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.CPD_AU_MODE" id="id_mix_band" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcFlagAssociator">
+              <Parameter name="flag" refId="id_mix_band_combo"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.CPD_AU_DELAY_SIZE" visible="hidden"/>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.CPD_PACKET_MAX" visible="hidden"/>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUH_alpha_release1_44K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpReleaseTimeAssociator">
+              <Parameter name="data" refId="id_mix_sband_release_time_1_44K_updown"/>
+              <Parameter name="sr" value="44100"/>
+              <Parameter name="band" value="HighBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUH_alpha_release2_44K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpReleaseTimeAssociator">
+              <Parameter name="data" refId="id_mix_sband_release_time_2_44K_updown"/>
+              <Parameter name="sr" value="44100"/>
+              <Parameter name="band" value="HighBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUH_alpha_release3_44K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpReleaseTimeAssociator">
+              <Parameter name="data" refId="id_mix_sband_release_time_3_44K_updown"/>
+              <Parameter name="sr" value="44100"/>
+              <Parameter name="band" value="HighBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUH_alpha_attack_44K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpAtkTimeAssociator">
+              <Parameter name="data" refId="id_mix_sband_atk_time_44K_updown"/>
+              <Parameter name="sr" value="44100"/>
+              <Parameter name="band" value="HighBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUH_alpha_release1_48K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpReleaseTimeAssociator">
+              <Parameter name="data" refId="id_mix_sband_release_time_1_44K_updown"/>
+              <Parameter name="sr" value="48000"/>
+              <Parameter name="band" value="HighBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUH_alpha_release2_48K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpReleaseTimeAssociator">
+              <Parameter name="data" refId="id_mix_sband_release_time_2_44K_updown"/>
+              <Parameter name="sr" value="48000"/>
+              <Parameter name="band" value="HighBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUH_alpha_release3_48K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpReleaseTimeAssociator">
+              <Parameter name="data" refId="id_mix_sband_release_time_3_44K_updown"/>
+              <Parameter name="sr" value="48000"/>
+              <Parameter name="band" value="HighBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUH_alpha_attack_48K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpAtkTimeAssociator">
+              <Parameter name="data" refId="id_mix_sband_atk_time_44K_updown"/>
+              <Parameter name="sr" value="48000"/>
+              <Parameter name="band" value="HighBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUH_alpha_release1_96K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpReleaseTimeAssociator">
+              <Parameter name="data" refId="id_mix_sband_release_time_1_44K_updown"/>
+              <Parameter name="sr" value="96000"/>
+              <Parameter name="band" value="HighBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUH_alpha_release2_96K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpReleaseTimeAssociator">
+              <Parameter name="data" refId="id_mix_sband_release_time_2_44K_updown"/>
+              <Parameter name="sr" value="96000"/>
+              <Parameter name="band" value="HighBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUH_alpha_release3_96K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpReleaseTimeAssociator">
+              <Parameter name="data" refId="id_mix_sband_release_time_3_44K_updown"/>
+              <Parameter name="sr" value="96000"/>
+              <Parameter name="band" value="HighBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUH_alpha_attack_96K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpAtkTimeAssociator">
+              <Parameter name="data" refId="id_mix_sband_atk_time_44K_updown"/>
+              <Parameter name="sr" value="96000"/>
+              <Parameter name="band" value="HighBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUH_CPD_THRD" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdThresholdAssociator">
+              <Parameter name="data" refId="id_mix_sband_threshold_1_updown"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUH_level_two" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdThresholdAssociator">
+              <Parameter name="data" refId="id_mix_sband_threshold_2_updown"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUH_level_three" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdThresholdAssociator">
+              <Parameter name="data" refId="id_mix_sband_threshold_3_updown"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUH_out_max" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdMaxOutputAssociator">
+              <Parameter name="data" refId="id_mix_sband_max_output_updown"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.band_sw" visible="hidden"/>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.silence_th" visible="hidden"/>
+          <ConfigItem class="ucTextBox" Unique="DSP_PARA_MIX_CPD_STRU.AUH_period" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpPeriodAssociator">
+              <Parameter name="sr" refId="id_mix_dband_H_samplingRate_tb"/>
+              <Parameter name="band" value="HighBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUX_INS_thrd" id="id_mix_sband_ins_thrd_tb" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpInsThrdAssociator">
+              <Parameter name="data" refId="id_mix_sband_ins_thrd_updown"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUX_INS_atten" id="id_mix_sband_ins_atten_tb" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdInsAttAssociator">
+              <Parameter name="data" refId="id_mix_sband_ins_atten_updown"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUX_INS_alpha" id="id_mix_sband_ins_alpha_tb" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_mix_sband_ins_alpha_updown"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup title="Low Band" class="PurePage" parameter="Low Band">
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="border" value="1"/>
+        <ConfigGroup class="ucLayoutHorizontal">
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="bottom_margin" value="20"/>
+          <ConfigGroup class="ucLayoutVertical">
+            <ConfigItem class="ucA2dpAtkTimeUpDown" id="id_mix_dband_L_atk_time_44K_updown" max="500" min="0">
+              <Parameter name="top_label" value="Attack Time:"/>
+              <Parameter name="bottom_label" value="(0 ~ 500 ms)"/>
+              <Parameter name="left_margin" value="10"/>
+              <Parameter name="right_margin" value="10"/>
+              <Parameter name="top_margin" value="10"/>
+              <Parameter name="width" value="80"/>
+              <Parameter name="step" value="0.1"/>
+              <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUL_alpha_attack_44K"/>
+              <Parameter name="ref_unique_sr" value="UI_DSP_PERIOD_SAMPLINGRATE_STRU.LineIN_LowBand_SR"/>
+            </ConfigItem>
+          </ConfigGroup>
+          <ConfigGroup class="ucLayoutVertical">
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <ConfigItem class="ucA2dpReleaseTimeUpDown" id="id_mix_dband_L_release_time_1_44K_updown" max="2000" min="9.4">
+              <Parameter name="top_label" value="Release Time 1:"/>
+              <Parameter name="bottom_label" value="(9.4 ~ 2000 ms)"/>
+              <Parameter name="width" value="80"/>
+              <Parameter name="step" value="0.1"/>
+              <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUL_alpha_release1_44K"/>
+              <Parameter name="ref_unique_sr" value="UI_DSP_PERIOD_SAMPLINGRATE_STRU.LineIN_LowBand_SR"/>
+            </ConfigItem>
+            <ConfigItem class="ucA2dpReleaseTimeUpDown" id="id_mix_dband_L_release_time_2_44K_updown" max="2000" min="9.4">
+              <Parameter name="top_margin" value="10"/>
+              <Parameter name="top_label" value="Release Time 2:"/>
+              <Parameter name="bottom_label" value="(9.4 ~ 2000 ms)"/>
+              <Parameter name="width" value="80"/>
+              <Parameter name="step" value="0.1"/>
+              <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUL_alpha_release2_44K"/>
+              <Parameter name="ref_unique_sr" value="UI_DSP_PERIOD_SAMPLINGRATE_STRU.LineIN_LowBand_SR"/>
+            </ConfigItem>
+            <ConfigItem class="ucA2dpReleaseTimeUpDown" id="id_mix_dband_L_release_time_3_44K_updown" max="2000" min="9.4">
+              <Parameter name="top_margin" value="10"/>
+              <Parameter name="top_label" value="Release Time 3:"/>
+              <Parameter name="bottom_label" value="(9.4 ~ 2000 ms)"/>
+              <Parameter name="width" value="80"/>
+              <Parameter name="step" value="0.1"/>
+              <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUL_alpha_release3_44K"/>
+              <Parameter name="ref_unique_sr" value="UI_DSP_PERIOD_SAMPLINGRATE_STRU.LineIN_LowBand_SR"/>
+            </ConfigItem>
+          </ConfigGroup>
+          <ConfigGroup class="ucLayoutVertical">
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <ConfigGroup class="ucLayoutHorizontal">
+              <ConfigItem class="ucA2dpThresholdUpDown" id="id_mix_dband_L_threshold_1_updown" max="-1" min="-138">
+                <Parameter name="top_label" value="Threshold 1:"/>
+                <Parameter name="bottom_label" value="(-138 ~ -1 dBFS)"/>
+                <Parameter name="left_margin" value="5"/>
+                <Parameter name="width" value="80"/>
+                <Parameter name="step" value="0.1"/>
+                <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUL_CPD_THRD"/>
+              </ConfigItem>
+            </ConfigGroup>
+            <ConfigGroup class="ucLayoutHorizontal">
+              <Parameter name="top_margin" value="10"/>
+              <ConfigItem class="ucA2dpThresholdUpDown" id="id_mix_dband_L_threshold_2_updown" max="-1" min="-138">
+                <Parameter name="top_label" value="Threshold 2:"/>
+                <Parameter name="bottom_label" value="(-138 ~ -1 dBFS)"/>
+                <Parameter name="left_margin" value="5"/>
+                <Parameter name="width" value="80"/>
+                <Parameter name="step" value="0.1"/>
+                <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUL_level_two"/>
+              </ConfigItem>
+            </ConfigGroup>
+            <ConfigGroup class="ucLayoutHorizontal">
+              <Parameter name="top_margin" value="10"/>
+              <ConfigItem class="ucA2dpThresholdUpDown" id="id_mix_dband_L_threshold_3_updown" max="-1" min="-138">
+                <Parameter name="top_label" value="Threshold 3:"/>
+                <Parameter name="bottom_label" value="(-138 ~ -1 dBFS)"/>
+                <Parameter name="left_margin" value="5"/>
+                <Parameter name="width" value="80"/>
+                <Parameter name="step" value="0.1"/>
+                <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUL_level_three"/>
+              </ConfigItem>
+            </ConfigGroup>
+          </ConfigGroup>
+          <ConfigGroup class="ucLayoutVertical">
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <ConfigGroup class="ucLayoutHorizontal">
+              <ConfigItem class="ucA2dpMaxOutputUpDown" id="id_mix_dband_L_max_output_updown" max="0" min="-138">
+                <Parameter name="top_label" value="Max.Output:"/>
+                <Parameter name="bottom_label" value="(-138 ~ 0 dBFS)"/>
+                <Parameter name="left_margin" value="5"/>
+                <Parameter name="width" value="80"/>
+                <Parameter name="step" value="0.1"/>
+                <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUL_out_max"/>
+              </ConfigItem>
+            </ConfigGroup>
+          </ConfigGroup>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="border" value="1"/>
+        <ConfigGroup class="ucLayoutHorizontal">
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <ConfigItem class="ucA2dpInsThrdUpDown" id="id_mix_sband_ins_thrd_L_updown" max="-1" min="-138">
+            <Parameter name="top_label" value="INS Threshold:"/>
+            <Parameter name="bottom_label" value="dB (-138~-1)"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="width" value="80"/>
+            <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUX_INS_thrd_L"/>
+          </ConfigItem>
+          <ConfigItem class="ucCpdInsAttUpDown" id="id_mix_sband_ins_atten_L_updown" min="0" max="90">
+            <Parameter name="top_label" value="INS Attenuation:"/>
+            <Parameter name="bottom_label" value="dB (0~90)"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="width" value="80"/>
+            <Parameter name="step" value="0.1"/>
+            <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUX_INS_atten_L"/>
+          </ConfigItem>
+          <ConfigItem class="ucDspDecimalUpDown" id="id_mix_sband_ins_alpha_L_updown" min="0" max="32767">
+            <Parameter name="top_label" value="INS Alpha"/>
+            <Parameter name="bottom_label" value="(0~32767)"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="step" value="1"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_mix_sband_ins_alpha_L_tb"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcLayoutHideAssociator">
+          <Parameter name="target_data" value="44100"/>
+          <Parameter name="data" refId="id_mix_dband_L_samplingRate_tb"/>
+        </Associator>
+        <ConfigGroup class="ucLiveChart" id="id_mix_drc_chart_low_band">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_mix_dband_L_threshold_1_updown"/>
+          </Associator>
+          <Parameter name="x_axis_type" value="decimal"/>
+          <Parameter name="layout_column_weight" value="1"/>
+          <Parameter name="x_axis_title" value="Input (dBFS)"/>
+          <Parameter name="y_axis_title" value="Output (dBFS)"/>
+          <Parameter name="y_axis_max_value" value="0"/>
+          <Parameter name="y_axis_min_value" value="-100"/>
+          <Parameter name="x_axis_max_value" value="0"/>
+          <Parameter name="x_axis_min_value" value="-100"/>
+          <Parameter name="x_axis_step" value="10"/>
+          <Parameter name="y_axis_step" value="10"/>
+          <ConfigItem class="line" id="id_mix_drc_chart_line_low_band">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcDrcAssociator">
+              <Parameter name="threshold" refId="id_mix_dband_L_threshold_1_updown"/>
+              <Parameter name="max_output" refId="id_mix_dband_L_max_output_updown"/>
+              <Parameter name="a2dp_digital_gain_table" refId="id_line_digital_output_gain_table"/>
+              <Parameter name="it" refId="id_mix_sband_ins_thrd_L_updown"/>
+              <Parameter name="ia" refId="id_mix_sband_ins_atten_L_updown"/>
+              <Parameter name="typeStr" refId="id_mix_band_combo"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical" visible="hidden">
+        <Parameter name="left_margin" value="10"/>
+        <ConfigGroup class="General">
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUL_alpha_release1_44K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpReleaseTimeAssociator">
+              <Parameter name="data" refId="id_mix_dband_L_release_time_1_44K_updown"/>
+              <Parameter name="sr" value="44100"/>
+              <Parameter name="band" value="LowBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUL_alpha_release2_44K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpReleaseTimeAssociator">
+              <Parameter name="data" refId="id_mix_dband_L_release_time_2_44K_updown"/>
+              <Parameter name="sr" value="44100"/>
+              <Parameter name="band" value="LowBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUL_alpha_release3_44K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpReleaseTimeAssociator">
+              <Parameter name="data" refId="id_mix_dband_L_release_time_3_44K_updown"/>
+              <Parameter name="sr" value="44100"/>
+              <Parameter name="band" value="LowBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUL_alpha_attack_44K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpAtkTimeAssociator">
+              <Parameter name="data" refId="id_mix_dband_L_atk_time_44K_updown"/>
+              <Parameter name="sr" value="44100"/>
+              <Parameter name="band" value="LowBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUL_alpha_release1_48K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpReleaseTimeAssociator">
+              <Parameter name="data" refId="id_mix_dband_L_release_time_1_44K_updown"/>
+              <Parameter name="sr" value="48000"/>
+              <Parameter name="band" value="LowBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUL_alpha_release2_48K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpReleaseTimeAssociator">
+              <Parameter name="data" refId="id_mix_dband_L_release_time_2_44K_updown"/>
+              <Parameter name="sr" value="48000"/>
+              <Parameter name="band" value="LowBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUL_alpha_release3_48K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpReleaseTimeAssociator">
+              <Parameter name="data" refId="id_mix_dband_L_release_time_3_44K_updown"/>
+              <Parameter name="sr" value="48000"/>
+              <Parameter name="band" value="LowBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUL_alpha_attack_48K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpAtkTimeAssociator">
+              <Parameter name="data" refId="id_mix_dband_L_atk_time_44K_updown"/>
+              <Parameter name="sr" value="48000"/>
+              <Parameter name="band" value="LowBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUL_CPD_THRD" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdThresholdAssociator">
+              <Parameter name="data" refId="id_mix_dband_L_threshold_1_updown"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUL_level_two" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdThresholdAssociator">
+              <Parameter name="data" refId="id_mix_dband_L_threshold_2_updown"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUL_level_three" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdThresholdAssociator">
+              <Parameter name="data" refId="id_mix_dband_L_threshold_3_updown"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUL_out_max" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdMaxOutputAssociator">
+              <Parameter name="data" refId="id_mix_dband_L_max_output_updown"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" Unique="DSP_PARA_MIX_CPD_STRU.AUL_period" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpPeriodAssociator">
+              <Parameter name="sr" refId="id_mix_dband_L_samplingRate_tb"/>
+              <Parameter name="band" value="LowBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUX_INS_thrd_L" id="id_mix_sband_ins_thrd_L_tb" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpInsThrdAssociator">
+              <Parameter name="data" refId="id_mix_sband_ins_thrd_L_updown"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUX_INS_atten_L" id="id_mix_sband_ins_atten_L_tb" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdInsAttAssociator">
+              <Parameter name="data" refId="id_mix_sband_ins_atten_L_updown"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUX_INS_alpha_L" id="id_mix_sband_ins_alpha_L_tb" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_mix_sband_ins_alpha_L_updown"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup title="DBB" class="PurePage" parameter="DBB">
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="border" value="1"/>
+        <ConfigGroup class="ucLayoutHorizontal">
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="bottom_margin" value="20"/>
+          <ConfigGroup class="ucLayoutVertical">
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <ConfigGroup class="ucLayoutHorizontal">
+              <ConfigItem class="ucA2dpThresholdUpDown" id="id_mix_dband_thrd_updown" max="0" min="-138">
+                <Parameter name="top_label" value="Threshold:"/>
+                <Parameter name="bottom_label" value="(&lt;= 0 dBFS)"/>
+                <Parameter name="left_margin" value="5"/>
+                <Parameter name="width" value="80"/>
+                <Parameter name="step" value="0.1"/>
+                <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.thrd"/>
+              </ConfigItem>
+            </ConfigGroup>
+          </ConfigGroup>
+          <ConfigGroup class="ucLayoutVertical">
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <ConfigGroup class="ucLayoutHorizontal">
+              <ConfigItem class="ucA2dpMaxOutputUpDown" id="id_mix_dband_max_gain_updown" max="24" min="0">
+                <Parameter name="top_label" value="Max.Gain:"/>
+                <Parameter name="bottom_label" value="(0 ~ 24 dBFS)"/>
+                <Parameter name="left_margin" value="5"/>
+                <Parameter name="width" value="80"/>
+                <Parameter name="step" value="0.1"/>
+                <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.max_gain"/>
+              </ConfigItem>
+            </ConfigGroup>
+          </ConfigGroup>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="left_margin" value="10"/>
+        <ConfigGroup class="General">
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.thrd" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdThresholdAssociator">
+              <Parameter name="data" refId="id_mix_dband_thrd_updown"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.max_gain" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdMaxOutputAssociator">
+              <Parameter name="data" refId="id_mix_dband_max_gain_updown"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup title="Upper Bound" class="PurePage" parameter="Upper Bound">
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="border" value="1"/>
+        <ConfigGroup class="ucLayoutHorizontal">
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="bottom_margin" value="20"/>
+          <ConfigGroup class="ucLayoutVertical">
+            <ConfigItem class="ucA2dpAtkTimeUpDown" id="id_mix_dband_F_atk_time_44K_updown" max="500" min="0">
+              <Parameter name="top_label" value="Attack Time:"/>
+              <Parameter name="bottom_label" value="(0 ~ 500 ms)"/>
+              <Parameter name="left_margin" value="10"/>
+              <Parameter name="right_margin" value="10"/>
+              <Parameter name="top_margin" value="10"/>
+              <Parameter name="width" value="80"/>
+              <Parameter name="step" value="0.1"/>
+              <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUF_alpha_attack_44K"/>
+              <Parameter name="ref_unique_sr" value="UI_DSP_PERIOD_SAMPLINGRATE_STRU.LineIN_UpperBand_SR"/>
+            </ConfigItem>
+          </ConfigGroup>
+          <ConfigGroup class="ucLayoutVertical">
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <ConfigItem class="ucA2dpReleaseTimeUpDown" id="id_mix_dband_F_release_time_1_44K_updown" max="2000" min="9.4">
+              <Parameter name="top_label" value="Release Time 1:"/>
+              <Parameter name="bottom_label" value="(9.4 ~ 2000 ms)"/>
+              <Parameter name="width" value="80"/>
+              <Parameter name="step" value="0.1"/>
+              <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUF_alpha_release1_44K"/>
+              <Parameter name="ref_unique_sr" value="UI_DSP_PERIOD_SAMPLINGRATE_STRU.LineIN_UpperBand_SR"/>
+            </ConfigItem>
+          </ConfigGroup>
+          <ConfigGroup class="ucLayoutVertical">
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <ConfigGroup class="ucLayoutHorizontal">
+              <ConfigItem class="ucA2dpUpperBandThresholdUpDown" id="id_mix_dband_F_threshold_1_updown" max="-1" min="-138">
+                <Parameter name="top_label" value="Threshold 1:"/>
+                <Parameter name="bottom_label" value="(-138 ~ -1 dBFS)"/>
+                <Parameter name="left_margin" value="5"/>
+                <Parameter name="width" value="80"/>
+                <Parameter name="step" value="0.1"/>
+                <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUF_CPD_THRD"/>
+              </ConfigItem>
+            </ConfigGroup>
+          </ConfigGroup>
+          <ConfigGroup class="ucLayoutVertical">
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <ConfigGroup class="ucLayoutHorizontal">
+              <ConfigItem class="ucA2dpUpperBandMaxOutputUpDown" id="id_mix_dband_F_max_output_updown" max="0" min="-138">
+                <Parameter name="top_label" value="Max.Output:"/>
+                <Parameter name="bottom_label" value="(-138 ~ 0 dBFS)"/>
+                <Parameter name="left_margin" value="5"/>
+                <Parameter name="width" value="80"/>
+                <Parameter name="step" value="0.1"/>
+                <Parameter name="unique" value="DSP_PARA_MIX_CPD_STRU.AUF_out_max"/>
+              </ConfigItem>
+            </ConfigGroup>
+          </ConfigGroup>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="left_margin" value="10"/>
+        <ConfigGroup class="General">
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUF_alpha_release1_44K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpReleaseTimeAssociator">
+              <Parameter name="data" refId="id_mix_dband_F_release_time_1_44K_updown"/>
+              <Parameter name="sr" value="44100"/>
+              <Parameter name="band" value="UpperBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUF_alpha_attack_44K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpAtkTimeAssociator">
+              <Parameter name="data" refId="id_mix_dband_F_atk_time_44K_updown"/>
+              <Parameter name="sr" value="44100"/>
+              <Parameter name="band" value="UpperBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUF_alpha_release1_48K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpReleaseTimeAssociator">
+              <Parameter name="data" refId="id_mix_dband_F_release_time_1_44K_updown"/>
+              <Parameter name="sr" value="48000"/>
+              <Parameter name="band" value="UpperBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUF_alpha_attack_48K" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpAtkTimeAssociator">
+              <Parameter name="data" refId="id_mix_dband_F_atk_time_44K_updown"/>
+              <Parameter name="sr" value="48000"/>
+              <Parameter name="band" value="UpperBand"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUF_CPD_THRD" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpUpperBandThresholdAssociator">
+              <Parameter name="data" refId="id_mix_dband_F_threshold_1_updown"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.AUF_out_max" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcA2dpUpperBandMaxOutputAssociator">
+              <Parameter name="data" refId="id_mix_dband_F_max_output_updown"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup title="Coefficient(48K)" class="General" parameter="Coefficient(48K)" visible="hidden">
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_48K_00"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_48K_01"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_48K_02"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_48K_03"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_48K_04"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_48K_05"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_48K_06"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_48K_07"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_48K_08"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_48K_09"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_48K_00"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_48K_01"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_48K_02"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_48K_03"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_48K_04"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_48K_05"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_48K_06"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_48K_07"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_48K_08"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_48K_09"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_48K_10"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_48K_11"/>
+    </ConfigGroup>
+    <ConfigGroup title="Coefficient(44K)" class="General" parameter="Coefficient(44K)" visible="hidden">
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_44K_00"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_44K_01"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_44K_02"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_44K_03"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_44K_04"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_44K_05"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_44K_06"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_44K_07"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_44K_08"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_3rd_44K_09"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_44K_00"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_44K_01"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_44K_02"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_44K_03"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_44K_04"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_44K_05"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_44K_06"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_44K_07"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_44K_08"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_44K_09"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_44K_10"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MIX_CPD_STRU.HP_COFEB24_4th_44K_11"/>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

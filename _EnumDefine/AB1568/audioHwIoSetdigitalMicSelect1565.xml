@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="GPIO_DMIC0" Value="0"/>
+	<Group Name="GPIO_DMIC1" Value="1"/>
+	<Group Name="VIN0_P/N" Value="2"/>
+	<Group Name="VIN1_P/N" Value="3"/>
+	<Group Name="VIN2_P/N" Value="4"/>
+	<Group Name="VIN3_P/N" Value="5"/>
+</DataGroup>

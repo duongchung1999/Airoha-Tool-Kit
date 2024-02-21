@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="ANC_FB_Distortion_Predictor" class="Airoha.Project.ConfigTool.View.PurePage" parameter="ANC_FB_Distortion_Predictor">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_margin" value="20"/>
+      <Parameter name="bottom_margin" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigGroup class="ucDistortionPredictor" id="id_distortion_predictor">
+        <Parameter name="drc_makeup_gain_xml_file_path" value="/_DSP_settings/AB1568/CpdPositiveGain.xml"/>
+        <Parameter name="dg_gain_xml_file_path" value="/_DSP_settings/AB1568/DigitalOutputGain.xml"/>
+        <Parameter name="peq_xml_file_path" value="/_DSP_settings/PeqGroup.xml"/>
+      </ConfigGroup>
+  </ConfigGroup>
+</Page>
+

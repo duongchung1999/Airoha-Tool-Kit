@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="SCO Gain Settings" class="Airoha.Project.ConfigTool.View.TabPage" parameter="SCO Gain Settings">
+  <ConfigGroup title="Speaker Gain" class="PurePage">
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="top_label" value="SCO Digital Output Gain WB"/>
+        <Parameter name="left_margin" value="12"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="20"/>
+        <ConfigItem class="ucDspDecimalUpDown" id="id_sco_digital_output_gain_total_index_updown" min="1" max="16">
+          <Parameter name="top_label" value="Total index"/>
+          <Parameter name="step" value="1"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_sco_digital_output_gain_total_index_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigGroup class="ucGainTable" id="id_sco_digital_output_gain_table">
+          <Parameter name="left_margin" value="12"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="border" value="1"/>
+          <Parameter name="total_num" value="16"/>
+          <Parameter name="unique" value="DSP_PARA_GAIN_TABLE_SCO_STRU.TotalIndex"/>
+          <ConfigItem class="ucGainComboBox" id="id_sco_digital_output_gain_cb_#">
+            <Parameter name="left_label" value="#"/>
+            <Parameter name="right_label" value="dB"/>
+            <Parameter name="left_width" value="30"/>
+            <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalOutputGain.xml"/>
+            <Parameter name="unique" value="DSP_PARA_GAIN_TABLE_SCO_STRU.DigitalOutGainIndex#"/>
+          </ConfigItem>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_sco_digital_output_gain_total_index_updown"/>
+          </Associator>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="top_label" value="SCO Digital Output Gain NB"/>
+        <Parameter name="left_margin" value="12"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="20"/>
+        <ConfigItem class="ucDspDecimalUpDown" id="id_sco_nb_digital_output_gain_total_index_updown" min="1" max="16">
+          <Parameter name="top_label" value="Total index"/>
+          <Parameter name="step" value="1"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_sco_nb_digital_output_gain_total_index_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigGroup class="ucGainTable" id="id_sco_nb_digital_output_gain_table">
+          <Parameter name="left_margin" value="12"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="border" value="1"/>
+          <Parameter name="total_num" value="16"/>
+          <Parameter name="unique" value="DSP_PARA_GAIN_TABLE_SCO_NB_STRU.TotalIndex"/>
+          <ConfigItem class="ucGainComboBox" id="id_sco_nb_digital_output_gain_cb_#">
+            <Parameter name="left_label" value="#"/>
+            <Parameter name="right_label" value="dB"/>
+            <Parameter name="left_width" value="30"/>
+            <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalOutputGain.xml"/>
+            <Parameter name="unique" value="DSP_PARA_GAIN_TABLE_SCO_NB_STRU.DigitalOutGainIndex#"/>
+          </ConfigItem>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_sco_nb_digital_output_gain_total_index_updown"/>
+          </Associator>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" present="hex" id="id_sco_ana_gain_total_index_tb" Unique="DSP_PARA_ANA_GAIN_TABLE_SCO_STRU.TotalIndex" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_sco_ana_gain_total_index_updown"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" present="hex" id="id_sco_digital_output_gain_total_index_tb" Unique="DSP_PARA_GAIN_TABLE_SCO_STRU.TotalIndex" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_sco_digital_output_gain_total_index_updown"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucGainGeneral">
+      <Parameter name="total_num" value="16"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_GAIN_TABLE_SCO_STRU.DigitalOutGainIndex#" id="id_sco_digital_output_gain_tb_#" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_sco_digital_output_gain_cb_#"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" present="hex" id="id_sco_nb_ana_gain_total_index_tb" Unique="DSP_PARA_ANA_GAIN_TABLE_SCO_NB_STRU.TotalIndex" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_sco_nb_ana_gain_total_index_updown"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" present="hex" id="id_sco_nb_digital_output_gain_total_index_tb" Unique="DSP_PARA_GAIN_TABLE_SCO_NB_STRU.TotalIndex" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_sco_nb_digital_output_gain_total_index_updown"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucGainGeneral">
+      <Parameter name="total_num" value="16"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_GAIN_TABLE_SCO_NB_STRU.DigitalOutGainIndex#" id="id_sco_nb_digital_output_gain_tb_#" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_sco_nb_digital_output_gain_cb_#"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup title="One Mic feature Gain" class="PurePage">
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="top_label" value="SCO Digital Input Gain WB"/>
+        <Parameter name="left_margin" value="12"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="20"/>
+        <ConfigItem class="ucDspDecimalUpDown" id="id_sco_digi_input_gain_total_index_updown" min="1" max="16">
+          <Parameter name="top_label" value="Total index"/>
+          <Parameter name="step" value="1"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_sco_digi_input_gain_total_index_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigGroup class="ucGainTable" id="id_sco_digi_input_gain_table">
+          <Parameter name="left_margin" value="12"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="border" value="1"/>
+          <Parameter name="total_num" value="16"/>
+          <Parameter name="unique" value="DSP_PARA_DIGITAL_IN_GAIN_SCO_STRU.TotalIndex"/>
+          <ConfigItem class="ucGainComboBox" id="id_sco_digi_input_gain_cb_#">
+            <Parameter name="left_label" value="#"/>
+            <Parameter name="right_label" value="dB"/>
+            <Parameter name="left_width" value="30"/>
+            <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+            <Parameter name="unique" value="DSP_PARA_DIGITAL_IN_GAIN_SCO_STRU.DigitalInGainIndex#"/>
+          </ConfigItem>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_sco_digi_input_gain_total_index_updown"/>
+          </Associator>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="top_label" value="SCO Digital Input Gain NB"/>
+        <Parameter name="left_margin" value="12"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="20"/>
+        <ConfigItem class="ucDspDecimalUpDown" id="id_sco_nb_digi_input_gain_total_index_updown" min="1" max="16">
+          <Parameter name="top_label" value="Total index"/>
+          <Parameter name="step" value="1"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_sco_nb_digi_input_gain_total_index_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigGroup class="ucLayoutVertical">
+          <ConfigGroup class="ucGainTable" id="id_sco_nb_digi_input_gain_table">
+            <Parameter name="left_margin" value="12"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="border" value="1"/>
+            <Parameter name="total_num" value="16"/>
+            <Parameter name="unique" value="DSP_PARA_DIGITAL_IN_GAIN_SCO_NB_STRU.TotalIndex"/>
+            <ConfigItem class="ucGainComboBox" id="id_sco_nb_digi_input_gain_cb_#">
+              <Parameter name="left_label" value="#"/>
+              <Parameter name="right_label" value="dB"/>
+              <Parameter name="left_width" value="30"/>
+              <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+              <Parameter name="unique" value="DSP_PARA_DIGITAL_IN_GAIN_SCO_NB_STRU.DigitalInGainIndex#"/>
+            </ConfigItem>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_sco_nb_digi_input_gain_total_index_updown"/>
+            </Associator>
+          </ConfigGroup>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" present="hex" id="id_sco_digi_input_gain_total_index_tb" Unique="DSP_PARA_DIGITAL_IN_GAIN_SCO_STRU.TotalIndex" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_sco_digi_input_gain_total_index_updown"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucGainGeneral">
+      <Parameter name="total_num" value="16"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_DIGITAL_IN_GAIN_SCO_STRU.DigitalInGainIndex#" id="id_sco_digi_input_gain_tb_#" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_sco_digi_input_gain_cb_#"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" present="hex" id="id_sco_ref_mic_subband_1_gain_tb" Unique="DSP_PARA_NR_STRU.M2_REF_MIC_CH1_GAIN" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.AB1568.Associator.fcScoRefMicSubbandGainNvAssociator">
+          <Parameter name="data" refId="id_sco_ref_mic_subband_1_gain_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" id="id_sco_ref_mic_subband_2_gain_tb" Unique="DSP_PARA_NR_STRU.M2_REF_MIC_CH2_GAIN" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.AB1568.Associator.fcScoRefMicSubbandGainNvAssociator">
+          <Parameter name="data" refId="id_sco_ref_mic_subband_2_gain_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" id="id_sco_ref_mic_subband_3_gain_tb" Unique="DSP_PARA_NR_STRU.M2_REF_MIC_CH3_GAIN" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.AB1568.Associator.fcScoRefMicSubbandGainNvAssociator">
+          <Parameter name="data" refId="id_sco_ref_mic_subband_3_gain_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" id="id_sco_ref_mic_subband_4_gain_tb" Unique="DSP_PARA_NR_STRU.M2_REF_MIC_CH4_GAIN" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.AB1568.Associator.fcScoRefMicSubbandGainNvAssociator">
+          <Parameter name="data" refId="id_sco_ref_mic_subband_4_gain_updown"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" present="hex" id="id_sco_nb_digi_input_gain_total_index_tb" Unique="DSP_PARA_DIGITAL_IN_GAIN_SCO_NB_STRU.TotalIndex" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_sco_nb_digi_input_gain_total_index_updown"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucGainGeneral">
+      <Parameter name="total_num" value="16"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_DIGITAL_IN_GAIN_SCO_NB_STRU.DigitalInGainIndex#" id="id_sco_nb_digi_input_gain_tb_#" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_sco_nb_digi_input_gain_cb_#"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup title="Multi Mic feature Gain" class="PurePage">
+
+    <ConfigGroup class="ucLayoutHorizontal">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="20"/>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="SCO Multi Mic Digital Input Gain"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucGainComboBox" id="id_extend_esco_digital_mic0_l_gain_cb">
+          <Parameter name="left_label" value="MIC0 Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_MIC0_L_Digital_Vol"/>
+        </ConfigItem>
+        <ConfigItem class="ucGainComboBox" id="id_extend_esco_digital_mic0_r_gain_cb">
+          <Parameter name="left_label" value="MIC1 Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_MIC0_R_Digital_Vol"/>
+        </ConfigItem>
+        <ConfigItem class="ucGainComboBox" id="id_extend_esco_digital_mic1_l_gain_cb">
+          <Parameter name="left_label" value="MIC2 Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_MIC1_L_Digital_Vol"/>
+        </ConfigItem>
+        <ConfigItem class="ucGainComboBox" id="id_extend_esco_digital_mic1_r_gain_cb">
+          <Parameter name="left_label" value="MIC3 Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_MIC1_R_Digital_Vol"/>
+        </ConfigItem>
+        <ConfigItem class="ucGainComboBox" id="id_extend_esco_digital_mic2_l_gain_cb">
+          <Parameter name="left_label" value="MIC4 Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_MIC2_L_Digital_Vol"/>
+        </ConfigItem>
+        <ConfigItem class="ucGainComboBox" id="id_extend_esco_digital_mic2_r_gain_cb">
+          <Parameter name="left_label" value="MIC5 Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_MIC2_R_Digital_Vol"/>
+        </ConfigItem>
+        <ConfigItem class="ucGainComboBox" id="id_extend_esco_digital_i2s0_l_gain_cb">
+          <Parameter name="left_label" value="I2S0_L Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_I2S0_L_Digital_Vol"/>
+        </ConfigItem>
+        <ConfigItem class="ucGainComboBox" id="id_extend_esco_digital_i2s0_r_gain_cb">
+          <Parameter name="left_label" value="I2S0_R Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_I2S0_R_Digital_Vol"/>
+        </ConfigItem>
+        <ConfigItem class="ucGainComboBox" id="id_extend_esco_digital_i2s1_l_gain_cb">
+          <Parameter name="left_label" value="I2S1_L Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_I2S1_L_Digital_Vol"/>
+        </ConfigItem>
+        <ConfigItem class="ucGainComboBox" id="id_extend_esco_digital_i2s1_r_gain_cb">
+          <Parameter name="left_label" value="I2S1_R Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_I2S1_R_Digital_Vol"/>
+        </ConfigItem>
+        <ConfigItem class="ucGainComboBox" id="id_extend_esco_digital_i2s2_l_gain_cb">
+          <Parameter name="left_label" value="I2S2_L Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_I2S2_L_Digital_Vol"/>
+        </ConfigItem>
+        <ConfigItem class="ucGainComboBox" id="id_extend_esco_digital_i2s2_r_gain_cb">
+          <Parameter name="left_label" value="I2S2_R Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_I2S2_R_Digital_Vol"/>
+        </ConfigItem>
+        <ConfigItem class="ucGainComboBox" id="id_extend_esco_digital_linein_l_gain_cb">
+          <Parameter name="left_label" value="LINEIN_L Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_LINEIN_L_Digital_Vol"/>
+        </ConfigItem>
+        <ConfigItem class="ucGainComboBox" id="id_extend_esco_digital_linein_r_gain_cb">
+          <Parameter name="left_label" value="LINEIN_R Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_LINEIN_R_Digital_Vol"/>
+        </ConfigItem>
+        <ConfigItem class="ucGainComboBox" id="id_extend_esco_digital_echo_ref_gain_cb">
+          <Parameter name="left_label" value="ECHO_REF Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_Echo_Reference_Vol"/>
+        </ConfigItem>
+
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_MIC0_L_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_extend_esco_digital_mic0_l_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_MIC0_R_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_extend_esco_digital_mic0_r_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_MIC1_L_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_extend_esco_digital_mic1_l_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_MIC1_R_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_extend_esco_digital_mic1_r_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_MIC2_L_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_extend_esco_digital_mic2_l_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_MIC2_R_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_extend_esco_digital_mic2_r_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_I2S0_L_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_extend_esco_digital_i2s0_l_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_I2S0_R_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_extend_esco_digital_i2s0_r_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_I2S1_L_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_extend_esco_digital_i2s1_l_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_I2S1_R_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_extend_esco_digital_i2s1_r_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_I2S2_L_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_extend_esco_digital_i2s2_l_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_I2S2_R_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_extend_esco_digital_i2s2_r_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_LINEIN_L_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_extend_esco_digital_linein_l_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_LINEIN_R_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_extend_esco_digital_linein_r_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_EXTENDED_DIGITAL_MIC_GAIN_SCO_STRU.sco_Extended_Echo_Reference_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_extend_esco_digital_echo_ref_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

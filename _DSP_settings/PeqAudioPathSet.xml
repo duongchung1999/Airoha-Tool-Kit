@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="NULL" Value=""/> 
+	<Group Name="A" 	Value="0"/> 
+	<Group Name="B" 	Value="1"/> 
+	<Group Name="C" 	Value="2"/> 
+	<Group Name="D" 	Value="3"/> 
+	<Group Name="E" 	Value="4"/> 
+	<Group Name="F" 	Value="5"/>
+</DataGroup>
+
+

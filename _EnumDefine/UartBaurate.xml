@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="110" Value="0"/>
+	<Group Name="300" Value="1"/>
+	<Group Name="1200" Value="2"/>
+	<Group Name="2400" Value="3"/>
+	<Group Name="4800" Value="4"/>
+	<Group Name="9600" Value="5"/>
+	<Group Name="19200" Value="6"/>
+	<Group Name="38400" Value="7"/>
+	<Group Name="57600" Value="8"/>
+	<Group Name="115200" Value="9"/>
+	<Group Name="230400" Value="10"/>
+	<Group Name="460800" Value="11"/>
+	<Group Name="921600" Value="12"/>
+	<Group Name="2000000" Value="13"/>
+	<Group Name="3000000" Value="14"/>
+</DataGroup>

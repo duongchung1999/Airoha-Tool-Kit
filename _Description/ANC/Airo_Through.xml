@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="AiroThru" class="Airoha.Project.ConfigTool.View.TabPage" parameter="AiroThru" scroll="vertical">
+  <ConfigGroup title="AiroThru" class="TouchFigurePage" parameter="AiroThru">
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <ConfigGroup class="ucAncBandTable" id="id_anc_passthrough_setting_table">
+          <Parameter name="anc_type" value="AiroThru"/>
+          <Parameter name="group_xml" value="/_DSP_settings/AB1568/AiroThruGroup.xml"/>
+          <Parameter name="group_btn_row_max_cnt" value="3"/>
+          <Parameter name="cell_cnt" value="9"/>
+          <Parameter name="phase_target_line_str" value="id_anc_passthrough_phase_target_line_data"/>
+          <Parameter name="magnitude_target_line_str" value="id_anc_passthrough_magnitude_target_line_data"/>
+          <Parameter name="phase_line_id" value="id_anc_passthrough_phase_line_data"/>
+          <Parameter name="magnitude_line_id" value="id_anc_passthrough_magnitude_line_data"/>
+          <Parameter name="rescale_id" value="id_anc_passthrough_rescale_value"/>
+          <Parameter name="point_set_id" value="id_anc_passthrough_gain_point_set"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="point_set" refId="id_anc_passthrough_gain_point_set"/>
+            <Parameter name="mp_gain" refId="mp_gain_changed"/>
+          </Associator>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

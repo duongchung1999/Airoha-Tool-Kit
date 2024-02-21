@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Audio_Channel_Setting" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Audio_Channel_Setting">
+    <ConfigGroup class="ucLayoutVertical">
+          <ConfigItem class="ucComboBox" id="id_channelDetectMode_combo">
+            <Parameter name="left_label" value="Channel Detect Mode"/>
+            <Parameter name="left_width" value="200"/>
+            <Parameter name="width" value="120"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/audioChannelMode.xml"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_channelDetectMode"/>
+            </Associator>
+          </ConfigItem>
+
+          <ConfigGroup class="ucLayoutVertical" >
+            <Parameter name="top_label" value="Input Channel Setting"/>
+            <Parameter name="border" value="1"/>
+
+            <ConfigItem class="ucComboBox" id="id_input_swSetting_combo">
+              <Parameter name="left_label" value="SW Setting"/>
+              <Parameter name="left_width" value="200"/>
+              <Parameter name="width" value="120"/>
+              <Parameter name="top_margin" value="10"/>
+              <Parameter name="bottom_margin" value="10"/>
+              <Parameter name="xml_file_path" value="/_EnumDefine/audioChannelSetting.xml"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcAudioChannelGetHighByteAssociator">
+                <Parameter name="data" refId="id_swSetting"/>
+                <Parameter name="enable" refId="id_channelDetectMode_combo"/>
+                <Parameter name="enable_value" value="0" />
+              </Associator>
+            </ConfigItem>
+
+            <ConfigItem class="ucComboBox" id="id_input_audioChannelGpioH_combo">
+              <Parameter name="left_label" value="Audio Channel GPIO H"/>
+              <Parameter name="left_width" value="200"/>
+              <Parameter name="width" value="120"/>
+              <Parameter name="top_margin" value="10"/>
+              <Parameter name="bottom_margin" value="10"/>
+              <Parameter name="xml_file_path" value="/_EnumDefine/audioChannelSetting.xml"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcAudioChannelGetHighByteAssociator">
+                <Parameter name="data" refId="id_audioChannelGpioH"/>
+                <Parameter name="enable" refId="id_channelDetectMode_combo"/>
+                <Parameter name="enable_value" value="1" />
+              </Associator>
+            </ConfigItem>
+
+            <ConfigItem class="ucComboBox" id="id_input_audioChannelGpioL_combo">
+              <Parameter name="left_label" value="Audio Channel GPIO L"/>
+              <Parameter name="left_width" value="200"/>
+              <Parameter name="width" value="120"/>
+              <Parameter name="top_margin" value="10"/>
+              <Parameter name="bottom_margin" value="10"/>
+              <Parameter name="xml_file_path" value="/_EnumDefine/audioChannelSetting.xml"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcAudioChannelGetHighByteAssociator">
+                <Parameter name="data" refId="id_audioChannelGpioL"/>
+                <Parameter name="enable" refId="id_channelDetectMode_combo"/>
+                <Parameter name="enable_value" value="1" />
+              </Associator>
+            </ConfigItem>
+          </ConfigGroup>
+
+          <ConfigGroup class="ucLayoutVertical">
+            <Parameter name="top_label" value="Output Channel Setting"/>
+            <Parameter name="border" value="1"/>
+
+            <ConfigItem class="ucComboBox" id="id_output_swSetting_combo">
+              <Parameter name="left_label" value="SW Setting"/>
+              <Parameter name="left_width" value="200"/>
+              <Parameter name="width" value="120"/>
+              <Parameter name="top_margin" value="10"/>
+              <Parameter name="bottom_margin" value="10"/>
+              <Parameter name="xml_file_path" value="/_EnumDefine/audioChannelSetting.xml"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcAudioChannelGetLowByteAssociator">
+                <Parameter name="data" refId="id_swSetting"/>
+                <Parameter name="enable" refId="id_channelDetectMode_combo"/>
+                <Parameter name="enable_value" value="0" />
+              </Associator>
+            </ConfigItem>
+
+            <ConfigItem class="ucComboBox" id="id_output_audioChannelGpioH_combo">
+              <Parameter name="left_label" value="Audio Channel GPIO H"/>
+              <Parameter name="left_width" value="200"/>
+              <Parameter name="width" value="120"/>
+              <Parameter name="top_margin" value="10"/>
+              <Parameter name="bottom_margin" value="10"/>
+              <Parameter name="xml_file_path" value="/_EnumDefine/audioChannelSetting.xml"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcAudioChannelGetLowByteAssociator">
+                <Parameter name="data" refId="id_audioChannelGpioH"/>
+                <Parameter name="enable" refId="id_channelDetectMode_combo"/>
+                <Parameter name="enable_value" value="1" />
+              </Associator>
+            </ConfigItem>
+
+            <ConfigItem class="ucComboBox" id="id_output_audioChannelGpioL_combo">
+              <Parameter name="left_label" value="Audio Channel GPIO L"/>
+              <Parameter name="left_width" value="200"/>
+              <Parameter name="width" value="120"/>
+              <Parameter name="top_margin" value="10"/>
+              <Parameter name="bottom_margin" value="10"/>
+              <Parameter name="xml_file_path" value="/_EnumDefine/audioChannelSetting.xml"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcAudioChannelGetLowByteAssociator">
+                <Parameter name="data" refId="id_audioChannelGpioL"/>
+                <Parameter name="enable" refId="id_channelDetectMode_combo"/>
+                <Parameter name="enable_value" value="1" />
+              </Associator>
+            </ConfigItem>
+          </ConfigGroup>
+        </ConfigGroup>
+        <ConfigGroup class="General">
+          <ConfigItem class="ucTextBoxEnable" Unique="AUDIO_CHANNEL_SETTING_STRU.HW_MODE.detectGpio" id="id_channelDetectGpio" name="AUDIO CHANNEL DETECT GPIO">
+		    <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="enable" refId="id_channelDetectMode_combo"/>
+              <Parameter name="enable_value" value="1" />
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+
+        <ConfigGroup class="General">
+          <ConfigItem class="ucTextBox" Unique="AUDIO_CHANNEL_SETTING_STRU.channelDetectMode" id="id_channelDetectMode" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_channelDetectMode_combo"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" Unique="AUDIO_CHANNEL_SETTING_STRU.SW_MODE.swSetting" id="id_swSetting" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcAudioChannelSetAssociator">
+              <Parameter name="data_HighByte" refId="id_input_swSetting_combo"/>
+              <Parameter name="data_LowByte" refId="id_output_swSetting_combo"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" Unique="AUDIO_CHANNEL_SETTING_STRU.HW_MODE.audioChannelGpioH" id="id_audioChannelGpioH" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcAudioChannelSetAssociator">
+              <Parameter name="data_HighByte" refId="id_input_audioChannelGpioH_combo"/>
+              <Parameter name="data_LowByte" refId="id_output_audioChannelGpioH_combo"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" Unique="AUDIO_CHANNEL_SETTING_STRU.HW_MODE.audioChannelGpioL" id="id_audioChannelGpioL" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcAudioChannelSetAssociator">
+              <Parameter name="data_HighByte" refId="id_input_audioChannelGpioL_combo"/>
+              <Parameter name="data_LowByte" refId="id_output_audioChannelGpioL_combo"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+</Page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup> 
+	<Group Name="01" 	Value="UI:0xEEB1,FW:0xE444"/>
+	<Group Name="02" 	Value="UI:0xEEB2,FW:0xE445"/>
+	<Group Name="03" 	Value="UI:0xEEB3,FW:0xE446"/>
+	<Group Name="04" 	Value="UI:0xEEB4,FW:0xE447"/>
+ 	<Group Name="05" 	Value="UI:0xEEB5,FW:0xE448"/>
+</DataGroup>
+
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="0%" Value="45536"/>
+	<Group Name="10%" Value="63536"/>
+	<Group Name="20%" Value="64139"/>
+	<Group Name="30%" Value="64491"/>
+	<Group Name="40%" Value="64741"/>
+	<Group Name="50%" Value="64934"/>
+	<Group Name="60%" Value="65093"/>
+	<Group Name="70%" Value="65227"/>
+	<Group Name="80%" Value="65343"/>
+	<Group Name="90%" Value="65445"/>
+	<Group Name="100%" Value="0"/>
+</DataGroup>

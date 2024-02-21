@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="" 	    	Value="-1"/> 
+	<Group Name="32K" 	    Value="0"/> 
+	<Group Name="44.1K" 	Value="1"/> 
+	<Group Name="48K" 	    Value="2"/> 
+	<Group Name="16K" 		Value="3"/> 
+	<Group Name="8K" 	    Value="4"/> 
+</DataGroup>
+
+

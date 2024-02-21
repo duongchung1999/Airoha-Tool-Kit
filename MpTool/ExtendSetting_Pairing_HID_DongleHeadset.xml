@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <environments WpfView="EnvionmentSelect">
+    <DUT1 IsEnable="True" />
+    <DUT2 IsEnable="False" />
+    <DUT3 IsEnable="False" />
+    <DUT4 IsEnable="False" />
+  </environments>
+  <UnifiedInput>
+    <DUT_Dongle SettingPage.IsIgnore="True">DUT_Dongle</DUT_Dongle>
+    <DUT_Headset SettingPage.IsIgnore="True">DUT_Headset</DUT_Headset>
+    <Vendor_ID_Dongle>0x0E8D</Vendor_ID_Dongle>
+    <Product_ID_Dongle>0x0808</Product_ID_Dongle>
+    <Vendor_ID_Headset>0x0E8D</Vendor_ID_Headset>
+    <Product_ID_Headset>0x0809</Product_ID_Headset>
+    <Retry_times SettingPage.IsIgnore="True">10</Retry_times>
+    <Delay_For_Boot SettingPage.IsIgnore="True">7000</Delay_For_Boot>
+    <true_flag SettingPage.IsIgnore="True">true</true_flag>
+    <false_flag SettingPage.IsIgnore="True">false</false_flag>
+  </UnifiedInput>
+  <SelfInput>
+    <DeviceUsbHID SettingPage.View="UartPairSelectDongle" SettingPage.IsAddAttribute="True" >
+      <DUT1 D_L_comport_name="Dongle" D_R_comport_name="Headset" D_L_comport="" D_R_comport="">0</DUT1>
+    </DeviceUsbHID>
+  </SelfInput>
+  <Managers>
+    <BdAddressManager class="Airoha.Project.MpTool.BdAddressPool">
+      <expect_dut_count  SettingPage.IsIgnore="True">%_ENVI_COUNT%</expect_dut_count>
+      <start_address_bt3 SettingPage.IsIgnore="True">0000ABCD1234</start_address_bt3>
+
+      <BT3AddressFromBarCode SettingPage.IsIgnore="True" SettingPage.View="TextSelect" SettingPage.Content="Boolean" SettingPage.Mode="MP">NO</BT3AddressFromBarCode>
+      <BarCodeMode_AutoStart SettingPage.IsIgnore="True" SettingPage.View="TextSelect" SettingPage.Content="Boolean" SettingPage.Mode="MP">YES</BarCodeMode_AutoStart>
+      <BarCode>
+        <DUT1>0</DUT1>
+        <DUT2>0</DUT2>
+        <DUT3>0</DUT3>
+        <DUT4>0</DUT4>
+      </BarCode>
+    </BdAddressManager>
+  </Managers>
+  <flows Runner.StartFlow="default">
+    <default SettingPage.Name="Default Process">
+      <option>
+        <Dongle_Headset_HID SettingPage.Name="Dongle_Headset_HID" Runner.IsEnable="True" />
+      </option>
+
+      <main>
+        <ToolLogLevel task="DebugLogLevel" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+
+        <!--  HID  Dongle / Headset-->
+        <ConnectUSBHidDongle task="ConnectDutByUsbHid" Runner.Option="Dongle_Headset_HID">
+          <device_name Runner.Input="DUT_Dongle"/>
+          <vendor_id SettingPage.IsIgnore="True" Runner.Input="Vendor_ID_Dongle" />
+          <product_id SettingPage.IsIgnore="True" Runner.Input="Product_ID_Dongle" />
+        </ConnectUSBHidDongle>
+
+        <ConnectUSBHidHeadset task="ConnectDutByUsbHid" Runner.Option="Dongle_Headset_HID">
+          <device_name Runner.Input="DUT_Headset"/>
+          <vendor_id SettingPage.IsIgnore="True" Runner.Input="Vendor_ID_Headset" />
+          <product_id SettingPage.IsIgnore="True" Runner.Input="Product_ID_Headset" />
+        </ConnectUSBHidHeadset>
+
+        <UsbHidDongleHeadsetPairing task="TaskUsbHidDongleHeadsetPairing" Runner.Option="Dongle_Headset_HID" UI.Result="bd_addr">
+          <device_name_d Runner.Input="DUT_Dongle"/>
+          <device_name_h Runner.Input="DUT_Headset"/>
+          <!-- <minimum_battery_level SettingPage.IsIgnore="True" Runner.Input="Minimum_Battery_Level" /> -->
+          <is_dongle_reboot SettingPage.IsIgnore="True" Runner.Input="true_flag" />
+          <delay_for_boot SettingPage.IsIgnore="True" Runner.Input="Delay_For_Boot" />
+        </UsbHidDongleHeadsetPairing>
+
+        <UsbHidCheckPairingStatus task="UsbHidCheckPairingStatus" Runner.Option="Dongle_Headset_HID">
+          <device_name_d Runner.Input="DUT_Dongle"/>
+          <device_name_h Runner.Input="DUT_Headset"/>
+          <retry_times SettingPage.IsIgnore="True" Runner.Input="Retry_times" />
+        </UsbHidCheckPairingStatus>
+
+      </main>
+
+      <Asynchronous>
+      </Asynchronous>
+
+      <final>
+        <DisconnectDongle task="DisconnectDUTByUsbHid" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <device_name Runner.Input="DUT_Dongle"/>
+        </DisconnectDongle>
+        <DisconnectHeadset task="DisconnectDUTByUsbHid" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <device_name Runner.Input="DUT_Headset"/>
+        </DisconnectHeadset>
+      </final>
+
+    </default>
+  </flows>
+</root>

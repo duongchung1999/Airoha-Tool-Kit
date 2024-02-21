@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="System_Config" class="Airoha.Project.ConfigTool.View.PurePage" parameter="System_Config">
+    <ConfigGroup class="ucLayoutVertical">
+	  <ConfigItem class="ucComboBox" id="id_system_test_mode_combo">
+		<Parameter name="left_label" value="System Mode"/>
+		<Parameter name="left_width" value="100"/>
+		<Parameter name="width" value="120"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="down_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/systemmode.xml"/>
+		<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+		  <Parameter name="data" refId="id_system_test_mode"/>
+		</Associator>
+	  </ConfigItem>
+
+	</ConfigGroup>
+	<ConfigGroup class="General">
+	  <ConfigItem class="ucTextBox" Unique="SYSTEM_MODE_CONFIG.mode" id="id_system_test_mode" visible="hidden">
+		<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+		  <Parameter name="data" refId="id_system_test_mode_combo"/>
+		</Associator>
+	  </ConfigItem>
+	</ConfigGroup>
+</Page>

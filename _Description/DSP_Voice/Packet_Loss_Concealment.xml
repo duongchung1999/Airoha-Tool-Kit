@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Packet_Loss_Concealment" class="Airoha.Project.ConfigTool.View.DspPage" parameter="Packet_Loss_Concealment">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucDspCheckBox" id="id_voice_plc_enable_ckb">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="right_label" value="Enable/Disable"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcBitAssociator">
+        <Parameter name="data" refId="id_voice_plc_enable_tb"/>
+        <Parameter name="position" value="0"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical" visible="hidden">
+    <ConfigGroup class="General">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_voice_plc_enable_ckb"/>
+      </Associator>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.ENABLE" id="id_voice_plc_enable_tb">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcFlagAssociator">
+          <Parameter name="flag" refId="id_voice_plc_enable_ckb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.REVISION"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_OFFSET"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_OFFSET_mSBC"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_FramePartEn"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_FramePartMethod"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_CRCChkMethod"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_MUTE_CONSECUTIVE_ERRS_DEFAULT"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_UNITY_GAIN_CONSECUTIVE_GOODFRM_DEFAULT"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_MUTE_PE16_TH_DEFAULT"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_GAIN_UPDATE_PE16_TH_DEFAULT"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_PE16_ADJ_DEFAULT"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_MUTE_GAIN_RATE_FACTOR_ATTACK_DEFAULT"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_MUTE_GAIN_RATE_FACTOR_RELEASE_DEFAULT"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_WEIGHT_PKTLOSS_EN_DEFAULT"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_WEIGHT_PKTLOSS_DEFAULT"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_MIN_FRAME_EN"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_MIN_FRAME_BER_METHOD"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_SMART_EN"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_BER_GFRAME_EN"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_CRC_GFRAME_EN"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_BER_GFRAME_TH"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_HEC_GFRAME_EN"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PLC_STRU.PLC_TONE_SBER_EN"/>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

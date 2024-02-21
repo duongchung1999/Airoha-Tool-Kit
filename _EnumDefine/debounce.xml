@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="PMU_PWR_KEY_DEB_10MS" Value="0"/>
+	<Group Name="PMU_PWR_KEY_DEB_20MS" Value="1"/>
+	<Group Name="PMU_PWR_KEY_DEB_30MS" Value="2"/>
+	<Group Name="PMU_PWR_KEY_DEB_40MS" Value="3"/>
+</DataGroup>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Power_Detector" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Power_Detector">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_margin" value="20"/>
+    <Parameter name="bottom_margin" value="20"/>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="ANC"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+
+      <ConfigGroup class="ucLayoutVertical">
+        <ConfigItem class="ucComboBox" id="id_anc_power_detect_enable_cb">
+          <Parameter name="left_label" value="Power Detection Enable"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Parameter name="unique" value="ANC_POWER_DETECT_PARAM.enable"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_power_detect_enable_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="top_label" value="Detection"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="buttom_margin" value="5"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucUpDown" Unique="ANC_POWER_DETECT_PARAM.smooth" id="id_anc_power_detect_smooth_updown" min="0" max="15">
+          <Parameter name="left_label" value="Smooth"/>
+          <Parameter name="des_label" value="(0 ~ 15)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="ANC_POWER_DETECT_PARAM.smooth"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_power_detect_smooth_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="ANC_POWER_DETECT_PARAM.threshold" id="id_anc_power_detect_threshold_updown" min="-50" max="0">
+          <Parameter name="left_label" value="Threshold"/>
+          <Parameter name="des_label" value="(0 ~ -50 dBFS)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="multiple" value="0.01"/>
+          <Parameter name="unique" value="ANC_POWER_DETECT_PARAM.threshold"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_power_detect_threshold_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="ANC_POWER_DETECT_PARAM.max_attack_gain" id="id_anc_power_detect_max_attack_gain_updown"  min="0" max="60">
+          <Parameter name="left_label" value="Max Att"/>
+          <Parameter name="des_label" value="(0 ~ 60 dB)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="multiple" value="0.01"/>
+          <Parameter name="unique" value="ANC_POWER_DETECT_PARAM.max_attack_gain"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_power_detect_max_attack_gain_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="Time"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="border" value="1"/>
+        
+        <ConfigGroup class="ucLayoutHorizontal">
+          <ConfigItem class="ucUpDown" Unique="ANC_POWER_DETECT_PARAM.attack_rate" id="id_anc_power_detect_attack_rate_updown" min="0" max="9">
+            <Parameter name="left_label" value="Attack Gain Step"/>
+            <Parameter name="des_label" value="(0 ~ 9) 0.00125*2^x dB/step"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="110"/>
+            <Parameter name="top_margin" value="5"/>
+            <Parameter name="right_margin" value="5"/>
+            <Parameter name="bottom_margin" value="5"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="unique" value="ANC_POWER_DETECT_PARAM.attack_rate"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_anc_power_detect_attack_rate_tb"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucUpDown" Unique="ANC_POWER_DETECT_PARAM.release_rate" id="id_anc_power_detect_release_rate_updown" min="0" max="9">
+            <Parameter name="left_label" value="Release Gain Step"/>
+            <Parameter name="des_label" value="(0 ~ 9) 0.00125*2^x dB/step"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="110"/>
+            <Parameter name="top_margin" value="5"/>
+            <Parameter name="right_margin" value="5"/>
+            <Parameter name="bottom_margin" value="5"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="unique" value="ANC_POWER_DETECT_PARAM.release_rate"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_anc_power_detect_release_rate_tb"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+
+        <ConfigGroup class="ucLayoutHorizontal">
+          <ConfigItem class="ucUpDown" Unique="ANC_POWER_DETECT_PARAM.attack_gain_step" id="id_anc_power_detect_attack_gain_step_updown" min="0" max="30.00" visible="hidden">
+            <Parameter name="left_label" value="SW Attack Gain Step"/>
+            <Parameter name="des_label" value="(0 ~ 30)"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="110"/>
+            <Parameter name="top_margin" value="5"/>
+            <Parameter name="right_margin" value="5"/>
+            <Parameter name="bottom_margin" value="5"/>
+            <Parameter name="step" value="0.01"/>
+            <Parameter name="multiple" value="0.01"/>
+            <Parameter name="unique" value="ANC_POWER_DETECT_PARAM.attack_gain_step"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_anc_power_detect_attack_gain_step_tb"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucUpDown" Unique="ANC_POWER_DETECT_PARAM.release_gain_step" id="id_anc_power_detect_release_gain_step_updown"  min="0" max="30.00" visible="hidden">
+            <Parameter name="left_label" value="SW Release Gain Step"/>
+            <Parameter name="des_label" value="(0 ~ 30)"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="110"/>
+            <Parameter name="top_margin" value="5"/>
+            <Parameter name="right_margin" value="5"/>
+            <Parameter name="bottom_margin" value="5"/>
+            <Parameter name="step" value="0.01"/>
+            <Parameter name="multiple" value="0.01"/>
+            <Parameter name="unique" value="ANC_POWER_DETECT_PARAM.release_gain_step"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_anc_power_detect_release_gain_step_tb"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="AiroThru"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+
+      <ConfigGroup class="ucLayoutVertical">
+        <ConfigItem class="ucComboBox" id="id_airothru_power_detect_enable_cb">
+          <Parameter name="left_label" value="Power Detection Enable"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Parameter name="unique" value="AIROTHRU_POWER_DETECT_PARAM.enable"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_airothru_power_detect_enable_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="top_label" value="Detection"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="buttom_margin" value="5"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucUpDown" Unique="AIROTHRU_POWER_DETECT_PARAM.smooth" id="id_airothru_power_detect_smooth_updown" min="0" max="15">
+          <Parameter name="left_label" value="Smooth"/>
+          <Parameter name="des_label" value="(0 ~ 15)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="AIROTHRU_POWER_DETECT_PARAM.smooth"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_airothru_power_detect_smooth_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="AIROTHRU_POWER_DETECT_PARAM.threshold" id="id_airothru_power_detect_threshold_updown" min="-50" max="0">
+          <Parameter name="left_label" value="Threshold"/>
+          <Parameter name="des_label" value="(0 ~ -50 dBFS)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="multiple" value="0.01"/>
+          <Parameter name="unique" value="AIROTHRU_POWER_DETECT_PARAM.threshold"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_airothru_power_detect_threshold_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="AIROTHRU_POWER_DETECT_PARAM.max_attack_gain" id="id_airothru_power_detect_max_attack_gain_updown"  min="0" max="60">
+          <Parameter name="left_label" value="Max Att"/>
+          <Parameter name="des_label" value="(0 ~ 60 dB)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="multiple" value="0.01"/>
+          <Parameter name="unique" value="AIROTHRU_POWER_DETECT_PARAM.max_attack_gain"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_airothru_power_detect_max_attack_gain_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="Time"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="border" value="1"/>
+
+        <ConfigGroup class="ucLayoutHorizontal">
+          <ConfigItem class="ucUpDown" Unique="AIROTHRU_POWER_DETECT_PARAM.attack_rate" id="id_airothru_power_detect_attack_rate_updown" min="0" max="9">
+            <Parameter name="left_label" value="Attack Gain Step"/>
+            <Parameter name="des_label" value="(0 ~ 9) 0.00125*2^x dB/step"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="110"/>
+            <Parameter name="top_margin" value="5"/>
+            <Parameter name="right_margin" value="5"/>
+            <Parameter name="bottom_margin" value="5"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="unique" value="AIROTHRU_POWER_DETECT_PARAM.attack_rate"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_airothru_power_detect_attack_rate_tb"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucUpDown" Unique="AIROTHRU_POWER_DETECT_PARAM.release_rate" id="id_airothru_power_detect_release_rate_updown" min="0" max="9">
+            <Parameter name="left_label" value="Release Gain Step"/>
+            <Parameter name="des_label" value="(0 ~ 9) 0.00125*2^x dB/step"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="110"/>
+            <Parameter name="top_margin" value="5"/>
+            <Parameter name="right_margin" value="5"/>
+            <Parameter name="bottom_margin" value="5"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="unique" value="AIROTHRU_POWER_DETECT_PARAM.release_rate"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_airothru_power_detect_release_rate_tb"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+
+        <ConfigGroup class="ucLayoutHorizontal">
+          <ConfigItem class="ucUpDown" Unique="AIROTHRU_POWER_DETECT_PARAM.attack_gain_step" id="id_airothru_power_detect_attack_gain_step_updown" min="0" max="30.00" visible="hidden">
+            <Parameter name="left_label" value="SW Attack Gain Step"/>
+            <Parameter name="des_label" value="(0 ~ 30)"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="110"/>
+            <Parameter name="top_margin" value="5"/>
+            <Parameter name="right_margin" value="5"/>
+            <Parameter name="bottom_margin" value="5"/>
+            <Parameter name="step" value="0.01"/>
+            <Parameter name="multiple" value="0.01"/>
+            <Parameter name="unique" value="AIROTHRU_POWER_DETECT_PARAM.attack_gain_step"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_airothru_power_detect_attack_gain_step_tb"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucUpDown" Unique="AIROTHRU_POWER_DETECT_PARAM.release_gain_step" id="id_airothru_power_detect_release_gain_step_updown" min="0" max="30.00" visible="hidden">
+            <Parameter name="left_label" value="SW Release Gain Step"/>
+            <Parameter name="des_label" value="(0 ~ 30)"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="110"/>
+            <Parameter name="top_margin" value="5"/>
+            <Parameter name="right_margin" value="5"/>
+            <Parameter name="bottom_margin" value="5"/>
+            <Parameter name="step" value="0.01"/>
+            <Parameter name="multiple" value="0.01"/>
+            <Parameter name="unique" value="AIROTHRU_POWER_DETECT_PARAM.release_gain_step"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_airothru_power_detect_release_gain_step_tb"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+  
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="ANC_POWER_DETECT_PARAM.enable" id="id_anc_power_detect_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_power_detect_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ANC_POWER_DETECT_PARAM.smooth" id="id_anc_power_detect_smooth_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_power_detect_smooth_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ANC_POWER_DETECT_PARAM.threshold" id="id_anc_power_detect_threshold_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_power_detect_threshold_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ANC_POWER_DETECT_PARAM.attack_rate" id="id_anc_power_detect_attack_rate_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_power_detect_attack_rate_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ANC_POWER_DETECT_PARAM.release_rate" id="id_anc_power_detect_release_rate_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_power_detect_release_rate_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ANC_POWER_DETECT_PARAM.attack_gain_step" id="id_anc_power_detect_attack_gain_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_power_detect_attack_gain_step_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ANC_POWER_DETECT_PARAM.release_gain_step" id="id_anc_power_detect_release_gain_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_power_detect_release_gain_step_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ANC_POWER_DETECT_PARAM.max_attack_gain" id="id_anc_power_detect_max_attack_gain_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_power_detect_max_attack_gain_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AIROTHRU_POWER_DETECT_PARAM.enable" id="id_airothru_power_detect_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_airothru_power_detect_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AIROTHRU_POWER_DETECT_PARAM.smooth" id="id_airothru_power_detect_smooth_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_airothru_power_detect_smooth_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AIROTHRU_POWER_DETECT_PARAM.threshold" id="id_airothru_power_detect_threshold_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_airothru_power_detect_threshold_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AIROTHRU_POWER_DETECT_PARAM.attack_rate" id="id_airothru_power_detect_attack_rate_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_airothru_power_detect_attack_rate_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AIROTHRU_POWER_DETECT_PARAM.release_rate" id="id_airothru_power_detect_release_rate_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_airothru_power_detect_release_rate_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AIROTHRU_POWER_DETECT_PARAM.attack_gain_step" id="id_airothru_power_detect_attack_gain_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_airothru_power_detect_attack_gain_step_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AIROTHRU_POWER_DETECT_PARAM.release_gain_step" id="id_airothru_power_detect_release_gain_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_airothru_power_detect_release_gain_step_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="AIROTHRU_POWER_DETECT_PARAM.max_attack_gain" id="id_airothru_power_detect_max_attack_gain_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_airothru_power_detect_max_attack_gain_updown"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>
+

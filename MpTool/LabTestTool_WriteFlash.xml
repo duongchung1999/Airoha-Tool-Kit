@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <environments WpfView="EnvionmentSelect">
+    <DUT1 IsEnable="True" />
+  </environments>
+  <UnifiedInput>
+    <FlashBin>D:\AB1532D_awsmce_ref_design_V2.0.0.ER4_20190104_103127.bin</FlashBin>
+  </UnifiedInput>
+  <SelfInput>
+    <DeviceUart>
+      <DUT1>41</DUT1>
+    </DeviceUart>
+  </SelfInput>
+  <Managers/>
+  <flows Runner.StartFlow="default">
+    <default SettingPage.Name="Default Process">
+      <option/>
+      <main>
+        <ToolLogLevel task="DetailLogLevel" />
+        <ConnectDevice task="ConnectDUT">
+          <port Runner.Input="DeviceUart" />
+        </ConnectDevice>
+        <WriteIRam task="WriteIRamBinFile"/>
+        <WriteFlash task="AB153xWriteFlashBinFile">
+          <filename Runner.Input="FlashBin" />
+        </WriteFlash>
+      </main>
+      <Asynchronous>
+      </Asynchronous>
+      <final>
+        <DisconnectDevice task="DisconnectDUT"/>
+      </final>
+    </default>
+  </flows>
+</root>

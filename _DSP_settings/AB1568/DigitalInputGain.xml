@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="-3" Value="65236"/> 
+	<Group Name="0" Value="0"/> 
+	<Group Name="3" Value="300"/> 
+	<Group Name="6" Value="600"/> 
+	<Group Name="9" Value="900"/> 
+	<Group Name="12" Value="1200"/> 
+	<Group Name="15" Value="1500"/> 
+	<Group Name="18" Value="1800"/> 
+	<Group Name="21" Value="2100"/> 
+	<Group Name="21" Value="2100"/> 
+	<Group Name="24" Value="2400"/> 
+	<Group Name="27" Value="2700"/>
+	<Group Name="30" Value="3000"/>
+	<Group Name="33" Value="3300"/>
+	<Group Name="36" Value="3600"/>
+	<Group Name="39" Value="3900"/>
+	<Group Name="42" Value="4200"/>
+</DataGroup>
+
+

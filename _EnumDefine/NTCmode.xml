@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+  <Group Name="external" Value="0"/>
+  <Group Name="internal" Value="1"/>
+  <Group Name="two external" Value="2"/>
+</DataGroup>

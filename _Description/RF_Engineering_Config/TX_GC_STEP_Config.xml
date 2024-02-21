@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="TX_GC_STEP_Config" class="Airoha.Project.ConfigTool.View.General" parameter="TX_GC_STEP_Config">
+  <!--<ConfigItem class="ucTextBox" Unique="TX_GC_STEP.TX_GC_STEP"/>-->
+  <ConfigItem class="ucTextBox" Unique="TX_GC_STEP.RSSI_GOLDEN_RANGE_UB"/>
+  <ConfigItem class="ucTextBox" Unique="TX_GC_STEP.RSSI_GOLDEN_RANGE_LB"/>
+</Page>

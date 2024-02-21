@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="100Hz">
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_0" value="0076FE9F" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_1" value="FF890301" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_2" value="0076FE9E" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_3" value="FF856EC7" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_4" value="00758D42" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_5" value="007F5D7F" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_6" value="FF80AB5D" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_7" value="007F5D7E" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_8" value="FF80EB0D" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_9" value="007E5FE2" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_10" value="00400000" /> 
+	</Group>
+	
+	<Group Name="110Hz">
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_0" value="00767DC8" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_1" value="FF89842E" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_2" value="00767DC7" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_3" value="FF85F940" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_4" value="00748E35" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_5" value="007F46EB" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_6" value="FF80C3CB" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_7" value="007F46EA" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_8" value="FF810558" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_9" value="007E3699" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_10" value="00400000" /> 
+	</Group>  
+	
+	<Group Name="115Hz">
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_0" value="00763D97" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_1" value="FF89C48C" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_2" value="00763D96" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_3" value="FF863E6F" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_4" value="00740F82" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_5" value="007F3B93" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_6" value="FF80D022" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_7" value="007F3B92" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_8" value="FF8112AD" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_9" value="007E21FA" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_10" value="00400000" />
+	</Group> 
+	
+	<Group Name="120Hz">
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_0" value="0075FD8A" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_1" value="FF8A04C9" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_2" value="0075FD89" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_3" value="FF868399" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_4" value="00739154" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_5" value="007F3030" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_6" value="FF80DC8D" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_7" value="007F302F" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_8" value="FF812022" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_9" value="007E0D5E" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_10" value="00400000" />
+	</Group> 
+	
+	<Group Name="125Hz">
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_0" value="0075BDA6" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_1" value="FF8A44DE" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_2" value="0075BDA5" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_3" value="FF86C8B8" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_4" value="007313B6" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_5" value="007F24C5" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_6" value="FF80E90D" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_7" value="007F24C4" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_8" value="FF812DB7" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_9" value="007DF8C7" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_10" value="00400000" />
+	</Group> 
+	
+	<Group Name="130Hz">
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_0" value="00757DE9" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_1" value="FF8A84CF" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_2" value="00757DE8" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_3" value="FF870DCF" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_4" value="007296A2" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_5" value="007F1950" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_6" value="FF80F5A1" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_7" value="007F194F" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_8" value="FF813B6D" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_9" value="007DE434" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_10" value="00400000" />
+	</Group> 
+	
+	<Group Name="135Hz">
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_0" value="00753E51" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_1" value="FF8AC49B" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_2" value="00753E50" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_3" value="FF8752DE" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_4" value="00721A17" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_5" value="007F0DD2" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_6" value="FF81024A" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_7" value="007F0DD1" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_8" value="FF814942" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_9" value="007DCFA5" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_10" value="00400000" />
+	</Group> 
+	
+	<Group Name="140Hz">
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_0" value="0074FEE0" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_1" value="FF8B0443" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_2" value="0074FEDF" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_3" value="FF8797E5" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_4" value="00719E14" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_5" value="007F024A" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_6" value="FF810F07" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_7" value="007F0249" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_8" value="FF815737" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_9" value="007DBB19" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_10" value="00400000" />
+	</Group> 
+	
+	<Group Name="145Hz">
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_0" value="0074BF94" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_1" value="FF8B43C7" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_2" value="0074BF93" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_3" value="FF87DCE3" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_4" value="0071229A" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_5" value="007EF6B9" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_6" value="FF811BD9" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_7" value="007EF6B8" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_8" value="FF81654B" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_9" value="007DA692" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_10" value="00400000" />
+	</Group> 
+
+	<Group Name="150Hz">
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_0" value="0074806F" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_1" value="FF8B8327" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_2" value="0074806E" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_3" value="FF8821D9" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_4" value="0070A7A6" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_5" value="007EEB1E" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_6" value="FF8128BF" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_7" value="007EEB1D" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_8" value="FF817380" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_9" value="007D920E" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_10" value="00400000" />
+	</Group>
+
+	<Group Name="200Hz">
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_0" value="0070E40C" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_1" value="FF8F2222" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_2" value="0070E40B" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_3" value="FF8AD173" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_4" value="006BF6E3" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_5" value="007FC64E" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_6" value="FF805D41" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_7" value="007FC64D" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_8" value="FF820857" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_9" value="007CC5C8" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_10" value="00400000" />
+	</Group>
+
+	<Group Name="250Hz">
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_0" value="006E8984" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_1" value="FF917FF1" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_2" value="006E8983" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_3" value="FF8D7D28" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_4" value="006778EF" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_5" value="007F4B6F" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_6" value="FF80EBEE" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_7" value="007F4B6E" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_8" value="FF82A963" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_9" value="007BFB24" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_10" value="00400000" />
+	</Group>
+
+	<Group Name="300Hz">
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_0" value="006C3D13" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_1" value="FF93D046" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_2" value="006C3D12" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_3" value="FF902495" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_4" value="00632BD5" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_5" value="007ECD0A" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_6" value="FF818266" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_7" value="007ECD09" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_8" value="FF835676" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_9" value="007B3233" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_10" value="00400000" />
+	</Group>
+
+	<Group Name="350Hz">
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_0" value="0068E3BB" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_1" value="FF972DE3" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_2" value="0068E3BA" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_3" value="FF92C768" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_4" value="005F0DA5" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_5" value="007F9F89" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_6" value="FF80CD54" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_7" value="007F9F88" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_8" value="FF840F61" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_9" value="007A6B04" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_10" value="00400000" />
+	</Group>
+
+	<Group Name="400Hz">
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_0" value="0066B855" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_1" value="FF995E38" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_2" value="0066B854" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_3" value="FF956553" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_4" value="005B1C92" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_5" value="007F18F4" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_6" value="FF8174B7" />
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_7" value="007F18F3" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_8" value="FF84D3F4" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_9" value="0079A5A9" /> 
+	  <Data Unique="DSP_PARA_AEC_NR_STRU.VOICE_IE_HP_COEF_10" value="00400000" />
+	</Group>
+	
+</DataGroup>

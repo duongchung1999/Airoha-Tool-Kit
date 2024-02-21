@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="Debug" Value="0"/>
+	<Group Name="Info" Value="1"/>
+	<Group Name="Warning" Value="2"/>
+	<Group Name="Error" Value="3"/>
+</DataGroup>

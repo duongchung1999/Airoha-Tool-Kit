@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="AU_DSP_CH_LR" Value="0"/>
+	<Group Name="AU_DSP_CH_L" Value="1"/>
+	<Group Name="AU_DSP_CH_R" Value="2"/>
+	<Group Name="AU_DSP_CH_SWAP" Value="3"/>
+	<Group Name="AU_DSP_CH_MIX " Value="4"/>
+	<Group Name="AU_DSP_CH_MIX_SHIFT" Value="5"/>
+</DataGroup>

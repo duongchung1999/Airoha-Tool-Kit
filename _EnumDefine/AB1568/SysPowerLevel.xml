@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="active mode (MCU and peripheral)" Value="0"/>
+	<Group Name="frozen mode(peripheral)" Value="1"/>
+	<Group Name="sleep mode" Value="2"/>
+	<Group Name="Deep sleep mode(not support now)" Value="3"/>
+</DataGroup>

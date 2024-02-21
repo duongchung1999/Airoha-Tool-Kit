@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="Analog Mic" Value="0"/>
+	<Group Name="Digital Mic" Value="1"/>
+	<Group Name="I2S_Master_In" Value="2"/>
+	<Group Name="I2S_Slave_In" Value="3"/>
+	<Group Name="Multiple_Mic_Configuration" Value="4"/>
+</DataGroup>

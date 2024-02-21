@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="LMP_FEATURES_PAGE1" class="Airoha.Project.ConfigTool.View.General" parameter="LMP_FEATURES_PAGE1">
+  <ConfigGroup title="LMP__FEATURES_PAGE1_Byte0" class="ucBitField">
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE1.Secure_Simple_Pairing_Host_Support"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE1.LE_Supported_Host"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE1.Sim_LE_BR_EDR_to_Same_Device_Host"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE1.Secure_Connections_Host_Support"/>
+  </ConfigGroup>
+  <!--<ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE1.Data0"/>-->
+  <!--<ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE1.Data1"/>
+        <ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE1.Data2"/>
+        <ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE1.Data3"/>
+        <ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE1.Data4"/>
+        <ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE1.Data5"/>
+        <ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE1.Data6"/>
+        <ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE1.Data7"/>-->
+</Page>

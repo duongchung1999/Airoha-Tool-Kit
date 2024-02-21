@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="LE_Audio_Settings" class="Airoha.Project.ConfigTool.View.PurePage" parameter="LE_Audio_Settings">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value="CSIS"/>
+    <Parameter name="left_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="top_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+	<ConfigGroup class="General">
+	  <ConfigItem class="ucStrTextBox" Unique="BT_LE_AUDIO_CSIS_DATA.SIRK" present="hexstr" min="32" max="32"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_CSIS_DATA.Size" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_CSIS_DATA.Rank" present="hex"/>
+	</ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value="VCS"/>
+    <Parameter name="left_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="top_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+	<ConfigGroup class="General">
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_VCS_VOLUME.Volume" present="hex"/>
+	</ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value="VOCS"/>
+    <Parameter name="left_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="top_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+	<ConfigGroup class="General">
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_VOCS_DATA.VolumeOffset_1" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_VOCS_DATA.AudioLocation_1" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_VOCS_DATA.VolumeOffset_2" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_VOCS_DATA.AudioLocation_2" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_VOCS_DATA.VolumeOffset_3" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_VOCS_DATA.AudioLocation_3" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_VOCS_DATA.VolumeOffset_4" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_VOCS_DATA.AudioLocation_4" present="hex"/>
+	</ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value="AICS"/>
+    <Parameter name="left_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="top_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+	<ConfigGroup class="General">
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING_PROPERTIES.GainSettingUnits_1" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING_PROPERTIES.GainSettingMinimum_1" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING_PROPERTIES.GainSettingMaximum_1" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING_PROPERTIES.GainSettingUnits_2" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING_PROPERTIES.GainSettingMinimum_2" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING_PROPERTIES.GainSettingMaximum_2" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING_PROPERTIES.GainSettingUnits_3" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING_PROPERTIES.GainSettingMinimum_3" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING_PROPERTIES.GainSettingMaximum_3" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING_PROPERTIES.GainSettingUnits_4" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING_PROPERTIES.GainSettingMinimum_4" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING_PROPERTIES.GainSettingMaximum_4" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING_PROPERTIES.GainSettingUnits_5" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING_PROPERTIES.GainSettingMinimum_5" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING_PROPERTIES.GainSettingMaximum_5" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING.GainSetting_1" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING.GainMode_1" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING.GainSetting_2" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING.GainMode_2" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING.GainSetting_3" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING.GainMode_3" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING.GainSetting_4" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING.GainMode_4" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING.GainSetting_5" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_AICS_GAIN_SETTING.GainMode_5" present="hex"/>
+	</ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value="PACS"/>
+    <Parameter name="left_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="top_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+	<ConfigGroup class="General">
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_SINK_LOCATION.SINK_AudioLocation" present="hex"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_SOURCE_LOCATION.SOURCE_AudioLocation" present="hex"/>
+	</ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value="Description String"/>
+    <Parameter name="left_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="top_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+	<ConfigGroup class="General">
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_1.Length" present="hex"/>
+	  <ConfigItem class="ucStrTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_1.String" present="hexstr" min="62" max="62"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_2.Length" present="hex"/>
+	  <ConfigItem class="ucStrTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_2.String" present="hexstr" min="62" max="62"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_3.Length" present="hex"/>
+	  <ConfigItem class="ucStrTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_3.String" present="hexstr" min="62" max="62"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_4.Length" present="hex"/>
+	  <ConfigItem class="ucStrTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_4.String" present="hexstr" min="62" max="62"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_5.Length" present="hex"/>
+	  <ConfigItem class="ucStrTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_5.String" present="hexstr" min="62" max="62"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_6.Length" present="hex"/>
+	  <ConfigItem class="ucStrTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_6.String" present="hexstr" min="62" max="62"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_7.Length" present="hex"/>
+	  <ConfigItem class="ucStrTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_7.String" present="hexstr" min="62" max="62"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_8.Length" present="hex"/>
+	  <ConfigItem class="ucStrTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_8.String" present="hexstr" min="62" max="62"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_9.Length" present="hex"/>
+	  <ConfigItem class="ucStrTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_9.String" present="hexstr" min="62" max="62"/>
+	  <ConfigItem class="ucTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_10.Length" present="hex"/>
+	  <ConfigItem class="ucStrTextBox" Unique="BT_LE_AUDIO_DESCRIPTION_STRING_10.String" present="hexstr" min="62" max="62"/>
+	</ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value="Metadata"/>
+    <Parameter name="left_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="top_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+	<ConfigGroup class="General">
+	  <ConfigItem class="ucStrTextBox" Unique="BT_LE_AUDIO_METADATA.Data" present="hexstr" min="512" max="512"/>
+	</ConfigGroup>
+  </ConfigGroup>
+</Page>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Linkkey" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Linkkey">
+	<ConfigGroup class="ucLayoutHorizontal">
+		<ConfigItem class="AB1568.ucGetLinkkeyBtn" id="id_link_key_btn"/>
+	</ConfigGroup>
+	<ConfigGroup class="ucLayoutVertical">
+		<ConfigGroup class="ucLayoutHorizontal">
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_address_0" name="BDAddr 1">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_key_0" name="Link Key 1">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+
+		<ConfigGroup class="ucLayoutHorizontal">
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_address_1" name="BDAddr 2">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_key_1" name="Link Key 2">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+
+		<ConfigGroup class="ucLayoutHorizontal">
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_address_2" name="BDAddr 3">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_key_2" name="Link Key 3">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+
+		</ConfigGroup>
+
+		<ConfigGroup class="ucLayoutHorizontal">
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_address_3" name="BDAddr 4">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_key_3" name="Link Key 4">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+
+		<ConfigGroup class="ucLayoutHorizontal">
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_address_4" name="BDAddr 5">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_key_4" name="Link Key 5">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+
+		<ConfigGroup class="ucLayoutHorizontal">
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_address_5" name="BDAddr 6">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_key_5" name="Link Key 6">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+
+		<ConfigGroup class="ucLayoutHorizontal">
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_address_6" name="BDAddr 7">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_key_6" name="Link Key 7">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+
+		<ConfigGroup class="ucLayoutHorizontal">
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_address_7" name="BDAddr 8">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_key_7" name="Link Key 8">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+
+		<ConfigGroup class="ucLayoutHorizontal">
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_address_8" name="BDAddr 9">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_key_8" name="Link Key 9">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+
+		<ConfigGroup class="ucLayoutHorizontal">
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_address_9" name="BDAddr 10">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_key_9" name="Link Key 10">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+
+		<ConfigGroup class="ucLayoutHorizontal">
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_address_10" name="BDAddr 11">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_key_10" name="Link Key 11">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+
+		<ConfigGroup class="ucLayoutHorizontal">
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_address_11" name="BDAddr 12">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_key_11" name="Link Key 12">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+
+		<ConfigGroup class="ucLayoutHorizontal">
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_address_12" name="BDAddr 13">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_key_12" name="Link Key 13">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+
+		<ConfigGroup class="ucLayoutHorizontal">
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_address_13" name="BDAddr 14">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_key_13" name="Link Key 14">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+
+		<ConfigGroup class="ucLayoutHorizontal">
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_address_14" name="BDAddr 15">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+			<ConfigItem class="AB1568.ucLinkkeyTextBox" present="hexstr" id="id_link_key_14" name="Link Key 15">
+				<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+					<Parameter name="data" refId="id_link_key_btn"/>
+				</Associator>
+			</ConfigItem>
+		</ConfigGroup>
+
+
+	</ConfigGroup>
+
+</Page>

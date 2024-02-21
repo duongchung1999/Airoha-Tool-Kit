@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+  <Group Name="GPIO28" Value="28"/>
+  <Group Name="GPIO29" Value="29"/>
+  <Group Name="None" Value="255"/>
+</DataGroup>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="eSCO_Settings" class="Airoha.Project.ConfigTool.View.General" parameter="eSCO_Settings">
+  <ConfigItem class="uceScoIO" Unique="DSP_PARA_AU_AFE_CTRL.InputChannel">
+    <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+      <Parameter name="outpath" refId="id_output_path"/>
+	  <Parameter name="data" refId="id_audio_io_setting"/>
+    </Associator>
+  </ConfigItem>
+</Page>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="SYSLDO" class="Airoha.Project.ConfigTool.View.General" parameter="SYSLDO">
+  <ConfigItem class="ucTextBox" Unique="SYSLDO.SYSLDOoutputvoltage"/>
+  <ConfigItem class="ucTextBox" Unique="SYSLDO.CHG_LDO_SEL"/>
+</Page>

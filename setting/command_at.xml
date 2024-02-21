@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandBook>
+  <AB155x_AT_RESP>
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <data type="uint8_array" array_length="*" />
+      <ok type="uint8_array" array_length="2" value="0D 0A" />
+    </ResponseFormat>
+  </AB155x_AT_RESP>
+  <!--AT+TEST=?\0d\0a-->
+  <AB155x_AT_TEST>
+    <RequestFormat>
+      <data type="uint8_array" array_length="*" value="41 54 2B 54 45 53 54 3D 3F 0D 0A" />
+    </RequestFormat>
+    <ResponseFormat>
+    </ResponseFormat>
+  </AB155x_AT_TEST>
+  <!--AT+SWITCH=2,race_command\0d\0a-->
+  <AB155x_SWITCH_AT_TO_RACE>
+    <RequestFormat>
+      <data type="uint8_array" array_length="*" value="41 54 2B 53 57 49 54 43 48 3D 32 2C 72 61 63 65 5F 63 6F 6D 6D 61 6E 64 0D 0A" />
+    </RequestFormat>
+    <ResponseFormat>
+    </ResponseFormat>
+  </AB155x_SWITCH_AT_TO_RACE>
+  <!--AT+SM=LOCK,1,SLP\0d\0a-->
+  <AB155x_AT_LOCK_SLEEP>
+    <RequestFormat>
+      <data type="uint8_array" array_length="*" value="41 54 2B 53 4D 3D 4C 4F 43 4B 2C 31 2C 53 4C 50 0D 0A" />
+    </RequestFormat>
+    <ResponseFormat>
+    </ResponseFormat>
+  </AB155x_AT_LOCK_SLEEP>
+  <!--AT+SM=LOCK,0,SLP\0d\0a-->
+  <AB155x_AT_UNLOCK_SLEEP>
+    <RequestFormat>
+      <data type="uint8_array" array_length="*" value="41 54 2B 53 4D 3D 4C 4F 43 4B 2C 30 2C 53 4C 50 0D 0A" />
+    </RequestFormat>
+    <ResponseFormat>
+    </ResponseFormat>
+  </AB155x_AT_UNLOCK_SLEEP>
+  <!--AT+BATCHARGING=0\0d\0a-->
+  <AB155x_AT_BATCHARGING>
+    <RequestFormat>
+      <data type="uint8_array" array_length="*" value="41 54 2b 42 41 54 43 48 41 52 47 49 4e 47 3d 30 0d 0a" />
+    </RequestFormat>
+    <ResponseFormat>
+    </ResponseFormat>
+  </AB155x_AT_BATCHARGING>
+  <!--AT+BTSINKIT=BT-POWER-OFF\0d\0a-->
+  <AB155x_AT_BTSINKIT_BT_POWER_OFF>
+    <RequestFormat>
+      <data type="uint8_array" array_length="*" value="41 54 2b 42 54 53 49 4e 4b 49 54 3d 42 54 2d 50 4f 57 45 52 2d 4f 46 46 0d 0a" />
+    </RequestFormat>
+    <ResponseFormat>
+    </ResponseFormat>
+  </AB155x_AT_BTSINKIT_BT_POWER_OFF>
+  <!--AT+EBTER=0\0d\0a-->
+  <AB155x_AT_EBTER_0>
+    <RequestFormat>
+      <data type="uint8_array" array_length="*" value="41 54 2b 45 42 54 45 52 3d 30 0d 0a" />
+    </RequestFormat>
+    <ResponseFormat>
+    </ResponseFormat>
+  </AB155x_AT_EBTER_0>
+  <!--AT+EBTER=1\0d\0a-->
+  <AB155x_SWITCH_AT_TO_RELAY>
+    <RequestFormat>
+      <data type="uint8_array" array_length="*" value="41 54 2b 45 42 54 45 52 3d 31 0d 0a" />
+    </RequestFormat>
+    <ResponseFormat>
+    </ResponseFormat>
+  </AB155x_SWITCH_AT_TO_RELAY>
+  <!--AT+EBTER=2\0d\0a-->
+  <AB155x_AT_EBTER_2>
+    <RequestFormat>
+      <data type="uint8_array" array_length="*" value="41 54 2b 45 42 54 45 52 3d 32 0d 0a" />
+    </RequestFormat>
+    <ResponseFormat>
+    </ResponseFormat>
+  </AB155x_AT_EBTER_2>
+  <!--AT+APPFEATURE=SET,NOCONN_SLEEP,1\0d\0a-->
+  <AB155x_AT_APPFEATURE_SET_NOCONN_SLEEP_1>
+    <RequestFormat>
+      <data type="uint8_array" array_length="*" value="41 54 2B 41 50 50 46 45 41 54 55 52 45 3D 53 45 54 2C 4E 4F 43 4F 4E 4E 5F 53 4C 45 45 50 2C 31 0D 0A" />
+    </RequestFormat>
+    <ResponseFormat>
+    </ResponseFormat>
+  </AB155x_AT_APPFEATURE_SET_NOCONN_SLEEP_1>
+  <AB155x_SWITCH_RACE_TO_AT>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5A" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <race_id type="uint16" value="0x0A08" />
+      <data type="uint8" value="0x00" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5B" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x0A08" />
+      <status type="uint8" />
+    </ResponseFormat>
+  </AB155x_SWITCH_RACE_TO_AT>
+  <AB155x_SWITCH_RACE_TO_RELAY>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5A" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <race_id type="uint16" value="0x0A08" />
+      <data type="uint8" value="0x01" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5B" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x0A08" />
+      <status type="uint8" />
+    </ResponseFormat>
+  </AB155x_SWITCH_RACE_TO_RELAY>
+</CommandBook>

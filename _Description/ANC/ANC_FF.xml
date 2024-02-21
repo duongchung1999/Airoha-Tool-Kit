@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="ANC_FF" class="Airoha.Project.ConfigTool.View.TabPage" parameter="ANC_FF" scroll="vertical">
+  <ConfigGroup title="FF" class="TouchFigurePage" parameter="FF">
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <ConfigGroup class="ucAncBandTable" id="id_anc_ff_setting_table">
+          <Parameter name="anc_type" value="FF"/>
+          <Parameter name="group_xml" value="/_DSP_settings/AB1568/AncFFGroup.xml"/>
+          <Parameter name="group_btn_row_max_cnt" value="4"/>
+          <Parameter name="cell_cnt" value="9"/>
+          <Parameter name="phase_target_line_str" value="id_anc_ff_phase_target_line_data"/>
+          <Parameter name="magnitude_target_line_str" value="id_anc_ff_magnitude_target_line_data"/>
+          <Parameter name="phase_line_id" value="id_anc_ff_phase_line_data"/>
+          <Parameter name="magnitude_line_id" value="id_anc_ff_magnitude_line_data"/>
+          <Parameter name="performance_line_id" value="id_anc_ff_perfomance_line_data"/>
+          <Parameter name="rescale_id" value="id_anc_ff_rescale_value"/>
+          <Parameter name="point_set_id" value="id_anc_ff_gain_point_set"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="point_set" refId="id_anc_ff_gain_point_set"/>
+            <Parameter name="anc_eng_mode" refId="id_anc_eng_mode"/>
+            <Parameter name="mp_gain" refId="mp_gain_changed"/>
+          </Associator>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

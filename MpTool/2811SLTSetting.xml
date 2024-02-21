@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <environments WpfView="EnvionmentSelect">
+    <DUT1 IsEnable="False" />
+    <DUT2 IsEnable="True" />
+    <DUT3 IsEnable="False" />
+    <DUT4 IsEnable="False" />
+    <DUT5 IsEnable="False" />
+    <DUT6 IsEnable="False" />
+    <DUT7 IsEnable="False" />
+    <DUT8 IsEnable="False" />
+  </environments>
+  <UnifiedInput></UnifiedInput>
+  <SelfInput>
+    <DeviceUart SettingPage.View="UartSelect">
+      <DUT1>4</DUT1>
+      <DUT2>31</DUT2>
+      <DUT3>13</DUT3>
+      <DUT4>19</DUT4>
+      <DUT5>1</DUT5>
+      <DUT6>1</DUT6>
+      <DUT7>1</DUT7>
+      <DUT8>1</DUT8>
+    </DeviceUart>
+  </SelfInput>
+  <Managers>
+    <ErrorCodeManager class="Airoha.Project.MpTool.ErrorCodeManager" />
+  </Managers>
+  <flows Runner.StartFlow="default">
+    <default SettingPage.Name="Default Process">
+      <option>
+      </option>
+      <main>
+        <ConnectDevice task="Connect2811SLT" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <port Runner.Input="DeviceUart" />
+        </ConnectDevice>
+        <SltTest task="TaskSltTest" Runner.Option="True">
+          <Output.EXIT_STATUS Runner.OutputToManager="ErrorCodeManager.exit_status_writer" />
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer" />
+        </SltTest>
+      </main>
+      <final>
+        <DisconnectDevice task="DisconnectDUT" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True" />
+      </final>
+    </default>
+  </flows>
+</root>

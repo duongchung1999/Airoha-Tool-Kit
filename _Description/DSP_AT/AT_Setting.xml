@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="AT_Setting" class="Airoha.Project.ConfigTool.View.General" parameter="AT_Setting">
+  <ConfigGroup title="AT Feature" class="ucBitField">
+    <ConfigItem class="ucCheckBox" Unique="APP_AIROTHRU_Reconnect.airoThruFeature.b0"/>
+    <ConfigItem class="ucCheckBox" Unique="APP_AIROTHRU_Reconnect.airoThruFeature.b1"/>
+  </ConfigGroup>
+</Page>

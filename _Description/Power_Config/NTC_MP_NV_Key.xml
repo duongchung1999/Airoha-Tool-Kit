@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="NTC(MP NV Key)" class="Airoha.Project.ConfigTool.View.PurePage" parameter="NTC(MP NV Key)">
+  <ConfigGroup class="ucLayoutHorizontal">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="NTC Setting"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucNtcComboBox" id="NTC_enable">
+        <Parameter name="left_label" value="NTC"/>
+        <Parameter name="left_width" value="100"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NTC_enable"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_NTC_ADCavg_updown" min="1" max="255">
+        <Parameter name="left_label" value="ADC avg.count"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="130"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="NTC_CONFIG.ADC_Cnt"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NTC_ADCavg"/>
+        </Associator>
+      </ConfigItem>
+      <!--<ConfigItem class="ucUpDown" id="id_NTC_T1_updown" min="1" max="255">
+        <Parameter name="left_label" value="T1"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="130"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="right_label" value="ms"/>
+        <Parameter name="unique" value="NTC_CONFIG.T1"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NTC_T1"/>
+        </Associator>
+      </ConfigItem>-->
+      <!--<ConfigItem class="ucUpDown" id="id_NTC_T2_updown" min="1" max="255">
+              <Parameter name="left_label" value="T2"/>
+              <Parameter name="left_margin" value="10"/>
+              <Parameter name="left_width" value="130"/>
+              <Parameter name="top_margin" value="10"/>
+              <Parameter name="step" value="1"/>
+              <Parameter name="right_label" value="ms"/>
+              <Parameter name="unique" value="NTC_CONFIG.T2"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="data" refId="id_NTC_T2"/>
+              </Associator>
+            </ConfigItem>-->
+      <ConfigItem class="ucUpDown" id="id_NTC_T3_updown" min="1" max="255">
+        <Parameter name="left_label" value="Interval"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="130"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="right_label" value="s"/>
+        <Parameter name="unique" value="NTC_CONFIG.T3"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NTC_T3"/>
+        </Associator>
+      </ConfigItem>
+      <!--<ConfigItem class="ucUpDown" id="id_NTC_DiscPert_updown" min="0" max="100">
+        <Parameter name="left_label" value="Discount Percent"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="130"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="right_label" value="%"/>
+        <Parameter name="unique" value="NTC_CONFIG.Disc_Pert"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NTC_DiscPert"/>
+        </Associator>
+      </ConfigItem>-->
+      <ConfigItem class="ucNtcComboBox" id="NTC_dump"  visible="hidden">
+        <Parameter name="left_label" value="NTC Dump"/>
+        <Parameter name="left_width" value="100"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NTC_dump"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="With Charger"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucNtcTempUpDown" id="id_NTC_RiskHigh_updown" min="-127" max="127">
+        <Parameter name="left_label" value="Risk high"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="130"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="right_label" value="°C"/>
+        <Parameter name="unique" value="NTC_CONFIG.Risk_High"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NTC_RiskHigh"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucNtcTempUpDown" id="id_NTC_AbnormalHigh_updown" min="-127" max="127">
+        <Parameter name="left_label" value="Abnormal High"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="130"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="right_label" value="°C"/>
+        <Parameter name="unique" value="NTC_CONFIG.Abnormal_High"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NTC_AbnormalHigh"/>
+        </Associator>
+      </ConfigItem>
+      <!--<ConfigItem class="ucNtcTempUpDown" id="id_NTC_NormalHigh_updown" min="-40" max="85">
+        <Parameter name="left_label" value="Normal High"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="130"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="right_label" value="°C"/>
+        <Parameter name="unique" value="NTC_CONFIG.Normal_High"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NTC_NormalHigh"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucNtcTempUpDown" id="id_NTC_NormalLow_updown" min="-40" max="85">
+        <Parameter name="left_label" value="Normal Low"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="130"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="right_label" value="°C"/>
+        <Parameter name="unique" value="NTC_CONFIG.Normal_Low"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NTC_NormalLow"/>
+        </Associator>
+      </ConfigItem>-->
+      <ConfigItem class="ucNtcTempUpDown" id="id_NTC_AbnormalLow_updown" min="-127" max="127">
+        <Parameter name="left_label" value="Abnormal Low"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="130"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="right_label" value="°C"/>
+        <Parameter name="unique" value="NTC_CONFIG.Abnormal_Low"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NTC_AbnormalLow"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucNtcTempUpDown" id="id_NTC_RiskLow_updown" min="-127" max="127">
+        <Parameter name="left_label" value="Risk Low"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="130"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="right_label" value="°C"/>
+        <Parameter name="unique" value="NTC_CONFIG.Risk_Low"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NTC_RiskLow"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Without Charger"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucNtcTempUpDown" id="id_NTC_SecurityHigh_updown" min="-127" max="127">
+        <Parameter name="left_label" value="Security High"/>
+        <Parameter name="des_label" value="Temperature of security high should &gt; Risk High"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="130"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="right_label" value="°C"/>
+        <Parameter name="unique" value="NTC_CONFIG.Security_High"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NTC_SecurityHigh"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucNtcTempUpDown" id="id_NTC_DisnormalHigh_updown" min="-127" max="127" visible="hidden">
+        <Parameter name="left_label" value="Normal High"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="130"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="right_label" value="°C"/>
+        <Parameter name="unique" value="NTC_CONFIG.DisNormal_High"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NTC_DisnormalHigh"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucNtcTempUpDown" id="id_NTC_DisnormalLow_updown" min="-127" max="127" visible="hidden">
+        <Parameter name="left_label" value="Normal Low"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="130"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="right_label" value="°C"/>
+        <Parameter name="unique" value="NTC_CONFIG.DisNormal_Low"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NTC_DisnormalLow"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucNtcTempUpDown" id="id_NTC_SecurityLow_updown" min="-127" max="127">
+        <Parameter name="left_label" value="Security Low"/>
+        <Parameter name="des_label" value="Temperature of security Low should &lt; Risk Low"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="130"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="right_label" value="°C"/>
+        <Parameter name="unique" value="NTC_CONFIG.Security_Low"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NTC_SecurityLow"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutHorizontal">
+    <Parameter name="top_label" value="Protection Mechanism"/>
+    <Parameter name="left_width" value="20"/>
+    <Parameter name="border" value="1"/>
+    <Parameter name="top_margin" value="10"/>
+    <Parameter name="left_margin" value="10"/>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Cool State"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucUpDown" id="id_JEITA.CoolStateCurrentPercent_updown" min="0" max="100">
+        <Parameter name="left_label" value="Discount Percent"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="200"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="right_label" value="%"/>
+        <Parameter name="unique" value="JEITA_65.CoolStateCurrentPercent"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_JEITA.CoolStateCurrentPercent"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_JEITA.CoolStateDACdecrease_updown" min="0" max="400">
+        <Parameter name="left_label" value="Full Bat decrease voltage"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="200"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="right_label" value="mv"/>
+        <Parameter name="unique" value="JEITA_65.CoolStateDACdecrease"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_JEITA.CoolStateDACdecrease"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Warm State"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucUpDown" id="id_JEITA.WarmStateCurrentPercent_updown" min="0" max="100">
+        <Parameter name="left_label" value="Discount Percent"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="200"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="right_label" value="%"/>
+        <Parameter name="unique" value="JEITA_65.WarmStateCurrentPercent"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_JEITA.WarmStateCurrentPercent"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_JEITA.WarmStateDACdecrease_updown" min="0" max="400">
+        <Parameter name="left_label" value="Full Bat decrease voltage"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="200"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="right_label" value="mv"/>
+        <Parameter name="unique" value="JEITA_65.WarmStateDACdecrease"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_JEITA.WarmStateDACdecrease"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+     
+    <ConfigItem class="ucTextBox" Unique="NTC_CONFIG.Enable" id="id_NTC_enable" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="NTC_enable"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="NTC_CONFIG.dump" id="id_NTC_dump" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="NTC_dump"/>
+      </Associator>
+    </ConfigItem>
+    <!--<ConfigItem class="ucTextBox" Unique="NTC_CONFIG.k_flag" id="id_NTC_mode" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="NTC_mode"/>
+      </Associator>
+    </ConfigItem>-->
+     
+    <ConfigItem class="ucTextBox" Unique="NTC_CONFIG.GPIO_CTR" id="id_NTC_CTR" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="NTC_CTR"/>
+      </Associator>
+    </ConfigItem>
+    <!--<ConfigItem class="ucTextBox" Unique="NTC_CONFIG.GPIO_AIO" id="id_NTC_AIO" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="NTC_AIO"/>
+            </Associator>
+          </ConfigItem>-->
+    <ConfigItem class="ucTextBox" Unique="NTC_CONFIG.GPIO_AIO2" id="id_NTC_AIO2" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="NTC_AIO2"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="NTC_CONFIG.ADC_Cnt" id="id_NTC_ADCavg" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_NTC_ADCavg_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="NTC_CONFIG.T1" id="id_NTC_T1" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_NTC_T1_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="NTC_CONFIG.T2" id="id_NTC_T2" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_NTC_T2_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="NTC_CONFIG.T3" id="id_NTC_T3" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_NTC_T3_updown"/>
+      </Associator>
+    </ConfigItem>
+    <!--<ConfigItem class="ucTextBox" Unique="NTC_CONFIG.Disc_Pert" id="id_NTC_DiscPert" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_NTC_DiscPert_updown"/>
+      </Associator>
+    </ConfigItem>-->
+    <ConfigItem class="ucTextBox" Unique="NTC_CONFIG.Risk_High" id="id_NTC_RiskHigh" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_NTC_RiskHigh_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="NTC_CONFIG.Abnormal_High" id="id_NTC_AbnormalHigh" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_NTC_AbnormalHigh_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="NTC_CONFIG.Normal_High" id="id_NTC_NormalHigh" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_NTC_NormalHigh_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="NTC_CONFIG.Normal_Low" id="id_NTC_NormalLow" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_NTC_NormalLow_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="NTC_CONFIG.Abnormal_Low" id="id_NTC_AbnormalLow" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_NTC_AbnormalLow_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="NTC_CONFIG.Risk_Low" id="id_NTC_RiskLow" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_NTC_RiskLow_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="NTC_CONFIG.Security_High" id="id_NTC_SecurityHigh" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_NTC_SecurityHigh_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="NTC_CONFIG.DisNormal_High" id="id_NTC_DisnormalHigh" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_NTC_DisnormalHigh_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="NTC_CONFIG.DisNormal_Low" id="id_NTC_DisnormalLow" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_NTC_DisnormalLow_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="NTC_CONFIG.Security_Low" id="id_NTC_SecurityLow" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_NTC_SecurityLow_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="JEITA_65.CoolStateCurrentPercent" id="id_JEITA.CoolStateCurrentPercent" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_JEITA.CoolStateCurrentPercent_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="JEITA_65.CoolStateDACdecrease" id="id_JEITA.CoolStateDACdecrease" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_JEITA.CoolStateDACdecrease_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="JEITA_65.WarmStateCurrentPercent" id="id_JEITA.WarmStateCurrentPercent" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_JEITA.WarmStateCurrentPercent_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="JEITA_65.WarmStateDACdecrease" id="id_JEITA.WarmStateDACdecrease" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_JEITA.WarmStateDACdecrease_updown"/>
+      </Associator>
+    </ConfigItem>    
+  </ConfigGroup>
+  <ConfigGroup class="ucNtcImport"/>
+</Page>

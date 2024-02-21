@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Int_CHG_cc2currentconfig" class="Airoha.Project.ConfigTool.View.General" parameter="Int_CHG_cc2currentconfig">
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.CalCount"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.select"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.cc2current1"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.rchg_sel_cc21"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.cc2current2"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.rchg_sel_cc22"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.cc2current3"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.rchg_sel_cc23"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.cc2current4"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.rchg_sel_cc24"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.cc2current5"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.rchg_sel_cc25"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.cc2current6"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.rchg_sel_cc26"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.cc2current7"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.rchg_sel_cc27"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.cc2current8"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.rchg_sel_cc28"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.cc2current9"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.rchg_sel_cc29"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.cc2current10"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_cc2currentconfig.rchg_sel_cc210"/>
+</Page>

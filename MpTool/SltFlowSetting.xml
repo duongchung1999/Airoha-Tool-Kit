@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <environments WpfView="EnvionmentSelect">
+    <DUT1 IsEnable="True"/>
+    <DUT2 IsEnable="False"/>
+    <DUT3 IsEnable="False"/>
+    <DUT4 IsEnable="False"/>
+    <DUT5 IsEnable="False"/>
+    <DUT6 IsEnable="False"/>
+    <DUT7 IsEnable="False"/>
+    <DUT8 IsEnable="False"/>
+  </environments>
+  <UnifiedInput>
+    <FlashBin SettingPage.View="FileSelection">E:\SVN_1530\AB1532D_AWS_MCE_V2.0.0_20181120_025949.bin</FlashBin>
+  </UnifiedInput>
+  <SelfInput>
+    <DeviceUart SettingPage.View="UartSelect">
+      <DUT1>195</DUT1>
+      <DUT2>113</DUT2>
+      <DUT3>13</DUT3>
+      <DUT4>19</DUT4>
+      <DUT5>195</DUT5>
+      <DUT6>1</DUT6>
+      <DUT7>86</DUT7>
+      <DUT8>80</DUT8>
+    </DeviceUart>
+    <TcbUart SettingPage.View="UartSelect">
+      <DUT1>194</DUT1>
+      <DUT2>114</DUT2>
+      <DUT3>14</DUT3>
+      <DUT4>18</DUT4>
+      <DUT5>194</DUT5>
+      <DUT6>2</DUT6>
+      <DUT7>85</DUT7>
+      <DUT8>79</DUT8>
+    </TcbUart>
+    <SltBdAddressList>
+      <DUT1>252AB7D63CD2</DUT1>
+      <DUT2>A176BC8A6234</DUT2>
+      <DUT3>3F4A56C5D32F</DUT3>
+      <DUT4>8AC9736AF2D3</DUT4>
+      <DUT5>F27D6E3F2364</DUT5>
+      <DUT6>567A2F3904A3</DUT6>
+      <DUT7>000333225557</DUT7>
+      <DUT8>112233445599</DUT8>
+    </SltBdAddressList>
+  </SelfInput>
+  <Managers>
+    <ErrorCodeManager class="Airoha.Project.SltTool.ErrorCodeManager" />
+  </Managers>
+  <flows Runner.StartFlow="default">
+    <default SettingPage.Name="Default Process">
+      <main>
+        <ToolLogLevel task="DetailLogLevel" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True"/>
+        <ReadNvkeyFromBin task="TaskReadNvKeyFromBin" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <bin_file_path SettingPage.IsIgnore="True" Runner.Input="FlashBin" />
+        </ReadNvkeyFromBin>
+        
+        <ConnectTcb task="ConnectTCB" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True" >
+          <port Runner.Input="TcbUart" />
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer"/>
+        </ConnectTcb>
+        <ConnectDevice task="ConnectDUT" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <port Runner.Input="DeviceUart" />
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer"/>
+        </ConnectDevice>
+        
+        <!--<InitTcbDut task="TaskInitTcbDut" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <device_name SettingPage.IsIgnore="True"/>
+          <tcb_name SettingPage.IsIgnore="True"/>
+          <reset_by_TCB SettingPage.IsIgnore="True"/>
+          <set_SDA_high SettingPage.IsIgnore="True"/>
+          <delay_after_reset SettingPage.IsIgnore="True"/>
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer"/>
+        </InitTcbDut>-->
+        <SltPowerOnToEngMode task="TaskSltPowerOnToEngMode" Runner.Option="True">
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer"/>
+        </SltPowerOnToEngMode>
+
+        <!--<SwitchToH5 task="SwitchH5" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer"/>
+        </SwitchToH5>-->
+        <WriteIRam task="WriteIRamBinFile" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer"/>
+        </WriteIRam>
+        <!--<SwitchTrans task="SwitchTrans" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer"/>
+        </SwitchTrans>-->
+        <DisableFwDbgMsg task="DisableFwDbgMsg" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer"/>
+        </DisableFwDbgMsg>
+        <ReadFtDataFromDut task="TaskReadFtDataFromDut" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" >
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer"/>
+        </ReadFtDataFromDut>
+
+        <!--<DisconnectDeviceA task="DisconnectDUT" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True" >
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.final_errorcode_writer"/>
+        </DisconnectDeviceA>
+        <DisconnectTcbA task="DisconnectTCB" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True" >
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.final_errorcode_writer"/>
+        </DisconnectTcbA>
+        <ConnectTcbA task="ConnectTCB" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True" >
+          <port Runner.Input="TcbUart" />
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer"/>
+        </ConnectTcbA>
+        <ConnectDeviceA task="ConnectDUT" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <port Runner.Input="DeviceUart" />
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer"/>
+        </ConnectDeviceA>
+        <SwitchTrans2 task="SwitchTrans" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer"/>
+        </SwitchTrans2>-->
+          
+        <TaskSltSetBdAddressForLog task="TaskSltSetBdAddressForLog" Runner.Option="True">
+          <bd_address Runner.Input="SltBdAddressList" />
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer" />
+        </TaskSltSetBdAddressForLog>
+        <TaskSltStratLog task="TaskSltStratLog" Runner.Option="True">
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer" />
+        </TaskSltStratLog>
+        <SltPowerOnToExternalFlash task="TaskSltPowerOnToExternalFlash" Runner.Option="True">
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer"/>
+        </SltPowerOnToExternalFlash>
+        <!--<SltPowerOnToROM task="TaskSltPowerOnToROM" Runner.Option="True">
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer" />
+        </SltPowerOnToROM>-->
+        <SltConfigByPackage task="TaskSltConfigByPackage" Runner.Option="True">
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer"/>
+        </SltConfigByPackage>
+        <!--<SltSlowClockCheck task="TaskSltSlowClockTest" Runner.Option="True">
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer"/>
+        </SltSlowClockCheck>-->
+        <SystemLevelTest task="TaskSltTest1530" Runner.Option="True">
+          <bd_address Runner.Input="SltBdAddressList" />
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.errorcode_writer"/>
+        </SystemLevelTest>
+        <ResetErrorCode FlowObject="ErrorCodeManager.errorcode_reset" Runner.Option="True" />
+      </main>
+      <final>
+        <TaskSltCloseLog task="TaskSltCloseLog" Runner.Option="True"/>
+        <DisconnectDevice task="DisconnectDUT" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True" >
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.final_errorcode_writer"/>
+        </DisconnectDevice>
+        <DisconnectTcb task="DisconnectTCB" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True" >
+          <Output.ERROR_CODE Runner.OutputToManager="ErrorCodeManager.final_errorcode_writer"/>
+        </DisconnectTcb>
+      </final>
+    </default>
+  </flows>
+</root>

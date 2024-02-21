@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="NONE" Value="0"/>
+    <Group Name="ROLE_CLINET" Value="16"/>
+	<Group Name="ROLE_PARTNER" Value="32"/>
+	<Group Name="ROLE_AGENT" Value="64"/>
+</DataGroup>

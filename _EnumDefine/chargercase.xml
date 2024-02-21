@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="None" Value="0"/>
+	<!--<Group Name="Normal Charger Case With GPIO XY" Value="1"/>-->
+	<!--<Group Name="Semi-smart Charge Case" Value="2"/>-->
+	<Group Name="Semi-smart Charge Case V2" Value="3"/>
+	<Group Name="CASE_TYPE_ONE_WIRE" Value="4"/>
+</DataGroup>

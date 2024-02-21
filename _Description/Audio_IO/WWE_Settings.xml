@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="WWE_Settings" class="Airoha.Project.ConfigTool.View.General" parameter="WWE_Settings">
+  <ConfigItem class="ucWWEIO" Unique="DSP_PARA_AU_AFE_CTRL.InputChannel.Voice_path2">
+    <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+      <Parameter name="micbias0select" refId="id_mic_bias0_select"/>
+	  <Parameter name="micbias1select" refId="id_mic_bias1_select"/>
+	  <Parameter name="firstmicselect" refId="id_first_mic_select"/>
+	  <Parameter name="secondmicselect" refId="id_second_mic_select"/>
+	  <Parameter name="samplerateselect" refId="id_sample_rate_select"/>
+	  <Parameter name="dmic_set_enable" refId="id_dmic_set_enable"/>
+	  <Parameter name="data" refId="id_audio_io_setting"/>
+    </Associator>
+  </ConfigItem>
+</Page>

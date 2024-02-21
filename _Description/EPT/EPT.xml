@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="GPIO" class="Airoha.Project.ConfigTool.View.General" parameter="GPIO">
+  <ConfigItem class="ucEPT" Unique="gpio_info.gpio_num"/>
+</Page>

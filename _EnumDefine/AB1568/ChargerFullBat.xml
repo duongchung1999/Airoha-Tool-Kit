@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+  <Group Name="4.05" Value="4050"/>
+  <Group Name="4.10" Value="4100"/>
+  <Group Name="4.15" Value="4150"/>
+  <Group Name="4.20" Value="4200"/>
+  <Group Name="4.25" Value="4250"/>
+  <Group Name="4.30" Value="4300"/>
+  <Group Name="4.35" Value="4350"/>
+  <Group Name="4.40" Value="4400"/>
+  <Group Name="4.45" Value="4450"/>
+  <Group Name="4.50" Value="4500"/>
+  <Group Name="4.55" Value="4550"/>
+  <Group Name="4.60" Value="4600"/>
+</DataGroup>

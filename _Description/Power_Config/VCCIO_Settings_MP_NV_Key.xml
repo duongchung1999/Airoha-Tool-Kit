@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="VCCIO Settings(MP NV Key)" class="Airoha.Project.ConfigTool.View.PurePage" parameter="VCCIO Settings(MP NV Key)">
+  <ConfigGroup class="ucLayoutVertical">
+    <ConfigItem class="ucComboBox" id="id_vccio_combo">
+      <Parameter name="left_label" value="VCCIO"/>
+      <Parameter name="left_width" value="150"/>
+      <Parameter name="width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="bottom_label" value="The VCCIO setting is for TCB IO control. Please set the voltage depend on your circuit design."/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/Vccio.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_vccio"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="VCCIO_SETTING.vccio" id="id_vccio" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_vccio_combo"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

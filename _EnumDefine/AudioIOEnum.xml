@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DefineList>
+	<Group name="AudioInPathList">
+		<Enum key="Disable" value="0x00"/>
+		<Enum key="Analog_Line-In" value="0x01"/>
+		<Enum key="Analog_Mic_In" value="0x40"/>
+		<Enum key="I2S_Master_In" value="0x02"/>
+		<Enum key="I2S_Slave_In" value="0x04"/>
+		<Enum key="SPDIF_In" value="0x08"/>
+	</Group>
+
+	<Group name="VoiceInPathList">
+		<Enum key="Disable" value="0x00"/>
+		<Enum key="Digital_Mic_In-In" value="0x20"/>
+		<Enum key="Analog_Mic_In" value="0x40"/>
+		<Enum key="I2S_Master_In" value="0x02"/>
+		<Enum key="I2S_Slave_In" value="0x04"/>
+		<Enum key="Multiple_Mic" value="0x60"/>
+	</Group>
+
+	<Group name="AudioPath1List">
+		<Enum key="Disable" value="0x00"/>
+		<Enum key="Analog_SPK_Out" value="0x01"/>
+		<Enum key="I2S_Master_Out" value="0x02"/>
+		<Enum key="I2S_Slave_Out" value="0x04"/>
+		<Enum key="SPDIF_Out" value="0x08"/>
+		<Enum key="I2S_Master_MultiChannel_Out" value="0x10"/>
+	</Group>
+
+	<Group name="AudioPath2List">
+		<Enum key="Disable" value="0x00"/>
+		<Enum key="Analog_SPK_Out" value="0x01"/>
+		<Enum key="I2S_Master_Out" value="0x02"/>
+		<Enum key="I2S_Slave_Out" value="0x04"/>
+		<Enum key="SPDIF_Out" value="0x08"/>
+		<Enum key="I2S_Master_MultiChannel_Out" value="0x10"/>
+	</Group>
+
+	<Group name="OutputChannelList">
+		<Enum key="Mono_L" value="0x01"/>
+		<Enum key="Mono_R" value="0x02"/>
+		<Enum key="Stereo" value="0x03"/>
+	</Group>
+
+	<Group name="InputChannelList">
+		<Enum key="Mic_L" value="0x01"/>
+		<Enum key="Mic_R" value="0x02"/>
+		<Enum key="Mic_L+R" value="0x03"/>
+	</Group>
+
+	<Group name="MclkDirection">
+		<Enum key="Output" value="0"/>
+		<Enum key="Input" value="1"/>
+	</Group>
+
+	<Group name="MclkRate">
+		<Enum key="24.576MHz" value="0"/>
+		<Enum key="12.288MHz" value="1"/>
+		<Enum key="6.144MHz" value="2"/>
+	</Group>
+
+	<Group name="SampleRate">
+		<Enum key="8KHz" value="8"/>
+		<Enum key="11.025KHz" value="11"/>
+		<Enum key="12KHz" value="12"/>
+		<Enum key="16KHz" value="16"/>
+		<Enum key="22.05KHz" value="22"/>
+		<Enum key="24KHz" value="24"/>
+		<Enum key="32KHz" value="32"/>
+		<Enum key="44.1KHz" value="44"/>
+		<Enum key="48KHz" value="48"/>
+		<Enum key="88.2KHz" value="88"/>
+		<Enum key="96KHz" value="96"/>
+		<Enum key="176.4KHz" value="176"/>
+		<Enum key="192KHz" value="192"/>
+	</Group>
+
+	<Group name="I2SFormat">
+		<Enum key="Right-Justified mode" value="0"/>
+		<Enum key="Left-Justified mode" value="1"/>
+		<Enum key="I2S mode" value="2"/>
+	</Group>
+
+	<Group name="BclkRate">
+		<Enum key="32Fs" value="0"/>
+		<Enum key="64Fs" value="1"/>
+	</Group>
+
+	<Group name="I2SMasterOutputChannel">
+		<Enum key="2ch" value="2"/>
+		<Enum key="4ch" value="4"/>
+		<Enum key="6ch" value="6"/>
+	</Group>
+
+	<Group name="LineinThresholdLevel">
+		<Enum key="Disable" value="0"/>
+		<Enum key="1" value="1"/>
+		<Enum key="2" value="2"/>
+		<Enum key="3" value="3"/>
+		<Enum key="4" value="4"/>
+	</Group>
+
+	<Group name="VccSpkVoltage">
+		<Enum key="3v(HV)" value="0"/>
+		<!--<Enum key="1.8v" value="1"/>-->
+		<Enum key="1.6v(MV)" value="2"/>
+	</Group>
+
+	<Group name="OutputMode">
+		<Enum key="ClassAB" value="0"/>
+		<Enum key="ClassD" value="1"/>
+	</Group>
+
+	<Group name="AdcPowerSetting">
+		<Enum key="Normal Mode" value="0"/>
+		<Enum key="High Performance" value="1"/>
+	</Group>
+
+	<Group name="MicBiasVoltageList">
+		<Enum key="1.8V" value="0"/>
+		<Enum key="1.85V" value="1"/>
+		<Enum key="1.9V" value="2"/>
+		<Enum key="2.0V" value="3"/>
+		<Enum key="2.1V" value="4"/>
+		<Enum key="2.2V" value="5"/>
+		<Enum key="2.4V" value="6"/>
+		<Enum key="2.55V" value="7"/>
+	</Group>
+
+	<Group name="MicSwitchCtrlList">
+		<Enum key="MainL as Main Mic" value="0"/>
+		<Enum key="MainR as Main Mic" value="1"/>
+	</Group>
+
+	<Group name="MicDataFormatList">
+		<Enum key="1-Wired Mode" value="0"/>
+		<Enum key="2-Wired Mode" value="1"/>
+	</Group>
+
+	<Group name="SideToneSourceList">
+		<Enum key="Disable" value="0"/>
+		<Enum key="Mic_L" value="1"/>
+		<Enum key="Mic_R" value="2"/>
+		<Enum key="DMic1_L" value="3"/>
+		<Enum key="DMic1_R" value="4"/>
+		<Enum key="DMic2_L" value="5"/>
+		<Enum key="DMic2_R" value="6"/>
+	</Group>
+	
+	<Group name="LineinSettingList">
+		<Enum key="Normal" value="0"/>
+		<Enum key="High Performance" value="1"/>
+		<Enum key="Low Power For Test" value="2"/>
+	</Group>
+	
+	<Group name="LineinFilterList">
+		<Enum key="Disable" value="0x0F"/>
+		<Enum key="5Hz" value="1"/>
+		<Enum key="10Hz" value="2"/>
+		<Enum key="25Hz" value="3"/>
+		<Enum key="50Hz" value="4"/>
+		<Enum key="75Hz" value="5"/>
+	</Group>
+	
+	<Group name="LineinAdcList">
+		<Enum key="ACC 10K" value="0"/>
+		<Enum key="ACC 20K" value="1"/>
+		<Enum key="DCC" value="2"/>
+	</Group>
+	
+	<Group name="DigitalMicSelect">
+		<Enum key="ANA_DMIC0" value="0xFF"/>
+		<Enum key="ANA_DMIC1" value="0xFE"/>
+		<Enum key="GPIO_DMIC0" value="0x00"/>
+		<Enum key="GPIO_DMIC1" value="0x01"/>
+	</Group>
+	
+	<Group name="MultipleMicSelect">
+		<Enum key="INPUT_NONE" value="0x00"/>
+		<Enum key="AMIC0_L" value="0x01"/>
+		<Enum key="AMIC0_R" value="0x02"/>
+		<Enum key="FIRST_DMIC_L" value="0x10"/>
+		<Enum key="FIRST_DMIC_R" value="0x20"/>
+		<Enum key="SECOND_DMIC_L" value="0x30"/>
+		<Enum key="SECOND_DMIC_R" value="0x40"/>
+		<!--<Enum key="I2S0_MASTER_L" value="0x50"/>
+		<Enum key="I2S0_MASTER_R" value="0x60"/>-->
+	</Group>
+
+
+</DefineList>

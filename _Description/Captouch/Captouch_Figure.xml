@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Captouch_Figure" class="Airoha.Project.ConfigTool.View.TabPage" parameter="Captouch_Figure">
+  <ConfigGroup title="Figure" class="TouchFigurePage" parameter="Figure">
+    <Parameter name="button_margin" value="10"/>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_captouch_channel0_enable_tb"/>
+      </Associator>
+      <ConfigGroup class="ucFigureReportSetting" id="id_figure_report_setting">
+        <Parameter name="channel_select" value="0 (RTC_GPIO0)"/>
+        <Parameter name="report_time" value="100"/>
+        <Parameter name="report_num" value="256"/>
+        <Parameter name="update_time" value="200"/>
+      </ConfigGroup>
+      <ConfigGroup class="ucCaptouchLiveChart">
+        <Parameter name="chart_title" value="ADC Figure"/>
+        <Parameter name="tag" value="captouch"/>
+        <Parameter name="height" value="400"/>
+        <Parameter name="layout_column_weight" value="1"/>
+        <Parameter name="x_axis_title" value="Count(times)"/>
+        <Parameter name="x_axis_type" value="decimal"/>
+        <Parameter name="x_axis_max_value" value="256"/>
+        <Parameter name="x_axis_min_value" value="0"/>
+        <Parameter name="y_axis_title" value="ADC"/>
+        <Parameter name="y_axis_max_value" value="260"/>
+        <Parameter name="y_axis_min_value" value="-260"/>
+        <Parameter name="y_axis_step" value="20"/>
+        <Parameter name="zoom_mode" value="Y"/>
+        <Parameter name="trace_mouse" value="1"/>
+        <Parameter name="x_point_precision" value="0"/>
+        <Parameter name="hide_line" value="0"/>
+        <ConfigItem class="line" id="id_captouch_adc_realtimeline">
+          <Parameter name="title" value="Time"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtimeline"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_captouch_realtime_avgAdc_line_ch0">
+          <Parameter name="title" value="CH0"/>
+          <Parameter name="color" value="0,0,0"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_avgAdc_ch0"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_captouch_realtime_avgAdc_line_ch1">
+          <Parameter name="title" value="CH1"/>
+          <Parameter name="color" value="204,0,0"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_avgAdc_ch1"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_captouch_realtime_avgAdc_line_ch2">
+          <Parameter name="title" value="CH2"/>
+          <Parameter name="color" value="255,128,0"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_avgAdc_ch2"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_captouch_realtime_avgAdc_line_ch3">
+          <Parameter name="title" value="CH3"/>
+          <Parameter name="color" value="255,20,147"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_avgAdc_ch3"/>
+          </Associator>
+        </ConfigItem>
+
+        <ConfigItem class="line" id="id_captouch_realtime_vadc_debounce_line_ch0">
+          <Parameter name="title" value="CH0_Debounce"/>
+          <Parameter name="color" value="153,51,250"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_vadc_debounce_ch0"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_captouch_realtime_vadc_debounce_line_ch1">
+          <Parameter name="title" value="CH1_Debounce"/>
+          <Parameter name="color" value="0,204,204"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_vadc_debounce_ch1"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_captouch_realtime_vadc_debounce_line_ch2">
+          <Parameter name="title" value="CH2_Debounce"/>
+          <Parameter name="color" value="204,204,0"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_vadc_debounce_ch2"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_captouch_realtime_vadc_debounce_line_ch3">
+          <Parameter name="title" value="CH3_Debounce"/>
+          <Parameter name="color" value="128,128,128"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_vadc_debounce_ch3"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="scatterLine" id="id_captouch_noise_cnt_ch0">
+          <Parameter name="title" value="CH0_Noise"/>
+          <Parameter name="point_geometry" value="Diamond"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_noise_cnt_ch0"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="scatterLine" id="id_captouch_noise_cnt_ch1">
+          <Parameter name="title" value="CH1_Noise"/>
+          <Parameter name="point_geometry" value="Triangle"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_noise_cnt_ch1"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="scatterLine" id="id_captouch_noise_cnt_ch2">
+          <Parameter name="title" value="CH2_Noise"/>
+          <Parameter name="point_geometry" value="Square"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_noise_cnt_ch2"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="scatterLine" id="id_captouch_noise_cnt_ch3">
+          <Parameter name="title" value="CH2_Noise"/>
+          <Parameter name="point_geometry" value="Square"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_noise_cnt_ch3"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_captouch_highthre_line">
+          <Parameter name="title" value="High Threshold"/>
+          <Parameter name="color" value="0,0,255"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_highthre_data"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_captouch_lowthre_line">
+          <Parameter name="title" value="Low Threshold"/>
+          <Parameter name="color" value="0,255,0"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_lowthre_data"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucCaptouchLiveChart">
+        <Parameter name="chart_title" value="Cfine Figure"/>
+        <Parameter name="tag" value="captouch"/>
+        <Parameter name="height" value="400"/>
+        <Parameter name="layout_column_weight" value="1"/>
+        <Parameter name="x_axis_title" value="Count(times)"/>
+        <Parameter name="x_axis_type" value="decimal"/>
+        <Parameter name="x_axis_max_value" value="256"/>
+        <Parameter name="x_axis_min_value" value="0"/>
+        <Parameter name="y_axis_title" value="Cfine"/>
+        <Parameter name="y_axis_max_value" value="70"/>
+        <Parameter name="y_axis_min_value" value="-70"/>
+        <Parameter name="y_axis_step" value="5"/>
+        <Parameter name="zoom_mode" value="Y"/>
+        <Parameter name="trace_mouse" value="1"/>
+        <Parameter name="x_point_precision" value="0"/>
+        <Parameter name="hide_line" value="0"/>
+        <ConfigItem class="line" id="id_captouch_cfine_realtimeline">
+          <Parameter name="title" value="Time"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtimeline"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_captouch_realtime_cFine_line_ch0">
+          <Parameter name="title" value="CH0_cfine"/>
+          <Parameter name="color" value="0,0,0"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_cFine_ch0"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_captouch_realtime_cFine_line_ch1">
+          <Parameter name="title" value="CH1_cfine"/>
+          <Parameter name="color" value="204,0,0"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_cFine_ch1"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_captouch_realtime_cFine_line_ch2">
+          <Parameter name="title" value="CH2_cfine"/>
+          <Parameter name="color" value="255,128,0"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_cFine_ch2"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_captouch_realtime_cFine_line_ch3">
+          <Parameter name="title" value="CH3_cfine"/>
+          <Parameter name="color" value="255,20,147"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_cFine_ch3"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+
+      <!--<ConfigGroup class="ucCaptouchLiveChart" id="id_captouch_inear_figure" visible="hidden">
+        <Parameter name="chart_title" value="InEar Figure"/>
+        <Parameter name="tag" value="captouch"/>
+        <Parameter name="height" value="400"/>
+        <Parameter name="layout_column_weight" value="1"/>
+        <Parameter name="x_axis_title" value="Count(times)"/>
+        <Parameter name="x_axis_type" value="decimal"/>
+        <Parameter name="x_axis_max_value" value="256"/>
+        <Parameter name="x_axis_min_value" value="0"/>
+        <Parameter name="y_axis_title" value="ADC"/>
+        <Parameter name="y_axis_max_value" value="1200"/>
+        <Parameter name="y_axis_min_value" value="-1200"/>
+        <Parameter name="y_axis_step" value="100"/>
+        <Parameter name="zoom_mode" value="Y"/>
+        <Parameter name="trace_mouse" value="1"/>
+        <Parameter name="x_point_precision" value="0"/>
+        <Parameter name="hide_line" value="0"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="initial_value_cfine_base" refId="id_initial_value_cfine_base"/>
+        </Associator>
+        <ConfigItem class="line" id="id_captouch_inEar_realtimeline">
+          <Parameter name="title" value="Time"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtimeline"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_captouch_realtime_cFine_MavgAdc_line">
+          <Parameter name="title" value="cfine+MavgAdc"/>
+          <Parameter name="color" value="0,0,0"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_cFine_MavgAdc"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_captouch_realtime_cFine_base_line">
+          <Parameter name="title" value="cfine_base"/>
+          <Parameter name="color" value="0,0,255"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_cFine_base"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_captouch_realtime_cFine_thrH">
+          <Parameter name="title" value="THR_H"/>
+          <Parameter name="color" value="204,0,0"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_cFine_base_thrH"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_captouch_realtime_cFine_thrL">
+          <Parameter name="title" value="THR_L"/>
+          <Parameter name="color" value="0,255,0"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="captouch_realtime_cFine_base_thrL"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>-->
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

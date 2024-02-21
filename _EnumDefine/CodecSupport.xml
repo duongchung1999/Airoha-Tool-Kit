@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="SBC_SNK_BITMAP" Value="1"/>
+	<Group Name="AAC_SNK_BITMAP" Value="2"/>
+</DataGroup>

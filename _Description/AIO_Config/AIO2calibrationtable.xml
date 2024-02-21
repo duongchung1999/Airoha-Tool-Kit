@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="AIO2calibrationtable" class="Airoha.Project.ConfigTool.View.General" parameter="AIO2calibrationtable">
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.Kflag"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.AIOselect" id="aio_gpio_2"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.Cal_Count"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.Voltage1"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.ADC1"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.Voltage2"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.ADC2"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.Voltage3"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.ADC3"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.Voltage4"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.ADC4"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.Voltage5"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.ADC5"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.Voltage6"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.ADC6"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.Voltage7"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.ADC7"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.Voltage8"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.ADC8"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.Voltage9"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.ADC9"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.Voltage10"/>
+  <ConfigItem class="ucTextBox" Unique="AIO2calibrationtable.ADC10"/>
+</Page>

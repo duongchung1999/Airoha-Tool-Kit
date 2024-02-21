@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Environment_Detection_Passthru" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Environment_Detection_Passthru">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value="Environment Detection (Passthru)"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <Parameter name="required_nvkey_id" value="0xE309"/>
+
+    <ConfigItem class="ucComboBox" id="id_passthru_ed_en_cb">
+      <Parameter name="left_label" value="Enable"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="75"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="width" value="100"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+      <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.enable"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_en_tb"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucComboBox" id="id_passthru_ed_print_result_cb">
+      <Parameter name="left_label" value="Audio Debug"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="75"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="width" value="100"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+      <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.print_result"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_print_result_tb"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucComboBox" id="id_passthru_ed_pause_attenuation_cb">
+      <Parameter name="left_label" value="Suspend Attenuation"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="75"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="width" value="100"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+      <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.pause_attenuation"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_pause_attenuation_tb"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucComboBox" id="id_passthru_ed_level_number_cb">
+      <Parameter name="left_label" value="Level Number"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="75"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="width" value="100"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/AB1568/ED_level_number.xml"/>
+      <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_numbers"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_level_number_tb"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.attack_count" id="id_passthru_ed_attack_count_updown" min="0" max="32767">
+      <Parameter name="left_label" value="Attack Count"/>
+      <Parameter name="right_label" value="(15 ms/step)"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="75"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="bottom_margin" value="5"/>
+      <Parameter name="step" value="1"/>
+      <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.attack_count"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_attack_count_tb"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.release_count" id="id_passthru_ed_release_count_updown" min="0" max="32767">
+      <Parameter name="left_label" value="Release Count"/>
+      <Parameter name="right_label" value="(15 ms/step)"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="75"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="bottom_margin" value="5"/>
+      <Parameter name="step" value="1"/>
+      <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.release_count"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_release_count_tb"/>
+      </Associator>
+    </ConfigItem>
+    
+  </ConfigGroup>
+
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value="Algorithm"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <Parameter name="required_nvkey_id" value="0xE302"/>
+
+    <ConfigItem class="ucUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.NE_ALPHA_DB_DOWN" id="id_passthru_ed_ne_alpha_down_updown" min="0" max="32767">
+      <Parameter name="left_label" value="Alpha Down"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="75"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="bottom_margin" value="5"/>
+      <Parameter name="step" value="1"/>
+      <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.NE_ALPHA_DB_DOWN"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_ne_alpha_down_tb"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.NE_ALPHA_DB" id="id_passthru_ed_ne_alpha_up_updown" min="0" max="32767">
+      <Parameter name="left_label" value="Alpha Up"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="75"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="bottom_margin" value="5"/>
+      <Parameter name="step" value="1"/>
+      <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.NE_ALPHA_DB"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_ne_alpha_up_tb"/>
+      </Associator>
+    </ConfigItem>
+
+  </ConfigGroup>
+
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value="Environment Detection Level Settings"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <Parameter name="required_nvkey_id" value="0xE302"/>
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Level 1"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+        <ConfigItem class="ucUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_1_release_threshold" id="id_passthru_ed_level_1_release_threshold_updown" min="-32767" max="0">
+          <Parameter name="left_label" value="Release Threshold"/>
+          <Parameter name="right_label" value="(-32767 ~ 0)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_1_release_threshold"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_passthru_ed_level_1_release_threshold_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_1_attack_threshold" id="id_passthru_ed_level_1_attack_threshold_updown" min="-32767" max="0">
+          <Parameter name="left_label" value="Attack Threshold"/>
+          <Parameter name="right_label" value="(-32767 ~ 0)"/>          
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_1_attack_threshold"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_passthru_ed_level_1_attack_threshold_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucEDAttenuationUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_1_attenuation_ff" id="id_passthru_ed_level_1_attenuation_ff_updown" min="-150" max="150" visible="hidden">
+          <Parameter name="left_label" value="Attenuation FF (dB)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_1_attenuation_ff"/>
+        </ConfigItem>
+        <ConfigItem class="ucEDAttenuationUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_1_attenuation_fb" id="id_passthru_ed_level_1_attenuation_fb_updown" min="-150" max="150">
+          <Parameter name="left_label" value="Attenuation FB (dB)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_1_attenuation_fb"/>
+        </ConfigItem>
+      </ConfigGroup>
+
+      <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Level 2"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+        <ConfigItem class="ucUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_2_release_threshold" id="id_passthru_ed_level_2_release_threshold_updown" min="-32767" max="0">
+          <Parameter name="left_label" value="Release Threshold"/>
+          <Parameter name="right_label" value="(-32767 ~ 0)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_2_release_threshold"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_passthru_ed_level_2_release_threshold_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_2_attack_threshold" id="id_passthru_ed_level_2_attack_threshold_updown" min="-32767" max="0">
+          <Parameter name="left_label" value="Attack Threshold"/>
+          <Parameter name="right_label" value="(-32767 ~ 0)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_2_attack_threshold"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_passthru_ed_level_2_attack_threshold_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucEDAttenuationUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_2_attenuation_ff" id="id_passthru_ed_level_2_attenuation_ff_updown" min="-150" max="150" visible="hidden">
+        <Parameter name="left_label" value="Attenuation FF (dB)"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_2_attenuation_ff"/>
+      </ConfigItem>
+      <ConfigItem class="ucEDAttenuationUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_2_attenuation_fb" id="id_passthru_ed_level_2_attenuation_fb_updown" min="-150" max="150">
+        <Parameter name="left_label" value="Attenuation FB (dB)"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_2_attenuation_fb"/>
+      </ConfigItem>
+    </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="Level 3"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_3_release_threshold" id="id_passthru_ed_level_3_release_threshold_updown" min="-32767" max="0">
+          <Parameter name="left_label" value="Release Threshold"/>
+          <Parameter name="right_label" value="(-32767 ~ 0)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_3_release_threshold"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_passthru_ed_level_3_release_threshold_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_3_attack_threshold" id="id_passthru_ed_level_3_attack_threshold_updown" min="-32767" max="0">
+          <Parameter name="left_label" value="Attack Threshold"/>
+          <Parameter name="right_label" value="(-32767 ~ 0)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_3_attack_threshold"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_passthru_ed_level_3_attack_threshold_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucEDAttenuationUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_3_attenuation_ff" id="id_passthru_ed_level_3_attenuation_ff_updown" min="-150" max="150" visible="hidden">
+          <Parameter name="left_label" value="Attenuation FF (dB)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_3_attenuation_ff"/>
+        </ConfigItem>
+        <ConfigItem class="ucEDAttenuationUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_3_attenuation_fb" id="id_passthru_ed_level_3_attenuation_fb_updown" min="-150" max="150">
+          <Parameter name="left_label" value="Attenuation FB (dB)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_3_attenuation_fb"/>
+        </ConfigItem>
+      </ConfigGroup>
+
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="Level 4"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_4_release_threshold" id="id_passthru_ed_level_4_release_threshold_updown" min="-32767" max="0">
+          <Parameter name="left_label" value="Release Threshold"/>
+          <Parameter name="right_label" value="(-32767 ~ 0)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_4_release_threshold"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_passthru_ed_level_4_release_threshold_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_4_attack_threshold" id="id_passthru_ed_level_4_attack_threshold_updown" min="-32767" max="0">
+          <Parameter name="left_label" value="Attack Threshold"/>
+          <Parameter name="right_label" value="(-32767 ~ 0)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_4_attack_threshold"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_passthru_ed_level_4_attack_threshold_tb"/>
+          </Associator>
+        </ConfigItem>
+
+        <ConfigItem class="ucEDAttenuationUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_4_attenuation_ff" id="id_passthru_ed_level_4_attenuation_ff_updown" min="-150" max="150"  visible="hidden">
+          <Parameter name="left_label" value="Attenuation FF (dB)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_4_attenuation_ff"/>
+        </ConfigItem>
+        <ConfigItem class="ucEDAttenuationUpDown" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_4_attenuation_fb" id="id_passthru_ed_level_4_attenuation_fb_updown" min="-150" max="150">
+          <Parameter name="left_label" value="Attenuation FB (dB)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_4_attenuation_fb"/>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+
+  <ConfigGroup class="General">
+
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.WB_NR_FAST_ALPHA" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.WB_NR_SLOW_ALPHA" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.WB_NR_NOISE_UPDATE_FAST" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.WB_NR_NOISE_UPDATE_SLOW" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.WB_NR_NOISE_UPDATE_ULTRASLOW" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.WB_NR_RX_POW_MIN_BUF_PERIOD" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.WB_NR_RX_VAD_THRD1" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.WB_NR_RX_VAD_THRD_BANDS_0" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.WB_NR_RX_VAD_THRD_BANDS_1" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.WB_NR_RX_VAD_THRD_BANDS_2" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.WB_NR_RX_VAD_THRD_BANDS_3" visible="hidden" />
+
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.WB_NR_RX_VAD_THRD_BANDS_4" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.WB_NR_RX_NOISE_LAMDA" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.WB_NR_RX_NOISE_FLOOR_MIN" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.NE_MIN_DB" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.NE_VAD_THRA" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.NE_STARTBIN" visible="hidden" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.NE_ENDBIN" visible="hidden" />
+  </ConfigGroup>
+
+    <ConfigGroup class="General">
+
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.enable" id="id_passthru_ed_en_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_en_cb"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.print_result" id="id_passthru_ed_print_result_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_print_result_cb"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.pause_attenuation" id="id_passthru_ed_pause_attenuation_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_pause_attenuation_cb"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_numbers" id="id_passthru_ed_level_number_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_level_number_cb"/>
+      </Associator>
+    </ConfigItem>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.attack_count" id="id_passthru_ed_attack_count_tb"  visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_passthru_ed_attack_count_updown"/>
+        </Associator>
+      </ConfigItem>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.release_count" id="id_passthru_ed_release_count_tb"  visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_passthru_ed_release_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.NE_ALPHA_DB_DOWN" id="id_passthru_ed_ne_alpha_down_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_ne_alpha_down_updown"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.NE_ALPHA_DB" id="id_passthru_ed_ne_alpha_up_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_ne_alpha_up_updown"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_1_release_threshold" id="id_passthru_ed_level_1_release_threshold_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_level_1_release_threshold_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_1_attack_threshold" id="id_passthru_ed_level_1_attack_threshold_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_level_1_attack_threshold_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_1_attenuation_ff" id="id_passthru_ed_level_1_attenuation_ff_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcEDAttenuationAssociator">
+        <Parameter name="data" refId="id_passthru_ed_level_1_attenuation_ff_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_1_attenuation_fb" id="id_passthru_ed_level_1_attenuation_fb_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcEDAttenuationAssociator">
+        <Parameter name="data" refId="id_passthru_ed_level_1_attenuation_fb_updown"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_2_release_threshold" id="id_passthru_ed_level_2_release_threshold_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_level_2_release_threshold_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_2_attack_threshold" id="id_passthru_ed_level_2_attack_threshold_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_level_2_attack_threshold_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_2_attenuation_ff" id="id_passthru_ed_level_2_attenuation_ff_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcEDAttenuationAssociator">
+        <Parameter name="data" refId="id_passthru_ed_level_2_attenuation_ff_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_2_attenuation_fb" id="id_passthru_ed_level_2_attenuation_fb_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcEDAttenuationAssociator">
+        <Parameter name="data" refId="id_passthru_ed_level_2_attenuation_fb_updown"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_3_release_threshold" id="id_passthru_ed_level_3_release_threshold_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_level_3_release_threshold_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_3_attack_threshold" id="id_passthru_ed_level_3_attack_threshold_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_level_3_attack_threshold_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_3_attenuation_ff" id="id_passthru_ed_level_3_attenuation_ff_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcEDAttenuationAssociator">
+        <Parameter name="data" refId="id_passthru_ed_level_3_attenuation_ff_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_3_attenuation_fb" id="id_passthru_ed_level_3_attenuation_fb_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcEDAttenuationAssociator">
+        <Parameter name="data" refId="id_passthru_ed_level_3_attenuation_fb_updown"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_4_release_threshold" id="id_passthru_ed_level_4_release_threshold_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_level_4_release_threshold_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_4_attack_threshold" id="id_passthru_ed_level_4_attack_threshold_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_passthru_ed_level_4_attack_threshold_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_4_attenuation_ff" id="id_passthru_ed_level_4_attenuation_ff_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcEDAttenuationAssociator">
+        <Parameter name="data" refId="id_passthru_ed_level_4_attenuation_ff_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_PASSTHRU_ENVIRONMENT_DETECTION_STRU.level_4_attenuation_fb" id="id_passthru_ed_level_4_attenuation_fb_tb"  visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcEDAttenuationAssociator">
+        <Parameter name="data" refId="id_passthru_ed_level_4_attenuation_fb_updown"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+
+
+
+</Page>
+

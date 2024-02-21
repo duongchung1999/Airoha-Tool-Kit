@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Analog_Gain_Settings" class="Airoha.Project.ConfigTool.View.TabPage" parameter="Analog_Gain_Settings">
+  <ConfigGroup title="Output" class="PurePage">
+    <ConfigGroup class="ucLayoutVertical">
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <ConfigItem class="AB1568.ucAnalogOutputGainComboBox" id="id_output_gain_classd_combo">
+          <Parameter name="left_label" value="Analog Output Gain ClassD"/>
+          <Parameter name="left_width" value="220"/>
+          <Parameter name="width" value="120"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogOutputGainClassD.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_output_gain_classd"/>
+            <Parameter name="enable" refId="id_voice_hw_io_speak_out_mode_cb"/>
+            <Parameter name="enable_value" value="2" />
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <ConfigItem class="AB1568.ucAnalogOutputGainComboBox" id="id_output_gain_classab_combo">
+          <Parameter name="left_label" value="Analog Output Gain ClassG(AB)"/>
+          <Parameter name="left_width" value="220"/>
+          <Parameter name="width" value="120"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogOutputGainClassAB.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_output_gain_classab"/>
+            <Parameter name="enable" refId="id_voice_hw_io_speak_out_mode_cb"/>
+            <Parameter name="disable_value" value="2" />
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <ConfigItem class="ucComboBox" id="id_output_gain_classab_offset_L_combo">
+          <Parameter name="left_label" value="Analog L Output Gain ClassG(AB) Offset"/>
+          <Parameter name="left_width" value="220"/>
+          <Parameter name="width" value="120"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogOutputGainClassABOffset.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_output_gain_classab_offset_L_tb"/>
+            <Parameter name="enable" refId="id_voice_hw_io_speak_out_mode_cb"/>
+            <Parameter name="disable_value" value="2" />
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <ConfigItem class="ucComboBox" id="id_output_gain_classab_offset_R_combo">
+          <Parameter name="left_label" value="Analog R Output Gain ClassG(AB) Offset"/>
+          <Parameter name="left_width" value="220"/>
+          <Parameter name="width" value="120"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogOutputGainClassABOffset.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_output_gain_classab_offset_R_tb"/>
+            <Parameter name="enable" refId="id_voice_hw_io_speak_out_mode_cb"/>
+            <Parameter name="disable_value" value="2" />
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_ANALOG_GAIN_STRU.output_gain_classD" id="id_output_gain_classd" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_output_gain_classd_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_ANALOG_GAIN_STRU.output_gain_classAB" id="id_output_gain_classab" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_output_gain_classab_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_ANALOG_GAIN_STRU.output_gain_classAB_offset_L" id="id_output_gain_classab_offset_L_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_output_gain_classab_offset_L_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_ANALOG_GAIN_STRU.output_gain_classAB_offset_R" id="id_output_gain_classab_offset_R_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_output_gain_classab_offset_R_combo"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup title="Mic Input" class="PurePage">
+    <ConfigGroup class="ucLayoutHorizontal">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="top_label" value="Fixed Mic Input Analog Gain"/>
+      <ConfigGroup class="ucLayoutVertical" visible="hidden">
+        <Parameter name="top_label" value="DCC Mode"/>
+        <Parameter name="border" value="1"/>
+        <Parameter name="top_margin" value="10"/>
+        <ConfigItem class="AB1568.ucAnalogInputGainComboBox" id="id_analog_mic0_dcc_combo">
+          <Parameter name="type" value="MIC0"/>
+          <Parameter name="left_label" value="MIC0"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogDccModeGain.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_analog_mic0_dcc"/>
+            <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+            <Parameter name="enable_value" value="2" />
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="AB1568.ucAnalogInputGainComboBox" id="id_analog_mic1_dcc_combo">
+          <Parameter name="type" value="MIC1"/>
+          <Parameter name="left_label" value="MIC1"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogDccModeGain.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_analog_mic1_dcc"/>
+            <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+            <Parameter name="enable_value" value="2" />
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="AB1568.ucAnalogInputGainComboBox" id="id_analog_mic2_dcc_combo">
+          <Parameter name="type" value="MIC2"/>
+          <Parameter name="left_label" value="MIC2"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogDccModeGain.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_analog_mic2_dcc"/>
+            <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+            <Parameter name="enable_value" value="2" />
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="AB1568.ucAnalogInputGainComboBox" id="id_analog_mic3_dcc_combo">
+          <Parameter name="type" value="MIC3"/>
+          <Parameter name="left_label" value="MIC3"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogDccModeGain.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_analog_mic3_dcc"/>
+            <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+            <Parameter name="enable_value" value="2" />
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="ACC 10K Mode"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="border" value="1"/>
+        <Parameter name="top_margin" value="10"/>
+        <ConfigItem class="AB1568.ucAnalogInputGainComboBox" id="id_analog_mic0_acc_10k_combo">
+          <Parameter name="type" value="MIC0"/>
+          <Parameter name="left_label" value="MIC0"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogAcc10KModeGain.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_analog_mic0_acc_10k"/>
+            <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+            <Parameter name="enable_value" value="0" />
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="AB1568.ucAnalogInputGainComboBox" id="id_analog_mic1_acc_10k_combo">
+          <Parameter name="type" value="MIC1"/>
+          <Parameter name="left_label" value="MIC1"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogAcc10KModeGain.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_analog_mic1_acc_10k"/>
+            <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+            <Parameter name="enable_value" value="0" />
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="AB1568.ucAnalogInputGainComboBox" id="id_analog_mic2_acc_10k_combo">
+          <Parameter name="type" value="MIC2"/>
+          <Parameter name="left_label" value="MIC2"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogAcc10KModeGain.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_analog_mic2_acc_10k"/>
+            <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+            <Parameter name="enable_value" value="0" />
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="AB1568.ucAnalogInputGainComboBox" id="id_analog_mic3_acc_10k_combo">
+          <Parameter name="type" value="MIC3"/>
+          <Parameter name="left_label" value="MIC3"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogAcc10KModeGain.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_analog_mic3_acc_10k"/>
+            <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+            <Parameter name="enable_value" value="0" />
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="ACC 20K Mode"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="border" value="1"/>
+        <Parameter name="top_margin" value="10"/>
+        <ConfigItem class="AB1568.ucAnalogInputGainComboBox" id="id_analog_mic0_acc_20k_combo">
+          <Parameter name="type" value="MIC0"/>
+          <Parameter name="left_label" value="MIC0"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogAcc20KModeGain.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_analog_mic0_acc_20k"/>
+            <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+            <Parameter name="enable_value" value="1" />
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="AB1568.ucAnalogInputGainComboBox" id="id_analog_mic1_acc_20k_combo">
+          <Parameter name="type" value="MIC1"/>
+          <Parameter name="left_label" value="MIC1"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogAcc20KModeGain.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_analog_mic1_acc_20k"/>
+            <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+            <Parameter name="enable_value" value="1" />
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="AB1568.ucAnalogInputGainComboBox" id="id_analog_mic2_acc_20k_combo">
+          <Parameter name="type" value="MIC2"/>
+          <Parameter name="left_label" value="MIC2"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogAcc20KModeGain.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_analog_mic2_acc_20k"/>
+            <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+            <Parameter name="enable_value" value="1" />
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="AB1568.ucAnalogInputGainComboBox" id="id_analog_mic3_acc_20k_combo">
+          <Parameter name="type" value="MIC3"/>
+          <Parameter name="left_label" value="MIC3"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogAcc20KModeGain.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_analog_mic3_acc_20k"/>
+            <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+            <Parameter name="enable_value" value="1" />
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+
+    <ConfigGroup class="ucLayoutHorizontal">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="top_label" value="Detach Mic Input Analog Gain"/>
+      <Parameter name="required_nvkey_id" value="0xE048"/>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="DCC Mode"/>
+        <Parameter name="border" value="1"/>
+        <Parameter name="top_margin" value="10"/>
+        <ConfigItem class="ucComboBox" id="id_analog_detach_dcc_combo">
+          <Parameter name="left_label" value="MIC0"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogDccModeGain.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_analog_detach_dcc"/>
+            <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+            <Parameter name="enable_value" value="2" />
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="ACC 10K Mode"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="border" value="1"/>
+        <Parameter name="top_margin" value="10"/>
+        <ConfigItem class="ucComboBox" id="id_analog_detach_acc10k_combo">
+          <Parameter name="left_label" value="MIC0"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogAcc10KModeGain.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_analog_detach_acc10k"/>
+            <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+            <Parameter name="enable_value" value="0" />
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="ACC 20K Mode"/>
+        <Parameter name="left_width" value="10"/>
+        <Parameter name="border" value="1"/>
+        <Parameter name="top_margin" value="10"/>
+        <ConfigItem class="ucComboBox" id="id_analog_detach_acc20k_combo">
+          <Parameter name="left_label" value="MIC0"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogAcc20KModeGain.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_analog_detach_acc20k"/>
+            <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+            <Parameter name="enable_value" value="1" />
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+    
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_voice_dcc_Mic0" id="id_analog_mic0_dcc" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_mic0_dcc_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_voice_dcc_Mic1" id="id_analog_mic1_dcc" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_mic1_dcc_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_voice_dcc_Mic2" id="id_analog_mic2_dcc" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_mic2_dcc_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_voice_dcc_Mic3" id="id_analog_mic3_dcc" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_mic3_dcc_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_voice_dcc_Mic4" id="id_analog_mic4_dcc" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_mic4_dcc_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_voice_dcc_Mic5" id="id_analog_mic5_dcc" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_mic5_dcc_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_voice_acc10k_Mic0" id="id_analog_mic0_acc_10k" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_mic0_acc_10k_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_voice_acc10k_Mic1" id="id_analog_mic1_acc_10k" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_mic1_acc_10k_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_voice_acc10k_Mic2" id="id_analog_mic2_acc_10k" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_mic2_acc_10k_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_voice_acc10k_Mic3" id="id_analog_mic3_acc_10k" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_mic3_acc_10k_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_voice_acc10k_Mic4" id="id_analog_mic4_acc_10k" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_mic4_acc_10k_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_voice_acc10k_Mic5" id="id_analog_mic5_acc_10k" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_mic5_acc_10k_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_voice_acc20k_Mic0" id="id_analog_mic0_acc_20k" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_mic0_acc_20k_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_voice_acc20k_Mic1" id="id_analog_mic1_acc_20k" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_mic1_acc_20k_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_voice_acc20k_Mic2" id="id_analog_mic2_acc_20k" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_mic2_acc_20k_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_voice_acc20k_Mic3" id="id_analog_mic3_acc_20k" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_mic3_acc_20k_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_voice_acc20k_Mic4" id="id_analog_mic4_acc_20k" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_mic4_acc_20k_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_voice_acc20k_Mic5" id="id_analog_mic5_acc_20k" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_mic5_acc_20k_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_DETACH_MIC_INPUT_ANALOG_GAIN_STRU.detach_mic_analog_vol_dcc" id="id_analog_detach_dcc" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_detach_dcc_combo"/>
+        </Associator>
+      </ConfigItem>
+	  <ConfigItem class="ucTextBox" Unique="DSP_PARA_DETACH_MIC_INPUT_ANALOG_GAIN_STRU.detach_mic_analog_vol_acc10k" id="id_analog_detach_acc10k" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_detach_acc10k_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_DETACH_MIC_INPUT_ANALOG_GAIN_STRU.detach_mic_analog_vol_acc20k" id="id_analog_detach_acc20k" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_detach_acc20k_combo"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  
+  
+
+  <ConfigGroup title="Audio Input" class="PurePage">
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="top_label" value="Audio Input Analog Gain"/>
+        <ConfigGroup class="ucLayoutVertical">
+          <ConfigItem class="AB1568.ucAnalogInputGainComboBox" id="id_analog_linein_dcc_l_combo" visible="hidden">
+            <Parameter name="type" value="Line Left"/>
+            <Parameter name="left_label" value="Line-in DCC Mode L"/>
+            <Parameter name="left_width" value="160"/>
+            <Parameter name="width" value="120"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogDccModeGain.xml"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_analog_linein_dcc_l"/>
+              <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+              <Parameter name="enable_value" value="2" />
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="AB1568.ucAnalogInputGainComboBox" id="id_analog_linein_dcc_r_combo" visible="hidden">
+            <Parameter name="type" value="Line Right"/>
+            <Parameter name="left_label" value="Line-in DCC Mode R"/>
+            <Parameter name="left_width" value="160"/>
+            <Parameter name="width" value="120"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogDccModeGain.xml"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_analog_linein_dcc_r"/>
+              <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+              <Parameter name="enable_value" value="2" />
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="AB1568.ucAnalogInputGainComboBox" id="id_analog_linein_acc_10k_l_combo">
+            <Parameter name="type" value="Line Left"/>
+            <Parameter name="left_label" value="Line-in ACC 10K Mode L"/>
+            <Parameter name="left_width" value="160"/>
+            <Parameter name="width" value="120"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogAcc10KModeGain.xml"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_analog_linein_acc_10k_l"/>
+              <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+              <Parameter name="enable_value" value="0" />
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="AB1568.ucAnalogInputGainComboBox" id="id_analog_linein_acc_10k_r_combo">
+            <Parameter name="type" value="Line Right"/>
+            <Parameter name="left_label" value="Line-in ACC 10K Mode R"/>
+            <Parameter name="left_width" value="160"/>
+            <Parameter name="width" value="120"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogAcc10KModeGain.xml"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_analog_linein_acc_10k_r"/>
+              <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+              <Parameter name="enable_value" value="0" />
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="AB1568.ucAnalogInputGainComboBox" id="id_analog_linein_acc_20k_l_combo">
+            <Parameter name="type" value="Line Left"/>
+            <Parameter name="left_label" value="Line-in ACC 20K Mode L"/>
+            <Parameter name="left_width" value="160"/>
+            <Parameter name="width" value="120"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogAcc20KModeGain.xml"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_analog_linein_acc_20k_l"/>
+              <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+              <Parameter name="enable_value" value="1" />
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="AB1568.ucAnalogInputGainComboBox" id="id_analog_linein_acc_20k_r_combo">
+            <Parameter name="type" value="Line Right"/>
+            <Parameter name="left_label" value="Line-in ACC 20K Mode R"/>
+            <Parameter name="left_width" value="160"/>
+            <Parameter name="width" value="120"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogAcc20KModeGain.xml"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_analog_linein_acc_20k_r"/>
+              <Parameter name="enable" refId="id_voice_hw_io_mic_in_mode_cb"/>
+              <Parameter name="enable_value" value="1" />
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_audio_dcc_L" id="id_analog_linein_dcc_l" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_linein_dcc_l_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_audio_dcc_R" id="id_analog_linein_dcc_r" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_linein_dcc_r_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_audio_acc10k_L" id="id_analog_linein_acc_10k_l" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_linein_acc_10k_l_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_audio_acc10k_R" id="id_analog_linein_acc_10k_r" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_linein_acc_10k_r_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_audio_acc20k_L" id="id_analog_linein_acc_20k_l" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_linein_acc_20k_l_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_ANALOG_GAIN_STRU.input_gain_audio_acc20k_R" id="id_analog_linein_acc_20k_r" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_analog_linein_acc_20k_r_combo"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

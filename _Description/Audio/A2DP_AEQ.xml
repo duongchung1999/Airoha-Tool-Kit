@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Adaptive EQ" class="Airoha.Project.ConfigTool.View.TabPage" parameter="Adaptive EQ" scroll="vertical">
+  
+  <ConfigGroup title="AEQ Subset" class="DspPage">
+    <Parameter name="button_margin" value="10"/>
+    
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigItem class="ucPeqEnableButton" id="id_real_time_aeq_enable">
+        <Parameter name="is_adaptive_eq" value="true"/>
+      </ConfigItem>
+      <ConfigItem class="ucPeqDisableButton" id="id_real_time_aeq_disable">
+        <Parameter name="is_adaptive_eq" value="true"/>
+      </ConfigItem>
+
+
+    </ConfigGroup>
+
+    <ConfigGroup class="ucLayoutVertical">
+      <ConfigItem class="ucComboBox" id="id_aeq_num_cb">
+        <Parameter name="left_label" value="EQ Number"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_Dsp_settings/AEQ_Num.xml"/>
+
+        <Parameter name="unique" value="AEQ_AUDIO_PATH_SET_STRU.numOfSet"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_aeq_num_tb"/>
+        </Associator>
+      </ConfigItem>
+
+      <ConfigItem class="ucComboBox" id="id_aeq_golden_num_cb">
+        <Parameter name="left_label" value="Golden EQ"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_Dsp_settings/AEQ_Num.xml"/>
+
+        <Parameter name="unique" value="PEQ_NVDM_MISC_PARAM.adaptive_peq_sound_mode"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_aeq_golden_num_tb"/>
+        </Associator>
+      </ConfigItem>
+
+
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" Unique="AEQ_AUDIO_PATH_SET_STRU.numOfSet" id="id_aeq_num_tb">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_aeq_num_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="PEQ_NVDM_MISC_PARAM.adaptive_peq_sound_mode" id="id_aeq_golden_num_tb">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_aeq_golden_num_cb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="EQ Subset Select"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      
+      <ConfigGroup class="TabPage">
+        <ConfigGroup title="  AEQ  " class="ucLayoutVertical">
+          <ConfigGroup class="ucLayoutHorizontal">
+            <ConfigGroup class="ucAEQSzTable" id="id_aeq_subset_A_table">
+              <Parameter name="cell_cnt" value="11"/>
+              <Parameter name="update_aeq_table_nv_id" value="id_update_aeq_table_nv_00"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="modified_peq_index" refId="id_modified_peq_index"/>
+                <Parameter name="data" refId="A2DP AEQ"/>
+                <Parameter name="aeq_num" refId="id_aeq_num_tb" />
+              </Associator>
+            </ConfigGroup>
+          </ConfigGroup>
+        </ConfigGroup>
+      </ConfigGroup>
+      
+      <ConfigGroup class="ucLayoutVertical">
+        
+        <ConfigGroup class="General" visible="hidden">
+          <ConfigItem class="ucStrTextBox" id="id_aeq_table_nv_00" present="hexstr" Unique="AEQ_AUDIO_PATH_SET_STRU.PARAM">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <!--<Parameter name="data" refId="id_update_aeq_table_nv_00"/>-->
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+        
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+ 
+  <ConfigGroup title="EQ Superset" class="AEQPage">
+    <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+      <Parameter name="realtime_update_nvkey" refId="id_aeq_realtime_update_fw_nvkey"/>
+      <Parameter name="data" refId="A2DP AEQ"/>
+    </Associator>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+        <ConfigGroup class="ucAEQBandTable" id="id_aeq_setting_table">
+          <Parameter name="group_xml" value="/_DSP_settings/AeqGroup.xml"/>
+          <Parameter name="cell_cnt" value="10"/>
+          <Parameter name="gain_line_id" value="id_aeq_gain_line_data"/>
+          <Parameter name="modified_aeq_index_id" value="id_modified_aeq_index"/>
+          <Parameter name="rescale_id" value="id_aeq_rescale_value"/>
+          <Parameter name="realtime_update_fw_nvkey_id" value="id_aeq_realtime_update_fw_nvkey"/>
+          <Parameter name="is_support_LDAC_nv_unique" value="UI_Dsp_A2DP_PEQ_Additional_Settings.is_support_88200_96000"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="point_set" refId="id_a2dp_aeq_gain_point_set"/>
+            <Parameter name="aeq_subset_sel_0" refId="id_a2dp_subset_sel_0_btn"/>
+            <Parameter name="aeq_subset_sel_1" refId="id_a2dp_subset_sel_1_btn"/>
+            <Parameter name="aeq_subset_sel_2" refId="id_a2dp_subset_sel_2_btn"/>
+            <Parameter name="aeq_subset_sel_3" refId="id_a2dp_subset_sel_3_btn"/>
+          </Associator>
+          <ConfigGroup class="ucLiveChart">
+            <Parameter name="chart_title" value="Gain"/>
+            <Parameter name="height" value="400"/>
+            <Parameter name="layout_column_weight" value="1"/>
+            <Parameter name="x_axis_title" value="Frequency(Hz)"/>
+            <Parameter name="x_axis_max_value" value="20000"/>
+            <Parameter name="x_axis_min_value" value="20"/>
+            <Parameter name="y_axis_title" value="Gain(dB)"/>
+            <Parameter name="x_axis_customized_step" value="20,100,1000,10000,20000"/>
+            <Parameter name="y_axis_max_value" value="18"/>
+            <Parameter name="y_axis_min_value" value="-20"/>
+            <Parameter name="y_axis_step" value="1"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="rescale_value" refId="id_aeq_rescale_value"/>
+            </Associator>
+            <ConfigItem class="point_set" id="id_a2dp_aeq_gain_point_set">
+              <Parameter name="total_num" value="10"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcPeqPointSetAssociator">
+                <Parameter name="band_setting" refId="id_aeq_setting_table"/>
+              </Associator>
+            </ConfigItem>
+            <ConfigItem class="line" id="id_aeq_gain_line">
+              <Parameter name="title" value="AEQ_Gain"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="data" refId="id_aeq_gain_line_data"/>
+              </Associator>
+            </ConfigItem>
+            <ConfigItem class="line" id="id_aeq_target">
+              <Parameter name="title" value="AEQ_Target"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="data" refId="id_aeq_target_line_data"/>
+              </Associator>
+            </ConfigItem>
+          </ConfigGroup>          
+        </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

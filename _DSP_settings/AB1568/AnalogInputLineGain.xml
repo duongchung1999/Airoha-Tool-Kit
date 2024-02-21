@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="6" Value="0"/> 
+	<Group Name="5.5" Value="1"/> 
+	<Group Name="5" Value="2"/> 
+	<Group Name="4.5" Value="3"/> 
+	<Group Name="4" Value="4"/> 
+	<Group Name="3.5" Value="5"/> 
+	<Group Name="3" Value="6"/> 
+	<Group Name="2.5" Value="7"/> 
+	<Group Name="2" Value="8"/> 
+	<Group Name="1.5" Value="9"/> 
+	<Group Name="1" Value="10"/>
+	<Group Name="0.5" Value="11"/>
+	<Group Name="0" Value="12"/>
+</DataGroup>
+
+

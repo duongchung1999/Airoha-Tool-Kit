@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="UUID_Setting" class="Airoha.Project.ConfigTool.View.PurePage" parameter="UUID_Setting">
+  <ConfigGroup class="ucLayoutVertical">
+    <ConfigItem class="AB1568.ucUUIDComboBox" id="id_SPP_UUID_INDEX_index_combo">
+      <Parameter name="left_label" value="UUID Index:"/>
+      <Parameter name="left_width" value="100"/>
+      <Parameter name="width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="down_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="count" refId="id_SPP_UUID_INDEX_count"/>
+        <Parameter name="data" refId="id_SPP_UUID_INDEX_index"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="SPP_UUID_INDEX.index" id="id_SPP_UUID_INDEX_index" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_SPP_UUID_INDEX_index_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="SPP_UUID_INDEX.count" id="id_SPP_UUID_INDEX_count" visible="hidden"/>
+    <ConfigItem class="AB1568.ucUUIDStrTextBox" Unique="SPP_UUID_INDEX.uuid_group0" id="id_SPP_UUID_INDEX_uuid_group0" present="hexstr">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="count" refId="id_SPP_UUID_INDEX_count"/>
+        <Parameter name="group_id" refId="id_SPP_UUID_INDEX_index_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="AB1568.ucUUIDStrTextBox" Unique="SPP_UUID_INDEX.uuid_group1" id="id_SPP_UUID_INDEX_uuid_group1" present="hexstr">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="count" refId="id_SPP_UUID_INDEX_count"/>
+        <Parameter name="group_id" refId="id_SPP_UUID_INDEX_index_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="AB1568.ucUUIDStrTextBox" Unique="SPP_UUID_INDEX.uuid_group2" id="id_SPP_UUID_INDEX_uuid_group2" present="hexstr">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="count" refId="id_SPP_UUID_INDEX_count"/>
+        <Parameter name="group_id" refId="id_SPP_UUID_INDEX_index_combo"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

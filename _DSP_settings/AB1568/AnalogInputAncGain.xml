@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="-6" 	Value="0"/> 
+	<Group Name="-5.625" Value="1"/> 
+	<Group Name="-5.25" 	Value="2"/> 
+	<Group Name="-4.875" Value="3"/> 
+	<Group Name="-4.5" 	Value="4"/> 
+	<Group Name="-4.125" Value="5"/> 
+	<Group Name="-3.75" 	Value="6"/> 
+	<Group Name="-3.375" Value="7"/> 
+	<Group Name="-3" 	Value="8"/> 
+	<Group Name="-2.625" Value="9"/> 
+	<Group Name="-2.25" 	Value="10"/>
+	<Group Name="-1.875" Value="11"/>
+	<Group Name="-1.5" 	Value="12"/>
+	<Group Name="-1.125" Value="13"/> 
+	<Group Name="-0.75" 	Value="14"/> 
+	<Group Name="-0.375" Value="15"/> 
+	<Group Name="0" 		Value="16"/> 
+	<Group Name="6" 		Value="32"/> 
+	<Group Name="12" 	Value="48"/> 
+	<Group Name="18" 	Value="64"/> 
+	<Group Name="24" 	Value="80"/> 
+	<Group Name="30" 	Value="96"/> 
+	<Group Name="36" 	Value="112"/> 
+	<Group Name="42" 	Value="127"/>
+</DataGroup>
+
+

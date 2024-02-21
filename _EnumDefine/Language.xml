@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DefineList>
+
+	<Group name="LCID">
+		<Enum key="Share" value="0x0000"/>
+		<Enum key="LanguageSettings" value="0x0001"/>
+		<Enum key="zh-TW" value="0x0404"/>
+		<Enum key="en-US" value="0x0409"/>
+		<Enum key="ko" value="0x0412"/>
+		<Enum key="ja" value="0x0411"/>
+		<Enum key="fr-fr" value="0x040C"/>
+		<Enum key="it-it" value="0x0410"/>
+	</Group>
+
+</DefineList>

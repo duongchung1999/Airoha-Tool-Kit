@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="-6dB" Value="-600"/> 
+	<Group Name="-3dB" Value="-300"/> 
+	<Group Name="0dB" Value="0"/> 
+	<Group Name="+3dB" Value="300"/> 
+	<Group Name="+6dB" Value="600"/>
+</DataGroup>
+
+

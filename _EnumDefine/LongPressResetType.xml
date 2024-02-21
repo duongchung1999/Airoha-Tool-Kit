@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="Keypad" Value="1"/>
+	<Group Name="Touch" Value="2"/>
+	<Group Name="Regen" Value="3"/>
+</DataGroup>

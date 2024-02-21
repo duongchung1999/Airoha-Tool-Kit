@@ -1,0 +1,61 @@
+<TextSelect>
+  <RFMode>
+    <element value="Air_Mode"/>
+    <element value="Cable_Mode"/>
+  </RFMode>
+  <RFTestRule>
+    <element value="Pass_One_Channel"/>
+    <element value="Pass_All_Channel"/>
+  </RFTestRule>
+  <CalibrationFlow>
+    <element value="OTP_Data_Conversion"/>
+    <element value="Normal_Calibration"/>
+  </CalibrationFlow>
+  <CalibrationFlow__TCB1to8>
+    <element value="OTP_Data_Conversion"/>
+  </CalibrationFlow__TCB1to8>
+  <ProductDataSource>
+    <element value="DLL_Generated"/>
+    <element value="Normal_Generated"/>
+  </ProductDataSource>
+  <BooleanOption>
+    <element value="true"/>
+    <element value="false"/>
+  </BooleanOption>
+  <ChipOption>
+    <element value="AB1568"/>
+    <element value="AB1565"/>
+  </ChipOption>
+  <logic_level>
+    <element value="high"/>
+    <element value="low"/>
+  </logic_level>
+  <test_pin_config>
+    <element value="Use_Default"/>
+    <element value="Use_Less_Pin"/>
+  </test_pin_config>
+  <xtal_output_pin>
+    <element value="XTAL_UART_TX"/>
+    <element value="XTAL_PIO1"/>
+  </xtal_output_pin>
+  <Boolean>
+    <element value="YES"/>
+    <element value="NO"/>
+  </Boolean>
+  <VCCIO_unit_centivolts>    
+    <element value="180"/>
+    <element value="330"/>
+  </VCCIO_unit_centivolts>
+  <test_time>
+    <element value="500"/>
+    <element value="1000"/>
+    <element value="2000"/>
+    <element value="3000"/>
+    <element value="4000"/>
+    <element value="5000"/>
+  </test_time>
+  <one_wire_baudrate>
+    <!--<element value="921600"/>-->
+    <element value="2000000"/>
+  </one_wire_baudrate>
+</TextSelect>

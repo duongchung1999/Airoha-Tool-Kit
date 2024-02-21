@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Limiter" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Limiter">
+
+  <ConfigGroup class="ucLayoutHorizontal">
+    <Parameter name="left_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="top_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="For L side"/>
+      <Parameter name="border" value="1"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="FF"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucComboBox" id="id_anc_FF_L_limiter_enable_cb">
+          <Parameter name="left_label" value="Enable"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Parameter name="unique" value="anc_param.sub_param0_L.limiter_param.limiter_enable"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_FF_L_limiter_enable_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigGroup class="ucAncLimiterSetting" id="id_anc_ff_L_limiter_setting">
+          <Parameter name="anc_type" value="FF"/>
+          <Parameter name="side" value="left"/>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="FB"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucComboBox" id="id_anc_FB_L_limiter_enable_cb">
+          <Parameter name="left_label" value="Enable"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Parameter name="unique" value="anc_param.sub_param1_L.limiter_param.limiter_enable"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_FB_L_limiter_enable_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigGroup class="ucAncLimiterSetting" id="id_anc_fb_L_limiter_setting">
+          <Parameter name="anc_type" value="FB"/>
+          <Parameter name="side" value="left"/>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="AiroThru"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucComboBox" id="id_anc_AiroThru_L_limiter_enable_cb">
+          <Parameter name="left_label" value="Enable"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Parameter name="unique" value="airothru_param.sub_param_L.limiter_param.limiter_enable"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_AiroThru_L_limiter_enable_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigGroup class="ucAncLimiterSetting" id="id_anc_airothru_L_limiter_setting">
+          <Parameter name="anc_type" value="AiroThru"/>
+          <Parameter name="side" value="left"/>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="For R side"/>
+      <Parameter name="border" value="1"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="FF"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucComboBox" id="id_anc_FF_R.limiter_enable_cb">
+          <Parameter name="left_label" value="Enable"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Parameter name="unique" value="anc_param.sub_param0_R.limiter_param.limiter_enable"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_FF_R.limiter_enable_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigGroup class="ucAncLimiterSetting" id="id_anc_ff_R.limiter_setting">
+          <Parameter name="anc_type" value="FF"/>
+          <Parameter name="side" value="right"/>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="FB"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucComboBox" id="id_anc_FB_R.limiter_enable_cb">
+          <Parameter name="left_label" value="Enable"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Parameter name="unique" value="anc_param.sub_param1_R.limiter_param.limiter_enable"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_FB_R.limiter_enable_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigGroup class="ucAncLimiterSetting" id="id_anc_fb_R.limiter_setting">
+          <Parameter name="anc_type" value="FB"/>
+          <Parameter name="side" value="right"/>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="AiroThru"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucComboBox" id="id_anc_AiroThru_R.limiter_enable_cb">
+          <Parameter name="left_label" value="Enable"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="75"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Parameter name="unique" value="airothru_param.sub_param_R.limiter_param.limiter_enable"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_AiroThru_R.limiter_enable_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigGroup class="ucAncLimiterSetting" id="id_anc_airothru_R.limiter_setting">
+          <Parameter name="anc_type" value="AiroThru"/>
+          <Parameter name="side" value="right"/>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="anc_param.sub_param0_L.limiter_param.limiter_enable" id="id_anc_FF_L_limiter_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_FF_L_limiter_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="anc_param.sub_param1_L.limiter_param.limiter_enable" id="id_anc_FB_L_limiter_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_FB_L_limiter_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="airothru_param.sub_param_L.limiter_param.limiter_enable" id="id_anc_AiroThru_L_limiter_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_AiroThru_L_limiter_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="anc_param.sub_param0_R.limiter_param.limiter_enable" id="id_anc_FF_R.limiter_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_FF_R.limiter_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="anc_param.sub_param1_R.limiter_param.limiter_enable" id="id_anc_FB_R.limiter_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_FB_R.limiter_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="airothru_param.sub_param_R.limiter_param.limiter_enable" id="id_anc_AiroThru_R.limiter_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_AiroThru_R.limiter_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    
+  </ConfigGroup>
+</Page>

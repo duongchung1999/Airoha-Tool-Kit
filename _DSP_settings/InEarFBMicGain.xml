@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--(10^(db/20))*2^11-->
+<DataGroup>
+	<Group Name="0 db" Value="2048"/>
+	<Group Name="3 db" Value="2893"/>
+	<Group Name="6 db" Value="4096"/>
+	<Group Name="9 db" Value="5772"/>
+	<Group Name="12 db" Value="8153"/>
+	<Group Name="15 db" Value="11517"/>
+	<Group Name="18 db" Value="16268"/>
+	<Group Name="21 db" Value="22979"/>
+	<Group Name="24 db" Value="32459"/>
+</DataGroup>
+
+

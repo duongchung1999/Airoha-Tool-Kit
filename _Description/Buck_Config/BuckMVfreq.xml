@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="BuckMVfreq" class="Airoha.Project.ConfigTool.View.General" parameter="BuckMVfreq">
+  <ConfigItem class="ucTextBox" Unique="BuckMVfreq.Kflag"/>
+  <ConfigItem class="ucTextBox" Unique="BuckMVfreq.BUCK_FREQ"/>
+  <ConfigItem class="ucTextBox" Unique="BuckMVfreq.OSC_FREQK"/>
+</Page>

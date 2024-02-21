@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="ANC_Default_Setting" class="Airoha.Project.ConfigTool.View.PurePage" parameter="ANC_Default_Setting">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_margin" value="20"/>
+    <Parameter name="bottom_margin" value="20"/>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="required_nvkey_id" value="0xE1E0"/>
+      <ConfigItem class="ucComboBox" id="id_anc_enable_cb">
+        <Parameter name="left_label" value="Enable"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Parameter name="unique" value="ANC_NVDM_MISC_PARAM.anc_enable"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_anc_enable_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_anc_type_cb">
+        <Parameter name="left_label" value="Type"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_Dsp_settings/AB1568/AncType.xml"/>
+        <Parameter name="unique" value="ANC_NVDM_MISC_PARAM.anc_type"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_anc_type_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucAncFlashNoComboBox" id="id_anc_flash_no_cb" visible="hidden">
+        <Parameter name="left_label" value="Flash No"/>
+        <Parameter name="des_label" value="ANC: 1~4, AiroThru: 9~11"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_Dsp_settings/AB1568/AncFlashNo.xml"/>
+        <Parameter name="unique" value="ANC_NVDM_MISC_PARAM.anc_flash_no"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="type" refId="id_anc_type_tb"/>
+          <Parameter name="data" refId="id_anc_flash_no_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+
+    <ConfigGroup class="ucLayoutHorizontal" visible="hidden">
+      <Parameter name="top_margin" value="20"/>
+      <Parameter name="required_nvkey_id" value="0xE1E1"/>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="For L side"/>
+        <Parameter name="border" value="1"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <ConfigItem class="ucUpDown" Unique="anc_param.sub_param0_L.ramp_delay" id="id_anc_ff_L_ramp_delay_updwon" min="0" max="3" visible="hidden">
+          <Parameter name="left_label" value="ANC FF ramp switch delay"/>
+          <Parameter name="right_label" value=" (0 ~ 3)"/>
+          <Parameter name="des_label" value="16*2^x us/step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="anc_param.sub_param0_L.ramp_delay"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_ff_L_ramp_delay_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="anc_param.sub_param0_L.ramp_up_step" id="id_anc_ff_L_ramp_up_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="ANC FF ramp up gain step"/>
+          <Parameter name="right_label" value=" (0 ~ 9)"/>
+          <Parameter name="des_label" value="0.00125*2^x dB/step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="anc_param.sub_param0_L.ramp_up_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_ff_L_ramp_up_step_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="anc_param.sub_param0_L.ramp_down_step" id="id_anc_ff_L_ramp_down_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="ANC FF ramp down gain step"/>
+          <Parameter name="right_label" value=" (0 ~ 9)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="anc_param.sub_param0_L.ramp_down_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_ff_L_ramp_down_step_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="anc_param.sub_param1_L.ramp_delay" id="id_anc_fb_L_ramp_delay_updwon" min="0" max="3" visible="hidden">
+          <Parameter name="left_label" value="ANC FB ramp switch delay"/>
+          <Parameter name="right_label" value=" (0 ~ 3)"/>
+          <Parameter name="des_label" value="16*2^x us/step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="anc_param.sub_param1_L.ramp_delay"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_fb_L_ramp_delay_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="anc_param.sub_param1_L.ramp_up_step" id="id_anc_fb_L_ramp_up_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="ANC FB ramp up gain step"/>
+          <Parameter name="right_label" value=" (0 ~ 9)"/>
+          <Parameter name="des_label" value="0.00125*2^x dB/step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="anc_param.sub_param1_L.ramp_up_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_fb_L_ramp_up_step_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="anc_param.sub_param1_L.ramp_down_step" id="id_anc_fb_L_ramp_down_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="ANC FB ramp down gain step"/>
+          <Parameter name="right_label" value=" (0 ~ 9)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="anc_param.sub_param1_L.ramp_down_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_fb_L_ramp_down_step_tb"/>
+          </Associator>
+        </ConfigItem>      
+        <ConfigItem class="ucUpDown" Unique="airothru_param.sub_param_L.ramp_delay" id="id_airothru_L_ramp_delay_updwon" min="0" max="3" visible="hidden">
+          <Parameter name="left_label" value="AiroThru ramp switch delay"/>
+          <Parameter name="right_label" value=" (0 ~ 3)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="airothru_param.sub_param_L.ramp_delay"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_airothru_L_ramp_delay_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="airothru_param.sub_param_L.ramp_up_step" id="id_airothru_L_ramp_up_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="AiroThru ramp up gain step"/>
+          <Parameter name="right_label" value=" (0 ~ 9)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="airothru_param.sub_param_L.ramp_up_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_airothru_L_ramp_up_step_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="airothru_param.sub_param_L.ramp_down_step" id="id_airothru_L_ramp_down_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="AiroThru ramp down gain step"/>
+          <Parameter name="right_label" value=" (0 ~ 9)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="airothru_param.sub_param_L.ramp_down_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_airothru_L_ramp_down_step_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="For R side"/>
+        <Parameter name="border" value="1"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <ConfigItem class="ucUpDown" Unique="anc_param.sub_param0_R.ramp_delay" id="id_anc_ff_R_ramp_delay_updwon" min="0" max="3" visible="hidden">
+          <Parameter name="left_label" value="ANC FF ramp switch delay"/>
+          <Parameter name="right_label" value=" (0 ~ 3)"/>
+          <Parameter name="des_label" value="16*2^x us/step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="anc_param.sub_param0_R.ramp_delay"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_ff_R_ramp_delay_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="anc_param.sub_param0_R.ramp_up_step" id="id_anc_ff_R_ramp_up_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="ANC FF ramp up gain step"/>
+          <Parameter name="right_label" value=" (0 ~ 9)"/>
+          <Parameter name="des_label" value="0.00125*2^x dB/step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="anc_param.sub_param0_R.ramp_up_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_ff_R_ramp_up_step_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="anc_param.sub_param0_R.ramp_down_step" id="id_anc_ff_R_ramp_down_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="ANC FF ramp down gain step"/>
+          <Parameter name="right_label" value=" (0 ~ 9)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="anc_param.sub_param0_R.ramp_down_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_ff_R_ramp_down_step_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="anc_param.sub_param1_R.ramp_delay" id="id_anc_fb_R_ramp_delay_updwon" min="0" max="3" visible="hidden">
+          <Parameter name="left_label" value="ANC FB ramp switch delay"/>
+          <Parameter name="right_label" value=" (0 ~ 3)"/>
+          <Parameter name="des_label" value="16*2^x us/step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="anc_param.sub_param1_R.ramp_delay"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_fb_R_ramp_delay_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="anc_param.sub_param1_R.ramp_up_step" id="id_anc_fb_R_ramp_up_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="ANC FB ramp up gain step"/>
+          <Parameter name="right_label" value=" (0 ~ 9)"/>
+          <Parameter name="des_label" value="0.00125*2^x dB/step"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="anc_param.sub_param1_R.ramp_up_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_fb_R_ramp_up_step_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="anc_param.sub_param1_R.ramp_down_step" id="id_anc_fb_R_ramp_down_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="ANC FB ramp down gain step"/>
+          <Parameter name="right_label" value=" (0 ~ 9)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="anc_param.sub_param1_R.ramp_down_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_anc_fb_R_ramp_down_step_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="airothru_param.sub_param_R.ramp_delay" id="id_airothru_R_ramp_delay_updwon" min="0" max="3" visible="hidden">
+          <Parameter name="left_label" value="AiroThru ramp switch delay"/>
+          <Parameter name="right_label" value=" (0 ~ 3)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="airothru_param.sub_param_R.ramp_delay"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_airothru_R_ramp_delay_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="airothru_param.sub_param_R.ramp_up_step" id="id_airothru_R_ramp_up_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="AiroThru ramp up gain step"/>
+          <Parameter name="right_label" value=" (0 ~ 9)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="airothru_param.sub_param_R.ramp_up_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_airothru_R_ramp_up_step_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="airothru_param.sub_param_R.ramp_down_step" id="id_airothru_R_ramp_down_step_updwon" min="0" max="9" visible="hidden">
+          <Parameter name="left_label" value="AiroThru ramp down gain step"/>
+          <Parameter name="right_label" value=" (0 ~ 9)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="50"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="airothru_param.sub_param_R.ramp_down_step"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_airothru_R_ramp_down_step_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_margin" value="20"/>
+    <Parameter name="bottom_margin" value="20"/>
+    <Parameter name="border" value="1"/>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="required_nvkey_id" value="0xE1E5"/>  
+      <ConfigItem class="ucUpDown" Unique="ANC_COMPOMENT_ALIGNMENT_GAIN.gain_ff" id="id_anc_gain_ff_updwon" min="-32768" max="600">
+        <Parameter name="left_label" value="Component alignment gain FF Left ( x 0.01 db)"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="50"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="10"/>
+        <Parameter name="unique" value="ANC_COMPOMENT_ALIGNMENT_GAIN.gain_ff"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_anc_gain_ff_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="ANC_COMPOMENT_ALIGNMENT_GAIN.gain_fb" id="id_anc_gain_fb_updwon" min="-32768" max="600">
+        <Parameter name="left_label" value="Component alignment gain FB Left ( x 0.01 db)"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="50"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="10"/>
+        <Parameter name="unique" value="ANC_COMPOMENT_ALIGNMENT_GAIN.gain_fb"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_anc_gain_fb_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="ANC_COMPOMENT_ALIGNMENT_GAIN.gain_ff_right" id="id_anc_gain_ff_right_updwon" min="-32768" max="600">
+        <Parameter name="left_label" value="Component alignment gain FF Right ( x 0.01 db)"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="50"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="10"/>
+        <Parameter name="unique" value="ANC_COMPOMENT_ALIGNMENT_GAIN.gain_ff_right"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_anc_gain_ff_right_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" Unique="ANC_COMPOMENT_ALIGNMENT_GAIN.gain_fb_right" id="id_anc_gain_fb_right_updwon" min="-32768" max="600">
+        <Parameter name="left_label" value="Component alignment gain FB Right ( x 0.01 db)"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="50"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="step" value="10"/>
+        <Parameter name="unique" value="ANC_COMPOMENT_ALIGNMENT_GAIN.gain_fb_right"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_anc_gain_fb_right_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="ANC_NVDM_MISC_PARAM.anc_enable" id="id_anc_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ANC_NVDM_MISC_PARAM.anc_type" id="id_anc_type_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_type_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ANC_NVDM_MISC_PARAM.anc_flash_no" id="id_anc_flash_no_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_flash_no_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ANC_FACTORY_NVDM_MISC_PARAM_.anc_enable" id="id_anc_factory_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_enable_tb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ANC_FACTORY_NVDM_MISC_PARAM_.anc_type" id="id_anc_factory_type_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_type_tb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ANC_FACTORY_NVDM_MISC_PARAM_.anc_flash_no" id="id_anc_factory_flash_no_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_flash_no_tb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="anc_param.sub_param0_L.ramp_delay" id="id_anc_ff_L_ramp_delay_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_ff_L_ramp_delay_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="anc_param.sub_param0_L.ramp_up_step" id="id_anc_ff_L_ramp_up_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_ff_L_ramp_up_step_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="anc_param.sub_param0_L.ramp_down_step" id="id_anc_ff_L_ramp_down_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_ff_L_ramp_down_step_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="anc_param.sub_param1_L.ramp_delay" id="id_anc_fb_L_ramp_delay_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_fb_L_ramp_delay_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="anc_param.sub_param1_L.ramp_up_step" id="id_anc_fb_L_ramp_up_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_fb_L_ramp_up_step_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="anc_param.sub_param1_L.ramp_down_step" id="id_anc_fb_L_ramp_down_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_fb_L_ramp_down_step_updwon"/>
+      </Associator>
+    </ConfigItem>    
+    <ConfigItem class="ucTextBox" Unique="airothru_param.sub_param_L.ramp_delay" id="id_airothru_L_ramp_delay_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_airothru_L_ramp_delay_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="airothru_param.sub_param_L.ramp_up_step" id="id_airothru_L_ramp_up_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_airothru_L_ramp_up_step_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="airothru_param.sub_param_L.ramp_down_step" id="id_airothru_L_ramp_down_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_airothru_L_ramp_down_step_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="anc_param.sub_param0_R.ramp_delay" id="id_anc_ff_R_ramp_delay_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_ff_R_ramp_delay_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="anc_param.sub_param0_R.ramp_up_step" id="id_anc_ff_R_ramp_up_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_ff_R_ramp_up_step_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="anc_param.sub_param0_R.ramp_down_step" id="id_anc_ff_R_ramp_down_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_ff_R_ramp_down_step_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="anc_param.sub_param1_R.ramp_delay" id="id_anc_fb_R_ramp_delay_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_fb_R_ramp_delay_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="anc_param.sub_param1_R.ramp_up_step" id="id_anc_fb_R_ramp_up_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_fb_R_ramp_up_step_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="anc_param.sub_param1_R.ramp_down_step" id="id_anc_fb_R_ramp_down_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_fb_R_ramp_down_step_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="airothru_param.sub_param_R.ramp_delay" id="id_airothru_R_ramp_delay_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_airothru_R_ramp_delay_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="airothru_param.sub_param_R.ramp_up_step" id="id_airothru_R_ramp_up_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_airothru_R_ramp_up_step_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="airothru_param.sub_param_R.ramp_down_step" id="id_airothru_R_ramp_down_step_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_airothru_R_ramp_down_step_updwon"/>
+      </Associator>
+    </ConfigItem>
+        <ConfigItem class="ucTextBox" Unique="ANC_COMPOMENT_ALIGNMENT_GAIN.gain_ff" id="id_anc_gain_ff_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_gain_ff_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ANC_COMPOMENT_ALIGNMENT_GAIN.gain_fb" id="id_anc_gain_fb_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_gain_fb_updwon"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucTextBox" Unique="ANC_COMPOMENT_ALIGNMENT_GAIN.gain_ff_right" id="id_anc_gain_ff_right_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_gain_ff_right_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ANC_COMPOMENT_ALIGNMENT_GAIN.gain_fb_right" id="id_anc_gain_fb_right_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_gain_fb_right_updwon"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

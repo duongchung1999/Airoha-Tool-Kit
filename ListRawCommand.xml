@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-16"?>
+<CommandList>
+  <CommandItem id="1">
+    <command>05 5A 02 00 23 2F</command>
+    <description />
+  </CommandItem>
+  <CommandItem id="2">
+    <command>05 5A 03 00 D5 0C 01</command>
+    <description />
+  </CommandItem>
+  <CommandItem id="3">
+    <command>05 5A 08 00 C2 0C 11 22 33 44 55 77</command>
+    <description />
+  </CommandItem>
+  <CommandItem id="4">
+    <command>05 5A 06 00 00 0A E2 3B 10 00</command>
+    <description />
+  </CommandItem>
+  <CommandItem id="5">
+    <command>05 5A 26 00 01 0A E2 3B 03 00 03 31 32 33 34 35 36 37 38 39 40 31 32 33 34 35 36 37 38 39 40 31 32 33 34 35 36 37 38 39 40 00</command>
+    <description />
+  </CommandItem>
+  <CommandItem id="6">
+    <command>05 5A 05 00 01 0A 3A 18 01 00 00 00</command>
+    <description />
+  </CommandItem>
+  <CommandItem id="7">
+    <command>05 5A 05 00 01 0A 3A 18 00</command>
+    <description />
+  </CommandItem>
+  <CommandItem id="8">
+    <command>05 5A 04 00 01 11 19 00</command>
+    <description />
+  </CommandItem>
+  <CommandItem id="9">
+    <command>05 5A 03 00 D2 0C 00</command>
+    <description />
+  </CommandItem>
+  <CommandItem id="10">
+    <command>05 5A 08 00 01 0A 00 FF 03 00 00 00</command>
+    <description />
+  </CommandItem>
+  <CommandItem id="11">
+    <command>05 5A 06 00 00 0A 00 FF 04 00</command>
+    <description />
+  </CommandItem>
+  <CommandItem id="12">
+    <command>05 5A 06 00 00 0A 45 20 00 00</command>
+    <description />
+  </CommandItem>
+  <CommandItem id="13">
+    <command>05 5A 04 00 01 11 95 00</command>
+    <description />
+  </CommandItem>
+  <CommandItem id="14">
+    <command>05 5A 03 00 D2</command>
+    <description />
+  </CommandItem>
+  <CommandItem id="15">
+    <command />
+    <description />
+  </CommandItem>
+  <CommandItem id="16">
+    <command />
+    <description />
+  </CommandItem>
+  <CommandItem id="17">
+    <command />
+    <description />
+  </CommandItem>
+  <CommandItem id="18">
+    <command />
+    <description />
+  </CommandItem>
+  <CommandItem id="19">
+    <command />
+    <description />
+  </CommandItem>
+  <CommandItem id="20">
+    <command />
+    <description />
+  </CommandItem>
+  <CommandItem id="21">
+    <command />
+    <description />
+  </CommandItem>
+  <CommandItem id="22">
+    <command />
+    <description />
+  </CommandItem>
+  <CommandItem id="23">
+    <command />
+    <description />
+  </CommandItem>
+  <CommandItem id="24">
+    <command />
+    <description />
+  </CommandItem>
+  <CommandItem id="25">
+    <command />
+    <description />
+  </CommandItem>
+</CommandList>

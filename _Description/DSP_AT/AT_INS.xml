@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="AT_INS" class="Airoha.Project.ConfigTool.View.DspPage" parameter="AT_INS">
+  <ConfigGroup class="ucLayoutVertical">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="bottom_margin" value="10"/>
+        <ConfigItem class="ucCpdInsThrdUpDown" id="id_at_ins_thrd_cb" max="-1" min="-85">
+          <Parameter name="top_label" value="INS Threshold:"/>
+          <Parameter name="bottom_label" value="dB (-85~-1)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="unique" value="DSP_PARA_AT_MDSP_STRU.AT_INS_THRD"/>
+        </ConfigItem>
+        <ConfigItem class="ucCpdInsAttUpDown" id="id_at_ins_att_updown" max="100" min="0">
+          <Parameter name="top_label" value="INS Attenuation:"/>
+          <Parameter name="bottom_label" value="dB (0~100)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_AT_MDSP_STRU.AT_INS_ATTEN"/>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AT_MDSP_STRU.AT_INS_CALCULATE_RATE_MODE"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AT_MDSP_STRU.AT_INS_THRD">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdInsThrdAssociator">
+        <Parameter name="data" refId="id_at_ins_thrd_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AT_MDSP_STRU.AT_INS_ATTEN">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdInsAttAssociator">
+        <Parameter name="data" refId="id_at_ins_att_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AT_MDSP_STRU.AT_INS_ALPHA"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AT_MDSP_STRU.AT_INS_THRD_TIME3"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AT_MDSP_STRU.AT_UNIT_GAIN"/>
+  </ConfigGroup>
+</Page>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="LMP_FEATURES_PAGE2" class="Airoha.Project.ConfigTool.View.General" parameter="LMP_FEATURES_PAGE2">
+  <ConfigGroup title="LMP__FEATURES_PAGE2_Byte0" class="ucBitField">
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE2.Connectionless_Slave_Broadcast_Master"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE2.Connectionless_Slave_Broadcast_Slave"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE2.Synchronization_Train"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE2.Synchronization_Scan"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE2.Inquiry_Response_Notification_Event"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE2.Generalized_interlaced_scan"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE2.Coarse_Clock_Adjustment"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE2.Reserved_for_future_use_2_0_7"/>
+  </ConfigGroup>
+  <ConfigGroup title="LMP__FEATURES_PAGE2_Byte1" class="ucBitField">
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE2.Secure_Connections_Controller_Support"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE2.Ping"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE2.Slot_Availability_Mask"/>
+    <ConfigItem class="ucCheckBox" Unique="LMP_FEATURES_PAGE2.Train_nudging"/>
+  </ConfigGroup>
+  <!--<ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE2.Data0"/>
+        <ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE2.Data1"/>-->
+  <!--<ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE2.Data2"/>
+        <ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE2.Data3"/>
+        <ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE2.Data4"/>
+        <ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE2.Data5"/>
+        <ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE2.Data6"/>
+        <ConfigItem class="ucTextBox" Unique="LMP_FEATURES_PAGE2.Data7"/>-->
+</Page>

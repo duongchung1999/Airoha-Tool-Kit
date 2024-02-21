@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+    <Group Name="Disable" Value="0"/>
+    <Group Name="2M" Value="1"/>
+    <Group Name="3M" Value="2"/>
+</DataGroup>

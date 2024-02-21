@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="USB_Settings" class="Airoha.Project.ConfigTool.View.PurePage" parameter="USB_Settings">
+	<ConfigGroup class="ucLayoutVertical">
+    <ConfigItem class="ucComboBox" id="id_usb_settings_usb_speed_cb" visible="hidden">
+      <Parameter name="left_label" value="USB Speed"/>
+      <Parameter name="width" value="70"/>
+        <Parameter name="left_width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/UsbSpeed.xml"/>
+      <Parameter name="unique" value="USB_SETTINGS.NVKEYID_USB_SETTING_0.UsbSpeed"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_usb_settings_usb_speed_tb"/>
+      </Associator>
+    </ConfigItem>
+	
+	<ConfigItem class="ucComboBox" id="id_usb_settings_second_speaker_onoff_cb" visible="hidden">
+      <Parameter name="left_label" value="Second Speaker On/Off"/>
+      <Parameter name="width" value="70"/>
+        <Parameter name="left_width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/SecondSpkOnOff.xml"/>
+      <Parameter name="unique" value="USB_SETTINGS.NVKEYID_USB_SETTING_0.SecondSpeakerOnOff"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_usb_settings_second_speaker_onoff_tb"/>
+      </Associator>
+    </ConfigItem> 
+	
+	<ConfigGroup class="ucLayoutVertical">
+		<Parameter name="top_label" value="Speaker 1"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="border" value="1"/>
+		
+		<ConfigItem class="AB1568.ucUsbComboBox" id="id_speaker1_terminaltype_cb" visible="hidden">
+		  <Parameter name="left_label" value="Speaker 1 TerminalType"/>
+		  <Parameter name="bottom_label" value="For TEMS support, Speaker and Microphone must set 0x0402 (Headset)."/>
+		  <Parameter name="bottom_label" value="For Nintendo Switch support, Speaker must set 0x0301, Microphone must set 0x0201."/>
+		  <Parameter name="width" value="70"/>
+		  <Parameter name="left_width" value="120"/>
+		  <Parameter name="top_margin" value="10"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="xml_file_path" value="/_EnumDefine/TerminalType.xml"/>
+		  <Parameter name="unique" value="USB_SETTINGS.SPEAKER1.TerminalType"/>
+		  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			<Parameter name="data" refId="id_usb_settings_speaker1_terminaltype_tb"/>
+		  </Associator>
+        </ConfigItem>
+		
+		<ConfigItem class="AB1568.ucUsbAudioUpDown" id="id_speaker1_cur_updown" max="0" min="-96">
+		  <Parameter name="left_label" value="Current:"/>
+		  <Parameter name="right_label" value="dB (Min ~ Max)"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="right_margin" value="10"/>
+		  <Parameter name="top_margin" value="10"/>
+		  <Parameter name="left_width" value="160"/>
+		  <Parameter name="width" value="80"/>
+		  <Parameter name="step" value="0.1"/>
+		  <Parameter name="unique" value="USB_SETTINGS.SPEAKER1.Cur"/>
+		</ConfigItem>
+		
+		<ConfigItem class="AB1568.ucUsbAudioUpDown" id="id_speaker1_min_updown" max="0" min="-96">
+		  <Parameter name="left_label" value="Minimum:"/>
+		  <Parameter name="right_label" value="dB (-96 ~ 0)"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="right_margin" value="10"/>
+		  <Parameter name="top_margin" value="15"/>
+		  <Parameter name="left_width" value="160"/>
+		  <Parameter name="width" value="80"/>
+		  <Parameter name="step" value="0.1"/>
+		  <Parameter name="unique" value="USB_SETTINGS.SPEAKER1.Min"/>
+		</ConfigItem>
+		
+		<ConfigItem class="AB1568.ucUsbAudioUpDown" id="id_speaker1_max_updown" max="0" min="-96">
+		  <Parameter name="left_label" value="Maximum:"/>
+		  <Parameter name="right_label" value="dB (-96 ~ 0)"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="right_margin" value="10"/>
+		  <Parameter name="top_margin" value="15"/>
+		  <Parameter name="left_width" value="160"/>
+		  <Parameter name="width" value="80"/>
+		  <Parameter name="step" value="0.1"/>
+		  <Parameter name="unique" value="USB_SETTINGS.SPEAKER1.Max"/>
+		</ConfigItem>
+		
+		<ConfigItem class="AB1568.ucUsbAudioResUpDown" id="id_speaker1_res_updown" max="3" min="0.0039">
+		  <Parameter name="left_label" value="Resolution:"/>
+		  <Parameter name="right_label" value="dB (0.0039 ~ 3)"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="right_margin" value="10"/>
+		  <Parameter name="top_margin" value="15"/>
+		  <Parameter name="bottom_margin" value="10"/>
+		  <Parameter name="left_width" value="160"/>
+		  <Parameter name="width" value="80"/>
+		  <Parameter name="step" value="0.01"/>
+		  <Parameter name="unique" value="USB_SETTINGS.SPEAKER1.Res"/>
+		</ConfigItem>
+	</ConfigGroup>
+	
+	<ConfigGroup class="ucLayoutVertical">
+		<Parameter name="top_label" value="Microphone 1"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="border" value="1"/>
+		
+		<ConfigItem class="AB1568.ucUsbComboBox" id="id_microphone1_terminaltype_cb" visible="hidden">
+		  <Parameter name="left_label" value="Microphone 1 TerminalType"/>
+		  <Parameter name="bottom_label" value="For TEMS support, Speaker and Microphone must set 0x0402 (Headset)."/>
+		  <Parameter name="bottom_label" value="For Nintendo Switch support, Speaker must set 0x0301, Microphone must set 0x0201."/>
+		  <Parameter name="width" value="70"/>
+		  <Parameter name="left_width" value="120"/>
+		  <Parameter name="top_margin" value="10"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="xml_file_path" value="/_EnumDefine/TerminalType.xml"/>
+		  <Parameter name="unique" value="USB_SETTINGS.MICROPHONE1.TerminalType"/>
+		  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			<Parameter name="data" refId="id_usb_settings_microphone1_terminaltype_tb"/>
+		  </Associator>
+        </ConfigItem>
+		
+		<ConfigItem class="AB1568.ucUsbAudioUpDown" id="id_microphone1_cur_updown" max="0" min="-96">
+		  <Parameter name="left_label" value="Current:"/>
+		  <Parameter name="right_label" value="dB (Min ~ Max)"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="right_margin" value="10"/>
+		  <Parameter name="top_margin" value="10"/>
+		  <Parameter name="left_width" value="160"/>
+		  <Parameter name="width" value="80"/>
+		  <Parameter name="step" value="0.1"/>
+		  <Parameter name="unique" value="USB_SETTINGS.MICROPHONE1.Cur"/>
+		</ConfigItem>
+		
+		<ConfigItem class="AB1568.ucUsbAudioUpDown" id="id_microphone1_min_updown" max="0" min="-96">
+		  <Parameter name="left_label" value="Minimum:"/>
+		  <Parameter name="right_label" value="dB (-96 ~ 0)"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="right_margin" value="10"/>
+		  <Parameter name="top_margin" value="15"/>
+		  <Parameter name="left_width" value="160"/>
+		  <Parameter name="width" value="80"/>
+		  <Parameter name="step" value="0.1"/>
+		  <Parameter name="unique" value="USB_SETTINGS.MICROPHONE1.Min"/>
+		</ConfigItem>
+		
+		<ConfigItem class="AB1568.ucUsbAudioUpDown" id="id_microphone1_max_updown" max="0" min="-96">
+		  <Parameter name="left_label" value="Maximum:"/>
+		  <Parameter name="right_label" value="dB (-96 ~ 0)"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="right_margin" value="10"/>
+		  <Parameter name="top_margin" value="15"/>
+		  <Parameter name="left_width" value="160"/>
+		  <Parameter name="width" value="80"/>
+		  <Parameter name="step" value="0.1"/>
+		  <Parameter name="unique" value="USB_SETTINGS.MICROPHONE1.Max"/>
+		</ConfigItem>
+		
+		<ConfigItem class="AB1568.ucUsbAudioResUpDown" id="id_microphone1_res_updown" max="3" min="0.0039">
+		  <Parameter name="left_label" value="Resolution:"/>
+		  <Parameter name="right_label" value="dB (0.0039 ~ 3)"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="right_margin" value="10"/>
+		  <Parameter name="top_margin" value="15"/>
+		  <Parameter name="bottom_margin" value="10"/>
+		  <Parameter name="left_width" value="160"/>
+		  <Parameter name="width" value="80"/>
+		  <Parameter name="step" value="0.01"/>
+		  <Parameter name="unique" value="USB_SETTINGS.MICROPHONE1.Res"/>
+		</ConfigItem>
+	</ConfigGroup>
+	
+	<ConfigGroup class="ucLayoutVertical">
+		<Parameter name="top_label" value="Speaker 2"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="border" value="1"/>
+		
+		<ConfigItem class="AB1568.ucUsbComboBox" id="id_speaker2_terminaltype_cb" visible="hidden">
+		  <Parameter name="left_label" value="Speaker 2 TerminalType"/>
+		  <Parameter name="bottom_label" value="For TEMS support, Speaker and Microphone must set 0x0402 (Headset)."/>
+		  <Parameter name="bottom_label" value="For Nintendo Switch support, Speaker must set 0x0301, Microphone must set 0x0201."/>
+		  <Parameter name="width" value="70"/>
+		  <Parameter name="left_width" value="120"/>
+		  <Parameter name="top_margin" value="10"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="xml_file_path" value="/_EnumDefine/TerminalType.xml"/>
+		  <Parameter name="unique" value="USB_SETTINGS.SPEAKER2.TerminalType"/>
+		  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			<Parameter name="data" refId="id_usb_settings_speaker2_terminaltype_tb"/>
+		  </Associator>
+        </ConfigItem>
+		
+		<ConfigItem class="AB1568.ucUsbAudioUpDown" id="id_speaker2_cur_updown" max="0" min="-96">
+		  <Parameter name="left_label" value="Current:"/>
+		  <Parameter name="right_label" value="dB (Min ~ Max)"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="right_margin" value="10"/>
+		  <Parameter name="top_margin" value="10"/>
+		  <Parameter name="left_width" value="160"/>
+		  <Parameter name="width" value="80"/>
+		  <Parameter name="step" value="0.1"/>
+		  <Parameter name="unique" value="USB_SETTINGS.SPEAKER2.Cur"/>
+		</ConfigItem>
+		
+		<ConfigItem class="AB1568.ucUsbAudioUpDown" id="id_speaker2_min_updown" max="0" min="-96">
+		  <Parameter name="left_label" value="Minimum:"/>
+		  <Parameter name="right_label" value="dB (-96 ~ 0)"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="right_margin" value="10"/>
+		  <Parameter name="top_margin" value="15"/>
+		  <Parameter name="left_width" value="160"/>
+		  <Parameter name="width" value="80"/>
+		  <Parameter name="step" value="0.1"/>
+		  <Parameter name="unique" value="USB_SETTINGS.SPEAKER2.Min"/>
+		</ConfigItem>
+		
+		<ConfigItem class="AB1568.ucUsbAudioUpDown" id="id_speaker2_max_updown" max="0" min="-96">
+		  <Parameter name="left_label" value="Maximum:"/>
+		  <Parameter name="right_label" value="dB (-96 ~ 0)"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="right_margin" value="10"/>
+		  <Parameter name="top_margin" value="15"/>
+		  <Parameter name="left_width" value="160"/>
+		  <Parameter name="width" value="80"/>
+		  <Parameter name="step" value="0.1"/>
+		  <Parameter name="unique" value="USB_SETTINGS.SPEAKER2.Max"/>
+		</ConfigItem>
+		
+		<ConfigItem class="AB1568.ucUsbAudioResUpDown" id="id_speaker2_res_updown" max="3" min="0.0039">
+		  <Parameter name="left_label" value="Resolution:"/>
+		  <Parameter name="right_label" value="dB (0.0039 ~ 3)"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="right_margin" value="10"/>
+		  <Parameter name="top_margin" value="15"/>
+		  <Parameter name="bottom_margin" value="10"/>
+		  <Parameter name="left_width" value="160"/>
+		  <Parameter name="width" value="80"/>
+		  <Parameter name="step" value="0.01"/>
+		  <Parameter name="unique" value="USB_SETTINGS.SPEAKER2.Res"/>
+		</ConfigItem>
+	</ConfigGroup>
+	
+	<ConfigGroup class="ucLayoutVertical">
+		<Parameter name="top_label" value="Microphone 2"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="border" value="1"/>
+		
+		<ConfigItem class="AB1568.ucUsbComboBox" id="id_microphone2_terminaltype_cb" visible="hidden">
+		  <Parameter name="left_label" value="Microphone 2 TerminalType"/>
+		  <Parameter name="bottom_label" value="For TEMS support, Speaker and Microphone must set 0x0402 (Headset)."/>
+		  <Parameter name="bottom_label" value="For Nintendo Switch support, Speaker must set 0x0301, Microphone must set 0x0201."/>
+		  <Parameter name="width" value="70"/>
+		  <Parameter name="left_width" value="120"/>
+		  <Parameter name="top_margin" value="10"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="xml_file_path" value="/_EnumDefine/TerminalType.xml"/>
+		  <Parameter name="unique" value="USB_SETTINGS.MICROPHONE2.TerminalType"/>
+		  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			<Parameter name="data" refId="id_usb_settings_microphone2_terminaltype_tb"/>
+		  </Associator>
+        </ConfigItem>
+		
+		<ConfigItem class="AB1568.ucUsbAudioUpDown" id="id_microphone2_cur_updown" max="0" min="-96">
+		  <Parameter name="left_label" value="Current:"/>
+		  <Parameter name="right_label" value="dB (Min ~ Max)"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="right_margin" value="10"/>
+		  <Parameter name="top_margin" value="10"/>
+		  <Parameter name="left_width" value="160"/>
+		  <Parameter name="width" value="80"/>
+		  <Parameter name="step" value="0.1"/>
+		  <Parameter name="unique" value="USB_SETTINGS.MICROPHONE2.Cur"/>
+		</ConfigItem>
+		
+		<ConfigItem class="AB1568.ucUsbAudioUpDown" id="id_microphone2_min_updown" max="0" min="-96">
+		  <Parameter name="left_label" value="Minimum:"/>
+		  <Parameter name="right_label" value="dB (-96 ~ 0)"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="right_margin" value="10"/>
+		  <Parameter name="top_margin" value="15"/>
+		  <Parameter name="left_width" value="160"/>
+		  <Parameter name="width" value="80"/>
+		  <Parameter name="step" value="0.1"/>
+		  <Parameter name="unique" value="USB_SETTINGS.MICROPHONE2.Min"/>
+		</ConfigItem>
+		
+		<ConfigItem class="AB1568.ucUsbAudioUpDown" id="id_microphone2_max_updown" max="0" min="-96">
+		  <Parameter name="left_label" value="Maximum:"/>
+		  <Parameter name="right_label" value="dB (-96 ~ 0)"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="right_margin" value="10"/>
+		  <Parameter name="top_margin" value="15"/>
+		  <Parameter name="left_width" value="160"/>
+		  <Parameter name="width" value="80"/>
+		  <Parameter name="step" value="0.1"/>
+		  <Parameter name="unique" value="USB_SETTINGS.MICROPHONE2.Max"/>
+		</ConfigItem>
+		
+		<ConfigItem class="AB1568.ucUsbAudioResUpDown" id="id_microphone2_res_updown" max="3" min="0.0039">
+		  <Parameter name="left_label" value="Resolution:"/>
+		  <Parameter name="right_label" value="dB (0.0039 ~ 3)"/>
+		  <Parameter name="left_margin" value="10"/>
+		  <Parameter name="right_margin" value="10"/>
+		  <Parameter name="top_margin" value="15"/>
+		  <Parameter name="bottom_margin" value="10"/>
+		  <Parameter name="left_width" value="160"/>
+		  <Parameter name="width" value="80"/>
+		  <Parameter name="step" value="0.01"/>
+		  <Parameter name="unique" value="USB_SETTINGS.MICROPHONE2.Res"/>
+		</ConfigItem>
+	</ConfigGroup>
+
+	</ConfigGroup>
+
+	<ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="USB_SETTINGS.NVKEYID_USB_SETTING_0.UsbSpeed" id="id_usb_settings_usb_speed_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_usb_settings_usb_speed_cb"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" Unique="USB_SETTINGS.NVKEYID_USB_SETTING_0.SecondSpeakerOnOff" id="id_usb_settings_second_speaker_onoff_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_usb_settings_second_speaker_onoff_cb"/>
+      </Associator>
+    </ConfigItem>
+	
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.SPEAKER1.TerminalType" id="id_usb_settings_speaker1_terminaltype_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_speaker1_terminaltype_cb"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.SPEAKER1.Cur" id="id_usb_settings_speaker1_cur_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcUsbAudioAssociator">
+        <Parameter name="data" refId="id_speaker1_cur_updown"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.SPEAKER1.Min" id="id_usb_settings_speaker1_min_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcUsbAudioAssociator">
+        <Parameter name="data" refId="id_speaker1_min_updown"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.SPEAKER1.Max" id="id_usb_settings_speaker1_max_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcUsbAudioAssociator">
+        <Parameter name="data" refId="id_speaker1_max_updown"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.SPEAKER1.Res" id="id_usb_settings_speaker1_res_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcUsbAudioResAssociator">
+        <Parameter name="data" refId="id_speaker1_res_updown"/>
+      </Associator>
+    </ConfigItem>
+	
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.MICROPHONE1.TerminalType" id="id_usb_settings_microphone1_terminaltype_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_microphone1_terminaltype_cb"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.MICROPHONE1.Cur" id="id_usb_settings_microphone1_cur_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcUsbAudioAssociator">
+        <Parameter name="data" refId="id_microphone1_cur_updown"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.MICROPHONE1.Min" id="id_usb_settings_microphone1_min_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcUsbAudioAssociator">
+        <Parameter name="data" refId="id_microphone1_min_updown"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.MICROPHONE1.Max" id="id_usb_settings_microphone1_max_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcUsbAudioAssociator">
+        <Parameter name="data" refId="id_microphone1_max_updown"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.MICROPHONE1.Res" id="id_usb_settings_microphone1_res_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcUsbAudioResAssociator">
+        <Parameter name="data" refId="id_microphone1_res_updown"/>
+      </Associator>
+    </ConfigItem>
+	
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.SPEAKER2.TerminalType" id="id_usb_settings_speaker2_terminaltype_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_speaker2_terminaltype_cb"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.SPEAKER2.Cur" id="id_usb_settings_speaker2_cur_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcUsbAudioAssociator">
+        <Parameter name="data" refId="id_speaker2_cur_updown"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.SPEAKER2.Min" id="id_usb_settings_speaker2_min_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcUsbAudioAssociator">
+        <Parameter name="data" refId="id_speaker2_min_updown"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.SPEAKER2.Max" id="id_usb_settings_speaker2_max_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcUsbAudioAssociator">
+        <Parameter name="data" refId="id_speaker2_max_updown"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.SPEAKER2.Res" id="id_usb_settings_speaker2_res_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcUsbAudioResAssociator">
+        <Parameter name="data" refId="id_speaker2_res_updown"/>
+      </Associator>
+    </ConfigItem>
+	
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.MICROPHONE2.TerminalType" id="id_usb_settings_microphone2_terminaltype_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_microphone2_terminaltype_cb"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.MICROPHONE2.Cur" id="id_usb_settings_microphone2_cur_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcUsbAudioAssociator">
+        <Parameter name="data" refId="id_microphone2_cur_updown"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.MICROPHONE2.Min" id="id_usb_settings_microphone2_min_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcUsbAudioAssociator">
+        <Parameter name="data" refId="id_microphone2_min_updown"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.MICROPHONE2.Max" id="id_usb_settings_microphone2_max_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcUsbAudioAssociator">
+        <Parameter name="data" refId="id_microphone2_max_updown"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" Unique="USB_SETTINGS.MICROPHONE2.Res" id="id_usb_settings_microphone2_res_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcUsbAudioResAssociator">
+        <Parameter name="data" refId="id_microphone2_res_updown"/>
+      </Associator>
+    </ConfigItem>
+	
+	</ConfigGroup>
+</Page>

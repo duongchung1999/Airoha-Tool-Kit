@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<api_tasks>
+  <ToolLogLevel class="SetLogInfoTask">
+    <info_key>level</info_key>
+    <info_value>Detail</info_value>
+    <!-- 1:Trace, 2:Detail, 3:Debug, 4:Info, 5:Warning, 6:Error -->
+  </ToolLogLevel>
+  <DetailLogLevel class="SetLogInfoTask">
+    <info_key>level</info_key>
+    <info_value>Detail</info_value>
+  </DetailLogLevel>
+  <DebugLogLevel class="SetLogInfoTask">
+    <info_key>level</info_key>
+    <info_value>Debug</info_value>
+  </DebugLogLevel>
+  <InfoLogLevel class="SetLogInfoTask">
+    <info_key>level</info_key>
+    <info_value>Info</info_value>
+  </InfoLogLevel>
+  <SendToolLog class="LogWriteMessageTask">
+    <level>2</level>
+    <msg>Message</msg>
+  </SendToolLog>
+  <SetLogDirname class="SetLogInfoTask">
+    <info_key>dirname</info_key>
+    <info_value></info_value>
+  </SetLogDirname>
+  <SetLogNamePostfix class="SetLogInfoTask">
+    <info_key>log_name_postfix</info_key>
+    <info_value></info_value>
+  </SetLogNamePostfix>
+  <OpenLog class="LogConnectTask">
+    <action>open</action>
+    <log_id>LOG_RAW</log_id>
+    <prefix_name>logging</prefix_name>
+  </OpenLog>
+  <CloseLog class="LogConnectTask">
+    <action>close</action>
+    <log_id>LOG_RAW</log_id>
+    <postfix_name></postfix_name>
+  </CloseLog>
+  <SwitchNewLog class="LogConnectTask">
+    <action>switch_new</action>
+    <log_id>LOG_TOOL</log_id>
+    <close_append></close_append>
+    <open_name></open_name>
+  </SwitchNewLog>
+  <GetLogPath class="LogGetPathTask">
+    <log_id>LOG_TOOL</log_id>
+  </GetLogPath>
+  <LoadMsgId class="LogBinLoadFileTask">
+    <processor>0</processor>
+    <path>AB1562_log.bin</path>
+  </LoadMsgId>
+  <GetMsgIdCount class="LogBinGetCountTask">
+    <processor>0</processor>
+  </GetMsgIdCount>
+  <GetMsgIdString class="LogBinGetStringTask">
+    <processor>0</processor>
+    <index>0</index>
+  </GetMsgIdString>
+  <LogOfflineDumpInfo class="LogOfflineDumpInfoTask">
+    <path>dump.bin</path>
+  </LogOfflineDumpInfo>
+  <LogExceptionFullDump class="LogExceptionFullDumpTask">
+    <input_log_file_path>D:\\Slot0_20180209_144238.txt</input_log_file_path>
+    <out_file_path>D:\\AB1562.out</out_file_path>
+    <elf_file_path>D:\\AB1568.elf</elf_file_path>
+  </LogExceptionFullDump>
+  <LogExceptionMiniDump class="LogExceptionMiniDumpTask">
+    <input_log_file_path>D:\\Slot0_20180209_144238.txt</input_log_file_path>
+    <out_file_path>D:\\AB1562.out</out_file_path>
+    <elf_file_path>D:\\AB1568.elf</elf_file_path>
+  </LogExceptionMiniDump>
+
+  <ConnectLogFile class="ConnectDevice">
+    <device_type>FILE</device_type>
+    <device_name>DUT</device_name>
+    <action>connect</action>
+    <path>D:\raw.bin</path>
+    <is_binary>true</is_binary>
+    <transport>h4</transport>
+    <handshake>None</handshake>
+  </ConnectLogFile>
+</api_tasks>

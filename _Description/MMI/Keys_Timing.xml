@@ -1,0 +1,1641 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Keys_Timing" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Keys_Timing">
+   <ConfigGroup class="ucLayoutVertical">
+	  <ConfigItem class="ucComboBox" id="id_key_gpio_total_num_cb">
+		<Parameter name="left_label" value="Total Key Num:"/>
+		<Parameter name="left_width" value="40"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="width" value="60"/>
+		<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/MmiKeyNum.xml"/>
+		<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+		  <Parameter name="data" refId="id_key_gpio_total_num_tb"/>
+		</Associator>
+	  </ConfigItem>
+	</ConfigGroup>
+	<ConfigGroup class="ucLayoutVertical" visible="hidden">
+	  <ConfigGroup class="General">
+		<ConfigItem class="ucTextBox" Unique="airo_nvkey_number_t.airo_nvkey_number" present="hex" id="id_key_gpio_total_num_tb">
+		  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			<Parameter name="data" refId="id_key_gpio_total_num_cb"/>
+		  </Associator>
+		</ConfigItem>
+	  </ConfigGroup>
+	</ConfigGroup>
+	<ConfigGroup class="AB1568.TabPage_AB1568">
+	  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioKeyNumAssociator">
+		<Parameter name="max_key_num" refId="id_key_gpio_total_num_cb"/>
+		<Parameter name="key_name_prefix" value="KEY"/>
+		<Parameter name="key_value_shift" value="DEAD0000"/>
+	  </Associator>
+
+	  <ConfigGroup title="KEY1" class="ucLayoutVertical">
+		<ConfigGroup class="ucLayoutVertical">
+		  <ConfigItem class="ucComboBox" id="id_key_gpio_key01_name_cb">
+			<Parameter name="left_label" value="Key Name:"/>
+			<Parameter name="left_width" value="40"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="20"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/MmiKeyName.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key01_name_tb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical" visible="hidden">
+		  <ConfigGroup class="General">
+			<ConfigItem class="ucTextBox" Unique="airo_key01_event_config_t.key_data" present="hex" id="id_key_gpio_key01_name_tb" visible="hidden">
+			  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_key_gpio_key01_name_cb"/>
+			  </Associator>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Click"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key01_event_config_t.support.multiple_click" min="0" max="3" name="Supported click">
+			  <Parameter name="right_label" value="clicks"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key01_event_config_t.time.t_prss" min="1" id="id_key_gpio_key01_t_press_tb" name="T__press">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key01_event_config_t.time.t_release" min="1" name="T__release">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key01_event_config_t.time.t_silence" name="T__silence">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Long press"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key01_event_config_t.support.long_level" min="1" max="3" id="id_key_gpio_key01_long_level_tb" name="Supported longprss">
+			  <Parameter name="right_label" value="level"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key01_event_config_t.time.t_long_press_1" min="1" name="T__long_press_1">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key01_long_level_tb"/>
+				<Parameter name="unique" value="airo_key01_event_config_t.time.t_long_press_1"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key01_event_config_t.time.t_long_press_2" min="1" name="T__long_press_2">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key01_long_level_tb"/>
+				<Parameter name="unique" value="airo_key01_event_config_t.time.t_long_press_2"/>
+				<Parameter name="lower_limit" value="2"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key01_event_config_t.time.t_long_press_3" min="1" name="T__long_press_3">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key01_long_level_tb"/>
+				<Parameter name="unique" value="airo_key01_event_config_t.time.t_long_press_3"/>
+				<Parameter name="lower_limit" value="3"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key01_event_config_t.support.long_repeat" max="1" name="Supported repeat"/>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Slong"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key01_event_config_t.support.slong" max="1" id="id_key_gpio_key01_slong_tb" name="Supported slong"/>
+			<ConfigItem class="ucTextBox" Unique="airo_key01_event_config_t.time.t_slong" min="1" name="Slong">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key01_slong_tb"/>
+				<Parameter name="unique" value="airo_key01_event_config_t.time.t_slong"/>
+				<Parameter name="value_for_out_of_limit" refId="id_key_gpio_key01_t_press_tb"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key01_event_config_t.support.slong_repeat" max="1" name="Supported repeat">
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key01_slong_tb"/>
+				<Parameter name="unique" value="airo_key01_event_config_t.support.slong_repeat"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Repeat"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key01_event_config_t.time.t_repeat" min="1" name="T__repeat">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+	  </ConfigGroup>
+
+	  <ConfigGroup title="KEY2" class="ucLayoutVertical">
+		<ConfigGroup class="ucLayoutVertical">
+		  <ConfigItem class="ucComboBox" id="id_key_gpio_key02_name_cb">
+			<Parameter name="left_label" value="Key Name:"/>
+			<Parameter name="left_width" value="40"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="20"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/MmiKeyName.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key02_name_tb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="General">
+		  <ConfigItem class="ucTextBox" Unique="airo_key02_event_config_t.key_data" present="hex" id="id_key_gpio_key02_name_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key02_name_cb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Click"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key02_event_config_t.support.multiple_click" min="0" max="3" name="Supported click">
+			  <Parameter name="right_label" value="clicks"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key02_event_config_t.time.t_prss" min="1" id="id_key_gpio_key02_t_press_tb" name="T__press">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key02_event_config_t.time.t_release" min="1" name="T__release">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key02_event_config_t.time.t_silence" name="T__silence">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Long press"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key02_event_config_t.support.long_level" min="1" max="3" id="id_key_gpio_key02_long_level_tb" name="Supported longprss">
+			  <Parameter name="right_label" value="level"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key02_event_config_t.time.t_long_press_1" min="1" name="T__long_press_1">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key02_long_level_tb"/>
+				<Parameter name="unique" value="airo_key02_event_config_t.time.t_long_press_1"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key02_event_config_t.time.t_long_press_2" min="1" name="T__long_press_2">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key02_long_level_tb"/>
+				<Parameter name="unique" value="airo_key02_event_config_t.time.t_long_press_2"/>
+				<Parameter name="lower_limit" value="2"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key02_event_config_t.time.t_long_press_3" min="1" name="T__long_press_3">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key02_long_level_tb"/>
+				<Parameter name="unique" value="airo_key02_event_config_t.time.t_long_press_3"/>
+				<Parameter name="lower_limit" value="3"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key02_event_config_t.support.long_repeat" max="1" name="Supported repeat"/>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Slong"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key02_event_config_t.support.slong" max="1" id="id_key_gpio_key02_slong_tb" name="Supported slong"/>
+			<ConfigItem class="ucTextBox" Unique="airo_key02_event_config_t.time.t_slong" min="1" name="Slong">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key02_slong_tb"/>
+				<Parameter name="unique" value="airo_key02_event_config_t.time.t_slong"/>
+				<Parameter name="value_for_out_of_limit" refId="id_key_gpio_key02_t_press_tb"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key02_event_config_t.support.slong_repeat" max="1" name="Supported repeat">
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key02_slong_tb"/>
+				<Parameter name="unique" value="airo_key02_event_config_t.support.slong_repeat"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Repeat"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key02_event_config_t.time.t_repeat" min="1" name="T__repeat">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+	  </ConfigGroup>
+
+	  <ConfigGroup title="KEY3" class="ucLayoutVertical">
+		<ConfigGroup class="ucLayoutVertical">
+		  <ConfigItem class="ucComboBox" id="id_key_gpio_key03_name_cb">
+			<Parameter name="left_label" value="Key Name:"/>
+			<Parameter name="left_width" value="40"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="20"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/MmiKeyName.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key03_name_tb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="General">
+		  <ConfigItem class="ucTextBox" Unique="airo_key03_event_config_t.key_data" present="hex" id="id_key_gpio_key03_name_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key03_name_cb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Click"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key03_event_config_t.support.multiple_click" min="0" max="3" name="Supported click">
+			  <Parameter name="right_label" value="clicks"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key03_event_config_t.time.t_prss" min="1" id="id_key_gpio_key03_t_press_tb" name="T__press">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key03_event_config_t.time.t_release" min="1" name="T__release">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key03_event_config_t.time.t_silence" name="T__silence">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Long press"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key03_event_config_t.support.long_level" min="1" max="3" id="id_key_gpio_key03_long_level_tb" name="Supported longprss">
+			  <Parameter name="right_label" value="level"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key03_event_config_t.time.t_long_press_1" min="1" name="T__long_press_1">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key03_long_level_tb"/>
+				<Parameter name="unique" value="airo_key03_event_config_t.time.t_long_press_1"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key03_event_config_t.time.t_long_press_2" min="1" name="T__long_press_2">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key03_long_level_tb"/>
+				<Parameter name="unique" value="airo_key03_event_config_t.time.t_long_press_2"/>
+				<Parameter name="lower_limit" value="2"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key03_event_config_t.time.t_long_press_3" min="1" name="T__long_press_3">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key03_long_level_tb"/>
+				<Parameter name="unique" value="airo_key03_event_config_t.time.t_long_press_3"/>
+				<Parameter name="lower_limit" value="3"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key03_event_config_t.support.long_repeat" max="1" name="Supported repeat"/>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Slong"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key03_event_config_t.support.slong" max="1" id="id_key_gpio_key03_slong_tb" name="Supported slong"/>
+			<ConfigItem class="ucTextBox" Unique="airo_key03_event_config_t.time.t_slong" min="1" name="Slong">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key03_slong_tb"/>
+				<Parameter name="unique" value="airo_key03_event_config_t.time.t_slong"/>
+				<Parameter name="value_for_out_of_limit" refId="id_key_gpio_key03_t_press_tb"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key03_event_config_t.support.slong_repeat" max="1" name="Supported repeat">
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key03_slong_tb"/>
+				<Parameter name="unique" value="airo_key03_event_config_t.support.slong_repeat"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Repeat"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key03_event_config_t.time.t_repeat" min="1" name="T__repeat">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+	  </ConfigGroup>
+
+	  <ConfigGroup title="KEY4" class="ucLayoutVertical">
+		<ConfigGroup class="ucLayoutVertical">
+		  <ConfigItem class="ucComboBox" id="id_key_gpio_key04_name_cb">
+			<Parameter name="left_label" value="Key Name:"/>
+			<Parameter name="left_width" value="40"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="20"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/MmiKeyName.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key04_name_tb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="General">
+		  <ConfigItem class="ucTextBox" Unique="airo_key04_event_config_t.key_data" present="hex" id="id_key_gpio_key04_name_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key04_name_cb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Click"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key04_event_config_t.support.multiple_click" min="0" max="3" name="Supported click">
+			  <Parameter name="right_label" value="clicks"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key04_event_config_t.time.t_prss" min="1" id="id_key_gpio_key04_t_press_tb" name="T__press">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key04_event_config_t.time.t_release" min="1" name="T__release">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key04_event_config_t.time.t_silence" name="T__silence">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Long press"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key04_event_config_t.support.long_level" min="1" max="3" id="id_key_gpio_key04_long_level_tb" name="Supported longprss">
+			  <Parameter name="right_label" value="level"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key04_event_config_t.time.t_long_press_1" min="1" name="T__long_press_1">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key04_long_level_tb"/>
+				<Parameter name="unique" value="airo_key04_event_config_t.time.t_long_press_1"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key04_event_config_t.time.t_long_press_2" min="1" name="T__long_press_2">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key04_long_level_tb"/>
+				<Parameter name="unique" value="airo_key04_event_config_t.time.t_long_press_2"/>
+				<Parameter name="lower_limit" value="2"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key04_event_config_t.time.t_long_press_3" min="1" name="T__long_press_3">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key04_long_level_tb"/>
+				<Parameter name="unique" value="airo_key04_event_config_t.time.t_long_press_3"/>
+				<Parameter name="lower_limit" value="3"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key04_event_config_t.support.long_repeat" max="1" name="Supported repeat"/>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Slong"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key04_event_config_t.support.slong" max="1" id="id_key_gpio_key04_slong_tb" name="Supported slong"/>
+			<ConfigItem class="ucTextBox" Unique="airo_key04_event_config_t.time.t_slong" min="1" name="Slong">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key04_slong_tb"/>
+				<Parameter name="unique" value="airo_key04_event_config_t.time.t_slong"/>
+				<Parameter name="value_for_out_of_limit" refId="id_key_gpio_key04_t_press_tb"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key04_event_config_t.support.slong_repeat" max="1" name="Supported repeat">
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key04_slong_tb"/>
+				<Parameter name="unique" value="airo_key04_event_config_t.support.slong_repeat"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Repeat"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key04_event_config_t.time.t_repeat" min="1" name="T__repeat">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+	  </ConfigGroup>
+
+	  <ConfigGroup title="KEY5" class="ucLayoutVertical">
+		<ConfigGroup class="ucLayoutVertical">
+		  <ConfigItem class="ucComboBox" id="id_key_gpio_key05_name_cb">
+			<Parameter name="left_label" value="Key Name:"/>
+			<Parameter name="left_width" value="40"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="20"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/MmiKeyName.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key05_name_tb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="General">
+		  <ConfigItem class="ucTextBox" Unique="airo_key05_event_config_t.key_data" present="hex" id="id_key_gpio_key05_name_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key05_name_cb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Click"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key05_event_config_t.support.multiple_click" min="0" max="3" name="Supported click">
+			  <Parameter name="right_label" value="clicks"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key05_event_config_t.time.t_prss" min="1" id="id_key_gpio_key05_t_press_tb" name="T__press">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key05_event_config_t.time.t_release" min="1" name="T__release">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key05_event_config_t.time.t_silence" name="T__silence">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Long press"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key05_event_config_t.support.long_level" min="1" max="3" id="id_key_gpio_key05_long_level_tb" name="Supported longprss">
+			  <Parameter name="right_label" value="level"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key05_event_config_t.time.t_long_press_1" min="1" name="T__long_press_1">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key05_long_level_tb"/>
+				<Parameter name="unique" value="airo_key05_event_config_t.time.t_long_press_1"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key05_event_config_t.time.t_long_press_2" min="1" name="T__long_press_2">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key05_long_level_tb"/>
+				<Parameter name="unique" value="airo_key05_event_config_t.time.t_long_press_2"/>
+				<Parameter name="lower_limit" value="2"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key05_event_config_t.time.t_long_press_3" min="1" name="T__long_press_3">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key05_long_level_tb"/>
+				<Parameter name="unique" value="airo_key05_event_config_t.time.t_long_press_3"/>
+				<Parameter name="lower_limit" value="3"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key05_event_config_t.support.long_repeat" max="1" name="Supported repeat"/>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Slong"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key05_event_config_t.support.slong" max="1" id="id_key_gpio_key05_slong_tb" name="Supported slong"/>
+			<ConfigItem class="ucTextBox" Unique="airo_key05_event_config_t.time.t_slong" min="1" name="Slong">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key05_slong_tb"/>
+				<Parameter name="unique" value="airo_key05_event_config_t.time.t_slong"/>
+				<Parameter name="value_for_out_of_limit" refId="id_key_gpio_key05_t_press_tb"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key05_event_config_t.support.slong_repeat" max="1" name="Supported repeat">
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key05_slong_tb"/>
+				<Parameter name="unique" value="airo_key05_event_config_t.support.slong_repeat"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Repeat"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key05_event_config_t.time.t_repeat" min="1" name="T__repeat">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+	  </ConfigGroup>
+
+	  <ConfigGroup title="KEY6" class="ucLayoutVertical">
+		<ConfigGroup class="ucLayoutVertical">
+		  <ConfigItem class="ucComboBox" id="id_key_gpio_key06_name_cb">
+			<Parameter name="left_label" value="Key Name:"/>
+			<Parameter name="left_width" value="40"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="20"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/MmiKeyName.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key06_name_tb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="General">
+		  <ConfigItem class="ucTextBox" Unique="airo_key06_event_config_t.key_data" present="hex" id="id_key_gpio_key06_name_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key06_name_cb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Click"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key06_event_config_t.support.multiple_click" min="0" max="3" name="Supported click">
+			  <Parameter name="right_label" value="clicks"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key06_event_config_t.time.t_prss" min="1" id="id_key_gpio_key06_t_press_tb" name="T__press">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key06_event_config_t.time.t_release" min="1" name="T__release">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key06_event_config_t.time.t_silence" name="T__silence">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Long press"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key06_event_config_t.support.long_level" min="1" max="3" id="id_key_gpio_key06_long_level_tb" name="Supported longprss">
+			  <Parameter name="right_label" value="level"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key06_event_config_t.time.t_long_press_1" min="1" name="T__long_press_1">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key06_long_level_tb"/>
+				<Parameter name="unique" value="airo_key06_event_config_t.time.t_long_press_1"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key06_event_config_t.time.t_long_press_2" min="1" name="T__long_press_2">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key06_long_level_tb"/>
+				<Parameter name="unique" value="airo_key06_event_config_t.time.t_long_press_2"/>
+				<Parameter name="lower_limit" value="2"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key06_event_config_t.time.t_long_press_3" min="1" name="T__long_press_3">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key06_long_level_tb"/>
+				<Parameter name="unique" value="airo_key06_event_config_t.time.t_long_press_3"/>
+				<Parameter name="lower_limit" value="3"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key06_event_config_t.support.long_repeat" max="1" name="Supported repeat"/>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Slong"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key06_event_config_t.support.slong" max="1" id="id_key_gpio_key06_slong_tb" name="Supported slong"/>
+			<ConfigItem class="ucTextBox" Unique="airo_key06_event_config_t.time.t_slong" min="1" name="Slong">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key06_slong_tb"/>
+				<Parameter name="unique" value="airo_key06_event_config_t.time.t_slong"/>
+				<Parameter name="value_for_out_of_limit" refId="id_key_gpio_key06_t_press_tb"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key06_event_config_t.support.slong_repeat" max="1" name="Supported repeat">
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key06_slong_tb"/>
+				<Parameter name="unique" value="airo_key06_event_config_t.support.slong_repeat"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Repeat"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key06_event_config_t.time.t_repeat" min="1" name="T__repeat">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+	  </ConfigGroup>
+
+	  <ConfigGroup title="KEY7" class="ucLayoutVertical">
+		<ConfigGroup class="ucLayoutVertical">
+		  <ConfigItem class="ucComboBox" id="id_key_gpio_key07_name_cb">
+			<Parameter name="left_label" value="Key Name:"/>
+			<Parameter name="left_width" value="40"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="20"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/MmiKeyName.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key07_name_tb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="General">
+		  <ConfigItem class="ucTextBox" Unique="airo_key07_event_config_t.key_data" present="hex" id="id_key_gpio_key07_name_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key07_name_cb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Click"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key07_event_config_t.support.multiple_click" min="0" max="3" name="Supported click">
+			  <Parameter name="right_label" value="clicks"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key07_event_config_t.time.t_prss" min="1" id="id_key_gpio_key07_t_press_tb" name="T__press">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key07_event_config_t.time.t_release" min="1" name="T__release">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key07_event_config_t.time.t_silence" name="T__silence">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Long press"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key07_event_config_t.support.long_level" min="1" max="3" id="id_key_gpio_key07_long_level_tb" name="Supported longprss">
+			  <Parameter name="right_label" value="level"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key07_event_config_t.time.t_long_press_1" min="1" name="T__long_press_1">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key07_long_level_tb"/>
+				<Parameter name="unique" value="airo_key07_event_config_t.time.t_long_press_1"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key07_event_config_t.time.t_long_press_2" min="1" name="T__long_press_2">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key07_long_level_tb"/>
+				<Parameter name="unique" value="airo_key07_event_config_t.time.t_long_press_2"/>
+				<Parameter name="lower_limit" value="2"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key07_event_config_t.time.t_long_press_3" min="1" name="T__long_press_3">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key07_long_level_tb"/>
+				<Parameter name="unique" value="airo_key07_event_config_t.time.t_long_press_3"/>
+				<Parameter name="lower_limit" value="3"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key07_event_config_t.support.long_repeat" max="1" name="Supported repeat"/>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Slong"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key07_event_config_t.support.slong" max="1" id="id_key_gpio_key07_slong_tb" name="Supported slong"/>
+			<ConfigItem class="ucTextBox" Unique="airo_key07_event_config_t.time.t_slong" min="1" name="Slong">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key07_slong_tb"/>
+				<Parameter name="unique" value="airo_key07_event_config_t.time.t_slong"/>
+				<Parameter name="value_for_out_of_limit" refId="id_key_gpio_key07_t_press_tb"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key07_event_config_t.support.slong_repeat" max="1" name="Supported repeat">
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key07_slong_tb"/>
+				<Parameter name="unique" value="airo_key07_event_config_t.support.slong_repeat"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Repeat"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key07_event_config_t.time.t_repeat" min="1" name="T__repeat">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+	  </ConfigGroup>
+
+	  <ConfigGroup title="KEY8" class="ucLayoutVertical">
+		<ConfigGroup class="ucLayoutVertical">
+		  <ConfigItem class="ucComboBox" id="id_key_gpio_key08_name_cb">
+			<Parameter name="left_label" value="Key Name:"/>
+			<Parameter name="left_width" value="40"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="20"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/MmiKeyName.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key08_name_tb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="General">
+		  <ConfigItem class="ucTextBox" Unique="airo_key08_event_config_t.key_data" present="hex" id="id_key_gpio_key08_name_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key08_name_cb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Click"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key08_event_config_t.support.multiple_click" min="0" max="3" name="Supported click">
+			  <Parameter name="right_label" value="clicks"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key08_event_config_t.time.t_prss" min="1" id="id_key_gpio_key08_t_press_tb" name="T__press">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key08_event_config_t.time.t_release" min="1" name="T__release">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key08_event_config_t.time.t_silence" name="T__silence">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Long press"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key08_event_config_t.support.long_level" min="1" max="3" id="id_key_gpio_key08_long_level_tb" name="Supported longprss">
+			  <Parameter name="right_label" value="level"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key08_event_config_t.time.t_long_press_1" min="1" name="T__long_press_1">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key08_long_level_tb"/>
+				<Parameter name="unique" value="airo_key08_event_config_t.time.t_long_press_1"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key08_event_config_t.time.t_long_press_2" min="1" name="T__long_press_2">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key08_long_level_tb"/>
+				<Parameter name="unique" value="airo_key08_event_config_t.time.t_long_press_2"/>
+				<Parameter name="lower_limit" value="2"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key08_event_config_t.time.t_long_press_3" min="1" name="T__long_press_3">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key08_long_level_tb"/>
+				<Parameter name="unique" value="airo_key08_event_config_t.time.t_long_press_3"/>
+				<Parameter name="lower_limit" value="3"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key08_event_config_t.support.long_repeat" max="1" name="Supported repeat"/>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Slong"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key08_event_config_t.support.slong" max="1" id="id_key_gpio_key08_slong_tb" name="Supported slong"/>
+			<ConfigItem class="ucTextBox" Unique="airo_key08_event_config_t.time.t_slong" min="1" name="Slong">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key08_slong_tb"/>
+				<Parameter name="unique" value="airo_key08_event_config_t.time.t_slong"/>
+				<Parameter name="value_for_out_of_limit" refId="id_key_gpio_key08_t_press_tb"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key08_event_config_t.support.slong_repeat" max="1" name="Supported repeat">
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key08_slong_tb"/>
+				<Parameter name="unique" value="airo_key08_event_config_t.support.slong_repeat"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Repeat"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key08_event_config_t.time.t_repeat" min="1" name="T__repeat">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+	  </ConfigGroup>
+
+	  <ConfigGroup title="KEY9" class="ucLayoutVertical">
+		<ConfigGroup class="ucLayoutVertical">
+		  <ConfigItem class="ucComboBox" id="id_key_gpio_key09_name_cb">
+			<Parameter name="left_label" value="Key Name:"/>
+			<Parameter name="left_width" value="40"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="20"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/MmiKeyName.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key09_name_tb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="General">
+		  <ConfigItem class="ucTextBox" Unique="airo_key09_event_config_t.key_data" present="hex" id="id_key_gpio_key09_name_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key09_name_cb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Click"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key09_event_config_t.support.multiple_click" min="0" max="3" name="Supported click">
+			  <Parameter name="right_label" value="clicks"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key09_event_config_t.time.t_prss" min="1" id="id_key_gpio_key09_t_press_tb" name="T__press">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key09_event_config_t.time.t_release" min="1" name="T__release">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key09_event_config_t.time.t_silence" name="T__silence">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Long press"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key09_event_config_t.support.long_level" min="1" max="3" id="id_key_gpio_key09_long_level_tb" name="Supported longprss">
+			  <Parameter name="right_label" value="level"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key09_event_config_t.time.t_long_press_1" min="1" name="T__long_press_1">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key09_long_level_tb"/>
+				<Parameter name="unique" value="airo_key09_event_config_t.time.t_long_press_1"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key09_event_config_t.time.t_long_press_2" min="1" name="T__long_press_2">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key09_long_level_tb"/>
+				<Parameter name="unique" value="airo_key09_event_config_t.time.t_long_press_2"/>
+				<Parameter name="lower_limit" value="2"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key09_event_config_t.time.t_long_press_3" min="1" name="T__long_press_3">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key09_long_level_tb"/>
+				<Parameter name="unique" value="airo_key09_event_config_t.time.t_long_press_3"/>
+				<Parameter name="lower_limit" value="3"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key09_event_config_t.support.long_repeat" max="1" name="Supported repeat"/>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Slong"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key09_event_config_t.support.slong" max="1" id="id_key_gpio_key09_slong_tb" name="Supported slong"/>
+			<ConfigItem class="ucTextBox" Unique="airo_key09_event_config_t.time.t_slong" min="1" name="Slong">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key09_slong_tb"/>
+				<Parameter name="unique" value="airo_key09_event_config_t.time.t_slong"/>
+				<Parameter name="value_for_out_of_limit" refId="id_key_gpio_key09_t_press_tb"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key09_event_config_t.support.slong_repeat" max="1" name="Supported repeat">
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key09_slong_tb"/>
+				<Parameter name="unique" value="airo_key09_event_config_t.support.slong_repeat"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Repeat"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key09_event_config_t.time.t_repeat" min="1" name="T__repeat">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+	  </ConfigGroup>
+
+	  <ConfigGroup title="KEY10" class="ucLayoutVertical">
+		<ConfigGroup class="ucLayoutVertical">
+		  <ConfigItem class="ucComboBox" id="id_key_gpio_key10_name_cb">
+			<Parameter name="left_label" value="Key Name:"/>
+			<Parameter name="left_width" value="40"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="20"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/MmiKeyName.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key10_name_tb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="General">
+		  <ConfigItem class="ucTextBox" Unique="airo_key10_event_config_t.key_data" present="hex" id="id_key_gpio_key10_name_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key10_name_cb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Click"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key10_event_config_t.support.multiple_click" min="0" max="3" name="Supported click">
+			  <Parameter name="right_label" value="clicks"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key10_event_config_t.time.t_prss" min="1" id="id_key_gpio_key10_t_press_tb" name="T__press">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key10_event_config_t.time.t_release" min="1" name="T__release">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key10_event_config_t.time.t_silence" name="T__silence">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Long press"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key10_event_config_t.support.long_level" min="1" max="3" id="id_key_gpio_key10_long_level_tb" name="Supported longprss">
+			  <Parameter name="right_label" value="level"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key10_event_config_t.time.t_long_press_1" min="1" name="T__long_press_1">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key10_long_level_tb"/>
+				<Parameter name="unique" value="airo_key10_event_config_t.time.t_long_press_1"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key10_event_config_t.time.t_long_press_2" min="1" name="T__long_press_2">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key10_long_level_tb"/>
+				<Parameter name="unique" value="airo_key10_event_config_t.time.t_long_press_2"/>
+				<Parameter name="lower_limit" value="2"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key10_event_config_t.time.t_long_press_3" min="1" name="T__long_press_3">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key10_long_level_tb"/>
+				<Parameter name="unique" value="airo_key10_event_config_t.time.t_long_press_3"/>
+				<Parameter name="lower_limit" value="3"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key10_event_config_t.support.long_repeat" max="1" name="Supported repeat"/>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Slong"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key10_event_config_t.support.slong" max="1" id="id_key_gpio_key10_slong_tb" name="Supported slong"/>
+			<ConfigItem class="ucTextBox" Unique="airo_key10_event_config_t.time.t_slong" min="1" name="Slong">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key10_slong_tb"/>
+				<Parameter name="unique" value="airo_key10_event_config_t.time.t_slong"/>
+				<Parameter name="value_for_out_of_limit" refId="id_key_gpio_key10_t_press_tb"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key10_event_config_t.support.slong_repeat" max="1" name="Supported repeat">
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key10_slong_tb"/>
+				<Parameter name="unique" value="airo_key10_event_config_t.support.slong_repeat"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Repeat"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key10_event_config_t.time.t_repeat" min="1" name="T__repeat">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+	  </ConfigGroup>
+
+	  <ConfigGroup title="KEY11" class="ucLayoutVertical">
+		<ConfigGroup class="ucLayoutVertical">
+		  <ConfigItem class="ucComboBox" id="id_key_gpio_key11_name_cb">
+			<Parameter name="left_label" value="Key Name:"/>
+			<Parameter name="left_width" value="40"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="20"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/MmiKeyName.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key11_name_tb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="General">
+		  <ConfigItem class="ucTextBox" Unique="airo_key11_event_config_t.key_data" present="hex" id="id_key_gpio_key11_name_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key11_name_cb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Click"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key11_event_config_t.support.multiple_click" min="0" max="3" name="Supported click">
+			  <Parameter name="right_label" value="clicks"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key11_event_config_t.time.t_prss" min="1" id="id_key_gpio_key11_t_press_tb" name="T__press">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key11_event_config_t.time.t_release" min="1" name="T__release">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key11_event_config_t.time.t_silence" name="T__silence">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Long press"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key11_event_config_t.support.long_level" min="1" max="3" id="id_key_gpio_key11_long_level_tb" name="Supported longprss">
+			  <Parameter name="right_label" value="level"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key11_event_config_t.time.t_long_press_1" min="1" name="T__long_press_1">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key11_long_level_tb"/>
+				<Parameter name="unique" value="airo_key11_event_config_t.time.t_long_press_1"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key11_event_config_t.time.t_long_press_2" min="1" name="T__long_press_2">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key11_long_level_tb"/>
+				<Parameter name="unique" value="airo_key11_event_config_t.time.t_long_press_2"/>
+				<Parameter name="lower_limit" value="2"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key11_event_config_t.time.t_long_press_3" min="1" name="T__long_press_3">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key11_long_level_tb"/>
+				<Parameter name="unique" value="airo_key11_event_config_t.time.t_long_press_3"/>
+				<Parameter name="lower_limit" value="3"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key11_event_config_t.support.long_repeat" max="1" name="Supported repeat"/>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Slong"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key11_event_config_t.support.slong" max="1" id="id_key_gpio_key11_slong_tb" name="Supported slong"/>
+			<ConfigItem class="ucTextBox" Unique="airo_key11_event_config_t.time.t_slong" min="1" name="Slong">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key11_slong_tb"/>
+				<Parameter name="unique" value="airo_key11_event_config_t.time.t_slong"/>
+				<Parameter name="value_for_out_of_limit" refId="id_key_gpio_key11_t_press_tb"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key11_event_config_t.support.slong_repeat" max="1" name="Supported repeat">
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key11_slong_tb"/>
+				<Parameter name="unique" value="airo_key11_event_config_t.support.slong_repeat"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Repeat"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key11_event_config_t.time.t_repeat" min="1" name="T__repeat">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+	  </ConfigGroup>
+
+	  <ConfigGroup title="KEY12" class="ucLayoutVertical">
+		<ConfigGroup class="ucLayoutVertical">
+		  <ConfigItem class="ucComboBox" id="id_key_gpio_key12_name_cb">
+			<Parameter name="left_label" value="Key Name:"/>
+			<Parameter name="left_width" value="40"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="20"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/MmiKeyName.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key12_name_tb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="General">
+		  <ConfigItem class="ucTextBox" Unique="airo_key12_event_config_t.key_data" present="hex" id="id_key_gpio_key12_name_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key12_name_cb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Click"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key12_event_config_t.support.multiple_click" min="0" max="3" name="Supported click">
+			  <Parameter name="right_label" value="clicks"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key12_event_config_t.time.t_prss" min="1" id="id_key_gpio_key12_t_press_tb" name="T__press">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key12_event_config_t.time.t_release" min="1" name="T__release">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key12_event_config_t.time.t_silence" name="T__silence">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Long press"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key12_event_config_t.support.long_level" min="1" max="3" id="id_key_gpio_key12_long_level_tb" name="Supported longprss">
+			  <Parameter name="right_label" value="level"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key12_event_config_t.time.t_long_press_1" min="1" name="T__long_press_1">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key12_long_level_tb"/>
+				<Parameter name="unique" value="airo_key12_event_config_t.time.t_long_press_1"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key12_event_config_t.time.t_long_press_2" min="1" name="T__long_press_2">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key12_long_level_tb"/>
+				<Parameter name="unique" value="airo_key12_event_config_t.time.t_long_press_2"/>
+				<Parameter name="lower_limit" value="2"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key12_event_config_t.time.t_long_press_3" min="1" name="T__long_press_3">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key12_long_level_tb"/>
+				<Parameter name="unique" value="airo_key12_event_config_t.time.t_long_press_3"/>
+				<Parameter name="lower_limit" value="3"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key12_event_config_t.support.long_repeat" max="1" name="Supported repeat"/>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Slong"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key12_event_config_t.support.slong" max="1" id="id_key_gpio_key12_slong_tb" name="Supported slong"/>
+			<ConfigItem class="ucTextBox" Unique="airo_key12_event_config_t.time.t_slong" min="1" name="Slong">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key12_slong_tb"/>
+				<Parameter name="unique" value="airo_key12_event_config_t.time.t_slong"/>
+				<Parameter name="value_for_out_of_limit" refId="id_key_gpio_key12_t_press_tb"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key12_event_config_t.support.slong_repeat" max="1" name="Supported repeat">
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key12_slong_tb"/>
+				<Parameter name="unique" value="airo_key12_event_config_t.support.slong_repeat"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Repeat"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key12_event_config_t.time.t_repeat" min="1" name="T__repeat">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+	  </ConfigGroup>
+
+	  <ConfigGroup title="KEY13" class="ucLayoutVertical">
+		<ConfigGroup class="ucLayoutVertical">
+		  <ConfigItem class="ucComboBox" id="id_key_gpio_key13_name_cb">
+			<Parameter name="left_label" value="Key Name:"/>
+			<Parameter name="left_width" value="40"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="20"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/MmiKeyName.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key13_name_tb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="General">
+		  <ConfigItem class="ucTextBox" Unique="airo_key13_event_config_t.key_data" present="hex" id="id_key_gpio_key13_name_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key13_name_cb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Click"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key13_event_config_t.support.multiple_click" min="0" max="3" name="Supported click">
+			  <Parameter name="right_label" value="clicks"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key13_event_config_t.time.t_prss" min="1" id="id_key_gpio_key13_t_press_tb" name="T__press">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key13_event_config_t.time.t_release" min="1" name="T__release">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key13_event_config_t.time.t_silence" name="T__silence">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Long press"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key13_event_config_t.support.long_level" min="1" max="3" id="id_key_gpio_key13_long_level_tb" name="Supported longprss">
+			  <Parameter name="right_label" value="level"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key13_event_config_t.time.t_long_press_1" min="1" name="T__long_press_1">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key13_long_level_tb"/>
+				<Parameter name="unique" value="airo_key13_event_config_t.time.t_long_press_1"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key13_event_config_t.time.t_long_press_2" min="1" name="T__long_press_2">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key13_long_level_tb"/>
+				<Parameter name="unique" value="airo_key13_event_config_t.time.t_long_press_2"/>
+				<Parameter name="lower_limit" value="2"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key13_event_config_t.time.t_long_press_3" min="1" name="T__long_press_3">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key13_long_level_tb"/>
+				<Parameter name="unique" value="airo_key13_event_config_t.time.t_long_press_3"/>
+				<Parameter name="lower_limit" value="3"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key13_event_config_t.support.long_repeat" max="1" name="Supported repeat"/>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Slong"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key13_event_config_t.support.slong" max="1" id="id_key_gpio_key13_slong_tb" name="Supported slong"/>
+			<ConfigItem class="ucTextBox" Unique="airo_key13_event_config_t.time.t_slong" min="1" name="Slong">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key13_slong_tb"/>
+				<Parameter name="unique" value="airo_key13_event_config_t.time.t_slong"/>
+				<Parameter name="value_for_out_of_limit" refId="id_key_gpio_key13_t_press_tb"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key13_event_config_t.support.slong_repeat" max="1" name="Supported repeat">
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key13_slong_tb"/>
+				<Parameter name="unique" value="airo_key13_event_config_t.support.slong_repeat"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Repeat"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key13_event_config_t.time.t_repeat" min="1" name="T__repeat">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+	  </ConfigGroup>
+
+	  <ConfigGroup title="KEY14" class="ucLayoutVertical">
+		<ConfigGroup class="ucLayoutVertical">
+		  <ConfigItem class="ucComboBox" id="id_key_gpio_key14_name_cb">
+			<Parameter name="left_label" value="Key Name:"/>
+			<Parameter name="left_width" value="40"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="20"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/MmiKeyName.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key14_name_tb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="General">
+		  <ConfigItem class="ucTextBox" Unique="airo_key14_event_config_t.key_data" present="hex" id="id_key_gpio_key14_name_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key14_name_cb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Click"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key14_event_config_t.support.multiple_click" min="0" max="3" name="Supported click">
+			  <Parameter name="right_label" value="clicks"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key14_event_config_t.time.t_prss" min="1" id="id_key_gpio_key14_t_press_tb" name="T__press">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key14_event_config_t.time.t_release" min="1" name="T__release">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key14_event_config_t.time.t_silence" name="T__silence">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Long press"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key14_event_config_t.support.long_level" min="1" max="3" id="id_key_gpio_key14_long_level_tb" name="Supported longprss">
+			  <Parameter name="right_label" value="level"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key14_event_config_t.time.t_long_press_1" min="1" name="T__long_press_1">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key14_long_level_tb"/>
+				<Parameter name="unique" value="airo_key14_event_config_t.time.t_long_press_1"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key14_event_config_t.time.t_long_press_2" min="1" name="T__long_press_2">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key14_long_level_tb"/>
+				<Parameter name="unique" value="airo_key14_event_config_t.time.t_long_press_2"/>
+				<Parameter name="lower_limit" value="2"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key14_event_config_t.time.t_long_press_3" min="1" name="T__long_press_3">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key14_long_level_tb"/>
+				<Parameter name="unique" value="airo_key14_event_config_t.time.t_long_press_3"/>
+				<Parameter name="lower_limit" value="3"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key14_event_config_t.support.long_repeat" max="1" name="Supported repeat"/>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Slong"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key14_event_config_t.support.slong" max="1" id="id_key_gpio_key14_slong_tb" name="Supported slong"/>
+			<ConfigItem class="ucTextBox" Unique="airo_key14_event_config_t.time.t_slong" min="1" name="Slong">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key14_slong_tb"/>
+				<Parameter name="unique" value="airo_key14_event_config_t.time.t_slong"/>
+				<Parameter name="value_for_out_of_limit" refId="id_key_gpio_key14_t_press_tb"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key14_event_config_t.support.slong_repeat" max="1" name="Supported repeat">
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key14_slong_tb"/>
+				<Parameter name="unique" value="airo_key14_event_config_t.support.slong_repeat"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Repeat"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key14_event_config_t.time.t_repeat" min="1" name="T__repeat">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+	  </ConfigGroup>
+
+	  <ConfigGroup title="KEY15" class="ucLayoutVertical">
+		<ConfigGroup class="ucLayoutVertical">
+		  <ConfigItem class="ucComboBox" id="id_key_gpio_key15_name_cb">
+			<Parameter name="left_label" value="Key Name:"/>
+			<Parameter name="left_width" value="40"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="bottom_margin" value="20"/>
+			<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/MmiKeyName.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key15_name_tb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="General">
+		  <ConfigItem class="ucTextBox" Unique="airo_key15_event_config_t.key_data" present="hex" id="id_key_gpio_key15_name_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			  <Parameter name="data" refId="id_key_gpio_key15_name_cb"/>
+			</Associator>
+		  </ConfigItem>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Click"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key15_event_config_t.support.multiple_click" min="0" max="3" name="Supported click">
+			  <Parameter name="right_label" value="clicks"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key15_event_config_t.time.t_prss" min="1" id="id_key_gpio_key15_t_press_tb" name="T__press">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key15_event_config_t.time.t_release" min="1" name="T__release">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key15_event_config_t.time.t_silence" name="T__silence">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Long press"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key15_event_config_t.support.long_level" min="1" max="3" id="id_key_gpio_key15_long_level_tb" name="Supported longprss">
+			  <Parameter name="right_label" value="level"/>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key15_event_config_t.time.t_long_press_1" min="1" name="T__long_press_1">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key15_long_level_tb"/>
+				<Parameter name="unique" value="airo_key15_event_config_t.time.t_long_press_1"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key15_event_config_t.time.t_long_press_2" min="1" name="T__long_press_2">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key15_long_level_tb"/>
+				<Parameter name="unique" value="airo_key15_event_config_t.time.t_long_press_2"/>
+				<Parameter name="lower_limit" value="2"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key15_event_config_t.time.t_long_press_3" min="1" name="T__long_press_3">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key15_long_level_tb"/>
+				<Parameter name="unique" value="airo_key15_event_config_t.time.t_long_press_3"/>
+				<Parameter name="lower_limit" value="3"/>
+				<Parameter name="upper_limit" value="3"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key15_event_config_t.support.long_repeat" max="1" name="Supported repeat"/>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Slong"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key15_event_config_t.support.slong" max="1" id="id_key_gpio_key15_slong_tb" name="Supported slong"/>
+			<ConfigItem class="ucTextBox" Unique="airo_key15_event_config_t.time.t_slong" min="1" name="Slong">
+			  <Parameter name="right_label" value="ms"/>
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key15_slong_tb"/>
+				<Parameter name="unique" value="airo_key15_event_config_t.time.t_slong"/>
+				<Parameter name="value_for_out_of_limit" refId="id_key_gpio_key15_t_press_tb"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+			<ConfigItem class="ucTextBox" Unique="airo_key15_event_config_t.support.slong_repeat" max="1" name="Supported repeat">
+			  <Associator class="Airoha.Project.ConfigTool.Associator.AB1568.fcKeyGpioUcAssociator">
+				<Parameter name="data" refId="id_key_gpio_key15_slong_tb"/>
+				<Parameter name="unique" value="airo_key15_event_config_t.support.slong_repeat"/>
+				<Parameter name="lower_limit" value="1"/>
+				<Parameter name="upper_limit" value="1"/>
+			  </Associator>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+		<ConfigGroup class="ucLayoutVertical">
+		  <Parameter name="top_label" value="Repeat"/>
+		  <ConfigGroup class="AB1568.ucKeyGPIOObj_AB1568">
+			<ConfigItem class="ucTextBox" Unique="airo_key15_event_config_t.time.t_repeat" min="1" name="T__repeat">
+			  <Parameter name="right_label" value="ms"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+	  </ConfigGroup>
+
+
+	</ConfigGroup>
+</Page>

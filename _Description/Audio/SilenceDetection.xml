@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Silence Detection" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Silence Detection">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <Parameter name="required_nvkey_id" value="0xF332"/>
+    <ConfigItem class="ucGainUpDown" id="id_silence_detection_effective_threshold_updown" max="96" min="-96">
+      <Parameter name="left_label" value="Effective threshold:"/>
+      <Parameter name="right_label" value="dB (-96 ~ +96)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="180"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.01"/>
+      <Parameter name="unique" value="silence_detection_nvkey_t.effective_threshold_db"/>
+    </ConfigItem>
+    <ConfigItem class="ucDelayUpDown" id="id_app_silence_detection_delay_stop_timer_period_updown" max="1200000" min="10">
+      <Parameter name="left_label" value="Effective delay time (for single link):"/>
+      <Parameter name="right_label" value="ms (10 ~ 1200000)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="180"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="10"/>
+      <Parameter name="unique" value="APP_LE_AUDIO_SILENCE_DETECTION.delay_stop_timer_period"/>
+      <Parameter name="unique2" value="silence_detection_nvkey_t.effective_delay_ms"/>
+      <Parameter name="unique_lower_bound" value="silence_detection_nvkey_t.effective_delay_ms"/>
+    </ConfigItem>
+
+    <ConfigItem class="ucDelayUpDown" id="id_silence_detection_effective_delay_time_updown" max="100000" min="10">
+      <Parameter name="left_label" value="Effective delay time (for multiple links):"/>
+      <Parameter name="right_label" value="ms (10 ~ 100000)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="180"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="10"/>
+      <Parameter name="unique" value="silence_detection_nvkey_t.effective_delay_ms"/>
+      <Parameter name="unique_upper_bound" value="APP_LE_AUDIO_SILENCE_DETECTION.delay_stop_timer_period"/>
+    </ConfigItem>
+	<ConfigItem class="ucGainUpDown" id="id_silence_detection_failure_threshold_updown" max="96" min="-96">
+      <Parameter name="left_label" value="Failure threshold:"/>
+      <Parameter name="right_label" value="dB (-96 ~ +96)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="180"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.01"/>
+      <Parameter name="unique" value="silence_detection_nvkey_t.failure_threshold_db"/>
+    </ConfigItem>
+    <ConfigItem class="ucDelayUpDown" id="id_silence_detection_failure_delay_time_updown" max="100000" min="10">
+      <Parameter name="left_label" value="Failure delay time:"/>
+      <Parameter name="right_label" value="ms (10 ~ 100000)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="180"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="10"/>
+      <Parameter name="unique" value="silence_detection_nvkey_t.failure_delay_ms"/>
+    </ConfigItem>
+
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <Parameter name="required_nvkey_id" value="0xF332"/>
+   
+    <ConfigItem class="ucTextBox" present="hex" id="id_silence_detection_effective_threshold_tb" Unique="silence_detection_nvkey_t.effective_threshold_db" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_silence_detection_effective_threshold_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="id_app_silence_detection_delay_stop_timer_period_tb" Unique="APP_LE_AUDIO_SILENCE_DETECTION.delay_stop_timer_period" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_app_silence_detection_delay_stop_timer_period_updown"/>
+        <Parameter name="minus" refId="id_silence_detection_effective_delay_time_tb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="id_silence_detection_effective_delay_time_tb" Unique="silence_detection_nvkey_t.effective_delay_ms" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_silence_detection_effective_delay_time_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="id_silence_detection_failure_threshold_tb" Unique="silence_detection_nvkey_t.failure_threshold_db" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_silence_detection_failure_threshold_updown"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" id="id_silence_detection_failure_delay_time_tb" Unique="silence_detection_nvkey_t.failure_delay_ms" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_silence_detection_failure_delay_time_updown"/>
+      </Associator>
+    </ConfigItem>    
+  </ConfigGroup>
+</Page>

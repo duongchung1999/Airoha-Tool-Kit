@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Charger(MP NV Key)" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Charger(MP NV Key)" scroll="both">
+  <ConfigGroup class="ucLayoutHorizontal">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Charger Selection Setting"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <!--<ConfigItem class="ucComboBox" id="id_trickle_setting_combo" visible="hidden">
+        <Parameter name="left_label" value="Trickle to Complete Full Bat Voltage Config"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="150"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_trickle_setting"/>
+        </Associator>
+      </ConfigItem>-->
+      <ConfigItem class="ucComboBox" id="id_Vbat_combo">
+        <Parameter name="left_label" value="VBat"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="150"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/VBat.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_Vbat"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_OtpDump_combo" visible="hidden">
+        <Parameter name="left_label" value="Dump OTP Data"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="150"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_OtpDump"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_TwoStepCharger_combo">
+        <Parameter name="left_label" value="Two Step Charger"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="150"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_TwoStepCharger"/>
+        </Associator>
+      </ConfigItem>
+      <!--<ConfigItem class="ucComboBox" id="id_VCHG_combo">
+        <Parameter name="default_value" value="5V"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_label" value="VCHG"/>
+        <Parameter name="left_width" value="150"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/VCHG.xml"/>
+      </ConfigItem>-->
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical"/>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutHorizontal">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Charger Setting"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucVoltageUpDown" id="id_cc1thresholdvoltage_updown" min="2.5" max="3.5">
+        <Parameter name="left_label" value="CC1 Voltage"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="150"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="CHG_ADCconfig_65.cc1thresholdvoltage"/>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_cc2thresholdvoltage_updown" min="3.5" max="4.5">
+        <Parameter name="left_label" value="CC2 Voltage"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="150"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="CHG_ADCconfig_65.cc2thresholdvoltage"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="disable_twostep" refId="id_TwoStepCharger_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucVoltageUpDown" id="id_cvthresholdvoltage_updown" min="3.5" max="4.5"  visible="hidden">
+        <Parameter name="left_label" value="CV Voltage"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="150"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.05"/>
+        <Parameter name="unique" value="CHG_ADCconfig_65.cvthresholdvoltage"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="vbat" refId="id_Vbat_combo"/>
+        </Associator>
+      </ConfigItem>
+      <!--<ConfigItem class="ucPicDisplay" id="id_pic_cv_voltage_setting">
+        <Parameter name="figure_file_path" value="/_Figure_display/CvVoltageSetting.jpg"/>
+        <Parameter name="figure_name" value="CV Voltage Setting"/>
+        <Parameter name="left_label" value="CV Voltage Setting"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="150"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+      </ConfigItem>-->
+      <!--<ConfigItem class="ucCvStopCurrentComboBox" id="id_cvstopcurrent_cb">
+        <Parameter name="left_label" value="CV Stop Current"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="150"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/CvStopCurrent.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="vbat" refId="id_Vbat_combo"/>
+          <Parameter name="two_step" refId="id_TwoStepCharger_combo"/>
+          <Parameter name="cc1_current" refId="id_cc1Current_updown"/>
+          <Parameter name="cc2_current" refId="id_cc2Current_updown"/>
+        </Associator>
+      </ConfigItem>-->
+      <!--<ConfigItem class="ucFullBatVoltageUpDown" id="id_fullbatvoltage_updown" min="4.0" max="4.4"  visible="hidden">
+        <Parameter name="left_label" value="Full Bat Voltage"/>        
+        <Parameter name="des_label" value="Full Bat Voltage >=  CV voltage"/>            
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="150"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="CHG_ADCconfig_65.fullbatvoltage"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="vbat" refId="id_Vbat_combo"/>
+          <Parameter name="recharge_voltage" refId="id_rechargevoltage_updown"/>
+        </Associator>
+      </ConfigItem>-->
+      <ConfigItem class="ucVoltageUpDown" id="id_rechargevoltage_updown" min="3.5" max="4.5">
+        <Parameter name="left_label" value="Recharge Voltage"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="150"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="V"/>
+        <Parameter name="step" value="0.01"/>
+        <Parameter name="unique" value="CHG_ADCconfig_65.rechargevoltage"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="vbat" refId="id_Vbat_combo"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_CVstopcurrentpercent_updown" min="5" max="30">
+        <Parameter name="left_label" value="CV Stop Current"/>
+        <Parameter name="des_label" value="If two step charger is enabled, the CV stop current is the percentage of CC2 current.&#13;&#10;Otherwise, the CV stop current is the percentage of CC1 current."/>
+        <Parameter name="right_label" value="%"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="150"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="5"/>
+        <Parameter name="unique" value="CvStopCurrentAdc.CVstopcurrentpercent1"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_CVstopcurrentpercent"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Internal Charger Current Setting"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucCurrentUpDown" id="id_TrickleCurrent_updown" min="4" max="60">
+        <Parameter name="left_label" value="Trickle Current"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="110"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="mA"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="Int_CHG_tricklecurrentconfig.select"/>
+        <!--<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="int_charger_type" refId="id_CharherType_combo"/>
+        </Associator>-->
+      </ConfigItem>
+      <ConfigItem class="ucCurrentUpDown" id="id_cc1Current_updown" min="15" max="500">
+        <Parameter name="left_label" value="CC1 Current"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="110"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="mA"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="Int_CHG_cc1currentconfig.select"/>
+        <!--<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="vchg" refId="id_VCHG_combo"/>
+          <Parameter name="int_charger_type" refId="id_CharherType_combo"/>
+        </Associator>-->
+      </ConfigItem>
+      <ConfigItem class="ucCurrentUpDown" id="id_cc2Current_updown" min="15" max="500">
+        <Parameter name="left_label" value="CC2 Current"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="110"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="mA"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="Int_CHG_cc2currentconfig.select"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="vchg" refId="id_VCHG_combo"/>
+          <!--<Parameter name="int_charger_type" refId="id_CharherType_combo"/>-->
+          <Parameter name="disable_twostep" refId="id_TwoStepCharger_combo"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <!--<ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Charger Interrupt Setting"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucComboBox" id="id_charger_interrupt_enable_combo">
+        <Parameter name="left_label" value="Enable"/>
+        <Parameter name="left_width" value="175"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_charger_interrupt_enable_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_charger_interrupt_falling_settle_time_updown" min="0" max="4294967295">
+        <Parameter name="left_label" value="Falling Settle Time"/>
+        <Parameter name="right_label" value="us"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="190"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="PERIPHERAL_SW_CHG_INTR_CTRL.vchg_falling_settle_time_us"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_charger_interrupt_falling_settle_time_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_charger_interrupt_falling_adc_thrd_updown" min="0" max="1023">
+        <Parameter name="left_label" value="Falling ADC Threshold"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="190"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="PERIPHERAL_SW_CHG_INTR_CTRL.vchg_falling_adc_thrd"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_charger_interrupt_falling_adc_thrd_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_charger_interrupt_rising_settle_time_updown" min="0" max="4294967295">
+        <Parameter name="left_label" value="Rising Settle Time"/>
+        <Parameter name="right_label" value="us"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="190"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="PERIPHERAL_SW_CHG_INTR_CTRL.vchg_rising_settle_time_us"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_charger_interrupt_riseing_settle_time_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_charger_interrupt_rising_adc_thrd_updown" min="0" max="1023">
+        <Parameter name="left_label" value="Rising ADC Threshold"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="190"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="PERIPHERAL_SW_CHG_INTR_CTRL.vchg_rising_adc_thrd"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_charger_interrupt_rising_adc_thrd_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_charger_interrupt_filter_enable_cb">
+        <Parameter name="left_label" value="Filter Enable"/>
+        <Parameter name="left_width" value="175"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_charger_interrupt_filter_enable_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>-->
+
+
+
+  </ConfigGroup>
+  <!--<ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value=""/>
+    <Parameter name="left_width" value="20"/>
+    <Parameter name="border" value="0"/>
+    <ConfigItem class="ucComboBox" id="id_CHG_PRE_COMPLETE_INT_EN_combo" visible="hidden">
+      <Parameter name="left_label" value="Pre-complete irq"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="left_width" value="150"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_CHG_PRE_COMPLETE_INT_EN"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucUpDown" id="id_CHG_PRE_COMPLETE_CURR_PER_1_updown" min="5" max="30" visible="hidden">
+      <Parameter name="left_label" value="Pre-complete current"/>      
+      <Parameter name="right_label" value="%"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="left_width" value="150"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="step" value="5"/>
+      <Parameter name="unique" value="CvStopCurrentAdc.CHG_PRE_COMPLETE_CURR_PER_1"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_CHG_PRE_COMPLETE_CURR_PER_1"/>
+        <Parameter name="enable" refId="id_CHG_PRE_COMPLETE_INT_EN_combo"/>
+        <Parameter name="enable_value" value="1"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>-->
+  <!--<ConfigGroup class="ucLayoutHorizontal">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Charger Case"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucComboBox" id="id_chargercase_enable_combo">
+        <Parameter name="left_label" value="Enable"/>
+        <Parameter name="left_width" value="175"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/chargercase.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_chargercase_enable"/>
+        </Associator>
+      </ConfigItem>
+      --><!--<ConfigItem class="ucComboBox" id="id_chargercase_mmitimer_combo">
+        <Parameter name="left_label" value="MMI Timer Enable"/>
+        <Parameter name="des_label" value="Wake up from deep sleep for charge by MMI timer"/>
+        <Parameter name="left_width" value="175"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_chargercase_mmitimer_enable"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_chargercase_mmitimer_interval_updown" min="0" max="260">
+        <Parameter name="left_label" value="MMI Timer Interval"/>
+        <Parameter name="des_label" value="Wake up interval by MMI timer"/>
+        <Parameter name="right_label" value="s"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="190"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="ChargerCase.MmiTimerInterval"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_chargercase_mmitimer_interval"/>
+        </Associator>
+      </ConfigItem>--><!--
+      <ConfigGroup class="General">
+        <ConfigItem class="ucSingleKeyEvent" Unique="ChargerCase.keyEvtcode"/>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>-->
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="CHG_config.Otp_Dump" id="id_OtpDump" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_OtpDump_combo"/>
+      </Associator>
+    </ConfigItem>
+    <!--<ConfigItem class="ucTextBox" Unique="PERIPHERAL_SW_CHG_INTR_CTRL.full_bat_thrd_en" id="id_trickle_setting" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_trickle_setting_combo"/>
+      </Associator>
+    </ConfigItem>-->
+    <ConfigItem class="ucTextBox" Unique="CHG_config.Batteryvoltagesel" id="id_Vbat" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_Vbat_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CHG_config.twostepsel" id="id_TwoStepCharger" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_TwoStepCharger_combo"/>
+      </Associator>
+    </ConfigItem>
+    <!--<ConfigItem class="ucTextBox" Unique="ChargerCase.chgCaseType" id="id_chargercase_enable" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_chargercase_enable_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ChargerCase.MmiTimerEnable" id="id_chargercase_mmitimer_enable" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_chargercase_mmitimer_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ChargerCase.MmiTimerInterval" id="id_chargercase_mmitimer_interval" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_chargercase_mmitimer_interval_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="PERIPHERAL_SW_CHG_INTR_CTRL.enable" id="id_charger_interrupt_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_charger_interrupt_enable_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="PERIPHERAL_SW_CHG_INTR_CTRL.vchg_falling_settle_time_us" id="id_charger_interrupt_falling_settle_time_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_charger_interrupt_falling_settle_time_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="PERIPHERAL_SW_CHG_INTR_CTRL.vchg_falling_adc_thrd" id="id_charger_interrupt_falling_adc_thrd_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_charger_interrupt_falling_adc_thrd_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="PERIPHERAL_SW_CHG_INTR_CTRL.vchg_rising_settle_time_us" id="id_charger_interrupt_riseing_settle_time_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_charger_interrupt_rising_settle_time_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="PERIPHERAL_SW_CHG_INTR_CTRL.vchg_rising_adc_thrd" id="id_charger_interrupt_rising_adc_thrd_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_charger_interrupt_rising_adc_thrd_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="PERIPHERAL_SW_CHG_INTR_CTRL.chg_intr_filter_en" id="id_charger_interrupt_filter_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_charger_interrupt_filter_enable_cb"/>
+      </Associator>
+    </ConfigItem>-->
+    <ConfigItem class="ucTextBox" Unique="CvStopCurrentAdc.CVstopcurrentpercent1" id="id_CVstopcurrentpercent" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_CVstopcurrentpercent_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CvStopCurrentAdc.CHG_PRE_COMPLETE_INT_EN" id="id_CHG_PRE_COMPLETE_INT_EN" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_CHG_PRE_COMPLETE_INT_EN_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CvStopCurrentAdc.CHG_PRE_COMPLETE_CURR_PER_1" id="id_CHG_PRE_COMPLETE_CURR_PER_1" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_CHG_PRE_COMPLETE_CURR_PER_1_updown"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

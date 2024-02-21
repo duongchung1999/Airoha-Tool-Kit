@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="WirelessMicTx_EQ" class="Airoha.Project.ConfigTool.View.PeqTabPage" parameter="WirelessMicTx_EQ" id="WirelessMicTx_EQ">
+  <ConfigGroup title="WirelessMicTx_EQ" class="DspPage" id="mic_eq">
+    <Parameter name="button_margin" value="10"/>
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigItem class="ucPeqEnableButton" id="id_real_time_mic_eq_enable">
+        <Parameter name="eq_phase" value="4"/>
+      </ConfigItem>
+      <ConfigItem class="ucPeqDisableButton" id="id_real_time_mic_eq_disable">
+      <Parameter name="eq_phase" value="4"/>
+      </ConfigItem>
+    </ConfigGroup>
+    <!--
+    <ConfigGroup class="ucLayoutVertical" visible="hidden">
+      <ConfigGroup class="General">
+        <ConfigItem class="ucStrTextBox" present="hexstr" Unique="MIC_EQ_AUDIO_PATH_TABLE_STRU.PARAM">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcPeqTableNvAssociator">
+            <Parameter name="peq_audio_path_0" refId="id_mic_audio_path_0"/>
+            <Parameter name="peq_audio_path_1" refId="id_mic_audio_path_1"/>
+            <Parameter name="peq_audio_path_2" refId="id_mic_audio_path_2"/>
+            <Parameter name="peq_audio_path_3" refId="id_mic_audio_path_3"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+    -->
+  </ConfigGroup>
+  <ConfigGroup title="MIC EQ Subset" class="DspPage">
+    <Parameter name="button_margin" value="10"/>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="WirelessMic EQ Subset Select"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <ConfigGroup class="TabPage">
+        <ConfigGroup title="  MIC  " class="ucLayoutVertical">
+          <ConfigGroup class="ucLayoutHorizontal">
+            <ConfigGroup class="ucMicEqSubsetTable" id="id_WirelessMicTx_eq_subset_A_table">
+              <Parameter name="cell_cnt" value="5"/>
+              <Parameter name="fw_nvkey_id" value="0xE442"/>
+              <Parameter name="update_peq_table_nv_id" value="id_update_mic_eq_table_nv_00"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="modified_peq_index" refId="id_modified_mic_eq_index"/>
+                <Parameter name="data" refId="WirelessMicTx_EQ"/>
+              </Associator>
+            </ConfigGroup>
+          </ConfigGroup>
+        </ConfigGroup>
+        <ConfigGroup title="  Advanced Record  " class="ucLayoutVertical" visible="hidden">
+          <ConfigGroup class="ucLayoutHorizontal">
+            <ConfigGroup class="ucMicEqSubsetTable" id="id_advanced_record_eq_subset_A_table">
+              <Parameter name="cell_cnt" value="5"/>
+              <Parameter name="fw_nvkey_id" value="0xE442"/>
+              <Parameter name="update_peq_table_nv_id" value="id_advanced_record_eq_table_nv_00"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="modified_peq_index" refId="id_modified_mic_eq_index"/>
+                <Parameter name="data" refId="WirelessMicTx_EQ"/>
+              </Associator>
+            </ConfigGroup>
+          </ConfigGroup>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical" visible="hidden">
+        <ConfigGroup class="General" visible="hidden">
+          <ConfigItem class="ucStrTextBox" id="id_mic_eq_table_nv_00_tb" present="hexstr" Unique="MIC_EQ_AUDIO_PATH_SET_STRU.PARAM">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_update_mic_eq_table_nv_00"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucStrTextBox" id="id_advanced_record_eq_table_nv_00_tb" present="hexstr" Unique="ADVANCED_RECORD_EQ_AUDIO_PATH_SET_STRU.PARAM">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_advanced_record_eq_table_nv_00"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup title="MIC EQ Superset" class="PeqPage">
+    <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+      <Parameter name="data" refId="WirelessMicTx_EQ"/>
+      <Parameter name="realtime_update_nvkey" refId="id_mic_eq_realtime_update_fw_nvkey"/>
+    </Associator>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+        <ConfigGroup class="ucMicEqBandTable" id="id_mic_eq_setting_table">
+          <Parameter name="group_xml" value="/_DSP_settings/WirelessMicTxEqGroup.xml"/>
+          <Parameter name="cell_cnt" value="10"/>
+          <Parameter name="gain_line_id" value="id_mic_eq_gain_line_data"/>
+          <Parameter name="modified_peq_index_id" value="id_modified_mic_eq_index"/>
+          <Parameter name="rescale_id" value="id_mic_eq_rescale_value"/>
+          <Parameter name="realtime_update_fw_nvkey_id" value="id_mic_eq_realtime_update_fw_nvkey"/>
+          <Parameter name="is_support_LDAC_nv_unique" value="UI_Dsp_WIRELESS_MIC_TX_EQ_Additional_Settings.is_support_88200_96000"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="point_set" refId="id_mic_eq_gain_point_set"/>
+          </Associator>
+          <ConfigGroup class="ucLiveChart">
+            <Parameter name="chart_title" value="Gain"/>
+            <Parameter name="height" value="400"/>
+            <Parameter name="layout_column_weight" value="1"/>
+            <Parameter name="x_axis_title" value="Frequency(Hz)"/>
+            <Parameter name="x_axis_max_value" value="20000"/>
+            <Parameter name="x_axis_min_value" value="20"/>
+            <Parameter name="y_axis_title" value="Gain(dB)"/>
+            <Parameter name="x_axis_customized_step" value="20,100,1000,10000,20000"/>
+            <Parameter name="y_axis_max_value" value="18"/>
+            <Parameter name="y_axis_min_value" value="-20"/>
+            <Parameter name="y_axis_step" value="1"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="rescale_value" refId="id_mic_rescale_value"/>
+            </Associator>
+            <ConfigItem class="point_set" id="id_mic_eq_gain_point_set">
+              <Parameter name="total_num" value="10"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcPeqPointSetAssociator">
+                <Parameter name="band_setting" refId="id_mic_eq_setting_table"/>
+              </Associator>
+            </ConfigItem>
+            <ConfigItem class="line" id="id_mic_eq_gain_line">
+              <Parameter name="title" value="EQ_Gain"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="data" refId="id_mic_eq_gain_line_data"/>
+              </Associator>
+            </ConfigItem>
+            <ConfigItem class="line" id="id_mic_eq_target_line">
+              <Parameter name="title" value="target"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="data" refId="PEQ_Target_data_1"/>
+              </Associator>
+            </ConfigItem>
+          </ConfigGroup>          
+        </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

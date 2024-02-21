@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="-36" Value="0"/>
+	<Group Name="-33" Value="1"/>
+	<Group Name="-30" Value="3"/>
+	<Group Name="-27" Value="7"/>
+	<Group Name="-24" Value="15"/>
+	<Group Name="-21" Value="31"/>
+	<Group Name="-18" Value="63"/>
+	<Group Name="-15" Value="127"/>
+	<Group Name="-12" Value="255"/>
+	<Group Name="-9" Value="511"/>
+	<Group Name="-6" Value="1023"/>
+	<Group Name="-5" Value="2047"/>
+	<Group Name="-4" Value="4095"/>
+	<Group Name="-3" Value="8191"/>
+	<Group Name="-2" Value="16383"/>
+	<Group Name="-1" Value="32767"/>
+	<Group Name="0" Value="65535"/>
+	<Group Name="1" Value="131071"/>
+	<Group Name="2" Value="262143"/>
+	<Group Name="3" Value="524287"/>
+	<Group Name="6" Value="1048575"/>
+	<Group Name="9" Value="2097151"/>
+</DataGroup>

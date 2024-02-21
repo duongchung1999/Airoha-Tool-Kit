@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+    <!--round(val*2^31)-->
+	<Group Name="0" Value="21475072"/>  <!--IE_msc_sm_dn_alpha: Q31, default 0.01-->
+	<Group Name="1" Value="15032576"/> <!--IE_msc_sm_dn_alpha: Q31, default 0.007-->
+	<Group Name="2" Value="12884992"/> <!--IE_msc_sm_dn_alpha: Q31, default 0.006-->
+	<Group Name="3" Value="10737664"/> <!--IE_msc_sm_dn_alpha: Q31, default 0.005-->
+	<Group Name="4" Value="4295168"/> <!--IE_msc_sm_dn_alpha: Q31, default 0.002-->
+</DataGroup>
+
+

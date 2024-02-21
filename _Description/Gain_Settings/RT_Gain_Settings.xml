@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="RT Gain Settings" class="Airoha.Project.ConfigTool.View.TabPage" parameter="RT Gain Settings">
+  <ConfigGroup title="Output" class="PurePage">
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="top_label" value="RT Digital Output Gain"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="20"/>
+        <ConfigItem class="ucDspDecimalUpDown" id="id_rt_digital_output_gain_total_index_updown" min="1" max="16">
+          <Parameter name="top_label" value="Total index"/>
+          <Parameter name="step" value="1"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_rt_digital_output_gain_total_index_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigGroup class="ucGainTable" id="id_rt_digital_output_gain_table">
+          <Parameter name="left_margin" value="12"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="border" value="1"/>
+          <Parameter name="total_num" value="16"/>
+          <Parameter name="unique" value="DSP_PARA_GAIN_TABLE_RT_STRU.TotalIndex"/>
+          <ConfigItem class="ucGainComboBox" id="id_rt_digital_output_gain_cb_#">
+            <Parameter name="left_label" value="#"/>
+            <Parameter name="right_label" value="dB"/>
+            <Parameter name="left_width" value="30"/>
+            <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalOutputGain.xml"/>
+            <Parameter name="unique" value="DSP_PARA_GAIN_TABLE_RT_STRU.DigitalOutGainIndex#"/>
+          </ConfigItem>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_rt_digital_output_gain_total_index_updown"/>
+          </Associator>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" present="hex" id="id_ana_gain_rt_total_index_tb" Unique="DSP_PARA_ANA_GAIN_TABLE_RT_STRU.TotalIndex">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_ana_gain_rt_total_index_updown"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" present="hex" id="id_rt_digital_output_gain_total_index_tb" Unique="DSP_PARA_GAIN_TABLE_RT_STRU.TotalIndex">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_rt_digital_output_gain_total_index_updown"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucGainGeneral">
+      <Parameter name="total_num" value="16"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_GAIN_TABLE_RT_STRU.DigitalOutGainIndex#" id="id_rt_digital_output_gain_tb_#">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_rt_digital_output_gain_cb_#"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup title="Input" class="PurePage"  visible="hidden">
+    <ConfigGroup class="ucLayoutHorizontal">
+      <Parameter name="left_margin" value="12"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="20"/>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="RT Digital Intput Gain"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucGainComboBox" id="id_rt_digital_input_gain_cb_0">
+          <Parameter name="left_label" value="VadMicGain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="80"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_IN_GAIN_RT_STRU.DigitalInGain"/>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_IN_GAIN_RT_STRU.DigitalInGain">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_rt_digital_input_gain_cb_0"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>
+  

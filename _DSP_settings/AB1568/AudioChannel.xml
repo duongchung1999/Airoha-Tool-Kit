@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="AUDIO_CHANNEL_A"               Value="0"/>
+	<Group Name="AUDIO_CHANNEL_B"               Value="1"/>
+	<Group Name="AUDIO_CHANNEL_A_AND_B"         Value="2"/>
+	<Group Name="AUDIO_CHANNEL_A_AND_E"         Value="3"/>
+	<Group Name="AUDIO_CHANNEL_B_AND_E"         Value="4"/>
+	<Group Name="AUDIO_CHANNEL_A_AND_B_AND_E"   Value="5"/>
+	<Group Name="AUDIO_CHANNEL_VP"              Value="6"/>
+	<Group Name="AUDIO_CHANNEL_SLOT_0"          Value="0"/>
+	<Group Name="AUDIO_CHANNEL_SLOT_1"          Value="1"/>
+	<Group Name="AUDIO_CHANNEL_SLOT_2"          Value="2"/>
+	<Group Name="AUDIO_CHANNEL_SLOT_3"          Value="3"/>
+	<Group Name="SPDIF_CHANNEL_A"               Value="0"/>
+	<Group Name="SPDIF_CHANNEL_B"               Value="1"/>
+	<Group Name="SPDIF_CHANNEL_USER"            Value="2"/>
+	<Group Name="SPDIF_CHANNEL_A_B_INTERLEAVED" Value="3"/>
+	<Group Name="AUDIO_BRANCH_A_AND_B"          Value="4"/>
+	<Group Name="AUDIO_JOINT_A_AND_B"           Value="5"/>
+</DataGroup>

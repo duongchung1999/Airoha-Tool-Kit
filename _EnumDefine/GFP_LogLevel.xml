@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="LOG_OFF" Value="0"/>
+	<Group Name="LOG_LE_EVENT" Value="1"/>
+	<Group Name="LOG_CRYTPO_EVENT" Value="2"/>
+	<Group Name="LOG_GFPS_EVENT" Value="4"/>
+	<Group Name="LOG_LE_IE_DETAIL" Value="8"/>
+	<Group Name="LOG_GFPS_IE_DETAIL" Value="16"/>
+	<Group Name="LOG_CRYTPO_IE_DETAIL" Value="32"/>
+	<Group Name="LOG_MISC" Value="64"/>
+	<Group Name="LOG_ALL" Value="255"/>
+</DataGroup>

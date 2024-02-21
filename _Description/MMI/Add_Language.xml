@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Add_Language" class="Airoha.Project.ConfigTool.View.General" parameter="Add_Language">
+	<ConfigItem class="AB1568.ucAddLanguage_AB1568" Unique="VP_CONFIG_STRU.nvKeyId" id="NewLangId"/>
+</Page>

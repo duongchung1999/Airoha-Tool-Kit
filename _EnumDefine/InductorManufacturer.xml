@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+  <Group Name="User Define" Value="0"/>
+  <Group Name="Sunlord" Value="1"/>
+  <Group Name="EMTECH" Value="2"/>
+  <Group Name="Viking" Value="3"/>
+</DataGroup>

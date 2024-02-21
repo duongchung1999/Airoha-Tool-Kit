@@ -1,0 +1,1102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page title ="Buck" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Buck" scroll="both">
+  <!--  visible="hidden"-->
+  <ConfigGroup class="ucLayoutVertical">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Buck Ripple Control"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucComboBox" id="id_Ripple_VCORE_EN_cb" >
+        <Parameter name="left_label" value="Buck_VCORE"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="190"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_label" value=""/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Parameter name="unique" value="ChargerControlConfig.Ripple_VCORE_EN"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_Ripple_VCORE_EN_tb"/>
+        </Associator>
+      </ConfigItem>		
+      <ConfigItem class="ucComboBox" id="id_Ripple_VIO18_EN_cb" >
+        <Parameter name="left_label" value="Buck_VIO18"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="190"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_label" value=""/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Parameter name="unique" value="ChargerControlConfig.Ripple_VIO18_EN"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_Ripple_VIO18_EN_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_Ripple_VAUD18_EN_cb" >
+        <Parameter name="left_label" value="Buck_VAUD18"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="190"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_label" value=""/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Parameter name="unique" value="ChargerControlConfig.Ripple_VAUD18_EN"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_Ripple_VAUD18_EN_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_Ripple_VPA_EN_cb" >
+        <Parameter name="left_label" value="Buck_VPA"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="190"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_label" value=""/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Parameter name="unique" value="ChargerControlConfig.Ripple_VPA_EN"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_Ripple_VPA_EN_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="VCORE voltage control"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value=""/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="0"/>
+        <ConfigItem class="ucComboBox" id="id_VCORE_YFlag_cb" >
+          <Parameter name="left_label" value="Buck_VCORE"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="0"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Parameter name="unique" value="BuckVcoreVoltageConfig.VCORE_YFlag"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_VCORE_YFlag_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="top_label" value=""/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="0"/>
+        <Parameter name="top_margin" value="0"/>
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="top_label" value=""/>
+          <Parameter name="left_width" value="20"/>
+          <Parameter name="border" value="0"/>
+          <ConfigItem class="uc10KVoltageUpDown" id="id_VCORE_HV_voltage_updown" min="450" max="1087.5">
+            <Parameter name="left_label" value="VCORE_HV"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="2.5"/>
+            <Parameter name="unique" value="BuckVcoreVoltageConfig.VCORE_HV_voltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">              
+              <Parameter name="enable" refId="id_VCORE_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="uc10KVoltageUpDown" id="id_VCORE_MV_voltage_updown" min="450" max="1087.5">
+            <Parameter name="left_label" value="VCORE_MV"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="25"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="2.5"/>
+            <Parameter name="unique" value="BuckVcoreVoltageConfig.VCORE_MV_voltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="enable" refId="id_VCORE_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="uc10KVoltageUpDown" id="id_VCORE_LV_voltage_updown" min="450" max="1087.5">
+            <Parameter name="left_label" value="VCORE_LV"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="25"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="2.5"/>
+            <Parameter name="unique" value="BuckVcoreVoltageConfig.VCORE_LV_voltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="enable" refId="id_VCORE_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="uc10KVoltageUpDown" id="id_VCORE_SLP_voltage_updown" min="450" max="1087.5">
+            <Parameter name="left_label" value="VCORE_SLP"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="25"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="2.5"/>
+            <Parameter name="unique" value="BuckVcoreVoltageConfig.VCORE_SLP_voltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="enable" refId="id_VCORE_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="top_label" value=""/>
+          <Parameter name="left_width" value="20"/>
+          <Parameter name="border" value="0"/>
+          <ConfigItem class="ucComboBox" id="id_VCORE_IPEAK_HV_cb" >
+            <Parameter name="left_label" value="VCORE_IPEAK_HV"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="0"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/VCORE_IPEAK.xml"/>
+            <Parameter name="unique" value="BuckVcoreVoltageConfig.VCORE_IPEAK_HV"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VCORE_IPEAK_HV_tb"/>
+              <Parameter name="enable" refId="id_VCORE_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucComboBox" id="id_VCORE_IPEAK_MV_cb" >
+            <Parameter name="left_label" value="VCORE_IPEAK_MV"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="0"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/VCORE_IPEAK.xml"/>
+            <Parameter name="unique" value="BuckVcoreVoltageConfig.VCORE_IPEAK_MV"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VCORE_IPEAK_MV_tb"/>
+              <Parameter name="enable" refId="id_VCORE_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucComboBox" id="id_VCORE_IPEAK_LV_cb" >
+            <Parameter name="left_label" value="VCORE_IPEAK_LV"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="0"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/VCORE_IPEAK.xml"/>
+            <Parameter name="unique" value="BuckVcoreVoltageConfig.VCORE_IPEAK_LV"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VCORE_IPEAK_LV_tb"/>
+              <Parameter name="enable" refId="id_VCORE_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucComboBox" id="id_VCORE_IPEAK_SLP_cb" >
+            <Parameter name="left_label" value="VCORE_IPEAK_SLP"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="0"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/VCORE_IPEAK_SLP.xml"/>
+            <Parameter name="unique" value="BuckVcoreVoltageConfig.VCORE_IPEAK_SLP"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VCORE_IPEAK_SLP_tb"/>
+              <Parameter name="enable" refId="id_VCORE_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+
+    </ConfigGroup>
+
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="VIO18 voltage control"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value=""/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="0"/>
+        <ConfigItem class="ucComboBox" id="id_VIO18_YFlag_cb" >
+          <Parameter name="left_label" value="Buck_VIO18"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="0"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Parameter name="unique" value="BuckVoltageConfig.VIO18_YFlag"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_VIO18_YFlag_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="top_label" value=""/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="0"/>
+        <Parameter name="top_margin" value="0"/>
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="top_label" value=""/>
+          <Parameter name="left_width" value="20"/>
+          <Parameter name="border" value="0"/>
+          <ConfigItem class="uc10KVoltageUpDown" id="id_VIO18_NM_3_voltage_updown" min="1640" max="1957.5">
+            <Parameter name="left_label" value="VIO18_NM_3"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="2.5"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VIO18_NM_3_voltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="enable" refId="id_VIO18_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="uc10KVoltageUpDown" id="id_VIO18_NM_5_voltage_updown" min="1640" max="1957.5">
+            <Parameter name="left_label" value="VIO18_NM_5"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="25"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="2.5"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VIO18_NM_5_voltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="enable" refId="id_VIO18_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="uc10KVoltageUpDown" id="id_VIO18_SLP_voltage_updown" min="1640" max="1957.5">
+            <Parameter name="left_label" value="VIO18_SLP"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="25"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="2.5"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VIO18_SLP_voltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="enable" refId="id_VIO18_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="top_label" value=""/>
+          <Parameter name="left_width" value="20"/>
+          <Parameter name="border" value="0"/>
+          <ConfigItem class="ucComboBox" id="id_VIO18_IPEAK_NM_3_cb" >
+            <Parameter name="left_label" value="VIO18_IPEAK_NM_3"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="0"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/VIO18_IPEAK.xml"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VIO18_IPEAK_NM_3"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VIO18_IPEAK_NM_3_tb"/>
+              <Parameter name="enable" refId="id_VIO18_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucComboBox" id="id_VIO18_IPEAK_NM_5_cb" >
+            <Parameter name="left_label" value="VIO18_IPEAK_NM_5"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="0"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/VIO18_IPEAK.xml"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VIO18_IPEAK_NM_5"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VIO18_IPEAK_NM_5_tb"/>
+              <Parameter name="enable" refId="id_VIO18_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucComboBox" id="id_VIO18_IPEAK_SLP_cb" >
+            <Parameter name="left_label" value="VIO18_IPEAK_SLP"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="0"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/VIO18_IPEAK.xml"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VIO18_IPEAK_SLP"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VIO18_IPEAK_SLP_tb"/>
+              <Parameter name="enable" refId="id_VIO18_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="VRF voltage control"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value=""/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="0"/>
+        <ConfigItem class="ucComboBox" id="id_VRF_YFlag_cb" >
+          <Parameter name="left_label" value="Buck_VRF"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="0"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Parameter name="unique" value="BuckVoltageConfig.VRF_YFlag"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_VRF_YFlag_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="top_label" value=""/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="0"/>
+        <Parameter name="top_margin" value="0"/>
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="top_label" value=""/>
+          <Parameter name="left_width" value="20"/>
+          <Parameter name="border" value="0"/>
+          <ConfigItem class="uc10KVoltageUpDown" id="id_VRF_NM_voltage_updown" min="640" max="957.5">
+            <Parameter name="left_label" value="VRF_NM"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="2.5"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VRF_NM_voltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="enable" refId="id_VRF_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="uc10KVoltageUpDown" id="id_VRF_SLP_voltage_updown" min="640" max="957.5">
+            <Parameter name="left_label" value="VRF_SLP"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="25"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="2.5"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VRF_SLP_voltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="enable" refId="id_VRF_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="top_label" value=""/>
+          <Parameter name="left_width" value="20"/>
+          <Parameter name="border" value="0"/>
+          <ConfigItem class="ucComboBox" id="id_VRF_IPEAK_NM_cb" >
+            <Parameter name="left_label" value="VRF_IPEAK_NM"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="0"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/VRF_IPEAK.xml"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VRF_IPEAK_NM"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VRF_IPEAK_NM_tb"/>
+              <Parameter name="enable" refId="id_VRF_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucComboBox" id="id_VRF_IPEAK_SLP_cb" >
+            <Parameter name="left_label" value="VRF_IPEAK_SLP"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="0"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/VRF_IPEAK.xml"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VRF_IPEAK_SLP"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VRF_IPEAK_SLP_tb"/>
+              <Parameter name="enable" refId="id_VRF_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+
+
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="VPA voltage control"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value=""/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="0"/>
+        <ConfigItem class="ucComboBox" id="id_VPA_YFlag_cb" >
+          <Parameter name="left_label" value="Buck_VPA"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="0"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Parameter name="unique" value="BuckVoltageConfig.VPA_YFlag"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_VPA_YFlag_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="top_label" value=""/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="0"/>
+        <Parameter name="top_margin" value="0"/>
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="top_label" value=""/>
+          <Parameter name="left_width" value="20"/>
+          <Parameter name="border" value="0"/>
+          <ConfigItem class="ucUpDown" id="id_VPA_2V2_voltage_updown" min="800" max="2300">
+            <Parameter name="left_label" value="VPA_2V2"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="1"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="100"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VPA_2V2_voltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VPA_2V2_voltage_tb"/>
+              <Parameter name="enable" refId="id_VPA_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucUpDown" id="id_VPA_1V8_voltage_updown" min="800" max="2300">
+            <Parameter name="left_label" value="VPA_1V8"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="15"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="100"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VPA_1V8_voltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VPA_1V8_voltage_tb"/>
+              <Parameter name="enable" refId="id_VPA_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucUpDown" id="id_VPA_1V6_voltage_updown" min="800" max="2300">
+            <Parameter name="left_label" value="VPA_1V6"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="15"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="100"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VPA_1V6_voltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VPA_1V6_voltage_tb"/>
+              <Parameter name="enable" refId="id_VPA_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucUpDown" id="id_VPA_1V4_voltage_updown" min="800" max="2300">
+            <Parameter name="left_label" value="VPA_1V4"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="15"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="100"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VPA_1V4_voltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VPA_1V4_voltage_tb"/>
+              <Parameter name="enable" refId="id_VPA_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucUpDown" id="id_VPA_1V2_voltage_updown" min="800" max="2300">
+            <Parameter name="left_label" value="VPA_1V2"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="15"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="100"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VPA_1V2_voltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VPA_1V2_voltage_tb"/>
+              <Parameter name="enable" refId="id_VPA_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="top_label" value=""/>
+          <Parameter name="left_width" value="20"/>
+          <Parameter name="border" value="0"/>
+          <ConfigItem class="ucComboBox" id="id_VPA_IPEAK_2V2_cb" >
+            <Parameter name="left_label" value="VPA_IPEAK_2V2"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="0"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/VPA_IPEAK.xml"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VPA_IPEAK_2V2"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VPA_IPEAK_2V2_tb"/>
+              <Parameter name="enable" refId="id_VPA_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucComboBox" id="id_VPA_IPEAK_1V8_cb" >
+            <Parameter name="left_label" value="VPA_IPEAK_1V8"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="0"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/VPA_IPEAK.xml"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VPA_IPEAK_1V8"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VPA_IPEAK_1V8_tb"/>
+              <Parameter name="enable" refId="id_VPA_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucComboBox" id="id_VPA_IPEAK_1V6_cb" >
+            <Parameter name="left_label" value="VPA_IPEAK_1V6"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="0"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/VPA_IPEAK.xml"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VPA_IPEAK_1V6"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VPA_IPEAK_1V6_tb"/>
+              <Parameter name="enable" refId="id_VPA_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucComboBox" id="id_VPA_IPEAK_1V4_cb" >
+            <Parameter name="left_label" value="VPA_IPEAK_1V4"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="0"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/VPA_IPEAK.xml"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VPA_IPEAK_1V4"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VPA_IPEAK_1V4_tb"/>
+              <Parameter name="enable" refId="id_VPA_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucComboBox" id="id_VPA_IPEAK_1V2_cb" >
+            <Parameter name="left_label" value="VPA_IPEAK_1V2"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="0"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/VPA_IPEAK.xml"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VPA_IPEAK_1V2"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VPA_IPEAK_1V2_tb"/>
+              <Parameter name="enable" refId="id_VPA_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          
+        </ConfigGroup>
+        
+      </ConfigGroup>
+      
+     
+    </ConfigGroup>
+    
+  
+
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="VAUD18 voltage control"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value=""/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="0"/>
+        <ConfigItem class="ucComboBox" id="id_VAUD18_YFlag_cb" >
+          <Parameter name="left_label" value="Buck_VAUD18"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="0"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Parameter name="unique" value="BuckVoltageConfig.VAUD18_YFlag"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_VAUD18_YFlag_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="top_label" value=""/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="0"/>
+        <Parameter name="top_margin" value="0"/>
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="top_label" value=""/>
+          <Parameter name="left_width" value="20"/>
+          <Parameter name="border" value="0"/>
+          <ConfigItem class="ucUpDown" id="id_VAUD18_HV_voltage_updown" min="650" max="1920">
+            <Parameter name="left_label" value="VAUD18_HV"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="1"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="10"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VAUD18_HV_voltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VAUD18_HV_voltage_tb"/>
+              <Parameter name="enable" refId="id_VAUD18_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucUpDown" id="id_VAUD18_MV_voltage_updown" min="650" max="1920">
+            <Parameter name="left_label" value="VAUD18_MV"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="15"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="10"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VAUD18_MV_voltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VAUD18_MV_voltage_tb"/>
+              <Parameter name="enable" refId="id_VAUD18_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucUpDown" id="id_VAUD18_LV_voltage_updown" min="650" max="1920">
+            <Parameter name="left_label" value="VAUD18_LV"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="15"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="10"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VAUD18_LV_voltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VAUD18_LV_voltage_tb"/>
+              <Parameter name="enable" refId="id_VAUD18_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="top_label" value=""/>
+          <Parameter name="left_width" value="20"/>
+          <Parameter name="border" value="0"/>
+          <ConfigItem class="ucComboBox" id="id_VAUD18_IPEAK_HV_cb" >
+            <Parameter name="left_label" value="VAUD18_IPEAK_HV"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="0"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/VAUD18_IPEAK.xml"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VAUD18_IPEAK_HV"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VAUD18_IPEAK_HV_tb"/>
+              <Parameter name="enable" refId="id_VAUD18_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucComboBox" id="id_VAUD18_IPEAK_MV_cb" >
+            <Parameter name="left_label" value="VAUD18_IPEAK_MV"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="0"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/VAUD18_IPEAK.xml"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VAUD18_IPEAK_MV"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VAUD18_IPEAK_MV_tb"/>
+              <Parameter name="enable" refId="id_VAUD18_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucComboBox" id="id_VAUD18_IPEAK_LV_cb" >
+            <Parameter name="left_label" value="VAUD18_IPEAK_LV"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="0"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/VAUD18_IPEAK.xml"/>
+            <Parameter name="unique" value="BuckVoltageConfig.VAUD18_IPEAK_LV"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VAUD18_IPEAK_LV_tb"/>
+              <Parameter name="enable" refId="id_VAUD18_YFlag_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+
+
+    <ConfigGroup class="ucLayoutHorizontal">
+      <Parameter name="top_label" value="Buck Dummy Load"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <Parameter name="top_margin" value="0"/>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value=""/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="0"/>
+        <ConfigItem class="ucComboBox" id="id_VCORE_Dummy_EN_cb" >
+          <Parameter name="left_label" value="Buck_VCORE"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="0"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Parameter name="unique" value="VCORE_Dummyload.VCORE_Dummy_EN"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_VCORE_Dummy_EN_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" id="id_VIO18_Dummy_EN_cb" >
+          <Parameter name="left_label" value="Buck_VIO18"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="0"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>          
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_VIO18_Dummy_EN_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" id="id_VAUD18_Dummy_EN_cb" >
+          <Parameter name="left_label" value="Buck_VAUD18"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="0"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_VAUD18_Dummy_EN_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" id="id_VRF_Dummy_EN_cb" >
+          <Parameter name="left_label" value="Buck_VRF"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="0"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_VRF_Dummy_EN_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" id="id_VPA_Dummy_EN_cb" >
+          <Parameter name="left_label" value="Buck_VPA"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="0"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>          
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_VPA_Dummy_EN_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value=""/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="0"/>
+        <ConfigItem class="ucComboBox" id="id_VCORE_DL1_cb" >
+          <Parameter name="left_label" value=""/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="1"/>
+          <Parameter name="top_margin" value="0"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/BuckDummyLoad.xml"/>          
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_VCORE_DL1_tb"/>
+            <Parameter name="enable" refId="id_VCORE_Dummy_EN_cb"/>
+            <Parameter name="enable_value" value="1"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" id="id_VIO18_DL1_cb" >
+          <Parameter name="left_label" value=""/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="1"/>
+          <Parameter name="top_margin" value="0"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/BuckDummyLoad.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_VIO18_DL1_tb"/>
+            <Parameter name="enable" refId="id_VIO18_Dummy_EN_cb"/>
+            <Parameter name="enable_value" value="1"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" id="id_VAUD18_DL1_cb" >
+          <Parameter name="left_label" value=""/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="1"/>
+          <Parameter name="top_margin" value="0"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/BuckDummyLoad.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_VAUD18_DL1_tb"/>
+            <Parameter name="enable" refId="id_VAUD18_Dummy_EN_cb"/>
+            <Parameter name="enable_value" value="1"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" id="id_VRF_DL1_cb" >
+          <Parameter name="left_label" value=""/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="1"/>
+          <Parameter name="top_margin" value="0"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/BuckDummyLoad.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_VRF_DL1_tb"/>
+            <Parameter name="enable" refId="id_VRF_Dummy_EN_cb"/>
+            <Parameter name="enable_value" value="1"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" id="id_VPA_DL1_cb" >
+          <Parameter name="left_label" value=""/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="1"/>
+          <Parameter name="top_margin" value="0"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/BuckDummyLoad.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_VPA_DL1_tb"/>
+            <Parameter name="enable" refId="id_VPA_Dummy_EN_cb"/>
+            <Parameter name="enable_value" value="1"/>
+          </Associator>
+        </ConfigItem>
+        
+      </ConfigGroup>
+    </ConfigGroup>
+
+
+  </ConfigGroup>
+
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="BuckRippleControl.Ripple_VCORE_EN" id="id_Ripple_VCORE_EN_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_Ripple_VCORE_EN_cb"/>
+      </Associator> 
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckRippleControl.Ripple_VIO18_EN" id="id_Ripple_VIO18_EN_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_Ripple_VIO18_EN_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckRippleControl.Ripple_VAUD18_EN" id="id_Ripple_VAUD18_EN_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_Ripple_VAUD18_EN_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckRippleControl.Ripple_VPA_EN" id="id_Ripple_VPA_EN_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_Ripple_VPA_EN_cb"/>
+      </Associator>
+    </ConfigItem>
+    
+    <ConfigItem class="ucTextBox" Unique="BuckVcoreVoltageConfig.VCORE_YFlag" id="id_VCORE_YFlag_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VCORE_YFlag_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVcoreVoltageConfig.VCORE_IPEAK_HV" id="id_VCORE_IPEAK_HV_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VCORE_IPEAK_HV_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVcoreVoltageConfig.VCORE_IPEAK_MV" id="id_VCORE_IPEAK_MV_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VCORE_IPEAK_MV_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVcoreVoltageConfig.VCORE_IPEAK_LV" id="id_VCORE_IPEAK_LV_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VCORE_IPEAK_LV_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVcoreVoltageConfig.VCORE_IPEAK_SLP" id="id_VCORE_IPEAK_SLP_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VCORE_IPEAK_SLP_cb"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VIO18_YFlag" id="id_VIO18_YFlag_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VIO18_YFlag_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VIO18_IPEAK_NM_3" id="id_VIO18_IPEAK_NM_3_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VIO18_IPEAK_NM_3_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VIO18_IPEAK_NM_5" id="id_VIO18_IPEAK_NM_5_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VIO18_IPEAK_NM_5_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VIO18_IPEAK_SLP" id="id_VIO18_IPEAK_SLP_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VIO18_IPEAK_SLP_cb"/>
+      </Associator>
+    </ConfigItem>
+    
+    
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VRF_YFlag" id="id_VRF_YFlag_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VRF_YFlag_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VRF_IPEAK_NM" id="id_VRF_IPEAK_NM_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VRF_IPEAK_NM_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VRF_IPEAK_SLP" id="id_VRF_IPEAK_SLP_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VRF_IPEAK_SLP_cb"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VPA_YFlag" id="id_VPA_YFlag_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VPA_YFlag_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VPA_2V2_voltage" id="id_VPA_2V2_voltage_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VPA_2V2_voltage_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VPA_1V8_voltage" id="id_VPA_1V8_voltage_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VPA_1V8_voltage_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VPA_1V6_voltage" id="id_VPA_1V6_voltage_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VPA_1V6_voltage_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VPA_1V4_voltage" id="id_VPA_1V4_voltage_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VPA_1V4_voltage_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VPA_1V2_voltage" id="id_VPA_1V2_voltage_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VPA_1V2_voltage_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VPA_IPEAK_2V2" id="id_VPA_IPEAK_2V2_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VPA_IPEAK_2V2_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VPA_IPEAK_1V8" id="id_VPA_IPEAK_1V8_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VPA_IPEAK_1V8_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VPA_IPEAK_1V6" id="id_VPA_IPEAK_1V6_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VPA_IPEAK_1V6_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VPA_IPEAK_1V4" id="id_VPA_IPEAK_1V4_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VPA_IPEAK_1V4_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VPA_IPEAK_1V2" id="id_VPA_IPEAK_1V2_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VPA_IPEAK_1V2_cb"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VAUD18_YFlag" id="id_VAUD18_YFlag_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VAUD18_YFlag_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VAUD18_HV_voltage" id="id_VAUD18_HV_voltage_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VAUD18_HV_voltage_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VAUD18_MV_voltage" id="id_VAUD18_MV_voltage_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VAUD18_MV_voltage_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VAUD18_LV_voltage" id="id_VAUD18_LV_voltage_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VAUD18_LV_voltage_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VAUD18_IPEAK_HV" id="id_VAUD18_IPEAK_HV_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VAUD18_IPEAK_HV_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VAUD18_IPEAK_MV" id="id_VAUD18_IPEAK_MV_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VAUD18_IPEAK_MV_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BuckVoltageConfig.VAUD18_IPEAK_LV" id="id_VAUD18_IPEAK_LV_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VAUD18_IPEAK_LV_cb"/>
+      </Associator>
+    </ConfigItem>
+
+
+    <ConfigItem class="ucTextBox" Unique="VCORE_Dummyload.VCORE_Dummy_EN" id="id_VCORE_Dummy_EN_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VCORE_Dummy_EN_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="VIO18_Dummyload.VIO18_Dummy_EN" id="id_VIO18_Dummy_EN_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VIO18_Dummy_EN_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="VAUD18_Dummyload.VAUD18_Dummy_EN" id="id_VAUD18_Dummy_EN_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VAUD18_Dummy_EN_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="VRF_Dummyload.VRF_Dummy_EN" id="id_VRF_Dummy_EN_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VRF_Dummy_EN_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="VPA_Dummyload.VPA_Dummy_EN" id="id_VPA_Dummy_EN_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VPA_Dummy_EN_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="VCORE_Dummyload.DL1" id="id_VCORE_DL1_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VCORE_DL1_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="VIO18_Dummyload.DL1" id="id_VIO18_DL1_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VIO18_DL1_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="VAUD18_Dummyload.DL1" id="id_VAUD18_DL1_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VAUD18_DL1_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="VRF_Dummyload.DL1" id="id_VRF_DL1_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VRF_DL1_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="VPA_Dummyload.DL1" id="id_VPA_DL1_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VPA_DL1_cb"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

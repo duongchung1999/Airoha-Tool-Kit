@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+  <Group Name="24M" Value="0"/>
+  <Group Name="48M" Value="1"/>
+  <!-- <Group Name="72M" Value="2"/> -->
+</DataGroup>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Game ULL Game/Chat Volume Smart Balance" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Game ULL Game/Chat Volume Smart Balance">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucComboBox" id="id_game_chat_volume_balance_enable_cb">
+      <Parameter name="left_label" value="Enable/Disable:"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="left_width" value="180"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_DSP_settings/GameChatVolumeBalanceEnable.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_game_chat_volume_balance_enable_tb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucGainUpDown" id="id_game_chat_volume_balance_effective_threshold_updown" max="96" min="-96">
+      <Parameter name="left_label" value="Effective threshold:"/>
+      <Parameter name="right_label" value="dB (-96 ~ +96)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="180"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.01"/>
+      <Parameter name="unique" value="gaming_mode_vol_balance_nvkey_t.effective_threshold_db"/>
+    </ConfigItem>
+    <ConfigItem class="ucUpDown" id="id_game_chat_volume_balance_effective_delay_time_updown" max="100000" min="0">
+      <Parameter name="left_label" value="Effective delay time:"/>
+      <Parameter name="right_label" value="ms (0 ~ 100000)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="180"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="1"/>
+      <Parameter name="unique" value="gaming_mode_vol_balance_nvkey_t.effective_delay_ms"/>
+    </ConfigItem>
+    <ConfigItem class="ucGainUpDown" id="id_game_chat_volume_balance_failure_threshold_updown" max="96" min="-96">
+      <Parameter name="left_label" value="Failure threshold:"/>
+      <Parameter name="right_label" value="dB (-96 ~ +96)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="180"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.01"/>
+      <Parameter name="unique" value="gaming_mode_vol_balance_nvkey_t.failure_threshold_db"/>
+    </ConfigItem>
+    <ConfigItem class="ucUpDown" id="id_game_chat_volume_balance_failure_delay_time_updown" max="100000" min="0">
+      <Parameter name="left_label" value="Failure delay time:"/>
+      <Parameter name="right_label" value="ms (0 ~ 100000)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="180"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="1"/>
+      <Parameter name="unique" value="gaming_mode_vol_balance_nvkey_t.failure_delay_ms"/>
+    </ConfigItem>
+    <ConfigItem class="ucGainUpDown" id="id_game_chat_volume_balance_adjustment_amount_updown" max="96" min="-96">
+      <Parameter name="left_label" value="Adjustment amount:"/>
+      <Parameter name="right_label" value="dB (-96 ~ +96)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="180"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.01"/>
+      <Parameter name="unique" value="gaming_mode_vol_balance_nvkey_t.adjustment_amount_db"/>
+    </ConfigItem>
+    <ConfigItem class="ucGainUpDown" id="id_game_chat_volume_balance_up_step_updown" max="96" min="0">
+      <Parameter name="left_label" value="Ramp up:"/>
+      <Parameter name="right_label" value="dB (0 ~ +96)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="180"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.01"/>
+      <Parameter name="unique" value="gaming_mode_vol_balance_nvkey_t.up_step_db"/>
+    </ConfigItem>
+    <ConfigItem class="ucGainUpDown" id="id_game_chat_volume_balance_down_step_updown" max="0" min="-96">
+      <Parameter name="left_label" value="Ramp down:"/>
+      <Parameter name="right_label" value="dB (-96 ~ 0)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="180"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.01"/>
+      <Parameter name="unique" value="gaming_mode_vol_balance_nvkey_t.down_step_db"/>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" present="hex" id="id_game_chat_volume_balance_enable_tb" Unique="gaming_mode_vol_balance_nvkey_t.enable" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_game_chat_volume_balance_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="id_game_chat_volume_balance_effective_threshold_tb" Unique="gaming_mode_vol_balance_nvkey_t.effective_threshold_db" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_game_chat_volume_balance_effective_threshold_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="id_game_chat_volume_balance_effective_delay_time_tb" Unique="gaming_mode_vol_balance_nvkey_t.effective_delay_ms" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_game_chat_volume_balance_effective_delay_time_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="id_game_chat_volume_balance_failure_threshold_tb" Unique="gaming_mode_vol_balance_nvkey_t.failure_threshold_db" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_game_chat_volume_balance_failure_threshold_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="id_game_chat_volume_balance_failure_delay_time_tb" Unique="gaming_mode_vol_balance_nvkey_t.failure_delay_ms" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_game_chat_volume_balance_failure_delay_time_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="id_game_chat_volume_balance_adjustment_amount_tb" Unique="gaming_mode_vol_balance_nvkey_t.adjustment_amount_db" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_game_chat_volume_balance_adjustment_amount_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="id_game_chat_volume_balance_up_step_tb" Unique="gaming_mode_vol_balance_nvkey_t.up_step_db" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_game_chat_volume_balance_up_step_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" id="id_game_chat_volume_balance_down_step_tb" Unique="gaming_mode_vol_balance_nvkey_t.down_step_db" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_game_chat_volume_balance_down_step_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_LPF_COEF_0" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_LPF_COEF_1" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_LPF_COEF_2" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_LPF_COEF_3" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_LPF_COEF_4" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_LPF_COEF_5" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_LPF_COEF_6" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_LPF_COEF_7" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_LPF_COEF_8" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_LPF_COEF_9" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_LPF_COEF_10" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_HPF_COEF_0" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_HPF_COEF_1" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_HPF_COEF_2" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_HPF_COEF_3" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_HPF_COEF_4" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_HPF_COEF_5" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_HPF_COEF_6" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_HPF_COEF_7" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_HPF_COEF_8" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_HPF_COEF_9" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.GC_HPF_COEF_10" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.ALPHA_UP" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.ALPHA_DN" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="gaming_mode_vol_balance_nvkey_t.chat_vol_nvkey.stru_game_chat_vol_para_s.MIN_DB" visible="hidden"/>
+  </ConfigGroup>
+</Page>

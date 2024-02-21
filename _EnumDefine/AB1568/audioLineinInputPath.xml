@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="ADC0/ADC1" Value="0"/>
+	<Group Name="I2S_Master_In" Value="1"/>
+	<Group Name="I2S_Slave_In" Value="3"/>
+</DataGroup>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="A2DP_Latency" class="Airoha.Project.ConfigTool.View.DspPage" parameter="A2DP_Latency">
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" present="hex" Unique="A2DP_SINK_LATENCY_STRU.Time" id="id_a2dp_latency_time_tb" visible="hidden" min="40" max="600">
+      <!--<Associator class="Airoha.AB155x.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_a2dp_latency_extendtime_tb"/>
+      </Associator>-->
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="A2DP_SINK_LATENCY_STRU.ExtendTime" id="id_a2dp_latency_extendtime_tb" visible="hidden" min="40" max="600">
+      <!--<Associator class="Airoha.AB155x.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_a2dp_latency_time_tb"/>
+      </Associator>-->
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="A2DP_SINK_LATENCY_STRU.Time4GamingMode" id="id_a2dp_latency_Time4Gaming_tb" visible="hidden" min="40" max="600">&#13;
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="A2DP_SINK_LATENCY_STRU.ExtendTime4GamingMode" id="id_a2dp_latency_ExtendTime4Gaming_tb" visible="hidden" min="40" max="600">&#13;
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="A2DP_SINK_LATENCY_STRU.SVenderCodecLatency" id="id_a2dp_latency_SVenderCodecLatency_tb" visible="hidden">&#13;
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="A2DP_SINK_LATENCY_STRU.ExtendSVenderCodecLatency" id="id_a2dp_latency_ExtendSVenderCodecLatency_tb" visible="hidden">&#13;
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="A2DP_SINK_LATENCY_STRU.SVenderCodecLatencyGamingMode" id="id_a2dp_latency_SVenderCodecLatencyGamingMode_tb" visible="hidden">&#13;
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="A2DP_SINK_LATENCY_STRU.ExtendSVenderCodecLatencyGMode" id="id_a2dp_latency_ExtendSVenderCodecLatencyGamingMode_tb" visible="hidden">&#13;
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="A2DP_SINK_LATENCY_STRU.SpeakerLatency"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="A2DP_SINK_LATENCY_STRU.ExtendSpdakerLatency"/>
+  </ConfigGroup>
+</Page>

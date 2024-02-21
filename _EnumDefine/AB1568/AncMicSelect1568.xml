@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="Analog_MIC0" Value="0"/>
+	<Group Name="Analog_MIC1" Value="1"/>
+	<Group Name="Analog_MIC2" Value="2"/>
+	<Group Name="Analog_MIC3" Value="3"/>
+	<Group Name="Analog_MIC4" Value="4"/>
+	<Group Name="Analog_MIC5" Value="5"/>
+	<Group Name="Digital_MIC0" Value="8"/>
+	<Group Name="Digital_MIC1" Value="9"/>
+	<Group Name="Digital_MIC2" Value="10"/>
+	<Group Name="Digital_MIC3" Value="11"/>
+	<Group Name="Digital_MIC4" Value="12"/>
+	<Group Name="Digital_MIC5" Value="13"/>
+</DataGroup>

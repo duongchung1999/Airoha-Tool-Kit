@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="Analog_SPK_Out_L" Value="0"/>
+	<Group Name="Analog_SPK_Out_R" Value="1"/>
+	<Group Name="Analog_SPK_Out_DUAL" Value="2"/>
+</DataGroup>

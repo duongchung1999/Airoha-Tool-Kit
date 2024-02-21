@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="AiroThru_Settings" class="Airoha.Project.ConfigTool.View.General" parameter="AiroThru_Settings">
+  <ConfigItem class="ucAtIO" Unique="DSP_PARA_AU_AFE_CTRL.OutputMode">
+    <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+      <Parameter name="inpath" refId="id_input_path"/>
+      <Parameter name="micBias1Level" refId="id_mic_bias1_level"/>
+      <Parameter name="micBias2Level" refId="id_mic_bias2_level"/>
+      <Parameter name="micBias34Level" refId="id_mic_bias34_level"/>
+      <Parameter name="modeSel" refId="id_data_mode_sel"/>
+    </Associator>
+  </ConfigItem>
+</Page>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Acoustic_Echo_Canceller" class="Airoha.Project.ConfigTool.View.DspPage" parameter="Acoustic_Echo_Canceller">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucDspCheckBox" id="id_aec_nr_en_ckb">
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_label" value="AEC/NR Enable"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcBitAssociator">
+        <Parameter name="data" refId="id_aec_nr_en_tb"/>
+        <Parameter name="position" value="0"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucDspCheckBox" id="id_aec_nr_en_speaker_ckb">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_label" value="Speaker Mode"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcBitAssociator">
+        <Parameter name="data" refId="id_aec_nr_en_tb"/>
+        <Parameter name="position" value="3"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="dualMicEnableCheckBox" id="id_dual_mic_enable_ckb">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_label" value="Dual Mic Enable"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_aec_nr_en_tb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucDspCheckBoxWithEnable" id="id_aec_nr_en_inear_ckb">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_label" value="InEar Enable"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcBitAssociator">
+        <Parameter name="data" refId="id_aec_nr_en_tb"/>
+        <Parameter name="position" value="4"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucDspCheckBoxWithEnable" id="id_aec_nr_en_dual_mic_nc_ckb">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_label" value="Dual mic NC Enable"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcBitAssociator">
+        <Parameter name="data" refId="id_aec_nr_en_tb"/>
+        <Parameter name="position" value="8"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="left_margin" value="25"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <ConfigItem class="ucDspDecimalUpDown" id="id_aec_dt_ratio_thrd_updown" min="0" max="100">
+          <Parameter name="left_label" value="Double Talk Aggressiveness:"/>
+          <Parameter name="right_label" value="%"/>
+          <Parameter name="left_width" value="250"/>
+          <Parameter name="step" value="0.1"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAecDtRatioThrdEngAssociator">
+            <Parameter name="data" refId="id_aec_dt_ratio_thrd_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucDspDecimalUpDown" id="id_aec_ec_resist_updown" min="0" max="100">
+          <Parameter name="left_label" value="EC Tail Control:"/>
+          <Parameter name="right_label" value="%"/>
+          <Parameter name="left_width" value="250"/>
+          <Parameter name="step" value="1"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAecEcResistEngAssociator">
+            <Parameter name="data" refId="id_aec_ec_resist_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucDspDecimalUpDown" id="id_aec_dt_length_updown" min="0" max="100">
+          <Parameter name="left_label" value="Double Talk Duration:"/>
+          <Parameter name="right_label" value="%"/>
+          <Parameter name="left_width" value="250"/>
+          <Parameter name="step" value="1"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAecDtLengthEngAssociator">
+            <Parameter name="data" refId="id_aec_dt_length_tb"/>
+            <Parameter name="ec_resist" refId="id_aec_ec_resist_tb"/>
+            <Parameter name="type" refId="id_aec_nr_en_speaker_ckb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucDspDecimalUpDown" id="id_aec_pf_min_updown" min="0" max="60">
+          <Parameter name="left_label" value="Non-linear EC Suppress Amount:"/>
+          <Parameter name="right_label" value="dB (0~60)"/>
+          <Parameter name="left_width" value="250"/>
+          <Parameter name="step" value="0.1"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAecPfMinEngAssociator">
+            <Parameter name="data" refId="id_aec_pf_min_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <ConfigGroup class="ucLayoutHorizontal">
+          <ConfigItem class="ucInitReferenceGainBtn" id="id_real_time_init_reference_gain">
+            <Parameter name="xml_file_path" value="/_DSP_settings/AecInitReferencGain.xml"/>
+          </ConfigItem>
+        </ConfigGroup>
+        <ConfigGroup class="ucLayoutHorizontal">
+          <ConfigItem class="ucGetReferenceGainBtn" id="id_real_time_get_reference_gain"/>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigGroup class="ucLayoutVertical">
+        <ConfigGroup class="ucLayoutHorizontal">
+          <ConfigItem class="ucComboBoxScanFile" id="id_combo_scan_file">
+            <Parameter name="left_label" value="Ref. gain test tone"/>
+            <Parameter name="left_width" value="100"/>
+            <Parameter name="width" value="120"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="wav_folder" value="/wav"/>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+
+      <ConfigGroup class="ucLayoutVertical">
+        <ConfigGroup class="ucLayoutHorizontal">
+          <ConfigItem class="ucStartPlayTestToneBtn">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_combo_scan_file"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <ConfigGroup class="ucLayoutHorizontal">
+          <ConfigItem class="ucStopPlayTestToneBtn"/>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="left_margin" value="10"/>
+      <ConfigGroup class="General">
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.CH1_REF_GAIN">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAecReferenceGainAssociator">
+            <Parameter name="init_gains" refId="id_real_time_init_reference_gain"/>
+            <Parameter name="get_gains" refId="id_real_time_get_reference_gain"/>
+            <Parameter name="key" value="CH1_REF_GAIN"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.CH2_REF_GAIN">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAecReferenceGainAssociator">
+            <Parameter name="init_gains" refId="id_real_time_init_reference_gain"/>
+            <Parameter name="get_gains" refId="id_real_time_get_reference_gain"/>
+            <Parameter name="key" value="CH2_REF_GAIN"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.CH3_REF_GAIN">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAecReferenceGainAssociator">
+            <Parameter name="init_gains" refId="id_real_time_init_reference_gain"/>
+            <Parameter name="get_gains" refId="id_real_time_get_reference_gain"/>
+            <Parameter name="key" value="CH3_REF_GAIN"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.CH4_REF_GAIN">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAecReferenceGainAssociator">
+            <Parameter name="init_gains" refId="id_real_time_init_reference_gain"/>
+            <Parameter name="get_gains" refId="id_real_time_get_reference_gain"/>
+            <Parameter name="key" value="CH4_REF_GAIN"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.CH1_REF2_GAIN">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAecReferenceGainAssociator">
+            <Parameter name="init_gains" refId="id_real_time_init_reference_gain"/>
+            <Parameter name="get_gains" refId="id_real_time_get_reference_gain"/>
+            <Parameter name="key" value="CH1_REF2_GAIN"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.CH2_REF2_GAIN">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAecReferenceGainAssociator">
+            <Parameter name="init_gains" refId="id_real_time_init_reference_gain"/>
+            <Parameter name="get_gains" refId="id_real_time_get_reference_gain"/>
+            <Parameter name="key" value="CH2_REF2_GAIN"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.CH3_REF2_GAIN">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAecReferenceGainAssociator">
+            <Parameter name="init_gains" refId="id_real_time_init_reference_gain"/>
+            <Parameter name="get_gains" refId="id_real_time_get_reference_gain"/>
+            <Parameter name="key" value="CH3_REF2_GAIN"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.CH4_REF2_GAIN">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAecReferenceGainAssociator">
+            <Parameter name="init_gains" refId="id_real_time_init_reference_gain"/>
+            <Parameter name="get_gains" refId="id_real_time_get_reference_gain"/>
+            <Parameter name="key" value="CH4_REF2_GAIN"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_NR_EN" id="id_aec_nr_en_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcAecNrAssociator">
+        <Parameter name="flag" refId="id_aec_nr_en_ckb"/>
+        <Parameter name="type" refId="id_aec_nr_en_speaker_ckb"/>
+        <Parameter name="flag_bit" value="0"/>
+        <Parameter name="type_bit" value="3"/>
+        <Parameter name="dualMicEnable" refId="id_dual_mic_enable_ckb"/>
+        <Parameter name="inearEnable" refId="id_aec_nr_en_inear_ckb"/>
+        <Parameter name="inearEnable_bit" value="4"/>
+        <Parameter name="dualMicNcEnable" refId="id_aec_nr_en_dual_mic_nc_ckb"/>
+        <Parameter name="dualMicNcEnable_bit" value="8"/>		
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_CNG_GAIN_M" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_ref_pow_min" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_ECHO_TAIL_LENGTH" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_EC_RESIST" id="id_aec_ec_resist_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcAecEcResistUserAssociator">
+        <Parameter name="data" refId="id_aec_ec_resist_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_MU_FAC" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_MU_MIN" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_NORM_CAP1" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_NORM_CAP2" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_PF_MIN" id="id_aec_pf_min_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcAecPfMinUserAssociator">
+        <Parameter name="data" refId="id_aec_pf_min_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_block_percent" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_DT_boost" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_PF_order" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_DT_ratio_thrd" id="id_aec_dt_ratio_thrd_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcAecDtRatioThrdUserAssociator">
+        <Parameter name="data" refId="id_aec_dt_ratio_thrd_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_norm_tap" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_DT_length" id="id_aec_dt_length_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcAecDtLengthUserAssociator">
+        <Parameter name="data" refId="id_aec_dt_length_updown"/>
+        <Parameter name="ec_resist" refId="id_aec_ec_resist_tb"/>
+        <Parameter name="type" refId="id_aec_nr_en_speaker_ckb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.MULT_AFTER_EC" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.DSP_EC_SW" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_Corel_Ratio1_Sensitive" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_Corel_Ratio4_Sensitive" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_Ch4_Percentage" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.RXIN_TXREF_DELAY" min="1" max="7" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.MIC_EC_DELAY" min="1" max="128" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_REF_GAIN_AUTO" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_ENG_VAD_THR" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_ENG_VAD_HANG" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_ENG_POW_INIT" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_slow_up_alpha" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_slow_dn_alpha" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_fast_up_alpha" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.AEC_fast_dn_alpha" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.SBEC_PF_order_12" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.SBEC_PF_order_34" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.SBEC_DT_ratio_thrd_12" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.SBEC_DT_ratio_thrd_34" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.SBEC_PF_MIN_12" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.SBEC_PF_MIN_34" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AEC_STRU.SBEC_noise_paste_gain" visible="hidden"/>
+  </ConfigGroup>
+</Page>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="CHG_ADCconfig" class="Airoha.Project.ConfigTool.View.General" parameter="CHG_ADCconfig">
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.cc1thresholdvoltage"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.cc1thresholdADC"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.cc1thdvoltageoffset"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.cc1thdADCoffset"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.cc2thresholdvoltage"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.cc2thresholdADC"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.cc2offsetvoltage"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.cc2offsetADC"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.cvthresholdvoltage"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.cvthresholdADC"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.cvthdvoltageoffset"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.cvthdADCoffset"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.fullbatvoltage"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.fullbatADC"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.fullbatvoltageoffset"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.fullbatADCoffset"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.rechargevoltage"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.rechargeADC"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.rechargevoltageoffset"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.rechargeADCoffset"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.fullbatvoltage2"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.fullbatADC2"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.fullbatvoltage2offset"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig_65.fullbatADC2offset"/>
+  
+</Page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandBook>
+  <RACE_RESPONSE>
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <data type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </RACE_RESPONSE>
+</CommandBook>

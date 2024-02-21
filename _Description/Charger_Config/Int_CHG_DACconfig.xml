@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Int_CHG_DACconfig" class="Airoha.Project.ConfigTool.View.General" parameter="Int_CHG_DACconfig">
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_DACconfig.tricklecurrentDAC"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_DACconfig.tricklecurrentDACoffset"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_DACconfig.cc1currentDAC"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_DACconfig.cc1currentDACoffset"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_DACconfig.cc2currentDAC"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_DACconfig.cc2currentDACoffset"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_DACconfig.cvDAC"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_DACconfig.cvDACoffset"/>
+</Page>

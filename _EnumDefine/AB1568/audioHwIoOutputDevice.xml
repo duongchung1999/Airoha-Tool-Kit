@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="Analog_SPK_Out_L" Value="0"/>
+	<Group Name="Analog_SPK_Out_R" Value="1"/>
+	<Group Name="Analog_SPK_Out_Dual" Value="2"/>
+	<Group Name="I2S_Master_Out" Value="3"/>
+	<Group Name="I2S_Slave_Out" Value="4"/>
+</DataGroup>

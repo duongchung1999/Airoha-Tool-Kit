@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="BoomMic_High_Pass_Filter" class="Airoha.Project.ConfigTool.View.PurePage" parameter="BoomMic_High_Pass_Filter">
+  <ConfigGroup class="DspPage">
+    <Parameter name="required_nvkey_id" value="0xE195"/>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucComboBox" id="id_tx_voice_hpf_filter_type_bmic_cb">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="left_label" value="Voice HPF Filter Type"/>
+        <Parameter name="xml_file_path" value="/_DSP_settings/VoiceHpfType.xml"/>
+        <Parameter name="unique" value="DSP_PARA_NR_BMIC_STRU.HPF_COEF_SW.tx"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_tx_voice_hpf_filter_type_bmic_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_NR_BMIC_STRU.HPF_COEF_SW.tx" id="id_tx_voice_hpf_filter_type_bmic_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_tx_voice_hpf_filter_type_bmic_cb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

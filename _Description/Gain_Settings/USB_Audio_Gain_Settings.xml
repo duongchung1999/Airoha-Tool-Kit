@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="USB Audio Gain Settings" class="Airoha.Project.ConfigTool.View.TabPage" parameter="USB Audio Gain Settings">
+  <ConfigGroup title="Output" class="PurePage">
+          <ConfigGroup class="ucLayoutHorizontal">
+            <!--<ConfigGroup class="ucLayoutHorizontal">
+              <Parameter name="top_label" value="USB Analog Output Gain"/>
+              <Parameter name="left_margin" value="12"/>
+              <Parameter name="top_margin" value="10"/>
+              <Parameter name="bottom_margin" value="20"/>
+              <ConfigItem class="ucDspDecimalUpDown" id="id_ana_gain_usb_total_index_updown" min="1" max="101">
+                <Parameter name="top_label" value="Total index"/>
+                <Parameter name="step" value="1"/>
+                <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                  <Parameter name="data" refId="id_ana_gain_usb_total_index_tb"/>
+                </Associator>
+              </ConfigItem>
+              <ConfigGroup class="ucGainTable" id="id_ana_gain_usb_table">
+                <Parameter name="left_margin" value="12"/>
+                <Parameter name="top_margin" value="10"/>
+                <Parameter name="bottom_margin" value="10"/>
+                <Parameter name="border" value="1"/>
+                <Parameter name="total_num" value="101"/>
+                <Parameter name="unique" value="DSP_PARA_ANA_GAIN_TABLE_USB_STRU.TotalIndex"/>
+                <ConfigItem class="ucGainComboBox" id="id_usb_analog_output_gain_cb_#">
+                  <Parameter name="left_label" value="#"/>
+                  <Parameter name="right_label" value="dB"/>
+                  <Parameter name="left_width" value="30"/>
+                  <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/AnalogOutputGain.xml"/>
+                  <Parameter name="unique" value="DSP_PARA_ANA_GAIN_TABLE_USB_STRU.AnalogOutGainIndex#"/>
+                </ConfigItem>
+                <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                  <Parameter name="data" refId="id_ana_gain_usb_total_index_updown"/>
+                </Associator>
+              </ConfigGroup>
+            </ConfigGroup>-->
+            <ConfigGroup class="ucLayoutHorizontal">
+              <Parameter name="top_label" value="USB Digital Output Gain"/>
+			  <Parameter name="left_margin" value="10"/>
+              <Parameter name="top_margin" value="10"/>
+              <Parameter name="bottom_margin" value="20"/>
+              <ConfigItem class="ucDspDecimalUpDown" id="id_usb_digital_output_gain_total_index_updown" min="1" max="101">
+                <Parameter name="top_label" value="Total index"/>
+                <Parameter name="step" value="1"/>
+                <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                  <Parameter name="data" refId="id_usb_digital_output_gain_total_index_tb"/>
+                </Associator>
+              </ConfigItem>
+              <ConfigGroup class="ucGainTable" id="id_usb_digital_output_gain_table">
+                <Parameter name="left_margin" value="12"/>
+                <Parameter name="top_margin" value="10"/>
+                <Parameter name="bottom_margin" value="10"/>
+                <Parameter name="border" value="1"/>
+                <Parameter name="total_num" value="101"/>
+                <Parameter name="unique" value="DSP_PARA_GAIN_TABLE_USB_STRU.TotalIndex"/>
+                <ConfigItem class="ucGainComboBox" id="id_usb_digital_output_gain_cb_#">
+                  <Parameter name="left_label" value="#"/>
+                  <Parameter name="right_label" value="dB"/>
+                  <Parameter name="left_width" value="30"/>
+                  <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalOutputGain.xml"/>
+                  <Parameter name="unique" value="DSP_PARA_GAIN_TABLE_USB_STRU.DigitalOutGainIndex#"/>
+                </ConfigItem>
+                <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                  <Parameter name="data" refId="id_usb_digital_output_gain_total_index_updown"/>
+                </Associator>
+              </ConfigGroup>
+            </ConfigGroup>
+          </ConfigGroup>
+          <ConfigGroup class="General" visible="hidden">
+            <ConfigItem class="ucTextBox" present="hex" id="id_ana_gain_usb_total_index_tb" Unique="DSP_PARA_ANA_GAIN_TABLE_USB_STRU.TotalIndex" visible="hidden">
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="data" refId="id_ana_gain_usb_total_index_updown"/>
+              </Associator>
+            </ConfigItem>
+          </ConfigGroup>
+          <ConfigGroup class="ucGainGeneral">
+            <Parameter name="total_num" value="101" />
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_ANA_GAIN_TABLE_USB_STRU.AnalogOutGainIndex#" id="id_usb_analog_output_gain_tb_#" visible="hidden">
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="data" refId="id_usb_analog_output_gain_cb_#"/>
+              </Associator>
+            </ConfigItem>
+          </ConfigGroup>
+          <ConfigGroup class="General"  visible="hidden">
+            <ConfigItem class="ucTextBox" present="hex" id="id_usb_digital_output_gain_total_index_tb" Unique="DSP_PARA_GAIN_TABLE_USB_STRU.TotalIndex" visible="hidden">
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="data" refId="id_usb_digital_output_gain_total_index_updown"/>
+              </Associator>
+            </ConfigItem>
+          </ConfigGroup>
+          <ConfigGroup class="ucGainGeneral">
+            <Parameter name="total_num" value="101" visible="hidden"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_GAIN_TABLE_USB_STRU.DigitalOutGainIndex#" id="id_usb_digital_output_gain_tb_#" visible="hidden">
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="data" refId="id_usb_digital_output_gain_cb_#"/>
+              </Associator>
+            </ConfigItem>
+          </ConfigGroup>
+        </ConfigGroup>
+
+</Page>

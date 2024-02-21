@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<!-- <Group Name="UART0(GPIOx2)" Value="0"/> -->
+	<Group Name="UART1(GPIOx2)" Value="1"/>
+<!-- 	<Group Name="UART0(GPIOx1)" Value="2"/>
+	<Group Name="UART1(GPIOx1)" Value="3"/>	 -->
+</DataGroup>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="System_Log_Settings" class="Airoha.Project.ConfigTool.View.PurePage" parameter="System_Log_Settings">
+  <ConfigGroup class="ucLayoutVertical">
+    <ConfigItem class="ucComboBox" id="id_sys_log_port_combo">
+      <Parameter name="left_label" value="System Log Port"/>
+      <Parameter name="left_width" value="150"/>
+      <Parameter name="width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/AB1568/logport.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_sys_log_port"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="syslog_port_config.syslog_port" id="id_sys_log_port" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_sys_log_port_combo"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+
+  <ConfigGroup class="ucLayoutVertical">
+    <ConfigItem class="ucComboBox" id="id_sys_log_baudrate_combo">
+      <Parameter name="left_label" value="System Log Baudrate"/>
+      <Parameter name="left_width" value="150"/>
+      <Parameter name="width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/LogBaudrate.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_sys_log_baudrate"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="syslog_port_config.baudrate" id="id_sys_log_baudrate" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_sys_log_baudrate_combo"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+
+  <!--<ConfigGroup class="ucLayoutVertical">
+    <ConfigItem class="ucDspCheckBox" id="id_log_dump_enable_ckb">
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_label" value="Log Dump Enable"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_log_dump_enable"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>-->
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="syslog_port_config.log_dump_enable" id="id_log_dump_enable" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_log_dump_enable_ckb"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  
+  <ConfigGroup class="ucLayoutVertical">
+    <ConfigItem class="ucComboBox" id="id_sys_log_level_cpu0_combo">
+      <Parameter name="left_label" value="System Log Level CPU 0"/>
+      <Parameter name="left_width" value="150"/>
+      <Parameter name="width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/loglevel.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_sys_log_level_cpu0"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="syslog_level_config.CPU0_Level" id="id_sys_log_level_cpu0" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_sys_log_level_cpu0_combo"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  
+  <ConfigGroup class="ucLayoutVertical">
+    <ConfigItem class="ucComboBox" id="id_sys_log_level_cpu1_combo">
+      <Parameter name="left_label" value="System Log Level CPU 1"/>
+      <Parameter name="left_width" value="150"/>
+      <Parameter name="width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/loglevel.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_sys_log_level_cpu1"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="syslog_level_config.CPU1_Level" id="id_sys_log_level_cpu1" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_sys_log_level_cpu1_combo"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

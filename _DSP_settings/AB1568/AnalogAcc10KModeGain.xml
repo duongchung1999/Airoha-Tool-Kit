@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="+0dB" Value="0"/>
+	<Group Name="+3dB" Value="300"/>
+	<Group Name="+6dB" Value="600"/>
+	<Group Name="+9dB" Value="900"/>
+	<Group Name="+12dB" Value="1200"/>
+	<Group Name="+15dB" Value="1500"/>
+	<Group Name="+18dB" Value="1800"/>
+	<Group Name="+24dB" Value="2400"/>
+	<Group Name="+30dB" Value="3000"/>
+	<Group Name="+36dB" Value="3600"/>
+</DataGroup>
+
+

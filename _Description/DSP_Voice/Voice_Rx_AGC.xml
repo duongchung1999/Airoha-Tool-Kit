@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Voice_Rx_AGC" class="Airoha.Project.ConfigTool.View.TabPage" parameter="Voice_Rx_AGC" scroll="vertical">
+  <ConfigGroup title="Wideband" class="ucLayoutVertical">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucDspCheckBox" id="id_voice_wb_rx_agc_enable_ckb">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="right_label" value="Enable/Disable"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcBitAssociator">
+          <Parameter name="data" refId="id_voice_wb_rx_agc_enable_tb"/>
+          <Parameter name="position" value="0"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="bottom_margin" value="10"/>
+        <ConfigItem class="ucCpdMaxOutputUpDown" id="id_voice_wb_rx_agc_target_level_updown" max="-3" min="-36">
+          <Parameter name="top_label" value="Target Level:"/>
+          <Parameter name="bottom_label" value="dB (-36 ~ -3)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_VOICE_WB_RX_AGC_STRU.target_level"/>
+        </ConfigItem>
+        <ConfigItem class="ucAgcMinLevelUpDown" id="id_voice_wb_rx_agc_min_level_updown" max="-40" min="-85">
+          <Parameter name="top_label" value="Min Level:"/>
+          <Parameter name="bottom_label" value="dB (-85 ~ -40)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_VOICE_WB_RX_AGC_STRU.min_level"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="min" refId="id_voice_wb_rx_agc_bot_level_updown"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucAgcMinLevelUpDown" id="id_voice_wb_rx_agc_bot_level_updown" max="-40" min="-85">
+          <Parameter name="top_label" value="Bot Level:"/>
+          <Parameter name="bottom_label" value="dB (-85 ~ -40)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_VOICE_WB_RX_AGC_STRU.bot_level"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="max" refId="id_voice_wb_rx_agc_min_level_updown"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="bottom_margin" value="10"/>
+        <ConfigItem class="ucCpdMaxOutputUpDown" id="id_voice_wb_rx_agc_gain_max_updown" max="24" min="0">
+          <Parameter name="top_label" value="Gain Max:"/>
+          <Parameter name="bottom_label" value="dB (0 ~ 24)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_VOICE_WB_RX_AGC_STRU.gain_max"/>
+        </ConfigItem>
+        <ConfigItem class="ucCpdMaxOutputUpDown" id="id_voice_wb_rx_agc_gain_min_updown" max="0" min="-40">
+          <Parameter name="top_label" value="Gain Min:"/>
+          <Parameter name="bottom_label" value="dB (-40 ~ 0)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_VOICE_WB_RX_AGC_STRU.gain_min"/>
+        </ConfigItem>
+        <ConfigItem class="ucAgcAlphaAttackUpDown" id="id_voice_wb_rx_agc_alpha_atk_updown" max="2000" min="0">
+          <Parameter name="top_label" value="Alpha Attack:"/>
+          <Parameter name="bottom_label" value="ms (0 ~ 2000)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_VOICE_WB_RX_AGC_STRU.alpha_attack"/>
+          <Parameter name="ref_unique_period" value="DSP_PARA_VOICE_WB_RX_AGC_STRU.period"/>
+          <Parameter name="sr" value="16000"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="period" refId="id_voice_wb_rx_agc_period_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucAgcAlphaAttackUpDown" id="id_voice_wb_rx_agc_alpha_decay_updown" max="3000" min="0">
+          <Parameter name="top_label" value="Alpha Decay:"/>
+          <Parameter name="bottom_label" value="ms (0 ~ 3000)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_VOICE_WB_RX_AGC_STRU.alpha_decay"/>
+          <Parameter name="ref_unique_period" value="DSP_PARA_VOICE_WB_RX_AGC_STRU.period"/>
+          <Parameter name="sr" value="16000"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="period" refId="id_voice_wb_rx_agc_period_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="bottom_margin" value="10"/>
+        <ConfigItem class="ucAgcAdjPosIncUpDown" id="id_voice_wb_rx_agc_adj_pos_inc_updown" max="6" min="0">
+          <Parameter name="top_label" value="Adj Rate:"/>
+          <Parameter name="bottom_label" value="dB/s (0 ~ 6)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_VOICE_WB_RX_AGC_STRU.adj_pos_inc"/>
+          <Parameter name="sr" value="16000"/>
+        </ConfigItem>
+        <!-- <ConfigItem class="ucComboBox" id="id_voice_wb_rx_agc_sr_cb"> -->
+        <!-- <Parameter name="top_label" value="Sample Rate:"/> -->
+        <!-- <Parameter name="bottom_label" value="Hz"/> -->
+        <!-- <Parameter name="left_margin" value="10"/> -->
+        <!-- <Parameter name="top_margin" value="10"/> -->
+        <!-- <Parameter name="xml_file_path" value="/_DSP_settings/VoiceSampleRate.xml"/> -->
+        <!-- <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator"> -->
+        <!-- <Parameter name="data" refId="id_voice_wb_rx_agc_sample_rate_tb"/> -->
+        <!-- </Associator> -->
+        <!-- </ConfigItem> -->
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <ConfigGroup class="ucLiveChart">
+        <Parameter name="x_axis_type" value="decimal"/>
+        <Parameter name="layout_column_weight" value="1"/>
+        <Parameter name="x_axis_title" value="Input (dBFS)"/>
+        <Parameter name="y_axis_title" value="Output (dBFS)"/>
+        <Parameter name="y_axis_max_value" value="0"/>
+        <Parameter name="y_axis_min_value" value="-100"/>
+        <Parameter name="x_axis_max_value" value="0"/>
+        <Parameter name="x_axis_min_value" value="-100"/>
+        <Parameter name="x_axis_step" value="10"/>
+        <Parameter name="y_axis_step" value="10"/>
+        <ConfigItem class="line" id="id_voice_wb_rx_agc_chart_line">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAgcLineAssociator">
+            <Parameter name="target_level" refId="id_voice_wb_rx_agc_target_level_updown"/>
+            <Parameter name="min_level" refId="id_voice_wb_rx_agc_min_level_updown"/>
+            <Parameter name="bot_level" refId="id_voice_wb_rx_agc_bot_level_updown"/>
+            <Parameter name="gain_max" refId="id_voice_wb_rx_agc_gain_max_updown"/>
+            <Parameter name="gain_min" refId="id_voice_wb_rx_agc_gain_min_updown"/>
+            <Parameter name="adj_pos_inc" refId="id_voice_wb_rx_agc_adj_pos_inc_updown"/>
+            <Parameter name="sr" value="16000"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical" visible="hidden">
+      <ConfigGroup class="General">
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_WB_RX_AGC_STRU.ENABLE" id="id_voice_wb_rx_agc_enable_tb">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcFlagAssociator">
+            <Parameter name="flag" refId="id_voice_wb_rx_agc_enable_ckb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_WB_RX_AGC_STRU.REVISION"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_WB_RX_AGC_STRU.agc_mode"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_WB_RX_AGC_STRU.period" disable="1" id="id_voice_wb_rx_agc_period_tb"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_WB_RX_AGC_STRU.reserve_s"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_WB_RX_AGC_STRU.target_level">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdMaxOutputAssociator">
+            <Parameter name="data" refId="id_voice_wb_rx_agc_target_level_updown"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_WB_RX_AGC_STRU.gain_max">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdMaxOutputAssociator">
+            <Parameter name="data" refId="id_voice_wb_rx_agc_gain_max_updown"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_WB_RX_AGC_STRU.gain_min">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdMaxOutputAssociator">
+            <Parameter name="data" refId="id_voice_wb_rx_agc_gain_min_updown"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_WB_RX_AGC_STRU.gain_alpha"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_WB_RX_AGC_STRU.alpha_attack">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAgcAlphaAtkAssociator">
+            <Parameter name="data" refId="id_voice_wb_rx_agc_alpha_atk_updown"/>
+            <Parameter name="sr" value="16000"/>
+            <Parameter name="period" refId="id_voice_wb_rx_agc_period_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_WB_RX_AGC_STRU.alpha_decay">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAgcAlphaAtkAssociator">
+            <Parameter name="data" refId="id_voice_wb_rx_agc_alpha_decay_updown"/>
+            <Parameter name="sr" value="16000"/>
+            <Parameter name="period" refId="id_voice_wb_rx_agc_period_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_WB_RX_AGC_STRU.vad_debounce"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_WB_RX_AGC_STRU.adj_pos_inc">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAgcAdjPosIncAssociator">
+            <Parameter name="data" refId="id_voice_wb_rx_agc_adj_pos_inc_updown"/>
+            <Parameter name="sr" value="16000"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_WB_RX_AGC_STRU.adj_neg_inc">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAgcAdjNegIncAssociator">
+            <Parameter name="data" refId="id_voice_wb_rx_agc_adj_pos_inc_updown"/>
+            <Parameter name="sr" value="16000"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_WB_RX_AGC_STRU.min_level">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAgcMinLevelAssociator">
+            <Parameter name="data" refId="id_voice_wb_rx_agc_min_level_updown"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_WB_RX_AGC_STRU.bot_level">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAgcMinLevelAssociator">
+            <Parameter name="data" refId="id_voice_wb_rx_agc_bot_level_updown"/>
+          </Associator>
+        </ConfigItem>
+        <!-- <ConfigItem class="ucTextBox" Unique="UI_DSP_PERIOD_SAMPLINGRATE_STRU.AgcTx_SR" id="id_voice_wb_rx_agc_sample_rate_tb"> -->
+        <!-- <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator"> -->
+        <!-- <Parameter name="data" refId="id_voice_wb_rx_agc_sr_cb"/> -->
+        <!-- </Associator> -->
+        <!-- </ConfigItem> -->
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup title="Narrowband" class="ucLayoutVertical">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucDspCheckBox" id="id_voice_nb_rx_agc_enable_ckb">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="right_label" value="Enable/Disable"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcBitAssociator">
+          <Parameter name="data" refId="id_voice_nb_rx_agc_enable_tb"/>
+          <Parameter name="position" value="0"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="bottom_margin" value="10"/>
+        <ConfigItem class="ucCpdMaxOutputUpDown" id="id_voice_nb_rx_agc_target_level_updown" max="-3" min="-36">
+          <Parameter name="top_label" value="Target Level:"/>
+          <Parameter name="bottom_label" value="dB (-36 ~ -3)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_VOICE_NB_RX_AGC_STRU.target_level"/>
+        </ConfigItem>
+        <ConfigItem class="ucAgcMinLevelUpDown" id="id_voice_nb_rx_agc_min_level_updown" max="-40" min="-85">
+          <Parameter name="top_label" value="Min Level:"/>
+          <Parameter name="bottom_label" value="dB (-85 ~ -40)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_VOICE_NB_RX_AGC_STRU.min_level"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="min" refId="id_voice_nb_rx_agc_bot_level_updown"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucAgcMinLevelUpDown" id="id_voice_nb_rx_agc_bot_level_updown" max="-40" min="-85">
+          <Parameter name="top_label" value="Bot Level:"/>
+          <Parameter name="bottom_label" value="dB (-85 ~ -40)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_VOICE_NB_RX_AGC_STRU.bot_level"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="max" refId="id_voice_nb_rx_agc_min_level_updown"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="bottom_margin" value="10"/>
+        <ConfigItem class="ucCpdMaxOutputUpDown" id="id_voice_nb_rx_agc_gain_max_updown" max="24" min="0">
+          <Parameter name="top_label" value="Gain Max:"/>
+          <Parameter name="bottom_label" value="dB (0 ~ 24)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_VOICE_NB_RX_AGC_STRU.gain_max"/>
+        </ConfigItem>
+        <ConfigItem class="ucCpdMaxOutputUpDown" id="id_voice_nb_rx_agc_gain_min_updown" max="0" min="-40">
+          <Parameter name="top_label" value="Gain Min:"/>
+          <Parameter name="bottom_label" value="dB (-40 ~ 0)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_VOICE_NB_RX_AGC_STRU.gain_min"/>
+        </ConfigItem>
+        <ConfigItem class="ucAgcAlphaAttackUpDown" id="id_voice_nb_rx_agc_alpha_atk_updown" max="2000" min="0">
+          <Parameter name="top_label" value="Alpha Attack:"/>
+          <Parameter name="bottom_label" value="ms (0 ~ 2000)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_VOICE_NB_RX_AGC_STRU.alpha_attack"/>
+          <Parameter name="ref_unique_period" value="DSP_PARA_VOICE_NB_RX_AGC_STRU.period"/>
+          <Parameter name="sr" value="8000"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="period" refId="id_voice_nb_rx_agc_period_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucAgcAlphaAttackUpDown" id="id_voice_nb_rx_agc_alpha_decay_updown" max="3000" min="0">
+          <Parameter name="top_label" value="Alpha Decay:"/>
+          <Parameter name="bottom_label" value="ms (0 ~ 3000)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_VOICE_NB_RX_AGC_STRU.alpha_decay"/>
+          <Parameter name="ref_unique_period" value="DSP_PARA_VOICE_NB_RX_AGC_STRU.period"/>
+          <Parameter name="sr" value="8000"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="period" refId="id_voice_nb_rx_agc_period_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="bottom_margin" value="10"/>
+        <ConfigItem class="ucAgcAdjPosIncUpDown" id="id_voice_nb_rx_agc_adj_pos_inc_updown" max="6" min="0">
+          <Parameter name="top_label" value="Adj Rate:"/>
+          <Parameter name="bottom_label" value="dB/s (0 ~ 6)"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_VOICE_NB_RX_AGC_STRU.adj_pos_inc"/>
+          <Parameter name="sr" value="8000"/>
+        </ConfigItem>
+        <!-- <ConfigItem class="ucComboBox" id="id_voice_nb_rx_agc_sr_cb"> -->
+        <!-- <Parameter name="top_label" value="Sample Rate:"/> -->
+        <!-- <Parameter name="bottom_label" value="Hz"/> -->
+        <!-- <Parameter name="left_margin" value="10"/> -->
+        <!-- <Parameter name="top_margin" value="10"/> -->
+        <!-- <Parameter name="xml_file_path" value="/_DSP_settings/VoiceSampleRate.xml"/> -->
+        <!-- <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator"> -->
+        <!-- <Parameter name="data" refId="id_voice_nb_rx_agc_sample_rate_tb"/> -->
+        <!-- </Associator> -->
+        <!-- </ConfigItem> -->
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <ConfigGroup class="ucLiveChart">
+        <Parameter name="x_axis_type" value="decimal"/>
+        <Parameter name="layout_column_weight" value="1"/>
+        <Parameter name="x_axis_title" value="Input (dBFS)"/>
+        <Parameter name="y_axis_title" value="Output (dBFS)"/>
+        <Parameter name="y_axis_max_value" value="0"/>
+        <Parameter name="y_axis_min_value" value="-100"/>
+        <Parameter name="x_axis_max_value" value="0"/>
+        <Parameter name="x_axis_min_value" value="-100"/>
+        <Parameter name="x_axis_step" value="10"/>
+        <Parameter name="y_axis_step" value="10"/>
+        <ConfigItem class="line" id="id_voice_nb_rx_agc_chart_line">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAgcLineAssociator">
+            <Parameter name="target_level" refId="id_voice_nb_rx_agc_target_level_updown"/>
+            <Parameter name="min_level" refId="id_voice_nb_rx_agc_min_level_updown"/>
+            <Parameter name="bot_level" refId="id_voice_nb_rx_agc_bot_level_updown"/>
+            <Parameter name="gain_max" refId="id_voice_nb_rx_agc_gain_max_updown"/>
+            <Parameter name="gain_min" refId="id_voice_nb_rx_agc_gain_min_updown"/>
+            <Parameter name="adj_pos_inc" refId="id_voice_nb_rx_agc_adj_pos_inc_updown"/>
+            <Parameter name="sr" value="8000"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical" visible="hidden">
+      <ConfigGroup class="General">
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_NB_RX_AGC_STRU.ENABLE" id="id_voice_nb_rx_agc_enable_tb">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcFlagAssociator">
+            <Parameter name="flag" refId="id_voice_nb_rx_agc_enable_ckb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_NB_RX_AGC_STRU.REVISION"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_NB_RX_AGC_STRU.agc_mode"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_NB_RX_AGC_STRU.period" disable="1" id="id_voice_nb_rx_agc_period_tb"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_NB_RX_AGC_STRU.reserve_s"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_NB_RX_AGC_STRU.target_level">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdMaxOutputAssociator">
+            <Parameter name="data" refId="id_voice_nb_rx_agc_target_level_updown"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_NB_RX_AGC_STRU.gain_max">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdMaxOutputAssociator">
+            <Parameter name="data" refId="id_voice_nb_rx_agc_gain_max_updown"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_NB_RX_AGC_STRU.gain_min">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcCpdMaxOutputAssociator">
+            <Parameter name="data" refId="id_voice_nb_rx_agc_gain_min_updown"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_NB_RX_AGC_STRU.gain_alpha"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_NB_RX_AGC_STRU.alpha_attack">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAgcAlphaAtkAssociator">
+            <Parameter name="data" refId="id_voice_nb_rx_agc_alpha_atk_updown"/>
+            <Parameter name="sr" value="8000"/>
+            <Parameter name="period" refId="id_voice_nb_rx_agc_period_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_NB_RX_AGC_STRU.alpha_decay">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAgcAlphaAtkAssociator">
+            <Parameter name="data" refId="id_voice_nb_rx_agc_alpha_decay_updown"/>
+            <Parameter name="sr" value="8000"/>
+            <Parameter name="period" refId="id_voice_nb_rx_agc_period_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_NB_RX_AGC_STRU.vad_debounce"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_NB_RX_AGC_STRU.adj_pos_inc">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAgcAdjPosIncAssociator">
+            <Parameter name="data" refId="id_voice_nb_rx_agc_adj_pos_inc_updown"/>
+            <Parameter name="sr" value="8000"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_NB_RX_AGC_STRU.adj_neg_inc">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAgcAdjNegIncAssociator">
+            <Parameter name="data" refId="id_voice_nb_rx_agc_adj_pos_inc_updown"/>
+            <Parameter name="sr" value="8000"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_NB_RX_AGC_STRU.min_level">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAgcMinLevelAssociator">
+            <Parameter name="data" refId="id_voice_nb_rx_agc_min_level_updown"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VOICE_NB_RX_AGC_STRU.bot_level">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcAgcMinLevelAssociator">
+            <Parameter name="data" refId="id_voice_nb_rx_agc_bot_level_updown"/>
+          </Associator>
+        </ConfigItem>
+        <!-- <ConfigItem class="ucTextBox" Unique="UI_DSP_PERIOD_SAMPLINGRATE_STRU.AgcTx_SR" id="id_voice_nb_rx_agc_sample_rate_tb"> -->
+        <!-- <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator"> -->
+        <!-- <Parameter name="data" refId="id_voice_nb_rx_agc_sr_cb"/> -->
+        <!-- </Associator> -->
+        <!-- </ConfigItem> -->
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

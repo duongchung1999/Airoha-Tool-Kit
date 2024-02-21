@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Advanced_PassThru_LD_NR" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Advanced_PassThru_LD_NR">
+  <ConfigGroup class="ucLayoutVertical" >
+    <Parameter name="top_label" value="DSP_PARA_LD_STRU"/>
+    <Parameter name="left_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="top_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucComboBox" id="id_ldnr_mode_cb">
+      <Parameter name="left_label" value="LDNR mode"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="75"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="width" value="100"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/adv_pthru_LDNR_mode.xml"/>
+      <Parameter name="unique" value="DSP_PARA_LD_STRU.MODE"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ldnr_mode_tb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigGroup class="General">
+
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_LD_STRU.MODE" present="hex" id="id_ldnr_mode_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_ldnr_mode_cb"/>
+        </Associator>
+      </ConfigItem>
+	</ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" Unique="PEQ_NVDM_MISC_PARAM.advanced_passthrough_pre_peq_sound_mode" present="hex" enable="0" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcLDNRAssociator">
+          <Parameter name="data" refId="id_ldnr_mode"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value="DSP_PARA_AMBIENT_AWARE_LD_STRU"/>
+    <Parameter name="left_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="top_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucComboBox" id="id_advpthru_aa_en_cb">
+      <Parameter name="left_label" value="Enable"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="75"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="width" value="100"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+      <Parameter name="unique" value="DSP_PARA_AMBIENT_AWARE_LD_STRU.ENABLE"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_advpthru_aa_en_tb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucNrAggrUpDown" id="id_adv_passthru_aa_aggr_updown" max="40" min="0">
+      <Parameter name="left_label" value="Ambient Aware Mode Aggressiveness:"/>
+      <Parameter name="right_label" value="dB (0 ~ 40)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="unique" value="DSP_PARA_AMBIENT_AWARE_LD_STRU.sup_par_gain_limiter"/>
+    </ConfigItem>
+    <ConfigItem class="ucAdvPthruAgcStepUpDown" id="id_adv_pthru_aa_ld_noise_floor_updown" max="200" min="0">
+      <Parameter name="left_label" value="Noise Threshold: －"/>
+      <Parameter name="right_label" value="dBFS (-200 ~ 0)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="120"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="unique" value="DSP_PARA_AMBIENT_AWARE_LD_STRU.ld_noise_floor"/>
+    </ConfigItem>
+	<ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.ENABLE" present="hex" visible="hidden" id="id_advpthru_aa_en_tb">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_advpthru_aa_en_cb"/>
+      </Associator>
+    </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.REVISION" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.padding1" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.sup_par_type" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.sup_par_alpha" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.sup_par_alpha_1" present="hex" visible="hidden"/>
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.sup_par_gain_limiter" present="hex" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcNrAggrAssociator">
+        <Parameter name="data" refId="id_adv_passthru_aa_aggr_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.ld_alpha_peak_up" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.ld_alpha_peak_dn" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.ld_alpha_valley_dn" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.ld_alpha_valley_up" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.ld_pow_diff_thr" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.ld_pow_credit" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.ld_alpha_sm_fast" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.ld_alpha_sm_slow" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.ld_noise_update_thr0" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.ld_noise_update_thr1" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.ld_noise_update_thr2" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.ld_min_period" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.ld_noise_alpha_fast" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.ld_noise_alpha_slow" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.ld_noise_alpha_ultra_slow" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.ld_over_est" present="hex" visible="hidden"/>
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.ld_noise_floor" present="hex" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcAdvPthruAgcStepAssociator">
+        <Parameter name="data" refId="id_adv_pthru_aa_ld_noise_floor_updown"/>
+      </Associator>
+    </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.pitch_thr" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.pitch_thr2" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.pitch_idx_st" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.pitch_idx_end" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.max_dis" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.pitch_bin_end" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.pitch_en" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AMBIENT_AWARE_LD_STRU.Pitch_Structure_Reserve" present="hex" visible="hidden"/>
+	</ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value="DSP_PARA_TALK_THRU_LD_STRU"/>
+    <Parameter name="left_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="top_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucComboBox" id="id_advpthru_tt_en_cb">
+      <Parameter name="left_label" value="Enable"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="75"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="width" value="100"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+      <Parameter name="unique" value="DSP_PARA_TALK_THRU_LD_STRU.ENABLE"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_advpthru_tt_en_tb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucNrAggrUpDown" id="id_adv_passthru_tt_aggr_updown" max="40" min="0">
+      <Parameter name="left_label" value="Talk Thru Mode Aggressiveness:"/>
+      <Parameter name="right_label" value="dB (0 ~ 40)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="unique" value="DSP_PARA_TALK_THRU_LD_STRU.sup_par_gain_limiter"/>
+    </ConfigItem>
+    <ConfigItem class="ucAdvPthruAgcStepUpDown" id="id_adv_pthru_tt_ld_noise_floor_updown" max="200" min="0">
+      <Parameter name="left_label" value="Noise Threshold: －"/>
+      <Parameter name="right_label" value="dBFS (-200 ~ 0)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="120"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="unique" value="DSP_PARA_TALK_THRU_LD_STRU.ld_noise_floor"/>
+    </ConfigItem>
+	<ConfigGroup class="General">
+
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.ENABLE" present="hex" visible="hidden" id="id_advpthru_tt_en_tb">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_advpthru_tt_en_cb"/>
+      </Associator>
+    </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.REVISION" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.padding1" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.sup_par_type" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.sup_par_alpha" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.sup_par_alpha_1" present="hex" visible="hidden"/>
+      
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.sup_par_gain_limiter" present="hex" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcNrAggrAssociator">
+        <Parameter name="data" refId="id_adv_passthru_tt_aggr_updown"/>
+      </Associator>
+    </ConfigItem>
+    
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.ld_alpha_peak_up" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.ld_alpha_peak_dn" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.ld_alpha_valley_dn" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.ld_alpha_valley_up" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.ld_pow_diff_thr" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.ld_pow_credit" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.ld_alpha_sm_fast" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.ld_alpha_sm_slow" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.ld_noise_update_thr0" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.ld_noise_update_thr1" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.ld_noise_update_thr2" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.ld_min_period" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.ld_noise_alpha_fast" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.ld_noise_alpha_slow" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.ld_noise_alpha_ultra_slow" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.ld_over_est" present="hex" visible="hidden"/>
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.ld_noise_floor" present="hex" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcAdvPthruAgcStepAssociator">
+        <Parameter name="data" refId="id_adv_pthru_tt_ld_noise_floor_updown"/>
+      </Associator>
+    </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.pitch_thr" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.pitch_thr2" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.pitch_idx_st" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.pitch_idx_end" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.max_dis" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.pitch_bin_end" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.pitch_en" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_TALK_THRU_LD_STRU.Pitch_Structure_Reserve" present="hex" visible="hidden"/>
+	</ConfigGroup>
+  </ConfigGroup>
+</Page>

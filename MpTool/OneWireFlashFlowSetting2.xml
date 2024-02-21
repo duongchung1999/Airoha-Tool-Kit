@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <environments WpfView="EnvionmentSelect">
+    <DUT9 IsEnable="False" />
+    <DUT10 IsEnable="True" />
+    <DUT11 IsEnable="False" />
+    <DUT12 IsEnable="False" />
+    <DUT13 IsEnable="False" />
+    <DUT14 IsEnable="False" />
+    <DUT15 IsEnable="False" />
+    <DUT16 IsEnable="False" />
+  </environments>
+  <UnifiedInput>
+    <FlashBin SettingPage.View="FileSelection">D:\FW\AB1562\AB1562_Sanity_20200204\AB1562_Agent.bin</FlashBin>
+    <FlashBin_device_name SettingPage.IsIgnore="True">AB156x</FlashBin_device_name>
+    <FlashBin_BD_address SettingPage.IsIgnore="True">112233445566</FlashBin_BD_address>
+    <Carge_Case_Baudrate>115200</Carge_Case_Baudrate>
+    <DUT_Baudrate SettingPage.IsIgnore="True">3000000</DUT_Baudrate>
+  </UnifiedInput>
+  <SelfInput>
+    <DeviceUart SettingPage.View="UartSelect">
+      <DUT9>61</DUT9>
+      <DUT10>62</DUT10>
+      <DUT11>61</DUT11>
+      <DUT12>61</DUT12>
+      <DUT13>61</DUT13>
+      <DUT14>61</DUT14>
+      <DUT15>61</DUT15>
+      <DUT16>61</DUT16>
+    </DeviceUart>
+  </SelfInput>
+  <Managers>
+    <BdAddressManager class="Airoha.Project.MpTool.BdAddressPool">
+      <expect_dut_count SettingPage.IsIgnore="True">%_ENVI_COUNT%</expect_dut_count>
+      <start_address_bt3 SettingPage.IsIgnore="True">0000ABCD1234</start_address_bt3>
+      <start_address_bt4 SettingPage.IsIgnore="True">112233445566</start_address_bt4>
+      <BT3AddressFromBarCode SettingPage.IsIgnore="True" SettingPage.View="TextSelect" SettingPage.Content="Boolean" SettingPage.Mode="MP">NO</BT3AddressFromBarCode>
+      <BarCode>
+        <DUT9></DUT9>
+        <DUT10></DUT10>
+        <DUT11></DUT11>
+        <DUT12></DUT12>
+        <DUT13></DUT13>
+        <DUT14></DUT14>
+        <DUT15></DUT15>
+        <DUT16></DUT16>
+      </BarCode>
+    </BdAddressManager>
+    <CalibrationFlowManager class="Airoha.Project.MpTool.CalibrationFlowManager">
+      <CalibrationFlow SettingPage.View="TextSelect" SettingPage.Content="CalibrationFlow__TCB1to8" SettingPage.IsIgnore="True">OTP_Data_Conversion</CalibrationFlow>
+    </CalibrationFlowManager>
+    <MpTestPinManager class="Airoha.Project.MpTool.MpTestPinManager">
+      <TCB_test_pin SettingPage.View="TextSelect" SettingPage.Content="test_pin_config" SettingPage.IsIgnore="True">Use_Less_Pin</TCB_test_pin>
+    </MpTestPinManager>
+  </Managers>
+  <flows Runner.StartFlow="default">
+    <default SettingPage.Name="Default Process">
+      <option>
+        <One_Wire_Flash SettingPage.Name="Firmware_Update" UI.IsVisiable="True" Runner.IsEnable="True" />
+      </option>
+      <main>
+        <ToolLogLevel task="InfoLogLevel" />
+        <ConnectDevice task="Connect1Wire">
+          <port Runner.Input="DeviceUart" />
+        </ConnectDevice>
+        <oneWireEnterDLMode task="TaskOneWireEnterDLMode" Runner.Option="One_Wire_Flash">
+          <charge_case_baudrate SettingPage.IsIgnore="True" Runner.Input="Carge_Case_Baudrate" />
+          <bud_baudrate SettingPage.IsIgnore="True" Runner.Input="DUT_Baudrate" />
+        </oneWireEnterDLMode>
+        <OneWireWriteFlash task="TaskOneWireWriteFlash" Runner.Option="One_Wire_Flash">
+          <bin_file_path SettingPage.IsIgnore="True" Runner.Input="FlashBin" />
+        </OneWireWriteFlash>
+      </main>
+      <Asynchronous></Asynchronous>
+      <final>
+        <DisconnectDevice task="DisconnectDUT" />
+      </final>
+    </default>
+  </flows>
+</root>

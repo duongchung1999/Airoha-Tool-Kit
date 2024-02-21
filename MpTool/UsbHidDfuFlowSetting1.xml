@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <environments WpfView="EnvionmentSelect">
+    <DUT1 IsEnable="True" />
+    <DUT2 IsEnable="False" />
+    <DUT3 IsEnable="False" />
+    <DUT4 IsEnable="False" />
+    <DUT5 IsEnable="False" />
+    <DUT6 IsEnable="False" />
+    <DUT7 IsEnable="False" />
+    <DUT8 IsEnable="False" />
+  </environments>
+  <UnifiedInput>
+    <!--<Update_FOTA_BIN SettingPage.View="TextSelect" SettingPage.Content="Boolean" >YES</Update_FOTA_BIN>-->
+    <FOTA_Package SettingPage.View="BinFileSelection">D:\USBHID\FotaPackage.bin</FOTA_Package>
+    <!--<File_System SettingPage.View="BinFileSelection">D:\1Wire\1562_1wire_race_11_L\AB1562_FileSystemImage.bin</File_System>-->
+    <!--<NVR_File_Name SettingPage.View="NvrFileSelection">D:\1Wire\1565_1wire_race_6\original.nvr</NVR_File_Name>-->
+    <!--<Device_Name SettingPage.View="NvrFileSelection">D:\1Wire\1565_1wire_race_6\original.nvr</Device_Name>-->
+    <!--<Update_NVR SettingPage.View="TextSelect" SettingPage.Content="Boolean">NO</Update_NVR>    
+    <Update_Device_Name SettingPage.View="TextSelect" SettingPage.Content="Boolean">NO</Update_Device_Name>-->
+    <!--<Device_Name>DeviceName</Device_Name>
+    <Carge_Case_Baudrate>115200</Carge_Case_Baudrate>
+    <DUT_Baudrate SettingPage.IsIgnore="True">3000000</DUT_Baudrate>
+    <Minimum_Battery_Level>70</Minimum_Battery_Level>-->
+    <Vendor_ID>0x0E8D</Vendor_ID>
+    <Product_ID SettingPage.View="PidTextChange">0x0808</Product_ID>
+    <DelayforConnectUSB SettingPage.IsIgnore="True">3000</DelayforConnectUSB>
+    <DelayforCommand SettingPage.IsIgnore="True">1000</DelayforCommand>
+    <DelayforFotaCommit SettingPage.IsIgnore="True">15000</DelayforFotaCommit>
+    <DelayforConnectUSBafterCommit SettingPage.IsIgnore="True">15000</DelayforConnectUSBafterCommit>
+    <ConnectUSBretryInterval SettingPage.IsIgnore="True">3000</ConnectUSBretryInterval>
+  </UnifiedInput>
+  <SelfInput>
+    <DeviceUSBHID SettingPage.View="UsbhidSelect" SettingPage.IsAddAttribute="True" >
+      <DUT1 SettingPage.IsIgnore="True">PCIROOT(0)#PCI(1400)#USBROOT(0)#USB(1)#USB(1)</DUT1>
+      <DUT2 SettingPage.IsIgnore="True">PCIROOT(0)#PCI(1400)#USBROOT(0)#USB(3)#USB(3)</DUT2>
+    </DeviceUSBHID>
+  </SelfInput>
+  <Managers>
+    <BdAddressManager class="Airoha.Project.MpTool.BdAddressPool">
+      <expect_dut_count SettingPage.IsIgnore="True">%_ENVI_COUNT%</expect_dut_count>
+      <start_address_bt3 SettingPage.IsIgnore="True">0000ABCD1234</start_address_bt3>
+      <end_address_bt3 SettingPage.IsIgnore="True">FFFFFFFFFFFF</end_address_bt3>
+      <BT3AddressFromBarCode SettingPage.View="TextSelect" SettingPage.Content="Boolean" SettingPage.Mode="MP" SettingPage.IsIgnore="True">NO</BT3AddressFromBarCode>
+      <BarCode>
+        <DUT1></DUT1>
+        <DUT2></DUT2>
+        <DUT3></DUT3>
+        <DUT4></DUT4>
+        <DUT5></DUT5>
+        <DUT6></DUT6>
+        <DUT7></DUT7>
+        <DUT8></DUT8>
+      </BarCode>
+    </BdAddressManager>
+    <CalibrationFlowManager class="Airoha.Project.MpTool.CalibrationFlowManager">
+      <CalibrationFlow SettingPage.View="TextSelect" SettingPage.Content="CalibrationFlow__TCB1to8" SettingPage.IsIgnore="True">OTP_Data_Conversion</CalibrationFlow>
+    </CalibrationFlowManager>
+    <MpTestPinManager class="Airoha.Project.MpTool.MpTestPinManager">
+      <TCB_test_pin SettingPage.View="TextSelect" SettingPage.Content="test_pin_config" SettingPage.IsIgnore="True">Use_Less_Pin</TCB_test_pin>
+    </MpTestPinManager>
+  </Managers>
+  <flows Runner.StartFlow="default">
+    <default SettingPage.Name="Default Process">
+      <option>
+        <USB_HID_DFU SettingPage.Name="Firmware_Update" UI.IsVisiable="True" Runner.IsEnable="True" />
+      </option>
+      <main>
+        <ToolLogLevel task="DebugLogLevel" />
+        <ConnectUSBHid task="ConnectDutByUsbHid" Runner.Option="USB_HID_DFU">
+          <vendor_id SettingPage.IsIgnore="True" Runner.Input="Vendor_ID" />
+          <product_id SettingPage.IsIgnore="True" Runner.Input="Product_ID" />
+          <delayforConnectUSB Runner.Input="DelayforConnectUSB" />
+          <!--<port Runner.Input="DeviceUSBHID" />-->
+        </ConnectUSBHid>
+        <UsbHidDfu task="usbHidDfu" Runner.Option="USB_HID_DFU">
+          <fota_package_filename SettingPage.IsIgnore="True" Runner.Input="FOTA_Package" />
+          <!--<port Runner.Input="DeviceUSBHID" />-->
+          <delayforCommand Runner.Input="DelayforCommand" />
+          <delayforFotaCommit Runner.Input="DelayforFotaCommit"  />
+          <delayforConnectUSBafterCommit Runner.Input="DelayforConnectUSBafterCommit" />
+          <connectUSBretryInterval Runner.Input="ConnectUSBretryInterval" />
+        </UsbHidDfu>
+        
+      </main>
+      <Asynchronous></Asynchronous>
+      <final>
+        <DisconnectDevice task="DisconnectDUTByUsbHid" />
+      </final>
+    </default>
+  </flows>
+</root>

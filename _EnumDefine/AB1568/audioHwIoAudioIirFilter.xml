@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="Disable_IIR" Value="15"/>
+	<Group Name="IIR_5HZ_48KHZ" Value="1"/>
+	<Group Name="IIR_10HZ_48KHZ" Value="2"/>
+	<Group Name="IIR_25HZ_48KHZ" Value="3"/>
+	<Group Name="IIR_50HZ_48KHZ" Value="4"/>
+	<Group Name="IIR_75HZ_48KHZ" Value="5"/>
+</DataGroup>                         

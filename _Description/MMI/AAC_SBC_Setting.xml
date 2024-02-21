@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="AAC_SBC_Setting" class="Airoha.Project.ConfigTool.View.PurePage" parameter="AAC_SBC_Setting">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value="AAC"/>
+    <Parameter name="left_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="top_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucComboBox" id="id_aac_type_cb">
+      <Parameter name="left_label" value="Type"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="left_width" value="85"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="width" value="100"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/AB1568/AAC_type.xml"/>
+      <Parameter name="unique" value="AAC_Setting.aac_type"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_aac_type_tb"/>
+        <Parameter name="enable" refId="id_aac_on_combo"/>
+        <Parameter name="enable_value" value="1" />
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucComboBox" id="id_aac_bit_rate_cb">
+      <Parameter name="left_label" value="Bit Rate"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="left_width" value="85"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="width" value="100"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/AB1568/AAC_bit_rate.xml"/>
+      <Parameter name="unique" value="AAC_Setting.bit_rate"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_aac_bit_rate_tb"/>
+        <Parameter name="enable" refId="id_aac_on_combo"/>
+        <Parameter name="enable_value" value="1" />
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value="SBC"/>
+    <Parameter name="left_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="top_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucUpDown" Unique="SBC_Setting.min_bitpool" id="id_sbc_min_bitpool_updwon" min="0" max="255">
+      <Parameter name="left_label" value="Min bitpool"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="left_width" value="90"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="step" value="1"/>
+      <Parameter name="unique" value="SBC_Setting.min_bitpool"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_sbc_min_bitpool_tb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucUpDown" Unique="SBC_Setting.max_bitpool" id="id_sbc_max_bitpool_updwon" min="0" max="255">
+      <Parameter name="left_label" value="Max bitpool"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="left_width" value="90"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="step" value="1"/>
+      <Parameter name="unique" value="SBC_Setting.max_bitpool"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_sbc_max_bitpool_updwon"/>
+      </Associator>
+    </ConfigItem>    
+  </ConfigGroup>
+
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="AAC_Setting.aac_type" id="id_aac_type_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_aac_type_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="AAC_Setting.bit_rate" id="id_aac_bit_rate_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_aac_bit_rate_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="SBC_Setting.min_bitpool" id="id_sbc_min_bitpool_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_sbc_min_bitpool_updwon"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="SBC_Setting.max_bitpool" id="id_sbc_max_bitpool_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_sbc_max_bitpool_updwon"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

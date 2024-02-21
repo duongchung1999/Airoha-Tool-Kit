@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="AT_AGC" class="Airoha.Project.ConfigTool.View.DspPage" parameter="AT_AGC">
+  <ConfigGroup class="ucLayoutVertical">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="bottom_margin" value="10"/>
+        <ConfigItem class="ucAtDrcThresholdUpDown" id="id_at_agc_upper_bnd_updown" max="0" min="-100">
+          <Parameter name="top_label" value="UPPER BOUND:"/>
+          <Parameter name="bottom_label" value="&lt;0 dB"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="unique" value="DSP_PARA_MDSP_AT_AGC_STRU.AT_AGC_UPPER_BOUND"/>
+        </ConfigItem>
+        <ConfigItem class="ucAtDrcThresholdUpDown" id="id_at_agc_lower_bnd_updown" max="0" min="-100">
+          <Parameter name="top_label" value="LOWER BOUND:"/>
+          <Parameter name="bottom_label" value="&lt;0 dB"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="step" value="0.1"/>
+          <Parameter name="unique" value="DSP_PARA_MDSP_AT_AGC_STRU.AT_AGC_LOWER_BOUND"/>
+        </ConfigItem>
+        <ConfigItem class="ucAtDrcStepUpDown" id="id_at_agc_att_step_updown" max="100" min="0">
+          <Parameter name="top_label" value="ATT STEP:"/>
+          <Parameter name="bottom_label" value="&gt;0 dB"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="unique" value="DSP_PARA_MDSP_AT_AGC_STRU.AT_AGC_ATT_STEP"/>
+        </ConfigItem>
+        <ConfigItem class="ucAtDrcStepUpDown" id="id_at_agc_rel_step_updown" max="100" min="0">
+          <Parameter name="top_label" value="REL STEP:"/>
+          <Parameter name="bottom_label" value="&gt;0 dB"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="width" value="80"/>
+          <Parameter name="unique" value="DSP_PARA_MDSP_AT_AGC_STRU.AT_AGC_REL_STEP"/>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_AT_AGC_STRU.ENABLE"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_AT_AGC_STRU.REVISION"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_AT_AGC_STRU.AT_INIT_MUTE_LENGTH"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_AT_AGC_STRU.AT_AGC_BYPASS_MODE"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_AT_AGC_STRU.AT_AGC_UPPER_BOUND">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcAtDrcThresholdAssociator">
+        <Parameter name="data" refId="id_at_agc_upper_bnd_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_AT_AGC_STRU.AT_AGC_LOWER_BOUND">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcAtDrcThresholdAssociator">
+        <Parameter name="data" refId="id_at_agc_lower_bnd_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_AT_AGC_STRU.AT_AGC_ATT_STEP">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcAtDrcStepAssociator">
+        <Parameter name="data" refId="id_at_agc_att_step_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_AT_AGC_STRU.AT_AGC_REL_STEP">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcAtDrcStepAssociator">
+        <Parameter name="data" refId="id_at_agc_rel_step_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_AT_AGC_STRU.AT_AGC_DEBOUNCE_TIME"/>
+  </ConfigGroup>
+</Page>

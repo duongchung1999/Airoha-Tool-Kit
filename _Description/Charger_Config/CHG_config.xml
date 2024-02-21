@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="CHG_config" class="Airoha.Project.ConfigTool.View.General" parameter="CHG_config">
+  <ConfigItem class="ucTextBox" Unique="CHG_config.Otp_Dump"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_config.Batteryvoltagesel"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_config.twostepsel"/>
+  <ConfigItem class="ucTextBox" Unique="CHG_config.Kflag"/>
+</Page>

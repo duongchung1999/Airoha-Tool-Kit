@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Line-in_Level_Settings" class="Airoha.Project.ConfigTool.View.General" parameter="Line-in_Level_Settings">
+	<ConfigItem class="AB1568.ucLineinSl_AB1568" Unique="VOLUME_LINEIN_SETTING_STRU.totalSoundLevel" id="id_linein_sound_level_init">
+		<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			<Parameter name="data" refId="id_line_digital_output_gain_tb_#"/>
+			<Parameter name="data" refId="id_line_digital_output_gain_total_index_tb"/>
+		</Associator>
+	</ConfigItem>
+	<ConfigItem class="ucTextBox" Unique="VOLUME_LINEIN_SETTING_STRU.defaultSoundLevel" id="id_linein_defaultSoundLevel"/>
+</Page>

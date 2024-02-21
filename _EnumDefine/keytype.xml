@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="KEY_TYPE_NORMAL" Value="0"/>
+	<Group Name="KEY_TYPE_SWITCH" Value="1"/>
+	<Group Name="KEY_TYPE_CAPTOUCH" Value="4"/>
+</DataGroup>

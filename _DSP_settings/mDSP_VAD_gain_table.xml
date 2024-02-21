@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="0" Value="0"/>
+	<Group Name="6.02" Value="1"/> 
+	<Group Name="9.54" Value="2"/> 
+	<Group Name="12.04" Value="3"/> 
+	<Group Name="13.97" Value="4"/> 
+	<Group Name="15.56" Value="5"/> 
+	<Group Name="16.9" Value="6"/> 
+	<Group Name="18.06" Value="7"/> 
+	<Group Name="19.08" Value="8"/>
+	<Group Name="20" Value="9"/> 
+	<Group Name="20.83" Value="10"/> 
+	<Group Name="21.58" Value="11"/> 
+	<Group Name="22.28" Value="12"/> 
+	<Group Name="22.92" Value="13"/> 
+	<Group Name="23.52" Value="14"/> 
+	<Group Name="24.08" Value="15"/> 
+	<Group Name="24" Value="16"/>
+	<Group Name="30.02" Value="17"/> 
+	<Group Name="33.54" Value="18"/> 
+	<Group Name="36.04" Value="19"/> 
+	<Group Name="37.97" Value="20"/> 
+	<Group Name="39.56" Value="21"/> 
+	<Group Name="40.9" Value="22"/> 
+	<Group Name="42.06" Value="23"/> 
+	<Group Name="43.08" Value="24"/>
+	<Group Name="44" Value="25"/> 
+	<Group Name="44.83" Value="26"/> 
+	<Group Name="45.58" Value="27"/> 
+	<Group Name="46.28" Value="28"/> 
+	<Group Name="46.92" Value="29"/> 
+	<Group Name="47.52" Value="30"/> 
+	<Group Name="48.08" Value="31"/> 
+</DataGroup>
+
+

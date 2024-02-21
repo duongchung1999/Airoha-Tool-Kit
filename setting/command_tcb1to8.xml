@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandBook>
+  <!-- //head: 1; basic 0x06 -->
+  <!-- //type: 1; cmd: 0x00, ack: 0x01, log: 0x02 -->
+  <!-- //func: 1; GPIO: 0x01, I2C: 0x02 -->
+  <VERSION>
+    <RequestFormat>
+      <!--<req type="uint8 array" value="0x06 0x00 0x00 0x00" array_length="*" />-->
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x00" />
+      <tcb_act type="uint8" value="0x00" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x00" />
+      <tcb_act type="uint8" value="0x00" />
+      <version type="uint8_array" array_length="16" />
+    </ResponseFormat>
+  </VERSION>
+  <!-- GPIO -->
+  <GPIO_PIN_MODE>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x01" />
+      <tcb_act type="uint8" value="0x00" />
+      <pin type="uint8" />
+      <mode type="uint8" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x01" />
+      <tcb_act type="uint8" value="0x00" />
+      <pin type="uint8" />
+      <mode type="uint8" />
+    </ResponseFormat>
+  </GPIO_PIN_MODE>
+  <GPIO_READ>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x01" />
+      <tcb_act type="uint8" value="0x01" />
+      <pin type="uint8" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x01" />
+      <tcb_act type="uint8" value="0x01" />
+      <pin type="uint8" />
+      <value type="int16" />
+    </ResponseFormat>
+  </GPIO_READ>
+  <GPIO_WRITE>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x01" />
+      <tcb_act type="uint8" value="0x02" />
+      <pin type="uint8" />
+      <logic type="uint8" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x01" />
+      <tcb_act type="uint8" value="0x02" />
+      <pin type="uint8" />
+      <logic type="uint8" />
+    </ResponseFormat>
+  </GPIO_WRITE>
+  <GPIO_AIN>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x01" />
+      <tcb_act type="uint8" value="0x03" />
+      <pin type="uint8" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x01" />
+      <tcb_act type="uint8" value="0x03" />
+      <pin type="uint8" />
+      <value type="int16" />
+    </ResponseFormat>
+  </GPIO_AIN>
+  <MCU_RESET>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x01" />
+      <tcb_act type="uint8" value="0x04" />
+      <delay_ms type="uint16" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x01" />
+      <tcb_act type="uint8" value="0x04" />
+      <delay_ms type="uint16" />
+    </ResponseFormat>
+  </MCU_RESET>
+  <I2C_SET_CLOCK>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x00" />
+      <clock type="uint32" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x00" />
+      <clock type="uint32" />
+    </ResponseFormat>
+  </I2C_SET_CLOCK>
+  <I2C_OFFSET_READ>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x01" />
+      <device_address type="uint8" />
+      <offset_address type="uint32" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x01" />
+      <device_address type="uint8" />
+      <offset_address type="uint32" />
+      <value type="uint16" />
+    </ResponseFormat>
+  </I2C_OFFSET_READ>
+  <I2C_OFFSET_WRITE>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x02" />
+      <device_address type="uint8" />
+      <offset_address type="uint32" />
+      <data type="uint16" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x02" />
+      <device_address type="uint8" />
+      <offset_address type="uint32" />
+    </ResponseFormat>
+  </I2C_OFFSET_WRITE>
+  <I2C_ADDR1B_READ>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x03" />
+      <device_address type="uint8" />
+      <offset_address type="uint32" />
+      <size type="uint8" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x03" />
+      <device_address type="uint8" />
+      <offset_address type="uint32" />
+      <size type="uint8" />
+      <data type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </I2C_ADDR1B_READ>
+  <I2C_WRITE_NBYTES>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x04" />
+      <device_address type="uint8" />
+      <size type="uint8" />
+      <data type="uint8_array" array_length="*" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x04" />
+      <device_address type="uint8" />
+      <size type="uint8" />
+    </ResponseFormat>
+  </I2C_WRITE_NBYTES>
+  <I2C_ADDR2B_READ>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x05" />
+      <device_address type="uint8" />
+      <offset_address type="uint32" />
+      <size type="uint8" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x05" />
+      <device_address type="uint8" />
+      <offset_address type="uint32" />
+      <size type="uint8" />
+      <data type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </I2C_ADDR2B_READ>
+  <I2C_EEPROM_WRITE>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x06" />
+      <device_address type="uint8" />
+      <offset_address type="uint32" />
+      <length type="uint8" />
+      <data type="uint8_array" array_length="*" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x06" />
+      <device_address type="uint8" />
+      <offset_address type="uint32" />
+      <length type="uint8" />
+    </ResponseFormat>
+  </I2C_EEPROM_WRITE>
+  <I2C_FPGA_TRIM_EN>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x07" />
+      <slot type="uint8" />
+      <setting type="uint8" />
+      <nxo type="uint32" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x07" />
+      <device_address type="uint8" />
+      <setting type="uint8" />
+      <nxo type="uint32" />
+      <value type="uint16" />
+    </ResponseFormat>
+  </I2C_FPGA_TRIM_EN>
+  <I2C_FPGA_FCTRL_SET>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x08" />
+      <pin type="uint8" />
+      <logic type="uint8" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x08" />
+      <pin type="uint8" />
+      <logic type="uint8" />
+      <value type="uint32" />
+    </ResponseFormat>
+  </I2C_FPGA_FCTRL_SET>
+  <I2C_ADC_READ>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x09" />
+      <device_address type="uint8" />
+      <channel type="uint8" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x09" />
+      <device_address type="uint8" />
+      <channel type="uint8" />
+      <value type="uint16" />
+    </ResponseFormat>
+  </I2C_ADC_READ>
+  <I2C_FPGA_RESETN_DUT>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x0A" />
+      <slot type="uint8" />
+      <delay_ms type="uint16" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x0A" />
+      <slot type="uint8" />
+      <delay_ms type="uint16" />
+    </ResponseFormat>
+  </I2C_FPGA_RESETN_DUT>
+  <I2C_FPGA_RESET_DUT>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x0B" />
+      <slot type="uint8" />
+      <delay_ms type="uint16" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x0B" />
+      <slot type="uint8" />
+      <delay_ms type="uint16" />
+    </ResponseFormat>
+  </I2C_FPGA_RESET_DUT>
+  <I2C_FPGA_PIN_SIGNALS>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x00" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x0C" />
+      <slot type="uint8" />
+      <delay_ms type="uint16" />
+      <pulse type="uint8" />
+      <pin type="uint8" />
+      <logic type="uint8" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x06" />
+      <tcb_type type="uint8" value="0x01" />
+      <tcb_func type="uint8" value="0x02" />
+      <tcb_act type="uint8" value="0x0C" />
+      <slot type="uint8" />
+      <delay_ms type="uint16" />
+      <pulse type="uint8" />
+      <pin type="uint8" />
+      <logic type="uint8" />
+    </ResponseFormat>
+  </I2C_FPGA_PIN_SIGNALS>
+</CommandBook>

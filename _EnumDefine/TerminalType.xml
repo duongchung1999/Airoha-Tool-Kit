@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="Microphone(0x0201)" Value="513"/>
+	<Group Name="Speaker(0x0301)" Value="769"/>
+	<Group Name="Headset(0x0402)" Value="1026"/>
+</DataGroup>

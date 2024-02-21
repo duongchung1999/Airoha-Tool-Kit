@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="Disable_IIR" Value="15"/>
+	<Group Name="IIR_1HZ_16KHZ_or_3HZ_48KHZ" Value="1"/>
+	<Group Name="IIR_3HZ_16KHZ_or_9HZ_48KHZ" Value="2"/>
+	<Group Name="IIR_8HZ_16KHZ_or_24HZ_48KHZ" Value="3"/>
+	<Group Name="IIR_17HZ_16KHZ_or_51HZ_48KHZ" Value="4"/>
+	<Group Name="IIR_25HZ_16KHZ_or_75HZ_48KHZ" Value="5"/>
+	<Group Name="N/A_16KHZ_or_IIR_100HZ_48KHZ" Value="6"/>
+	<Group Name="N/A_16KHZ_or_IIR_125HZ_48KHZ" Value="7"/>
+	<Group Name="N/A_16KHZ_or_IIR_150HZ_48KHZ" Value="8"/>
+	<Group Name="N/A_16KHZ_or_IIR_175HZ_48KHZ" Value="9"/>
+	<Group Name="N/A_16KHZ_or_IIR_200HZ_48KHZ" Value="10"/>
+	<Group Name="N/A_16KHZ_or_IIR_225HZ_48KHZ" Value="11"/>
+	<Group Name="N/A_16KHZ_or_IIR_250HZ_48KHZ" Value="12"/>
+	<Group Name="N/A_16KHZ_or_IIR_275HZ_48KHZ" Value="13"/>
+	<Group Name="N/A_16KHZ_or_IIR_300HZ_48KHZ" Value="14"/>	
+</DataGroup>

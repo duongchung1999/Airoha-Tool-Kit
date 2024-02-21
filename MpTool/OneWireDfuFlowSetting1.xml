@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <environments WpfView="EnvionmentSelect">
+    <DUT1 IsEnable="True" />
+    <DUT2 IsEnable="False" />
+    <DUT3 IsEnable="False" />
+    <DUT4 IsEnable="False" />
+    <DUT5 IsEnable="False" />
+    <DUT6 IsEnable="False" />
+    <DUT7 IsEnable="False" />
+    <DUT8 IsEnable="False" />
+  </environments>
+  <UnifiedInput>
+    <!--<Update_FOTA_BIN SettingPage.View="TextSelect" SettingPage.Content="Boolean" >YES</Update_FOTA_BIN>-->
+    <FOTA_Package SettingPage.View="BinFileSelection">D:\1Wire\FotaPackage.bin</FOTA_Package>
+    <!--<File_System SettingPage.View="BinFileSelection">D:\1Wire\1562_1wire_race_11_L\AB1562_FileSystemImage.bin</File_System>-->
+    <NVR_File_Name SettingPage.View="NvrFileSelection">D:\1Wire\original.xml</NVR_File_Name>
+    <!--<Device_Name SettingPage.View="NvrFileSelection">D:\1Wire\1565_1wire_race_6\original.nvr</Device_Name>-->
+    <!--<Update_NVR SettingPage.View="TextSelect" SettingPage.Content="Boolean">NO</Update_NVR>    
+    <Update_Device_Name SettingPage.View="TextSelect" SettingPage.Content="Boolean">NO</Update_Device_Name>-->
+    <Device_Name>DeviceName</Device_Name>
+    <Carge_Case_Baudrate>115200</Carge_Case_Baudrate>
+    <DUT_Baudrate SettingPage.View="TextSelect" SettingPage.Content="one_wire_baudrate">2000000</DUT_Baudrate>
+    <Minimum_Battery_Level>70</Minimum_Battery_Level>
+  </UnifiedInput>
+  <SelfInput>
+    <DeviceUart SettingPage.View="UartSelect">
+      <DUT1>61</DUT1>
+      <DUT2>62</DUT2>
+      <DUT3>63</DUT3>
+      <DUT4>64</DUT4>
+      <DUT5>61</DUT5>
+      <DUT6>61</DUT6>
+      <DUT7>61</DUT7>
+      <DUT8>61</DUT8>
+    </DeviceUart>
+  </SelfInput>
+  <Managers>
+    <BdAddressManager class="Airoha.Project.MpTool.BdAddressPool">
+      <expect_dut_count SettingPage.IsIgnore="True">%_ENVI_COUNT%</expect_dut_count>
+      <start_address_bt3 SettingPage.IsIgnore="True">0000ABCD1234</start_address_bt3>
+      <end_address_bt3 SettingPage.IsIgnore="True">FFFFFFFFFFFF</end_address_bt3>
+      <BT3AddressFromBarCode SettingPage.View="TextSelect" SettingPage.Content="Boolean" SettingPage.Mode="MP" SettingPage.IsIgnore="True">NO</BT3AddressFromBarCode>
+      <BarCode>
+        <DUT1></DUT1>
+        <DUT2></DUT2>
+        <DUT3></DUT3>
+        <DUT4></DUT4>
+        <DUT5></DUT5>
+        <DUT6></DUT6>
+        <DUT7></DUT7>
+        <DUT8></DUT8>
+      </BarCode>
+    </BdAddressManager>
+    <CalibrationFlowManager class="Airoha.Project.MpTool.CalibrationFlowManager">
+      <CalibrationFlow SettingPage.View="TextSelect" SettingPage.Content="CalibrationFlow__TCB1to8" SettingPage.IsIgnore="True">OTP_Data_Conversion</CalibrationFlow>
+    </CalibrationFlowManager>
+    <MpTestPinManager class="Airoha.Project.MpTool.MpTestPinManager">
+      <TCB_test_pin SettingPage.View="TextSelect" SettingPage.Content="test_pin_config" SettingPage.IsIgnore="True">Use_Less_Pin</TCB_test_pin>
+    </MpTestPinManager>
+  </Managers>
+  <flows Runner.StartFlow="default">
+    <default SettingPage.Name="Default Process">
+      <option>
+        <One_Wire_DFU SettingPage.Name="Firmware_Update" UI.IsVisiable="True" Runner.IsEnable="True" />
+        <Update_NVKEY SettingPage.Name="NVKEY_Update" UI.IsVisiable="True" Runner.IsEnable="False" />
+        <Update_Dev_Name SettingPage.Name="Device_Name_Update" UI.IsVisiable="True" Runner.IsEnable="False" />
+      </option>
+      <main>
+        <ToolLogLevel task="DebugLogLevel" />
+        <ConnectDevice task="Connect1Wire">
+          <port Runner.Input="DeviceUart" />
+        </ConnectDevice>
+        <oneWireModeChange task="oneWireModeChange" Runner.Option="One_Wire_DFU">
+          <charge_case_baudrate SettingPage.IsIgnore="True" Runner.Input="Carge_Case_Baudrate" />
+          <bud_baudrate SettingPage.IsIgnore="True" Runner.Input="DUT_Baudrate" />
+        </oneWireModeChange>
+        <oneWireDfu task="oneWireDfu" Runner.Option="One_Wire_DFU">
+          <fota_package_filename SettingPage.IsIgnore="True" Runner.Input="FOTA_Package" />
+          <!--<file_system_filename SettingPage.IsIgnore="True" Runner.Input="File_System" />-->
+          <charge_case_baudrate SettingPage.IsIgnore="True" Runner.Input="Carge_Case_Baudrate" />
+          <bud_baudrate SettingPage.IsIgnore="True" Runner.Input="DUT_Baudrate" />
+          <minimum_battery_level SettingPage.IsIgnore="True" Runner.Input="Minimum_Battery_Level" />
+        </oneWireDfu>
+        <oneWireModeChange_nv task="oneWireModeChange" Runner.Option="Update_NVKEY">
+          <charge_case_baudrate SettingPage.IsIgnore="True" Runner.Input="Carge_Case_Baudrate" />
+          <bud_baudrate SettingPage.IsIgnore="True" Runner.Input="DUT_Baudrate" />
+        </oneWireModeChange_nv>
+        <update_nvkey task="TaskOneWireUpdateNvKey" Runner.Option="Update_NVKEY">
+          <nvr_filename SettingPage.IsIgnore="True" Runner.Input="NVR_File_Name" />
+          <minimum_battery_level SettingPage.IsIgnore="True" Runner.Input="Minimum_Battery_Level" />
+          <charge_case_baudrate SettingPage.IsIgnore="True" Runner.Input="Carge_Case_Baudrate" />
+          <bud_baudrate SettingPage.IsIgnore="True" Runner.Input="DUT_Baudrate" />
+        </update_nvkey>
+
+        <oneWireModeChange_nv task="oneWireModeChange" Runner.Option="Update_Dev_Name">
+          <charge_case_baudrate SettingPage.IsIgnore="True" Runner.Input="Carge_Case_Baudrate" />
+          <bud_baudrate SettingPage.IsIgnore="True" Runner.Input="DUT_Baudrate" />
+        </oneWireModeChange_nv>
+        <update_devname task="TaskOneWireUpdateDeviceName" Runner.Option="Update_Dev_Name">
+          <!--<nvr_filename SettingPage.IsIgnore="True" Runner.Input="Device_Name" />-->
+          <minimum_battery_level SettingPage.IsIgnore="True" Runner.Input="Minimum_Battery_Level" />
+          <charge_case_baudrate SettingPage.IsIgnore="True" Runner.Input="Carge_Case_Baudrate" />
+          <bud_baudrate SettingPage.IsIgnore="True" Runner.Input="DUT_Baudrate" />
+        </update_devname>
+      </main>
+      <Asynchronous></Asynchronous>
+      <final>
+        <DisconnectDevice task="DisconnectDUT" />
+      </final>
+    </default>
+  </flows>
+</root>

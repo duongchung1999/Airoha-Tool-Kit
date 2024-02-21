@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page title="PMU Config" class="Airoha.Project.ConfigTool.View.PurePage" parameter="PMU Config">
+  <ConfigGroup class="ucLayoutHorizontal">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="PMU Config"/>
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucComboBox" id="id_RstPatEnable_combo">
+        <Parameter name="left_label" value="Reset Pattern Enable"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="150"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_RstPatEnable"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_RstPat_combo">
+        <Parameter name="left_label" value="Reset Pattern"/>
+        <Parameter name="des_label" value="Make sure hw and sw configuration is aligned"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="150"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/ResetPattern.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_RstPat"/>
+          <Parameter name="disable_rst_pat" refId="id_RstPatEnable_combo"/>
+        </Associator>
+      </ConfigItem>
+
+      <ConfigItem class="ucComboBox" id="id_RstPat_cfg_en_combo" visible="hidden">
+        <Parameter name="left_label" value="Config Enable"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="150"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_RstPat_cfg_en"/>          
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_RstPat_ll_low_updown" min="0" max="63" visible="hidden">
+        <Parameter name="left_label" value=" LL Low"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="140"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value=" ms"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="PMU_RST_PAT_CFG.ll_low"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_RstPat_ll_low"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_RstPat_ll_hgh_updown" min="0" max="63" visible="hidden">
+        <Parameter name="left_label" value=" LL High"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="140"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value=" ms"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="PMU_RST_PAT_CFG.ll_hgh"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_RstPat_ll_hgh"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_RstPat_hh_low_updown" min="0" max="63" visible="hidden">
+        <Parameter name="left_label" value=" HH Low"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="140"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value=" ms"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="PMU_RST_PAT_CFG.hh_low"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_RstPat_hh_low"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_RstPat_hh_hgh_updown" min="0" max="63" visible="hidden">
+        <Parameter name="left_label" value=" HH High"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="140"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value=" ms"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="PMU_RST_PAT_CFG.hh_hgh"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_RstPat_hh_hgh"/>
+        </Associator>
+      </ConfigItem>
+       
+    </ConfigGroup>
+     
+  </ConfigGroup>
+ 
+  <ConfigGroup class="General">
+
+    <ConfigItem class="ucTextBox" Unique="PMU_RST_PAT_CFG.enable" id="id_RstPatEnable" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_RstPatEnable_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="PMU_RST_PAT_CFG.rst_pat" id="id_RstPat" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_RstPat_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="PMU_RST_PAT_CFG.cfg_en" id="id_RstPat_cfg_en" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_RstPat_cfg_en_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="PMU_RST_PAT_CFG.ll_low" id="id_RstPat_ll_low" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_RstPat_ll_low_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="PMU_RST_PAT_CFG.ll_hgh" id="id_RstPat_ll_hgh" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_RstPat_ll_hgh_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="PMU_RST_PAT_CFG.hh_low" id="id_RstPat_hh_low" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_RstPat_hh_low_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="PMU_RST_PAT_CFG.hh_hgh" id="id_RstPat_hh_hgh" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_RstPat_hh_hgh_updown"/>
+      </Associator>
+    </ConfigItem>
+    
+  </ConfigGroup>
+ 
+</Page>

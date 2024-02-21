@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Advanced_PassThru_AGC" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Advanced_PassThru_AGC">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value="DSP_PARA_AT_AGC_STRU"/>
+    <Parameter name="left_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="top_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucComboBox" id="id_advpthru_agc_en_cb">
+      <Parameter name="left_label" value="Enable"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="75"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="width" value="100"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+      <Parameter name="unique" value="DSP_PARA_AT_AGC_STRU.ENABLE"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_advpthru_agc_en_tb"/>
+      </Associator>
+    </ConfigItem>
+    
+    <ConfigItem class="ucAdvPthruAggrUpDown" id="id_at_agc_upper_bound_updown" max="0" min="-40">
+      <Parameter name="left_label" value="Upper Bound: (-40 ~ 0)"/>
+      <Parameter name="right_label" value="dBFS"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="unique" value="DSP_PARA_AT_AGC_STRU.UPPER_BOUND"/>
+    </ConfigItem>
+    <ConfigItem class="ucAdvPthruAggrUpDown" id="id_at_agc_lower_bound_updown" max="0" min="-40">
+      <Parameter name="left_label" value="Lower Bound: (-40 ~ 0)"/>
+      <Parameter name="right_label" value="dBFS"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="unique" value="DSP_PARA_AT_AGC_STRU.LOWER_BOUND"/>
+    </ConfigItem>
+    <ConfigItem class="ucAdvPthruAgcStepUpDown" id="id_adv_pthru_agc_att_step_updown" max="16384" min="1">
+      <Parameter name="left_label" value="Attack step: (1 ~ 16384)"/>
+      <Parameter name="right_label" value="unit level"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="1"/>
+      <Parameter name="unique" value="DSP_PARA_AT_AGC_STRU.ATT_STEP"/>
+    </ConfigItem>
+    <ConfigItem class="ucAdvPthruAgcStepUpDown" id="id_adv_pthru_agc_rel_step_updown" max="16384" min="1">
+      <Parameter name="left_label" value="Release step: (1 ~ 16384)"/>
+      <Parameter name="right_label" value="unit level"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="1"/>
+      <Parameter name="unique" value="DSP_PARA_AT_AGC_STRU.REL_STEP"/>
+    </ConfigItem>
+    <ConfigItem class="ucAdvPthruAgcDebounceUpDown" id="id_adv_pthru_agc_debounce_updown" max="10000" min="0">
+      <Parameter name="left_label" value="Debounce time: (0 ~ 10000)"/>
+      <Parameter name="right_label" value="ms"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="100"/>
+      <Parameter name="step" value="100"/>
+      <Parameter name="unique" value="DSP_PARA_AT_AGC_STRU.DEBOUNCE"/>
+    </ConfigItem>
+    
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_AGC_STRU.ENABLE" present="hex" id="id_advpthru_agc_en_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_advpthru_agc_en_cb"/>
+        </Associator>        
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_AGC_STRU.REVISION" present="hex" visible="hidden"/>
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_AGC_STRU.UPPER_BOUND" present="hex" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcAdvPthruAggrAssociator">
+        <Parameter name="data" refId="id_at_agc_upper_bound_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_AGC_STRU.LOWER_BOUND" present="hex" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcAdvPthruAggrAssociator">
+        <Parameter name="data" refId="id_at_agc_lower_bound_updown"/>
+      </Associator>
+    </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_AGC_STRU.ATT_STEP" present="hex" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcAdvPthruAgcAttackReleaseAssociator">
+          <Parameter name="data" refId="id_adv_pthru_agc_att_step_updown"/>
+        </Associator> 
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_AGC_STRU.REL_STEP" present="hex" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcAdvPthruAgcAttackReleaseAssociator">
+          <Parameter name="data" refId="id_adv_pthru_agc_rel_step_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_AGC_STRU.DEBOUNCE" present="hex" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcAdvPthruAgcDebounceAssociator">
+          <Parameter name="data" refId="id_adv_pthru_agc_debounce_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_AGC_STRU.DISABLE_AGC" present="hex" visible="hidden"/>
+	</ConfigGroup>
+  </ConfigGroup>
+</Page>

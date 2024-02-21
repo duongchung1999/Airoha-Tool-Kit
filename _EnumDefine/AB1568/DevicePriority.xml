@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="AUDIO_DEVICE_NONE" Value="0"/>
+	<Group Name="AUDIO_DEVICE_SCO" Value="1"/>
+	<Group Name="AUDIO_DEVICE_SCO_HSP" Value="2"/>
+	<Group Name="AUDIO_DEVICE_SCO_IDLE" Value="3"/>
+	<Group Name="AUDIO_DEVICE_MUSIC" Value="4"/>
+	<Group Name="AUDIO_DEVICE_MUSIC_CALL_NOTIFY" Value="5"/>
+	<Group Name="AUDIO_DEVICE_CALL_STATE" Value="6"/>
+	<Group Name="AUDIO_DEVICE_AVRCP_PLAY" Value="7"/>
+	<Group Name="AUDIO_DEVICE_KEY_AT_CMD" Value="8"/>
+	<Group Name="AUDIO_DEVICE_LINE_IN" Value="9"/>
+	<Group Name="AUDIO_DEVICE_FM" Value="10"/>
+	<Group Name="AUDIO_DEVICE_DEMO_SOUND" Value="11"/>
+	<Group Name="AUDIO_DEVICE_MIC_TO_SPK" Value="12"/>
+	<Group Name="AUDIO_DEVICE_MP3" Value="13"/>
+</DataGroup>

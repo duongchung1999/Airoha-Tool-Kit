@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Basic" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Basic">
+    <ConfigGroup class="ucLayoutVertical">
+	  <ConfigItem class="ucComboBox" id="id_mce_defaultrole_combo">
+		<Parameter name="left_label" value="MCSync Default Role"/>
+		<Parameter name="left_width" value="150"/>
+		<Parameter name="width" value="120"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="xml_file_path" value="/_EnumDefine/AB1568/MceRole.xml"/>
+		<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+		  <Parameter name="data" refId="id_mce_defaultrole"/>
+		</Associator>
+	  </ConfigItem>
+	</ConfigGroup>
+
+	<ConfigGroup class="ucLayoutVertical">
+	  <ConfigItem class="ucComboBox" id="id_aac_on_combo">
+		<Parameter name="left_label" value="AAC"/>
+		<Parameter name="left_width" value="150"/>
+		<Parameter name="width" value="120"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+		<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+		  <Parameter name="data" refId="id_aac_on"/>
+		</Associator>
+	  </ConfigItem>
+	</ConfigGroup>
+
+	<ConfigGroup class="ucLayoutVertical" visible="hidden">
+	  <ConfigItem class="ucComboBox" id="id_ls_enable_combo">
+		<Parameter name="left_label" value="LS Enable"/>
+		<Parameter name="left_width" value="150"/>
+		<Parameter name="width" value="120"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+		<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+		  <Parameter name="data" refId="id_ls_enable"/>
+		</Associator>
+	  </ConfigItem>
+	</ConfigGroup>
+
+	<ConfigGroup class="ucLayoutVertical">
+	  <ConfigItem class="ucComboBox" id="id_Controller_3M_Enable_combo">
+		<Parameter name="left_label" value="Controller 3M"/>
+		<Parameter name="left_width" value="150"/>
+		<Parameter name="width" value="120"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+		<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+		  <Parameter name="data" refId="id_Controller_3M_Enable"/>
+		</Associator>
+	  </ConfigItem>
+	</ConfigGroup>
+
+	<ConfigGroup class="General">
+	  <ConfigItem class="ucStrTextBox" Unique="MCSYNC_PROFILE_CONFIG.peerBdAddr" id="id_mce_peerBdAddr" present="reversehexstr" min="1" max="12">
+	  </ConfigItem>
+	</ConfigGroup>
+
+	<ConfigGroup class="General">
+	  <ConfigItem class="ucStrTextBox" Unique="MCSYNC_PROFILE_CONFIG.localAwsBdAddr" id="id_mce_localAwsBdAddr" present="reversehexstr" min="1" max="12">
+	  </ConfigItem>
+
+	  <ConfigItem class="ucStrTextBox" Unique="DEFAULT_DEVICE_NAME_STRU.pDeviceName" present="asciistr" min="1" max="30" name="Default Device Name" id="DEFAULT_DEVICE_NAME" />
+
+	  <ConfigItem class="ucStrTextBox" Unique="BLEDeviceName" present="asciistr" min="1" max="30" name="BLE Device Name" />
+	</ConfigGroup>
+
+	<ConfigGroup class="ucLayoutVertical" visible="hidden">
+
+	  <ConfigGroup class="General">
+		<ConfigItem class="ucTextBox" Unique="MCSYNC_PROFILE_CONFIG.slaveRetryCount" name="MCSync Slave Retry Count">
+		</ConfigItem>
+	  </ConfigGroup>
+
+	  <ConfigGroup class="General">
+		<ConfigItem class="ucTextBox" Unique="AAC_ON.aac_on" id="id_aac_on" visible="hidden">
+		  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			<Parameter name="data" refId="id_aac_on_combo"/>
+		  </Associator>
+		</ConfigItem>
+	  </ConfigGroup>
+
+	  <ConfigGroup class="General">
+		<ConfigItem class="ucTextBox" Unique="MCSYNC_PROFILE_CONFIG.defaultRole" id="id_mce_defaultrole">
+		  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			<Parameter name="data" refId="id_mce_defaultrole_combo"/>
+		  </Associator>
+		</ConfigItem>
+
+		<ConfigItem class="ucTextBox" Unique="MCSYNC_PROFILE_CONFIG.supportedFeature" id="id_mce_supportedFeature">
+		</ConfigItem>
+
+
+		<ConfigItem class="ucTextBox" Unique="MCSYNC_PROFILE_CONFIG.lsEnable" id="id_ls_enable">
+		  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			<Parameter name="data" refId="id_ls_enable_combo"/>
+		  </Associator>
+		</ConfigItem>
+
+		<ConfigItem class="ucTextBox" Unique="A2DP.Controller_3M_Enable" id="id_Controller_3M_Enable">
+		  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			<Parameter name="data" refId="id_Controller_3M_Enable_combo"/>
+		  </Associator>
+		</ConfigItem>
+
+	  </ConfigGroup>
+
+	  <ConfigGroup class="General">
+		<ConfigItem class="ucStrTextBox" Unique="MCSYNC_PROFILE_CONFIG.awsKey" id="id_mce_awsKey" present="hexstr" min="32" max="32">
+		</ConfigItem>
+	  </ConfigGroup>
+
+	  <ConfigGroup class="General">
+		<ConfigItem class="ucStrTextBox" Unique="MCSYNC_PROFILE_CONFIG.reserved" id="id_mce_reserved" present="hexstr" min="30" max="30">
+		</ConfigItem>
+	  </ConfigGroup>
+    
+    <ConfigGroup class="General">
+      <ConfigItem class="ucProductCategoryTextBox" Unique="FW_Information.productCategory" id="id_product_category" present="asciistr" disable="1">
+      </ConfigItem>
+    </ConfigGroup>
+	  <!-- <ConfigGroup class="ucLayoutVertical"> -->
+	  <!-- <ConfigItem  class="ucGetRandomAddrButton" id="BtnRandomAddress"> -->
+	  <!-- <Parameter name="left_width" value="10"/> -->
+	  <!-- </ConfigItem> -->
+	  <!-- </ConfigGroup> -->
+	</ConfigGroup>
+</Page>

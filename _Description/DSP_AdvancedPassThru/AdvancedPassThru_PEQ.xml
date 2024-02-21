@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Advanced_PassThru_EQ" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Advanced_PassThru_EQ">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value="Advanced Passthru EQ"/>
+    <Parameter name="left_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="top_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigGroup title="Advanced_PassThru_EQ" class="PeqPage">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="realtime_update_nvkey" refId="id_advpthru_realtime_update_fw_nvkey"/>
+          <Parameter name="data" refId="Adv PEQ"/>
+        </Associator>
+      
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <ConfigGroup class="ucAdvPthruEqBandTable" id="id_advpthru_eq_table">
+          <Parameter name="group_xml" value="/_DSP_settings/AdvPthruEqGroup.xml"/>
+          <Parameter name="cell_cnt" value="10"/>
+          <Parameter name="gain_line_id" value="id_advpthru_eq_gain_line_data"/>
+          <Parameter name="modified_peq_index_id" value="id_modified_advpthru_eq_index"/>
+          <Parameter name="rescale_id" value="id_advpthru_eq_rescale_value"/>
+          <Parameter name="realtime_update_fw_nvkey_id" value="id_advpthru_eq_realtime_update_fw_nvkey"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="point_set" refId="id_advpthru_eq_gain_point_set"/>
+          </Associator>
+          <ConfigGroup class="ucLiveChart">
+            <Parameter name="chart_title" value="Gain"/>
+            <Parameter name="height" value="400"/>
+            <Parameter name="layout_column_weight" value="1"/>
+            <Parameter name="x_axis_title" value="Frequency(Hz)"/>
+            <Parameter name="x_axis_max_value" value="20000"/>
+            <Parameter name="x_axis_min_value" value="20"/>
+            <Parameter name="y_axis_title" value="Gain(dB)"/>
+            <Parameter name="x_axis_customized_step" value="20,100,1000,10000,20000"/>
+            <Parameter name="y_axis_max_value" value="18"/>
+            <Parameter name="y_axis_min_value" value="-20"/>
+            <Parameter name="y_axis_step" value="1"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="rescale_value" refId="id_advpthru_eq_rescale_value"/>
+            </Associator>
+            <ConfigItem class="point_set" id="id_advpthru_eq_gain_point_set">
+              <Parameter name="total_num" value="10"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcPeqPointSetAssociator">
+                <Parameter name="band_setting" refId="id_advpthru_eq_table"/>
+              </Associator>
+            </ConfigItem>
+            <ConfigItem class="line" id="id_advpthru_eq_gain_line">
+              <Parameter name="title" value="PEQ_Gain"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="data" refId="id_advpthru_eq_gain_line_data"/>
+              </Associator>
+            </ConfigItem>
+            <ConfigItem class="line" id="Advanced_PassThru_Target_data_1">
+              <Parameter name="title" value="target"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="data" refId="Advanced_PassThru_Target_data_1"/>
+              </Associator>
+            </ConfigItem>
+
+          </ConfigGroup>
+
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+
+</Page>
+

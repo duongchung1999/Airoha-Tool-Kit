@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Tx_Noise_Suppresion" class="Airoha.Project.ConfigTool.View.DspPage" parameter="Tx_Noise_Suppresion">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucNrCTimeUpDown" id="id_txnr_ctime_updown" max="3.84" min="0.96" disable="1">
+      <Parameter name="left_label" value="Convergence Time:"/>
+      <Parameter name="right_label" value="s (0.96 ~ 3.84)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.01"/>
+      <Parameter name="unique" value="DSP_PARA_NR_STRU.WB_NR_TX_POW_MIN_BUF_PERIOD"/>
+    </ConfigItem>
+    <ConfigItem class="ucNrAggrUpDown" id="id_txnr_aggr_updown" max="30" min="0">
+      <Parameter name="left_label" value="Aggressiveness:"/>
+      <Parameter name="right_label" value="dB (0 ~ 30)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="unique" value="DSP_PARA_NR_STRU.WB_NR_TX_NOISE_GAIN_LIMITER"/>
+    </ConfigItem>
+    <ConfigItem class="ucTxNrPdtUpDown" id="id_txnr_pdt_updown" max="100" min="1">
+      <Parameter name="left_label" value="PD Tolerance:"/>
+      <Parameter name="right_label" value="dB (1 ~ 100)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="ui_unique" value="UI_DSP_VOICE_TXNR_STRU.PD_TOLERANCE"/>
+      <Parameter name="ui_id_1" value="id_txnr_pdt_thrd_ms"/>
+      <Parameter name="ui_id_2" value="id_txnr_pdt_thrd2_ms"/>
+      <Parameter name="nv_unique_1" value="DSP_PARA_NR_STRU.PD_TRANSIENT_THRD"/>
+      <Parameter name="nv_unique_2" value="DSP_PARA_NR_STRU.PD_TRANSIENT_THRD2"/>
+    </ConfigItem>
+    <ConfigItem class="ucTxNrVtxGainUpDown" id="id_txnr_wb_vtx_gain_updown" max="24" min="0">
+      <Parameter name="left_label" value="WB Voice Tx Gain:"/>
+      <Parameter name="right_label" value="dB (0 ~ 24)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="unique" value="DSP_PARA_NR_STRU.WB_VOICE_TX_GAIN"/>
+    </ConfigItem>
+    <ConfigItem class="ucTxNrVtxGainUpDown" id="id_txnr_nb_vtx_gain_updown" max="24" min="0">
+      <Parameter name="left_label" value="NB Voice Tx Gain:"/>
+      <Parameter name="right_label" value="dB (0 ~ 24)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="unique" value="DSP_PARA_NR_STRU.NB_VOICE_TX_GAIN"/>
+    </ConfigItem>
+    <ConfigItem class="ucWindLowAttenUpDown" id="id_1mic_wind_low_atten_updown" max="16" min="0">
+      <Parameter name="left_label" value="PD_WIND_LOW_ATTEN:"/>
+      <Parameter name="right_label" value="dB (0 ~ 16)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="unique" value="DSP_PARA_NR_STRU.PD_WIND_LOW_ATTEN"/>
+    </ConfigItem>
+    <ConfigItem class="ucHighAttenDivideUpDown" id="id_1mic_wind_freq_range_updown" max="750" min="125">
+      <Parameter name="left_label" value="PD_WIND_FREQ_RANGE:"/>
+      <Parameter name="right_label" value="Hz (125 ~ 750)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="unique" value="DSP_PARA_NR_STRU.PD_WIND_FREQ_RANGE"/>
+    </ConfigItem>
+	<ConfigItem class="ucComboBox" id="id_txnr_Mel_scale_band_num_cb">
+	  <Parameter name="left_label" value="Mel scale band num:"/>
+	  <Parameter name="left_margin" value="10"/>
+	  <Parameter name="top_margin" value="10"/>
+	  <Parameter name="width" value="80"/>
+	  <Parameter name="left_width" value="180"/>
+	  <Parameter name="bottom_margin" value="10"/>
+	  <Parameter name="xml_file_path" value="/_DSP_settings/MelScaleBandNum.xml"/>
+	  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+	    <Parameter name="data" refId="id_txnr_Mel_scale_band_num_tb"/>
+	  </Associator>
+	</ConfigItem>
+	<ConfigItem class="ucIGOPresetComboBox" id="id_igo_lowband_preset_cb">
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="width" value="80"/>
+		<Parameter name="left_width" value="180"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="left_label" value="IGO lowband Preset:"/>
+		<Parameter name="xml_file_path" value="/_DSP_settings/IGO_preset_lowband_V5.xml"/>
+	</ConfigItem>
+	<ConfigItem class="ucIGOPresetComboBox" id="id_igo_highband_preset_cb">
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="width" value="80"/>
+		<Parameter name="left_width" value="180"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="left_label" value="IGO highband Preset:"/>
+		<Parameter name="xml_file_path" value="/_DSP_settings/IGO_preset_highband_V5.xml"/>
+	</ConfigItem>
+    <!--
+	<ConfigItem class="ucIGOPresetComboBox" id="id_igo_preset_cb" visible="hidden">
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="width" value="80"/>
+		<Parameter name="left_width" value="180"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="left_label" value="IGO NR Preset:"/>
+		<Parameter name="xml_file_path" value="/_DSP_settings/IGO_preset_V4.xml"/>
+	</ConfigItem>
+  -->
+    <ConfigItem class="ucCheckBox1toMany" id="id_teams_option" min="0" max="500">
+      <Parameter name="content" value="teams option"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="0"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="bottom_margin" value="5"/>
+      <Parameter name="unique_list" value="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_08L_b12_15,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_24L_b12_15,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_40L_b12_15,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_56L_b12_15,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_72L_b12_15,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_88L_b12_15"/>
+      <!--
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_igo"/>
+        <Parameter name="enable" refId="id_captouch_deb_mode_cb"/>
+        <Parameter name="enable_value" value="1"/>
+      </Associator>
+      -->
+    </ConfigItem>
+    <ConfigItem class="ucCheckBox1toMany" id="id_fb_range_option" min="0" max="500">
+      <Parameter name="content" value="FB range option"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="0"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="bottom_margin" value="5"/>
+      <Parameter name="unique_list" value="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_08H_b16_19,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_24H_b16_19,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_40H_b16_19,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_56H_b16_19,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_72H_b16_19,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_88H_b16_19"/>
+      <!--
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_igo"/>
+        <Parameter name="enable" refId="id_captouch_deb_mode_cb"/>
+        <Parameter name="enable_value" value="1"/>
+      </Associator>
+      -->
+    </ConfigItem>
+    <ConfigItem class="ucCheckBox1toMany" id="id_fb_comfort_noise_nr_option1" min="0" max="500">
+      <Parameter name="content" value="FB comfort noise NR option 1"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="0"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="bottom_margin" value="5"/>
+      <Parameter name="unique_list" value="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_08H_b20_23,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_24H_b20_23,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_40H_b20_23,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_56H_b20_23,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_72H_b20_23,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_88H_b20_23"/>
+      <!--
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_igo"/>
+        <Parameter name="enable" refId="id_captouch_deb_mode_cb"/>
+        <Parameter name="enable_value" value="1"/>
+      </Associator>
+      -->
+    </ConfigItem>
+    <ConfigItem class="ucCheckBox1toMany" id="id_fb_comfort_noise_nr_option2" min="0" max="500">
+      <Parameter name="content" value="FB comfort noise NR option 2"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="0"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="bottom_margin" value="5"/>
+      <Parameter name="unique_list" value="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_08H_b24_27,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_24H_b24_27,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_40H_b24_27,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_56H_b24_27,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_72H_b24_27,DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_88H_b24_27"/>
+      <!--
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_igo"/>
+        <Parameter name="enable" refId="id_captouch_deb_mode_cb"/>
+        <Parameter name="enable_value" value="1"/>
+      </Associator>
+      -->
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical" visible="hidden">
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucPureTextBox" id="id_txnr_pdt_thrd_ms" disable="1">
+      <Parameter name="left_label" value="PD TRANSIENT TIME FULL"/>
+      <Parameter name="right_label" value="ms (Range:20~2000)"/>
+      <Parameter name="left_width" value="220"/>
+      <Parameter name="width" value="80"/>
+    </ConfigItem>
+    <ConfigItem class="ucPureTextBox" id="id_txnr_pdt_thrd2_ms" disable="1">
+      <Parameter name="left_label" value="PD TRANSIENT TIME PARTIAL"/>
+      <Parameter name="right_label" value="ms (Range:11~1143)"/>
+      <Parameter name="left_width" value="220"/>
+      <Parameter name="width" value="80"/>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.PD_NR_TX_OPT" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.PD_PEAK_BUF_SIZE" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.PD_PITCH_VAD_THRD" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.PD_PITCH_FAC" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.PD_PEAK_RATIO_FAC" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.PD_TRANSIENT_THRD" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.PD_TRANSIENT_AUG" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.PD_PITCH_AUG" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.PD_TRANSIENT_THRD2" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.PD_RESERVE2" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_TX_VAD_THRD1" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_TX_VAD_THRD_BANDS_0" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_TX_VAD_THRD_BANDS_1" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_TX_VAD_THRD_BANDS_2" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_TX_VAD_THRD_BANDS_3" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_TX_VAD_THRD_BANDS_4" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_TX_OVER_SUPPRESS_FAC" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_TX_SPEECH_RETAIN_FAC" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_TX_NOISE_LAMDA" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_TX_NOISE_FLOOR_MIN" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_FAST_ALPHA" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_SLOW_ALPHA" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_NOISE_UPDATE_FAST" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_NOISE_UPDATE_SLOW" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_NOISE_UPDATE_ULTRASLOW" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_TX_EMPH_COEF_0" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_TX_EMPH_COEF_1" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_VOICE_TX_GAIN" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcNrVtxGainAssociator">
+        <Parameter name="data" refId="id_txnr_wb_vtx_gain_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.NB_VOICE_TX_GAIN" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcNrVtxGainAssociator">
+        <Parameter name="data" refId="id_txnr_nb_vtx_gain_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_TX_POW_MIN_BUF_PERIOD" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcNrCTimeAssociator">
+        <Parameter name="data" refId="id_txnr_ctime_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WB_NR_TX_NOISE_GAIN_LIMITER" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcNrAggrAssociator">
+        <Parameter name="data" refId="id_txnr_aggr_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.OFF_PITCH_ALPHA" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.WIND_DETECT_THRD" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.PD_WIND_LOW_ATTEN" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcWindLowAttenAssociator">
+        <Parameter name="data" refId="id_1mic_wind_low_atten_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.PD_WIND_FREQ_RANGE" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcHighAttenDivideAssociator">
+        <Parameter name="data" refId="id_1mic_wind_freq_range_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.PD_NONSTATIONARY_ALPHA_1" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.PD_NONSTATIONARY_ALPHA_2" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.PD_VOICE_IN_WIND" visible="hidden"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.PD_VOICE_AMP_LEVEL" visible="hidden"/>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="UI_DSP_VOICE_TXNR_STRU.PD_TOLERANCE" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcTxNrUiPdtAssociator">
+        <Parameter name="data" refId="id_txnr_pdt_updown"/>
+      </Associator>
+    </ConfigItem>
+	<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NR_STRU.Mel_scale_band_num" id="id_txnr_Mel_scale_band_num_tb" visible="hidden">
+	  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+		<Parameter name="data" refId="id_txnr_Mel_scale_band_num_cb"/>
+	  </Associator>
+	</ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical" visible="hidden">
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="top_label" value="DSP_PARA_RESERVED_t"/>
+    <Parameter name="border" value="1"/>
+	  <ConfigGroup class="General">
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_00H"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_00L"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_01"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_02"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_03_B0_b4_7"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_03_B1"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_03H"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_04"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_05"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_06"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_07"/>
+    <!--
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_08H"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_08L"/>
+    -->
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_08H_b28_31"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_08H_b24_27">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_fb_comfort_noise_nr_option2"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_08H_b20_23">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_fb_comfort_noise_nr_option1"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_08H_b16_19">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_fb_range_option"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_08L_b12_15">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_teams_option"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_08L_b8_11"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_08L_B0"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_09"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_10"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_11"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_12"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_13"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_14"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_15"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_16H"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_16L"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_17"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_18"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_19"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_20"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_21"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_22"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_23"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_24H_b28_31"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_24H_b24_27">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_fb_comfort_noise_nr_option2"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_24H_b20_23">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_fb_comfort_noise_nr_option1"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_24H_b16_19">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_fb_range_option"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_24L_b12_15">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_teams_option"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_24L_b8_11"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_24L_B0"/>
+      
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_25"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_26"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_27"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_28"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_29"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_30"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_31"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_32H"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_32L"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_33"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_34"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_35"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_36"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_37"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_38"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_39"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_40H_b28_31"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_40H_b24_27">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_fb_comfort_noise_nr_option2"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_40H_b20_23">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_fb_comfort_noise_nr_option1"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_40H_b16_19">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_fb_range_option"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_40L_b12_15">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_teams_option"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_40L_b8_11"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_40L_B0"/>
+      
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_41"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_42"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_43"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_44"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_45"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_46"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_47"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_48H"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_48L"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_49"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_50"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_51"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_52"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_53"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_54"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_55"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_56H_b28_31"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_56H_b24_27">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_fb_comfort_noise_nr_option2"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_56H_b20_23">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_fb_comfort_noise_nr_option1"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_56H_b16_19">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_fb_range_option"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_56L_b12_15">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_teams_option"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_56L_b8_11"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_56L_B0"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_57"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_58"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_59"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_60"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_61"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_62"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_63"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_64H"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_64L"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_65"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_66"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_67"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_68"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_69"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_70"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_71"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_72H_b28_31"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_72H_b24_27">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_fb_comfort_noise_nr_option2"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_72H_b20_23">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_fb_comfort_noise_nr_option1"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_72H_b16_19">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_fb_range_option"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_72L_b12_15">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_teams_option"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_72L_b8_11"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_72L_B0"/>
+      
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_73"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_74"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_75"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_76"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_77"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_78"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_79"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_80H"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_80L"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_81"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_82"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_83"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_84"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_85"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_86"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_87"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_88H_b28_31"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_88H_b24_27">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_fb_comfort_noise_nr_option2"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_88H_b20_23">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_fb_comfort_noise_nr_option1"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_88H_b16_19">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_fb_range_option"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_88L_b12_15">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_teams_option"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_88L_b8_11"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_88L_B0"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_89"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_90"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_91"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_92"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_93"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_94"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_95"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_96"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_97"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_98"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_99"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_100"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_101"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_102"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_103"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_104"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_105"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_106"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_107"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_108"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_109"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_110"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_111"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_112"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_113"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_114"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_115"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_116"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_117"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_118"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_119"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_120"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_121"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_122"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_123"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_124"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_125"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_126"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.DSP_ALG_RESERVED_PARA_127"/>
+
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_128"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_129"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_130"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_131"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_132"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_133"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_134"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_135"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_136"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_137"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_138"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_139"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_140"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_141"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_142"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_143"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_144"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_145"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_146"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_147"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_148"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_149"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_150"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_151"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_152"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_153"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_154"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_155"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_156"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_157"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_158"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_159"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_160"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_161"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_162"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_163"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_164"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_165"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_166"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_167"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_168"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_169"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_170"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_171"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_172"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_173"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_174"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_175"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_176"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_177"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_178"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_179"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_180"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_181"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_182"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_183"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_184"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_185"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_186"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_187"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_188"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_189"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_190"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_191"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_192"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_193"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_194"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_195"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_196"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_197"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_198"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_199"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_200"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_201"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_202"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_203"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_204"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_205"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_206"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_207"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_208"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_209"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_210"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_211"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_212"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_213"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_214"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_215"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_216"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_217"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_218"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_219"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_220"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_221"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_222"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_223"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_224"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_225"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_226"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_227"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_228"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_229"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_230"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_231"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_232"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_233"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_234"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_235"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_236"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_237"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_238"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_239"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_240"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_241"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_242"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_243"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_244"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_245"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_246"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_247"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_248"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_249"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_250"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_251"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_252"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_253"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_254"/>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU_2.DSP_ALG_RESERVED_PARA_255"/>
+	  </ConfigGroup>
+  </ConfigGroup>
+</Page>

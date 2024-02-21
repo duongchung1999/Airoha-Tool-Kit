@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Game_ULL_Feature_Settings" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Game_ULL_Feature_Settings">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucComboBox" id="id_game_ull_uplink_bitrate_cb">
+      <Parameter name="left_label" value="Uplink bitrate:"/>
+      <Parameter name="right_label" value="bps"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="left_width" value="180"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_DSP_settings/GameUllUplinkBitrate.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_game_ull_uplink_bitrate_tb"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" present="hex" id="id_game_ull_uplink_bitrate_tb" Unique="NVKEYID_APP_ULL_MISC.uplink_bitrate" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_game_ull_uplink_bitrate_cb"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="A2DP PEQ" class="Airoha.Project.ConfigTool.View.PeqTabPage" parameter="A2DP PEQ" id="A2DP PEQ">
+  <ConfigGroup title="A2DP PEQ" class="DspPage" id="a2dp_peq">
+    <Parameter name="button_margin" value="10"/>
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigItem class="ucPeqEnableButton" id="id_real_time_peq_enable"/>
+      <ConfigItem class="ucPeqDisableButton" id="id_real_time_peq_disable"/>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="PEQ Subset Editor"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="5"/>
+        <Parameter name="left_margin" value="5"/>
+        <ConfigItem class="ucPeqTableComboBox" id="id_a2dp_audio_path_0">
+          <Parameter name="left_label" value="PEQ Subset Select  "/>
+          <Parameter name="width" value="60"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/PeqAudioPathSet.xml"/>
+          <Parameter name="my_index" value="0"/>
+          <Parameter name="unique" value="PEQ_AUDIO_PATH_TABLE_STRU.PARAM"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcPeqComboBoxItemsAssociator">
+            <Parameter name="total_num" value="6"/>
+            <Parameter name="unique_00" refId="id_peq_table_nv_00"/>
+            <Parameter name="unique_01" refId="id_peq_table_nv_01"/>
+            <Parameter name="unique_02" refId="id_peq_table_nv_02"/>
+            <Parameter name="unique_03" refId="id_peq_table_nv_03"/>
+            <Parameter name="unique_04" refId="id_peq_table_nv_04"/>
+            <Parameter name="unique_05" refId="id_peq_table_nv_05"/>
+            <Parameter name="data" refId="A2DP PEQ"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucPeqTableComboBox" id="id_a2dp_audio_path_1">
+          <Parameter name="left_label" value="PEQ Subset Select  "/>
+          <Parameter name="width" value="60"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/PeqAudioPathSet.xml"/>
+          <Parameter name="my_index" value="1"/>
+          <Parameter name="unique" value="PEQ_AUDIO_PATH_TABLE_STRU.PARAM"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcPeqComboBoxItemsAssociator">
+            <Parameter name="total_num" value="6"/>
+            <Parameter name="unique_00" refId="id_peq_table_nv_00"/>
+            <Parameter name="unique_01" refId="id_peq_table_nv_01"/>
+            <Parameter name="unique_02" refId="id_peq_table_nv_02"/>
+            <Parameter name="unique_03" refId="id_peq_table_nv_03"/>
+            <Parameter name="unique_04" refId="id_peq_table_nv_04"/>
+            <Parameter name="unique_05" refId="id_peq_table_nv_05"/>
+            <Parameter name="data" refId="A2DP PEQ"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucPeqTableComboBox" id="id_a2dp_audio_path_2">
+          <Parameter name="left_label" value="PEQ Subset Select  "/>
+          <Parameter name="width" value="60"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/PeqAudioPathSet.xml"/>
+          <Parameter name="my_index" value="2"/>
+          <Parameter name="unique" value="PEQ_AUDIO_PATH_TABLE_STRU.PARAM"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcPeqComboBoxItemsAssociator">
+            <Parameter name="total_num" value="6"/>
+            <Parameter name="unique_00" refId="id_peq_table_nv_00"/>
+            <Parameter name="unique_01" refId="id_peq_table_nv_01"/>
+            <Parameter name="unique_02" refId="id_peq_table_nv_02"/>
+            <Parameter name="unique_03" refId="id_peq_table_nv_03"/>
+            <Parameter name="unique_04" refId="id_peq_table_nv_04"/>
+            <Parameter name="unique_05" refId="id_peq_table_nv_05"/>
+            <Parameter name="data" refId="A2DP PEQ"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucPeqTableComboBox" id="id_a2dp_audio_path_3">
+          <Parameter name="left_label" value="PEQ Subset Select  "/>
+          <Parameter name="width" value="60"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/PeqAudioPathSet.xml"/>
+          <Parameter name="my_index" value="3"/>
+          <Parameter name="unique" value="PEQ_AUDIO_PATH_TABLE_STRU.PARAM"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcPeqComboBoxItemsAssociator">
+            <Parameter name="total_num" value="6"/>
+            <Parameter name="unique_00" refId="id_peq_table_nv_00"/>
+            <Parameter name="unique_01" refId="id_peq_table_nv_01"/>
+            <Parameter name="unique_02" refId="id_peq_table_nv_02"/>
+            <Parameter name="unique_03" refId="id_peq_table_nv_03"/>
+            <Parameter name="unique_04" refId="id_peq_table_nv_04"/>
+            <Parameter name="unique_05" refId="id_peq_table_nv_05"/>
+            <Parameter name="data" refId="A2DP PEQ"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucPeqTableComboBox" id="id_a2dp_audio_path_8">
+          <Parameter name="left_label" value="PEQ Subset Select  "/>
+          <Parameter name="width" value="60"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/PeqAudioPathSet.xml"/>
+          <Parameter name="my_index" value="8"/>
+          <Parameter name="unique" value="PEQ_AUDIO_PATH_TABLE_STRU.PARAM"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcPeqComboBoxItemsAssociator">
+            <Parameter name="total_num" value="6"/>
+            <Parameter name="unique_00" refId="id_peq_table_nv_00"/>
+            <Parameter name="unique_01" refId="id_peq_table_nv_01"/>
+            <Parameter name="unique_02" refId="id_peq_table_nv_02"/>
+            <Parameter name="unique_03" refId="id_peq_table_nv_03"/>
+            <Parameter name="unique_04" refId="id_peq_table_nv_04"/>
+            <Parameter name="unique_05" refId="id_peq_table_nv_05"/>
+            <Parameter name="data" refId="A2DP PEQ"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="PEQ Subset"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucPeqTableSubsetButton" id="id_a2dp_subset_sel_0_btn">
+        <Parameter name="audiopath" value="PEQ_AUDIO_PATH_TABLE_STRU.PARAM"/>
+        <Parameter name="unique" value="PEQ_AUDIO_PATH_SET_STRU.PARAM_"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="A2DP PEQ"/>
+          <Parameter name="data" refId="phase_sel_item"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucPeqTableSubsetButton" id="id_a2dp_subset_sel_1_btn">
+        <Parameter name="audiopath" value="PEQ_AUDIO_PATH_TABLE_STRU.PARAM"/>
+        <Parameter name="unique" value="PEQ_AUDIO_PATH_SET_STRU.PARAM_"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="A2DP PEQ"/>
+          <Parameter name="data" refId="phase_sel_item"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucPeqTableSubsetButton" id="id_a2dp_subset_sel_2_btn">
+        <Parameter name="audiopath" value="PEQ_AUDIO_PATH_TABLE_STRU.PARAM"/>
+        <Parameter name="unique" value="PEQ_AUDIO_PATH_SET_STRU.PARAM_"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="A2DP PEQ"/>
+          <Parameter name="data" refId="phase_sel_item"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucPeqTableSubsetButton" id="id_a2dp_subset_sel_3_btn">
+        <Parameter name="audiopath" value="PEQ_AUDIO_PATH_TABLE_STRU.PARAM"/>
+        <Parameter name="unique" value="PEQ_AUDIO_PATH_SET_STRU.PARAM_"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="A2DP PEQ"/>
+          <Parameter name="data" refId="phase_sel_item"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucPeqTableSubsetButton" id="id_a2dp_subset_sel_8_btn">
+        <Parameter name="audiopath" value="PEQ_AUDIO_PATH_TABLE_STRU.PARAM"/>
+        <Parameter name="unique" value="PEQ_AUDIO_PATH_SET_STRU.PARAM_"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="A2DP PEQ"/>
+          <Parameter name="data" refId="phase_sel_item"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical" visible="hidden">
+      <ConfigGroup class="General">
+        <ConfigItem class="ucStrTextBox" present="hexstr" Unique="PEQ_AUDIO_PATH_TABLE_STRU.PARAM">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcPeqTableNvAssociator">
+            <Parameter name="peq_audio_path_0" refId="id_a2dp_audio_path_0"/>
+            <Parameter name="peq_audio_path_1" refId="id_a2dp_audio_path_1"/>
+            <Parameter name="peq_audio_path_2" refId="id_a2dp_audio_path_2"/>
+            <Parameter name="peq_audio_path_3" refId="id_a2dp_audio_path_3"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup title="PEQ Subset" class="DspPage">
+    <Parameter name="button_margin" value="10"/>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="PEQ Subset Select"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <ConfigGroup class="TabPage">
+        <ConfigGroup title="  A  " class="ucLayoutVertical">
+          <ConfigGroup class="ucLayoutHorizontal">
+            <ConfigGroup class="ucPeqSubsetTable" id="id_peq_subset_A_table">
+              <Parameter name="cell_cnt" value="19"/>
+              <Parameter name="fw_nvkey_id" value="0xE402"/>
+              <Parameter name="update_peq_table_nv_id" value="id_update_peq_table_nv_00"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="modified_peq_index" refId="id_modified_peq_index"/>
+                <Parameter name="data" refId="A2DP PEQ"/>
+              </Associator>
+            </ConfigGroup>
+          </ConfigGroup>
+        </ConfigGroup>
+        <ConfigGroup title="  B  " class="ucLayoutVertical">
+          <ConfigGroup class="ucLayoutHorizontal">
+            <ConfigGroup class="ucPeqSubsetTable" id="id_peq_subset_B_table">
+              <Parameter name="cell_cnt" value="19"/>
+              <Parameter name="fw_nvkey_id" value="0xE403"/>
+              <Parameter name="update_peq_table_nv_id" value="id_update_peq_table_nv_01"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="modified_peq_index" refId="id_modified_peq_index"/>
+                <Parameter name="data" refId="A2DP PEQ"/>
+              </Associator>
+            </ConfigGroup>
+          </ConfigGroup>
+        </ConfigGroup>
+        <ConfigGroup title="  C  " class="ucLayoutVertical">
+          <ConfigGroup class="ucLayoutHorizontal">
+            <ConfigGroup class="ucPeqSubsetTable" id="id_peq_subset_C_table">
+              <Parameter name="cell_cnt" value="19"/>
+              <Parameter name="fw_nvkey_id" value="0xE404"/>
+              <Parameter name="update_peq_table_nv_id" value="id_update_peq_table_nv_02"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="modified_peq_index" refId="id_modified_peq_index"/>
+                <Parameter name="data" refId="A2DP PEQ"/>
+              </Associator>
+            </ConfigGroup>
+          </ConfigGroup>
+        </ConfigGroup>
+        <ConfigGroup title="  D  " class="ucLayoutVertical">
+          <ConfigGroup class="ucLayoutHorizontal">
+            <ConfigGroup class="ucPeqSubsetTable" id="id_peq_subset_D_table">
+              <Parameter name="cell_cnt" value="19"/>
+              <Parameter name="fw_nvkey_id" value="0xE405"/>
+              <Parameter name="update_peq_table_nv_id" value="id_update_peq_table_nv_03"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="modified_peq_index" refId="id_modified_peq_index"/>
+                <Parameter name="data" refId="A2DP PEQ"/>
+              </Associator>
+            </ConfigGroup>
+          </ConfigGroup>
+        </ConfigGroup>
+        <ConfigGroup title="  E  " class="ucLayoutVertical">
+          <ConfigGroup class="ucLayoutHorizontal">
+            <ConfigGroup class="ucPeqSubsetTable" id="id_peq_subset_E_table">
+              <Parameter name="cell_cnt" value="19"/>
+              <Parameter name="fw_nvkey_id" value="0xE406"/>
+              <Parameter name="update_peq_table_nv_id" value="id_update_peq_table_nv_04"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="modified_peq_index" refId="id_modified_peq_index"/>
+                <Parameter name="data" refId="A2DP PEQ"/>
+              </Associator>
+            </ConfigGroup>
+          </ConfigGroup>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical" visible="hidden">
+        <ConfigGroup class="General" visible="hidden">
+          <ConfigItem class="ucStrTextBox" id="id_peq_table_nv_00" present="hexstr" Unique="PEQ_AUDIO_PATH_SET_STRU.PARAM_0">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_update_peq_table_nv_00"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucStrTextBox" id="id_peq_table_nv_01" present="hexstr" Unique="PEQ_AUDIO_PATH_SET_STRU.PARAM_1">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_update_peq_table_nv_01"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucStrTextBox" id="id_peq_table_nv_02" present="hexstr" Unique="PEQ_AUDIO_PATH_SET_STRU.PARAM_2">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_update_peq_table_nv_02"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucStrTextBox" id="id_peq_table_nv_03" present="hexstr" Unique="PEQ_AUDIO_PATH_SET_STRU.PARAM_3">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_update_peq_table_nv_03"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucStrTextBox" id="id_peq_table_nv_04" present="hexstr" Unique="PEQ_AUDIO_PATH_SET_STRU.PARAM_4">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_update_peq_table_nv_04"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucStrTextBox" id="id_peq_table_nv_05" present="hexstr" Unique="PEQ_AUDIO_PATH_SET_STRU.PARAM_5">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_update_peq_table_nv_05"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup title="PEQ Subset F Advanced AT" class="DspPage"/>
+  <ConfigGroup title="PEQ Superset" class="PeqPage">
+    <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+      <Parameter name="realtime_update_nvkey" refId="id_peq_realtime_update_fw_nvkey"/>
+      <Parameter name="data" refId="A2DP PEQ"/>
+    </Associator>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+        <ConfigGroup class="ucPeqBandTable" id="id_peq_setting_table">
+          <Parameter name="group_xml" value="/_DSP_settings/PeqGroup.xml"/>
+          <Parameter name="cell_cnt" value="10"/>
+          <Parameter name="gain_line_id" value="id_peq_gain_line_data"/>
+          <Parameter name="modified_peq_index_id" value="id_modified_peq_index"/>
+          <Parameter name="rescale_id" value="id_peq_rescale_value"/>
+          <Parameter name="realtime_update_fw_nvkey_id" value="id_peq_realtime_update_fw_nvkey"/>
+          <Parameter name="is_support_LDAC_nv_unique" value="UI_Dsp_A2DP_PEQ_Additional_Settings.is_support_88200_96000"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="point_set" refId="id_a2dp_peq_gain_point_set"/>
+            <Parameter name="peq_subset_sel_0" refId="id_a2dp_subset_sel_0_btn"/>
+            <Parameter name="peq_subset_sel_1" refId="id_a2dp_subset_sel_1_btn"/>
+            <Parameter name="peq_subset_sel_2" refId="id_a2dp_subset_sel_2_btn"/>
+            <Parameter name="peq_subset_sel_3" refId="id_a2dp_subset_sel_3_btn"/>
+          </Associator>
+          <ConfigGroup class="ucLiveChart">
+            <Parameter name="chart_title" value="Gain"/>
+            <Parameter name="height" value="400"/>
+            <Parameter name="layout_column_weight" value="1"/>
+            <Parameter name="x_axis_title" value="Frequency(Hz)"/>
+            <Parameter name="x_axis_max_value" value="20000"/>
+            <Parameter name="x_axis_min_value" value="20"/>
+            <Parameter name="y_axis_title" value="Gain(dB)"/>
+            <Parameter name="x_axis_customized_step" value="20,100,1000,10000,20000"/>
+            <Parameter name="y_axis_max_value" value="18"/>
+            <Parameter name="y_axis_min_value" value="-20"/>
+            <Parameter name="y_axis_step" value="1"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="rescale_value" refId="id_peq_rescale_value"/>
+            </Associator>
+            <ConfigItem class="point_set" id="id_a2dp_peq_gain_point_set">
+              <Parameter name="total_num" value="10"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcPeqPointSetAssociator">
+                <Parameter name="band_setting" refId="id_peq_setting_table"/>
+              </Associator>
+            </ConfigItem>
+            <ConfigItem class="line" id="id_peq_gain_line">
+              <Parameter name="title" value="PEQ_Gain"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="data" refId="id_peq_gain_line_data"/>
+              </Associator>
+            </ConfigItem>
+            <ConfigItem class="line" id="id_peq_target_line">
+              <Parameter name="title" value="target"/>
+              <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+                <Parameter name="data" refId="PEQ_Target_data_1"/>
+              </Associator>
+            </ConfigItem>
+          </ConfigGroup>          
+        </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

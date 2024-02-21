@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="VA_Config" class="Airoha.Project.ConfigTool.View.PurePage" parameter="VA_Config">
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="NVKEY_VA_CONFIG_INFO_STRU.enable" present="hex"/>
+    <ConfigItem class="ucTextBox" Unique="NVKEY_VA_CONFIG_INFO_STRU.color" present="hex"/>
+    <ConfigItem class="ucStrTextBox" Unique="NVKEY_VA_CONFIG_INFO_STRU.device_type" present="asciistrwithpadding" min="1" max="20"/>
+    <ConfigItem class="ucStrTextBox" Unique="NVKEY_VA_CONFIG_INFO_STRU.product_specific" present="hexstr" min="20" max="20" visible="hidden"/>
+    <ConfigItem class="ucTextBox" Unique="NVKEY_VA_CONFIG_INFO_STRU.vendor_id" present="hex"/>
+    <ConfigItem class="ucTextBox" Unique="NVKEY_VA_CONFIG_INFO_STRU.product_id" present="hex" visible="hidden"/>
+    <ConfigItem class="ucTextBox" Unique="NVKEY_VA_CONFIG_INFO_STRU.adv_interval" present="hex" visible="hidden"/>
+    <ConfigItem class="ucStrTextBox" Unique="NVKEY_VA_CONFIG_INFO_STRU.serial_number" present="asciistrwithpadding" min="1" max="20"/>
+    <ConfigItem class="ucTextBox" Unique="NVKEY_VA_CONFIG_INFO_STRU.device_id" present="hex"/>
+    <ConfigItem class="ucTextBox" Unique="NVKEY_VA_CONFIG_INFO_STRU.transport_packet_size" present="hex"/>
+    <ConfigItem class="ucTextBox" Unique="NVKEY_VA_CONFIG_INFO_STRU.max_transaction_data_size" present="hex"/>
+    <ConfigItem class="ucTextBox" Unique="NVKEY_VA_CONFIG_INFO_STRU.adv_flags" present="hex"/>
+    <ConfigItem class="ucTextBox" Unique="NVKEY_VA_CONFIG_INFO_STRU.battery_timeout" present="hex" visible="hidden"/>
+  </ConfigGroup>
+</Page>

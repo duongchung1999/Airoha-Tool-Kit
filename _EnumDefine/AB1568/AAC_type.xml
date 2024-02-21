@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="BT_SNK_SRV_A2DP_MPEG_2_AND_4_LC" Value="0"/>
+	<Group Name="BT_SNK_SRV_A2DP_MPEG_2_LC" Value="1"/>
+</DataGroup>

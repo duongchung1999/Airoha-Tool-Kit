@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="AST_EQ" class="Airoha.Project.ConfigTool.View.TabPage" parameter="AST_EQ" scroll="vertical">
+  <ConfigGroup title="Narrowband" class="PurePage" parameter="Narrowband">
+	<Parameter name="button_margin" value="10"/>
+	<ConfigGroup class="ucLayoutHorizontal">
+	  <Parameter name="left_margin" value="10"/>
+	  <Parameter name="bottom_margin" value="10"/>
+	  <Parameter name="height" value="460"/>
+	  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+		<Parameter name="is_always_hidden" refId="id_voice_ast_eq"/>
+	  </Associator>
+	  <ConfigGroup class="ucLiveChart">
+		<Parameter name="layout_column_weight" value="1"/>
+		<Parameter name="x_axis_title" value="Frequency(Hz)"/>
+		<Parameter name="x_axis_max_value" value="2000"/>
+		<Parameter name="x_axis_min_value" value="20"/>
+		<Parameter name="y_axis_max_value" value="24"/>
+		<Parameter name="y_axis_min_value" value="-30"/>
+		<Parameter name="y_axis_title" value="Gain(dB)"/>
+		<Parameter name="x_axis_customized_step" value="20,100,500,1000,2000"/>
+		<Parameter name="y_axis_step" value="1"/>
+		<ConfigItem class="point_set" id="id_voice_eq_point_set_ast_noise">
+		  <Parameter name="total_num" value="30"/>
+		  <Associator class="Airoha.Project.ConfigTool.Associator.fcVeqPointSetAssociator">
+			<Parameter name="band_table" refId="id_voice_eq_band_table_ast_noise"/>
+		  </Associator>
+		</ConfigItem>
+		<ConfigItem class="line" id="id_voice_eq_line_ast_noise">
+		  <Associator class="Airoha.Project.ConfigTool.Associator.fcVeqNbAssociator">
+      <Parameter name="type_NR_exe" value="q11" />
+			<Parameter name="boundary" value="2000"/>
+			<Parameter name="using_q11_tool" value="true"/>
+			<Parameter name="band_table" refId="id_voice_eq_band_table_ast_noise"/>
+			<Parameter name="unique_begin" value="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_0"/>
+			<Parameter name="unique_end" value="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_63"/>
+		  </Associator>
+		</ConfigItem>
+	  </ConfigGroup>
+	  <ConfigGroup class="ucLayoutVertical">
+		<Parameter name="left_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<ConfigGroup class="ucVeqBandTable" id="id_voice_eq_band_table_ast_noise">
+		  <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			<Parameter name="point_set" refId="id_voice_eq_point_set_ast_noise"/>
+			<Parameter name="veq_cell_01" refId="id_voice_eq_band_cell_ast_noise_01"/>
+			<Parameter name="veq_cell_02" refId="id_voice_eq_band_cell_ast_noise_02"/>
+			<Parameter name="veq_cell_03" refId="id_voice_eq_band_cell_ast_noise_03"/>
+			<Parameter name="veq_cell_04" refId="id_voice_eq_band_cell_ast_noise_04"/>
+			<Parameter name="veq_cell_05" refId="id_voice_eq_band_cell_ast_noise_05"/>
+			<Parameter name="veq_cell_06" refId="id_voice_eq_band_cell_ast_noise_06"/>
+			<Parameter name="veq_cell_07" refId="id_voice_eq_band_cell_ast_noise_07"/>
+			<Parameter name="veq_cell_08" refId="id_voice_eq_band_cell_ast_noise_08"/>
+			<Parameter name="veq_cell_09" refId="id_voice_eq_band_cell_ast_noise_09"/>
+			<Parameter name="veq_cell_10" refId="id_voice_eq_band_cell_ast_noise_10"/>
+			<Parameter name="veq_cell_11" refId="id_voice_eq_band_cell_ast_noise_11"/>
+			<Parameter name="veq_cell_12" refId="id_voice_eq_band_cell_ast_noise_12"/>
+			<Parameter name="veq_cell_13" refId="id_voice_eq_band_cell_ast_noise_13"/>
+			<Parameter name="veq_cell_14" refId="id_voice_eq_band_cell_ast_noise_14"/>
+			<Parameter name="veq_cell_15" refId="id_voice_eq_band_cell_ast_noise_15"/>
+			<Parameter name="veq_cell_16" refId="id_voice_eq_band_cell_ast_noise_16"/>
+			<Parameter name="veq_cell_17" refId="id_voice_eq_band_cell_ast_noise_17"/>
+			<Parameter name="veq_cell_18" refId="id_voice_eq_band_cell_ast_noise_18"/>
+			<Parameter name="veq_cell_19" refId="id_voice_eq_band_cell_ast_noise_19"/>
+			<Parameter name="veq_cell_20" refId="id_voice_eq_band_cell_ast_noise_20"/>
+			<Parameter name="veq_cell_21" refId="id_voice_eq_band_cell_ast_noise_21"/>
+			<Parameter name="veq_cell_22" refId="id_voice_eq_band_cell_ast_noise_22"/>
+			<Parameter name="veq_cell_23" refId="id_voice_eq_band_cell_ast_noise_23"/>
+			<Parameter name="veq_cell_24" refId="id_voice_eq_band_cell_ast_noise_24"/>
+			<Parameter name="veq_cell_25" refId="id_voice_eq_band_cell_ast_noise_25"/>
+			<Parameter name="veq_cell_26" refId="id_voice_eq_band_cell_ast_noise_26"/>
+			<Parameter name="veq_cell_27" refId="id_voice_eq_band_cell_ast_noise_27"/>
+			<Parameter name="veq_cell_28" refId="id_voice_eq_band_cell_ast_noise_28"/>
+			<Parameter name="veq_cell_29" refId="id_voice_eq_band_cell_ast_noise_29"/>
+			<Parameter name="veq_cell_30" refId="id_voice_eq_band_cell_ast_noise_30"/>
+		  </Associator>
+		  <ConfigGroup title="1-10" class="ucVeqBandTableColumn">
+			<Parameter name="item_start_num" value="01"/>
+			<Parameter name="item_num_count" value="10"/>
+			<ConfigItem class="ucVeqBandCell" id="id_voice_eq_band_cell_ast_noise_#">
+			  <Parameter name="label" value="#"/>
+			  <Parameter name="gain_upper_limit" value="18"/>
+			  <Parameter name="gain_lower_limit" value="-72"/>
+			  <Parameter name="unique_enable" value="UI_DSP_AST_EQ_STRU.enable_#"/>
+			  <Parameter name="unique_freq"   value="UI_DSP_AST_EQ_STRU.freq_#"/>
+			  <Parameter name="unique_gain"   value="UI_DSP_AST_EQ_STRU.gain_#"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		  <ConfigGroup title="11-20" class="ucVeqBandTableColumn">
+			<Parameter name="item_start_num" value="11"/>
+			<Parameter name="item_num_count" value="10"/>
+			<ConfigItem class="ucVeqBandCell" id="id_voice_eq_band_cell_ast_noise_#">
+			  <Parameter name="label" value="#"/>
+			  <Parameter name="gain_upper_limit" value="18"/>
+			  <Parameter name="gain_lower_limit" value="-72"/>
+			  <Parameter name="unique_enable" value="UI_DSP_AST_EQ_STRU.enable_#"/>
+			  <Parameter name="unique_freq"   value="UI_DSP_AST_EQ_STRU.freq_#"/>
+			  <Parameter name="unique_gain"   value="UI_DSP_AST_EQ_STRU.gain_#"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		  <ConfigGroup title="21-30" class="ucVeqBandTableColumn">
+			<Parameter name="item_start_num" value="21"/>
+			<Parameter name="item_num_count" value="10"/>
+			<ConfigItem class="ucVeqBandCell" id="id_voice_eq_band_cell_ast_noise_#">
+			  <Parameter name="label" value="#"/>
+			  <Parameter name="gain_upper_limit" value="18"/>
+			  <Parameter name="gain_lower_limit" value="-72"/>
+			  <Parameter name="unique_enable" value="UI_DSP_AST_EQ_STRU.enable_#"/>
+			  <Parameter name="unique_freq"   value="UI_DSP_AST_EQ_STRU.freq_#"/>
+			  <Parameter name="unique_gain"   value="UI_DSP_AST_EQ_STRU.gain_#"/>
+			</ConfigItem>
+		  </ConfigGroup>
+		</ConfigGroup>
+	  </ConfigGroup>
+	</ConfigGroup>
+	<ConfigGroup class="ucLayoutVertical">
+	  <Parameter name="left_margin" value="10"/>
+	  <ConfigItem class="ucInEarMicPassComboBox" id="id_inear_mic_pass_mode_combo">
+		<Parameter name="left_label" value="Mic Pass Mode"/>
+		<Parameter name="width" value="60"/>
+		<Parameter name="top_margin" value="10"/>
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="unique" value="DSP_PARA_INEAR_STRU.IE_en_pre_emp"/>
+		<Parameter name="xml_file_path" value="/_DSP_settings/InEarMicPassMode.xml"/>
+		<Associator class="Airoha.Project.ConfigTool.Associator.fcInEarMicPassModeAssociator">
+		  <Parameter name="data" refId="id_fb_mel_band_en_tb"/>
+		  <Parameter name="position" value="15"/>
+		  <Parameter name="position2" value="14"/>
+		</Associator>
+	  </ConfigItem>
+      <ConfigItem class="ucComboBox" enable="0" id="id_igo_pass_mode_cbb">
+        <Parameter name="left_label" value="IGO Pass Mode"/>
+        <Parameter name="width" value="60"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="bottom_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_DSP_settings/IGO_PassMode.xml"/>
+        <Parameter name="unique" value="DSP_ALG_RESERVED_PARA_STRU.IGO_pass_mode"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_igo_pass_mode_tb"/>
+		</Associator>
+	  </ConfigItem>
+	</ConfigGroup>
+	
+	<ConfigGroup class="ucLayoutVertical" visible="hidden">
+	  <Parameter name="left_margin" value="10"/>
+	  <ConfigGroup class="General">
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.ENABLE" id="id_voice_ast_eq"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.REVISION" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_0" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_1" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_2" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_3" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_4" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_5" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_6" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_7" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_8" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_9" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_10" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_11" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_12" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_13" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_14" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_15" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_16" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_17" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_18" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_19" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_20" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_21" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_22" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_23" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_24" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_25" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_26" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_27" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_28" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_29" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_30" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_31" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_32" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_33" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_34" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_35" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_36" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_37" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_38" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_39" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_40" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_41" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_42" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_43" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_44" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_45" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_46" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_47" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_48" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_49" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_50" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_51" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_52" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_53" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_54" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_55" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_56" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_57" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_58" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_59" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_60" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_61" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_62" />
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_AST_NOISE_EST_EQ_STRU.AST_EQ_COF_63" />
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_ALG_RESERVED_PARA_STRU.IGO_pass_mode" id="id_igo_pass_mode_tb">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_igo_pass_mode_cbb"/>
+      </Associator>
+    </ConfigItem>
+	  </ConfigGroup>
+	</ConfigGroup>
+  </ConfigGroup>
+</Page>

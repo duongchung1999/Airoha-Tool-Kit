@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Advanced_PassThru_AFC" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Advanced_PassThru_AFC">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value="DSP_PARA_AT_STRU"/>
+    <Parameter name="left_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="top_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucComboBox" id="id_advpthru_afc_en_cb">
+      <Parameter name="left_label" value="Enable"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="75"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="width" value="100"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+      <Parameter name="unique" value="DSP_PARA_AT_STRU.ENABLE"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_advpthru_afc_en_tb"/>
+      </Associator>
+    </ConfigItem>
+      <ConfigItem class="ucAdvPthruLearningRateUpDown" id="id_adv_pthru_learning_rate_updown" max="100" min="-100" visible="hidden">
+        <Parameter name="left_label" value="Learning rate: "/>
+        <Parameter name="right_label" value=""/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_width" value="160"/>
+        <Parameter name="width" value="80"/>
+        <Parameter name="step" value="0.0001"/>
+        <Parameter name="unique" value="DSP_PARA_AT_STRU.LP_AFC_LEARNING_RATE"/>
+      </ConfigItem>
+    
+    <ConfigGroup class="General">
+      <!-- 16k -->
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_STRU.ENABLE" present="hex" visible="hidden" id="id_advpthru_afc_en_tb">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_advpthru_afc_en_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_STRU.REVISION" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_GAIN_STRU.AFC_CAL_EN" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_STRU.LP_AFC_LEARNING_RATE" present="hex" id="id_at_lp_afc_learning_rate_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcLearningRateAssociator">
+          <Parameter name="data" refId="id_adv_pthru_learning_rate_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_STRU.LP_AFC_EMP_COEF" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_STRU.LP_AFC_UPDATE_RATE" present="hex" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_STRU.LP_AFC_MIC_DELAY" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_STRU.LP_AFC_TAP_SIZE" present="hex" visible="hidden"/>
+
+      <!-- 48k
+        <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_STRU.ENABLE" present="hex"/>
+        <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_STRU.REVISION" present="hex"/>
+        <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_STRU.AFC_MIC_DELAY" present="hex"/>
+        <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_STRU.AFC_PRE_EMP_COEF" present="hex"/>
+        <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_STRU.AFC_LEARN_RATE" present="hex"/>
+        <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_STRU.AFC_W_NORMALIZE" present="hex"/>
+        <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_STRU.AFC_TAP_SIZE" present="hex"/>
+        <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_STRU.AFC_FFT_NORMALIZE" present="hex"/>
+        -->
+	  </ConfigGroup>
+  </ConfigGroup>
+</Page>

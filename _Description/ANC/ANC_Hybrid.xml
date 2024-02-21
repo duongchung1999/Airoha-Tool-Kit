@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="ANC_Hybrid" class="Airoha.Project.ConfigTool.View.TabPage" parameter="ANC_Hybrid" scroll="vertical">
+  <ConfigGroup title="Hybrid" class="TouchFigurePage" parameter="FB">
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <ConfigGroup class="ucAncHybrid" id="id_anc_hybrid_table">
+          <Parameter name="anc_type" value="FB"/>
+          <Parameter name="group_xml" value="/_DSP_settings/AB1568/AncFBGroup.xml"/>
+          <Parameter name="group_btn_row_max_cnt" value="4"/>
+          <Parameter name="cell_cnt" value="9"/>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

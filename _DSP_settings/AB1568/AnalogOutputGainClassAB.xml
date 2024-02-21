@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="+12dB" Value="1200"/>
+	<Group Name="+11dB" Value="1100"/>
+	<Group Name="+10dB" Value="1000"/>
+	<Group Name="+9dB" Value="900"/>
+	<Group Name="+8dB" Value="800"/>
+	<Group Name="+7dB" Value="700"/>
+	<Group Name="+6dB" Value="600"/>
+	<Group Name="+5dB" Value="500"/>
+	<Group Name="+4dB" Value="400"/>
+	<Group Name="+3dB" Value="300"/>
+	<Group Name="+2dB" Value="200"/>
+	<Group Name="+1dB" Value="100"/>
+	<Group Name="0dB" Value="0"/>
+	<Group Name="-1dB" Value="-100"/>
+	<Group Name="-2dB" Value="-200"/>
+	<Group Name="-3dB" Value="-300"/>
+	<Group Name="-4dB" Value="-400"/>
+	<Group Name="-5dB" Value="-500"/>
+	<Group Name="-6dB" Value="-600"/>
+	<Group Name="-7dB" Value="-700"/>
+	<Group Name="-8dB" Value="-800"/>
+	<Group Name="-9dB" Value="-900"/>
+	<Group Name="-10dB" Value="-1000"/>
+	<Group Name="-11dB" Value="-1100"/>
+	<Group Name="-12dB" Value="-1200"/>
+	<Group Name="-13dB" Value="-1300"/>
+	<Group Name="-14dB" Value="-1400"/>
+	<Group Name="-15dB" Value="-1500"/>
+	<Group Name="-16dB" Value="-1600"/>
+	<Group Name="-17dB" Value="-1700"/>
+	<Group Name="-18dB" Value="-1800"/>
+	<Group Name="-19dB" Value="-1900"/>
+	<Group Name="-20dB" Value="-2000"/>
+	<Group Name="-21dB" Value="-2100"/>
+	<Group Name="-22dB" Value="-2200"/>
+	<Group Name="-23dB" Value="-2300"/>
+	<Group Name="-24dB" Value="-2400"/>
+	<Group Name="-25dB" Value="-2500"/>
+	<Group Name="-26dB" Value="-2600"/>
+	<Group Name="-27dB" Value="-2700"/>
+	<Group Name="-28dB" Value="-2800"/>
+	<Group Name="-29dB" Value="-2900"/>
+	<Group Name="-30dB" Value="-3000"/>
+	<Group Name="-31dB" Value="-3100"/>
+	<Group Name="-32dB" Value="-3200"/>
+
+</DataGroup>
+
+

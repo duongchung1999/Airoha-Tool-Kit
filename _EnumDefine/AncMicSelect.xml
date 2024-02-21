@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="ANC_AMIC0_L" Value="0"/>
+	<Group Name="ANC_AMIC0_R" Value="1"/>
+	<Group Name="ANC_DMIC0_L " Value="8"/>
+	<Group Name="ANC_DMIC0_R " Value="9"/>
+</DataGroup>

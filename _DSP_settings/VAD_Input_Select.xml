@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup> 
+	<Group Name="MIC0_P" Value="0"/> 
+	<Group Name="MIC0_N" Value="1"/> 
+	<Group Name="MIC1_P" Value="2"/> 
+	<Group Name="MIC1_N" Value="3"/> 
+</DataGroup>
+
+

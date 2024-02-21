@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup> 
+	<Group Name="01" 	Value="UI:0xEE70,FW:0xE430"/>
+	<Group Name="02" 	Value="UI:0xEE71,FW:0xE431"/>
+	<Group Name="03" 	Value="UI:0xEE72,FW:0xE432"/>
+	<Group Name="04" 	Value="UI:0xEE73,FW:0xE433"/>
+ 	<Group Name="05" 	Value="UI:0xEE74,FW:0xE434"/>
+	<Group Name="06" 	Value="UI:0xEE75,FW:0xE435"/>
+	<Group Name="07" 	Value="UI:0xEE76,FW:0xE436"/>
+	<!--
+ 	<Group Name="101" 	Value="UI:0xEF00,FW:0xE42C,UI_Ext:0xEF10"/>
+	<Group Name="102" 	Value="UI:0xEF01,FW:0xE42D,UI_Ext:0xEF11"/>
+	<Group Name="103" 	Value="UI:0xEF02,FW:0xE42E,UI_Ext:0xEF12"/>
+	<Group Name="104" 	Value="UI:0xEF03,FW:0xE42F,UI_Ext:0xEF13"/>
+	-->
+</DataGroup>
+
+

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="Analog_Mic0(AU_VIN0/AU_VIN1)" Value="0"/>
+	<Group Name="Analog_Mic1(AU_VIN2/AU_VIN3)" Value="1"/>
+	<Group Name="Analog_Mic2(AU_VIN4/AU_VIN5)" Value="2"/>
+</DataGroup>                         

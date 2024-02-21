@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Int_CHG_tricklecurrentconfig" class="Airoha.Project.ConfigTool.View.General" parameter="Int_CHG_tricklecurrentconfig">
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.CalCount"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.select"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.tricklecurrent1"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.rchg_sel_trickle1"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.tricklecurrent2"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.rchg_sel_trickle2"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.tricklecurrent3"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.rchg_sel_trickle3"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.tricklecurrent4"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.rchg_sel_trickle4"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.tricklecurrent5"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.rchg_sel_trickle5"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.tricklecurrent6"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.rchg_sel_trickle6"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.tricklecurrent7"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.rchg_sel_trickle7"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.tricklecurrent8"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.rchg_sel_trickle8"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.tricklecurrent9"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.rchg_sel_trickle9"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.tricklecurrent10"/>
+  <ConfigItem class="ucTextBox" Unique="Int_CHG_tricklecurrentconfig.rchg_sel_trickle10"/>
+</Page>

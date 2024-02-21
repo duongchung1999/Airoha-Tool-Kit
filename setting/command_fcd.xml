@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandBook>
+
+  <HCIReset>
+  <RequestFormat>
+    <packet_type type="uint8" value="0x01" />
+    <hci_cmd_opcode type="uint8_array" array_length="*" value="03 0C" />
+    <packet_len type="uint8" value="__LEN_TO_END__" />
+  </RequestFormat>
+  <ResponseFormat>
+  </ResponseFormat>
+  </HCIReset>
+
+  <SoftwareReset>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x01" />
+      <hci_cmd_opcode type="uint8_array" array_length="*" value="00 FC" />
+      <packet_len type="uint8" value="__LEN_TO_END__" />
+      <pattern type="uint8_array" array_length="*" value="04 30" />
+    </RequestFormat>
+    <ResponseFormat>
+    </ResponseFormat>
+  </SoftwareReset>
+
+  <DisableFcdLog>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x01" />
+      <hci_cmd_opcode type="uint8_array" array_length="*" value="00 FC" />
+      <packet_len type="uint8" value="__LEN_TO_END__" />
+      <pattern type="uint8_array" array_length="*" value="12 0C" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x04" />
+      <hci_event type="uint8" value="0xFF" />
+      <packet_len type="uint8" />
+      <pattern type="uint8_array" array_length="*" value="12 0C" />
+      <status type="uint8" />
+    </ResponseFormat>
+  </DisableFcdLog>
+
+  <GetFcdBdaddress>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x01" />
+      <hci_cmd_opcode type="uint8_array" array_length="*" value="00 FC" />
+      <packet_len type="uint8" value="__LEN_TO_END__" />
+      <pattern type="uint8_array" array_length="*" value="A1 08" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x04" />
+      <hci_event type="uint8" value="0xFF" />
+      <packet_len type="uint8" />
+      <pattern type="uint8_array" array_length="*" value="A1 0B" />
+      <bd_address type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </GetFcdBdaddress>
+
+  <CreateConnection>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x01" />
+      <hci_cmd_opcode type="uint8_array" array_length="*" value="00 FC" />
+      <packet_len type="uint8" value="__LEN_TO_END__" />
+      <pattern type="uint8_array" array_length="*" value="B9 08" />
+      <bd_address_b0 type="uint8" />
+      <bd_address_b1 type="uint8" />
+      <bd_address_b2 type="uint8" />
+      <bd_address_b3 type="uint8" />
+      <bd_address_b4 type="uint8" />
+      <bd_address_b5 type="uint8" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x04" />
+      <hci_event type="uint8" value="0xFF" />
+      <packet_len type="uint8" />
+      <pattern type="uint8_array" array_length="*" value="B9 09" />
+      <status type="uint8" />
+    </ResponseFormat>
+  </CreateConnection>
+
+  <ConnectedEvent timeout="10000">
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x04" />
+      <hci_event type="uint8" value="0xFF" />
+      <packet_len type="uint8" />
+      <pattern type="uint8_array" array_length="*" value="CE 0A" />
+      <bd_address_b0 type="uint8" />
+      <bd_address_b1 type="uint8" />
+      <bd_address_b2 type="uint8" />
+      <bd_address_b3 type="uint8" />
+      <bd_address_b4 type="uint8" />
+      <bd_address_b5 type="uint8" />
+      <pattern type="uint8" value="0x03" />
+    </ResponseFormat>
+  </ConnectedEvent>
+
+  <Disconnect>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x01" />
+      <hci_cmd_opcode type="uint8_array" array_length="*" value="00 FC" />
+      <packet_len type="uint8" value="__LEN_TO_END__" />
+      <pattern type="uint8_array" array_length="*" value="05 08" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x04" />
+      <hci_event type="uint8" value="0xFF" />
+      <packet_len type="uint8" />
+      <pattern type="uint8_array" array_length="*" value="05 09" />
+      <status type="uint8" />
+    </ResponseFormat>
+  </Disconnect>
+
+  <DisconnectEvent timeout="1500">
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x04" />
+      <hci_event type="uint8" value="0xFF" />
+      <packet_len type="uint8" />
+      <pattern type="uint8_array" array_length="*" value="14 34" />
+    </ResponseFormat>
+  </DisconnectEvent>
+
+  <MCSyncRequestRSSI timeout="4000">
+    <RequestFormat>
+      <packet_type type="uint8" value="0x02" />
+      <hci_cmd_opcode type="uint8_array" array_length="*" value="00 0F" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <pattern type="uint8_array" array_length="*" value="EE 02 05 5A 02 00 00 17" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x02" />
+      <hci_cmd_opcode type="uint8_array" array_length="*" value="00 0F" />
+      <packet_len type="uint16" />
+      <pattern_1 type="uint8_array" array_length="*" value="EE 02 05 5D" />
+      <ignore type="uint16" />
+      <pattern_2 type="uint8_array" array_length="*" value="00 17" />
+      <status type="uint8" />
+      <PartnerRssi type="uint8" />
+      <rssi type="uint8" />
+      <data type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </MCSyncRequestRSSI>
+
+  <MCSyncRequestRSSIEvent timeout="2000">
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x02" />
+      <hci_cmd_opcode type="uint8_array" array_length="*" value="00 0F" />
+      <packet_len type="uint16" />
+      <pattern_1 type="uint8_array" array_length="*" value="EE 02 05 5D" />
+      <ignore type="uint16" />
+      <pattern_2 type="uint8_array" array_length="*" value="00 17" />
+      <status type="uint8" />
+      <PartnerRssi type="uint8" />
+      <rssi type="uint8" />
+    </ResponseFormat>
+  </MCSyncRequestRSSIEvent>
+
+  <MCSyncRequestBattery timeout="2000">
+    <RequestFormat>
+      <packet_type type="uint8" value="0x02" />
+      <hci_cmd_opcode type="uint8_array" array_length="*" value="00 0F" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <pattern type="uint8_array" array_length="*" value="EE 02 05 5A 03 00 D6 0C 00" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x02" />
+      <hci_event type="uint8_array" array_length="*" value="00 0F" />
+      <packet_len type="uint16" />
+      <pattern_1 type="uint8_array" array_length="*" value="EE 02 05 5B 03 00 D6 0C" />
+      <status type="uint8" />
+    </ResponseFormat>
+  </MCSyncRequestBattery>
+
+  <MCSyncRequestBatteryEvent timeout="2000">
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x02" />
+      <hci_cmd_opcode type="uint8_array" array_length="*" value="00 0F" />
+      <packet_len type="uint16" />
+      <pattern_1 type="uint8_array" array_length="*" value="EE 02 05 5D" />
+      <ignore_1 type="uint16" />
+      <pattern_2 type="uint8_array" array_length="*" value="D6 0C" />
+      <status type="uint8" />
+      <ignore_2 type="uint8" />
+      <battery_percentage type="uint8" />
+    </ResponseFormat>
+  </MCSyncRequestBatteryEvent>
+
+  <MCSyncRequestLeDeviceName timeout="2000">
+    <RequestFormat>
+      <packet_type type="uint8" value="0x02" />
+      <hci_cmd_opcode type="uint8_array" array_length="*" value="00 0F" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <pattern type="uint8_array" array_length="*" value="EE 02 05 5A 06 00 00 0A 01 39 0E 00" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x02" />
+      <hci_event type="uint8_array" array_length="*" value="00 0F" />
+      <packet_len type="uint16" />
+      <pattern_1 type="uint8_array" array_length="*" value="EE 02 05 5B" />
+      <ignore type="uint16" />
+      <pattern_2 type="uint8_array" array_length="*" value="00 0A" />
+      <length type="uint16" />
+      <adv_data type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </MCSyncRequestLeDeviceName>
+
+  <MCSyncRequestVersion timeout="2000">
+    <RequestFormat>
+      <packet_type type="uint8" value="0x02" />
+      <hci_cmd_opcode type="uint8_array" array_length="*" value="00 0F" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <pattern type="uint8_array" array_length="*" value="EE 02 05 5A 03 00 07 1C 00 " />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x02" />
+      <hci_event type="uint8_array" array_length="*" value="00 0F" />
+      <packet_len type="uint16" />
+      <pattern_1 type="uint8_array" array_length="*" value="EE 02 05 5D" />
+      <ignore_1 type="uint16" />
+      <pattern_2 type="uint8_array" array_length="*" value="07 1C" />
+      <status type="uint8" />
+      <ignore_2 type="uint8" />
+      <length type="uint16" />
+      <data type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </MCSyncRequestVersion>
+
+  <MCSyncRequestAudioChannel timeout="2000">
+    <RequestFormat>
+      <packet_type type="uint8" value="0x02" />
+      <hci_cmd_opcode type="uint8_array" array_length="*" value="00 0F" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <pattern type="uint8_array" array_length="*" value="EE 02 05 5A 06 00 00 0A B5 F2 05 00 " />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x02" />
+      <hci_event type="uint8_array" array_length="*" value="00 0F" />
+      <packet_len type="uint16" />
+      <pattern_1 type="uint8_array" array_length="*" value="EE 02 05 5B" />
+      <ignore type="uint16" />
+      <pattern_2 type="uint8_array" array_length="*" value="00 0A" />
+      <length type="uint16" />
+      <data type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </MCSyncRequestAudioChannel>
+
+  <MCSyncImportAgentInfo timeout="2000">
+    <RequestFormat>
+      <packet_type type="uint8" value="0x02" />
+      <hci_cmd_opcode type="uint8_array" array_length="*" value="00 0F" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <pattern type="uint8_array" array_length="*" value="EE 02 05 5A 34 00 01 0A B0 F2 40 00 00" />
+      <partner_bd_address_b0 type="uint8" />
+      <partner_bd_address_b1 type="uint8" />
+      <partner_bd_address_b2 type="uint8" />
+      <partner_bd_address_b3 type="uint8" />
+      <partner_bd_address_b4 type="uint8" />
+      <partner_bd_address_b5 type="uint8" />      
+      <pattern_1 type="uint8" value="0xFF" />
+      <agent_bd_address_b0 type="uint8" />
+      <agent_bd_address_b1 type="uint8" />
+      <agent_bd_address_b2 type="uint8" />
+      <agent_bd_address_b3 type="uint8" />
+      <agent_bd_address_b4 type="uint8" />
+      <agent_bd_address_b5 type="uint8" />
+      <pattern_default type="uint8_array" array_length="*" value="01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x02" />
+      <hci_event type="uint8_array" array_length="*" value="00 0F" />
+      <packet_len type="uint16" />
+      <pattern_1 type="uint8_array" array_length="*" value="EE 02 05 5B" />
+      <length type="uint16" />
+      <pattern_2 type="uint8_array" array_length="*" value="01 0A" />
+      <status type="uint8" />
+    </ResponseFormat>
+  </MCSyncImportAgentInfo>
+
+  <MCSyncImportPartnerInfo timeout="2000">
+    <RequestFormat>
+      <packet_type type="uint8" value="0x02" />
+      <hci_cmd_opcode type="uint8_array" array_length="*" value="00 0F" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <pattern type="uint8_array" array_length="*" value="EE 02 05 5A 34 00 01 0A B0 F2 20 00 00 " />
+      <agent_bd_address_b0 type="uint8" />
+      <agent_bd_address_b1 type="uint8" />
+      <agent_bd_address_b2 type="uint8" />
+      <agent_bd_address_b3 type="uint8" />
+      <agent_bd_address_b4 type="uint8" />
+      <agent_bd_address_b5 type="uint8" />
+      <pattern_1 type="uint8" value="0xFF" />
+      <partner_bd_address_b0 type="uint8" />
+      <partner_bd_address_b1 type="uint8" />
+      <partner_bd_address_b2 type="uint8" />
+      <partner_bd_address_b3 type="uint8" />
+      <partner_bd_address_b4 type="uint8" />
+      <partner_bd_address_b5 type="uint8" />
+      <pattern_default type="uint8_array" array_length="*" value="01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x02" />
+      <hci_event type="uint8_array" array_length="*" value="00 0F" />
+      <packet_len type="uint16" />
+      <pattern_1 type="uint8_array" array_length="*" value="EE 02 05 5B" />
+      <length type="uint16" />
+      <pattern_2 type="uint8_array" array_length="*" value="01 0A" />
+      <status type="uint8" />
+    </ResponseFormat>
+  </MCSyncImportPartnerInfo>
+  <MCSyncAgentFactoryReset>
+    <RequestFormat>
+      <header_packet_type type="uint8" value="0x02" />
+      <header_hci_cmd_opcode type="uint8_array" array_length="*" value="00 0F" />
+      <packet_len type="uint16" value="0x000A" />
+      <pattern type="uint8_array" value="EE 02" />
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5A" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <!--<race_id type="uint8_array" value="01 11 95 00" />-->
+      <race_id type="uint8_array" value="01 11 0B 01" />
+    </RequestFormat>
+    <ResponseFormat>
+      <header_packet_type type="uint8" value="0x02" />
+      <header_hci_cmd_opcode type="uint8_array" array_length="*" value="00 0F" />
+      <header_packet_len type="uint16" />
+      <pattern type="uint8_array" value="EE 02" />
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5B" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x1101" />
+      <status type="uint8" />
+    </ResponseFormat>
+  </MCSyncAgentFactoryReset>
+  <EditFcdPinLimit>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x01" />
+      <hci_cmd_opcode type="uint8_array" array_length="*" value="00 FC" />
+      <packet_len type="uint8" value="__LEN_TO_END__" />
+      <pattern type="uint8_array" array_length="*" value="A2 0C" />
+      <pin type="int8" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x04" />
+      <hci_event type="uint8" value="0xFF" />
+      <packet_len type="uint8" />
+      <pattern type="uint8_array" array_length="*" value="A2 0C" />
+      <status type="uint8"/>
+    </ResponseFormat>
+  </EditFcdPinLimit>
+</CommandBook>

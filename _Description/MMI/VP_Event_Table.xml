@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="VP_Event_Table" class="Airoha.Project.ConfigTool.View.General" parameter="VP_Event_Table">
+	<ConfigItem class="AB1568.ucVoicePrompt_AB1568" Unique="VP_CONFIG_STRU.langCount">
+		<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			<Parameter name="data" refId="fileId"/>
+			<Parameter name="data" refId="NewLangId"/>
+		</Associator>
+	</ConfigItem>
+</Page>

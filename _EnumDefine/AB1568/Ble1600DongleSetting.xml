@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Ble1600DongleSetting>
+  <!-- <CommandInfo btnName="btnEnableMicL" btnContent="Enable Mic L" /> -->
+  <!-- <CommandInfo btnName="btnEnableMicR" btnContent="Enable Mic R" /> -->
+  <!-- <CommandInfo btnName="btnEnableAecnr" btnContent="Enable Aecnr" /> -->
+  <!-- <CommandInfo btnName="btnDisableAecnr" btnContent="Disable Aecnr" /> -->
+  <!-- <CommandInfo btnName="btnEnableBypassDigitalGain" btnContent="Enable Bypass DGain" /> -->
+  <!-- <CommandInfo btnName="btnDisableBypassDigitalGain" btnContent="Disable Bypass DGain" /> -->
+  <!-- <CommandInfo btnName="btnOpenAllMic" btnContent="Open All Mic" /> -->
+  <!-- <CommandInfo btnName="btnCloseAllMic" btnContent="Close All Mic" /> -->
+
+  <!-- <CommandInfo btnName="btnOpenAllMicEnableMicL" btnContent="All MIC -> MIC L" /> -->
+  <!-- <CommandInfo btnName="btnOpenAllMicEnableMicR" btnContent="All MIC -> MIC R" /> -->
+  <!-- <CommandInfo btnName="btnEnableAecnrDisableBypassDigitalGain" btnContent="Nr On+Disable Bypass DGain" /> -->
+  <!-- <CommandInfo btnName="btnDisableAecnrEnableBypassDigitalGain" btnContent="Nr Off+Enable Bypass DGain" /> -->
+
+  <!-- <CommandInfo btnName="btnClearAllPairInfo" btnContent="Clear All Pair Info" /> -->
+  <!-- <CommandInfo btnName="btnClearSmartPhonePairInfo" btnContent="Clear Smart Phone Pair Info" /> -->
+  <!-- <CommandInfo btnName="btnClearPairInfoc" btnContent="Clear Pair Info" /> -->
+
+  <!-- <CommandInfo btnName="btnEnableBluetoothAws" btnContent="Enable Bluetooth Aws" /> -->
+  <!-- <CommandInfo btnName="btnDisableBluetoothAws" btnContent="Disable Bluetooth Aws" /> -->
+
+  <CommandInfo btnName="btnSetSppUuid_0" btnContent="Set SPP UUID 0" />
+  <CommandInfo btnName="btnSetSppUuid_1" btnContent="Set SPP UUID 1" />
+</Ble1600DongleSetting>

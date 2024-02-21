@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="VA_Tx_Noise_Suppresion" class="Airoha.Project.ConfigTool.View.DspPage" parameter="VA_Tx_Noise_Suppresion">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucNrCTimeUpDown" id="id_va_txnr_ctime_updown" max="3.84" min="0.96" disable="1">
+      <Parameter name="left_label" value="Convergence Time:"/>
+      <Parameter name="right_label" value="s (0.96 ~ 3.84)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.01"/>
+      <Parameter name="unique" value="DSP_PARA_VA_AEC_NR_STRU.WB_NR_TX_POW_MIN_BUF_PERIOD"/>
+    </ConfigItem>
+    <ConfigItem class="ucNrAggrUpDown" id="id_va_txnr_aggr_updown" max="30" min="0">
+      <Parameter name="left_label" value="Aggressiveness:"/>
+      <Parameter name="right_label" value="dB (0 ~ 30)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="unique" value="DSP_PARA_VA_AEC_NR_STRU.WB_NR_TX_NOISE_GAIN_LIMITER"/>
+    </ConfigItem>
+    <ConfigItem class="ucTxNrPdtUpDown" id="id_va_txnr_pdt_updown" max="100" min="1">
+      <Parameter name="left_label" value="PD Tolerance:"/>
+      <Parameter name="right_label" value="dB (1 ~ 100)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="ui_unique" value="UI_DSP_VOICE_TXNR_STRU.VA_PD_TOLERANCE"/>
+      <Parameter name="ui_id_1" value="id_va_txnr_pdt_thrd_ms"/>
+      <Parameter name="ui_id_2" value="id_va_txnr_pdt_thrd2_ms"/>
+      <Parameter name="nv_unique_1" value="DSP_PARA_VA_AEC_NR_STRU.PD_TRANSIENT_THRD"/>
+      <Parameter name="nv_unique_2" value="DSP_PARA_VA_AEC_NR_STRU.PD_TRANSIENT_THRD2"/>
+    </ConfigItem>
+    <ConfigItem class="ucTxNrVtxGainUpDown" id="id_va_txnr_wb_vtx_gain_updown" max="24" min="0">
+      <Parameter name="left_label" value="WB Voice Tx Gain:"/>
+      <Parameter name="right_label" value="dB (0 ~ 24)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="unique" value="DSP_PARA_VA_AEC_NR_STRU.VA_WB_VOICE_TX_GAIN"/>
+    </ConfigItem>
+    <ConfigItem class="ucWindLowAttenUpDown" id="id_va_1mic_wind_low_atten_updown" max="16" min="0">
+      <Parameter name="left_label" value="PD_WIND_LOW_ATTEN:"/>
+      <Parameter name="right_label" value="dB (0 ~ 16)"/>
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="left_width" value="160"/>
+      <Parameter name="width" value="80"/>
+      <Parameter name="step" value="0.1"/>
+      <Parameter name="unique" value="DSP_PARA_VA_AEC_NR_STRU.PD_WIND_LOW_ATTEN"/>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical" visible="hidden">
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <ConfigItem class="ucPureTextBox" id="id_va_txnr_pdt_thrd_ms" disable="1">
+      <Parameter name="left_label" value="PD TRANSIENT TIME FULL"/>
+      <Parameter name="right_label" value="ms (Range:20~2000)"/>
+      <Parameter name="left_width" value="220"/>
+      <Parameter name="width" value="80"/>
+    </ConfigItem>
+    <ConfigItem class="ucPureTextBox" id="id_va_txnr_pdt_thrd2_ms" disable="1">
+      <Parameter name="left_label" value="PD TRANSIENT TIME PARTIAL"/>
+      <Parameter name="right_label" value="ms (Range:11~1143)"/>
+      <Parameter name="left_width" value="220"/>
+      <Parameter name="width" value="80"/>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VA_AEC_NR_STRU.VA_WB_VOICE_TX_GAIN" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcNrVtxGainAssociator">
+        <Parameter name="data" refId="id_va_txnr_wb_vtx_gain_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VA_AEC_NR_STRU.WB_NR_TX_POW_MIN_BUF_PERIOD" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcNrCTimeAssociator">
+        <Parameter name="data" refId="id_va_txnr_ctime_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VA_AEC_NR_STRU.WB_NR_TX_NOISE_GAIN_LIMITER" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcNrAggrAssociator">
+        <Parameter name="data" refId="id_va_txnr_aggr_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VA_AEC_NR_STRU.PD_WIND_LOW_ATTEN" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcWindLowAttenAssociator">
+        <Parameter name="data" refId="id_va_1mic_wind_low_atten_updown"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="UI_DSP_VOICE_TXNR_STRU.VA_PD_TOLERANCE" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcTxNrUiPdtAssociator">
+        <Parameter name="data" refId="id_va_txnr_pdt_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VA_AEC_NR_STRU.PD_TRANSIENT_THRD"/>
+    <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VA_AEC_NR_STRU.PD_TRANSIENT_THRD2"/>
+  </ConfigGroup>
+</Page>

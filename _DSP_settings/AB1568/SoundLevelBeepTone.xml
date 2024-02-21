@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="SHORT_1_NOTE_1" 		Value="0"/>
+	<Group Name="SHORT_1_NOTE_2" 		Value="1"/>
+	<Group Name="SHORT_1_NOTE_3" 		Value="2"/>
+	<Group Name="SHORT_1_NOTE_4" 		Value="3"/>
+	<Group Name="SHORT_2_NOTE" 			Value="4"/>
+	<Group Name="MEDIAN_1_NOTE" 		Value="5"/>
+	<Group Name="LONG_1_NOTE_HIGH" 		Value="6"/>
+	<Group Name="LONG_1_NOTE_LOW" 		Value="7"/>
+	<Group Name="VERYLONG_1_NOTE_HIGH" 	Value="8"/>
+	<Group Name="VERYLONG_1_NOTE_LOW" 	Value="9"/>
+	<Group Name="RISING_2_NOTE" 		Value="10"/>
+	<Group Name="RISING_4_NOTE" 		Value="11"/>
+	<Group Name="FALLING_2_NOTE" 		Value="12"/>
+	<Group Name="FALLING_4_NOTE" 		Value="13"/>
+	<Group Name="LONG_RING_A" 			Value="14"/>
+	<Group Name="LONG_RING_B" 			Value="15"/>
+	<Group Name="LONG_RING_C" 			Value="16"/>
+	<Group Name="USER_DEFINED_A" 		Value="17"/>
+	<Group Name="TOTAL_BEEP_PATTERNS" 	Value="18"/>
+	<Group Name="INVALID_BEEP_PATTERN" 	Value="255"/>
+</DataGroup>

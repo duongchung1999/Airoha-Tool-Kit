@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="JEITAWarm" class="Airoha.Project.ConfigTool.View.General" parameter="JEITAWarm">
+  <ConfigItem class="ucTextBox" Unique="JEITAWarm.JEITAwarmcc2thresholdvoltage"/>
+  <ConfigItem class="ucTextBox" Unique="JEITAWarm.JEITAwarmcc2thresholdADC"/>
+  <ConfigItem class="ucTextBox" Unique="JEITAWarm.JEITAwarmcvthresholdvoltage"/>
+  <ConfigItem class="ucTextBox" Unique="JEITAWarm.JEITAwarmcvthresholdADC"/>
+  <ConfigItem class="ucTextBox" Unique="JEITAWarm.JEITAwarmfullbatvoltage"/>
+  <ConfigItem class="ucTextBox" Unique="JEITAWarm.JEITAwarmfullbatADC"/>
+  <ConfigItem class="ucTextBox" Unique="JEITAWarm.JEITAwarmrechargevoltage"/>
+  <ConfigItem class="ucTextBox" Unique="JEITAWarm.JEITAwarmrechargeADC"/>
+  <ConfigItem class="ucTextBox" Unique="JEITAWarm.JEITAwarmfullbatvoltage2"/>
+  <ConfigItem class="ucTextBox" Unique="JEITAWarm.JEITAwarmfullbatADC2"/>
+  <ConfigItem class="ucTextBox" Unique="JEITAWarm.JEITAwarmcc1currentDAC"/>
+  <ConfigItem class="ucTextBox" Unique="JEITAWarm.JEITAwarmcc2currentDAC"/>
+  <ConfigItem class="ucTextBox" Unique="JEITAWarm.JEITAwarmcvDAC"/>
+  <ConfigItem class="ucTextBox" Unique="JEITAWarm.JEITAwarmcc1current1"/>
+  <ConfigItem class="ucTextBox" Unique="JEITAWarm.JEITAwarmrchgselcc11"/>
+  <ConfigItem class="ucTextBox" Unique="JEITAWarm.JEITAwarmcc2current1"/>
+  <ConfigItem class="ucTextBox" Unique="JEITAWarm.JEITAwarmrchgselcc21"/>
+  <ConfigItem class="ucTextBox" Unique="JEITAWarm.JEITAwarmCVstopcurrentADC"/>
+</Page>

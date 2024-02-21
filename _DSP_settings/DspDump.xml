@@ -1,0 +1,74 @@
+<ArrayOfDspDebug>
+
+<DspDebug><select>false</select><id>0</id><name>DebugReserved</name>              </DspDebug>
+<DspDebug><select>false</select><id>1</id><name>SOURCE_IN1</name>                 </DspDebug>
+<DspDebug><select>false</select><id>2</id><name>SOURCE_IN2</name>                 </DspDebug>
+<DspDebug><select>false</select><id>3</id><name>SOURCE_IN3</name>                 </DspDebug>
+<DspDebug><select>false</select><id>4</id><name>SOURCE_IN4</name>                 </DspDebug>
+<DspDebug><select>false</select><id>5</id><name>SOURCE_IN5</name>                 </DspDebug>
+<DspDebug><select>false</select><id>6</id><name>SINK_OUT1</name>                  </DspDebug>
+<DspDebug><select>false</select><id>7</id><name>SINK_OUT2</name>                  </DspDebug>
+<DspDebug><select>false</select><id>8</id><name>SINK_SUBPATH_OUT</name>           </DspDebug>
+<DspDebug><select>false</select><id>9</id><name>NA</name>                         </DspDebug>
+
+<DspDebug><select>false</select><id>10</id><name>VOICE_TX_MIC_0</name>            </DspDebug>
+<DspDebug><select>false</select><id>11</id><name>VOICE_TX_MIC_1</name>            </DspDebug>
+<DspDebug><select>false</select><id>12</id><name>VOICE_TX_MIC_2</name>            </DspDebug>
+<DspDebug><select>false</select><id>13</id><name>VOICE_TX_MIC_3</name>            </DspDebug>
+<DspDebug><select>false</select><id>14</id><name>VOICE_TX_REF</name>              </DspDebug>
+<DspDebug><select>false</select><id>15</id><name>VOICE_TX_NR_OUT</name>           </DspDebug>
+<DspDebug><select>false</select><id>16</id><name>VOICE_TX_CPD_IN</name>           </DspDebug>
+<DspDebug><select>false</select><id>17</id><name>VOICE_TX_CPD_OUT</name>          </DspDebug>
+<DspDebug><select>false</select><id>18</id><name>VOICE_TX_OUT</name>              </DspDebug>
+<DspDebug><select>false</select><id>19</id><name>VOICE_RX_PLC_IN</name>           </DspDebug>
+
+<DspDebug><select>false</select><id>20</id><name>VOICE_RX_PLC_INFO</name>         </DspDebug>
+<DspDebug><select>false</select><id>21</id><name>VOICE_RX_PLC_OUT</name>          </DspDebug>
+<DspDebug><select>false</select><id>22</id><name>VOICE_RX_NR_IN</name>            </DspDebug>
+<DspDebug><select>false</select><id>23</id><name>VOICE_RX_NR_OUT</name>           </DspDebug>
+<DspDebug><select>false</select><id>24</id><name>VOICE_RX_CPD_IN</name>           </DspDebug>
+<DspDebug><select>false</select><id>25</id><name>VOICE_RX_CPD_OUT</name>          </DspDebug>
+<DspDebug><select>false</select><id>26</id><name>VOICE_RX_OUT</name>              </DspDebug>
+<DspDebug><select>false</select><id>27</id><name>VOICE_VC_IN1</name>              </DspDebug>
+<DspDebug><select>false</select><id>28</id><name>VOICE_VC_IN2</name>              </DspDebug>
+<DspDebug><select>false</select><id>29</id><name>VOICE_VC_RESULT</name>           </DspDebug>
+
+<DspDebug><select>false</select><id>30</id><name>PROMPT_VP_PATTERN</name>         </DspDebug>
+<DspDebug><select>false</select><id>31</id><name>PROMPT_VP_OUT</name>             </DspDebug>
+<DspDebug><select>false</select><id>32</id><name>PROMPT_RT_PATTERN</name>         </DspDebug>
+<DspDebug><select>false</select><id>33</id><name>PROMPT_RT_OUT</name>             </DspDebug>
+<DspDebug><select>false</select><id>34</id><name>AUDIO_CODEC_IN</name>            </DspDebug>
+<DspDebug><select>false</select><id>35</id><name>AUDIO_SOURCE_IN_L</name>         </DspDebug>
+<DspDebug><select>false</select><id>36</id><name>AUDIO_SOURCE_IN_R</name>         </DspDebug>
+<DspDebug><select>false</select><id>37</id><name>AUDIO_INS_IN_L</name>            </DspDebug>
+<DspDebug><select>false</select><id>38</id><name>AUDIO_INS_IN_R</name>            </DspDebug>
+<DspDebug><select>false</select><id>39</id><name>AUDIO_INS_OUT_L</name>           </DspDebug>
+
+<DspDebug><select>false</select><id>40</id><name>AUDIO_INS_OUT_R</name>           </DspDebug>
+<DspDebug><select>false</select><id>41</id><name>AUDIO_ENHANCEMENT_IN_L</name>    </DspDebug>
+<DspDebug><select>false</select><id>42</id><name>AUDIO_ENHANCEMENT_IN_R</name>    </DspDebug>
+<DspDebug><select>false</select><id>43</id><name>AUDIO_ENHANCEMENT_OUT_L</name>   </DspDebug>
+<DspDebug><select>false</select><id>44</id><name>AUDIO_ENHANCEMENT_OUT_R</name>   </DspDebug>
+<DspDebug><select>false</select><id>45</id><name>AUDIO_PEQ_IN_L</name>            </DspDebug>
+<DspDebug><select>false</select><id>46</id><name>AUDIO_PEQ_IN_R</name>            </DspDebug>
+<DspDebug><select>false</select><id>47</id><name>AUDIO_PEQ_OUT_L</name>           </DspDebug>
+<DspDebug><select>false</select><id>48</id><name>AUDIO_PEQ_OUT_R</name>           </DspDebug>
+<DspDebug><select>false</select><id>49</id><name>AUDIO_PEQ2_IN_L</name>           </DspDebug>
+
+<DspDebug><select>false</select><id>50</id><name>AUDIO_PEQ2_IN_R</name>           </DspDebug>
+<DspDebug><select>false</select><id>51</id><name>AUDIO_PEQ2_OUT_L</name>          </DspDebug>
+<DspDebug><select>false</select><id>52</id><name>AUDIO_PEQ2_OUT_R</name>          </DspDebug>
+<DspDebug><select>false</select><id>53</id><name>AUDIO_CPD_IN_L</name>            </DspDebug>
+<DspDebug><select>false</select><id>54</id><name>AUDIO_CPD_IN_R</name>            </DspDebug>
+<DspDebug><select>false</select><id>55</id><name>AUDIO_CPD_OUT_L</name>           </DspDebug>
+<DspDebug><select>false</select><id>56</id><name>AUDIO_CPD_OUT_R</name>           </DspDebug>
+<DspDebug><select>false</select><id>57</id><name>AUDIO_SOUNDBAR_INPUT</name>      </DspDebug>
+<DspDebug><select>false</select><id>58</id><name>AUDIO_SOUNDBAR_TX</name>         </DspDebug>
+<DspDebug><select>false</select><id>59</id><name>AUDIO_WOOFER_RX</name>           </DspDebug>
+
+<DspDebug><select>false</select><id>60</id><name>AUDIO_WOOFER_UPSAMPLE_8K</name>  </DspDebug>
+<DspDebug><select>false</select><id>61</id><name>AUDIO_WOOFER_PLC_OUT</name>      </DspDebug>
+<DspDebug><select>false</select><id>62</id><name>AUDIO_WOOFER_UPSAMPLE_16K</name> </DspDebug>
+<DspDebug><select>false</select><id>63</id><name>AUDIO_WOOFER_CPD_OUT</name>      </DspDebug>
+                             
+</ArrayOfDspDebug>                                                                    

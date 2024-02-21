@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="Format Right Justified" Value="0"/>
+	<Group Name="Format Left Justified" Value="1"/>
+	<Group Name="Format I2S" Value="2"/>
+</DataGroup>

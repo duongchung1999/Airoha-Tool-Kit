@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Temperature_ADC_Offset_Config" class="Airoha.Project.ConfigTool.View.General" parameter="Temperature_ADC_Offset_Config">
+  <ConfigItem class="ucTextBox" Unique="TemperatureADCOffset.NUM_OF_ADC"/>
+  <ConfigItem class="ucTextBox" Unique="TemperatureADCOffset.OFFSET_OF_ADC_TABLE"/>
+  <ConfigItem class="ucTextBox" Unique="TemperatureADCOffset.ADC_TABLE1"/>
+  <ConfigItem class="ucTextBox" Unique="TemperatureADCOffset.ADC_TABLE2"/>
+  <ConfigItem class="ucTextBox" Unique="TemperatureADCOffset.ADC_TABLE3"/>
+  <ConfigItem class="ucTextBox" Unique="TemperatureADCOffset.ADC_TABLE4"/>
+  <ConfigItem class="ucTextBox" Unique="TemperatureADCOffset.ADC_TABLE5"/>
+  <ConfigItem class="ucTextBox" Unique="TemperatureADCOffset.ADC_TABLE6"/>
+  <ConfigItem class="ucTextBox" Unique="TemperatureADCOffset.ADC_TABLE7"/>
+  <ConfigItem class="ucTextBox" Unique="TemperatureADCOffset.ADC_TABLE8"/>
+</Page>

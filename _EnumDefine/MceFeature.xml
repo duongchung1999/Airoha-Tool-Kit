@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="MCSYNC_AUTO_RECONN_AFTER_PWR_ON_FEAT" Value="1"/>
+	<Group Name="MCSYNC_AUTO_DISCOVERABLE_FEAT" Value="4"/>
+	<Group Name="MCSYNC_AUTO_RECONNECT_FEAT" Value="8"/>
+	<Group Name="SAWSMCSYNC_SUPPORT_FEAT" Value="16"/>
+</DataGroup>

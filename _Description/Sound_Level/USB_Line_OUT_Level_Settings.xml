@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="USB/Line_OUT_Level_Settings" class="Airoha.Project.ConfigTool.View.General" parameter="USB/Line_OUT_Level_Settings">
+	<ConfigItem class="AB1568.ucUsbLineOutSl_AB1568" Unique="VOLUME_USB_LINE_OUT_SETTING_STRU.totalSoundLevel" id="id_usb_line_out_sound_level_init">
+		<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			<Parameter name="data" refId="id_gp_sw_digital_output_gain_tb_#"/>
+			<Parameter name="data" refId="id_gp_sw_digital_output_gain_total_index_tb"/>
+		</Associator>
+	</ConfigItem>
+	<ConfigItem class="ucTextBox" Unique="VOLUME_USB_LINE_OUT_SETTING_STRU.defaultSoundLevel" id="id_usb_line_out_defaultSoundLevel"/>
+</Page>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="LPBGconfig" class="Airoha.Project.ConfigTool.View.General" parameter="LPBGconfig">
+  <ConfigItem class="ucTextBox" Unique="LPBGconfig.Kflag"/>
+  <ConfigItem class="ucTextBox" Unique="LPBGconfig.sloep_value1"/>
+  <ConfigItem class="ucTextBox" Unique="LPBGconfig.ADC1"/>
+  <ConfigItem class="ucTextBox" Unique="LPBGconfig.sloep_value2"/>
+  <ConfigItem class="ucTextBox" Unique="LPBGconfig.ADC2"/>
+  <ConfigItem class="ucTextBox" Unique="LPBGconfig.Cal_Count"/>
+  <ConfigItem class="ucTextBox" Unique="LPBGconfig.vol_select"/>
+  <ConfigItem class="ucTextBox" Unique="LPBGconfig.voltage_1"/>
+  <ConfigItem class="ucTextBox" Unique="LPBGconfig.value_1"/>
+  <ConfigItem class="ucTextBox" Unique="LPBGconfig.ADC_1"/>
+  <ConfigItem class="ucTextBox" Unique="LPBGconfig.voltage_2"/>
+  <ConfigItem class="ucTextBox" Unique="LPBGconfig.value_2"/>
+  <ConfigItem class="ucTextBox" Unique="LPBGconfig.ADC_2"/>
+</Page>

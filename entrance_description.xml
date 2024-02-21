@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntranceDescription>
+  <Entrance title="AB1565/68 Logging Tool" console_flag="logging_tool">
+    <dll_path>Airoha.Project.dll</dll_path>
+    <class_name>Airoha.Project.LoggingToolWindow</class_name>
+    <is_console_only>false</is_console_only>
+    <group>common</group>
+    <Width>0.6</Width>
+    <Height>1</Height>
+  </Entrance>
+  <Entrance title="AB1562 Config Tool" console_flag="config_tool_62">
+    <dll_path>Airoha.Project.dll</dll_path>
+    <class_name>Airoha.Project.ConfigToolWindow</class_name>
+    <is_console_only>true</is_console_only>
+    <group>common</group>
+    <Width>0.6</Width>
+    <Height>1</Height>
+  </Entrance>
+  <Entrance title="AB1565 Config Tool" console_flag="config_tool_65">
+    <dll_path>Airoha.Project.dll</dll_path>
+    <class_name>Airoha.Project.ConfigToolWindow_AB1565</class_name>
+    <is_console_only>false</is_console_only>
+    <group>common</group>
+    <Width>0.6</Width>
+    <Height>1</Height>
+  </Entrance>
+  <Entrance title="AB1568 Config Tool" console_flag="config_tool_68">
+    <dll_path>Airoha.Project.dll</dll_path>
+    <class_name>Airoha.Project.ConfigToolWindow_AB1568</class_name>
+    <is_console_only>false</is_console_only>
+    <group>common</group>
+    <Width>0.6</Width>
+    <Height>1</Height>
+  </Entrance>
+  <Entrance title="FOTA Package Tool" console_flag="fota_package_tool">
+    <dll_path>Airoha.Project.dll</dll_path>
+    <class_name>Airoha.Project.FotaPackageWindow</class_name>
+    <is_console_only>false</is_console_only>
+    <group>common</group>
+    <Width>0</Width>
+    <Height>0</Height>
+  </Entrance>
+  <Entrance title="AB1565/68 1-Wire Logging Tool" console_flag="one_wire_logging_tool">
+    <dll_path>Airoha.Project.dll</dll_path>
+    <class_name>Airoha.Project.LoggingToolWindow_1Wire</class_name>
+    <is_console_only>false</is_console_only>
+    <group>common</group>
+    <Width>0.6</Width>
+    <Height>1</Height>
+  </Entrance>
+  <Entrance title="AB1562 Lab Test Tool" console_flag="lab_test_tool_62">
+    <dll_path>Airoha.Project.dll</dll_path>
+    <class_name>Airoha.Project.LabTestToolWindow</class_name>
+    <is_console_only>true</is_console_only>
+    <group>common</group>
+    <Width>0.6</Width>
+    <Height>0.8</Height>
+  </Entrance>
+  <Entrance title="AB1565/68 Lab Test Tool" console_flag="lab_test_tool_68">
+    <dll_path>Airoha.Project.dll</dll_path>
+    <class_name>Airoha.Project.LabTestToolWindow_AB1568</class_name>
+    <is_console_only>false</is_console_only>
+    <group>common</group>
+    <Width>0.6</Width>
+    <Height>0.8</Height>
+  </Entrance>
+  <Entrance title="AB1565/68 1-Wire Lab Test Tool" console_flag="lab_test_tool_1wire">
+    <dll_path>Airoha.Project.dll</dll_path>
+    <class_name>Airoha.Project.LabTestToolWindow_1Wire</class_name>
+    <is_console_only>false</is_console_only>
+    <group>common</group>
+    <Width>0.6</Width>
+    <Height>0.8</Height>
+  </Entrance>
+  <Entrance title="MP Tool (1-to-1 TCB)" console_flag="mp_tool">
+    <dll_path>Airoha.Tool.Kit.exe</dll_path>
+    <class_name>Airoha.Project.MpTool1_1Window</class_name>
+    <is_console_only>true</is_console_only>
+    <group>Product</group>
+    <Width>0</Width>
+    <Height>0</Height>
+  </Entrance>
+  <Entrance title="MP Tool (1-to-8 TCB)" console_flag="extend_mp_tool">
+    <dll_path>Airoha.Tool.Kit.exe</dll_path>
+    <class_name>Airoha.Project.MpTool1_8Window</class_name>
+    <is_console_only>false</is_console_only>
+    <group>Product</group>
+    <Width>0</Width>
+    <Height>0</Height>
+  </Entrance>
+  <Entrance title="MP Flow Setting Tool" console_flag="mp_setting">
+    <dll_path>Airoha.Project.dll</dll_path>
+    <class_name>Airoha.Project.MpFlowSettingDialog</class_name>
+    <is_console_only>true</is_console_only>
+    <group>Product</group>
+    <Width>0</Width>
+    <Height>0</Height>
+  </Entrance>
+  <Entrance title="OTA By Dongle Tool" console_flag="ota_by_dongle">
+    <dll_path>Airoha.Tool.Kit.exe</dll_path>
+    <class_name>Airoha.Project.OtaByDongleWindow</class_name>
+    <is_console_only>true</is_console_only>
+    <group>Product</group>
+    <Width>960</Width>
+    <Height>960</Height>
+  </Entrance>
+  <Entrance title="New OTA By Dongle Tool" console_flag="ota_by_dongle_new">
+    <dll_path>Airoha.Tool.Kit.exe</dll_path>
+    <class_name>Airoha.Project.OtaByDongleNewWindow</class_name>
+    <is_console_only>true</is_console_only>
+    <group>Product</group>
+    <Width>960</Width>
+    <Height>960</Height>
+  </Entrance>
+  <Entrance title="1-Wire DFU Tool" console_flag="one_wire_dfu_tool">
+    <dll_path>Airoha.Tool.Kit.exe</dll_path>
+    <class_name>Airoha.Project.DfuToolWindow</class_name>
+    <is_console_only>false</is_console_only>
+    <group>Product</group>
+    <Width>0</Width>
+    <Height>0</Height>
+  </Entrance>
+  <Entrance title="USB-HID DFU Tool" console_flag="usb_hid_dfu_tool">
+    <dll_path>Airoha.Tool.Kit.exe</dll_path>
+    <class_name>Airoha.Project.DfuToolviaUsbHidWindow</class_name>
+    <is_console_only>false</is_console_only>
+    <group>Product</group>
+    <Width>0</Width>
+    <Height>0</Height>
+  </Entrance>
+  <Entrance title="Pairing Tool" console_flag="mcsync_pairing_tool">
+    <dll_path>Airoha.Tool.Kit.exe</dll_path>
+    <class_name>Airoha.Project.MCSyncPairingWindow</class_name>
+    <is_console_only>false</is_console_only>
+    <group>Product</group>
+    <Width>0</Width>
+    <Height>0</Height>
+  </Entrance>
+</EntranceDescription>

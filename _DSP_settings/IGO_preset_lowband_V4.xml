@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="IGO_lowband_preset_0">
+		<Data Unique="DSP_PARA_RESERVED_t.DSP_ALG_RESERVED_PARA_00L" value="5775" />
+		<Data Unique="DSP_PARA_RESERVED_t.DSP_ALG_RESERVED_PARA_08L" value="5775" />
+		<Data Unique="DSP_PARA_RESERVED_t.DSP_ALG_RESERVED_PARA_16L" value="5775" />
+	</Group>
+	
+	<Group Name="IGO_lowband_preset_1">
+		<Data Unique="DSP_PARA_RESERVED_t.DSP_ALG_RESERVED_PARA_00L" value="7776" />
+		<Data Unique="DSP_PARA_RESERVED_t.DSP_ALG_RESERVED_PARA_08L" value="7776" />
+		<Data Unique="DSP_PARA_RESERVED_t.DSP_ALG_RESERVED_PARA_16L" value="7776" />
+	</Group>  
+	
+	<Group Name="IGO_lowband_preset_2">
+		<Data Unique="DSP_PARA_RESERVED_t.DSP_ALG_RESERVED_PARA_00L" value="9778" />
+		<Data Unique="DSP_PARA_RESERVED_t.DSP_ALG_RESERVED_PARA_08L" value="9778" />
+		<Data Unique="DSP_PARA_RESERVED_t.DSP_ALG_RESERVED_PARA_16L" value="9778" />
+	</Group>
+	
+	
+</DataGroup>

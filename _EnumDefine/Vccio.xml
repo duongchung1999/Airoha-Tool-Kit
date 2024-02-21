@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="1.8V" Value="180"/>
+	<Group Name="3.3V" Value="330"/>
+</DataGroup>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Mix_Volume_Ratio" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Mix_Volume_Ratio">
+  <ConfigGroup class="ucLayoutVertical">
+    <ConfigItem class="ucComboBox" id="id_gain1_compensation_combo">
+      <Parameter name="left_label" value="Audio Ratio"/>
+      <Parameter name="left_width" value="200"/>
+      <Parameter name="width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/AB1568/compensation.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_gain1_compensation"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical">
+    <ConfigItem class="ucComboBox" id="id_gain2_compensation_combo">
+      <Parameter name="left_label" value="VPRT Ratio"/>
+      <Parameter name="left_width" value="200"/>
+      <Parameter name="width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/AB1568/compensation.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_gain2_compensation"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical">
+    <ConfigItem class="ucComboBox" id="id_gain3_compensation_combo">
+      <Parameter name="left_label" value="Line-in/Usb-in Ratio"/>
+      <Parameter name="left_width" value="200"/>
+      <Parameter name="width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/AB1568/compensation.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_gain3_compensation"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_AUDIO_VOLUME.gain1_sample_per_step" min="1"/>
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_AUDIO_VOLUME.gain2_sample_per_step" min="1"/>
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_AUDIO_VOLUME_2.gain3_sample_per_step" min="1"/>
+    <ConfigItem class="ucPictureBox" Unique="picVpRtRatio">
+      <Parameter name="top_margin" value="25"/>
+      <Parameter name="right_margin" value="10"/>
+      <Parameter name="img" value="155xVPRT_RATIO.png"/>
+      <Parameter name="img_title" value="VPRT RATIO"/>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_AUDIO_VOLUME.gain1_compensation" present="hex" id="id_gain1_compensation" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_gain1_compensation_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_AUDIO_VOLUME.gain2_compensation" present="hex" id="id_gain2_compensation" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_gain2_compensation_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_AUDIO_VOLUME_2.gain3_compensation" present="hex" id="id_gain3_compensation" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_gain3_compensation_combo"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

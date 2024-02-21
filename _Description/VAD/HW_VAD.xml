@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="HW_VAD" class="Airoha.Project.ConfigTool.View.PurePage" parameter="HW_VAD">
+	<ConfigGroup class="ucLayoutVertical">
+    <ConfigItem class="ucComboBox" id="id_hw_vad_enable_cb">
+      <Parameter name="left_label" value="Enable"/>
+      <Parameter name="width" value="70"/>
+        <Parameter name="left_width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+      <Parameter name="unique" value="DSP_PARA_HW_VAD_STRU.enable"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_hw_vad_enable_tb"/>
+      </Associator>
+    </ConfigItem>    
+		<ConfigItem class="ucComboBox" id="id_hw_vad_snr_threshold_cb">
+			<Parameter name="left_label" value="SNR Threshold"/>
+			<Parameter name="width" value="70"/>
+      <Parameter name="left_width" value="120"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="xml_file_path" value="/_DSP_settings/HwVadSnrThreshold.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_hw_vad_snr_threshold_tb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucComboBox" id="id_hw_vad_noise_ignore_bit_cb">
+			<Parameter name="left_label" value="Noise Ignore Bit"/>
+			<Parameter name="width" value="70"/>
+      <Parameter name="left_width" value="120"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="xml_file_path" value="/_DSP_settings/HwVadNoiseIgnoreBit.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_hw_vad_noise_ignore_bit_tb"/>
+			</Associator>
+		</ConfigItem>
+    <ConfigItem class="ucComboBox" id="id_hw_vad_alpha_rise_cb">
+      <Parameter name="left_label" value="Alpha Rise"/>
+      <Parameter name="width" value="70"/>
+      <Parameter name="left_width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_DSP_settings/HwVadAlphaRise.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_hw_vad_alpha_rise_tb"/>
+      </Associator>
+    </ConfigItem>    
+	</ConfigGroup>
+
+	<ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_HW_VAD_STRU.enable" id="id_hw_vad_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_hw_vad_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_HW_VAD_STRU.snr_threshold" id="id_hw_vad_snr_threshold_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_hw_vad_snr_threshold_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_HW_VAD_STRU.noise_ignore_bit" id="id_hw_vad_noise_ignore_bit_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_hw_vad_noise_ignore_bit_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_HW_VAD_STRU.alpha_rise" id="id_hw_vad_alpha_rise_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_hw_vad_alpha_rise_cb"/>
+      </Associator>
+    </ConfigItem>
+	</ConfigGroup>
+</Page>

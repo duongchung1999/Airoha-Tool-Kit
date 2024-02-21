@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Wind_Detection_Settings_Passthru" class="Airoha.Project.ConfigTool.View.TabPage" parameter="Wind_Detection_Settings_Passthru">
+  <ConfigGroup title="Settings" class="PurePage" parameter="Settings">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_margin" value="20"/>
+      <Parameter name="bottom_margin" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigGroup class="ucLayoutVertical">
+        <ConfigItem class="ucComboBox" id="id_wind_detection_pt_en_cb">
+          <Parameter name="left_label" value="Enable"/>
+          <Parameter name="left_width" value="160"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/OnOff.xml"/>
+          <Parameter name="unique" value="DSP_PARA_WIND_PT_STRU.enable"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_wind_detection_pt_en_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="DSP_PARA_WIND_PT_STRU.w_thr0" id="id_wind_detection_pt_w_thr0_updown" min="0" max="32767" visible="hidden">
+          <Parameter name="left_label" value="Wind Threshold0"/>
+          <Parameter name="bottom_label" value="(0~32767)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="160"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_WIND_PT_STRU.w_thr0"/>
+          <!--<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_wind_detection_pt_w_thr0_tb"/>
+          </Associator>-->
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_wind_detection_pt_w_thr1_tb"/>
+            <Parameter name="offset" value="9000"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucWindDetectionUpdown" Unique="DSP_PARA_WIND_PT_STRU.w_thr1" id="id_wind_detection_pt_w_thr1_updown" min="0" max="32767">
+          <Parameter name="left_label" value="Wind Threshold1"/>
+          <Parameter name="bottom_label" value="(0~32767)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="160"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_WIND_PT_STRU.w_thr1"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_wind_detection_pt_w_thr1_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucWindDetectionUpdown" Unique="DSP_PARA_WIND_PT_STRU.c_thr1" id="id_wind_detection_pt_c_thr1_updown" min="0" max="2147483647">
+          <Parameter name="left_label" value="Wind Energy Threshold"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="160"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_WIND_PT_STRU.c_thr1"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_wind_detection_pt_c_thr1_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="DSP_PARA_WIND_PT_STRU.attenuation" id="id_wind_detection_pt_attenuation_updown" min="-327" max="327">
+          <Parameter name="left_label" value="Attenuation (dB)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="160"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="multiple" value="0.01"/>
+          <Parameter name="unique" value="DSP_PARA_WIND_PT_STRU.attenuation"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_wind_detection_pt_attenuation_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="DSP_PARA_WIND_PT_STRU.attack_count" id="id_wind_detection_pt_attack_count_updown" min="0" max="983">
+          <Parameter name="left_label" value="Attack Count (s)"/>
+          <Parameter name="bottom_label" value="(0.03 s/step)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="160"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="0.03"/>
+          <Parameter name="multiple" value="0.015"/>
+          <Parameter name="unique" value="DSP_PARA_WIND_PT_STRU.attack_count"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_wind_detection_pt_attack_count_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="DSP_PARA_WIND_PT_STRU.release_count" id="id_wind_detection_pt_release_count_updown" min="0" max="983">
+          <Parameter name="left_label" value="Release Count (s)"/>
+          <Parameter name="bottom_label" value="(0.03 s/step)"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="160"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="0.03"/>
+          <Parameter name="multiple" value="0.015"/>
+          <Parameter name="unique" value="DSP_PARA_WIND_PT_STRU.release_count"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_wind_detection_pt_release_count_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" id="id_wind_detection_pt_audio_dump_en_cb">
+          <Parameter name="left_label" value="Audio Debug"/>
+          <Parameter name="left_width" value="160"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/OnOff.xml"/>
+          <Parameter name="unique" value="DSP_PARA_WIND_PT_STRU.reserved1"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_wind_detection_pt_audio_dump_en_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" id="id_wind_detection_pt_optiion_cb" visible="hidden">
+          <Parameter name="left_label" value="Option"/>
+          <Parameter name="left_width" value="160"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/WindDetectionOption.xml"/>
+          <Parameter name="unique" value="DSP_PARA_WIND_PT_STRU.option"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_wind_detection_pt_optiion_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="DSP_PARA_WIND_PT_STRU.wind_sm_len" id="id_wind_detection_pt_wind_sm_len_updown" min="1" max="30" visible="hidden">
+          <Parameter name="left_label" value="Wind Smooth Length"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="160"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_WIND_PT_STRU.wind_sm_len"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_wind_detection_pt_wind_sm_len_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="DSP_PARA_WIND_PT_STRU.egy_sm_len" id="id_wind_detection_pt_egy_sm_len_updown" min="1" max="30" visible="hidden">
+          <Parameter name="left_label" value="Energy Smooth Length"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="160"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_WIND_PT_STRU.egy_sm_len"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_wind_detection_pt_egy_sm_len_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="DSP_PARA_WIND_PT_STRU.vad_leave" id="id_wind_detection_pt_vad_leave_updown" min="80" max="120" visible="hidden">
+          <Parameter name="left_label" value="VAD Leave"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="160"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_WIND_PT_STRU.vad_leave"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_wind_detection_pt_vad_leave_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="DSP_PARA_WIND_PT_STRU.c_thr0" id="id_wind_detection_pt_c_thr0_updown" min="0" max="2147483647" visible="hidden">
+          <Parameter name="left_label" value="c_thr0"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="160"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_WIND_PT_STRU.c_thr0"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_wind_detection_pt_c_thr0_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucUpDown" Unique="DSP_PARA_WIND_PT_STRU.c_thr2" id="id_wind_detection_pt_c_thr2_updown" min="0" max="2147483647" visible="hidden">
+          <Parameter name="left_label" value="c_thr2"/>
+          <Parameter name="left_margin" value="5"/>
+          <Parameter name="left_width" value="160"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_margin" value="5"/>
+          <Parameter name="bottom_margin" value="5"/>
+          <Parameter name="step" value="1"/>
+          <Parameter name="unique" value="DSP_PARA_WIND_PT_STRU.c_thr2"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_wind_detection_pt_c_thr2_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_WIND_PT_STRU.enable" id="id_wind_detection_pt_en_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_wind_detection_pt_en_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_WIND_PT_STRU.w_thr0" id="id_wind_detection_pt_w_thr0_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_wind_detection_pt_w_thr0_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_WIND_PT_STRU.w_thr1" id="id_wind_detection_pt_w_thr1_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_wind_detection_pt_w_thr1_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_WIND_PT_STRU.attenuation" id="id_wind_detection_pt_attenuation_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_wind_detection_pt_attenuation_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_WIND_PT_STRU.attack_count" id="id_wind_detection_pt_attack_count_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_wind_detection_pt_attack_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_WIND_PT_STRU.release_count" id="id_wind_detection_pt_release_count_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_wind_detection_pt_release_count_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_WIND_PT_STRU.reserved1" id="id_wind_detection_pt_audio_dump_en_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_wind_detection_pt_audio_dump_en_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_WIND_PT_STRU.option" id="id_wind_detection_pt_optiion_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_wind_detection_pt_optiion_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_WIND_PT_STRU.wind_sm_len" id="id_wind_detection_pt_wind_sm_len_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_wind_detection_pt_wind_sm_len_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_WIND_PT_STRU.egy_sm_len" id="id_wind_detection_pt_egy_sm_len_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_wind_detection_pt_egy_sm_len_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_WIND_PT_STRU.vad_leave" id="id_wind_detection_pt_vad_leave_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_wind_detection_pt_vad_leave_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_WIND_PT_STRU.c_thr0" id="id_wind_detection_pt_c_thr0_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_wind_detection_pt_c_thr0_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_WIND_PT_STRU.c_thr1" id="id_wind_detection_pt_c_thr1_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_wind_detection_pt_c_thr1_updown"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_WIND_PT_STRU.c_thr2" id="id_wind_detection_pt_c_thr2_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_wind_detection_pt_c_thr2_updown"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

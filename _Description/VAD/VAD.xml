@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="VAD_Tuning" class="Airoha.Project.ConfigTool.View.PurePage" parameter="VAD_Tuning">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+    <!--<ConfigGroup class="ucLayoutHorizontal">
+      <Parameter name="bottom_margin" value="5"/>
+      <ConfigItem class="ucComboBox" id="id_VAD_DNN_MODE_Sysclk_cb">
+        <Parameter name="left_label" value="Sys. Clock"/>
+        <Parameter name="width" value="60"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_DSP_settings/mDSP_VADsysclk.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_VAD_DNN_MODE_Sysclk_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>-->
+    <ConfigGroup class="ucLayoutHorizontal">
+      <Parameter name="top_margin" value="10"/>
+      <ConfigItem class="ucmDSP_VAD_ComboBox" id="id_DNN_MODE_Mic_cb">
+        <Parameter name="left_label" value="Mode"/>
+        <Parameter name="width" value="60"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="xml_file_path" value="/_DSP_settings/mDSP_VADmicMode.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_VAD_DNN_MODE_Mic_tb"/>
+        </Associator>
+      </ConfigItem>
+      <!--<ConfigItem class="ucReplaceBin" id="id_ucReplaceBin"/>-->
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutVertical">
+    <ConfigGroup class="mDSP_VAD_TabPage" id="id_mDsp_vad_tab">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="drc" refId="id_DNN_MODE_Mic_cb"/>
+      </Associator>
+      <ConfigGroup title="VAD Common Mode" class="PurePage" parameter="VAD Common Mode">
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="left_margin" value="10"/>
+          <ConfigGroup class="General">
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_NVKEY_VAD_COMM.ENABLE"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_NVKEY_VAD_COMM.REVISION"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_NVKEY_VAD_COMM.WWE_MODE"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_NVKEY_VAD_COMM.skip_frame_num"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_NVKEY_VAD_COMM.noisy_thr_h"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_NVKEY_VAD_COMM.noisy_thr_l"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_NVKEY_VAD_COMM.noisy_debounce_cnt"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_NVKEY_VAD_COMM.silent_thr_h"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_NVKEY_VAD_COMM.silent_thr_l"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_NVKEY_VAD_COMM.silent_debounce_cnt"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_NVKEY_VAD_COMM.vit_pre"/>
+          </ConfigGroup>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup title="1 MIC VAD Mode" class="PurePage" parameter="1 MIC VAD Mode">
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="left_margin" value="10"/>
+          <ConfigGroup class="General">
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.en_vad"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.gamma"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.diff_fac"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.diff_facb"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.vad_fac"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.vad_ph_cc"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.vad_ph_init"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.vad_ph_range"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.vad_corr_th"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.vad_pitch_th"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.win_sm_1st"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.sil_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.sil_thr2"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.fr_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.fr_thr2"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.rec_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.rec_thr2"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.end_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.gar_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.rel_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.ss_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.ms_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.ss_rel_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.ss_g_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.fa_end_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.fa_beg_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.short_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.rel_st4_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.rel_oth_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.dur_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.max_dur_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.ms_s_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.vad_leave_th"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_VAD_STRU.vad_eng_thr"/>
+          </ConfigGroup>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup title="1 MIC CON Mode" class="PurePage" parameter="1 MIC CON Mode">
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="left_margin" value="10"/>
+          <ConfigGroup class="General">
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.en_vad"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.gamma"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.diff_fac"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.diff_facb"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.vad_fac"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.vad_ph_cc"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.vad_ph_init"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.vad_ph_range"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.vad_corr_th"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.vad_pitch_th"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.win_sm_1st"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.sil_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.sil_thr2"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.fr_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.fr_thr2"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.rec_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.rec_thr2"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.end_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.gar_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.rel_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.ss_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.ms_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.ss_rel_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.ss_g_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.fa_end_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.fa_beg_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.short_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.rel_st4_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.rel_oth_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.dur_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.max_dur_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.ms_s_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.vad_leave_th"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_1MIC_CON_STRU.vad_eng_thr"/>
+          </ConfigGroup>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup title="2 MIC VAD Mode" class="PurePage" parameter="2 MIC VAD Mode">
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="left_margin" value="10"/>
+          <ConfigGroup class="General">
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.en_vad"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.gamma"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.diff_fac"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.diff_facb"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.vad_fac"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.vad_ph_cc"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.vad_ph_init"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.vad_ph_range"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.vad_corr_th"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.vad_pitch_th"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.win_sm_1st"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.sil_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.sil_thr2"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.fr_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.fr_thr2"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.rec_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.rec_thr2"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.end_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.gar_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.rel_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.ss_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.ms_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.ss_rel_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.ss_g_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.fa_end_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.fa_beg_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.short_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.rel_st4_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.rel_oth_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.dur_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.max_dur_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.ms_s_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.vad_leave_th"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_VAD_STRU.vad_eng_thr"/>
+          </ConfigGroup>
+        </ConfigGroup>
+      </ConfigGroup>
+      <ConfigGroup title="2 MIC CON Mode" class="PurePage" parameter="2 MIC CON Mode">
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="left_margin" value="10"/>
+          <ConfigGroup class="General">
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.en_vad"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.gamma"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.diff_fac"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.diff_facb"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.vad_fac"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.vad_ph_cc"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.vad_ph_init"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.vad_ph_range"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.vad_corr_th"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.vad_pitch_th"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.win_sm_1st"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.sil_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.sil_thr2"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.fr_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.fr_thr2"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.rec_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.rec_thr2"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.end_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.gar_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.rel_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.ss_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.ms_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.ss_rel_thr"/>
+            <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.ss_g_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.fa_end_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.fa_beg_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.short_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.rel_st4_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.rel_oth_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.dur_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.max_dur_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.ms_s_thr"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.vad_leave_th"/>
+			<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_MDSP_2MIC_CON_STRU.vad_eng_thr"/>
+          </ConfigGroup>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

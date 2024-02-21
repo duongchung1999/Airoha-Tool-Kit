@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="DSP_Dump" class="Airoha.Project.ConfigTool.View.PurePage" parameter="DSP_Dump">
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" id="dsp_dump_ScenarioSel" Unique="DSP_PARA_DATADUMP_STRU.Dump_Scenario_Sel">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpScenarioSel"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_version" Unique="DSP_PARA_DATADUMP_STRU.Dump_Id_Version">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdVersion"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index0" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index0">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex0"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index1" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index1">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex1"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index2" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index2">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex2"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index3" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index3">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex3"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index4" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index4">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex4"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index5" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index5">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex5"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index6" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index6">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex6"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index7" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index7">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex7"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index8" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index8">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex8"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index9" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index9">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex9"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index10" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index10">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex10"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index11" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index11">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex11"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index12" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index12">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex12"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index13" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index13">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex13"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index14" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index14">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex14"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index15" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index15">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex15"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index16" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index16">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex16"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index17" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index17">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex17"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index18" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index18">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex18"/>
+      </Associator>
+    </ConfigItem>
+	  <ConfigItem class="ucTextBox" id="dsp_dump_id_index19" Unique="DSP_PARA_DATADUMP_STRU.Dump_ID_Index19">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcDspDumpAssociator">
+        <Parameter name="data" refId="dsp_dump_UC"/>
+        <Parameter name="key" value="DumpIdIndex19"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup class="ucLayoutHorizontal">
+    <ConfigItem class="AB1568.ucDspDump_AB1568" id="dsp_dump_UC">
+      <Parameter name="DumpScenarioSel" refId="dsp_dump_ScenarioSel"/>
+      <Parameter name="DumpIdVersion" refId="dsp_dump_id_version"/>
+      <Parameter name="DumpIdIndex0" refId="dsp_dump_id_index0"/>
+      <Parameter name="DumpIdIndex1" refId="dsp_dump_id_index1"/>
+      <Parameter name="DumpIdIndex2" refId="dsp_dump_id_index2"/>
+      <Parameter name="DumpIdIndex3" refId="dsp_dump_id_index3"/>
+      <Parameter name="DumpIdIndex4" refId="dsp_dump_id_index4"/>
+      <Parameter name="DumpIdIndex5" refId="dsp_dump_id_index5"/>
+      <Parameter name="DumpIdIndex6" refId="dsp_dump_id_index6"/>
+      <Parameter name="DumpIdIndex7" refId="dsp_dump_id_index7"/>
+      <Parameter name="DumpIdIndex8" refId="dsp_dump_id_index8"/>
+      <Parameter name="DumpIdIndex9" refId="dsp_dump_id_index9"/>
+      <Parameter name="DumpIdIndex10" refId="dsp_dump_id_index10"/>
+      <Parameter name="DumpIdIndex11" refId="dsp_dump_id_index11"/>
+      <Parameter name="DumpIdIndex12" refId="dsp_dump_id_index12"/>
+      <Parameter name="DumpIdIndex13" refId="dsp_dump_id_index13"/>
+      <Parameter name="DumpIdIndex14" refId="dsp_dump_id_index14"/>
+      <Parameter name="DumpIdIndex15" refId="dsp_dump_id_index15"/>
+      <Parameter name="DumpIdIndex16" refId="dsp_dump_id_index16"/>
+      <Parameter name="DumpIdIndex17" refId="dsp_dump_id_index17"/>
+      <Parameter name="DumpIdIndex18" refId="dsp_dump_id_index18"/>
+      <Parameter name="DumpIdIndex19" refId="dsp_dump_id_index19"/>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

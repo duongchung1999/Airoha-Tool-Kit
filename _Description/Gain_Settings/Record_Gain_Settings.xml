@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Record/WWE Gain Settings" class="Airoha.Project.ConfigTool.View.TabPage" parameter="Record/WWE Gain Settings">
+  <ConfigGroup title="Input" class="PurePage">
+    <ConfigGroup class="ucLayoutHorizontal">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="20"/>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="Record Digital Input Gain"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucGainComboBox" id="id_vc_digital_mic0_l_gain_cb">
+          <Parameter name="left_label" value="MIC0 Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_IN_GAIN_VC_STRU.VC_MIC0_L_Digital_Vol"/>
+        </ConfigItem>
+        <ConfigItem class="ucGainComboBox" id="id_vc_digital_mic0_r_gain_cb">
+          <Parameter name="left_label" value="MIC1 Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_IN_GAIN_VC_STRU.VC_MIC0_R_Digital_Vol"/>
+        </ConfigItem>
+		<ConfigItem class="ucGainComboBox" id="id_vc_digital_mic1_l_gain_cb">
+          <Parameter name="left_label" value="MIC2 Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_IN_GAIN_VC_STRU.VC_MIC1_L_Digital_Vol"/>
+        </ConfigItem>
+		<ConfigItem class="ucGainComboBox" id="id_vc_digital_mic1_r_gain_cb">
+          <Parameter name="left_label" value="MIC3 Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_IN_GAIN_VC_STRU.VC_MIC1_R_Digital_Vol"/>
+        </ConfigItem>
+		<ConfigItem class="ucGainComboBox" id="id_vc_digital_mic2_l_gain_cb">
+          <Parameter name="left_label" value="MIC4 Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_IN_GAIN_VC_STRU.VC_MIC2_L_Digital_Vol"/>
+        </ConfigItem>
+		<ConfigItem class="ucGainComboBox" id="id_vc_digital_mic2_r_gain_cb">
+          <Parameter name="left_label" value="MIC5 Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_IN_GAIN_VC_STRU.VC_MIC2_R_Digital_Vol"/>
+        </ConfigItem>
+		<ConfigItem class="ucGainComboBox" id="id_vc_digital_i2s0_l_gain_cb">
+          <Parameter name="left_label" value="I2S0_L Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_IN_GAIN_VC_STRU.VC_I2S0_L_Digital_Vol"/>
+        </ConfigItem>
+		<ConfigItem class="ucGainComboBox" id="id_vc_digital_i2s0_r_gain_cb">
+          <Parameter name="left_label" value="I2S0_R Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_IN_GAIN_VC_STRU.VC_I2S0_R_Digital_Vol"/>
+        </ConfigItem>
+		<ConfigItem class="ucGainComboBox" id="id_vc_digital_i2s1_l_gain_cb">
+          <Parameter name="left_label" value="I2S1_L Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_IN_GAIN_VC_STRU.VC_I2S1_L_Digital_Vol"/>
+        </ConfigItem>
+		<ConfigItem class="ucGainComboBox" id="id_vc_digital_i2s1_r_gain_cb">
+          <Parameter name="left_label" value="I2S1_R Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_IN_GAIN_VC_STRU.VC_I2S1_R_Digital_Vol"/>
+        </ConfigItem>
+		<ConfigItem class="ucGainComboBox" id="id_vc_digital_i2s2_l_gain_cb">
+          <Parameter name="left_label" value="I2S2_L Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_IN_GAIN_VC_STRU.VC_I2S2_L_Digital_Vol"/>
+        </ConfigItem>
+		<ConfigItem class="ucGainComboBox" id="id_vc_digital_i2s2_r_gain_cb">
+          <Parameter name="left_label" value="I2S2_R Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_IN_GAIN_VC_STRU.VC_I2S2_R_Digital_Vol"/>
+        </ConfigItem>
+		<ConfigItem class="ucGainComboBox" id="id_vc_digital_linein_l_gain_cb">
+          <Parameter name="left_label" value="LINEIN_L Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_IN_GAIN_VC_STRU.VC_LINEIN_L_Digital_Vol"/>
+        </ConfigItem>
+		<ConfigItem class="ucGainComboBox" id="id_vc_digital_linein_r_gain_cb">
+          <Parameter name="left_label" value="LINEIN_R Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_IN_GAIN_VC_STRU.VC_LINEIN_R_Digital_Vol"/>
+        </ConfigItem>
+		<ConfigItem class="ucGainComboBox" id="id_vc_digital_echo_ref_gain_cb">
+          <Parameter name="left_label" value="ECHO_REF Gain"/>
+          <Parameter name="right_label" value="dB"/>
+          <Parameter name="left_width" value="120"/>
+          <Parameter name="width" value="100"/>
+          <Parameter name="xml_file_path" value="/_DSP_settings/AB1568/DigitalInputGain.xml"/>
+          <Parameter name="unique" value="DSP_PARA_IN_GAIN_VC_STRU.VC_Echo_Reference_Vol"/>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="General">
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_IN_GAIN_VC_STRU.VC_MIC0_L_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_vc_digital_mic0_l_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_IN_GAIN_VC_STRU.VC_MIC0_R_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_vc_digital_mic0_r_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+	  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_IN_GAIN_VC_STRU.VC_MIC1_L_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_vc_digital_mic1_l_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+	  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_IN_GAIN_VC_STRU.VC_MIC1_R_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_vc_digital_mic1_r_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+	  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_IN_GAIN_VC_STRU.VC_MIC2_L_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_vc_digital_mic2_l_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+	  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_IN_GAIN_VC_STRU.VC_MIC2_R_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_vc_digital_mic2_r_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+	  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_IN_GAIN_VC_STRU.VC_I2S0_L_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_vc_digital_i2s0_l_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+	  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_IN_GAIN_VC_STRU.VC_I2S0_R_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_vc_digital_i2s0_r_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+	  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_IN_GAIN_VC_STRU.VC_I2S1_L_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_vc_digital_i2s1_l_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+	  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_IN_GAIN_VC_STRU.VC_I2S1_R_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_vc_digital_i2s1_r_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+	  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_IN_GAIN_VC_STRU.VC_I2S2_L_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_vc_digital_i2s2_l_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+	  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_IN_GAIN_VC_STRU.VC_I2S2_R_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_vc_digital_i2s2_r_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+	  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_IN_GAIN_VC_STRU.VC_LINEIN_L_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_vc_digital_linein_l_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+	  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_IN_GAIN_VC_STRU.VC_LINEIN_R_Digital_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_vc_digital_linein_r_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+	  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_IN_GAIN_VC_STRU.VC_Echo_Reference_Vol" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_vc_digital_echo_ref_gain_cb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+
+</Page>

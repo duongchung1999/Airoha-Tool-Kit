@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Captouch_Sensing_Frontend_RG" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Captouch_Sensing_Frontend_RG">
+  <ConfigGroup class="ucLayoutHorizontal">
+    <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+      <Parameter name="data" refId="id_captouch_channel0_enable_tb"/>
+    </Associator>
+    <ConfigGroup class="ucCaptouchRegisterTable" id="id_captouch_register_table">
+      <Parameter name="left_margin" value="12"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="border" value="1"/>
+      <Parameter name="base_addr" value="0x0xA20F1000"/>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_register_cb_0x00">
+        <Parameter name="label_reg_name" value="TOUCH__CON0"/>
+        <Parameter name="label_reg_addr" value="0x0000"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_register_cb_0x04">
+        <Parameter name="label_reg_name" value="TOUCH__CON1"/>
+        <Parameter name="label_reg_addr" value="0x0004"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_register_cb_0x08">
+        <Parameter name="label_reg_name" value="TOUCH__CON2"/>
+        <Parameter name="label_reg_addr" value="0x0008"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_register_cb_0x0C">
+        <Parameter name="label_reg_name" value="TOUCH__CON3"/>
+        <Parameter name="label_reg_addr" value="0x000C"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_register_cb_0x10">
+        <Parameter name="label_reg_name" value="TOUCH__THR0"/>
+        <Parameter name="label_reg_addr" value="0x0010"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_register_cb_0x14">
+        <Parameter name="label_reg_name" value="TOUCH__THR1"/>
+        <Parameter name="label_reg_addr" value="0x0014"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_register_cb_0x18">
+        <Parameter name="label_reg_name" value="TOUCH__THR2"/>
+        <Parameter name="label_reg_addr" value="0x0018"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_register_cb_0x1C">
+        <Parameter name="label_reg_name" value="TOUCH__THR3"/>
+        <Parameter name="label_reg_addr" value="0x001C"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_register_cb_0x30">
+        <Parameter name="label_reg_name" value="TOUCH__FINE__CAP__MAN"/>
+        <Parameter name="label_reg_addr" value="0x0030"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_register_cb_0x6C">
+        <Parameter name="label_reg_name" value="TOUCH__CORSE__CAP__CFG"/>
+        <Parameter name="label_reg_addr" value="0x006C"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_register_cb_0x70">
+        <Parameter name="label_reg_name" value="TOUCH__ANA__CFG0"/>
+        <Parameter name="label_reg_addr" value="0x0070"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_register_cb_0x74">
+        <Parameter name="label_reg_name" value="TOUCH__ANA__CFG1"/>
+        <Parameter name="label_reg_addr" value="0x0074"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_register_cb_0x80">
+        <Parameter name="label_reg_name" value="TOUCH__DBG0"/>
+        <Parameter name="label_reg_addr" value="0x0080"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="disable" value="1"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_register_cb_0x84">
+        <Parameter name="label_reg_name" value="TOUCH__DBG1"/>
+        <Parameter name="label_reg_addr" value="0x0084"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="disable" value="1"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+      <ConfigItem class="ucCaptouchRegisterSetting" id="id_register_cb_0x88">
+        <Parameter name="label_reg_name" value="TOUCH__DBG2"/>
+        <Parameter name="label_reg_addr" value="0x0088"/>
+        <Parameter name="module_id" value="0x00"/>
+        <Parameter name="disable" value="1"/>
+        <Parameter name="default_value" value="0x00000000"/>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

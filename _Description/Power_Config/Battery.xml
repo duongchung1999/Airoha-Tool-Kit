@@ -1,0 +1,972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title ="Battery" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Battery" scroll="both">
+  <ConfigGroup class="ucLayoutVertical">
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="Battery Setting"/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="1"/>
+
+        <ConfigItem class="ucVoltageUpDown" id="id_vbat_initialbat_updown" min="3" max="5">
+          <Parameter name="left_label" value="SW Init Bat"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="170"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="VBATvoltageconfig.initialbat"/>
+        </ConfigItem>
+
+        <!--<ConfigItem class="ucVoltageUpDown" id="id_vbat_lowbat_updown" min="0" max="5">
+          <Parameter name="left_label" value="Low Bat"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="VBATvoltageconfig.lowbat"/>
+        </ConfigItem>-->
+
+        <ConfigItem class="ucVoltageUpDown" id="id_vbat_shutdownbat_updown" min="0" max="5">
+          <Parameter name="left_label" value="SW Shutdown Bat"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="170"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="VBATvoltageconfig.Shutdownbat"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="s1_voltage" refId="id_twostep_voltage_s1_updown"/>
+          </Associator>
+        </ConfigItem>
+        
+        <ConfigItem class="ucVoltageUpDown" id="id_chg_fullbat_updown" min="4.05" max="4.6">
+          <Parameter name="left_label" value="Full Bat"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="170"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" V"/>
+          <Parameter name="step" value="0.05"/>
+          <Parameter name="unique" value="CHG_ADCconfig.fullbatvoltage"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="s2_voltage" refId="id_twostep_voltage_s2_updown"/>
+            <Parameter name="cool_cv_flag" refId="id_cool_charger_cv_flag_updown"/>
+            <Parameter name="warm_cv_flag" refId="id_warm_charger_cv_flag_cb"/>
+          </Associator>
+        </ConfigItem>
+
+        <!--<ConfigItem class="ucComboBox" id="id_chg_fullbat_combo">
+          <Parameter name="left_label" value="Full Bat"/>
+          <Parameter name="right_label" value="V"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="left_width" value="160"/>
+          <Parameter name="width" value="60"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/AB1568/ChargerFullBat.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_chg_fullbat_tb"/>
+            <Parameter name="s2_voltage" refId="id_twostep_voltage_s2_updown"/>
+            <Parameter name="cool_cv_flag" refId="id_cool_charger_cv_flag_cb"/>
+            <Parameter name="warm_cv_flag" refId="id_warm_charger_cv_flag_cb"/>
+          </Associator>
+        </ConfigItem>-->
+
+        <ConfigItem class="ucComboBox" id="id_chg_recharge_thres_offset_combo">
+          <Parameter name="left_label" value="Recharge Threshold Offset"/>
+          <Parameter name="right_label" value="mV"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="width" value="60"/>
+          <Parameter name="des_label" value="Recharge voltage = Full Bat - Offset"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/AB1568/ChargerRechargeOffset.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_chg_recharge_thres_offset_tb"/>
+          </Associator>
+        </ConfigItem>
+
+        <ConfigItem class="ucVoltageUpDown" id="id_chg_rechargevol_updown" min="0" max="5" disable="1">
+          <Parameter name="left_label" value="Recharge Voltage"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="170"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="CHG_ADCconfig.rechargevoltage"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="full_bat" refId="id_chg_fullbat_updown"/>
+            <Parameter name="offset" refId="id_chg_recharge_thres_offset_combo"/>
+          </Associator>
+        </ConfigItem>
+
+        <ConfigItem class="ucComboBox" id="id_bat_category_combo">
+          <Parameter name="left_label" value="Battery Category"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="left_width" value="160"/>
+          <Parameter name="width" value="60"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/AB1568/BatteryCategory.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_bat_category_tb"/>
+          </Associator>
+        </ConfigItem>
+
+        <ConfigItem class="ucComboBox" id="id_Extend_Charging_cb" visible="hidden">
+          <Parameter name="left_label" value="Extend Charging"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="left_width" value="160"/>
+          <Parameter name="width" value="60"/>
+          <Parameter name="unique" value="ChargerControlConfig.Extend_Charging"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/Charger_ExtendCharging.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_Extend_Charging_tb"/>
+          </Associator>
+        </ConfigItem>
+
+      </ConfigGroup>
+
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="Battery Life Percentage"/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucVoltageUpDown" id="id_checkpoint1_updown" min="0" max="5">
+          <Parameter name="left_label" value="Battery Level 10%"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" V  "/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="VBATvoltageconfig.checkpoint1"/>
+        </ConfigItem>
+
+        <ConfigItem class="ucVoltageUpDown" id="id_checkpoint2_updown" min="0" max="5">
+          <Parameter name="left_label" value="Battery Level 20%"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" V  "/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="VBATvoltageconfig.checkpoint2"/>
+        </ConfigItem>
+
+        <ConfigItem class="ucVoltageUpDown" id="id_checkpoint3_updown" min="0" max="5">
+          <Parameter name="left_label" value="Battery Level 30%"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" V  "/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="VBATvoltageconfig.checkpoint3"/>
+        </ConfigItem>
+
+        <ConfigItem class="ucVoltageUpDown" id="id_checkpoint4_updown" min="0" max="5">
+          <Parameter name="left_label" value="Battery Level 40%"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" V  "/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="VBATvoltageconfig.checkpoint4"/>
+        </ConfigItem>
+
+        <ConfigItem class="ucVoltageUpDown" id="id_checkpoint5_updown" min="0" max="5">
+          <Parameter name="left_label" value="Battery Level 50%"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" V  "/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="VBATvoltageconfig.checkpoint5"/>
+        </ConfigItem>
+
+        <ConfigItem class="ucVoltageUpDown" id="id_checkpoint6_updown" min="0" max="5">
+          <Parameter name="left_label" value="Battery Level 60%"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" V  "/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="VBATvoltageconfig.checkpoint6"/>
+        </ConfigItem>
+
+        <ConfigItem class="ucVoltageUpDown" id="id_checkpoint7_updown" min="0" max="5">
+          <Parameter name="left_label" value="Battery Level 70%"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" V  "/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="VBATvoltageconfig.checkpoint7"/>
+        </ConfigItem>
+
+        <ConfigItem class="ucVoltageUpDown" id="id_checkpoint8_updown" min="0" max="5">
+          <Parameter name="left_label" value="Battery Level 80%"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" V  "/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="VBATvoltageconfig.checkpoint8"/>
+        </ConfigItem>
+
+        <ConfigItem class="ucVoltageUpDown" id="id_checkpoint9_updown" min="0" max="5">
+          <Parameter name="left_label" value="Battery Level 90%"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" V  "/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="VBATvoltageconfig.checkpoint9"/>
+        </ConfigItem>
+      </ConfigGroup>
+
+      <ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="top_label" value="Hw Jeita Setting"/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="1"/>
+
+        <ConfigGroup class="ucLayoutVertical">
+          <ConfigItem class="ucUpDown" id="id_cold_voltage_updown" min="0" max="1800">
+            <Parameter name="left_label" value="Cold Voltage"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="unique" value="VBATvoltageconfig.ColdVoltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_cold_voltage_tb"/>
+              <Parameter name="enable" refId="id_JEITA_EN_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucUpDown" id="id_cool_voltage_updown" min="0" max="1800">
+            <Parameter name="left_label" value="Cool Voltage"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="unique" value="VBATvoltageconfig.CoolVoltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_cool_voltage_tb"/>
+              <Parameter name="enable" refId="id_Warm_Cool_EN_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucUpDown" id="id_warm_voltage_updown" min="0" max="1800">
+            <Parameter name="left_label" value="Warm Voltage"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="unique" value="VBATvoltageconfig.WarmVoltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_warm_voltage_tb"/>
+              <Parameter name="enable" refId="id_Warm_Cool_EN_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucUpDown" id="id_hot_voltage_updown" min="0" max="1800">
+            <Parameter name="left_label" value="Hot Voltage"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value=" mV"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="unique" value="VBATvoltageconfig.HotVoltage"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_hot_voltage_tb"/>
+              <Parameter name="enable" refId="id_JEITA_EN_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucComboBox" id="id_cool_charger_current_sel_cb">
+            <Parameter name="left_label" value="Cool Charger Current"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value="%"/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/AB1568/JeitaCurrentSelection.xml"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_cool_charger_current_sel_tb"/>
+              <Parameter name="enable" refId="id_Warm_Cool_EN_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucVoltageUpDown" id="id_cool_charger_cv_flag_updown" min="4.05" max="4.6">
+            <Parameter name="left_label" value="Cool CV Flag"/>
+            <Parameter name="des_label" value="full bat > cool cv flag"/>
+            <Parameter name="right_label" value="V"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="width" value="80"/>
+            <Parameter name="step" value="0.05"/>
+            <Parameter name="unique" value="CHG_ADCconfig.coolCvFlag"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="enable" refId="id_Warm_Cool_EN_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <!--<ConfigItem class="ucUpDown" id="id_cool_charger_cv_flag_updown" min="4.05" max="4.6">
+            <Parameter name="left_label" value="Cool CV Flag"/>
+            <Parameter name="des_label" value="full bat > cool cv flag"/>
+            <Parameter name="right_label" value="V"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="width" value="80"/>
+            <Parameter name="step" value="0.025"/>
+            <Parameter name="unique" value="CHG_ADCconfig.coolCvFlag"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_cool_charger_cv_flag_tb"/>
+              --><!--<Parameter name="full_bat" refId="id_chg_fullbat_combo"/>--><!--
+              <Parameter name="enable" refId="id_Warm_Cool_EN_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>-->
+          <ConfigItem class="ucComboBox" id="id_warm_charger_current_sel_cb">
+            <Parameter name="left_label" value="Warm Charger Current"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value="%"/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/AB1568/JeitaCurrentSelection.xml"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_warm_charger_current_sel_tb"/>
+              <Parameter name="enable" refId="id_Warm_Cool_EN_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucVoltageUpDown" id="id_warm_charger_cv_flag_updown" min="4.05" max="4.6">
+            <Parameter name="left_label" value="Warm CV Flag"/>
+            <Parameter name="des_label" value="full bat > warm cv flag"/>
+            <Parameter name="right_label" value="V"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="width" value="80"/>
+            <Parameter name="step" value="0.05"/>
+            <Parameter name="unique" value="CHG_ADCconfig.warmCvFlag"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="enable" refId="id_Warm_Cool_EN_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <!--<ConfigItem class="ucComboBox" id="id_warm_charger_cv_flag_cb">
+            <Parameter name="left_label" value="Warm CV Flag"/>
+            <Parameter name="des_label" value="full bat > warm cv flag"/>
+            <Parameter name="right_label" value="V"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="left_width" value="140"/>
+            <Parameter name="width" value="80"/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/AB1568/ChargerFullBat.xml"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_warm_charger_cv_flag_tb"/>
+              --><!--<Parameter name="full_bat" refId="id_chg_fullbat_combo"/>--><!--
+              <Parameter name="enable" refId="id_Warm_Cool_EN_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>-->
+
+          <ConfigItem class="ucComboBox" id="id_JEITA_EN_cb" visible="hidden">
+            <Parameter name="left_label" value="JEITA EN"/>
+            <Parameter name="des_label" value="When JEITA EN is disabled, the HW JEITA setting will be invalid."/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="190"/>
+            <Parameter name="top_margin" value="5"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+            <Parameter name="unique" value="ChargerControlConfig.JEITA_EN"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_JEITA_EN_tb"/>
+            </Associator>
+          </ConfigItem>
+          
+        <ConfigItem class="ucComboBox" id="id_Warm_Cool_EN_cb">
+            <Parameter name="left_label" value="Warm/Cool EN"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="190"/>
+            <Parameter name="top_margin" value="5"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+            <Parameter name="unique" value="ChargerControlConfig.Warm_Cool_EN"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_Warm_Cool_EN_tb"/>
+            </Associator>
+          </ConfigItem>
+          
+        </ConfigGroup>
+        <ConfigGroup class="ucLayoutVertical">
+          <ConfigGroup class="General">
+            <ConfigItem class="ucPictureBox" Unique="HwJeitaTable">
+              <Parameter name="top_margin" value="10"/>
+              <Parameter name="bottom_margin" value="10"/>
+              <Parameter name="right_margin" value="10"/>
+              <Parameter name="img" value="adc_temp.JPG"/>
+              <Parameter name="img_title" value="Hw Jeita Setting"/>
+            </ConfigItem>
+          </ConfigGroup>
+        </ConfigGroup>
+      </ConfigGroup>
+
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value=""/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="0"/>
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="top_label" value="Safety timer protection"/>
+          <Parameter name="left_width" value="20"/>
+          <Parameter name="border" value="1"/>
+
+          <ConfigItem class="ucComboBox" id="id_PRECC_timer_EN_cb">
+            <Parameter name="left_label" value="PRECC timer"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="190"/>
+            <Parameter name="top_margin" value="5"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+            <Parameter name="unique" value="ChargerControlConfig.PRECC_timer_EN"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_PRECC_timer_EN_tb"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucComboBox" id="id_PRECC_safety_time_cb">
+            <Parameter name="left_label" value="PRESS safety time"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="190"/>
+            <Parameter name="top_margin" value="5"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/Charger_PreccTime.xml"/>
+            <Parameter name="unique" value="ChargerControlConfig.PRECC_safety_time"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_PRECC_safety_time_tb"/>
+              <Parameter name="enable" refId="id_PRECC_timer_EN_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          
+        <ConfigItem class="ucComboBox" id="id_FASTCC_timer_EN_cb">
+            <Parameter name="left_label" value="FASTCC timer"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="190"/>
+            <Parameter name="top_margin" value="5"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+            <Parameter name="unique" value="ChargerControlConfig.FASTCC_timer_EN"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_FASTCC_timer_EN_tb"/>
+            </Associator>
+          </ConfigItem>
+          
+        <ConfigItem class="ucComboBox" id="id_FASTCC_safety_time_cb">
+            <Parameter name="left_label" value="FASTCC safety time"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="190"/>
+            <Parameter name="top_margin" value="5"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/Charger_FastccTime.xml"/>
+            <Parameter name="unique" value="ChargerControlConfig.FASTCC_safety_time"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_FASTCC_safety_time_tb"/>
+              <Parameter name="enable" refId="id_FASTCC_timer_EN_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+
+        </ConfigGroup>
+<!--         <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="top_label" value="Power on Setting"/>
+          <Parameter name="left_width" value="20"/>
+          <Parameter name="border" value="1"/>
+          
+          <ConfigItem class="ucComboBox" id="id_VBUS_debounce_cb">
+            <Parameter name="left_label" value="Charger plugpin de-bounce time"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="190"/>
+            <Parameter name="top_margin" value="5"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/PmicGeneralVbusDebounce.xml"/>
+            <Parameter name="unique" value="PmicGeneralConfig.VBUS_debounce"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_VBUS_debounce_tb"/>
+            </Associator>
+          </ConfigItem>
+        
+      <ConfigItem class="ucComboBox" id="id_PWRHOLD_Check_cb">
+            <Parameter name="left_label" value="PWRHOLD check control"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="190"/>
+            <Parameter name="top_margin" value="5"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+            <Parameter name="unique" value="PmicGeneralConfig.PWRHOLD_Check"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_PWRHOLD_Check_tb"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup> -->
+        <!-- <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="top_label" value="Two Step CV Setting"/>
+          <Parameter name="left_width" value="20"/>
+          <Parameter name="border" value="1"/>
+          
+          <ConfigItem class="ucComboBox" id="id_twostepCvEnable_cb">
+            <Parameter name="left_label" value="Two Step CV Function"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="190"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value=""/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_twostepCvEnable_tb"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucVoltageUpDown" id="id_twostepCv1_updown" min="4.05" max="4.6">
+            <Parameter name="left_label" value="Two Step CV_1"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="190"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value=" V"/>
+            <Parameter name="step" value="0.025"/>
+            <Parameter name="unique" value="CHG_ADCconfig.twostepCv1"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="enable" refId="id_twostepCvEnable_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="uc10KVoltageUpDown" id="id_twostepItermIRQ1_updown" min="0.5" max="60">
+            <Parameter name="left_label" value="Two Step termination Current irq_1"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="190"/>
+            <Parameter name="top_margin" value="5"/>
+            <Parameter name="right_label" value=" mA"/>
+            <Parameter name="step" value="0.5"/>
+            <Parameter name="multi_step" value="0.5:5:0.5;5:30:1;30:60:2;"/>
+            <Parameter name="unique" value="CHG_ADCconfig.twostepItermIRQ1"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="enable" refId="id_twostepCvEnable_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucVoltageUpDown" id="id_twostepCv2_updown" min="4.05" max="4.6">
+            <Parameter name="left_label" value="Two Step CV_2"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="190"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value=" V"/>
+            <Parameter name="step" value="0.025"/>
+            <Parameter name="unique" value="CHG_ADCconfig.twostepCv2"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="enable" refId="id_twostepCvEnable_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="uc10KVoltageUpDown" id="id_twostepItermIRQ2_updown" min="0.5" max="60">
+            <Parameter name="left_label" value="Two Step termination Current irq_2"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="190"/>
+            <Parameter name="top_margin" value="5"/>
+            <Parameter name="right_label" value=" mA"/>
+            <Parameter name="step" value="0.5"/>
+            <Parameter name="multi_step" value="0.5:5:0.5;5:30:1;30:60:2;"/>
+            <Parameter name="unique" value="CHG_ADCconfig.twostepItermIRQ2"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="enable" refId="id_twostepCvEnable_cb"/>
+              <Parameter name="enable_value" value="1"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup> -->
+      </ConfigGroup>
+    </ConfigGroup>
+
+
+    <ConfigGroup class="ucLayoutHorizontal">
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="top_label" value="Charger Setting"/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="1"/>
+        <!--<ConfigItem class="ucComboBox" id="id_precc_current_setting_cb">
+          <Parameter name="left_label" value="PRECC Current"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="mA"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/AB1568/ChargerSettingSelection.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_precc_current_setting_tb"/>
+          </Associator>
+        </ConfigItem>-->
+        <ConfigItem class="uc10KVoltageUpDown" id="id_preccCurrentSetting_updown" min="0.5" max="50">
+          <Parameter name="left_label" value="PRECC Current"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="25"/>
+          <Parameter name="right_label" value=" mA"/>
+          <Parameter name="step" value="0.5"/>
+          <Parameter name="multi_step" value="0.5:5:0.5;5:50:5;"/>
+          <Parameter name="unique" value="CHG_ADCconfig.preccCurrentSetting"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="uc10KVoltageUpDown" id="id_cvTerminationCurrent_updown" min="0.5" max="60">
+          <Parameter name="left_label" value="Termination Current"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="140"/>
+          <Parameter name="top_margin" value="25"/>
+          <Parameter name="right_label" value=" mA"/>
+          <Parameter name="step" value="0.5"/>
+          <Parameter name="multi_step" value="0.5:5:0.5;5:30:1;30:60:2;"/>
+          <Parameter name="unique" value="CHG_ADCconfig.cvTerminationCurrent"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          </Associator>
+        </ConfigItem>
+
+        <!--<ConfigItem class="ucComboBox" id="id_cv_termination_cb">
+          <Parameter name="left_label" value="Termination Current"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="mA"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/AB1568/TerminationCurrent.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_cv_termination_tb"/>
+          </Associator>
+        </ConfigItem>-->
+
+        <!--<ConfigItem class="ucComboBox" id="id_cv_iterm_cb">
+          <Parameter name="left_label" value="Termination Current Irq"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value="mA"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/AB1568/ItermCurrentSettingSelection.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_cv_iterm_tb"/>
+          </Associator>
+        </ConfigItem>-->
+        <ConfigItem class="uc10KVoltageUpDown" id="id_cvItermCurrent_updown" min="0.5" max="60"  visible="hidden">
+          <Parameter name="left_label" value="Termination Current Irq"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" mA"/>
+          <Parameter name="step" value="0.5"/>
+          <Parameter name="multi_step" value="0.5:5:0.5;5:30:1;30:60:2;"/>
+          <Parameter name="unique" value="CHG_ADCconfig.cvItermCurrent"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          </Associator>
+        </ConfigItem>
+
+
+        <ConfigItem class="ucTextBlock" id="id_charger_setting_tb">
+          <Parameter name="des_label" value="full bat > S2 voltage > S1 voltage > FASTCC voltage > shutdown bat&#13;&#10;Note: For Low power;&#13;&#10;Votltage tracing will ref CHARGER_REGULAR_TIME in battery_management_customer_file.h&#13;&#10;The voltage setting must meet “full bat > S2 voltage > S1 voltage > FASTCC voltage > shutdown bat”."/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="10"/>
+        </ConfigItem>
+        <ConfigItem class="ucVoltageUpDown" id="id_twostepVoltageS0_updown" min="2.4" max="3.45">
+          <Parameter name="left_label" value="FASTCC Voltage"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" V"/>
+          <Parameter name="step" value="0.15"/>
+          <Parameter name="unique" value="CHG_ADCconfig.twostepVoltageS0"/>
+          <!--<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">                  
+            <Parameter name="s2_voltage" refId="id_twostep_voltage_s2_updown"/>
+            <Parameter name="shutdown_bat" refId="id_vbat_shutdownbat_updown"/>
+          </Associator>-->
+        </ConfigItem>
+        <ConfigItem class="uc10KVoltageUpDown" id="id_twostepVoltageS0MultiC_updown" min="0.5" max="500">
+          <Parameter name="left_label" value="FASTCC Current"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" mA"/>
+          <Parameter name="step" value="0.5"/>
+          <Parameter name="multi_step" value="0.5:5:0.5;5:80:5;80:500:10;"/>
+          <Parameter name="unique" value="CHG_ADCconfig.twostepVoltageS0MultiC"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          </Associator>
+        </ConfigItem>
+
+        
+        <ConfigItem class="ucComboBox" id="id_twostepCcEnable_cb">
+          <Parameter name="left_label" value="Two Step CC Function"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>          
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_twostepCcEnable_tb"/>
+          </Associator>
+        </ConfigItem>
+
+        <ConfigItem class="ucVoltageUpDown" id="id_twostep_voltage_s1_updown" min="2.5" max="4.5">
+          <Parameter name="left_label" value="Two Step Voltage S1:"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_label" value=" V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="CHG_ADCconfig.twostepVoltageS1"/>
+          <!--<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">                  
+            <Parameter name="s2_voltage" refId="id_twostep_voltage_s2_updown"/>
+            <Parameter name="shutdown_bat" refId="id_vbat_shutdownbat_updown"/>
+          </Associator>-->
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="enable" refId="id_twostepCcEnable_cb"/>
+            <Parameter name="enable_value" value="1"/>            
+          </Associator>
+        </ConfigItem>
+
+        <ConfigItem class="uc10KVoltageUpDown" id="id_twostepVoltageS1MultiC_updown" min="0.5" max="500">
+          <Parameter name="left_label" value=""/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_label" value=" mA"/>
+          <Parameter name="step" value="0.5"/>
+          <Parameter name="multi_step" value="0.5:5:0.5;5:80:5;80:500:10;"/>
+          <Parameter name="unique" value="CHG_ADCconfig.twostepVoltageS1MultiC"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="enable" refId="id_twostepCcEnable_cb"/>
+            <Parameter name="enable_value" value="1"/>
+          </Associator>
+        </ConfigItem>
+  
+
+        <ConfigItem class="ucVoltageUpDown" id="id_twostep_voltage_s2_updown" min="2.5" max="4.5">
+          <Parameter name="left_label" value="Two Step Voltage S2:"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_label" value=" V"/>
+          <Parameter name="step" value="0.01"/>
+          <Parameter name="unique" value="CHG_ADCconfig.twostepVoltageS2"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="enable" refId="id_twostepCcEnable_cb"/>
+            <Parameter name="enable_value" value="1"/>
+            <!--<Parameter name="s1_voltage" refId="id_twostep_voltage_s1_updown"/>
+            <Parameter name="full_bat" refId="id_chg_fullbat_combo"/>-->                  
+          </Associator>
+        </ConfigItem>
+
+        <ConfigItem class="uc10KVoltageUpDown" id="id_twostepVoltageS2MultiC_updown" min="0.5" max="500">
+          <Parameter name="left_label" value=""/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_label" value=" mA"/>
+          <Parameter name="step" value="0.5"/>
+          <Parameter name="multi_step" value="0.5:5:0.5;5:80:5;80:500:10;"/>
+          <Parameter name="unique" value="CHG_ADCconfig.twostepVoltageS2MultiC"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="enable" refId="id_twostepCcEnable_cb"/>
+            <Parameter name="enable_value" value="1"/>
+          </Associator>
+        </ConfigItem>
+ 
+
+        <ConfigItem class="ucComboBox" id="id_BC_1p2_Support_cb">
+          <Parameter name="left_label" value="BC1.2 support"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_label" value=""/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Parameter name="unique" value="ChargerControlConfig.BC_1p2_Support"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_BC_1p2_Support_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" id="id_ICL_Config_cb">
+          <Parameter name="left_label" value="Input Current Limit"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="190"/>
+          <Parameter name="top_margin" value="5"/>
+          <Parameter name="right_label" value=" mA"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/Charger_ICL.xml"/>
+          <Parameter name="unique" value="ChargerControlConfig.ICL_Config"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="enable" refId="id_BC_1p2_Support_cb"/>
+            <Parameter name="enable_value" value="0"/>
+            <Parameter name="data" refId="id_ICL_Config_tb"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+    </ConfigGroup>
+
+  </ConfigGroup>
+
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig.twostepCvEnable" id="id_twostepCvEnable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_twostepCvEnable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig.twostepCcEnable" id="id_twostepCcEnable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_twostepCcEnable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <!--<ConfigItem class="ucTextBox" Unique="CHG_ADCconfig.preccCurrentSetting" id="id_precc_current_setting_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_precc_current_setting_cb"/>
+      </Associator>
+    </ConfigItem>-->
+    <!--<ConfigItem class="ucTextBox" Unique="CHG_ADCconfig.cvTerminationCurrent" id="id_cv_termination_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_cv_termination_cb"/>
+      </Associator>
+    </ConfigItem>-->
+
+    <!--<ConfigItem class="ucTextBox" Unique="CHG_ADCconfig.cvItermCurrent" id="id_cv_iterm_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_cv_iterm_cb"/>
+      </Associator>
+    </ConfigItem>-->
+
+    <!--<ConfigItem class="ucTextBox" Unique="CHG_ADCconfig.twostepVoltageS0" id="id_twostep_voltage_s0_multi_v_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_twostep_voltage_s0_multi_v_cb"/>
+      </Associator>
+    </ConfigItem>-->
+
+    <!--<ConfigItem class="ucTextBox" Unique="CHG_ADCconfig.twostepVoltageS0MultiC" id="id_twostep_voltage_s0_multi_c_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_twostep_voltage_s0_multi_c_cb"/>
+      </Associator>
+    </ConfigItem>-->
+    
+    <!--<ConfigItem class="ucTextBox" Unique="CHG_ADCconfig.twostepVoltageS1MultiC" id="id_twostep_voltage_s1_multi_c_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_twostep_voltage_s1_multi_c_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig.twostepVoltageS2MultiC" id="id_twostep_voltage_s2_multi_c_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_twostep_voltage_s2_multi_c_cb"/>
+      </Associator>
+    </ConfigItem>-->
+    <!--<ConfigItem class="ucTextBox" Unique="CHG_ADCconfig.fullbatvoltage" id="id_chg_fullbat_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_chg_fullbat_updown"/>
+      </Associator>
+    </ConfigItem>-->
+    <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig.rechargevoltageoffset" id="id_chg_recharge_thres_offset_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_chg_recharge_thres_offset_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig.coolChargerCurrent" id="id_cool_charger_current_sel_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_cool_charger_current_sel_cb"/>
+      </Associator>
+    </ConfigItem>
+    <!--<ConfigItem class="ucTextBox" Unique="CHG_ADCconfig.coolCvFlag" id="id_cool_charger_cv_flag_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_cool_charger_cv_flag_updown"/>
+      </Associator>
+    </ConfigItem>-->
+    <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig.warmChargerCurrent" id="id_warm_charger_current_sel_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_warm_charger_current_sel_cb"/>
+      </Associator>
+    </ConfigItem>
+    <!--<ConfigItem class="ucTextBox" Unique="CHG_ADCconfig.warmCvFlag" id="id_warm_charger_cv_flag_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_warm_charger_cv_flag_cb"/>
+      </Associator>
+    </ConfigItem>-->
+    <ConfigItem class="ucTextBox" Unique="VBATvoltageconfig.ColdVoltage" id="id_cold_voltage_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_cold_voltage_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="VBATvoltageconfig.CoolVoltage" id="id_cool_voltage_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_cool_voltage_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="VBATvoltageconfig.WarmVoltage" id="id_warm_voltage_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_warm_voltage_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="VBATvoltageconfig.HotVoltage" id="id_hot_voltage_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_hot_voltage_updown"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucTextBox" Unique="CHG_ADCconfig.batterycategory" id="id_bat_category_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_bat_category_combo"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigItem class="ucTextBox" Unique="ChargerControlConfig.BC_1p2_Support" id="id_BC_1p2_Support_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_BC_1p2_Support_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ChargerControlConfig.ICL_Config" id="id_ICL_Config_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_ICL_Config_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ChargerControlConfig.JEITA_EN" id="id_JEITA_EN_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_JEITA_EN_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ChargerControlConfig.Warm_Cool_EN" id="id_Warm_Cool_EN_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_Warm_Cool_EN_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ChargerControlConfig.PRECC_timer_EN" id="id_PRECC_timer_EN_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_PRECC_timer_EN_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ChargerControlConfig.PRECC_safety_time" id="id_PRECC_safety_time_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_PRECC_safety_time_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ChargerControlConfig.FASTCC_timer_EN" id="id_FASTCC_timer_EN_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_FASTCC_timer_EN_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ChargerControlConfig.FASTCC_safety_time" id="id_FASTCC_safety_time_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_FASTCC_safety_time_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="ChargerControlConfig.Extend_Charging" id="id_Extend_Charging_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_Extend_Charging_cb"/>
+      </Associator>
+    </ConfigItem>
+      
+    <ConfigItem class="ucTextBox" Unique="PmicGeneralConfig.PWRHOLD_Check" id="id_PWRHOLD_Check_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_PWRHOLD_Check_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="PmicGeneralConfig.VBUS_debounce" id="id_VBUS_debounce_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_VBUS_debounce_cb"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

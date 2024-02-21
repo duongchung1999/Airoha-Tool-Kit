@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Sidetone_EQ" class="Airoha.Project.ConfigTool.View.TabPage" parameter="Sidetone_EQ" scroll="vertical">
+  <ConfigGroup title="Sidetone" class="DspPage" parameter="Sidetone">
+    <Parameter name="button_margin" value="10"/>
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="right_margin" value="10"/>
+      <ConfigItem class="ucTextBlock" id="id_chart_constraint_tb">
+        <Parameter name="font_size" value="20"/>
+        <Parameter name="des_label" value="Frequencies between 2 points must be greater than or equal to 800 Hz.&#13;&#10;Maxinum gain value is 12."/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="top_margin" value="10"/>
+      </ConfigItem>
+    </ConfigGroup>
+    
+    <ConfigGroup class="ucLayoutHorizontal">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="height" value="460"/>
+      <Parameter name="required_nvkey_id" value="0xE600"/>
+      <ConfigGroup class="ucLiveChart">
+        <Parameter name="layout_column_weight" value="1"/>
+        <Parameter name="x_axis_title" value="Frequency(Hz)"/>
+        <Parameter name="x_axis_max_value" value="20000"/>
+        <Parameter name="x_axis_min_value" value="20"/>
+        <Parameter name="y_axis_title" value="Gain(dB)"/>
+        <Parameter name="x_axis_customized_step" value="20,100,1000,10000,20000"/>
+        <Parameter name="y_axis_step" value="1"/>
+        <ConfigItem class="line" id="id_voice_eq_line_sidetone">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcVeqWbAssociator">
+            <Parameter name="type_NR_exe" value="sidetone" />
+            <Parameter name="band_table" refId="id_voice_eq_band_table_sidetone"/>
+            <Parameter name="unique_begin" value="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_0"/>
+            <Parameter name="unique_end" value="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_30"/>
+          </Associator>
+        </ConfigItem>	
+        <ConfigItem class="point_set" id="id_voice_eq_point_set_sidetone">
+          <Parameter name="total_num" value="30"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcVeqPointSetAssociator">
+            <Parameter name="band_table" refId="id_voice_eq_band_table_sidetone"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_sidetone_target">
+          <Parameter name="title" value="target"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_sidetone_target_line_data"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <ConfigGroup class="ucVeqBandTable" id="id_voice_eq_band_table_sidetone">
+          <Parameter name="enable_load_target" value="true"/>
+          <Parameter name="target_line_str" value="id_sidetone_target_line_data"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="point_set" refId="id_voice_eq_point_set_sidetone"/>
+            <Parameter name="veq_cell_01" refId="id_voice_eq_band_cell_sidetone_01"/>
+            <Parameter name="veq_cell_02" refId="id_voice_eq_band_cell_sidetone_02"/>
+            <Parameter name="veq_cell_03" refId="id_voice_eq_band_cell_sidetone_03"/>
+            <Parameter name="veq_cell_04" refId="id_voice_eq_band_cell_sidetone_04"/>
+            <Parameter name="veq_cell_05" refId="id_voice_eq_band_cell_sidetone_05"/>
+            <Parameter name="veq_cell_06" refId="id_voice_eq_band_cell_sidetone_06"/>
+            <Parameter name="veq_cell_07" refId="id_voice_eq_band_cell_sidetone_07"/>
+            <Parameter name="veq_cell_08" refId="id_voice_eq_band_cell_sidetone_08"/>
+            <Parameter name="veq_cell_09" refId="id_voice_eq_band_cell_sidetone_09"/>
+            <Parameter name="veq_cell_10" refId="id_voice_eq_band_cell_sidetone_10"/>
+            <Parameter name="veq_cell_11" refId="id_voice_eq_band_cell_sidetone_11"/>
+            <Parameter name="veq_cell_12" refId="id_voice_eq_band_cell_sidetone_12"/>
+            <Parameter name="veq_cell_13" refId="id_voice_eq_band_cell_sidetone_13"/>
+            <Parameter name="veq_cell_14" refId="id_voice_eq_band_cell_sidetone_14"/>
+            <Parameter name="veq_cell_15" refId="id_voice_eq_band_cell_sidetone_15"/>
+            <Parameter name="veq_cell_16" refId="id_voice_eq_band_cell_sidetone_16"/>
+            <Parameter name="veq_cell_17" refId="id_voice_eq_band_cell_sidetone_17"/>
+            <Parameter name="veq_cell_18" refId="id_voice_eq_band_cell_sidetone_18"/>
+            <Parameter name="veq_cell_19" refId="id_voice_eq_band_cell_sidetone_19"/>
+            <Parameter name="veq_cell_20" refId="id_voice_eq_band_cell_sidetone_20"/>
+            <Parameter name="veq_cell_21" refId="id_voice_eq_band_cell_sidetone_21"/>
+            <Parameter name="veq_cell_22" refId="id_voice_eq_band_cell_sidetone_22"/>
+            <Parameter name="veq_cell_23" refId="id_voice_eq_band_cell_sidetone_23"/>
+            <Parameter name="veq_cell_24" refId="id_voice_eq_band_cell_sidetone_24"/>
+            <Parameter name="veq_cell_25" refId="id_voice_eq_band_cell_sidetone_25"/>
+            <Parameter name="veq_cell_26" refId="id_voice_eq_band_cell_sidetone_26"/>
+            <Parameter name="veq_cell_27" refId="id_voice_eq_band_cell_sidetone_27"/>
+            <Parameter name="veq_cell_28" refId="id_voice_eq_band_cell_sidetone_28"/>
+            <Parameter name="veq_cell_29" refId="id_voice_eq_band_cell_sidetone_29"/>
+            <Parameter name="veq_cell_30" refId="id_voice_eq_band_cell_sidetone_30"/>
+          </Associator>
+          <ConfigGroup title="1-10" class="ucVeqBandTableColumn">
+            <Parameter name="item_start_num" value="01"/>
+            <Parameter name="item_num_count" value="10"/>
+            <ConfigItem class="ucVeqBandCell" id="id_voice_eq_band_cell_sidetone_#">
+              <Parameter name="label" value="#"/>
+              <Parameter name="unique_enable" value="UI_DSP_VOICE_EQ_SIDETONE_STRU.enable_#"/>
+              <Parameter name="unique_freq" value="UI_DSP_VOICE_EQ_SIDETONE_STRU.freq_#"/>
+              <Parameter name="unique_gain" value="UI_DSP_VOICE_EQ_SIDETONE_STRU.gain_#"/>
+            </ConfigItem>
+          </ConfigGroup>
+          <ConfigGroup title="11-20" class="ucVeqBandTableColumn">
+            <Parameter name="item_start_num" value="11"/>
+            <Parameter name="item_num_count" value="10"/>
+            <ConfigItem class="ucVeqBandCell" id="id_voice_eq_band_cell_sidetone_#">
+              <Parameter name="label" value="#"/>
+              <Parameter name="unique_enable" value="UI_DSP_VOICE_EQ_SIDETONE_STRU.enable_#"/>
+              <Parameter name="unique_freq" value="UI_DSP_VOICE_EQ_SIDETONE_STRU.freq_#"/>
+              <Parameter name="unique_gain" value="UI_DSP_VOICE_EQ_SIDETONE_STRU.gain_#"/>
+            </ConfigItem>
+          </ConfigGroup>
+          <ConfigGroup title="21-30" class="ucVeqBandTableColumn">
+            <Parameter name="item_start_num" value="21"/>
+            <Parameter name="item_num_count" value="10"/>
+            <ConfigItem class="ucVeqBandCell" id="id_voice_eq_band_cell_sidetone_#">
+              <Parameter name="label" value="#"/>
+              <Parameter name="unique_enable" value="UI_DSP_VOICE_EQ_SIDETONE_STRU.enable_#"/>
+              <Parameter name="unique_freq" value="UI_DSP_VOICE_EQ_SIDETONE_STRU.freq_#"/>
+              <Parameter name="unique_gain" value="UI_DSP_VOICE_EQ_SIDETONE_STRU.gain_#"/>
+            </ConfigItem>
+          </ConfigGroup>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical" visible="hidden">
+      <Parameter name="left_margin" value="10"/>
+      <ConfigGroup class="General">
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.ENABLE"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.REVISION"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_0"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_1"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_2"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_3"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_4"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_5"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_6"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_7"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_8"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_9"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_10"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_11"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_12"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_13"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_14"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_15"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_16"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_17"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_18"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_19"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_20"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_21"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_22"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_23"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_24"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_25"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_26"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_27"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_28"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_29"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_SIDETONE_STRU.SIDETONE_COF_30"/>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

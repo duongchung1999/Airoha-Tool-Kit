@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandBook>
+  <!-- command list -->
+  <RACE_AIR_DONGLE_CHANGE_BDA>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5A" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <race_id type="uint16" value="0x0CEA" />
+      <bd_address type="uint8_array" array_length="*" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5B" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x0CEA" />
+      <status type="uint8" />
+    </ResponseFormat>
+  </RACE_AIR_DONGLE_CHANGE_BDA>
+  <RACE_AIR_DONGLE_INQUIRY_REQUEST>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5A" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <race_id type="uint16" value="0x0CE0" />
+      <pattern type="uint8_array" array_length="*" value="00 32" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5B" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x0CE0" />
+      <status type="uint8" />
+    </ResponseFormat>
+  </RACE_AIR_DONGLE_INQUIRY_REQUEST>
+  <RACE_AIR_DONGLE_INQUIRY_INDICATION>
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5D" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x0CE1" />
+      <data type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </RACE_AIR_DONGLE_INQUIRY_INDICATION>
+  <RACE_AIR_DONGLE_INQUIRY_COMPELTE>
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5D" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x0CE2" />
+      <status type="uint8" />
+    </ResponseFormat>
+  </RACE_AIR_DONGLE_INQUIRY_COMPELTE>
+  <RACE_AIR_DONGLE_INQUIRY_CANCEL>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5A" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <race_id type="uint16" value="0x0CE3" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5B" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x0CE3" />
+      <status type="uint8" />
+    </ResponseFormat>
+  </RACE_AIR_DONGLE_INQUIRY_CANCEL>
+
+  <RACE_AIR_DONGLE_CREATE_CONNECTION>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5A" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <race_id type="uint16" value="0x0CE6" />
+      <bd_address type="uint8_array" array_length="*" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5B" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x0CE6" />
+      <status type="uint8" />
+    </ResponseFormat>
+  </RACE_AIR_DONGLE_CREATE_CONNECTION>
+  <RACE_AIR_DONGLE_CONNECTION_COMPELTE timeout="10000">
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5D" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x0CE7" />
+      <status type="uint8" />
+      <BDA type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </RACE_AIR_DONGLE_CONNECTION_COMPELTE>
+  <RACE_AIR_DONGLE_DISCONNECT>
+    <RequestFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5A" />
+      <packet_len type="uint16" value="__LEN_TO_END__" />
+      <race_id type="uint16" value="0x0CE8" />
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5B" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x0CE8" />
+      <status type="uint8" />
+    </ResponseFormat>
+  </RACE_AIR_DONGLE_DISCONNECT>
+  <RACE_AIR_DONGLE_DISCONNECT_COMPLETE timeout="3000">
+    <RequestFormat>
+    </RequestFormat>
+    <ResponseFormat>
+      <packet_type type="uint8" value="0x05" />
+      <race_type type="uint8" value="0x5D" />
+      <packet_len type="uint16" />
+      <race_id type="uint16" value="0x0CE9" />
+      <dis_reason type="uint8" />
+      <BDA type="uint8_array" array_length="*" />
+    </ResponseFormat>
+  </RACE_AIR_DONGLE_DISCONNECT_COMPLETE>
+</CommandBook>

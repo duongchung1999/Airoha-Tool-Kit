@@ -1,0 +1,23 @@
+####### User Interface: Columns ########
+
+# Check for updates (Windows and macOS only)
+# TRUE or FALSE (case-insensitive)
+gui.update.enabled: FALSE
+
+# Packet list hidden columns
+# List all columns to hide in the packet list.
+gui.column.hidden: %airLogSeq,%airIrqNum,%airTaskNum,%p,%L
+
+# Packet list column format
+# Each pair of strings consists of a column title and its format
+gui.column.format:
+	"No.", "%m",
+	"Time", "%t",
+	"Ticks", "%airTicks",
+	"CPU", "%airCpuId",
+	"Seq", "%airLogSeq",
+	"IRQ", "%airIrqNum",
+	"Task", "%airTaskNum",
+	"Protocol", "%p",
+	"Length", "%Cus:airoha.length:0:R",
+	"Info", "%i"

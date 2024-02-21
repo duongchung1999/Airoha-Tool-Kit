@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="InEar_NR" class="Airoha.Project.ConfigTool.View.PurePage" parameter="InEar_NR">
+	<ConfigGroup class="ucLayoutVertical">
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="border" value="1"/>
+		<ConfigItem class="ucNrAggrUpDown" id="id_inear_fb_txnr_aggr_updown" max="40" min="0">
+			<Parameter name="left_label" value="FB Aggressiveness:"/>
+			<Parameter name="right_label" value="dB (0 ~ 40)"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="left_width" value="160"/>
+			<Parameter name="width" value="80"/>
+			<Parameter name="step" value="0.1"/>
+			<Parameter name="unique" value="DSP_PARA_INEAR_STRU.IE_inear_gain_limiter"/>
+		</ConfigItem>
+		<ConfigItem class="ucDspCheckBox" id="id_inear_pd_en_ckb">
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="right_label" value="PD Enable"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcBitAssociator">
+				<Parameter name="data" refId="id_fb_mel_band_en_tb"/>
+				<Parameter name="position" value="6"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucComboBox" id="id_inear_fb_mic_gain_cb">
+			<Parameter name="left_label" value="FB MIC Gain:"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="width" value="80"/>
+			<Parameter name="left_width" value="180"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="xml_file_path" value="/_DSP_settings/InEarFBMicGain.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_inear_fb_mic_gain_tb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucInEarNrPresetComboBox" id="id_inear_nr_pre_set_cb" visible="hidden">
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="width" value="80"/>
+			<Parameter name="left_width" value="180"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="left_label" value="InEar NR Pre_set:"/>
+			<Parameter name="xml_file_path" value="/_DSP_settings/InEar_preset.xml"/>
+		</ConfigItem>
+	</ConfigGroup>
+	
+	<ConfigGroup class="ucLayoutVertical">
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="border" value="1"/>
+		<Parameter name="top_label" value="1+1 NR Only"/>
+		<ConfigItem class="ucNrAggrUpDown" id="id_inear_ff_txnr_aggr_updown" max="40" min="0">
+			<Parameter name="left_label" value="FF Aggressiveness:"/>
+			<Parameter name="right_label" value="dB (0 ~ 40)"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="left_width" value="160"/>
+			<Parameter name="width" value="80"/>
+			<Parameter name="step" value="0.1"/>
+			<Parameter name="unique" value="DSP_PARA_INEAR_STRU.IE_main_gain_limiter"/>
+		</ConfigItem>
+		<ConfigItem class="ucComboBox" id="id_inear_ff_txnr_Mel_scale_band_num_cb">
+			<Parameter name="left_label" value="FF Mel scale Band Num:"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="right_label" value=" (0:disable, 1:26 mel bands, 2:64 mel bands)"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="width" value="80"/>
+			<Parameter name="left_width" value="180"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="xml_file_path" value="/_DSP_settings/FFMelScaleBandNum.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_inear_ff_txnr_Mel_scale_band_num_tb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucDspCheckBox" id="id_fb_mel_band_en_ckb">
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="right_label" value="FB Mel Band Enable"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcBitAssociator">
+				<Parameter name="data" refId="id_fb_mel_band_en_tb"/>
+				<Parameter name="position" value="8"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucComboBox" id="id_inear_wind_switch_speech_cb">
+			<Parameter name="left_label" value="Wind Switch Speech:"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="right_label" value=" (0~4, 0: fastest, 4: slowest)"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="width" value="80"/>
+			<Parameter name="left_width" value="180"/>
+			<Parameter name="bottom_margin" value="10"/>
+			<Parameter name="xml_file_path" value="/_DSP_settings/InEarWindSwitchSpeech.xml"/>
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_inear_wind_switch_speech_tb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucNrInEarPdUpDown" id="id_inear_pd_thr_updown" max="180" min="90">
+			<Parameter name="left_label" value="PD_thr:"/>
+			<Parameter name="right_label" value="(90 ~ 180)"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="left_width" value="160"/>
+			<Parameter name="width" value="80"/>
+			<Parameter name="step" value="1"/>
+			<Parameter name="unique" value="DSP_PARA_INEAR_STRU.IE_pitch_thr"/>
+		</ConfigItem>
+		<ConfigItem class="ucNrInEarPdUpDown" id="id_inear_pd_thr2_updown" max="120" min="60">
+			<Parameter name="left_label" value="PD_thr2:"/>
+			<Parameter name="right_label" value="(60 ~ 120)"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="left_width" value="160"/>
+			<Parameter name="width" value="80"/>
+			<Parameter name="step" value="1"/>
+			<Parameter name="unique" value="DSP_PARA_INEAR_STRU.IE_pitch_thr2"/>
+		</ConfigItem>
+		<ConfigItem class="ucNrInEarMscVadThrUpDown" id="id_inear_msc_vad_thr_updown" max="64" min="45" >
+			<Parameter name="left_label" value="MSC VAD THR:"/>
+			<Parameter name="right_label" value="(45 ~ 64)"/>
+			<Parameter name="left_margin" value="10"/>
+			<Parameter name="right_margin" value="10"/>
+			<Parameter name="top_margin" value="10"/>
+			<Parameter name="left_width" value="160"/>
+			<Parameter name="width" value="80"/>
+			<Parameter name="step" value="1"/>
+			<Parameter name="unique" value="DSP_PARA_INEAR_STRU.IE_MSC_VAD_THR"/>
+		</ConfigItem>
+		
+	</ConfigGroup>
+
+	<ConfigGroup class="ucLayoutVertical" visible="hidden">
+		<Parameter name="bottom_margin" value="10"/>
+		<Parameter name="right_margin" value="10"/>
+		<Parameter name="border" value="1"/>
+
+		<ConfigItem class="ucPureTextBox" id="id_search_word_2" disable="0">
+			<Parameter name="left_label" value="Search"/>
+			<Parameter name="right_label" value=""/>
+			<Parameter name="left_width" value="220"/>
+			<Parameter name="width" value="80"/>
+		</ConfigItem>
+	</ConfigGroup>
+	<ConfigGroup class="General">
+		<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+			<Parameter name="data" refId="id_search_word_2"/>
+		</Associator>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_type" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_alpha" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_alpha_1" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_gain_limiter" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcNrAggrAssociator">
+				<Parameter name="data" refId="id_inear_ff_txnr_aggr_updown"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_type" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_alpha" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_alpha_1" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_gain_limiter" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcNrAggrAssociator">
+				<Parameter name="data" refId="id_inear_fb_txnr_aggr_updown"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_ENG_VAD_THR" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_ENG_VAD_HANG" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_ENG_POW_INIT" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_slow_up_alpha" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_slow_dn_alpha" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_fast_up_alpha" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_fast_dn_alpha" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_end_inear_wind" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_msc_alpha" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_msc_sm_up_alpha" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_msc_sm_dn_alpha" id="id_inear_wind_switch_speech_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_inear_wind_switch_speech_cb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_msc_bias" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_MSC_WIND_THR2" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_MSC_WIND_THR" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_mid_eq" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_end_inear_est" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_mid_eq_st" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inEar_nor_gain0" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inEar_nor_gain1" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_ff_mel_filter" id="id_inear_ff_txnr_Mel_scale_band_num_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_inear_ff_txnr_Mel_scale_band_num_cb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_fb_mel_filter" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_en_pre_emp" id="id_fb_mel_band_en_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcMultipleFlagAssociator">
+				<Parameter name="flag" refId="id_fb_mel_band_en_ckb"/>
+				<Parameter name="position" value="8"/>
+				<Parameter name="flag2" refId="id_inear_pd_en_ckb"/>
+				<Parameter name="position2" value="6"/>
+				<Parameter name="flag3" refId="id_inear_mic_pass_mode_combo"/>
+				<Parameter name="position3" value="15"/>
+				<Parameter name="position4" value="14"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_vad_credit_thr" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_padding2" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_alpha_peak_up" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_alpha_peak_dn" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_alpha_valley_dn" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_alpha_valley_up" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_pow_diff_thr" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_pow_credit" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_alpha_sm_fast" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_alpha_sm_slow" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_noise_update_thr0" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_noise_update_thr1" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_noise_update_thr2" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_padding" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_noise_alpha_fast" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_noise_alpha_slow" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_noise_alpha_ultra_slow" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_over_est" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_alpha_peak_up" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_alpha_peak_dn" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_alpha_valley_dn" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_alpha_valley_up" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_pow_diff_thr" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_pow_credit" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_alpha_sm_fast" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_alpha_sm_slow" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_noise_update_thr0" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_noise_update_thr1" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_noise_update_thr2" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_padding" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_noise_alpha_fast" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_noise_alpha_slow" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_noise_alpha_ultra_slow" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_over_est" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_nest_alpha" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_nest_alpha_1" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_nest_decay" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_nest_over_est" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_alpha" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_alpha_1" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_decay" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_over_est" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_de_pop_gain_limiter" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_fe_vad_thr" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_h_1st_max" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_wind_frozon_han" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inEear_input_gain" id="id_inear_fb_mic_gain_tb" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+				<Parameter name="data" refId="id_inear_fb_mic_gain_cb"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_MSC_frozon_eng" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_pitch_thr" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcNrInEarPdAssociator">
+				<Parameter name="data" refId="id_inear_pd_thr_updown"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_pitch_thr2" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcNrInEarPdAssociator">
+				<Parameter name="data" refId="id_inear_pd_thr2_updown"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_pitch_idx_st" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_pitch_idx_end" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_max_dis" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_h_max" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_h_min" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_nest_over_est1" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_over_est1" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_pitch_bin_end" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_pitch_enhance_end" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_mix_w0" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_mix_w1" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_mix_w2" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_main_nest_decay1" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_inear_nest_decay1" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_MSC_VAD_THR" visible="hidden">
+			<Associator class="Airoha.Project.ConfigTool.Associator.fcNrInEarMscVadThrAssociator">
+				<Parameter name="data" refId="id_inear_msc_vad_thr_updown"/>
+			</Associator>
+		</ConfigItem>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_h_sub_max" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_h_1st_sub_max" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_MIC_RATIO_THR" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_BAND_RATIO_THR" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_low_st" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_high_st" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_mic_ratio_alpha" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_band_ratio_alpha" visible="hidden"/>
+		
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.vad_end_bin" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_post_type" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_post_alpha" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_post_alpha_1" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_post_gain_limiter" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_post_mel_filter" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_post_abs_thr_order" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.ov_st_bin" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.nc_sig_nor" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.NC_MU_MIN" visible="hidden"/>
+		<ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_INEAR_STRU.IE_wind_pow_thd" visible="hidden"/>
+	</ConfigGroup>
+</Page>

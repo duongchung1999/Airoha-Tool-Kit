@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="DSP_Voice_Command" class="Airoha.Project.ConfigTool.View.General" parameter="DSP_Voice_Command">
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VC_STRU.ENABLE"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VC_STRU.REVISION"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VC_STRU.VC_SIL_THR"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VC_STRU.VC_SIL_THR2"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VC_STRU.VC_FR_THR"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VC_STRU.VC_REC_THR"/>
+  <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_VC_STRU.VC_RATIO"/>
+</Page>

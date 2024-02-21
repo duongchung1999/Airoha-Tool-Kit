@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="16 bit" Value="0"/>
+	<Group Name="32 bit" Value="1"/>
+</DataGroup>

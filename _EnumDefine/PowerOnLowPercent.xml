@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+  <Group Name="ACTION_NORMAL" Value="0"/>
+  <Group Name="ACTION_POWER_ON_PROHIBITED" Value="1"/>
+  <Group Name="ACTION_POWER_ON_NO_CONNECTIVITY_UNTIL_BAT_OK" Value="2"/>
+  <Group Name="ACTION_POWER_ON_NO_VALID_KEYS_UNTIL_BAT_OK" Value="3"/>
+  <Group Name="ACTION_POWER_ON_NO_CONNECTIVITY_NO_VALID_KEYS_UNTIL_BAT_OK" Value="4"/>
+</DataGroup>

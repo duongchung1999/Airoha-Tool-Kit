@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+  <Group Name="0.50 mA" Value="500"/>
+  <Group Name="0.65 mA" Value="650"/>
+  <Group Name="0.80 mA" Value="800"/>
+  <Group Name="0.95 mA" Value="950"/>
+  <Group Name="1.10 mA" Value="1100"/>
+  <Group Name="1.25 mA" Value="1250"/>
+  <Group Name="1.40 mA" Value="1400"/>
+  <Group Name="1.55 mA" Value="1550"/>
+  <Group Name="1.70 mA" Value="1700"/>
+  <Group Name="1.85 mA" Value="1850"/>
+</DataGroup>

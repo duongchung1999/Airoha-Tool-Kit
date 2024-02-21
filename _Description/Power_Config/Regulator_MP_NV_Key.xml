@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Regulator(MP NV Key)" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Regulator(MP NV Key)">
+  <ConfigGroup class="ucLayoutHorizontal">
+    <ConfigGroup class="ucLayoutVertical">
+      <!--<ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="top_label" value="Power Mode Setting"/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucComboBox" Unique="POWER_MODE_config.PowerMode" id="id_power_mode_combo">
+          <Parameter name="left_label" value="Power Plan"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/PowerMode.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_Power_Mode"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" id="id_audio_power_mode_combo">
+          <Parameter name="left_label" value="Audio Power Saving"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/AudioPowerMode.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_audio_power_mode"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>-->
+      <!--<ConfigGroup class="ucLayoutHorizontal">
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="top_label" value="Normal Power Setting"/>
+          <Parameter name="left_width" value="20"/>
+          <Parameter name="border" value="1"/>
+          <ConfigItem class="ucPowerPlanRelatedVoltageUpDown" Unique="Buck_MVconfig.voltage_1" id="id_BuckMV_voltage1_updown" min="1.4" max="2">
+            <Parameter name="left_label" value="Buck MV"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="80"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value="V"/>
+            <Parameter name="step" value="0.01"/>
+            <Parameter name="unique" value="Buck_MVconfig.voltage_1"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="power_mode" refId="id_power_mode_combo"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucPowerPlanRelatedVoltageUpDown" Unique="Buck_LVconfig.voltage_1" id="id_BuckLV_voltage1_updown" min="0.95" max="1.4">
+            <Parameter name="left_label" value="Buck LV"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="80"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value="V"/>
+            <Parameter name="step" value="0.01"/>
+            <Parameter name="unique" value="Buck_LVconfig.voltage_1"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="power_mode" refId="id_power_mode_combo"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucPowerPlanRelatedVoltageUpDown" Unique="LDO_LV1config.voltage_1" id="id_LDOLV1_voltage1_updown" min="0.85" max="1.25">
+            <Parameter name="left_label" value="LDO LV1"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="80"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value="V"/>
+            <Parameter name="step" value="0.01"/>
+            <Parameter name="unique" value="LDO_LV1config.voltage_1"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="power_mode" refId="id_power_mode_combo"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucPowerPlanRelatedVoltageUpDown" Unique="LDO_LV2config.voltage_1" id="id_LDOLV2_voltage1_updown" min="0.95" max="1.4">
+            <Parameter name="left_label" value="LDO LV2"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="80"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value="V"/>
+            <Parameter name="step" value="0.01"/>
+            <Parameter name="unique" value="LDO_LV2config.voltage_1"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="power_mode" refId="id_power_mode_combo"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucPowerPlanRelatedVoltageUpDown" Unique="LDO_HVconfig.voltage_1" id="id_LDOHV_voltage1_updown" min="2.8" max="3.3">
+            <Parameter name="left_label" value="LDO HV"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="80"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value="V"/>
+            <Parameter name="step" value="0.01"/>
+            <Parameter name="unique" value="LDO_HVconfig.voltage_1"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="power_mode" refId="id_power_mode_combo"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucPowerPlanRelatedVoltageUpDown" Unique="HV_MICconfig.voltage_1" id="id_HVMIC_voltage1_updown" min="2.65" max="3.5">
+            <Parameter name="left_label" value="HV MIC"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="80"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value="V"/>
+            <Parameter name="step" value="0.01"/>
+            <Parameter name="unique" value="HV_MICconfig.voltage_1"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="power_mode" refId="id_power_mode_combo"/>
+              <Parameter name="audio_power_mode" refId="id_audio_power_mode_combo"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="top_label" value="High Power Setting"/>
+          <Parameter name="left_width" value="20"/>
+          <Parameter name="border" value="1"/>
+          <ConfigItem class="ucPowerPlanRelatedVoltageUpDown" Unique="Buck_MVconfig.voltage_2" id="id_BuckMV_voltage2_updown" min="1.4" max="2">
+            <Parameter name="left_label" value="Buck MV"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="80"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value="V"/>
+            <Parameter name="step" value="0.01"/>
+            <Parameter name="unique" value="Buck_MVconfig.voltage_2"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="power_mode" refId="id_power_mode_combo"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucPowerPlanRelatedVoltageUpDown" Unique="Buck_LVconfig.voltage_2" id="id_BuckLV_voltage2_updown" min="0.95" max="1.4">
+            <Parameter name="left_label" value="Buck LV"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="80"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value="V"/>
+            <Parameter name="step" value="0.01"/>
+            <Parameter name="unique" value="Buck_LVconfig.voltage_2"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="power_mode" refId="id_power_mode_combo"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucPowerPlanRelatedVoltageUpDown" Unique="LDO_LV1config.voltage_2" id="id_LDOLV1_voltage2_updown" min="0.85" max="1.25">
+            <Parameter name="left_label" value="LDO LV1"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="80"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value="V"/>
+            <Parameter name="step" value="0.01"/>
+            <Parameter name="unique" value="LDO_LV1config.voltage_2"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="power_mode" refId="id_power_mode_combo"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucPowerPlanRelatedVoltageUpDown" Unique="LDO_LV2config.voltage_2" id="id_LDOLV2_voltage2_updown" min="0.95" max="1.4">
+            <Parameter name="left_label" value="LDO LV2"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="80"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value="V"/>
+            <Parameter name="step" value="0.01"/>
+            <Parameter name="unique" value="LDO_LV2config.voltage_2"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="power_mode" refId="id_power_mode_combo"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucPowerPlanRelatedVoltageUpDown" Unique="LDO_HVconfig.voltage_2" id="id_LDOHV_voltage2_updown" min="2.8" max="3.3">
+            <Parameter name="left_label" value="LDO HV"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="80"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value="V"/>
+            <Parameter name="step" value="0.01"/>
+            <Parameter name="unique" value="LDO_HVconfig.voltage_2"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="power_mode" refId="id_power_mode_combo"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucPowerPlanRelatedVoltageUpDown" Unique="HV_MICconfig.voltage_2" id="id_HVMIC_voltage2_updown" min="2.65" max="3.5">
+            <Parameter name="left_label" value="HV MIC"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="80"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_label" value="V"/>
+            <Parameter name="step" value="0.01"/>
+            <Parameter name="unique" value="HV_MICconfig.voltage_2"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="power_mode" refId="id_power_mode_combo"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+        <ConfigGroup class="ucLayoutVertical">
+          <Parameter name="top_label" value="Buck Setting"/>
+          <Parameter name="left_width" value="20"/>
+          <Parameter name="border" value="1"/>
+          <ConfigItem class="ucComboBox" id="id_Buck_LV_Setting_Enable_combo">
+            <Parameter name="left_label" value="Enable"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="160"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_Buck_LV_Setting_Enable"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucBuckSettingComboBox" Unique="Buck_config.Inductor_Manufacturer" id="id_inductor_manufacturer_combo">
+            <Parameter name="left_label" value="Inductor Manufacturer"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="160"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/InductorManufacturer.xml"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="enable" refId="id_Buck_LV_Setting_Enable_combo"/>
+              <Parameter name="data" refId="id_inductor_manufacturer"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucBuckSettingComboBox" id="id_Buck_LV_Frequency_combo">
+            <Parameter name="left_label" value="Buck LV Frequency"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="160"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/BuckFrequency.xml"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_Buck_LV_Frequency"/>
+              <Parameter name="enable" refId="id_Buck_LV_Setting_Enable_combo"/>
+              <Parameter name="inductor_select" refId="id_inductor_manufacturer_combo"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucBuckSettingComboBox" id="id_Buck_LV_Threshold_combo">
+            <Parameter name="left_label" value="Buck LV Threshold"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="160"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/BuckThreshold.xml"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_Buck_LV_Threshold"/>
+              <Parameter name="enable" refId="id_Buck_LV_Setting_Enable_combo"/>
+              <Parameter name="inductor_select" refId="id_inductor_manufacturer_combo"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucBuckSettingComboBox" id="id_Buck_MV_Frequency_combo">
+            <Parameter name="left_label" value="Buck MV Frequency"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="160"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/BuckFrequency.xml"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_Buck_MV_Frequency"/>
+              <Parameter name="enable" refId="id_Buck_LV_Setting_Enable_combo"/>
+              <Parameter name="inductor_select" refId="id_inductor_manufacturer_combo"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucBuckSettingComboBox" id="id_Buck_MV_Threshold_combo">
+            <Parameter name="left_label" value="Buck MV Threshold"/>
+            <Parameter name="left_margin" value="10"/>
+            <Parameter name="left_width" value="160"/>
+            <Parameter name="top_margin" value="10"/>
+            <Parameter name="right_margin" value="10"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="xml_file_path" value="/_EnumDefine/BuckThreshold.xml"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_Buck_MV_Threshold"/>
+              <Parameter name="enable" refId="id_Buck_LV_Setting_Enable_combo"/>
+              <Parameter name="inductor_select" refId="id_inductor_manufacturer_combo"/>
+            </Associator>
+          </ConfigItem>
+        </ConfigGroup>
+      </ConfigGroup>-->
+      <!--<ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="top_label" value="Power AlwaysOn Setting"/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucComboBox" Unique="POWER_ALWAYSON_SETTING.Enable" id="id_power_always_on_enable_cb">
+          <Parameter name="left_label" value="Enable"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_power_always_on_enable_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" Unique="POWER_ALWAYSON_SETTING.BuckMv" id="id_power_always_on_BuckMv_cb">
+          <Parameter name="left_label" value="Buck Mv"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/AlwaysOnSetting.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_power_always_on_BuckMv_tb"/>
+            <Parameter name="enable" refId="id_power_always_on_enable_cb"/>
+            <Parameter name="enable_value" value="1"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" Unique="POWER_ALWAYSON_SETTING.LdoHV" id="id_power_always_on_LdoHV_cb">
+          <Parameter name="left_label" value="Ldo HV"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/AlwaysOnSetting.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_power_always_on_LdoHV_tb"/>
+            <Parameter name="enable" refId="id_power_always_on_enable_cb"/>
+            <Parameter name="enable_value" value="1"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" Unique="POWER_ALWAYSON_SETTING.LdoLV2" id="id_power_always_on_LdoLV2_cb">
+          <Parameter name="left_label" value="Ldo LV2"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/AlwaysOnSetting.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_power_always_on_LdoLV2_tb"/>
+            <Parameter name="enable" refId="id_power_always_on_enable_cb"/>
+            <Parameter name="enable_value" value="1"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>-->
+      <!--<ConfigGroup class="ucLayoutHorizontal">
+        <Parameter name="top_label" value="Retention Voltage at Deep Sleep"/>
+        <Parameter name="left_width" value="20"/>
+        <Parameter name="border" value="1"/>
+        <ConfigItem class="ucComboBox" Unique="HV_RET_SETTING.Enable" id="id_hv_ret_setting_enable_cb">
+          <Parameter name="left_label" value="Enable"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_hv_ret_setting_enable_tb"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="ucComboBox" Unique="HV_RET_SETTING.HV_RET" id="id_hv_ret_enable_cb">
+          <Parameter name="left_label" value="HV Retention"/>
+          <Parameter name="left_margin" value="10"/>
+          <Parameter name="left_width" value="10"/>
+          <Parameter name="top_margin" value="10"/>
+          <Parameter name="right_margin" value="10"/>
+          <Parameter name="bottom_margin" value="10"/>
+          <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="data" refId="id_hv_ret_enable_tb"/>
+            <Parameter name="enable" refId="id_hv_ret_setting_enable_cb"/>
+            <Parameter name="enable_value" value="1"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>-->
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_AU_AFE_CTRL.Dac_Power_Setting" id="id_audio_power_mode" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_audio_power_mode_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="Buck_config.Enable" id="id_Buck_LV_Setting_Enable" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_Buck_LV_Setting_Enable_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="Buck_config.Buck_LV_Frequency" id="id_Buck_LV_Frequency" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_Buck_LV_Frequency_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="Buck_config.Buck_LV_Threshold" id="id_Buck_LV_Threshold" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_Buck_LV_Threshold_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="Buck_config.Buck_MV_Frequency" id="id_Buck_MV_Frequency" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_Buck_MV_Frequency_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="Buck_config.Buck_MV_Threshold" id="id_Buck_MV_Threshold" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_Buck_MV_Threshold_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="Buck_config.Inductor_Manufacturer" id="id_inductor_manufacturer" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_inductor_manufacturer_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="POWER_ALWAYSON_SETTING.Enable" id="id_power_always_on_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_power_always_on_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="POWER_ALWAYSON_SETTING.BuckMv" id="id_power_always_on_BuckMv_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_power_always_on_BuckMv_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="POWER_ALWAYSON_SETTING.LdoHV" id="id_power_always_on_LdoHV_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_power_always_on_LdoHV_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="POWER_ALWAYSON_SETTING.LdoLV2" id="id_power_always_on_LdoLV2_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_power_always_on_LdoLV2_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="HV_RET_SETTING.Enable" id="id_hv_ret_setting_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_hv_ret_setting_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="HV_RET_SETTING.HV_RET" id="id_hv_ret_enable_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_hv_ret_enable_cb"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

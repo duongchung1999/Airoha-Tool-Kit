@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="ANC_Settings" class="Airoha.Project.ConfigTool.View.PurePage" parameter="ANC_Settings">
+  <ConfigGroup class="ucLayoutVertical">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="ANC Path"/>
+      <Parameter name="top_margin" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucComboBox" id="id_anc_ff_mic_cb">
+        <Parameter name="left_label" value="ANC FF Mic Select"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/AncMicSelect.xml"/>
+        <Parameter name="unique" value="anc_param.sub_param0.mic"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_anc_ff_mic_tb"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_anc_fb_mic_cb">
+        <Parameter name="left_label" value="ANC FB Mic Select"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/AncMicSelect.xml"/>
+        <Parameter name="unique" value="anc_param.sub_param1.mic"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_anc_fb_mic_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>    
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="top_label" value="Airo Through Path"/>
+      <Parameter name="top_margin" value="20"/>
+      <Parameter name="border" value="1"/>
+      <ConfigItem class="ucComboBox" id="id_anc_passthrough_mic_cb">
+        <Parameter name="left_label" value="Airo Through MIC Select"/>
+        <Parameter name="left_margin" value="5"/>
+        <Parameter name="left_width" value="75"/>
+        <Parameter name="top_margin" value="5"/>
+        <Parameter name="right_margin" value="5"/>
+        <Parameter name="width" value="100"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/AncMicSelect.xml"/>
+        <Parameter name="unique" value="passthru_param.sub_param.mic"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_anc_passthrough_mic_tb"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>    
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="anc_param.sub_param0.mic" id="id_anc_ff_mic_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_ff_mic_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="anc_param.sub_param1.mic" id="id_anc_fb_mic_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_fb_mic_cb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="passthru_param.sub_param.mic" id="id_anc_passthrough_mic_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_anc_passthrough_mic_cb"/>
+      </Associator>
+    </ConfigItem>
+    
+  </ConfigGroup>
+</Page>
+

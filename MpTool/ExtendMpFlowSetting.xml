@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <environments WpfView="EnvionmentSelect">
+    <DUT1 IsEnable="True" />
+    <DUT2 IsEnable="False" />
+    <DUT3 IsEnable="False" />
+    <DUT4 IsEnable="False" />
+    <DUT5 IsEnable="False" />
+    <DUT6 IsEnable="False" />
+    <DUT7 IsEnable="False" />
+    <DUT8 IsEnable="False" />
+  </environments>
+  <UnifiedInput>
+    <FlashBin SettingPage.View="CfgFileSelection">D:\FW\flash_download.cfg</FlashBin>
+    <FlashBin_device_name SettingPage.IsIgnore="True">AB156x</FlashBin_device_name>
+    <FlashBin_BD_address SettingPage.IsIgnore="True">FF2233445566</FlashBin_BD_address>
+    <BDKey>AB1560FFAB1560FFAB1560FFAB1560FFAB1560FFAB1560FFAB1560FFAB1560FF</BDKey>
+    <Reboot SettingPage.IsIgnore="True">1</Reboot>
+    <MpTest SettingPage.IsIgnore="True">true</MpTest>
+    <Tcb1to8Port SettingPage.View="UartSelectUsbCdc">20</Tcb1to8Port>
+    <VCCIO_unit_centivolts SettingPage.View="TextSelect" SettingPage.Content="VCCIO_unit_centivolts" SettingPage.IsIgnore="True" SettingPage.Mode="MP">180</VCCIO_unit_centivolts>
+    <High_Voltage_Battery_support_4.35V SettingPage.View="TextSelect" SettingPage.Content="BooleanOption" SettingPage.IsIgnore="True">false</High_Voltage_Battery_support_4.35V>
+    <SwitchDaLog SettingPage.View="TextSelect" SettingPage.Content="BooleanOption" SettingPage.Mode="MP">false</SwitchDaLog>
+    <handshake_br SettingPage.IsIgnore="True">115200</handshake_br>
+  </UnifiedInput>
+  <SelfInput>
+    <DeviceUart SettingPage.View="UartSelectWithCdc">
+      <DUT1>21</DUT1>
+      <DUT2>22</DUT2>
+      <DUT3>23</DUT3>
+      <DUT4>24</DUT4>
+      <DUT5>25</DUT5>
+      <DUT6>26</DUT6>
+      <DUT7>27</DUT7>
+      <DUT8>28</DUT8>
+    </DeviceUart>
+  </SelfInput>
+  <Managers>
+    <BdAddressManager class="Airoha.Project.MpTool.BdAddressPool">
+      <expect_dut_count SettingPage.IsIgnore="True">%_ENVI_COUNT%</expect_dut_count>
+      <start_address_bt3>FF00ABCD1234</start_address_bt3>
+      <end_address_bt3>FFFFFFFFFFFF</end_address_bt3>
+      <BT3AddressFromBarCode SettingPage.View="TextSelect" SettingPage.Content="Boolean" SettingPage.Mode="MP">NO</BT3AddressFromBarCode>
+      <BarCodeMode_AutoStart SettingPage.View="TextSelect" SettingPage.Content="Boolean" SettingPage.Mode="MP">YES</BarCodeMode_AutoStart>
+      <BarCode>
+        <DUT1></DUT1>
+        <DUT2></DUT2>
+        <DUT3></DUT3>
+        <DUT4></DUT4>
+        <DUT5></DUT5>
+        <DUT6></DUT6>
+        <DUT7></DUT7>
+        <DUT8></DUT8>
+      </BarCode>
+    </BdAddressManager>
+    <CalibrationFlowManager class="Airoha.Project.MpTool.CalibrationFlowManager">
+      <CalibrationFlow SettingPage.View="TextSelect" SettingPage.Content="CalibrationFlow__TCB1to8" SettingPage.IsIgnore="True">OTP_Data_Conversion</CalibrationFlow>
+    </CalibrationFlowManager>
+    <MpTestPinManager class="Airoha.Project.MpTool.MpTestPinManager">
+      <TCB_test_pin SettingPage.View="TextSelect" SettingPage.Content="test_pin_config" SettingPage.IsIgnore="True">Use_Less_Pin</TCB_test_pin>
+    </MpTestPinManager>
+  </Managers>
+  <flows Runner.StartFlow="default">
+    <default SettingPage.Name="Default Process">
+      <option>
+        <CrystalTrim SettingPage.Name="CrystalTrim" Runner.IsEnable="True" />
+        <WriteFlash SettingPage.Name="WriteFlash" Runner.IsEnable="True" />
+        <SetBt3BdAddress SettingPage.Name="SetBt3BdAddress" Runner.IsEnable="True" />
+      </option>
+      <main>
+        <ToolLogLevel task="DebugLogLevel" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <CheckBt3Addr FlowObject="BdAddressManager.check_bt3_addr" Runner.IsEnable="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <!--<LoadMsgId task="LoadMsgId" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True"/> -->
+        <!-- TCB power on DUT -->
+        <DUT__battery__current__check task="ConnectTCB1to8_PoweronDUT" Runner.Option="True" SettingPage.IsIgnore="True">
+          <port SettingPage.IsIgnore="True" Runner.Input="Tcb1to8Port" />
+          <vccio_cV SettingPage.IsIgnore="True" Runner.Input="VCCIO_unit_centivolts" />
+        </DUT__battery__current__check>
+        <!-- TCB LED: blue for running -->
+        <TurnOffLED_R task="TCB1to8_LEDOffRed" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <TurnOffLED_G task="TCB1to8_LEDOffGreen" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <TurnOffLED_B task="TCB1to8_LEDOffBlue" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <TurnOnLED_R task="TCB1to8_LEDOnRed" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <TurnOnLED_B task="TCB1to8_LEDOnBlue" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <!-- DUT flow -->
+        <ConnectDevice task="ConnectDUT" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <port Runner.Input="DeviceUart" />
+          <rate SettingPage.IsIgnore="True" Runner.Input="handshake_br" />
+        </ConnectDevice>
+        <WriteDa task="WriteDa" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <switch_da_log SettingPage.IsIgnore="True" Runner.Input="SwitchDaLog" SettingPage.View="TextSelect" SettingPage.Content="BooleanOption" />
+        </WriteDa>
+        <WriteFlash task="RaceDaWriteFlashFromCfg" Runner.Option="WriteFlash">
+          <cfg_filename SettingPage.IsIgnore="True" Runner.Input="FlashBin" />
+          <auto_reboot SettingPage.IsIgnore="True" Runner.Input="Reboot" />
+          <mp_test SettingPage.IsIgnore="True" Runner.Input="MpTest" />
+        </WriteFlash>
+        <Reboot task="RaceDaReboot" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True"></Reboot>
+        <SystemInit task="SystemInit" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <auto_reboot SettingPage.IsIgnore="True" Runner.Input="Reboot" />
+          <mp_test SettingPage.IsIgnore="True" Runner.Input="MpTest" />
+        </SystemInit>
+        <!--<DisableFwDbgMsg task="DisableFwDbgMsg" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />-->
+        <CrystalTrim task="CrystalTrimTableMethod" Runner.Option="CrystalTrim">
+          <output_pin SettingPage.IsIgnore="False" SettingPage.View="TextSelect" SettingPage.Content="xtal_output_pin" />
+          <output_pin SettingPage.IsIgnore="True" Runner.InputFromManager="MpTestPinManager.test_pin_reader" />
+        </CrystalTrim>
+        <SetBdKey task="TaskSetBdKey" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True">
+          <bd_key SettingPage.IsIgnore="True" Runner.Input="BDKey" />
+        </SetBdKey>
+      </main>
+      <Asynchronous>
+        <SetBt3BdAddress task="SetBt3BdAddress" Runner.Option="SetBt3BdAddress" UI.Result="bd_addr">
+          <bd_address Runner.InputFromManager="BdAddressManager.bt3distributer" SettingPage.IsIgnore="True" />
+          <is_bt3_addr_from_barcode Runner.InputFromManager="BdAddressManager.barcode_flag_getter" SettingPage.IsIgnore="True" />
+          <bt3_addr_from_barcode Runner.InputFromManager="BdAddressManager.barcode_addr_getter" SettingPage.IsIgnore="True" />
+        </SetBt3BdAddress>
+        <UpdateBdAddress FlowObject="BdAddressManager.set_update" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <!-- TCB LED: Pass red off, green on -->
+        <!--<TurnOffLED_R task="TCB1to8_LEDOffRed" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <TurnOnLED_G task="TCB1to8_LEDOnGreen" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />-->
+      </Asynchronous>
+      <final>
+        <!-- TCB LED: blue off -->
+        <TurnOffLED_B task="TCB1to8_LEDOffBlue" Runner.Option="True" UI.IsVisiable="False" SettingPage.IsIgnore="True" />
+        <!-- TCB power off DUT -->
+        <DisableUart task="UartDisableFlow" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True" />
+        <DisconnectDevice task="DisconnectDUT" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True" />
+        <PoweroffDUTwith1to8TCB task="PoweroffDUT_DisconnectTCB1to8" Runner.Option="True" UI.IsVisiable="True" SettingPage.IsIgnore="True">
+          <port SettingPage.IsIgnore="True" Runner.Input="Tcb1to8Port" />
+        </PoweroffDUTwith1to8TCB>
+      </final>
+    </default>
+  </flows>
+</root>

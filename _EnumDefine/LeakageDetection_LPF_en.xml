@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+  <Group Name="800Hz" Value="0"/>
+  <Group Name="600Hz" Value="1"/>
+  <Group Name="500Hz" Value="2"/>
+  <Group Name="400Hz" Value="3"/>
+</DataGroup>

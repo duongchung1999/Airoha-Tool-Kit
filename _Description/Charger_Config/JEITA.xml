@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="JEITA" class="Airoha.Project.ConfigTool.View.General" parameter="JEITA">
+  <ConfigItem class="ucTextBox" Unique="JEITA_65.CoolStateCurrentPercent"/>
+  <ConfigItem class="ucTextBox" Unique="JEITA_65.CoolStateDACdecrease"/>
+  <ConfigItem class="ucTextBox" Unique="JEITA_65.WarmStateCurrentPercent"/>
+  <ConfigItem class="ucTextBox" Unique="JEITA_65.WarmStateDACdecrease"/>
+</Page>

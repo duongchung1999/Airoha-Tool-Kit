@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Battery Settings(MP NV Key)" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Battery Settings(MP NV Key)">
+  <ConfigGroup class="ucLayoutVertical">
+    <ConfigItem class="ucDspDecimalUpDown" id="id_batt_checkPoint1_updown" min="1" max="100">
+      <Parameter name="left_label" value="Battery Check Point 1"/>
+      <Parameter name="right_label" value="(Range: 1~100)"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="step" value="1"/>
+      <Parameter name="multiple" value="10"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_batt_checkPoint1_tb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucDspDecimalUpDown" id="id_batt_checkPoint2_updown" min="1" max="100">
+      <Parameter name="left_label" value="Battery Check Point 2"/>
+      <Parameter name="right_label" value="(Range: 1~100)"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="step" value="1"/>
+      <Parameter name="multiple" value="10"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_batt_checkPoint2_tb"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucDspDecimalUpDown" id="id_batt_checkPoint3_updown" min="1" max="100">
+      <Parameter name="left_label" value="Battery Check Point 3"/>
+      <Parameter name="right_label" value="(Range: 1~100)"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="step" value="1"/>
+      <Parameter name="multiple" value="10"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_batt_checkPoint3_tb"/>
+      </Associator>
+    </ConfigItem>
+    <!--<ConfigItem class="ucDspDecimalUpDown" id="id_batt_threshold_initpercent_updown" min="1" max="100">
+            <Parameter name="left_label" value="Battery Threshold Initial Percentage"/>
+            <Parameter name="right_label" value="(Range: 1~100)"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="multiple" value="10"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_batt_threshold_initpercent_tb"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucDspDecimalUpDown" id="id_batt_threshold_shutdownpercent_updown" min="1" max="100">
+            <Parameter name="left_label" value="Battery Threshold Shutdown Percentage"/>
+            <Parameter name="right_label" value="(Range: 1~100)"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="multiple" value="10"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_batt_threshold_shutdownpercent_tb"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucDspDecimalUpDown" id="id_batt_threshold_lowpercent_updown" min="1" max="100">
+            <Parameter name="left_label" value="Battery Threshold Low Percentage"/>
+            <Parameter name="right_label" value="(Range: 1~100)"/>
+            <Parameter name="bottom_margin" value="10"/>
+            <Parameter name="step" value="1"/>
+            <Parameter name="multiple" value="10"/>
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_batt_threshold_lowpercent_tb"/>
+            </Associator>
+          </ConfigItem>-->
+    <ConfigItem class="ucComboBox" id="id_power_on_low_percent_combo">
+      <Parameter name="left_label" value="Power On Low Percentage"/>
+      <Parameter name="left_width" value="150"/>
+      <Parameter name="width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/PowerOnLowPercent.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_power_on_low_percent"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucComboBox" id="id_power_on_low_percent_chgin_combo">
+      <Parameter name="left_label" value="Power On Low Percentage When Charging in"/>
+      <Parameter name="left_width" value="150"/>
+      <Parameter name="width" value="120"/>
+      <Parameter name="top_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="xml_file_path" value="/_EnumDefine/PowerOnLowPercent.xml"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_power_on_low_percent_chgin"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+  <ConfigGroup title="Charger Battery Feature" class="ucBitField">
+    <ConfigItem class="ucCheckBox" Unique="APP_CHGBAT_INFO_STRU.APP_CHARGER_OUT_THEN_POWER_ON_FEAT" name="Charger Out Then Power On"/>
+    <ConfigItem class="ucCheckBox" Unique="APP_CHGBAT_INFO_STRU.APP_INIT_BAT_CHECK_ON_POWER_UP_FEAT" name="Initial Battery Check On Power Up"/>
+    <ConfigItem class="ucCheckBox" Unique="APP_CHGBAT_INFO_STRU.APP_POWER_OFF_WHEN_CHARGING_TO_FEAT" name="Power Off When Charging Too Long(checkChargingTimer)"/>
+    <ConfigItem class="ucCheckBox" Unique="APP_CHGBAT_INFO_STRU.APP_POWER_OFF_WHEN_CHARGING_IN_INTR" name="Power Off When Charging in"/>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="BATTERY_PARA_STRU.ledDuration.level0"/>
+    <ConfigItem class="ucTextBox" Unique="BATTERY_PARA_STRU.ledDuration.level1"/>
+    <ConfigItem class="ucTextBox" Unique="BATTERY_PARA_STRU.ledDuration.level2"/>
+    <ConfigItem class="ucTextBox" Unique="BATTERY_PARA_STRU.ledDuration.level3"/>
+    <ConfigItem class="ucTextBox" Unique="BATTERY_PARA_STRU.lowPercentLEDTimer"/>
+    <ConfigItem class="ucTextBox" Unique="BATTERY_PARA_STRU.lowPercentRingTimer"/>
+    <ConfigItem class="ucTextBox" Unique="BATTERY_CHECK_POINT_STRU.checkPoint1" id="id_batt_checkPoint1_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_batt_checkPoint1_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BATTERY_CHECK_POINT_STRU.checkPoint2" id="id_batt_checkPoint2_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_batt_checkPoint2_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="BATTERY_CHECK_POINT_STRU.checkPoint3" id="id_batt_checkPoint3_tb" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_batt_checkPoint3_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="APP_PWR_ON_LOW_PERCENT_CTL_STRU.pwrOnLowPercent" id="id_power_on_low_percent" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_power_on_low_percent_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="APP_PWR_ON_LOW_PERCENT_CTL_STRU.pwrOnLowPercentChgIn" id="id_power_on_low_percent_chgin" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_power_on_low_percent_chgin_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="APP_BAT_TIMER_CTL_STRU.autoSwitchOffInLowBatTimer"/>
+    <ConfigItem class="ucTextBox" Unique="APP_BAT_TIMER_CTL_STRU.delayChgMediaEvtTimer"/>
+    <ConfigItem class="ucTextBox" Unique="APP_BAT_TIMER_CTL_STRU.checkChargingTimer"/>
+    <ConfigItem class="ucTextBox" Unique="APP_BAT_TIMER_CTL_STRU.batteryMonitoringPeriod"/>
+    <!--<ConfigItem class="ucTextBox" Unique="APP_BAT_THRESHOLD_STRU.initPercent" id="id_batt_threshold_initpercent_tb" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_batt_threshold_initpercent_updown"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" Unique="APP_BAT_THRESHOLD_STRU.shutdownPercent" id="id_batt_threshold_shutdownpercent_tb" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_batt_threshold_shutdownpercent_updown"/>
+            </Associator>
+          </ConfigItem>
+          <ConfigItem class="ucTextBox" Unique="APP_BAT_THRESHOLD_STRU.lowPercent" id="id_batt_threshold_lowpercent_tb" visible="hidden">
+            <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+              <Parameter name="data" refId="id_batt_threshold_lowpercent_updown"/>
+            </Associator>
+          </ConfigItem>-->
+  </ConfigGroup>
+</Page>

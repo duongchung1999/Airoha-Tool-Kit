@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup> 
+	<Group Name="Hybrid" Value="0"/> 
+	<Group Name="FF" Value="1"/> 
+	<Group Name="FB" Value="2"/> 
+	<Group Name="PassThrough" Value="4"/> 
+</DataGroup>
+
+

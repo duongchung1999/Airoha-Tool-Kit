@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataGroup>
+	<Group Name="HAL_POWER_KEY_PIN" Value="39"/>
+	<Group Name="MMI_KEY1_PIN" Value="41"/>
+	<Group Name="MMI_KEY2_PIN" Value="42"/>
+	<Group Name="MMI_KEY3_PIN" Value="43"/>
+	<Group Name="MMI_KEY4_PIN" Value="44"/>
+	<Group Name="MMI_KEY5_PIN" Value="45"/>
+	<Group Name="MMI_KEY6_PIN" Value="46"/>
+	<Group Name="MMI_KEY7_PIN" Value="47"/>
+	<Group Name="MMI_KEY8_PIN" Value="48"/>
+	<Group Name="MMI_KEY9_PIN" Value="49"/>
+	<Group Name="MMI_KEY10_PIN" Value="50"/>
+	<Group Name="GPIO_VAR_NAME_NOT_DEFINED" Value="255"/>
+</DataGroup>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Advanced_PassThru_Gain_Settings" class="Airoha.Project.ConfigTool.View.PurePage" parameter="Advanced_PassThru_Gain_Settings">
+  <ConfigGroup class="ucLayoutVertical">
+    <Parameter name="top_label" value="DSP_PARA_AT_GAIN_STRU"/>
+    <Parameter name="left_margin" value="10"/>
+    <Parameter name="right_margin" value="10"/>
+    <Parameter name="top_margin" value="10"/>
+    <Parameter name="bottom_margin" value="10"/>
+    <Parameter name="border" value="1"/>
+
+    <ConfigItem class="ucUpDown" Unique="DSP_PARA_AT_GAIN_STRU.GAIN_2" id="id_adv_pthru_gain_2_updown" min="0" max="4000">
+      <Parameter name="left_label" value="Advanced PassThru Gain 2 ( x 0.01 db)"/>
+      <Parameter name="left_margin" value="5"/>
+      <Parameter name="left_width" value="50"/>
+      <Parameter name="top_margin" value="5"/>
+      <Parameter name="right_margin" value="5"/>
+      <Parameter name="bottom_margin" value="5"/>
+      <Parameter name="step" value="10"/>
+      <Parameter name="unique" value="DSP_PARA_AT_GAIN_STRU.GAIN_2"/>
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_adv_pthru_gain_2_tb"/>
+      </Associator>
+    </ConfigItem>
+
+    <ConfigGroup class="General">
+	  <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_GAIN_STRU.GAIN_1" present="hex" id="id_adv_pthru_gain_1_tb" visible="hidden"/>
+      <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_GAIN_STRU.GAIN_2" present="hex" id="id_adv_pthru_gain_2_tb" visible="hidden">
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_adv_pthru_gain_2_updown"/>
+        </Associator>
+      </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="DSP_PARA_AT_GAIN_STRU.GAIN_3" present="hex" id="id_adv_pthru_gain_3_tb" visible="hidden"/>
+
+  </ConfigGroup>
+  </ConfigGroup>
+</Page>

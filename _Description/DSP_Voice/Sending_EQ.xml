@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="Sending_EQ" class="Airoha.Project.ConfigTool.View.TabPage" parameter="Sending_EQ" scroll="vertical">
+  <ConfigGroup title="Wideband" class="DspPage" parameter="Wideband">
+    <Parameter name="button_margin" value="10"/>
+    <ConfigGroup class="ucLayoutHorizontal">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="height" value="460"/>
+      <ConfigGroup class="ucLiveChart" id="id_dsp_voice_chart_init_wb_tx">
+        <Parameter name="layout_column_weight" value="1"/>
+        <Parameter name="x_axis_title" value="Frequency(Hz)"/>
+        <Parameter name="x_axis_max_value" value="8000"/>
+        <Parameter name="x_axis_min_value" value="20"/>
+        <Parameter name="y_axis_title" value="Gain(dB)"/>
+        <Parameter name="x_axis_customized_step" value="20,100,1000,4000,8000"/>
+        <Parameter name="y_axis_step" value="1"/>
+        <ConfigItem class="point_set" id="id_voice_eq_point_set_wb_tx">
+          <Parameter name="total_num" value="30"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcVeqPointSetAssociator">
+            <Parameter name="band_table" refId="id_voice_eq_band_table_wb_tx"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="line" id="id_voice_eq_line_wb_tx">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcVeqWbAssociator">
+            <Parameter name="band_table" refId="id_voice_eq_band_table_wb_tx"/>
+            <Parameter name="unique_begin" value="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_0"/>
+            <Parameter name="unique_end" value="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_255"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <ConfigGroup class="ucVeqBandTable" id="id_voice_eq_band_table_wb_tx">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="point_set" refId="id_voice_eq_point_set_wb_tx"/>
+            <Parameter name="veq_cell_01" refId="id_voice_eq_band_cell_wb_tx_01"/>
+            <Parameter name="veq_cell_02" refId="id_voice_eq_band_cell_wb_tx_02"/>
+            <Parameter name="veq_cell_03" refId="id_voice_eq_band_cell_wb_tx_03"/>
+            <Parameter name="veq_cell_04" refId="id_voice_eq_band_cell_wb_tx_04"/>
+            <Parameter name="veq_cell_05" refId="id_voice_eq_band_cell_wb_tx_05"/>
+            <Parameter name="veq_cell_06" refId="id_voice_eq_band_cell_wb_tx_06"/>
+            <Parameter name="veq_cell_07" refId="id_voice_eq_band_cell_wb_tx_07"/>
+            <Parameter name="veq_cell_08" refId="id_voice_eq_band_cell_wb_tx_08"/>
+            <Parameter name="veq_cell_09" refId="id_voice_eq_band_cell_wb_tx_09"/>
+            <Parameter name="veq_cell_10" refId="id_voice_eq_band_cell_wb_tx_10"/>
+            <Parameter name="veq_cell_11" refId="id_voice_eq_band_cell_wb_tx_11"/>
+            <Parameter name="veq_cell_12" refId="id_voice_eq_band_cell_wb_tx_12"/>
+            <Parameter name="veq_cell_13" refId="id_voice_eq_band_cell_wb_tx_13"/>
+            <Parameter name="veq_cell_14" refId="id_voice_eq_band_cell_wb_tx_14"/>
+            <Parameter name="veq_cell_15" refId="id_voice_eq_band_cell_wb_tx_15"/>
+            <Parameter name="veq_cell_16" refId="id_voice_eq_band_cell_wb_tx_16"/>
+            <Parameter name="veq_cell_17" refId="id_voice_eq_band_cell_wb_tx_17"/>
+            <Parameter name="veq_cell_18" refId="id_voice_eq_band_cell_wb_tx_18"/>
+            <Parameter name="veq_cell_19" refId="id_voice_eq_band_cell_wb_tx_19"/>
+            <Parameter name="veq_cell_20" refId="id_voice_eq_band_cell_wb_tx_20"/>
+            <Parameter name="veq_cell_21" refId="id_voice_eq_band_cell_wb_tx_21"/>
+            <Parameter name="veq_cell_22" refId="id_voice_eq_band_cell_wb_tx_22"/>
+            <Parameter name="veq_cell_23" refId="id_voice_eq_band_cell_wb_tx_23"/>
+            <Parameter name="veq_cell_24" refId="id_voice_eq_band_cell_wb_tx_24"/>
+            <Parameter name="veq_cell_25" refId="id_voice_eq_band_cell_wb_tx_25"/>
+            <Parameter name="veq_cell_26" refId="id_voice_eq_band_cell_wb_tx_26"/>
+            <Parameter name="veq_cell_27" refId="id_voice_eq_band_cell_wb_tx_27"/>
+            <Parameter name="veq_cell_28" refId="id_voice_eq_band_cell_wb_tx_28"/>
+            <Parameter name="veq_cell_29" refId="id_voice_eq_band_cell_wb_tx_29"/>
+            <Parameter name="veq_cell_30" refId="id_voice_eq_band_cell_wb_tx_30"/>
+          </Associator>
+          <ConfigGroup title="1-10" class="ucVeqBandTableColumn">
+            <Parameter name="item_start_num" value="01"/>
+            <Parameter name="item_num_count" value="10"/>
+            <ConfigItem class="ucVeqBandCell" id="id_voice_eq_band_cell_wb_tx_#">
+              <Parameter name="label" value="#"/>
+              <Parameter name="unique_enable" value="UI_DSP_VOICE_EQ_TX_WB_STRU.enable_#"/>
+              <Parameter name="unique_freq" value="UI_DSP_VOICE_EQ_TX_WB_STRU.freq_#"/>
+              <Parameter name="unique_gain" value="UI_DSP_VOICE_EQ_TX_WB_STRU.gain_#"/>
+            </ConfigItem>
+          </ConfigGroup>
+          <ConfigGroup title="11-20" class="ucVeqBandTableColumn">
+            <Parameter name="item_start_num" value="11"/>
+            <Parameter name="item_num_count" value="10"/>
+            <ConfigItem class="ucVeqBandCell" id="id_voice_eq_band_cell_wb_tx_#">
+              <Parameter name="label" value="#"/>
+              <Parameter name="unique_enable" value="UI_DSP_VOICE_EQ_TX_WB_STRU.enable_#"/>
+              <Parameter name="unique_freq" value="UI_DSP_VOICE_EQ_TX_WB_STRU.freq_#"/>
+              <Parameter name="unique_gain" value="UI_DSP_VOICE_EQ_TX_WB_STRU.gain_#"/>
+            </ConfigItem>
+          </ConfigGroup>
+          <ConfigGroup title="21-30" class="ucVeqBandTableColumn">
+            <Parameter name="item_start_num" value="21"/>
+            <Parameter name="item_num_count" value="10"/>
+            <ConfigItem class="ucVeqBandCell" id="id_voice_eq_band_cell_wb_tx_#">
+              <Parameter name="label" value="#"/>
+              <Parameter name="unique_enable" value="UI_DSP_VOICE_EQ_TX_WB_STRU.enable_#"/>
+              <Parameter name="unique_freq" value="UI_DSP_VOICE_EQ_TX_WB_STRU.freq_#"/>
+              <Parameter name="unique_gain" value="UI_DSP_VOICE_EQ_TX_WB_STRU.gain_#"/>
+            </ConfigItem>
+          </ConfigGroup>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical" visible="hidden">
+      <Parameter name="left_margin" value="10"/>
+      <ConfigGroup class="General">
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.ENABLE"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.REVISION"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_0"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_1"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_2"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_3"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_4"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_5"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_6"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_7"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_8"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_9"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_10"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_11"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_12"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_13"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_14"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_15"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_16"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_17"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_18"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_19"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_20"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_21"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_22"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_23"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_24"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_25"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_26"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_27"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_28"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_29"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_30"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_31"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_32"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_33"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_34"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_35"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_36"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_37"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_38"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_39"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_40"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_41"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_42"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_43"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_44"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_45"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_46"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_47"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_48"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_49"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_50"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_51"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_52"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_53"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_54"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_55"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_56"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_57"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_58"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_59"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_60"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_61"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_62"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_63"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_64"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_65"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_66"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_67"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_68"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_69"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_70"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_71"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_72"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_73"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_74"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_75"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_76"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_77"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_78"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_79"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_80"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_81"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_82"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_83"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_84"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_85"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_86"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_87"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_88"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_89"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_90"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_91"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_92"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_93"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_94"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_95"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_96"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_97"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_98"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_99"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_100"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_101"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_102"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_103"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_104"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_105"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_106"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_107"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_108"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_109"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_110"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_111"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_112"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_113"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_114"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_115"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_116"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_117"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_118"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_119"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_120"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_121"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_122"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_123"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_124"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_125"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_126"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_127"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_128"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_129"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_130"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_131"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_132"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_133"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_134"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_135"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_136"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_137"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_138"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_139"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_140"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_141"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_142"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_143"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_144"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_145"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_146"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_147"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_148"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_149"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_150"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_151"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_152"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_153"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_154"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_155"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_156"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_157"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_158"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_159"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_160"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_161"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_162"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_163"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_164"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_165"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_166"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_167"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_168"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_169"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_170"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_171"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_172"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_173"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_174"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_175"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_176"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_177"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_178"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_179"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_180"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_181"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_182"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_183"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_184"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_185"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_186"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_187"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_188"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_189"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_190"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_191"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_192"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_193"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_194"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_195"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_196"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_197"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_198"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_199"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_200"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_201"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_202"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_203"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_204"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_205"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_206"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_207"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_208"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_209"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_210"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_211"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_212"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_213"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_214"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_215"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_216"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_217"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_218"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_219"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_220"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_221"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_222"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_223"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_224"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_225"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_226"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_227"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_228"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_229"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_230"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_231"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_232"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_233"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_234"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_235"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_236"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_237"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_238"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_239"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_240"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_241"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_242"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_243"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_244"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_245"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_246"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_247"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_248"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_249"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_250"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_251"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_252"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_253"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_254"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_WB_TX_EQ_STRU.WB_TXEQ_COF_255"/>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup title="Narrowband" class="DspPage" parameter="Narrowband">
+    <Parameter name="button_margin" value="10"/>
+    <ConfigGroup class="ucLayoutHorizontal">
+      <Parameter name="left_margin" value="10"/>
+      <Parameter name="bottom_margin" value="10"/>
+      <Parameter name="height" value="460"/>
+      <ConfigGroup class="ucLiveChart">
+        <Parameter name="layout_column_weight" value="1"/>
+        <Parameter name="x_axis_title" value="Frequency(Hz)"/>
+        <Parameter name="x_axis_max_value" value="4000"/>
+        <Parameter name="x_axis_min_value" value="20"/>
+        <Parameter name="y_axis_title" value="Gain(dB)"/>
+        <Parameter name="x_axis_customized_step" value="20,100,1000,2000,4000"/>
+        <Parameter name="y_axis_step" value="1"/>
+        <ConfigItem class="line" id="id_voice_eq_line_nb_tx">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcVeqNbAssociator">
+            <Parameter name="band_table" refId="id_voice_eq_band_table_nb_tx"/>
+            <Parameter name="unique_begin" value="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_0"/>
+            <Parameter name="unique_end" value="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_127"/>
+          </Associator>
+        </ConfigItem>
+        <ConfigItem class="point_set" id="id_voice_eq_point_set_nb_tx">
+          <Parameter name="total_num" value="30"/>
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcVeqPointSetAssociator">
+            <Parameter name="band_table" refId="id_voice_eq_band_table_nb_tx"/>
+          </Associator>
+        </ConfigItem>
+      </ConfigGroup>
+      <ConfigGroup class="ucLayoutVertical">
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <ConfigGroup class="ucVeqBandTable" id="id_voice_eq_band_table_nb_tx">
+          <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+            <Parameter name="point_set" refId="id_voice_eq_point_set_nb_tx"/>
+            <Parameter name="veq_cell_01" refId="id_voice_eq_band_cell_nb_tx_01"/>
+            <Parameter name="veq_cell_02" refId="id_voice_eq_band_cell_nb_tx_02"/>
+            <Parameter name="veq_cell_03" refId="id_voice_eq_band_cell_nb_tx_03"/>
+            <Parameter name="veq_cell_04" refId="id_voice_eq_band_cell_nb_tx_04"/>
+            <Parameter name="veq_cell_05" refId="id_voice_eq_band_cell_nb_tx_05"/>
+            <Parameter name="veq_cell_06" refId="id_voice_eq_band_cell_nb_tx_06"/>
+            <Parameter name="veq_cell_07" refId="id_voice_eq_band_cell_nb_tx_07"/>
+            <Parameter name="veq_cell_08" refId="id_voice_eq_band_cell_nb_tx_08"/>
+            <Parameter name="veq_cell_09" refId="id_voice_eq_band_cell_nb_tx_09"/>
+            <Parameter name="veq_cell_10" refId="id_voice_eq_band_cell_nb_tx_10"/>
+            <Parameter name="veq_cell_11" refId="id_voice_eq_band_cell_nb_tx_11"/>
+            <Parameter name="veq_cell_12" refId="id_voice_eq_band_cell_nb_tx_12"/>
+            <Parameter name="veq_cell_13" refId="id_voice_eq_band_cell_nb_tx_13"/>
+            <Parameter name="veq_cell_14" refId="id_voice_eq_band_cell_nb_tx_14"/>
+            <Parameter name="veq_cell_15" refId="id_voice_eq_band_cell_nb_tx_15"/>
+            <Parameter name="veq_cell_16" refId="id_voice_eq_band_cell_nb_tx_16"/>
+            <Parameter name="veq_cell_17" refId="id_voice_eq_band_cell_nb_tx_17"/>
+            <Parameter name="veq_cell_18" refId="id_voice_eq_band_cell_nb_tx_18"/>
+            <Parameter name="veq_cell_19" refId="id_voice_eq_band_cell_nb_tx_19"/>
+            <Parameter name="veq_cell_20" refId="id_voice_eq_band_cell_nb_tx_20"/>
+            <Parameter name="veq_cell_21" refId="id_voice_eq_band_cell_nb_tx_21"/>
+            <Parameter name="veq_cell_22" refId="id_voice_eq_band_cell_nb_tx_22"/>
+            <Parameter name="veq_cell_23" refId="id_voice_eq_band_cell_nb_tx_23"/>
+            <Parameter name="veq_cell_24" refId="id_voice_eq_band_cell_nb_tx_24"/>
+            <Parameter name="veq_cell_25" refId="id_voice_eq_band_cell_nb_tx_25"/>
+            <Parameter name="veq_cell_26" refId="id_voice_eq_band_cell_nb_tx_26"/>
+            <Parameter name="veq_cell_27" refId="id_voice_eq_band_cell_nb_tx_27"/>
+            <Parameter name="veq_cell_28" refId="id_voice_eq_band_cell_nb_tx_28"/>
+            <Parameter name="veq_cell_29" refId="id_voice_eq_band_cell_nb_tx_29"/>
+            <Parameter name="veq_cell_30" refId="id_voice_eq_band_cell_nb_tx_30"/>
+          </Associator>
+          <ConfigGroup title="1-10" class="ucVeqBandTableColumn">
+            <Parameter name="item_start_num" value="01"/>
+            <Parameter name="item_num_count" value="10"/>
+            <ConfigItem class="ucVeqBandCell" id="id_voice_eq_band_cell_nb_tx_#">
+              <Parameter name="label" value="#"/>
+              <Parameter name="unique_enable" value="UI_DSP_VOICE_EQ_TX_NB_STRU.enable_#"/>
+              <Parameter name="unique_freq" value="UI_DSP_VOICE_EQ_TX_NB_STRU.freq_#"/>
+              <Parameter name="unique_gain" value="UI_DSP_VOICE_EQ_TX_NB_STRU.gain_#"/>
+            </ConfigItem>
+          </ConfigGroup>
+          <ConfigGroup title="11-20" class="ucVeqBandTableColumn">
+            <Parameter name="item_start_num" value="11"/>
+            <Parameter name="item_num_count" value="10"/>
+            <ConfigItem class="ucVeqBandCell" id="id_voice_eq_band_cell_nb_tx_#">
+              <Parameter name="label" value="#"/>
+              <Parameter name="unique_enable" value="UI_DSP_VOICE_EQ_TX_NB_STRU.enable_#"/>
+              <Parameter name="unique_freq" value="UI_DSP_VOICE_EQ_TX_NB_STRU.freq_#"/>
+              <Parameter name="unique_gain" value="UI_DSP_VOICE_EQ_TX_NB_STRU.gain_#"/>
+            </ConfigItem>
+          </ConfigGroup>
+          <ConfigGroup title="21-30" class="ucVeqBandTableColumn">
+            <Parameter name="item_start_num" value="21"/>
+            <Parameter name="item_num_count" value="10"/>
+            <ConfigItem class="ucVeqBandCell" id="id_voice_eq_band_cell_nb_tx_#">
+              <Parameter name="label" value="#"/>
+              <Parameter name="unique_enable" value="UI_DSP_VOICE_EQ_TX_NB_STRU.enable_#"/>
+              <Parameter name="unique_freq" value="UI_DSP_VOICE_EQ_TX_NB_STRU.freq_#"/>
+              <Parameter name="unique_gain" value="UI_DSP_VOICE_EQ_TX_NB_STRU.gain_#"/>
+            </ConfigItem>
+          </ConfigGroup>
+        </ConfigGroup>
+      </ConfigGroup>
+    </ConfigGroup>
+    <ConfigGroup class="ucLayoutVertical" visible="hidden">
+      <Parameter name="left_margin" value="10"/>
+      <ConfigGroup class="General">
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.ENABLE"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.REVISION"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_0"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_1"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_2"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_3"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_4"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_5"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_6"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_7"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_8"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_9"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_10"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_11"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_12"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_13"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_14"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_15"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_16"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_17"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_18"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_19"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_20"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_21"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_22"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_23"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_24"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_25"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_26"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_27"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_28"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_29"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_30"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_31"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_32"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_33"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_34"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_35"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_36"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_37"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_38"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_39"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_40"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_41"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_42"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_43"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_44"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_45"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_46"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_47"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_48"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_49"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_50"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_51"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_52"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_53"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_54"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_55"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_56"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_57"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_58"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_59"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_60"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_61"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_62"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_63"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_64"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_65"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_66"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_67"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_68"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_69"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_70"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_71"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_72"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_73"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_74"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_75"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_76"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_77"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_78"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_79"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_80"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_81"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_82"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_83"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_84"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_85"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_86"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_87"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_88"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_89"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_90"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_91"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_92"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_93"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_94"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_95"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_96"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_97"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_98"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_99"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_100"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_101"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_102"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_103"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_104"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_105"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_106"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_107"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_108"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_109"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_110"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_111"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_112"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_113"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_114"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_115"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_116"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_117"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_118"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_119"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_120"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_121"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_122"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_123"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_124"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_125"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_126"/>
+        <ConfigItem class="ucTextBox" present="hex" Unique="DSP_PARA_NB_TX_EQ_STRU.NB_TXEQ_COF_127"/>
+      </ConfigGroup>
+    </ConfigGroup>
+  </ConfigGroup>
+</Page>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page title="CE Adaptivity Test" class="Airoha.Project.ConfigTool.View.PurePage" parameter="CE Adaptivity Test">
+  <ConfigGroup class="ucLayoutHorizontal">
+    <ConfigGroup class="ucLayoutVertical">
+      <Parameter name="left_width" value="20"/>
+      <Parameter name="border" value="2"/>
+      <ConfigItem class="ucComboBox" id="id_IgnorChDiff_combo">
+        <Parameter name="left_label" value="Ignor Ch Diff"/>
+        <Parameter name="left_width" value="100"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="down_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_IgnorChDiff"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_DisableAdv_combo">
+        <Parameter name="left_label" value="Disable Adv"/>
+        <Parameter name="left_width" value="100"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="down_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/enable.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_DisableAdv"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucComboBox" id="id_modulation_combo">
+        <Parameter name="left_label" value="modulation"/>
+        <Parameter name="left_width" value="100"/>
+        <Parameter name="width" value="120"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="down_margin" value="10"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="xml_file_path" value="/_EnumDefine/CEAdaptivityTestModulation.xml"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_modulation"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_threshold1_updown" max="0" min="-95">
+        <Parameter name="left_label" value="Threshold 1:"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="dBm (-95 ~ -0)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CETestConfig.threshold1"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_threshold1"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_threshold2_updown" max="0" min="-95">
+        <Parameter name="left_label" value="Threshold 2:"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="dBm (-95 ~ -0)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CETestConfig.threshold2"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_threshold2"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_threshold3_updown" max="0" min="-95">
+        <Parameter name="left_label" value="Threshold 3:"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="dBm (-95 ~ -0)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CETestConfig.threshold3"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_threshold3"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_NewIncrement1_updown" max="65535" min="0">
+        <Parameter name="left_label" value="NewIncrement 1:"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(0 ~ 65535)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CETestConfig.NewIncrement1"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NewIncrement1"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_NewIncrement2_updown" max="65535" min="0">
+        <Parameter name="left_label" value="NewIncrement 2:"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(0 ~ 65535)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CETestConfig.NewIncrement2"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NewIncrement2"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_NewIncrement3_updown" max="65535" min="0">
+        <Parameter name="left_label" value="NewIncrement 3:"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(0 ~ 65535)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CETestConfig.NewIncrement3"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_NewIncrement3"/>
+        </Associator>
+      </ConfigItem>
+      <ConfigItem class="ucUpDown" id="id_MaxLevel_updown" max="65535" min="0">
+        <Parameter name="left_label" value="MaxLevel:"/>
+        <Parameter name="left_margin" value="10"/>
+        <Parameter name="left_width" value="80"/>
+        <Parameter name="top_margin" value="10"/>
+        <Parameter name="right_label" value="(0 ~ 65535)"/>
+        <Parameter name="right_margin" value="10"/>
+        <Parameter name="step" value="1"/>
+        <Parameter name="unique" value="CETestConfig.MaxLevel"/>
+        <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+          <Parameter name="data" refId="id_MaxLevel"/>
+        </Associator>
+      </ConfigItem>
+    </ConfigGroup>
+  </ConfigGroup>
+  <ConfigGroup class="General">
+    <ConfigItem class="ucTextBox" Unique="CETestConfig.IgnorChDiff" id="id_IgnorChDiff" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_IgnorChDiff_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CETestConfig.DisableAdv" id="id_DisableAdv" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_DisableAdv_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CETestConfig.modulation" id="id_modulation" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_modulation_combo"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CETestConfig.threshold1" id="id_threshold1" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_threshold1_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CETestConfig.threshold2" id="id_threshold2" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_threshold2_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CETestConfig.threshold3" id="id_threshold3" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_threshold3_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CETestConfig.NewIncrement1" id="id_NewIncrement1" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_NewIncrement1_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CETestConfig.NewIncrement2" id="id_NewIncrement2" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_NewIncrement2_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CETestConfig.NewIncrement3" id="id_NewIncrement3" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_NewIncrement3_updown"/>
+      </Associator>
+    </ConfigItem>
+    <ConfigItem class="ucTextBox" Unique="CETestConfig.MaxLevel" id="id_MaxLevel" visible="hidden">
+      <Associator class="Airoha.Project.ConfigTool.Associator.fcValueAssociator">
+        <Parameter name="data" refId="id_MaxLevel_updown"/>
+      </Associator>
+    </ConfigItem>
+  </ConfigGroup>
+</Page>

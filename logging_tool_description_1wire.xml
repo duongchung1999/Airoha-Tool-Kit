@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UiDescription>
+  <Title name="1Wire Logging Tool"/>
+  <ToolBar>
+    <IconButton name="OpenLogFile" icon_path="folderopened.ico" prompt="Open File" class_name="Airoha.Project.LoggingTool.LoggingButtonBinding" method_name="OpenLogFile_Click" enable="true"/>
+    <UartComport />
+    <Wireshark />
+    <IconButton name="LogBinFile" icon_path="log_text.png" prompt="Change MsgId LogBin File" class_name="Airoha.Project.LoggingTool.LoggingButtonBinding" method_name="LoadLogBinFile_Click" enable="true"/>
+    <!--<IconButton name="TriggerAssert" icon_path="assert.png" prompt="Trigger Assert" class_name="Airoha.Project.LoggingTool.LoggingButtonBinding" method_name="TriggerAssert_Click" enable="true"/>-->
+  </ToolBar>
+  <!--
+	Attribute list
+	max: 上限值或是字串長度最大值
+	min: 下限值
+	visible: hidden 標示隱藏UI元件
+	present="ascii" 顯示ascii字串
+  -->
+  <MainPage>
+    <Page title="1Wire Logging Step1" class="Airoha.Project.LoggingTool.View.LoggingOn1Wire_Step1"/>
+    <Page title="1Wire Logging Step2" class="Airoha.Project.LoggingTool.View.LoggingOn1Wire_Step2"/>
+    <Page title="Exception" class="Airoha.Project.LoggingTool.View.ExceptionDump"/>
+    <Page title="Raw Command" class="Airoha.Project.LoggingTool.View.RawCommand"/>
+    <Page title="AT Command" class="Airoha.Project.LoggingTool.View.AtCommand" />
+  </MainPage>
+</UiDescription>
